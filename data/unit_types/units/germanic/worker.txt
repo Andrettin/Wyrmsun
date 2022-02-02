@@ -21,8 +21,8 @@ unit_germanic_worker = {
 		unit_hammer
 		unit_mining_pick
 		unit_boots
-		unit_cheese
 		unit_carrots
+		unit_cheese
 		unit_meat
 	}
 	resource_gathering = {

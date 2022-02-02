@@ -1,0 +1,74 @@
+unit_western_peasant = {
+	name = "Peasant"
+	parent = unit_template_worker
+	#civilization_group = western
+	image_file = "units/western/peasant.png"
+	frame_size = { 72 72 }
+	offset = { 0 -3 }
+	animation_set = peasant
+	icon = icon_long_swordsman
+	day_sight_range_bonus = 1
+	night_sight_range_bonus = -1
+	button_key = p
+	weapon_classes = { axe mace }
+	hack_damage = true
+	default_equipment = {
+		boots = unit_boots
+	}
+	ai_drops = {
+		unit_hammer
+		unit_mining_pick
+		unit_boots
+		unit_carrots
+		unit_cheese
+		unit_meat
+	}
+	resource_gathering = {
+		gold = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		silver = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		copper = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		iron = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		mithril = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		lumber = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		stone = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		limestone = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		coal = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		jewelry = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		furniture = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		leather = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		diamonds = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+		emeralds = {
+			loaded_image_file = "units/western/peasant_loaded.png"
+		}
+	}
+	sounds = {
+		hit = axe_attack
+		miss = attack_miss
+	}
+}

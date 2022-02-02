@@ -8,17 +8,20 @@ unit_western_footman = {
 	offset = { 0 -3 }
 	animation_set = footman
 	icon = icon_long_swordsman
+	day_sight_range_bonus = 1
+	night_sight_range_bonus = -1
 	button_key = f
 	weapon_classes = { sword }
 	hack_damage = true
+	default_equipment = {
+		boots = unit_boots
+	}
 	ai_drops = {
 		unit_boots
+		unit_carrots
 		unit_cheese
 		unit_meat
 		unit_potion_of_healing
-	}
-	default_equipment = {
-		boots = unit_boots
 	}
 	mana = {
 		enable = true

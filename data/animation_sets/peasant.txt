@@ -72,6 +72,116 @@ peasant = {
 		wait = 1
 	}
 	
+	harvest = {
+		resource = copper
+	
+		unbreakable = begin
+		frame = 20
+		wait = 4
+		frame = 25
+		wait = 4
+		frame = 30
+		wait = 4
+		frame = 35
+		sound = metal_mining
+		wait = 4
+		frame = 40
+		wait = 4
+		frame = 20
+		wait = 4
+		frame = 20
+		unbreakable = end
+		wait = 1
+	}
+	
+	harvest = {
+		resource = silver
+	
+		unbreakable = begin
+		frame = 20
+		wait = 4
+		frame = 25
+		wait = 4
+		frame = 30
+		wait = 4
+		frame = 35
+		sound = metal_mining
+		wait = 4
+		frame = 40
+		wait = 4
+		frame = 20
+		wait = 4
+		frame = 20
+		unbreakable = end
+		wait = 1
+	}
+	
+	harvest = {
+		resource = gold
+	
+		unbreakable = begin
+		frame = 20
+		wait = 4
+		frame = 25
+		wait = 4
+		frame = 30
+		wait = 4
+		frame = 35
+		sound = metal_mining
+		wait = 4
+		frame = 40
+		wait = 4
+		frame = 20
+		wait = 4
+		frame = 20
+		unbreakable = end
+		wait = 1
+	}
+	
+	harvest = {
+		resource = lumber
+	
+		unbreakable = begin
+		frame = 20
+		wait = 4
+		frame = 25
+		wait = 4
+		frame = 30
+		wait = 4
+		frame = 35
+		sound = tree_chopping
+		wait = 4
+		frame = 40
+		wait = 4
+		frame = 20
+		wait = 4
+		frame = 20
+		unbreakable = end
+		wait = 1
+	}
+	
+	harvest = {
+		resource = stone
+	
+		unbreakable = begin
+		frame = 20
+		wait = 4
+		frame = 25
+		wait = 4
+		frame = 30
+		wait = 4
+		frame = 35
+		sound = stone_mining
+		wait = 4
+		frame = 40
+		wait = 4
+		frame = 20
+		wait = 4
+		frame = 20
+		unbreakable = end
+		wait = 1
+	}
+	
 	death = {
 		unbreakable = begin
 		frame = 45

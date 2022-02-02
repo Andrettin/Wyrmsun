@@ -1,3 +1,11 @@
+western_peasant = {
+	code = peasant
+	
+	effects = {
+		create_unit = unit_western_peasant
+	}
+}
+
 western_footman = {
 	code = footman
 	
