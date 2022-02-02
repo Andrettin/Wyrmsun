@@ -757,6 +757,7 @@
 /graphics/icons/units/derro/worker.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/dwarven/miner.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/dwarven/miner_extra_1.png (by Jinn) (licensed under the CC0)
+/graphics/icons/units/dwarven/sailor.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/units/elven/archer.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/units/elven/worker.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/fauna/black_bear.png (by Jinn) (licensed under the CC0)

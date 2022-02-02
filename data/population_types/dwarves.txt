@@ -50,6 +50,13 @@ dwarven_soldiers = {
 	icon = icon_dwarven_axefighter
 }
 
+dwarven_sailors = {
+	name = "Sailors"
+	population_class = sailors
+	civilization = dwarven
+	icon = dwarven_sailor
+}
+
 dwarven_priests = {
 	name = "Priests"
 	population_class = priests

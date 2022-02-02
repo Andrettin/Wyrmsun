@@ -8,6 +8,10 @@ dwarven_miner_christmas_hat = {
 	frame = 1
 }
 
+dwarven_sailor = {
+	file = "icons/units/dwarven/sailor.png"
+}
+
 icon_dwarven_geomancer = {
 	file = "dwarf/icons/geomancer.png"
 }
