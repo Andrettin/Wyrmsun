@@ -72,9 +72,7 @@ peasant = {
 		wait = 1
 	}
 	
-	harvest = {
-		resource = copper
-	
+	harvest_copper = {
 		unbreakable = begin
 		frame = 20
 		wait = 4
@@ -94,53 +92,10 @@ peasant = {
 		wait = 1
 	}
 	
-	harvest = {
-		resource = silver
+	harvest_silver = peasant_harvest_copper
+	harvest_gold = peasant_harvest_copper
 	
-		unbreakable = begin
-		frame = 20
-		wait = 4
-		frame = 25
-		wait = 4
-		frame = 30
-		wait = 4
-		frame = 35
-		sound = metal_mining
-		wait = 4
-		frame = 40
-		wait = 4
-		frame = 20
-		wait = 4
-		frame = 20
-		unbreakable = end
-		wait = 1
-	}
-	
-	harvest = {
-		resource = gold
-	
-		unbreakable = begin
-		frame = 20
-		wait = 4
-		frame = 25
-		wait = 4
-		frame = 30
-		wait = 4
-		frame = 35
-		sound = metal_mining
-		wait = 4
-		frame = 40
-		wait = 4
-		frame = 20
-		wait = 4
-		frame = 20
-		unbreakable = end
-		wait = 1
-	}
-	
-	harvest = {
-		resource = lumber
-	
+	harvest_lumber = {
 		unbreakable = begin
 		frame = 20
 		wait = 4
@@ -160,9 +115,7 @@ peasant = {
 		wait = 1
 	}
 	
-	harvest = {
-		resource = stone
-	
+	harvest_stone = {
 		unbreakable = begin
 		frame = 20
 		wait = 4
