@@ -2,6 +2,7 @@ carlisle = {
 	name = "Carlisle"
 	map_template = earth
 	geocoordinate = { -2.92998681783 54.87999513660 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	cultural_names = {
 		anglo_saxon = "Luel" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		briton = "Luguvallium"

@@ -2,6 +2,7 @@ waterford = {
 	name = "Waterford"
 	map_template = earth
 	geocoordinate = { -7.11192793927 52.25829469720 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	regions = {
 		ireland
 	}

@@ -16,21 +16,11 @@ kiel = {
 		-1600 = {
 			owner = hersing_tribe #Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
 			building_classes += town_hall
-			building_classes += farm
-			building_classes += farm
-			building_classes += farm
 			building_classes += lumber_mill
-			building_classes += watch_tower
-			building_classes += watch_tower
 		}
 		
 		-1599 = {
-			building_classes -= farm
-			building_classes -= farm
-			building_classes -= farm
 			building_classes -= lumber_mill
-			building_classes -= watch_tower
-			building_classes -= watch_tower
 		}
 		
 		-264 = {

@@ -2,6 +2,7 @@ reading = {
 	name = "Reading"
 	map_template = earth
 	geocoordinate = { -0.98002832173 51.46997072260 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	cultural_names = {
 		anglo_saxon = "Readingum" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}

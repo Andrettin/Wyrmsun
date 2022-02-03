@@ -2,6 +2,7 @@ pola = {
 	name = "Pola"
 	map_template = earth
 	geocoordinate = { 13.84808467470 44.86871990870 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	cultural_names = {
 		slavic = "Pula" #Croatian
 	}

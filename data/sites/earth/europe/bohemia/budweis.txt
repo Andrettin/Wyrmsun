@@ -2,6 +2,7 @@ budweis = {
 	name = "Budweis"
 	map_template = earth
 	geocoordinate = { 14.46003698590 48.98001934720 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	cultural_names = {
 		slavic = "Budejovice" #Budějovice
 	}

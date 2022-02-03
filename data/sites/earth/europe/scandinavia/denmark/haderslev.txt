@@ -2,6 +2,7 @@ haderslev = {
 	name = "Haderslev"
 	map_template = earth
 	geocoordinate = { 9.504416961 55.25111111 } #from Natural Earth (ports)
+	base_unit_type = unit_minor_building_site
 	regions = {
 		scandinavia
 	}

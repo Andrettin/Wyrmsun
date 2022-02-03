@@ -2,6 +2,7 @@ trent = {
 	name = "Trent"
 	map_template = earth
 	geocoordinate = { 11.11998246120 46.08042889310 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	cultural_names = {
 		italian = "Trento"
 	}

@@ -2,6 +2,7 @@ southampton = {
 	name = "Southampton"
 	map_template = earth
 	geocoordinate = { -1.39997684875 50.90003135080 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	regions = {
 		england
 	}

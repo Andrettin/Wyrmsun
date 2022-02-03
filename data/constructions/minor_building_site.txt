@@ -1,4 +1,4 @@
-dwarven_sentry_tower = {
+minor_building_site = {
 	image_file = "buildings/sites/minor_building_construction_site.png"
 	frame_size = { 64 64 }
 	frames = {
@@ -21,11 +21,6 @@ dwarven_sentry_tower = {
 			percent = 50
 			image_type = main
 			frame = 1
-		}
-		{
-			percent = 75
-			image_type = main
-			frame = 2
 		}
 	}
 }

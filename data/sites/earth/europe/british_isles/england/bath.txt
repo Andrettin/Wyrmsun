@@ -2,6 +2,7 @@ bath = {
 	name = "Bath"
 	map_template = earth
 	geocoordinate = { -2.35002221822 51.38374859530 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	cultural_names = {
 		anglo_saxon = "Bathum" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 		briton = "Aquae Solis"
