@@ -1,167 +1,167 @@
-gnoll_camp_house_site = {
-	unit_type = unit_minor_building_site
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_mini_house
-			pos = { 4 5 }
-		}
-	}
-}
+#gnoll_camp_house_site = {
+#	unit_type = unit_minor_building_site
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_mini_house
+#			pos = { 4 5 }
+#		}
+#	}
+#}
 
-gnoll_camp_house = {
-	unit_type = unit_goblin_farm
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_mini_house
-			pos = { 4 5 }
-		}
-	}
-}
+#gnoll_camp_house = {
+#	unit_type = unit_goblin_farm
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_mini_house
+#			pos = { 4 5 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_basic_hut_1_site = {
-	unit_type = unit_minor_building_site
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_basic
-			pos = { 8 3 }
-		}
-	}
-}
+#gnoll_camp_huts_basic_hut_1_site = {
+#	unit_type = unit_minor_building_site
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_basic
+#			pos = { 8 3 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_basic_hut_1 = {
-	unit_type = unit_goblin_farm
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_basic
-			pos = { 8 3 }
-		}
-	}
-}
+#gnoll_camp_huts_basic_hut_1 = {
+#	unit_type = unit_goblin_farm
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_basic
+#			pos = { 8 3 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_basic_hut_2_site = {
-	unit_type = unit_minor_building_site
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_basic
-			pos = { 3 8 }
-		}
-	}
-}
+#gnoll_camp_huts_basic_hut_2_site = {
+#	unit_type = unit_minor_building_site
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_basic
+#			pos = { 3 8 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_basic_hut_2 = {
-	unit_type = unit_goblin_farm
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_basic
-			pos = { 3 8 }
-		}
-	}
-}
+#gnoll_camp_huts_basic_hut_2 = {
+#	unit_type = unit_goblin_farm
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_basic
+#			pos = { 3 8 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_basic_hut_3_site = {
-	unit_type = unit_minor_building_site
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_basic
-			pos = { 13 8 }
-		}
-	}
-}
+#gnoll_camp_huts_basic_hut_3_site = {
+#	unit_type = unit_minor_building_site
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_basic
+#			pos = { 13 8 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_basic_hut_3 = {
-	unit_type = unit_goblin_farm
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_basic
-			pos = { 13 8 }
-		}
-	}
-}
+#gnoll_camp_huts_basic_hut_3 = {
+#	unit_type = unit_goblin_farm
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_basic
+#			pos = { 13 8 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_moat_hut_1_site = {
-	unit_type = unit_minor_building_site
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_moat
-			pos = { 10 7 }
-		}
-	}
-}
+#gnoll_camp_huts_moat_hut_1_site = {
+#	unit_type = unit_minor_building_site
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_moat
+#			pos = { 10 7 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_moat_hut_1 = {
-	unit_type = unit_goblin_farm
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_moat
-			pos = { 10 7 }
-		}
-	}
-}
+#gnoll_camp_huts_moat_hut_1 = {
+#	unit_type = unit_goblin_farm
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_moat
+#			pos = { 10 7 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_moat_hut_2_site = {
-	unit_type = unit_minor_building_site
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_moat
-			pos = { 5 12 }
-		}
-	}
-}
+#gnoll_camp_huts_moat_hut_2_site = {
+#	unit_type = unit_minor_building_site
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_moat
+#			pos = { 5 12 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_moat_hut_2 = {
-	unit_type = unit_goblin_farm
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_moat
-			pos = { 5 12 }
-		}
-	}
-}
+#gnoll_camp_huts_moat_hut_2 = {
+#	unit_type = unit_goblin_farm
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_moat
+#			pos = { 5 12 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_moat_hut_3_site = {
-	unit_type = unit_minor_building_site
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_moat
-			pos = { 15 12 }
-		}
-	}
-}
+#gnoll_camp_huts_moat_hut_3_site = {
+#	unit_type = unit_minor_building_site
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_moat
+#			pos = { 15 12 }
+#		}
+#	}
+#}
 
-gnoll_camp_huts_moat_hut_3 = {
-	unit_type = unit_goblin_farm
-	
-	history = {
-		active = true
-		location = {
-			map_template = gnoll_camp_huts_moat
-			pos = { 15 12 }
-		}
-	}
-}
+#gnoll_camp_huts_moat_hut_3 = {
+#	unit_type = unit_goblin_farm
+#	
+#	history = {
+#		active = true
+#		location = {
+#			map_template = gnoll_camp_huts_moat
+#			pos = { 15 12 }
+#		}
+#	}
+#}
