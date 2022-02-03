@@ -2,6 +2,7 @@ bozen = {
 	name = "Bozen"
 	map_template = earth
 	geocoordinate = { 11.36001948920 46.50042909660 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	cultural_names = {
 		italian = "Bolzano"
 	}
