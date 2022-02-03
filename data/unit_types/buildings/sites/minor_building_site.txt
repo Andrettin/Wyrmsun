@@ -1,10 +1,10 @@
 unit_minor_building_site = {
 	name = "Minor Building Site"
 	parent = unit_template_building_site
-	#description = "A prime location for constructing a small building."
+	description = "A prime location for constructing a small building."
 	image_file = "buildings/sites/minor_building_site.png"
 	frame_size = { 64 64 }
-	icon = settlement_site
+	icon = icon_build_basic_structure
 	tile_size = { 2 2 }
 	box_size = { 63 63 }
 	corpse_type = unit_destroyed_2x2_place
