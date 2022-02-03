@@ -60,6 +60,10 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Farms and towers can now only be built on top of "Minor Building Site" locations.
 
+* Maps
+- Minor building sites are now generated on maps.
+- Added many predefined minor building sites for the Earth scenario map.
+
 -----------------------------------------------------------------------
 - 5.3.4
 -----------------------------------------------------------------------

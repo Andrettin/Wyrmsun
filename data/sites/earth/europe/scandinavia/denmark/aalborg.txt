@@ -2,6 +2,7 @@ aalborg = {
 	name = "Aalborg"
 	map_template = earth
 	geocoordinate = { 9.91659338241 57.03371380530 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	regions = {
 		scandinavia
 	}

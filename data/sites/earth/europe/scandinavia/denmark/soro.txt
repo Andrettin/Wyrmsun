@@ -2,6 +2,7 @@ soro = {
 	name = "Soro" #"Sorø"
 	map_template = earth
 	geocoordinate = { 11.56670160440 55.43299811450 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
 	regions = {
 		scandinavia
 	}
