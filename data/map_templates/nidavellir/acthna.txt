@@ -18,6 +18,7 @@ acthna = {
 	generated_neutral_units = {
 		unit_silver_deposit = 1
 		unit_iron_deposit = 1
+		unit_minor_building_site = 8
 		unit_building_site = 2
 		unit_wood_pile = 64
 		unit_snigill = 8

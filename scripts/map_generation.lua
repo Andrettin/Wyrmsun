@@ -2338,6 +2338,7 @@ function GenerateRandomMap(arg)
 			CreateGoldSpots((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 2048, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
 		end
 
+		CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
 		CreateNeutralBuildings("unit_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
 		
 		if (arg.MercenaryCamp) then
@@ -4040,6 +4041,7 @@ function GenerateValley(direction, lake_quantity)
 
 	CreateGoldSpots((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 2048, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
 
+	CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
 	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
 		
 	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "cave") then
@@ -5993,6 +5995,7 @@ function GenerateCave(town_halls, symmetric)
 		CreateNeutralBuildings("unit-hole", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 2, 0, CMap:get():get_info().MapHeight - 2, symmetric)
 	end
 
+	CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
 	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
 		
 	

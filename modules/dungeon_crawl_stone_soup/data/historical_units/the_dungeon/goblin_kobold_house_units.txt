@@ -1,3 +1,15 @@
+goblin_kobold_house_site = {
+	unit_type = unit_minor_building_site
+	
+	history = {
+		active = true
+		location = {
+			map_template = goblin_kobold_house
+			pos = { 4 2 }
+		}
+	}
+}
+
 goblin_kobold_house = {
 	unit_type = unit_goblin_farm
 	

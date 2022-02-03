@@ -26,6 +26,7 @@ joruvellir = {
 		unit_copper_deposit = 1
 		unit_gold_deposit = 1
 		unit_yale_cave = 2
+		unit_minor_building_site = 8
 		unit_building_site = 2
 	}
 	player_location_generated_neutral_units = {

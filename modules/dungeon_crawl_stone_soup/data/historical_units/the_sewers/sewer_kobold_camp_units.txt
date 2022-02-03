@@ -214,6 +214,18 @@ sewer_kobold_camp_potion_of_flight_2 = {
 	}
 }
 
+sewer_kobold_camp_farm_site = {
+	unit_type = unit_minor_building_site
+	
+	history = {
+		active = true
+		location = {
+			map_template = sewer_kobold_camp
+			pos = { 10 32 }
+		}
+	}
+}
+
 sewer_kobold_camp_farm = { #added a farm, as it is supposed to be a settlement/camp, so a dwelling helps characterize it better
 	unit_type = unit_goblin_farm
 	

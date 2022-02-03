@@ -15,6 +15,7 @@ old_earth = {
 		#}
 	}
 	generated_neutral_units = {
+		unit_minor_building_site = 256
 		unit_building_site = 64
 		unit_gold_deposit = 2
 		unit_silver_deposit = 2
