@@ -12,6 +12,13 @@ goblin_soldiers = {
 	icon = goblin_swordsman
 }
 
+goblin_sailors = {
+	name = "Sailors"
+	population_class = sailors
+	civilization = goblin
+	icon = goblin_sailor
+}
+
 goblin_shamans = {
 	name = "Shamans"
 	population_class = priests

@@ -1,0 +1,3 @@
+human_sailor = {
+	file = "icons/units/human/sailor.png"
+}

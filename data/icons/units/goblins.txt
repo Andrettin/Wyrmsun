@@ -19,3 +19,7 @@ goblin_spearman = {
 goblin_thief = {
 	file = "icons/units/goblin/thief.png"
 }
+
+goblin_sailor = {
+	file = "icons/units/goblin/sailor.png"
+}

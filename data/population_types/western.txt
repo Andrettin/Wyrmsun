@@ -1,0 +1,6 @@
+western_sailors = {
+	name = "Sailors"
+	population_class = sailors
+	civilization_group = western
+	icon = human_sailor
+}
