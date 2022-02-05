@@ -48,7 +48,7 @@ if not (ui_loaded_first_time) then
 	if (CanAccessFile("ui/health2.png")) then
 		DefineSprites({Name = "sprite-health", File = "ui/health2.png", Offset = {0, -4}, Size = {31, 4}})
 
-		DefineDecorations({Index = "HitPoints", ShowWhenNull = true, HideNeutral = false, CenterX = true, ShowOpponent = true,
+		DefineDecorations({Index = "HitPoints", HPBar = true, ShowWhenNull = true, HideNeutral = false, CenterX = true, ShowOpponent = true,
 			OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-health"}}})
 --		DefineDecorations({Index = "Build", ShowWhenNull = true, HideNeutral = true, CenterX = true, OffsetPercent = {50, 100}, Method = {"sprite", {"sprite-health"}}})
 	end

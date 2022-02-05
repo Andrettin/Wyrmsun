@@ -53,7 +53,7 @@ MenuBase {
 	LabeledRadioImageButton {
 		id: show_hero_symbol_radio_button
 		anchors.left: hotkey_setup_dropdown.left
-		anchors.bottom: show_messages_radio_button.top
+		anchors.bottom: show_hp_bar_radio_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Show Hero Symbol"
 		checked: wyrmgus.preferences.hero_symbol
@@ -64,10 +64,22 @@ MenuBase {
 	}
 	
 	LabeledRadioImageButton {
+		id: show_hp_bar_radio_button
+		anchors.left: hotkey_setup_dropdown.left
+		anchors.bottom: show_messages_radio_button.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		text: "Show HP Bar"
+		checked: wyrmgus.preferences.hp_bar
+		
+		onCheckedChanged: {
+			wyrmgus.preferences.hp_bar = checked
+		}
+	}
+	
+	LabeledRadioImageButton {
 		id: show_messages_radio_button
 		anchors.left: hotkey_setup_dropdown.left
-		anchors.bottom: show_pathlines_radio_button.top
-		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		anchors.verticalCenter: parent.verticalCenter
 		text: "Show Messages"
 		checked: wyrmgus.preferences.show_messages
 		
@@ -79,7 +91,8 @@ MenuBase {
 	LabeledRadioImageButton {
 		id: show_pathlines_radio_button
 		anchors.left: hotkey_setup_dropdown.left
-		anchors.verticalCenter: parent.verticalCenter
+		anchors.top: show_messages_radio_button.bottom
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Show Pathlines"
 		checked: wyrmgus.preferences.pathlines
 		

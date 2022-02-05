@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 - Minor building sites are now generated on maps.
 - Added many predefined minor building sites for the Earth scenario map.
 
+* Units
+- Unit HP bars are now only shown if the new "HP Bar" preference is enabled (disabled by default).
+
 -----------------------------------------------------------------------
 - 5.3.4
 -----------------------------------------------------------------------
