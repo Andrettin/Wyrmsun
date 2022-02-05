@@ -33,7 +33,7 @@ DefineUnitType("unit-template-item", {
 	NeutralMinimapColor = {255, 255, 0},
 	HitPoints = 1,
 	DrawLevel = 30,
-	TileSize = {1, 1}, BoxSize = {31, 31},
+	TileSize = {1, 1}, BoxSize = {32, 32},
 	Missile = "missile-none",
 	Priority = 0,
 	Domain = "land",

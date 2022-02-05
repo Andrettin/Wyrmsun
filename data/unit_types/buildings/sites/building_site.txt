@@ -6,6 +6,6 @@ unit_building_site = {
 	frame_size = { 96 96 }
 	icon = icon_build_basic_structure
 	tile_size = { 3 3 }
-	box_size = { 95 95 }
+	box_size = { 96 96 }
 	corpse_type = unit_destroyed_3x3_place
 }

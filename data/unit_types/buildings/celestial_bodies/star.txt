@@ -7,7 +7,7 @@ unit_template_star = {
 	frame_size = { 231 231 }
 	icon = star
 	tile_size = { 4 4 }
-	box_size = { 127 127 }
+	box_size = { 128 128 }
 }
 
 unit_yellow_star = { #Class G

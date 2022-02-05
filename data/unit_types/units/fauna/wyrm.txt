@@ -6,7 +6,7 @@ unit_wyrm = {
 	quote = "\"More wyrms there are beneath the ash\nThan an unwise fool would think\"\n- Dwarven Traditional Poetry"
 	background = "The dragons of Norse mythology, also referred to as serpents, had different physical characteristics than the dragons of medieval folklore. The Norse dragons were wingless, and entirely or partially limbless. The most famous of them were Jormungand and Nidhogg. The <a href='literary_text:grimnismol'>Grimnismol</a> includes a list of other notable ones, Svafnir among them. The constellation Draco (\"Dragon\") represents the giant serpent of Greek mythology, Ladon."
 	tile_size = { 2 2 }
-	box_size = { 63 63 }
+	box_size = { 64 64 }
 	image_file = "neutral/units/wyrm.png"
 	frame_size = { 110 108 }
 	animation_set = animations_wyrm

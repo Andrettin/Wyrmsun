@@ -38,7 +38,7 @@ DefineUnitType("unit-ettin", {
 	Description = "The massive ettins lord over Jotunheim, striking terror into the hearts of smaller creatures such as orcs and ogres.",
 	Image = {"file", "ettin/units/ettin.png", "size", {144, 144}},
 	Animations = "animations-melee-unit", Icon = "icon-ettin",
-	TileSize = {2, 2}, BoxSize = {63, 63},
+	TileSize = {2, 2}, BoxSize = {64, 64},
 	Costs = {"time", 120, "copper", 1200},
 	DefaultEquipment = {
 		{"boots", "unit-boots"}
