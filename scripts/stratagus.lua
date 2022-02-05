@@ -80,7 +80,7 @@ SetTitleScreens(
 SetGameName("wyr")
 SetFullGameName(wyrmsun.Name)
 
-SetSelectionStyle("corners")
+SetSelectionStyle("rectangle")
 Preference.ShowSightRange = false
 Preference.ShowAttackRange = false
 Preference.ShowReactionRange = false
