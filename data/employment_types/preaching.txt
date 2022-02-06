@@ -1,0 +1,6 @@
+preaching = {
+	name = "Preaching"
+	employees = {
+		priests
+	}
+}

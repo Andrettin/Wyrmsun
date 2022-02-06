@@ -4375,6 +4375,8 @@ DefineUnitType("unit-template-temple", {
 	BurnDamageRate = 1,
 	RegenerationAura = 1,
 	ButtonKey = "p",
+	EmploymentType = "preaching",
+	EmploymentCapacity = 40000,
 	UnitStock = {"unit-potion-of-healing", 6},
 	ResourceDemand = {"jewelry", 4, "furniture", 4, "leather", 4},
 	RequirementsString = "Lumber Mill",
