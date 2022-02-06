@@ -1,0 +1,9 @@
+bergamo = {
+	name = "Bergamo"
+	map_template = earth
+	geocoordinate = { 9.66999344752 45.70040041000 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		lombardy
+	}
+}
