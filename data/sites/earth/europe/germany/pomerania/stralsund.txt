@@ -1,0 +1,9 @@
+stralsund = {
+	name = "Stralsund"
+	map_template = earth
+	geocoordinate = { 13.10001664090 54.30041811030 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		germany
+	}
+}

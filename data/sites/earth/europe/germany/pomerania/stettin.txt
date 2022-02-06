@@ -5,7 +5,7 @@ stettin = {
 	base_unit_type = unit_settlement_site
 	color = { 164 255 28 }
 	cultural_names = {
-		slav = "Szczecin"
+		slavic = "Szczecin"
 	}
 	regions = {
 		poland
