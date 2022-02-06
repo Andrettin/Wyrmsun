@@ -1,0 +1,9 @@
+vannersborg = {
+	name = "Vannersborg"
+	map_template = earth
+	geocoordinate = { 12.33000060890 58.36300213930 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scandinavia
+	}
+}

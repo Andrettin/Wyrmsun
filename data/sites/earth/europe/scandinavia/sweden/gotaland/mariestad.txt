@@ -1,0 +1,9 @@
+mariestad = {
+	name = "Mariestad"
+	map_template = earth
+	geocoordinate = { 13.82799658780 58.70500208780 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scandinavia
+	}
+}

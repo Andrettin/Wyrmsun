@@ -1,0 +1,9 @@
+jonkoping = {
+	name = "Jonkoping" #"Jönköping"
+	map_template = earth
+	geocoordinate = { 14.16501623400 57.77134319980 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scandinavia
+	}
+}
