@@ -1,0 +1,9 @@
+benevento = {
+	name = "Benevento"
+	map_template = earth
+	geocoordinate = { 14.74999344750 41.13370241200 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		italy
+	}
+}

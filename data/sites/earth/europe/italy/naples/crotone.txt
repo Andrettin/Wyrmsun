@@ -1,0 +1,9 @@
+crotone = {
+	name = "Crotone"
+	map_template = earth
+	geocoordinate = { 17.12333695340 39.08333660790 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		italy
+	}
+}

@@ -1,0 +1,9 @@
+vibo_valentia = {
+	name = "Vibo Valentia"
+	map_template = earth
+	geocoordinate = { 16.10004024120 38.66659201970 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		italy
+	}
+}
