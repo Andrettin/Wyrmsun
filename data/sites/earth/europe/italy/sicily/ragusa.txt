@@ -1,0 +1,9 @@
+ragusa_sicily = {
+	name = "Ragusa"
+	map_template = earth
+	geocoordinate = { 14.72999466820 36.93003135080 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		sicily
+	}
+}

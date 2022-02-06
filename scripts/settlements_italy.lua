@@ -79,25 +79,6 @@ DefineSite("ariminum", {
 	Regions = {"italy"}
 })
 
-DefineSite("brindisi", {
-	Name = "Brindisi",
-	MapTemplate = "old_earth",
-	Position = {4245, 1123},
-	CulturalNames = {
-		"italian", "Brindisi",
-		"latin", "Brundisium" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		161, "rome", -- Brundisium was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1494, "sicily", -- Brindisi was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		1560, "spain" -- Brindisi was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		161, 0, "farm"
-	},
-	Regions = {"italy"}
-})
-
 DefineSite("cosa", {
 	Name = "Cosa",
 	MapTemplate = "old_earth",
@@ -154,28 +135,6 @@ DefineSite("firmum", {
 	Regions = {"italy"}
 })
 
-DefineSite("florence", {
-	Name = "Florence",
-	MapTemplate = "old_earth",
-	Position = {4095, 1054},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"italian", "Florence",
-		"latin", "Florentia" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-750, "etruscan-tribe", -- Florence's area was Etruscan territory in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1926, p. 5.
-		-264, "rome", -- Florence's area was a part of Roman territory in 264 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "rome", -- Florentia was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1477, "florence", -- Florence was a Florentine possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1494, "florence" -- Florence was a possession of the Republic of Florence about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-	},
-	HistoricalBuildings = {
-		-750, 0, "town_hall"
-	},
-	Regions = {"italy"}
-})
-
 DefineSite("hatria", {
 	Name = "Hatria",
 	MapTemplate = "old_earth",
@@ -209,27 +168,6 @@ DefineSite("luni-sul-mignone", {
 		-1700, -1350, "farm" -- two rock-cut longhouses existed at Luni sul Mignone during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 	},
 	Regions = {"italy"}
-})
-
-DefineSite("modena", {
-	Name = "Modena",
-	MapTemplate = "old_earth",
-	Position = {4089, 1032},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"italian", "Modena",
-		"latin", "Mutina" -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-	},
-	HistoricalOwners = {
-		-183, "rome", -- Mutina founded as a colony in 183 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
-		-100, "rome", -- Mutina was a Roman possession about 100 BC; Source: William R. Shepherd, "Historical Atlas", 1926, p. 29.
-		1477, "modena", -- Modena was a Modenese possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1494, "modena"
-	},
-	HistoricalBuildings = {
-		-218, 0, "town_hall"
-	},
-	Regions = {"modena"}
 })
 
 DefineSite("novum-castrum", {

@@ -1,0 +1,9 @@
+sassari = {
+	name = "Sassari"
+	map_template = earth
+	geocoordinate = { 8.57000890975 40.73000612290 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		sardinia
+	}
+}

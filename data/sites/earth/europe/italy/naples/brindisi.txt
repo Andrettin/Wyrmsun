@@ -1,0 +1,27 @@
+brindisi = {
+	name = "Brindisi"
+	map_template = earth
+	geocoordinate = { 17.93000606150 40-64034751290 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		latin = "Brundisium" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	regions = {
+		italy
+	}
+	
+	history = {
+		161 = {
+			owner = rome #Brundisium was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			building_classes += farm
+		}
+		
+		1494 = {
+			owner = sicily #Brindisi was a possession of the Kingdom of the Two Sicilies about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		}
+		
+		1560 = {
+			owner = spain #Brindisi was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		}
+	}
+}

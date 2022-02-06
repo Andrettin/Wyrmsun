@@ -1,0 +1,31 @@
+florence = {
+	name = "Florence"
+	map_template = earth
+	geocoordinate = { 11.25000036480 43.78000083320 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		latin = "Florentia" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	regions = {
+		tuscany
+	}
+	
+	history = {
+		-750 = {
+			owner = etruscan_tribe #Florence's area was Etruscan territory in the 750-625 BC period; Source: William R. Shepherd, "Historical Atlas", 1926, p. 5.
+			building_classes += farm
+		}
+		
+		-264 = {
+			owner = rome #Florence's area was a part of Roman territory in 264 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		1477 = {
+			owner = florence #Florence was a Florentine possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		}
+		
+		1494 = {
+			owner = florence #Florence was a possession of the Republic of Florence about 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
+		}
+	}
+}

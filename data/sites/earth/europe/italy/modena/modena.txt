@@ -1,0 +1,31 @@
+modena = {
+	name = "Modena"
+	map_template = earth
+	geocoordinate = { 10.91999466820 44.65002524730 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		latin = "Mutina" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+	}
+	regions = {
+		modena
+	}
+	
+	history = {
+		-183 = {
+			owner = rome #Mutina founded as a colony in 183 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 29.
+			building_classes += farm
+		}
+		
+		-100 = {
+			owner = rome #Mutina was a Roman possession about 100 BC; Source: William R. Shepherd, "Historical Atlas", 1926, p. 29.
+		}
+		
+		1477 = {
+			owner = modena #Modena was a Modenese possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+		}
+		
+		1494 = {
+			owner = modena
+		}
+	}
+}

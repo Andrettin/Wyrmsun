@@ -1,0 +1,9 @@
+olbia = {
+	name = "Olbia"
+	map_template = earth
+	geocoordinate = { 9.51507185767 40.91428489730 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		sardinia
+	}
+}
