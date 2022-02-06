@@ -1,0 +1,9 @@
+halmstad = {
+	name = "Halmstad"
+	map_template = earth
+	geocoordinate = { 12.85558711610 56.67177207350 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scandinavia
+	}
+}
