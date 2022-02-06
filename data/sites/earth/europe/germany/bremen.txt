@@ -1,0 +1,23 @@
+bremen = {
+	name = "Bremen"
+	map_template = earth
+	geocoordinate = { 8.80002070988 53.08000164700 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		-264 = {
+			owner = chauci_tribe #Bremen's area was territory of the Chauci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		526 = {
+			owner = saxony #Bremen's area was a Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		}
+		
+		785 = {
+			building_classes += temple #Willehad became bishop of Bremen in 785; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
+		}
+	}
+}

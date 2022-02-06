@@ -1,7 +1,7 @@
 freiburg = {
 	name = "Freiburg"
 	map_template = earth
-	geocoordinate = { 7.86994828149 48.00041505850 }
+	geocoordinate = { 7.86994828149 48.00041505850 } #from Natural Earth
 	base_unit_type = unit_building_site
 	regions = {
 		baden

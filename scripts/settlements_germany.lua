@@ -62,29 +62,6 @@ DefineSite("bernstorf", { -- Bernstorf, Bavaria
 	Regions = {"germany"}
 })
 
-DefineSite("bremen", {
-	Name = "Bremen",
-	MapTemplate = "old_earth",
-	Position = {4044, 841},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"teuton", "Bremen"
-	},
-	--Cores = {
-	--	"chauci-tribe",
-	--	"bremen"
-	--},
-	HistoricalOwners = {
-		-264, "chauci-tribe", -- Bremen's area was territory of the Chauci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		526, "saxony" -- Bremen's area was a Saxon possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall",
-		785, 0, "temple" -- Willehad became bishop of Bremen in 785; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 176.
-	},
-	Regions = {"germany"}
-})
-
 DefineSite("eichstatt", {
 	Name = "Eichstatt",
 	MapTemplate = "old_earth",

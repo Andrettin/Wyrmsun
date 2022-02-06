@@ -1,0 +1,9 @@
+mannheim = {
+	name = "Mannheim"
+	map_template = earth
+	geocoordinate = { 8.47001501327 49.50037518220 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		baden
+	}
+}
