@@ -42,6 +42,10 @@ modena = {
 	superregions = { italy }
 }
 
+parma = {
+	superregions = { italy }
+}
+
 piedmont = {
 	superregions = { italy }
 }
