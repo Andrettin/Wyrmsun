@@ -1,5 +1,6 @@
 skilled_quarriers = {
 	name = "Skilled Quarriers"
+	resource_icon = population
 	promotion_targets = {
 		expert_quarriers
 	}
@@ -10,6 +11,7 @@ skilled_quarriers = {
 
 expert_quarriers = {
 	name = "Expert Quarriers"
+	resource_icon = population
 	production_efficiency = {
 		stone = 400
 	}

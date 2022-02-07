@@ -1,5 +1,6 @@
 skilled_miners = {
 	name = "Skilled Miners"
+	resource_icon = population
 	promotion_targets = {
 		expert_miners
 	}
@@ -15,6 +16,7 @@ skilled_miners = {
 
 expert_miners = {
 	name = "Expert Miners"
+	resource_icon = population
 	production_efficiency = {
 		copper = 400
 		silver = 400

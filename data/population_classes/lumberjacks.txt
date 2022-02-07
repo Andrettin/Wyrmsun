@@ -1,5 +1,6 @@
 skilled_lumberjacks = {
 	name = "Skilled Lumberjacks"
+	resource_icon = population
 	promotion_targets = {
 		expert_lumberjacks
 	}
@@ -10,6 +11,7 @@ skilled_lumberjacks = {
 
 expert_lumberjacks = {
 	name = "Expert Lumberjacks"
+	resource_icon = population
 	production_efficiency = {
 		lumber = 400
 	}

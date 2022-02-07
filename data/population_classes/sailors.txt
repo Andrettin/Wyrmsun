@@ -1,3 +1,4 @@
 sailors = { #used for ships
 	name = "Sailors"
+	resource_icon = population
 }
