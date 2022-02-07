@@ -1,0 +1,9 @@
+essen = {
+	name = "Essen"
+	map_template = earth
+	geocoordinate = { 7.01661535506 51.44999778150 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		rhineland
+	}
+}

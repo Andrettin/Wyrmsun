@@ -1,0 +1,9 @@
+kassel = {
+	name = "Kassel"
+	map_template = earth
+	geocoordinate = { 9.50002966171 51.30000693670 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		germany
+	}
+}

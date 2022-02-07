@@ -1,7 +1,7 @@
 jena = {
 	name = "Jena"
 	map_template = earth
-	geocoordinate = { 11.58000606150 50.93044293120 }
+	geocoordinate = { 11.58000606150 50.93044293120 } #from Natural Earth
 	base_unit_type = unit_building_site
 	regions = {
 		thuringia

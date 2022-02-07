@@ -1,0 +1,28 @@
+magdeburg = {
+	name = "Magdeburg"
+	map_template = earth
+	geocoordinate = { 11.62000362010 52.13042136550 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		-264 = {
+			owner = cherusci_tribe #Magdeburg's area was territory of the Cherusci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		1648 = {
+			owner = magdeburg #Magdeburg was a Magdeburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+			building_classes += farm
+		}
+		
+		1680 = {
+			owner = brandenburg #Magdeburg became a Brandenburgian possession in 1680; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		}
+		
+		1815 = {
+			owner = prussia #Magdeburg was a part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

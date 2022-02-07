@@ -1,0 +1,10 @@
+bonn = {
+	name = "Bonn"
+	map_template = earth
+	geocoordinate = { 7.08002233748 50.72045574860 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		gaul
+		rhineland
+	}
+}

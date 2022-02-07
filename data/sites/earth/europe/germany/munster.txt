@@ -1,0 +1,24 @@
+munster = {
+	name = "Munster" #"Münster"
+	map_template = earth
+	geocoordinate = { 7.62004105493 51.97040529290 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		germany
+	}
+	
+	history = {
+		-264 = {
+			owner = sugambri_tribe #Münster's area was territory of the Sugambri in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		481 = {
+			owner = saxony #Münster's area was territory of the Saxons in the 481-804 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		}
+		
+		1815 = {
+			owner = prussia #Münster was a part of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			building_classes += farm
+		}
+	}
+}

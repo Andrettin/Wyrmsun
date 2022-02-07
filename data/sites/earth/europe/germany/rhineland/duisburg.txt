@@ -1,0 +1,9 @@
+duisburg = {
+	name = "Duisburg"
+	map_template = earth
+	geocoordinate = { 6.75001664087 51.42997316400 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		rhineland
+	}
+}

@@ -1,0 +1,9 @@
+potsdam = {
+	name = "Potsdam"
+	map_template = earth
+	geocoordinate = { 13.06999263370 52.40040488600 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		brandenburg
+	}
+}

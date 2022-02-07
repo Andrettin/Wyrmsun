@@ -178,30 +178,6 @@ DefineSite("konstanz", {
 	Regions = {"germany"}
 })
 
-DefineSite("magdeburg", {
-	Name = "Magdeburg",
-	MapTemplate = "old_earth",
-	Position = {4104, 861},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"teuton", "Magdeburg"
-	},
-	--Cores = {
-	--	"cherusci-tribe",
-	--	"magdeburg"
-	--},
-	HistoricalOwners = {
-		-264, "cherusci-tribe", -- Magdeburg's area was territory of the Cherusci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		1648, "magdeburg", -- Magdeburg was a Magdeburgian possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-		1680, "brandenburg", -- Magdeburg became a Brandenburgian possession in 1680; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-		1815, "prussia" -- Magdeburg was a part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall"
-	},
-	Regions = {"germany"}
-})
-
 DefineSite("mittelberg", {
 	Name = "Mittelberg",
 	MapTemplate = "old_earth",
@@ -215,28 +191,6 @@ DefineSite("mittelberg", {
 	},
 	HistoricalBuildings = {
 		-1600, -1599, "watch_tower" -- the fortified settlement of Mittelberg (near Nebra) existed in 1600 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 27.
-	},
-	Regions = {"germany"}
-})
-
-DefineSite("munster", {
-	Name = "Munster",
-	MapTemplate = "old_earth",
-	Position = {3992, 865},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"teuton", "Munster" -- "Münster"
-	},
-	--Cores = {
---		"westphalia"
-	--},
-	HistoricalOwners = {
-		-264, "sugambri-tribe", -- Münster's area was territory of the Sugambri in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		481, "saxony", -- Münster's area was territory of the Saxons in the 481-804 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		1815, "prussia" -- Münster was a part of the Kingdom of Prussia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		-264, 0, "town_hall"
 	},
 	Regions = {"germany"}
 })
