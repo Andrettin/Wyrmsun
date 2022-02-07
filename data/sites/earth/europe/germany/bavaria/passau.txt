@@ -1,0 +1,23 @@
+passau = {
+	name = "Passau"
+	map_template = earth
+	geocoordinate = { 13.46660925160 48.56704713860 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		bavaria
+	}
+	
+	history = {
+		526 = {
+			owner = bavaria #Passau's area was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		}
+		
+		739 = {
+			building_classes += temple #Passau became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
+		}
+		
+		1815 = {
+			owner = bavaria #Passau was a part of the Kingdom of Bavaria in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

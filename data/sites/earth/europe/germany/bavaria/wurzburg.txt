@@ -1,7 +1,7 @@
 wurzburg = {
 	name = "Wurzburg" #"Würzburg"
 	map_template = earth
-	geocoordinate = { 9.95002803411 49.80043438630 }
+	geocoordinate = { 9.95002803411 49.80043438630 } #from Natural Earth
 	base_unit_type = unit_building_site
 	regions = {
 		bavaria

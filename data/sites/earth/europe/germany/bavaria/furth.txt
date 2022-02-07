@@ -1,0 +1,9 @@
+furth = {
+	name = "Furth" #"Fürth"
+	map_template = earth
+	geocoordinate = { 10.99998978540 49.47001527820 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		bavaria
+	}
+}

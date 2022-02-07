@@ -1,0 +1,9 @@
+hof = {
+	name = "Hof"
+	map_template = earth
+	geocoordinate = { 11.91667801780 50.31704367990 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		bavaria
+	}
+}

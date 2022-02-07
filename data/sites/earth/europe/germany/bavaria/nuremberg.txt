@@ -1,0 +1,20 @@
+nuremberg = {
+	name = "Nuremberg" #"Nürnberg"
+	map_template = earth
+	geocoordinate = { 11.07998490260 49.44999066070 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		bavaria
+	}
+	
+	history = {
+		161 = {
+			owner = hermunduri_tribe #the Hermunduri inhabited the area immediately north of the Danube in Bavaria, in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		}
+		
+		1815 = {
+			owner = bavaria #Nuremberg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			building_classes += farm
+		}
+	}
+}

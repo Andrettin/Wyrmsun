@@ -25,26 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("augsburg", {
-	Name = "Augsburg",
-	MapTemplate = "old_earth",
-	Position = {4090, 942},
-	CulturalNames = {
-		"latin", "Augusta Vindelicorum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Augsburg" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalOwners = {
-		170, "rome", -- the Raetian provincial capital at Augsburg was destroyed during the First Marcomannic War in c. 172; it likely existed at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		172, "",
-		1815, "bavaria" -- Augsburg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		170, 172, "farm",
-		1815, 0, "farm"
-	},
-	Regions = {"germany"}
-})
-
 DefineSite("bernstorf", { -- Bernstorf, Bavaria
 	Name = "Bernstorf",
 	MapTemplate = "old_earth",
@@ -195,67 +175,11 @@ DefineSite("mittelberg", {
 	Regions = {"germany"}
 })
 
-DefineSite("nuremberg", {
-	Name = "Nuremberg",
-	MapTemplate = "old_earth",
-	Position = {4087, 930},
-	CulturalNames = {
-		"teuton", "Nuremberg" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalOwners = {
-		161, "hermunduri-tribe", -- the Hermunduri inhabited the area immediately north of the Danube in Bavaria, in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		1815, "bavaria" -- Nuremberg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		161, 0, "farm"
-	},
-	Regions = {"germany"}
-})
-
-DefineSite("passau", {
-	Name = "Passau",
-	MapTemplate = "old_earth",
-	Position = {4149, 945},
-	CulturalNames = {
-		"teuton", "Passau"
-	},
-	HistoricalOwners = {
-		526, "bavaria", -- Passau's area was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		1815, "bavaria" -- Passau was a part of the Kingdom of Bavaria in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		739, 0, "temple" -- Passau became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
-	},
-	Regions = {"germany"}
-})
-
 DefineSite("regensburg", {
-	Name = "Regensburg",
-	MapTemplate = "old_earth",
-	Position = {4116, 932},
-	CulturalNames = {
-		"latin", "Regina Castra",
-		"teuton", "Regensburg"
-		-- Ratisbon
-	},
-	HistoricalOwners = {
-		170, "rome", -- a Roman camp at Regensburg-Kumpfmühl was destroyed during the First Marcomannic War in 172; it thus likely existed at the beginning of that war; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		172, "",
-		175, "rome",
-		526, "bavaria", -- Ratisbon was in Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		1815, "bavaria" -- Regensburg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		170, 172, "guard_tower",
-		175, 526, "guard_tower", -- The Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
-		526, 739, "farm",
-		739, 0, "temple" -- Regensburg became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
-	},
 	HistoricalUnits = {
 		170, 172, "unit-teuton-swordsman", 375, "rome", -- the "Cohors II Aquitanorum equitata civium Romanorum" (a mixed unit, which contained circa 375 auxiliary infantry and 125 cavalry) was stationed at Regensburg-Kumpfmühl when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		170, 172, "unit-teuton-ritter", 125, "rome"
-	},
-	Regions = {"germany"}
+	}
 })
 
 DefineSite("scheidungen", {

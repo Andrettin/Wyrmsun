@@ -1,0 +1,29 @@
+augsburg = {
+	name = "Augsburg"
+	map_template = earth
+	geocoordinate = { 10.89999588890 48.35000612290 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		latin = "Augusta Vindelicorum" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+	}
+	regions = {
+		bavaria
+	}
+	
+	history = {
+		170 = {
+			owner = rome #the Raetian provincial capital at Augsburg was destroyed during the First Marcomannic War in c. 172; it thus likely existed at the beginning of that war; Source: "Ancient Warfare VII.6", 2013, p. 25.
+			building_classes += farm
+		}
+		
+		172 = {
+			owner = none
+			building_classes -= farm
+		}
+		
+		1815 = {
+			owner = bavaria #Augsburg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+			building_classes += farm
+		}
+	}
+}

@@ -1,0 +1,44 @@
+regensburg = {
+	name = "Regensburg"
+	map_template = earth
+	geocoordinate = { 12.12002477890 49.02040447910 } #from Natural Earth
+	base_unit_type = unit_building_site
+	cultural_names = {
+		latin = "Regina Castra"
+		#Ratisbon
+	}
+	regions = {
+		bavaria
+	}
+	
+	history = {
+		170 = {
+			owner = rome #a Roman camp at Regensburg-Kumpfmühl was destroyed during the First Marcomannic War in 172; it thus likely existed at the beginning of that war; Source: "Ancient Warfare VII.6", 2013, p. 25.
+			#building_classes += barracks
+		}
+		
+		172 = {
+			owner = none
+			#building_classes -= barracks
+		}
+		
+		175 = {
+			#the Legio III Italica began building in 175 the fortress of Castra Regina near where the Regensburg-Kumpfmühl camp had been; Source: "Ancient Warfare VII.6", 2013, p. 25.
+			owner = rome
+			#building_classes += barracks
+		}
+		
+		526 = {
+			owner = bavaria #Ratisbon was a Bavarian possession in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
+		}
+		
+		739 = {
+			#building_classes -= barracks
+			building_classes += temple #Regensburg became a bishopric in 739; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 169.
+		}
+		
+		1815 = {
+			owner = bavaria #Regensburg was a possession of the Kingdom of Bavaria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}
