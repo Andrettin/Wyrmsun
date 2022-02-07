@@ -2756,6 +2756,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Population = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Population: "), UnitPopulation("Unit")), Font = PopupDescriptionFont}}
 				},
+				{ 	Condition = {Population = "only", ButtonAction = "unit", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = Concat(_("Housing: "), UnitHousing("Unit")), Font = PopupDescriptionFont}}
+				},
 				{ 	Condition = {Employment = "only", ButtonAction = "unit", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(Concat(UnitEmploymentType("Unit"), _(" Employment: ")), UnitEmployment("Unit")), Font = PopupDescriptionFont}}
 				},
