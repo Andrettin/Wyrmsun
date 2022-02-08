@@ -1849,7 +1849,6 @@ Units = {
 	"unit-elven-swordsman", "unit-elven-priest", 
 	"unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-ettin",
-	"unit-ettin-town-hall",
 	"unit-caravan",
 	"unit-minecart",
 --	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-megacricetodon-collongensis", "unit-rat",

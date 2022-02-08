@@ -1,0 +1,38 @@
+unit_ettin_town_hall = {
+	name = "Mead Hall"
+	parent = unit_template_town_hall
+	civilization = ettin
+	image_file = "buildings/dwarven/town_hall.png"
+	frame_size = { 128 128 }
+	icon = icon_dwarven_town_hall
+	costs += {
+		lumber = 0
+		stone = 2400
+	}
+	repair_costs += {
+		lumber = 0
+		stone = 1
+	}
+	fire_resistance = 20
+	spawned_units = {
+		unit_ettin
+	}
+	ai_drops = {
+		unit_boots
+	}
+	variations = {
+		town_hall = {
+			conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		town_hall_snow = {
+			image_file = "buildings/dwarven/town_hall_snow.png"
+			conditions = {
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+	}
+}

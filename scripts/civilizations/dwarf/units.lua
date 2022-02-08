@@ -1609,8 +1609,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 	Civilization = "dwarf",
 	Description = "The mead hall is the center of any sizable dwarven settlement, where they gather to discuss the issues facing the community and drink their strong mead. It was in one such hall that Fjalar and Galar feasted on the mead they made out of the blood of a dwarven sage, believing that it would grant them his breadth of knowledge. One of the most magnificent mead halls ever built is that of Lyr.",
 	Background = "Mead was a recurring theme in Germanic mythology, from which dwarves originate. In one particular myth, the dwarves Fjalar and Galar invited the sage Kvasir to a large feast in their dwelling, only to murder him and brew his blood into a special mead, the ~<Mead of Poetry~>. As the pair of ruthless dwarves expected, drinking the mead imbibed them with Kvasir's breadth of knowledge. In the <a href='literary_text:voluspo'>Voluspo</a> it is mentioned that a dwarven hall made of gold existed in Nidavellir. The hall of Lyr is mentioned in the <a href='literary_text:svipdagsmol'>Svipdagsmol</a>.",
-	Image = {"file", "dwarf/buildings/town_hall.png", "size", {128, 128}},
-	Shadow = {"file", "dwarf/buildings/town_hall_shadow.png", "size", {128, 128}},
+	Image = {"file", "buildings/dwarven/town_hall.png", "size", {128, 128}},
 	Icon = "icon-dwarven-town-hall",
 	Costs = {"lumber", 0, "stone", 2400},
 	RepairCosts = {"lumber", 0, "stone", 1},
@@ -1632,7 +1631,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 		},
 		{
 			"variation-id", "mead-hall-snow-winter",
-			"file", "dwarf/buildings/town_hall_snow.png",
+			"file", "buildings/dwarven/town_hall_snow.png",
 			"upgrade-forbidden", "upgrade-faction-brising-clan",
 			"upgrade-forbidden", "upgrade_faction_lyr",
 			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
@@ -1648,7 +1647,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 		},
 		{
 			"variation-id", "mead-hall-snow",
-			"file", "dwarf/buildings/town_hall_snow.png",
+			"file", "buildings/dwarven/town_hall_snow.png",
 			"upgrade-forbidden", "upgrade-faction-brising-clan",
 			"upgrade-forbidden", "upgrade_faction_lyr",
 			"upgrade-forbidden", "upgrade-faction-goldhoof-clan",
