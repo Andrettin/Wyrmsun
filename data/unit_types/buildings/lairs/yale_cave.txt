@@ -9,6 +9,7 @@ unit_yale_cave = {
 	spawned_units = {
 		unit_yale
 	}
+	max_spawned_demand = 4
 	variations = {
 		yale_cave = {
 			conditions = {
