@@ -1,0 +1,9 @@
+damanhur = {
+	name = "Damanhur" #"Damanhûr"
+	map_template = earth
+	geocoordinate = { 30.47001582720 31.05044191390 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		africa
+	}
+}

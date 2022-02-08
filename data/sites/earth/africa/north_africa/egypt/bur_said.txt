@@ -1,0 +1,9 @@
+bur_said = {
+	name = "Bur Said"
+	map_template = earth
+	geocoordinate = { 32.29000809600 31.25998984680 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		africa
+	}
+}

@@ -1,0 +1,9 @@
+shibin_el_kom = {
+	name = "Shibin el Kom"
+	map_template = earth
+	geocoordinate = { 30.89999748690 30.59199912930 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		africa
+	}
+}

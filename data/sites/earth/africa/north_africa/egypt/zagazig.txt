@@ -1,0 +1,9 @@
+zagazig = {
+	name = "Zagazig"
+	map_template = earth
+	geocoordinate = { 31.51665960060 30.58333208810 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		africa
+	}
+}

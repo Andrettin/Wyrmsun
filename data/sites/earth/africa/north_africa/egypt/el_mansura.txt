@@ -1,0 +1,9 @@
+el_mansura = {
+	name = "El Mansura"
+	map_template = earth
+	geocoordinate = { 31.38003779980 31.05044191390 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		africa
+	}
+}

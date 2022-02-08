@@ -1,0 +1,9 @@
+kafr_el_sheikh = {
+	name = "Kafr el Sheikh"
+	map_template = earth
+	geocoordinate = { 30.93599762950 31.10900400480 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		africa
+	}
+}

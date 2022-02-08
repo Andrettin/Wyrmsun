@@ -1,0 +1,9 @@
+ismailia = {
+	name = "Ismailia" #"Ismaïlia"
+	map_template = earth
+	geocoordinate = { 32.25998408890 30.59034079900 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		africa
+	}
+}
