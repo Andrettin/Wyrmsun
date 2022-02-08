@@ -1,0 +1,9 @@
+stavanger = {
+	name = "Stavanger"
+	map_template = earth
+	geocoordinate = { 5.68000443383 58.97000388500 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scandinavia
+	}
+}

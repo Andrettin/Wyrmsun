@@ -1,0 +1,9 @@
+kristiansand = {
+	name = "Kristiansand"
+	map_template = earth
+	geocoordinate = { 8.00001786157 58.16664206860 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scandinavia
+	}
+}

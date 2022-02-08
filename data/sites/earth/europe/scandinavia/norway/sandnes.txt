@@ -1,0 +1,9 @@
+sandnes = {
+	name = "Sandnes"
+	map_template = earth
+	geocoordinate = { 5.69002966169 58.84541200680 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scandinavia
+	}
+}

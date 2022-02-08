@@ -1,0 +1,9 @@
+drammen = {
+	name = "Drammen"
+	map_template = earth
+	geocoordinate = { 10.19073685570 59.75724265460 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scandinavia
+	}
+}
