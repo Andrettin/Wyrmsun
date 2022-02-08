@@ -505,8 +505,7 @@ DefineUnitType("unit-goblin-farm", {
 	Parent = "unit-template-farm",
 	Civilization = "goblin",
 	Description = "Goblin farms provide sustenance for their settlements. Due to their high population growth goblins seek to finish the construction of new farms as quickly as possible, although they sacrifice structural integrity in the process. Contrary to the dwarves, goblins tend to plant roots, rather than mushrooms, and they also breed livestock.",
-	Image = {"file", "goblin/buildings/farm.png", "size", {64, 64}},
-	Shadow = {"file", "goblin/buildings/farm_shadow.png", "size", {64, 64}},
+	Image = {"file", "buildings/goblin/farm.png", "size", {64, 64}},
 	Icon = "icon-goblin-farm",
 	HitPoints = 167, -- 200 with masonry
 	Costs = {"time", 80, "copper", 400, "lumber", 600},
