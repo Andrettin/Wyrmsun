@@ -17,6 +17,7 @@ unit_ettin_town_hall = {
 	spawned_units = {
 		unit_ettin
 	}
+	max_spawned_demand = 12
 	ai_drops = {
 		unit_boots
 	}

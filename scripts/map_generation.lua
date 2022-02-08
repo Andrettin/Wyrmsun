@@ -2358,7 +2358,7 @@ function GenerateRandomMap(arg)
 	--	end
 
 		if (GetCurrentTileset() == "swamp") then
-			CreateNeutralBuildings("unit-yale-cave", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+			CreateNeutralBuildings("unit_yale_cave", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
 		end
 		
 		CreateCritters(arg)

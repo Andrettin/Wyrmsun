@@ -878,42 +878,6 @@ DefineUnitType("unit-template-hunting-lodge", {
 	MaxHarvesters = 3
 } )
 
-DefineUnitType("unit-yale-cave", {
-	Name = "Yale Cave",
-	Parent = "unit-template-lair",
-	Description = "Yales shelter in the caves and under the cliffs of the rocky world of Nidavellir.",
-	Image = {"file", "neutral/buildings/yale_cave.png", "size", {96, 96}},
-	Icon = "icon-yale-cave",
-	GivesResource = "leather",
-	SpawnUnits = {"unit-yale"},
-	Variations = {
-		{
-			"variation-id", "yale-cave",
-			"terrain-forbidden", "snow",
-			"forbidden-season", "winter"
-		},
-		{
-			"variation-id", "yale-cave-snow-winter",
-			"file", "buildings/neutral/yale_cave_snow.png",
-			"terrain", "dirt",
-			"terrain", "dry-mud",
-			"terrain", "grass",
-			"terrain", "semi_dry_grass",
-			"terrain", "dry_grass",
-			"terrain", "snow",
-			"season", "winter"
-		},
-		{
-			"variation-id", "yale-cave-snow",
-			"file", "buildings/neutral/yale_cave_snow.png",
-			"terrain", "snow"
-		}
-	},
-	Sounds = {
-		"selected", "yale-pen-selected"
-	}
-} )
-
 DefineUnitType("unit-yale-hunting-lodge", {
 	Name = "Yale Hunting Lodge",
 	Parent = "unit-template-hunting-lodge",
@@ -925,7 +889,7 @@ DefineUnitType("unit-yale-hunting-lodge", {
 	Icon = "icon-yale-hunting-lodge",
 	Costs = {"time", 200, "lumber", 2050},
 	Supply = 6,
-	BuildingRules = { "and", { "ontop", { Type = "unit-yale-cave", ReplaceOnDie = true, ReplaceOnBuild = true } } },
+	BuildingRules = { "and", { "ontop", { Type = "unit_yale_cave", ReplaceOnDie = true, ReplaceOnBuild = true } } },
 	GivesResource = "leather",
 	BuildingRulesString = "Must be built on top of a Yale Cave",
 	ButtonKey = "y",

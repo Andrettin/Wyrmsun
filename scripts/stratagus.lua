@@ -1863,7 +1863,7 @@ Units = {
 	"unit-coal-mine",
 	"unit-diamond-rock", "unit-diamond-deposit", "unit-diamond-mine",
 	"unit-emerald-rock", "unit-emerald-deposit", "unit-emerald-mine",
-	"unit-yale-cave", "unit-yale-hunting-lodge",
+	"unit-yale-hunting-lodge",
 	"unit-mercenary-camp",
 --	"unit-cavern-entrance",
 --	"unit-portal",

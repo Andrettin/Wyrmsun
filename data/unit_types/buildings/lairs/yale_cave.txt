@@ -1,0 +1,30 @@
+unit_yale_cave = {
+	name = "Yale Cave"
+	parent = unit_template_lair
+	description = "Yales shelter in the caves and under the cliffs of the rocky world of Nidavellir."
+	image_file = "neutral/buildings/yale_cave.png"
+	frame_size = { 96 96 }
+	icon = icon_yale_cave
+	given_resource = leather
+	spawned_units = {
+		unit_yale
+	}
+	variations = {
+		yale_cave = {
+			conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		yale_cave_snow = {
+			image_file = "buildings/neutral/yale_cave_snow.png"
+			conditions = {
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+	}
+	sounds = {
+		selected = yale_pen_selected
+	}
+}

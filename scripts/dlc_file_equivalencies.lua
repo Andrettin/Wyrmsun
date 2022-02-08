@@ -25,8 +25,8 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png", "dwarf/buildings/town_hall.png")
-SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_town_hall_snow.png", "dwarf/buildings/town_hall_snow.png")
+SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_town_hall.png", "buildings/dwarven/town_hall.png")
+SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_town_hall_snow.png", "buildings/dwarven/town_hall_snow.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_stronghold.png", "dwarf/buildings/stronghold.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_stronghold_snow.png", "dwarf/buildings/stronghold_snow.png")
 SetDLCFileEquivalency("dlcs/brising_faction_flair/graphics/buildings/brising_smithy.png", "dwarf/buildings/smithy.png")
@@ -81,8 +81,8 @@ SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/filler_bottom.png
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/ui/infopanel.png", "interface/germanic/infopanel.png")
 SetDLCFileEquivalency("dlcs/frankish_faction_flair/graphics/units/frank_horseman_shield.png", "teuton/units/ritter_shield.png")
 
-SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png", "dwarf/buildings/town_hall.png")
-SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall_snow.png", "dwarf/buildings/town_hall_snow.png")
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall.png", "buildings/dwarven/town_hall.png")
+SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_town_hall_snow.png", "buildings/dwarven/town_hall_snow.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold.png", "dwarf/buildings/stronghold.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_stronghold_snow.png", "dwarf/buildings/stronghold_snow.png")
 SetDLCFileEquivalency("dlcs/joruvellir_faction_flair/graphics/buildings/joruvellir_yale_pen.png", "dwarf/buildings/yale_pen.png")
