@@ -6,4 +6,10 @@ tonsberg = {
 	regions = {
 		scandinavia
 	}
+	
+	history = {
+		841 = {
+			owner = vestfold #the kingdom of Vestfold was in existence when Halfdan the Black became king of Agder in 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
+		}
+	}
 }

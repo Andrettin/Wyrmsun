@@ -25,26 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("arendal", {
-	Name = "Arendal",
-	MapTemplate = "old_earth",
-	Position = {4048, 708},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"norse", "Arendal"
-	},
-	--Cores = {
-	--	"agder"
-	--},
-	HistoricalOwners = {
-		841, "agder" -- Halfdan the Black became king of Agder in 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
-	},
-	HistoricalBuildings = {
-		841, 0, "town_hall"
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("gjerstad", {
 	Name = "Gjerstad",
 	MapTemplate = "old_earth",
@@ -64,27 +44,6 @@ DefineSite("gjerstad", {
 	Regions = {"scandinavia"}
 })
 
-DefineSite("hamar", {
-	Name = "Hamar",
-	MapTemplate = "old_earth",
-	Position = {4089, 666},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"norse", "Hamar"
-	},
-	--Cores = {
-	--	"hedmark"
-	--},
-	HistoricalOwners = {
-		841, "hedmark", -- the kingdom of Hedmark was in existence during Halfdan the Black's reign in Agder; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, pp. 262-263.
-		1560, "denmark" -- Hamar's area was a Danish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		841, 0, "town_hall"
-	},
-	Regions = {"scandinavia"}
-})
-
 DefineSite("hermansverk", {
 	Name = "Hermansverk",
 	MapTemplate = "old_earth",
@@ -98,26 +57,6 @@ DefineSite("hermansverk", {
 	--},
 	HistoricalOwners = {
 		841, "sogn", -- the kingdom of Sogn was in existence during Halfdan the Black's reign in Agder; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 264.
-	},
-	HistoricalBuildings = {
-		841, 0, "town_hall"
-	},
-	Regions = {"scandinavia"}
-})
-
-DefineSite("tonsberg", {
-	Name = "Tonsberg",
-	MapTemplate = "old_earth",
-	Position = {4074, 698},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"norse", "Tonsberg" -- "Tønsberg"
-	},
-	--Cores = {
-	--	"vestfold"
-	--},
-	HistoricalOwners = {
-		841, "vestfold" -- the kingdom of Vestfold was in existence when Halfdan the Black became king of Agder in 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
 	},
 	HistoricalBuildings = {
 		841, 0, "town_hall"

@@ -6,4 +6,10 @@ arendal = {
 	regions = {
 		scandinavia
 	}
+	
+	history = {
+		841 = {
+			owner = agder #Halfdan the Black became king of Agder in 841; Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 262.
+		}
+	}
 }
