@@ -1,0 +1,9 @@
+kouvola = {
+	name = "Kouvola"
+	map_template = earth
+	geocoordinate = { 26.70900351080 60.87600008510 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		finland
+	}
+}
