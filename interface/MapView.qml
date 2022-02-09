@@ -459,7 +459,7 @@ Item {
 		var updated_active_popup_pause_count = map_view.active_popup_pause_count
 		++updated_active_popup_pause_count
 		
-		if (updated_active_popup_pause_count == 1 && !wyrmgus.map_editor.running) {
+		if (updated_active_popup_pause_count == 1 && !wyrmgus.map_editor.running && wyrmgus.game.running) {
 			if (!wyrmgus.game.multiplayer) {
 				wyrmgus.game.paused = true
 			}
@@ -473,7 +473,7 @@ Item {
 		var updated_active_popup_pause_count = map_view.active_popup_pause_count
 		--updated_active_popup_pause_count
 		
-		if (updated_active_popup_pause_count == 0 && !wyrmgus.map_editor.running) {
+		if (updated_active_popup_pause_count == 0 && !wyrmgus.map_editor.running && wyrmgus.game.running) {
 			if (!wyrmgus.game.multiplayer) {
 				wyrmgus.game.paused = false
 			}
