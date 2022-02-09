@@ -1,3 +1,15 @@
 population = {
 	file = "resource_icons/population/population.png"
 }
+
+priests = {
+	file = "resource_icons/population/priests.png"
+}
+
+sailors = {
+	file = "resource_icons/population/sailors.png"
+}
+
+soldiers = {
+	file = "resource_icons/population/soldiers.png"
+}

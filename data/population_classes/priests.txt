@@ -1,4 +1,4 @@
 priests = { #used to recruit priest units
 	name = "Priests"
-	resource_icon = population
+	resource_icon = priests
 }

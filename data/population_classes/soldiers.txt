@@ -1,4 +1,4 @@
 soldiers = { #used for troops
 	name = "Soldiers"
-	resource_icon = population
+	resource_icon = soldiers
 }
