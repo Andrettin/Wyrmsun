@@ -1,0 +1,9 @@
+mitilini = {
+	name = "Mitilini"
+	#map_template = earth
+	#geocoordinate = { 26.55464758170 39.11041505840 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	#regions = {
+	#	greece
+	#}
+}
