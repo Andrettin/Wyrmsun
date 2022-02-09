@@ -1,0 +1,19 @@
+antrea = {
+	name = "Antrea"
+	map_template = earth
+	geocoordinate = { 29.133333333333 60.95 }
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		slavic = "Kamennogorsk"
+	}
+	regions = {
+		european_russia
+	}
+	
+	history = {
+		-8500 = {
+			owner = uralic_tribe #a fishnet belonging to the ancestors of Finno-Ugric speaking peoples was found in Antrea (on the Karelian Isthmus), being dated c. 8500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+			building_classes += farm
+		}
+	}
+}
