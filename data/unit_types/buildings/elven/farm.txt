@@ -5,6 +5,10 @@ unit_elven_farm = {
 	frame_size = { 70 70 }
 	icon = elven_farm
 	offset = { 0 -3 }
+	neutral_spawned_units = {
+		unit_elven_swordsman
+	}
+	max_spawned_demand = 4
 	description = "Elven farms grow food to sustain their settlements, seeking to exact as little from the land as possible."
 	variations = {
 		farm = {

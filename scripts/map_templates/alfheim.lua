@@ -33,8 +33,8 @@ SetMapTemplateUnit("alfheim", "unit_elven_smithy", "lintanir", {763, 51}) -- smi
 SetMapTemplateHero("alfheim", "volund", "ulfdalir", {762, 53})
 
 -- the king's sons, maybe their unit type should be thieves since they went to Volund's prison secretly, and since then him killing them wouldn't require being an enemy of the Lintanir faction
-SetMapTemplateUnit("alfheim", "unit-elven-swordsman", "lintanir", {764, 54})
-SetMapTemplateUnit("alfheim", "unit-elven-swordsman", "lintanir", {765, 53})
+SetMapTemplateUnit("alfheim", "unit_elven_swordsman", "lintanir", {764, 54})
+SetMapTemplateUnit("alfheim", "unit_elven_swordsman", "lintanir", {765, 53})
 
 SetMapTemplateTileTerrain("alfheim", "dwarven-wall", {760, 48})
 SetMapTemplateTileTerrain("alfheim", "dwarven-wall", {760, 49})

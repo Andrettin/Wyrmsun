@@ -28,7 +28,7 @@
 DefineCharacter("arawn", { -- Arawn was king of the otherworld Annwn in Welsh legends; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, pp. 10, 16, 119-120.
 	Name = "Arawn",
 	Gender = "male",
-	Type = "unit-elven-swordsman", -- should be a rider
+	Type = "unit_elven_swordsman", -- should be a rider
 	Civilization = "elf",
 	Faction = "annwn",
 	Trait = "upgrade-wise",
@@ -41,7 +41,7 @@ DefineCharacter("arawn", { -- Arawn was king of the otherworld Annwn in Welsh le
 DefineCharacter("hafgan", { -- Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 11.
 	Name = "Hafgan",
 	Gender = "male",
-	Type = "unit-elven-swordsman",
+	Type = "unit_elven_swordsman",
 	Civilization = "elf",
 	Faction = "annwn"
 	-- king in Annwn who opposed Arawn
@@ -56,7 +56,7 @@ DefineCharacter("volund", { -- elven smith from Norse mythology; Source: Carolyn
 		"Wieland" -- Völundr's German name; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 74-75.
 	},
 	Gender = "male",
-	Type = "unit-elven-swordsman", -- elven smith
+	Type = "unit_elven_swordsman", -- elven smith
 	Civilization = "elf",
 	Faction = "ulfdalir"
 })
@@ -64,7 +64,7 @@ DefineCharacter("volund", { -- elven smith from Norse mythology; Source: Carolyn
 DefineCharacter("widia", { -- son of Weland (Völund); Source: Paul Beekman Taylor, "Searoniðas: Old Norse Magic and Old English Verse", 1983, pp. 113, 118.
 	Name = "Widia",
 	Gender = "male",
-	Type = "unit-elven-swordsman",
+	Type = "unit_elven_swordsman",
 	Civilization = "elf",
 	Faction = "ulfdalir",
 	Father = "volund"
@@ -73,6 +73,6 @@ DefineCharacter("widia", { -- son of Weland (Völund); Source: Paul Beekman Tayl
 DefineCharacter("argante", { -- Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 90.
 	Name = "Argante", -- elven queen whom King Arthur met; described as beautiful
 	Gender = "female",
-	Type = "unit-elven-swordsman",
+	Type = "unit_elven_swordsman",
 	Civilization = "elf"
 })

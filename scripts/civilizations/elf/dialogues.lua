@@ -63,7 +63,7 @@ DefineDialogue("the-two-kings-of-annwn-hafgan-dies", { -- Source: Bernhard Maier
 			"text", "My noble elves of Hafgan's household, I will hear now which of you shall pledge yourselves to me."
 		},
 		{
-			"speaker", "unit", "unit-elven-swordsman",
+			"speaker", "unit", "unit_elven_swordsman",
 			"speaker-player", "Annwn (Hafgan)",
 			"text", "Lord, all of us shall, as there is no king over all of Annwn other than you."
 		},

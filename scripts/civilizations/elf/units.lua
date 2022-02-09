@@ -31,36 +31,6 @@
 --	NOTE: Save can generate this table.
 --
 
-DefineUnitType("unit-elven-swordsman", {
-	Name = "Swordsman",
-	Parent = "unit-template-infantry",
-	Civilization = "elf",
---	Description = "Elves are not warlike by nature, but in times of need, their natural grace and agility serve them well, as does their skillful craftsmanship. An elf can grasp the basics of swordsmanship in a time uncannily short by the standards of other races, and put them to effective use on the battlefield.",
---	Quote = "\"This he learned, the lord of Lintanir,\nThat Volund alone in Ulfdalir lay;\nBy night went his men, their mail-coats were studded,\nTheir shields in the waning moonlight shone.\"\n- The Lay of Volund",
-	Image = {"file", "elf/units/swordsman.png", "size", {72, 72}},
-	Animations = "animations-melee-unit", Icon = "icon-elven-swordsman",
-	DefaultEquipment = {
-		{"weapon", "unit-short-sword"},
-		{"shield", "unit-wooden-shield"},
-		{"boots", "unit-boots"}
-	},
-	Costs = {"time", 50, "copper", 600},
-	Corpse = "unit-human-dead-body",
-	DaySightRangeBonus = 1,
-	NightSightRangeBonus = -1,
-	WeaponClasses = {"sword", "thrusting_sword"},
-	HackDamage = true,
-	Mana = {Enable = true, Max = 75, Value = 75, Increase = 1},
-	CanCastSpell = {"spell-puncture"},
-	AutoCastActive = {"spell-puncture"},
-	ButtonKey = "s",
-	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing"},
-	Sounds = {
-		"hit", "sword-attack",
-		"miss", "attack-miss"
-	}
-} )
-
 DefineUnitType("unit-elven-priest", {
 	Name = "Priest",
 	Parent = "unit-template-priest",

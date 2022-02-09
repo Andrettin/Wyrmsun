@@ -1846,7 +1846,7 @@ Units = {
 	"upgrade-goblin-catapult-projectile-1", "upgrade-goblin-catapult-projectile-2",
 	"upgrade-goblin-alchemy",
 	"unit-kobold-footpad", "unit-kobold-slasher", "unit-kobold-champion",
-	"unit-elven-swordsman", "unit-elven-priest", 
+	"unit-elven-priest", 
 	"unit-orc-sea-orc", "unit-orc-shaman",
 	"unit-ettin",
 	"unit-caravan",

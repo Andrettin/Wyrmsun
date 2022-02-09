@@ -1,0 +1,52 @@
+unit_elven_swordsman = {
+	name = "Swordsman"
+	parent = unit_template_infantry
+	civilization = elven
+	description = "Elves are not warlike by nature, but in times of need, their natural grace and agility serve them well, as does their skillful craftsmanship. An elf can grasp the basics of swordsmanship in a time uncannily short by the standards of other races, and put them to effective use on the battlefield."
+	#quote = "\"This he learned, the lord of Lintanir,\nThat Volund alone in Ulfdalir lay;\nBy night went his men, their mail-coats were studded,\nTheir shields in the waning moonlight shone.\"\n- The Lay of Volund"
+	image_file = "elf/units/swordsman.png"
+	frame_size = { 72 72 }
+	animation_set = animations_melee_unit
+	icon = icon_elven_swordsman
+	costs = {
+		time = 50
+		copper = 600
+	}
+	corpse_type = unit_human_dead_body
+	day_sight_range_bonus = 1
+	night_sight_range_bonus = -1
+	neutral_random_movement_probability = 1
+	button_key = s
+	weapon_classes = {
+		sword
+		thrusting_sword
+	}
+	hack_damage = true
+	ai_drops = {
+		unit_short_sword
+		unit_broad_sword
+		unit_wooden_shield
+		unit_bronze_shield
+		unit_boots
+		unit_cheese
+		unit_meat
+		unit_potion_of_healing
+	}
+	default_equipment = {
+		weapon = unit_short_sword
+		shield = unit_wooden_shield
+		boots = unit_boots
+	}
+	mana = {
+		enable = true
+		value = 75
+		max = 75
+		increase = 1
+	}
+	spells = { spell_puncture }
+	autocast_spells = { spell_puncture }
+	sounds = {
+		hit = sword_attack
+		miss = attack_miss
+	}
+}

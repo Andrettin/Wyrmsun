@@ -196,7 +196,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-goblin-magnate",
 --		"unit-kobold-champion",
 		"unit-ettin",
---		"unit-elven-swordsman", "unit-elven-priest",
+--		"unit_elven_swordsman", "unit-elven-priest",
 		"unit-troll-warrior"
 	}
 } )
