@@ -25,13 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("carthage-old-earth-map", { -- so that it appears in the Italy custom map
-	Name = "Carthage",
-	MapTemplate = "old_earth",
-	Position = {4071, 1209},
-	BaseUnitType = "unit_settlement_site"
-})
-
 DefineSite("utica", {
 	Name = "Utica",
 	MapTemplate = "old_earth",
