@@ -6,4 +6,8 @@ trollhattan = {
 	regions = {
 		scandinavia
 	}
+	
+	history = {
+		neutral_building_type = unit_troll_farm
+	}
 }
