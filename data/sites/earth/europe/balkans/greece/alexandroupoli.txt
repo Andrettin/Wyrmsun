@@ -1,0 +1,9 @@
+alexandroupoli = {
+	name = "Alexandroupoli"
+	map_template = earth
+	geocoordinate = { 25.87440978190 40.84861936540 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		greece
+	}
+}

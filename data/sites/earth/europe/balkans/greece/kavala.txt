@@ -1,0 +1,9 @@
+kavala = {
+	name = "Kavala"
+	map_template = earth
+	geocoordinate = { 24.40176036200 40.94121113200 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		greece
+	}
+}

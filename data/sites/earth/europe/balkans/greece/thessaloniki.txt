@@ -1,0 +1,9 @@
+thessaloniki = {
+	name = "Thessaloniki"
+	map_template = earth
+	geocoordinate = { 22.88500077180 40.69610638330 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		greece
+	}
+}

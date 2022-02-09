@@ -1,0 +1,9 @@
+larissa = {
+	name = "Larissa"
+	map_template = earth
+	geocoordinate = { 22.42001623400 39.63040915840 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		greece
+	}
+}

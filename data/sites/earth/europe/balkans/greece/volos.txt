@@ -1,0 +1,9 @@
+volos = {
+	name = "Volos"
+	map_template = earth
+	geocoordinate = { 22.95000972360 39.36995993960 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		greece
+	}
+}

@@ -1,0 +1,9 @@
+lamia = {
+	name = "Lamia"
+	map_template = earth
+	geocoordinate = { 22.43400357550 38.89899915410 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		greece
+	}
+}

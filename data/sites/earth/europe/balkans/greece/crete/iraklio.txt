@@ -1,0 +1,9 @@
+iraklio = {
+	name = "Iraklio"
+	map_template = earth
+	geocoordinate = { 25.13049678420 35.32501304020 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		greece
+	}
+}

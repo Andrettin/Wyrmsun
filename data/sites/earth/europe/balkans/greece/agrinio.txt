@@ -1,0 +1,9 @@
+agrinio = {
+	name = "Agrinio"
+	map_template = earth
+	geocoordinate = { 21.40772660190 38.62176271470 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		greece
+	}
+}

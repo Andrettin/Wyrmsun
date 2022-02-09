@@ -1,0 +1,9 @@
+kalamata = {
+	name = "Kalamata"
+	map_template = earth
+	geocoordinate = { 22.11419510770 37.03891359360 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		greece
+	}
+}
