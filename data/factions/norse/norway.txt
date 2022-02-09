@@ -4,6 +4,7 @@ norway = {
 	civilization = norse
 	type = polity
 	color = blue
+	min_tier = duchy #tribe
 	default_tier = kingdom
 	default_capital = oslo
 	upgrade = upgrade_faction_norway
