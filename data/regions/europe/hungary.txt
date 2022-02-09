@@ -22,3 +22,10 @@ slovakia = {
 		czechoslovakia
 	}
 }
+
+transcarpathia = {
+	superregions = {
+		royal_hungary
+		ukraine
+	}
+}

@@ -1,0 +1,9 @@
+presov = {
+	name = "Presov" #"Prešov"
+	map_template = earth
+	geocoordinate = { 21.23936478550 48.99973390610 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		slovakia
+	}
+}

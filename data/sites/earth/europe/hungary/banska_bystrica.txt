@@ -1,0 +1,9 @@
+banska_bystrica = {
+	name = "Banska Bystrica" #"Banská Bystrica"
+	map_template = earth
+	geocoordinate = { 19.14998327500 48.73329022120 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		slovakia
+	}
+}

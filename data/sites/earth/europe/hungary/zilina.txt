@@ -1,0 +1,9 @@
+zilina = {
+	name = "Zilina" #"Žilina"
+	map_template = earth
+	geocoordinate = { 18.74938757190 49.21982383130 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		slovakia
+	}
+}

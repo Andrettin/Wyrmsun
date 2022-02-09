@@ -1,0 +1,9 @@
+zvolen = {
+	name = "Zvolen"
+	map_template = earth
+	geocoordinate = { 19.13324011100 48.58373862620 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		slovakia
+	}
+}
