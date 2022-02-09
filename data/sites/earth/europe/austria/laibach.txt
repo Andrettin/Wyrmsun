@@ -1,0 +1,25 @@
+laibach = {
+	name = "Laibach"
+	map_template = earth
+	geocoordinate = { 14.51496903350 46.05528830880 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		latin = "Emona" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		slavic = "Ljubljana"
+		teutonic = "Laibach" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+	}
+	regions = {
+		carniola
+	}
+	
+	history = {
+		1477 = {
+			owner = austria #Laibach was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
+			building_classes += farm
+		}
+		
+		1815 = {
+			owner = austria #Laibach was a possession of the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

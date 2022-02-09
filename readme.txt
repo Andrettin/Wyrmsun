@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 - Minor building sites are now generated on maps.
 - Added many predefined minor building sites for the Earth scenario map.
 
+* Quests
+- Fixed crash which could happen in the final dialogue of the Svegdir's Journey side-quest.
+
 * Units
 - Unit selection is now shown as a rectangle.
 - When the player's own units are selected, the middle parts of the selection rectangle lines will become yellow/orange/red, depending on damage taken.

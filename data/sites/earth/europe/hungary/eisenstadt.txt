@@ -1,0 +1,9 @@
+eisenstadt = {
+	name = "Eisenstadt"
+	map_template = earth
+	geocoordinate = { 16.53329746760 47.83329907870 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		burgenland
+	}
+}
