@@ -1,0 +1,18 @@
+jelgava = {
+	name = "Jelgava"
+	map_template = earth
+	geocoordinate = { 23.71280554070 56.65270347000 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		teutonic = "Mitau"
+	}
+	regions = {
+		baltic_countries
+	}
+	
+	history = {
+		-9000 = {
+			owner = uralic_tribe #the ancestors of Finno-Ugric speaking peoples settled the eastern Baltic (apparently meaning Estonia and Latvia) c. 9000 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 184.
+		}
+	}
+}
