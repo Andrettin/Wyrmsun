@@ -1,0 +1,9 @@
+tartu = {
+	name = "Tartu"
+	map_template = earth
+	geocoordinate = { 26.70988358430 58.38394146640 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		baltic_countries
+	}
+}

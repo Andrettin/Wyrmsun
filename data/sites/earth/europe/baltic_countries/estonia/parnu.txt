@@ -1,0 +1,9 @@
+parnu = {
+	name = "Parnu" #"Pärnu"
+	map_template = earth
+	geocoordinate = { 24.51358353550 58.37474306140 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		baltic_countries
+	}
+}
