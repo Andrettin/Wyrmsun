@@ -5,12 +5,15 @@ ripon = {
 	base_unit_type = unit_minor_building_site
 	cultural_names = {
 		anglo_saxon = "Hrypum" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+		elven = "Elueshov" #alternatively given as "Elueshowe"; Old English name for Ailey Hill (which is in Ripon) which may by etymologized as "the elf's mound", although not certainly; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 218.
 	}
 	regions = {
 		england
 	}
 	
 	history = {
+		neutral_building_type = unit_elven_farm #since there is a location named after elves in Ripon, we place elves before human settlement there
+		
 		-264 = {
 			neutral_building_type = none #remove when York becomes settled, as this site is quite close to it
 		}

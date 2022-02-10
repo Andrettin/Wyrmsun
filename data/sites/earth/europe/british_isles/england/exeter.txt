@@ -7,6 +7,7 @@ exeter = {
 		anglo_saxon = "Escanceaster" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 		briton = "Isca Dumnoniorum"
 		celtic = "Isca Dumnoniorum"
+		elven = "Alphington" #Alphington is in Exeter, and the name may have originally referred to elves; Source: Alaric Hall, "The Meanings of Elf and Elves in Medieval England", 2004, p. 219.
 		latin = "Isca Dumnoniorum" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	}
 	regions = {
@@ -14,9 +15,12 @@ exeter = {
 	}
 	
 	history = {
+		neutral_building_type = unit_elven_farm #since there is a location named after elves there, we place elves before human settlement there
+		
 		410 = {
 			owner = rome #Isca Dumnoniorum/Exeter was part of Roman Britain c. 410 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 			building_classes += farm
+			neutral_building_type = none
 		}
 		
 		802 = {
