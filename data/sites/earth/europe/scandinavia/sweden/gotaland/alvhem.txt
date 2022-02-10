@@ -9,5 +9,9 @@ alvhem = {
 	
 	history = {
 		neutral_building_type = unit_elven_farm
+		
+		-2800.12.30 = {
+			neutral_building_type = none #remove when Gothenburg becomes settled, as this site is quite close to it
+		}
 	}
 }
