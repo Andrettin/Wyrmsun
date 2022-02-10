@@ -59,6 +59,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Buildings
 - Farms and towers can now only be built on top of "Minor Building Site" locations.
+- Added Troll Farm building. If it is owned by the neutral player, it will spawn Troll Warriors.
+- Elven Farms will now spawn Elven Swordsmen if they are owned by the neutral player.
 
 * Map Editor
 - Fixed issue which caused the F10 editor menu to no longer work after exiting and re-entering the map editor.
@@ -69,6 +71,9 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Fixed crash which could happen in the final dialogue of the Svegdir's Journey side-quest.
+
+* Scenarios
+- Added neutral Elven and Troll Farms in mythical times in Britain and Scandinavia.
 
 * Units
 - Unit selection is now shown as a rectangle.
