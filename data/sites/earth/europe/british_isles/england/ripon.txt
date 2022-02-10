@@ -1,0 +1,36 @@
+ripon = {
+	name = "Ripon"
+	map_template = earth
+	geocoordinate = { -1.5236111111111 54.138055555556 }
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		anglo_saxon = "Hrypum" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
+	}
+	regions = {
+		england
+	}
+	
+	history = {
+		-264 = {
+			neutral_building_type = none #remove when York becomes settled, as this site is quite close to it
+		}
+		
+		686 = {
+			owner = northumbria #Ripon was part of Northumbria in 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 139.
+			building_classes += farm
+			#building_classes += temple #a church was existent in Ripon as of 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 139.
+		}
+		
+		709 = {
+			#building_classes -= temple #Ripon ceased to be a bishopric when Wilfrid died in 709; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 145-146.
+		}
+		
+		802 = {
+			owner = northumbria #Ripon's area was part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
+		}
+		
+		1560 = {
+			owner = england #Ripon's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

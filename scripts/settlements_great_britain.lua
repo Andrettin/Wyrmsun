@@ -732,26 +732,6 @@ DefineSite("richborough", {
 	Regions = {"england"}
 })
 
-DefineSite("ripon", {
-	Name = "Ripon",
-	MapTemplate = "old_earth",
-	Position = {3828, 816},
-	CulturalNames = {
-		"anglo-saxon", "Hrypum", -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		"english", "Ripon"
-	},
-	HistoricalOwners = {
-		686, "northumbria", -- Ripon was part of Northumbria in 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 139.
-		802, "northumbria", -- Ripon's area was part of Northumbria c. 802 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 60.
-		1560, "england" -- Ripon's area was part of England c. 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		686, 0, "temple" -- a church was existent in Ripon as of 686; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 139.
-		-- Ripon ceased to be a bishopric when Wilfrid died in 709; Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 145-146.
-	},
-	Regions = {"england"}
-})
-
 DefineSite("rochester", {
 	Name = "Rochester",
 	MapTemplate = "old_earth",
