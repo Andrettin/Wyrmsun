@@ -1,0 +1,9 @@
+coventry = {
+	name = "Coventry"
+	map_template = earth
+	geocoordinate = { -1.49999658345 52.42040366530 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		england
+	}
+}

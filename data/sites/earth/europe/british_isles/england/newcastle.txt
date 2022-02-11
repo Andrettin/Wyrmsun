@@ -1,0 +1,9 @@
+newcastle = {
+	name = "Newcastle"
+	map_template = earth
+	geocoordinate = { -1.59999047994 55.00037538570 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		england
+	}
+}

@@ -1,0 +1,9 @@
+peterborough = {
+	name = "Peterborough"
+	map_template = earth
+	geocoordinate = { -0.24999536274 52.58041973790 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		england
+	}
+}

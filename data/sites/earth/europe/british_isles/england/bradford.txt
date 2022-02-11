@@ -1,0 +1,9 @@
+bradford = {
+	name = "Bradford"
+	map_template = earth
+	geocoordinate = { -1.74998132466 53.80003521640 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		england
+	}
+}

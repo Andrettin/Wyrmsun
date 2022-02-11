@@ -1,0 +1,9 @@
+ipswich = {
+	name = "Ipswich"
+	map_template = earth
+	geocoordinate = { 1.16999548199 52.07034751290 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		england
+	}
+}

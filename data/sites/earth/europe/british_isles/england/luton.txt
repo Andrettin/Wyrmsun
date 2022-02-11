@@ -1,0 +1,9 @@
+luton = {
+	name = "Luton"
+	map_template = earth
+	geocoordinate = { -0.42001082498 51.88035910960 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		england
+	}
+}

@@ -1,0 +1,9 @@
+nottingham = {
+	name = "Nottingham"
+	map_template = earth
+	geocoordinate = { -1.17001672505 52.97034425770 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		england
+	}
+}

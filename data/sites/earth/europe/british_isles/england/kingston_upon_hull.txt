@@ -1,0 +1,9 @@
+kingston_upon_hull = {
+	name = "Kingston upon Hull"
+	map_template = earth
+	geocoordinate = { -0.32999047993 53.75042584140 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		england
+	}
+}
