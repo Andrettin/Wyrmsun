@@ -1,0 +1,9 @@
+cardiff = {
+	name = "Cardiff"
+	map_template = earth
+	geocoordinate = { -3.22500756979 51.49999472970 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		wales
+	}
+}

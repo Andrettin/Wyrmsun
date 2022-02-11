@@ -1,0 +1,9 @@
+douglas = {
+	name = "Douglas"
+	map_template = earth
+	geocoordinate = { -4.48002140443 54.15042726550 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		england
+	}
+}

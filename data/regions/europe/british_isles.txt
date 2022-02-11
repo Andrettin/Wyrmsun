@@ -17,6 +17,10 @@ scotland = {
 	superregions = { great_britain }
 }
 
+wales = {
+	superregions = { great_britain }
+}
+
 ireland = {
 	superregions = { british_isles }
 }
