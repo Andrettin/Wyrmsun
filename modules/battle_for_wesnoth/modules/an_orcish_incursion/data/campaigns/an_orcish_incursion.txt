@@ -11,7 +11,7 @@ an_orcish_incursion = {
 		valley_of_trolls
 	}
 	quest = an_orcish_incursion
-	icon = icon_troll_warrior
+	icon = troll_warrior
 	player_color = red
 	hidden = true
 }

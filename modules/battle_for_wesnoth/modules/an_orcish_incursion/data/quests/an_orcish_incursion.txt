@@ -1,6 +1,6 @@
 an_orcish_incursion = {
 	name = "A Troll Incursion"
-	icon = icon_troll_warrior
+	icon = troll_warrior
 	player_color = red
 	description = "Defend the forests of the elves against a brutal troll invasion."
 	unobtainable = true

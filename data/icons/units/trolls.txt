@@ -7,3 +7,7 @@ troll_worker_christmas_hat = {
 	file = "icons/units/troll/worker.png"
 	frame = 1
 }
+
+troll_warrior = {
+	file = "icons/units/troll/warrior.png"
+}
