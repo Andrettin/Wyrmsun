@@ -2,6 +2,16 @@ crimson_imp = {
 	file = "icons/units/goblin/swordsman.png"
 	hue_rotation = -90
 	hue_ignored_colors = {
+		#eyes/mouth
+		#{ 44 0 0 }
+		#{ 68 0 0 }
+		#{ 92 0 0 }
+		#{ 116 0 0 }
+		#{ 173 0 0 }
+		#{ 176 0 0 }
+		#{ 184 0 0 }
+		#{ 208 192 28 }
+		#{ 230 0 0 }
 		#leather/teeth
 		{ 36 20 0 }
 		{ 44 24 0 }
