@@ -5,6 +5,10 @@ nidavellir = {
 	size = { 192 192 }
 	min_subtemplate_pos = { 0 256 }
 	max_subtemplate_pos = { 192 512 }
+	generated_neutral_units = {
+		unit_minor_building_site = 36
+		unit_building_site = 4
+	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
 		unit_wood_pile = 16
