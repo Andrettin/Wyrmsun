@@ -1,0 +1,9 @@
+dumfries = {
+	name = "Dumfries"
+	map_template = earth
+	geocoordinate = { -3.55000065247 55.06708965970 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scotland
+	}
+}

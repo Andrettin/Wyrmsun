@@ -1,0 +1,9 @@
+perth = {
+	name = "Perth"
+	map_template = earth
+	geocoordinate = { -3.46997969707 56.40034161290 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scotland
+	}
+}

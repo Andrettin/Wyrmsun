@@ -1,0 +1,9 @@
+inverness = {
+	name = "Inverness"
+	map_template = earth
+	geocoordinate = { -4.23326644023 57.46712404290 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scotland
+	}
+}

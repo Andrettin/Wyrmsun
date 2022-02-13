@@ -69,6 +69,9 @@ https://github.com/Andrettin/Wyrmsun
 - Minor building sites are now generated on maps.
 - Added many predefined minor building sites for the Earth scenario map.
 
+* Pathfinding
+- Made improvements to pathfinder performance.
+
 * Quests
 - Fixed crash which could happen in the final dialogue of the Svegdir's Journey side-quest.
 

@@ -1,0 +1,9 @@
+kirkwall = {
+	name = "Kirkwall"
+	map_template = earth
+	geocoordinate = { -2.95001143535 58.96698081370 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scotland
+	}
+}

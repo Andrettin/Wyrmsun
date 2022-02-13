@@ -1,0 +1,9 @@
+ayr = {
+	name = "Ayr"
+	map_template = earth
+	geocoordinate = { -4.61667972962 55.45039959630 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scotland
+	}
+}

@@ -1,0 +1,9 @@
+fort_william = {
+	name = "Fort William"
+	map_template = earth
+	geocoordinate = { -5.11207580566 56.81647794620 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scotland
+	}
+}
