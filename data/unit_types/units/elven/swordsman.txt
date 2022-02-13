@@ -16,7 +16,7 @@ unit_elven_swordsman = {
 	day_sight_range_bonus = 1
 	night_sight_range_bonus = -1
 	neutral_random_movement_probability = 1
-	random_movement_distance = 4
+	random_movement_distance = 1
 	button_key = s
 	weapon_classes = {
 		sword
