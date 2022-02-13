@@ -1,0 +1,9 @@
+ros_comain = {
+	name = "Ros Comain"
+	map_template = earth
+	geocoordinate = { -8.18333330000 53.63333330000 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		ireland
+	}
+}

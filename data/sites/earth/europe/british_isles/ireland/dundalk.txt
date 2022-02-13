@@ -1,0 +1,9 @@
+dundalk = {
+	name = "Dundalk"
+	map_template = earth
+	geocoordinate = { -6.41667321921 54.00041058260 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		ireland
+	}
+}

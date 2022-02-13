@@ -1,0 +1,9 @@
+muineachan = {
+	name = "Muineachan"
+	map_template = earth
+	geocoordinate = { -6.96666670000 54.25000000000 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		ireland
+	}
+}

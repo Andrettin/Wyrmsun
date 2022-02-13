@@ -1,0 +1,9 @@
+kilkenny = {
+	name = "Kilkenny"
+	map_template = earth
+	geocoordinate = { -7.25225529116 52.65454958000 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		ireland
+	}
+}

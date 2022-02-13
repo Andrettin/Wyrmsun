@@ -1,0 +1,9 @@
+drogheda = {
+	name = "Drogheda"
+	map_template = earth
+	geocoordinate = { -6.34776269675 53.71926495270 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		ireland
+	}
+}

@@ -1,0 +1,9 @@
+killarney = {
+	name = "Killarney"
+	map_template = earth
+	geocoordinate = { -9.51666487775 52.05040041010 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		ireland
+	}
+}
