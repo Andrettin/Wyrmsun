@@ -1,0 +1,9 @@
+faro = {
+	name = "Faro"
+	map_template = earth
+	geocoordinate = { -7.93327315412 37.01708030090 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		portugal
+	}
+}

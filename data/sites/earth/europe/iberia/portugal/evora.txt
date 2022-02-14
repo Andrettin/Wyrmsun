@@ -1,0 +1,9 @@
+evora = {
+	name = "Evora" #"Évora"
+	map_template = earth
+	geocoordinate = { -7.90599556130 38.55999611470 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		portugal
+	}
+}

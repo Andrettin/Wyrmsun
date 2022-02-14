@@ -1,0 +1,9 @@
+viseu = {
+	name = "Viseu"
+	map_template = earth
+	geocoordinate = { -7.91000043134 40.65699610800 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		portugal
+	}
+}

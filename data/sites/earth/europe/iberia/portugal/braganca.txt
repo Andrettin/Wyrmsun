@@ -1,0 +1,9 @@
+braganca = {
+	name = "Braganca" #"Bragança"
+	map_template = earth
+	geocoordinate = { -6.75500342578 41.80799701420 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		portugal
+	}
+}
