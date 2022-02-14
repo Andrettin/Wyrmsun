@@ -1,0 +1,9 @@
+santiago_de_compostela = {
+	name = "Santiago de Compostela"
+	map_template = earth
+	geocoordinate = { -8.54109135073 42.88289796860 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		castille
+	}
+}
