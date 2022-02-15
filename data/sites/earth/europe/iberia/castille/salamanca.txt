@@ -1,0 +1,9 @@
+salamanca = {
+	name = "Salamanca"
+	map_template = earth
+	geocoordinate = { -5.67000044903 40.97040488590 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		castille
+	}
+}

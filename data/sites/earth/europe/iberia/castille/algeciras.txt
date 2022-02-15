@@ -1,0 +1,9 @@
+algeciras = {
+	name = "Algeciras"
+	map_template = earth
+	geocoordinate = { -5.46653036284 36.12671214820 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		castille
+	}
+}

@@ -1,0 +1,9 @@
+valladolid = {
+	name = "Valladolid"
+	map_template = earth
+	geocoordinate = { -4.75003076315 41.65000164700 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		castille
+	}
+}

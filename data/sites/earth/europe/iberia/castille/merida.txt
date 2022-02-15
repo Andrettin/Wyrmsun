@@ -1,0 +1,27 @@
+merida = {
+	name = "Merida" #"Mérida"
+	map_template = earth
+	geocoordinate = { -6.33799751231 38.91200401840 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		latin = "Emerita Augusta" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+	}
+	regions = {
+		castille
+	}
+	
+	history = {
+		-138 = {
+			owner = rome #Emerita Augusta was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += farm
+		}
+		
+		486 = {
+			owner = visigothia #Mérida was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1560 = {
+			owner = spain #Mérida's area was a part of the Kingdom of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}

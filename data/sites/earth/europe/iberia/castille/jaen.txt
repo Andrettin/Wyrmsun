@@ -1,0 +1,9 @@
+jaen = {
+	name = "Jaen" #"Jaén"
+	map_template = earth
+	geocoordinate = { -3.79998539368 37.77039349270 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		castille
+	}
+}

@@ -25,28 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("cadiz", {
-	Name = "Cadiz",
-	MapTemplate = "old_earth",
-	Position = {3699, 1218},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"castillian", "Cadiz",
-		"latin", "Gades",
-		"phoenician", "Gades"
-	},
-	HistoricalOwners = {
-		-218, "carthage", -- Gades was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
-		-201, "rome", -- Gades was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia", -- Cadiz was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Cadiz was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-218, 0, "farm"
-	},
-	Regions = {"iberia"}
-})
-
 DefineSite("calahorra", {
 	Name = "Calahorra",
 	MapTemplate = "old_earth",
@@ -61,29 +39,6 @@ DefineSite("calahorra", {
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Calahorra was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"iberia"}
-})
-
-DefineSite("cartagena", {
-	Name = "New Carthage",
-	MapTemplate = "old_earth",
-	Position = {3816, 1191},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"castillian", "Cartagena",
-		"latin", "New Carthage",
-		"phoenician", "New Carthage"
-	},
-	HistoricalOwners = {
-		-218, "carthage", -- New Carthage was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
-		-201, "rome", -- New Carthage was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia", -- Cartagena was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Cartagena was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-218, 395, "farm",
-		395, 0, "temple" -- Cartagena was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 	},
 	Regions = {"iberia"}
 })
@@ -103,44 +58,6 @@ DefineSite("gerona", {
 	},
 	HistoricalBuildings = {
 		395, 0, "temple" -- Gerona was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"iberia"}
-})
-
-DefineSite("malaga", {
-	Name = "Malaga",
-	MapTemplate = "old_earth",
-	Position = {3739, 1211},
-	CulturalNames = {
-		"castillian", "Malaga", -- "Málaga"; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 82-83.
-		"latin", "Malaca" -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-	},
-	HistoricalOwners = {
-		-201, "rome", -- Malaca was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia", -- Málaga was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Malaga was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-201, 0, "farm"
-	},
-	Regions = {"iberia"}
-})
-
-DefineSite("merida", {
-	Name = "Merida",
-	MapTemplate = "old_earth",
-	Position = {3688, 1167},
-	CulturalNames = {
-		"castillian", "Merida", -- "Mérida"
-		"latin", "Emerita Augusta", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-	},
-	HistoricalOwners = {
-		-138, "rome", -- Emerita Augusta was acquired by Rome in 138 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "visigothia", -- Mérida was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "spain" -- Mérida's area was a part of the Kingdom of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalBuildings = {
-		-138, 0, "town_hall"
 	},
 	Regions = {"iberia"}
 })

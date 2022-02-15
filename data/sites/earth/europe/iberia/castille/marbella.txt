@@ -1,0 +1,9 @@
+marbella = {
+	name = "Marbella"
+	map_template = earth
+	geocoordinate = { -4.88333012025 36.51661989240 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		castille
+	}
+}

@@ -1,0 +1,9 @@
+albacete = {
+	name = "Albacete"
+	map_template = earth
+	geocoordinate = { -1.86999983866 39.00034425770 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		castille
+	}
+}

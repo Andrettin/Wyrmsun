@@ -1,0 +1,32 @@
+cadiz = {
+	name = "Cadiz" #"Cádiz"
+	map_template = earth
+	geocoordinate = { -6.22500533184 36.53499086410 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		latin = "Gades"
+		phoenician = "Gades"
+	}
+	regions = {
+		castille
+	}
+	
+	history = {
+		-218 = {
+			owner = carthage #Gades was in Carthaginian possession in 218 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 32.
+			building_classes += farm
+		}
+		
+		-201 = {
+			owner = rome #Gades was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		486 = {
+			owner = visigothia #Cadiz was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1560 = {
+			owner = spain #Cadiz was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}
