@@ -1,0 +1,9 @@
+andorra = {
+	name = "Andorra"
+	map_template = earth
+	geocoordinate = { 1.51648596051 42.50000144350 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		aragon
+	}
+}

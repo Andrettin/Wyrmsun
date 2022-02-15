@@ -1,0 +1,30 @@
+tarragona = {
+	name = "Tarragona"
+	map_template = earth
+	geocoordinate = { 1.24999059918 41.12036989240 } #from Natural Earth
+	base_unit_type = unit_building_site
+	cultural_names = {
+		latin = "Tarraco" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	regions = {
+		aragon
+	}
+	
+	history = {
+		-201 = {
+			owner = rome #Tarraco was acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		395 = {
+			building_classes += temple #Tarragona was the seat of an archbishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		486 = {
+			owner = visigothia #Tarragona was a part of the Kingdom of the Visigoths in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1560 = {
+			owner = spain #Tarragona was a part of Spain in 1560; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
+		}
+	}
+}
