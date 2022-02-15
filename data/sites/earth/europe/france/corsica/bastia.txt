@@ -1,0 +1,9 @@
+bastia = {
+	name = "Bastia"
+	map_template = earth
+	geocoordinate = { 9.45000687525 42.70316733710 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		france
+	}
+}
