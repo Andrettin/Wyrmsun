@@ -57,6 +57,7 @@ shorbear_hills = {
 		unit_iron_deposit = 1
 		unit_yale_cave = 1 #it seems sensible to have a yale cave in the Shorbear Hills; hill dwarves should be some of the dwarven clans that use yales the most, so they should have some wild yales nearby
 		unit_building_site = 1
+		unit_minor_building_site = 8
 	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
