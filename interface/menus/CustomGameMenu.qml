@@ -201,14 +201,18 @@ MenuBase {
 			return wyrmgus.get_difficulty_name(entry)
 		}
 	}
-		
-	NormalText {
-		id: map_name_label
-		text: "Map: " + (selected_map ? (selected_map.name + " (" + selected_map.map_width + "x" + selected_map.map_height + ")") : "")
+	
+	ScrollableTextArea {
+		id: map_description_label
 		anchors.left: world_dropdown.left
 		anchors.leftMargin: -32 * wyrmgus.scale_factor
+		anchors.right: opponents_dropdown.right
+		anchors.rightMargin: -32 * wyrmgus.scale_factor
 		anchors.top: game_type_dropdown.bottom
-		anchors.topMargin: 64 * wyrmgus.scale_factor
+		anchors.topMargin: 32 * wyrmgus.scale_factor
+		anchors.bottom: start_game_button.top
+		anchors.bottomMargin: 16 * wyrmgus.scale_factor
+		text: selected_map ? selected_map.description : ""
 	}
 	
 	LargeButton {
