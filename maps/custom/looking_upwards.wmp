@@ -1,0 +1,13 @@
+name = "Looking Upwards"
+map_size = { 128 128 }
+player_types = {
+	person
+	person
+}
+settings = {
+	disabled_unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}

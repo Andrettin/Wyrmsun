@@ -66,8 +66,10 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which caused the F10 editor menu to no longer work after exiting and re-entering the map editor.
 
 * Maps
-- Minor building sites are now generated on maps.
+- Minor building sites are now generated on many maps.
 - Added many predefined minor building sites for the Earth scenario map.
+- Added support for maps to have their own settings which affect game rules (e.g. whether building sites are required for buildings).
+- Disabled the building site feature for the Central Park, Little Island, Looking Upwards, No Man's Land, North-South Conflict, Northern Lakes and Time for Decisions maps.
 
 * Pathfinding
 - Made improvements to pathfinder performance.
