@@ -40,13 +40,26 @@ MenuBase {
 	LabeledRadioImageButton {
 		id: autosave_radio_button
 		anchors.left: hotkey_setup_dropdown.left
-		anchors.bottom: show_hero_symbol_radio_button.top
+		anchors.bottom: time_of_day_shading_radio_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Autosave"
 		checked: wyrmgus.preferences.autosave
 		
 		onCheckedChanged: {
 			wyrmgus.preferences.autosave = checked
+		}
+	}
+	
+	LabeledRadioImageButton {
+		id: time_of_day_shading_radio_button
+		anchors.left: hotkey_setup_dropdown.left
+		anchors.bottom: show_hero_symbol_radio_button.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		text: "Enable Time of Day Shading"
+		checked: wyrmgus.preferences.time_of_day_shading
+		
+		onCheckedChanged: {
+			wyrmgus.preferences.time_of_day_shading = checked
 		}
 	}
 	
@@ -66,8 +79,7 @@ MenuBase {
 	LabeledRadioImageButton {
 		id: show_hp_bar_radio_button
 		anchors.left: hotkey_setup_dropdown.left
-		anchors.bottom: show_messages_radio_button.top
-		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		anchors.verticalCenter: parent.verticalCenter
 		text: "Show HP Bar"
 		checked: wyrmgus.preferences.hp_bar
 		
@@ -79,7 +91,8 @@ MenuBase {
 	LabeledRadioImageButton {
 		id: show_messages_radio_button
 		anchors.left: hotkey_setup_dropdown.left
-		anchors.verticalCenter: parent.verticalCenter
+		anchors.top: show_hp_bar_radio_button.bottom
+		anchors.topMargin: 8 * wyrmgus.scale_factor
 		text: "Show Messages"
 		checked: wyrmgus.preferences.show_messages
 		

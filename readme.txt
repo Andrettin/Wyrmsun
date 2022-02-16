@@ -80,6 +80,9 @@ https://github.com/Andrettin/Wyrmsun
 * Scenarios
 - Added neutral Elven and Troll Farms in mythical times in Britain and Scandinavia.
 
+* Times of Day
+- Added preference to enabe/disable the time of day shading.
+
 * Units
 - Unit selection is now shown as a rectangle.
 - When the player's own units are selected, the middle parts of the selection rectangle lines will become yellow/orange/red, depending on damage taken.
