@@ -209,7 +209,7 @@ MenuBase {
 		anchors.right: opponents_dropdown.right
 		anchors.rightMargin: -32 * wyrmgus.scale_factor
 		anchors.top: game_type_dropdown.bottom
-		anchors.topMargin: 32 * wyrmgus.scale_factor
+		anchors.topMargin: 20 * wyrmgus.scale_factor
 		anchors.bottom: start_game_button.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		text: selected_map ? selected_map.description : ""
