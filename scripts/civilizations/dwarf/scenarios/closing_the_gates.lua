@@ -95,7 +95,7 @@ AddTrigger("closing-the-gates-rugnur-dies",
 		RemovePlayerObjective(player, "- Mine 10000 copper and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves (in the center of the map) while no enemies are in them")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
+		if (CMap:get():get_info():get_name() == "Chaincolt Foothills" or CMap:get():get_info():get_name() == "Caverns of Chaincolt" or CMap:get():get_info():get_name() == "Northern Wastelands" or CMap:get():get_info():get_name() == "Eastern Mines" or CMap:get():get_info():get_name() == "Shorbear Hills" or CMap:get():get_info():get_name() == "Svafnir's Lair" or CMap:get():get_info():get_name() == "Caverns of Flame") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 				if (GrandStrategy) then
@@ -274,7 +274,7 @@ AddTrigger("closing-the-gates-introduction",
 																							{function(s)
 																								AddPlayerObjective(player, "- Have one unit standing on each glyph at the same time")
 																								AddPlayerObjective(player, "- Rugnur and Baglur must survive")
-																								if (mapinfo.description == "Caverns of Chaincolt") then
+																								if (CMap:get():get_info():get_name() == "Caverns of Chaincolt") then
 																									RemovePlayerObjective(player, "- Defeat your rivals")
 																								end
 																								KillUnitAt("unit-revealer", player, 1, {0, 0}, {MaxMapWidth, MaxMapHeight})
@@ -551,7 +551,7 @@ AddTrigger("closing-the-gates-glyphs-activated",
 																																		{"~!Continue"},
 																																		{function(s)
 																																			RemovePlayerObjective(player, "- Have one unit standing on each glyph at the same time")
-																																			if (mapinfo.description == "Caverns of Chaincolt") then
+																																			if (CMap:get():get_info():get_name() == "Caverns of Chaincolt") then
 																																				if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 																																					ActionVictory()
 																																				else

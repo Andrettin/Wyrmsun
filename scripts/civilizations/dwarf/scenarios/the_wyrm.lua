@@ -50,7 +50,7 @@ AddTrigger("the-wyrm-rugnur-dies",
 		RemovePlayerObjective(player, "- Mine 10000 copper and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves (in the center of the map) while no enemies are in them")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
+		if (CMap:get():get_info():get_name() == "Chaincolt Foothills" or CMap:get():get_info():get_name() == "Caverns of Chaincolt" or CMap:get():get_info():get_name() == "Northern Wastelands" or CMap:get():get_info():get_name() == "Eastern Mines" or CMap:get():get_info():get_name() == "Shorbear Hills" or CMap:get():get_info():get_name() == "Svafnir's Lair" or CMap:get():get_info():get_name() == "Caverns of Flame") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 			end
@@ -114,7 +114,7 @@ AddTrigger("the-wyrm-thursagan-dies",
 		RemovePlayerObjective(player, "- Mine 10000 copper and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves (in the center of the map) while no enemies are in them")
-		if (mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
+		if (CMap:get():get_info():get_name() == "Eastern Mines" or CMap:get():get_info():get_name() == "Shorbear Hills" or CMap:get():get_info():get_name() == "Svafnir's Lair" or CMap:get():get_info():get_name() == "Caverns of Flame") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 			end
@@ -189,7 +189,7 @@ AddTrigger("the-wyrm-introduction",
 										player,
 										{"~!Continue"},
 										{function(s)
-											if (mapinfo.description == "Svafnir's Lair") then
+											if (CMap:get():get_info():get_name() == "Svafnir's Lair") then
 												RemovePlayerObjective(player, "- Defeat your rivals")
 											end
 											AddPlayerObjective(player, "- Get all heroes to the end of the tunnel")

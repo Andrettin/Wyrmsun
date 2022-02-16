@@ -197,7 +197,7 @@ AddTrigger("caverns-of-flame-thursagan-dies",
 		RemovePlayerObjective(player, "- Mine 10000 copper and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves (in the center of the map) while no enemies are in them")
-		if (mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
+		if (CMap:get():get_info():get_name() == "Eastern Mines" or CMap:get():get_info():get_name() == "Shorbear Hills" or CMap:get():get_info():get_name() == "Svafnir's Lair" or CMap:get():get_info():get_name() == "Caverns of Flame") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 			end
@@ -278,7 +278,7 @@ AddTrigger("caverns-of-flame-introduction",
 											player,
 											{"~!Continue"},
 											{function(s)
-												if (mapinfo.description == "Caverns of Flame") then
+												if (CMap:get():get_info():get_name() == "Caverns of Flame") then
 													RemovePlayerObjective(player, "- Defeat your rivals")
 												end
 												AddPlayerObjective(player, "- Explore as much of the cave as possible")

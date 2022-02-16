@@ -225,7 +225,7 @@ function EventTriggers()
 		end
 	)
 
-	if (mapinfo.description == "East Prussia") then
+	if (CMap:get():get_info():get_name() == "East Prussia") then
 		-- The Fall of the Island Fortress briefing; Source: Norman Davies, "Vanished Kingdoms", 2012, p. 343.
 		AddTrigger("the-fall-of-the-island-fortress",
 			function()

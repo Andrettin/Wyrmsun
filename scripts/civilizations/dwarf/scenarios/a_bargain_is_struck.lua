@@ -274,7 +274,7 @@ AddTrigger("a-bargain-is-struck-introduction",
 																															transporter = unit
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
 																															unit = CreateUnitInTransporter("unit-gold-chest", PlayerNumNeutral, transporter)
-																															if (mapinfo.description == "Chaincolt Foothills") then
+																															if (CMap:get():get_info():get_name() == "Chaincolt Foothills") then
 																																ChangeUnitsOwner({6, 65}, {6 + 1, 65 + 1}, gnomish_monarch_player, 0)
 																																RemovePlayerObjective(player, "- Defeat your rivals")
 																															end
@@ -589,7 +589,7 @@ AddTrigger("a-bargain-is-struck-gnomish-envoy-arrives",
 						{"~!Continue"},
 						{function(s)
 							RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-							if (mapinfo.description == "Chaincolt Foothills") then
+							if (CMap:get():get_info():get_name() == "Chaincolt Foothills") then
 								if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 									ActionVictory()
 								else
@@ -656,7 +656,7 @@ AddTrigger("a-bargain-is-struck-caravans-arrived",
 				{"~!Continue"},
 				{function(s)
 					RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-					if (mapinfo.description == "Chaincolt Foothills") then
+					if (CMap:get():get_info():get_name() == "Chaincolt Foothills") then
 						if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 							ActionVictory()
 						else
@@ -725,7 +725,7 @@ AddTrigger("a-bargain-is-struck-quest-completion",
 	end,
 	function() 
 		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-		if (mapinfo.description == "Chaincolt Foothills") then
+		if (CMap:get():get_info():get_name() == "Chaincolt Foothills") then
 			if (GetThisPlayer() == GetFactionPlayer("Norlund Clan")) then
 				ActionVictory()
 			else
@@ -768,7 +768,7 @@ AddTrigger("a-bargain-is-struck-caravan-destroyed",
 			{"~!Continue"},
 			{function(s)
 				RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-				if (mapinfo.description == "Chaincolt Foothills") then
+				if (CMap:get():get_info():get_name() == "Chaincolt Foothills") then
 					if (GetThisPlayer() == player) then
 						ActionDefeat()
 					end
@@ -815,7 +815,7 @@ AddTrigger("a-bargain-is-struck-caravan-cargo-dropped",
 			{"~!Continue"},
 			{function(s)
 				RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
-				if (mapinfo.description == "Chaincolt Foothills") then
+				if (CMap:get():get_info():get_name() == "Chaincolt Foothills") then
 					if (GetThisPlayer() == player) then
 						ActionDefeat()
 					end
@@ -915,7 +915,7 @@ AddTrigger("a-bargain-is-struck-gnomish-envoy-dies",
 --	end,
 --	function() 
 --		RemovePlayerObjective(player, "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")
---		if (mapinfo.description == "Chaincolt Foothills") then
+--		if (CMap:get():get_info():get_name() == "Chaincolt Foothills") then
 --			ActionDefeat()
 --			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
 --				ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment

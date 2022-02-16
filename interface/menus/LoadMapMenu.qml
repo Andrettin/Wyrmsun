@@ -83,10 +83,8 @@ MenuBase {
 		sidebarVisible: false
 		
 		onAccepted: {
-			wyrmgus.clear_map_infos()
 			wyrmgus.load_map_info(select_map_dialog.fileUrl)
 			load_map_menu.selected_map = wyrmgus.get_map_infos()[0]
-			wyrmgus.call_lua_command("GetMapInfo(\"" + escape_string(load_map_menu.selected_map.presentation_filepath) + "\");")
 		}
 	}
 }

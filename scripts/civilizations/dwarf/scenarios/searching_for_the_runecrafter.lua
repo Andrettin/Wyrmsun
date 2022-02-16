@@ -44,7 +44,7 @@ AddTrigger("searching-for-the-runecrafter-rugnur-dies",
 		RemovePlayerObjective(player, "- Mine 10000 copper and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves (in the center of the map) while no enemies are in them")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Caverns of Chaincolt" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
+		if (CMap:get():get_info():get_name() == "Chaincolt Foothills" or CMap:get():get_info():get_name() == "Caverns of Chaincolt" or CMap:get():get_info():get_name() == "Northern Wastelands" or CMap:get():get_info():get_name() == "Eastern Mines" or CMap:get():get_info():get_name() == "Shorbear Hills" or CMap:get():get_info():get_name() == "Svafnir's Lair" or CMap:get():get_info():get_name() == "Caverns of Flame") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 			end
@@ -70,7 +70,7 @@ AddTrigger("searching-for-the-runecrafter-gnomish-envoy-dies",
 		RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves (in the center of the map) while no enemies are in them")
-		if (mapinfo.description == "Chaincolt Foothills" or mapinfo.description == "Northern Wastelands" or mapinfo.description == "Shorbear Hills") then
+		if (CMap:get():get_info():get_name() == "Chaincolt Foothills" or CMap:get():get_info():get_name() == "Northern Wastelands" or CMap:get():get_info():get_name() == "Shorbear Hills") then
 			ActionDefeat()
 			if (GrandStrategy and PlayerHasObjective(GetThisPlayer(), "- Bring the loaded Gnomish caravans and the envoy to your Mead Hall")) then
 				ChangeFactionResource("dwarf", "shinsplitter_clan", "copper", 10000) -- give the funds for Shinsplitter Clan if they managed to successfully stop the shipment
@@ -183,7 +183,7 @@ AddTrigger("searching-for-the-runecrafter-introduction",
 											unit = CreateUnit("unit-gnomish-duelist", 0, {8, 60}) -- gnomish envoy
 											SetUnitVariable(unit, "Active", false)
 										end
-										if (mapinfo.description == "Northern Wastelands") then
+										if (CMap:get():get_info():get_name() == "Northern Wastelands") then
 											RemovePlayerObjective(player, "- Defeat your rivals")
 										end
 										AddPlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
@@ -517,7 +517,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-found",
 																end,
 																function() 
 																	RemovePlayerObjective(player, "- Find Thursagan and bring him to your Mead Hall")
-																	if (mapinfo.description == "Northern Wastelands") then
+																	if (CMap:get():get_info():get_name() == "Northern Wastelands") then
 																		ActionDefeat()
 																	end
 																	return false
@@ -787,7 +787,7 @@ AddTrigger("searching-for-the-runecrafter-thursagan-dies-2",
 		RemovePlayerObjective(player, "- Mine 10000 copper and 20000 coal")
 		RemovePlayerObjective(player, "- Defeat Glonoin, the Shorbear Clan leader")
 		RemovePlayerObjective(player, "- Have all heroes in the Shorbear caves (in the center of the map) while no enemies are in them")
-		if (mapinfo.description == "Eastern Mines" or mapinfo.description == "Shorbear Hills" or mapinfo.description == "Svafnir's Lair" or mapinfo.description == "Caverns of Flame") then
+		if (CMap:get():get_info():get_name() == "Eastern Mines" or CMap:get():get_info():get_name() == "Shorbear Hills" or CMap:get():get_info():get_name() == "Svafnir's Lair" or CMap:get():get_info():get_name() == "Caverns of Flame") then
 			if (GetFactionPlayer("Norlund Clan") == GetThisPlayer()) then
 				ActionDefeat()
 			end
