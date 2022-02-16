@@ -16487,6 +16487,3 @@ unit = CreateUnit(GetRandomCritterUnitType(), PlayerNumNeutral, {34, 125})
 unit = CreateUnit(GetRandomCritterUnitType(), PlayerNumNeutral, {112, 104})
 unit = CreateUnit(GetRandomCritterUnitType(), PlayerNumNeutral, {82, 101})
 unit = CreateUnit(GetRandomCritterUnitType(), PlayerNumNeutral, {122, 63})
-
-CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)
-CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)

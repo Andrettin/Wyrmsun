@@ -16485,6 +16485,3 @@ unit = CreateUnit("unit-germanic-worker", 1, {51, 117})
 unit = CreateUnit("unit-germanic-worker", 1, {51, 117})
 unit = CreateUnit("unit-germanic-worker", 1, {51, 117})
 unit = CreateUnit("unit-germanic-worker", 1, {51, 117})
-
-CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)
-CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)

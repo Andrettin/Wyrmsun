@@ -1,7 +1,8 @@
 classic_skirmish = {
+	name = "Classic Skirmish"
 	disabled_unit_types = {
 		unit_minor_building_site
 		unit_building_site
-		unit_major_building_site
+		#unit_major_building_site
 	}
 }
