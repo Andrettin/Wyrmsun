@@ -370,8 +370,8 @@ function GenerateRocks(rock_seed_number, rock_expansions_number, base_tile_type,
 
 	--[[
 	-- convert buildable land tiles adjacent to rock tiles into rough land
-	for x=0,(CMap:get():get_info().MapWidth - 1) do
-		for y=0,(CMap:get():get_info().MapHeight - 1) do
+	for x=0,(CMap:get():get_info():get_map_width() - 1) do
+		for y=0,(CMap:get():get_info():get_map_height() - 1) do
 			if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Rock" or RawTile(x, y - 1) == "Rock" or RawTile(x - 1, y) == "Rock" or RawTile(x + 1, y) == "Rock" or RawTile(x - 1, y - 1) == "Rock" or RawTile(x + 1, y - 1) == "Rock" or RawTile(x - 1, y + 1) == "Rock" or RawTile(x + 1, y + 1) == "Rock")) then
 				SetRawTile(x, y, "Rough")
 			end
@@ -545,8 +545,8 @@ function GenerateWater(water_seed_number, water_expansions_number, min_x, max_x,
 
 	--[[	
 	-- convert buildable land tiles adjacent to water tiles into rough land
-	for x=0,(CMap:get():get_info().MapWidth - 1) do
-		for y=0,(CMap:get():get_info().MapHeight - 1) do
+	for x=0,(CMap:get():get_info():get_map_width() - 1) do
+		for y=0,(CMap:get():get_info():get_map_height() - 1) do
 			if (RawTile(x, y) == "Land" and (RawTile(x, y + 1) == "Water" or RawTile(x, y - 1) == "Water" or RawTile(x - 1, y) == "Water" or RawTile(x + 1, y) == "Water" or RawTile(x - 1, y - 1) == "Water" or RawTile(x + 1, y - 1) == "Water" or RawTile(x - 1, y + 1) == "Water" or RawTile(x + 1, y + 1) == "Water")) then
 				SetRawTile(x, y, "Rough")
 			end
@@ -569,8 +569,8 @@ function GenerateRoughLand(rough_land_seed_number, rough_land_expansions_number)
 	-- create initial rough land seeds
 	Count = rough_land_seed_number
 	while (Count > 0 and WhileCount < rough_land_seed_number * 100) do
-		RandomX = SyncRand(CMap:get():get_info().MapWidth)
-		RandomY = SyncRand(CMap:get():get_info().MapHeight)
+		RandomX = SyncRand(CMap:get():get_info():get_map_width())
+		RandomY = SyncRand(CMap:get():get_info():get_map_height())
 		if (RawTile(RandomX, RandomY) == "Land") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough")) then
@@ -607,8 +607,8 @@ function GenerateRoughLand(rough_land_seed_number, rough_land_expansions_number)
 	-- expand rough land
 	Count = rough_land_expansions_number
 	while (Count > 0 and WhileCount < rough_land_expansions_number * 100) do
-		RandomX = SyncRand(CMap:get():get_info().MapWidth)
-		RandomY = SyncRand(CMap:get():get_info().MapHeight)
+		RandomX = SyncRand(CMap:get():get_info():get_map_width())
+		RandomY = SyncRand(CMap:get():get_info():get_map_height())
 		if (RawTile(RandomX, RandomY) == "Rough") then
 			RandomNumber = SyncRand(4)
 			if (RandomNumber == 0 and (RawTile(RandomX - 1, RandomY - 1) == "Land" or RawTile(RandomX - 1, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX - 1, RandomY) == "Rough") and (RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY - 1) == "Rough") and (RawTile(RandomX - 1, RandomY - 1) ~= "Rough" or RawTile(RandomX - 1, RandomY) ~= "Rough" or RawTile(RandomX, RandomY - 1) ~= "Rough")) then
@@ -1402,9 +1402,9 @@ end
 function CreateStartingLocationResourcePiles(loc_player, pile_type, pile_quantity)
 	if (LoadedGame == false) then
 		local min_x = math.max(GetPlayerData(loc_player, "StartPosX") - 8, 0)
-		local max_x = math.min(GetPlayerData(loc_player, "StartPosX") + 8, CMap:get():get_info().MapWidth - 1)
+		local max_x = math.min(GetPlayerData(loc_player, "StartPosX") + 8, CMap:get():get_info():get_map_width() - 1)
 		local min_y = math.max(GetPlayerData(loc_player, "StartPosY") - 8, 0)
-		local max_y = math.min(GetPlayerData(loc_player, "StartPosY") + 8, CMap:get():get_info().MapHeight - 1)
+		local max_y = math.min(GetPlayerData(loc_player, "StartPosY") + 8, CMap:get():get_info():get_map_height() - 1)
 				
 		local RandomX = 0
 		local RandomY = 0
@@ -1446,7 +1446,7 @@ function CreateCritters(arg)
 		arg = {}
 	end
 	if (LoadedGame == false) then
-		local critter_number = (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256
+		local critter_number = (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256
 		local RandomNumber = 0
 		local RandomX = 0
 		local RandomY = 0
@@ -1497,8 +1497,8 @@ function CreateCritters(arg)
 				Count = 0
 				break
 			end
-			RandomX = SyncRand(CMap:get():get_info().MapWidth)
-			RandomY = SyncRand(CMap:get():get_info().MapHeight)
+			RandomX = SyncRand(CMap:get():get_info():get_map_width())
+			RandomY = SyncRand(CMap:get():get_info():get_map_height())
 			
 			local correct_tile = true
 			for sub_x = -(GetUnitTypeData(critter_unit_type, "TileWidth")), GetUnitTypeData(critter_unit_type, "TileWidth") do
@@ -1591,9 +1591,9 @@ end
 function CreateCreeps(player, creep_type, creep_number, min_x, min_y, max_x, max_y)
 	if (LoadedGame == false) then
 		min_x = math.max(min_x, 0)
-		max_x = math.min(max_x, CMap:get():get_info().MapWidth - 1)
+		max_x = math.min(max_x, CMap:get():get_info():get_map_width() - 1)
 		min_y = math.max(min_y, 0)
-		max_y = math.min(max_y, CMap:get():get_info().MapHeight - 1)
+		max_y = math.min(max_y, CMap:get():get_info():get_map_height() - 1)
 	
 		local RandomX = 0
 		local RandomY = 0
@@ -1660,9 +1660,9 @@ function CreateRoamingFog(fog_number)
 			else
 				fog_type = "unit-roaming-fog-small"
 			end
-			RandomX = SyncRand(CMap:get():get_info().MapWidth - GetUnitTypeData(fog_type, "TileWidth"))
-			RandomY = SyncRand(CMap:get():get_info().MapHeight - GetUnitTypeData(fog_type, "TileHeight"))
-			if (GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false and GetUnitTypeData(fog_type, "TileWidth") < CMap:get():get_info().MapWidth - RandomX - 1 and GetUnitTypeData(fog_type, "TileHeight") < CMap:get():get_info().MapHeight - RandomY - 1) then
+			RandomX = SyncRand(CMap:get():get_info():get_map_width() - GetUnitTypeData(fog_type, "TileWidth"))
+			RandomY = SyncRand(CMap:get():get_info():get_map_height() - GetUnitTypeData(fog_type, "TileHeight"))
+			if (GetTileTerrainHasFlag(RandomX, RandomY, "air-unpassable") == false and GetUnitTypeData(fog_type, "TileWidth") < CMap:get():get_info():get_map_width() - RandomX - 1 and GetUnitTypeData(fog_type, "TileHeight") < CMap:get():get_info():get_map_height() - RandomY - 1) then
 				unit = CreateUnit(fog_type, PlayerNumNeutral, {RandomX, RandomY})
 				Count = Count - 1
 			end
@@ -1680,11 +1680,11 @@ function CreateDecorations()
 		local WhileCount = 0
 
 		local decoration_count = GetNumUnitsAt(-1, "unit-mushroom", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-flowers", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-twigs", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-bones", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-large-flower", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-fern", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-log", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-wyrm-skeleton", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-small-rocks", {0, 0}, {MaxMapWidth, MaxMapHeight}) + GetNumUnitsAt(-1, "unit-stalagmites", {0, 0}, {MaxMapWidth, MaxMapHeight}) -- mushroom patch not listed here since it occurs in many maps through normal generation
-		Count = (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 128
+		Count = (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 128
 		if (decoration_count == 0 and GetTileTerrainFlagCount("land") > Count) then
-			while (Count > 0 and WhileCount < ((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 128) * 100) do
-				RandomX = SyncRand(CMap:get():get_info().MapWidth)
-				RandomY = SyncRand(CMap:get():get_info().MapHeight)
+			while (Count > 0 and WhileCount < ((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 128) * 100) do
+				RandomX = SyncRand(CMap:get():get_info():get_map_width())
+				RandomY = SyncRand(CMap:get():get_info():get_map_height())
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false and GetTileTerrainHasFlag(RandomX, RandomY, "water") == false and GetTileTerrainHasFlag(RandomX, RandomY, "coast") == false and GetNumUnitsAt(PlayerNumNeutral, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 					RandomNumber = SyncRand(1000)
 					if (RandomNumber < 200) then
@@ -1738,7 +1738,7 @@ function CreateDecorations()
 							Count = Count - 1
 						end
 					end
-				elseif (GetTileTerrainName(RandomX, RandomY) == "dwarf-closed-wall" and RandomY < (CMap:get():get_info().MapHeight - 1) and GetNumUnitsAt(PlayerNumNeutral, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
+				elseif (GetTileTerrainName(RandomX, RandomY) == "dwarf-closed-wall" and RandomY < (CMap:get():get_info():get_map_height() - 1) and GetNumUnitsAt(PlayerNumNeutral, "any", {RandomX, RandomY}, {RandomX, RandomY}) < 1) then
 					if (SyncRand(2) == 0) then
 						unit = CreateUnit("unit-outer-wall-decoration", PlayerNumNeutral, {RandomX, RandomY})
 					else
@@ -1870,17 +1870,17 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 								player_spawn_point = {SyncRand(math.floor(max_x / 2) - min_x) + min_x, SyncRand(math.floor(max_y / 2) - min_y) + min_y}
 								symmetric_starting_location = player_spawn_point
 							elseif (i == 1 or i == 5 or i == 9 or i == 13) then
-								player_spawn_point = {math.abs(symmetric_starting_location[1] - (CMap:get():get_info().MapWidth - 1)) - 3, math.abs(symmetric_starting_location[2] - (CMap:get():get_info().MapHeight - 1)) - 3}
+								player_spawn_point = {math.abs(symmetric_starting_location[1] - (CMap:get():get_info():get_map_width() - 1)) - 3, math.abs(symmetric_starting_location[2] - (CMap:get():get_info():get_map_height() - 1)) - 3}
 							elseif (i == 2 or i == 6 or i == 10 or i == 14) then
-								player_spawn_point = {symmetric_starting_location[1], math.abs(symmetric_starting_location[2] - (CMap:get():get_info().MapHeight - 1)) - 3}
+								player_spawn_point = {symmetric_starting_location[1], math.abs(symmetric_starting_location[2] - (CMap:get():get_info():get_map_height() - 1)) - 3}
 							elseif (i == 3 or i == 7 or i == 11) then
-								player_spawn_point = {math.abs(symmetric_starting_location[1] - (CMap:get():get_info().MapWidth - 1)) - 3, symmetric_starting_location[2]}
+								player_spawn_point = {math.abs(symmetric_starting_location[1] - (CMap:get():get_info():get_map_width() - 1)) - 3, symmetric_starting_location[2]}
 							end
 						end
 					end
 
 					starting_point_found = true
-					if ((player_spawn_point[1] + 4) > (CMap:get():get_info().MapWidth - 1) or (player_spawn_point[2] + 4) > (CMap:get():get_info().MapHeight - 1) or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
+					if ((player_spawn_point[1] + 4) > (CMap:get():get_info():get_map_width() - 1) or (player_spawn_point[2] + 4) > (CMap:get():get_info():get_map_height() - 1) or (player_spawn_point[1] - 1) < 0 or (player_spawn_point[2] - 1) < 0) then
 						starting_point_found = false
 					end
 					for j=0,(PlayerMax - 2) do
@@ -1972,7 +1972,7 @@ end
 
 function SetMapBorders(tile_type, replace_tile)
 
-	for x=0,(CMap:get():get_info().MapWidth - 1) do
+	for x=0,(CMap:get():get_info():get_map_width() - 1) do
 		if (RawTile(x, 0) == "" or replace_tile == true) then
 			SetRawTile(x, 0, tile_type)
 		end
@@ -1980,14 +1980,14 @@ function SetMapBorders(tile_type, replace_tile)
 			SetRawTile(x, 1, tile_type)
 		end
 
-		if (RawTile(x, CMap:get():get_info().MapHeight - 2) == "" or replace_tile == true) then
-			SetRawTile(x, CMap:get():get_info().MapHeight - 2, tile_type)
+		if (RawTile(x, CMap:get():get_info():get_map_height() - 2) == "" or replace_tile == true) then
+			SetRawTile(x, CMap:get():get_info():get_map_height() - 2, tile_type)
 		end
-		if (RawTile(x, CMap:get():get_info().MapHeight - 1) == "" or replace_tile == true) then
-			SetRawTile(x, CMap:get():get_info().MapHeight - 1, tile_type)
+		if (RawTile(x, CMap:get():get_info():get_map_height() - 1) == "" or replace_tile == true) then
+			SetRawTile(x, CMap:get():get_info():get_map_height() - 1, tile_type)
 		end
 	end
-	for y=0,(CMap:get():get_info().MapHeight - 1) do
+	for y=0,(CMap:get():get_info():get_map_height() - 1) do
 		if (RawTile(0, y) == "" or replace_tile == true) then
 			SetRawTile(0, y, tile_type)
 		end
@@ -1995,11 +1995,11 @@ function SetMapBorders(tile_type, replace_tile)
 			SetRawTile(1, y, tile_type)
 		end
 
-		if (RawTile(CMap:get():get_info().MapWidth - 2, y) == "" or replace_tile == true) then
-			SetRawTile(CMap:get():get_info().MapWidth - 2, y, tile_type)
+		if (RawTile(CMap:get():get_info():get_map_width() - 2, y) == "" or replace_tile == true) then
+			SetRawTile(CMap:get():get_info():get_map_width() - 2, y, tile_type)
 		end
-		if (RawTile(CMap:get():get_info().MapWidth - 1, y) == "" or replace_tile == true) then
-			SetRawTile(CMap:get():get_info().MapWidth - 1, y, tile_type)
+		if (RawTile(CMap:get():get_info():get_map_width() - 1, y) == "" or replace_tile == true) then
+			SetRawTile(CMap:get():get_info():get_map_width() - 1, y, tile_type)
 		end
 	end
 end
@@ -2009,21 +2009,21 @@ function GenerateRandomMap(arg)
 		CleanRawTiles()
 
 		if (arg.WaterMap) then
-			for x=0,(CMap:get():get_info().MapWidth - 1) do
-				for y=0,(CMap:get():get_info().MapHeight - 1) do
+			for x=0,(CMap:get():get_info():get_map_width() - 1) do
+				for y=0,(CMap:get():get_info():get_map_height() - 1) do
 					SetRawTile(x, y, "Water")
 				end
 			end
 			if (arg.LandQuantity == "high") then
-				GenerateLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 2, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+				GenerateLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 2, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 			elseif (arg.LandQuantity == "medium") then
-				GenerateLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+				GenerateLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 			elseif (arg.LandQuantity == "low") then
-				GenerateLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 8, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+				GenerateLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 8, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 			end
 		else
-			for x=0,(CMap:get():get_info().MapWidth - 1) do
-				for y=0,(CMap:get():get_info().MapHeight - 1) do
+			for x=0,(CMap:get():get_info():get_map_width() - 1) do
+				for y=0,(CMap:get():get_info():get_map_height() - 1) do
 					SetRawTile(x, y, "Land")
 				end
 			end
@@ -2036,10 +2036,10 @@ function GenerateRandomMap(arg)
 		
 		if (arg.WaterLayout ~= nil) then
 			local block_size = 16
-			if (CMap:get():get_info().MapWidth > CMap:get():get_info().MapHeight) then
-				block_size = CMap:get():get_info().MapWidth / table.getn(arg.WaterLayout[1])
+			if (CMap:get():get_info():get_map_width() > CMap:get():get_info():get_map_height()) then
+				block_size = CMap:get():get_info():get_map_width() / table.getn(arg.WaterLayout[1])
 			else
-				block_size = CMap:get():get_info().MapHeight / table.getn(arg.WaterLayout)
+				block_size = CMap:get():get_info():get_map_height() / table.getn(arg.WaterLayout)
 			end
 			
 			-- 8 = N/S river
@@ -2153,19 +2153,19 @@ function GenerateRandomMap(arg)
 		end
 		
 		if (arg.WaterQuantity == "high") then
-			GenerateWater((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 8, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateWater((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 8, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		elseif (arg.WaterQuantity == "medium") then
-			GenerateWater((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 16, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateWater((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 16, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		elseif (arg.WaterQuantity == "low") then
-			GenerateWater((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateWater((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 32, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		end
 		
 		if (arg.WaterLayout ~= nil) then -- make sure the bridges will be present
 			local block_size = 16
-			if (CMap:get():get_info().MapWidth > CMap:get():get_info().MapHeight) then
-				block_size = CMap:get():get_info().MapWidth / table.getn(arg.WaterLayout[1])
+			if (CMap:get():get_info():get_map_width() > CMap:get():get_info():get_map_height()) then
+				block_size = CMap:get():get_info():get_map_width() / table.getn(arg.WaterLayout[1])
 			else
-				block_size = CMap:get():get_info().MapHeight / table.getn(arg.WaterLayout)
+				block_size = CMap:get():get_info():get_map_height() / table.getn(arg.WaterLayout)
 			end
 			
 			for ay=1,table.getn(arg.WaterLayout) do
@@ -2184,14 +2184,14 @@ function GenerateRandomMap(arg)
 		end
 			
 		if (arg.RockQuantity == "high") then
-			GenerateRocks((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, ((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 8), "Land", 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateRocks((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, ((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 8), "Land", 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		elseif (arg.RockQuantity == "medium") then
-			GenerateRocks((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, ((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 16), "Land", 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateRocks((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, ((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 16), "Land", 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		elseif (arg.RockQuantity == "low") then
-			GenerateRocks((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, ((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32), "Land", 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateRocks((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, ((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 32), "Land", 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		end
 
-		AdjustTransitions(0, CMap:get():get_info().MapWidth - 1, 0, CMap:get():get_info().MapHeight - 1)
+		AdjustTransitions(0, CMap:get():get_info():get_map_width() - 1, 0, CMap:get():get_info():get_map_height() - 1)
 		
 		if (arg.StartingLocationLayout ~= nil) then
 			-- -2 = Not available as a random start location
@@ -2219,10 +2219,10 @@ function GenerateRandomMap(arg)
 			end
 		
 			local block_size = 16
-			if (CMap:get():get_info().MapWidth > CMap:get():get_info().MapHeight) then
-				block_size = CMap:get():get_info().MapWidth / table.getn(arg.StartingLocationLayout[1])
+			if (CMap:get():get_info():get_map_width() > CMap:get():get_info():get_map_height()) then
+				block_size = CMap:get():get_info():get_map_width() / table.getn(arg.StartingLocationLayout[1])
 			else
-				block_size = CMap:get():get_info().MapHeight / table.getn(arg.StartingLocationLayout)
+				block_size = CMap:get():get_info():get_map_height() / table.getn(arg.StartingLocationLayout)
 			end
 			
 			local function BuildArea(x, y, t)
@@ -2239,51 +2239,51 @@ function GenerateRandomMap(arg)
 			end
 		end
 		
-		CreatePlayers(0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight, not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings, arg.WaterMap) -- generate players after rocks and water
+		CreatePlayers(0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height(), not arg.NoTownHall, symmetric, not arg.NoDeposits, arg.PlayerCivilizations, arg.PlayerBuildings, arg.WaterMap) -- generate players after rocks and water
 
 		if (arg.RoughLandQuantity == "high") then
-			GenerateRoughLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 8)
+			GenerateRoughLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 8)
 		elseif (arg.RoughLandQuantity == "medium") then
-			GenerateRoughLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 16)
+			GenerateRoughLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 16)
 		elseif (arg.RoughLandQuantity == "low") then
-			GenerateRoughLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32)
+			GenerateRoughLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 32)
 		end
 
 		if (arg.DarkRoughLandQuantity == "high") then
-			GenerateDarkRoughLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight, "Rough")
+			GenerateDarkRoughLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 32, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height(), "Rough")
 		elseif (arg.DarkRoughLandQuantity == "medium") then
-			GenerateDarkRoughLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 128, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight, "Rough")
+			GenerateDarkRoughLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 128, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height(), "Rough")
 		elseif (arg.DarkRoughLandQuantity == "low") then
-			GenerateDarkRoughLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight, "Rough")
+			GenerateDarkRoughLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height(), "Rough")
 		end
 
 		if (arg.TreeQuantity == "high") then
-			GenerateTrees((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 512, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 8, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateTrees((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 512, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 8, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		elseif (arg.TreeQuantity == "medium") then
-			GenerateTrees((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 16, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateTrees((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 16, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		elseif (arg.TreeQuantity == "low") then
-			GenerateTrees((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 2048, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateTrees((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 2048, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 32, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		end
 
 		if (arg.DarkLandQuantity == "high") then
-			GenerateDarkLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateDarkLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 32, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		elseif (arg.DarkLandQuantity == "medium") then
-			GenerateDarkLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 128, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateDarkLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 128, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		elseif (arg.DarkLandQuantity == "low") then
-			GenerateDarkLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateDarkLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		end
 
 		if (arg.DarkWaterQuantity == "high") then
-			GenerateDarkWater((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateDarkWater((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 32, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		elseif (arg.DarkWaterQuantity == "medium") then
-			GenerateDarkWater((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 512, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 64, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateDarkWater((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 512, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 64, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		elseif (arg.DarkWaterQuantity == "low") then
-			GenerateDarkWater((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 128, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+			GenerateDarkWater((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 128, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 		end
 
 		if (symmetric) then
-			for x=(CMap:get():get_info().MapWidth / 2),(CMap:get():get_info().MapWidth - 1) do
-				for y=0,(CMap:get():get_info().MapHeight - 1) do
+			for x=(CMap:get():get_info():get_map_width() / 2),(CMap:get():get_info():get_map_width() - 1) do
+				for y=0,(CMap:get():get_info():get_map_height() - 1) do
 					local mirrored_tile_x = x + 1 - 128
 					if (mirrored_tile_x < 0) then
 						mirrored_tile_x = mirrored_tile_x * -1
@@ -2294,8 +2294,8 @@ function GenerateRandomMap(arg)
 				end
 			end
 
-			for x=0,(CMap:get():get_info().MapWidth - 1) do
-				for y=(CMap:get():get_info().MapHeight / 2),(CMap:get():get_info().MapHeight - 1) do
+			for x=0,(CMap:get():get_info():get_map_width() - 1) do
+				for y=(CMap:get():get_info():get_map_height() / 2),(CMap:get():get_info():get_map_height() - 1) do
 					local mirrored_tile_y = y + 1 - 128
 					if (mirrored_tile_y < 0) then
 						mirrored_tile_y = mirrored_tile_y * -1
@@ -2333,23 +2333,23 @@ function GenerateRandomMap(arg)
 		end
 			
 		if (arg.NoDeposits) then
-			CreateGoldRocks((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 2048, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+			CreateGoldRocks((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 2048, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		else
-			CreateGoldSpots((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 2048, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+			CreateGoldSpots((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 2048, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		end
 
-		CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
-		CreateNeutralBuildings("unit_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+		CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
+		CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		
 		if (arg.MercenaryCamp) then
-			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		end
 
 		-- create oil patches
 	--	Count = 2
 	--	while (Count > 0) do
-	--		RandomX = SyncRand(CMap:get():get_info().MapWidth)
-	--		RandomY = SyncRand(CMap:get():get_info().MapHeight)
+	--		RandomX = SyncRand(CMap:get():get_info():get_map_width())
+	--		RandomY = SyncRand(CMap:get():get_info():get_map_height())
 	--		if (RawTile(RandomX, RandomY) == "Water" and RawTile(RandomX, RandomY + 1) == "Water" and RawTile(RandomX, RandomY + 2) == "Water" and RawTile(RandomX + 1, RandomY) == "Water" and RawTile(RandomX + 1, RandomY + 1) == "Water" and RawTile(RandomX + 1, RandomY + 2) == "Water" and RawTile(RandomX + 2, RandomY) == "Water" and RawTile(RandomX + 2, RandomY + 1) == "Water" and RawTile(RandomX + 2, RandomY + 2) == "Water") then
 	--			unit = CreateUnit("unit-oil-patch", PlayerNumNeutral, {RandomX, RandomY})
 	--			SetResourcesHeld(unit, 30000)
@@ -2358,15 +2358,15 @@ function GenerateRandomMap(arg)
 	--	end
 
 		if (GetCurrentTileset() == "swamp") then
-			CreateNeutralBuildings("unit_yale_cave", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+			CreateNeutralBuildings("unit_yale_cave", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		end
 		
 		CreateCritters(arg)
 
 		if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
-			CreateNeutralBuildings("unit-tree-stump", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 2, 0, CMap:get():get_info().MapHeight - 2, symmetric)
+			CreateNeutralBuildings("unit-tree-stump", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096, 0, CMap:get():get_info():get_map_width() - 2, 0, CMap:get():get_info():get_map_height() - 2, symmetric)
 		elseif (GetCurrentTileset() == "cave") then
-			CreateNeutralBuildings("unit-hole", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 2, 0, CMap:get():get_info().MapHeight - 2, symmetric)
+			CreateNeutralBuildings("unit-hole", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096, 0, CMap:get():get_info():get_map_width() - 2, 0, CMap:get():get_info():get_map_height() - 2, symmetric)
 		end
 		
 		CleanRawTiles()
@@ -2378,7 +2378,7 @@ function SetRawTile(x, y, tile_type)
 		return;
 	end
 	
-	if (x >= 0 and x < CMap:get():get_info().MapWidth and y >= 0 and y < CMap:get():get_info().MapHeight) then
+	if (x >= 0 and x < CMap:get():get_info():get_map_width() and y >= 0 and y < CMap:get():get_info():get_map_height()) then
 		RawTiles[y+1][x+1] = tile_type
 	end
 end
@@ -2388,24 +2388,24 @@ function RawTile(x, y)
 		return "";
 	end
 	
-	if (x >= 0 and x < CMap:get():get_info().MapWidth and y >= 0 and y < CMap:get():get_info().MapHeight) then
+	if (x >= 0 and x < CMap:get():get_info():get_map_width() and y >= 0 and y < CMap:get():get_info():get_map_height()) then
 		return RawTiles[y+1][x+1]
-	elseif (x < 0 and y >= 0 and y < CMap:get():get_info().MapHeight and RawTiles[y+1][0+1] ~= "Wall") then
+	elseif (x < 0 and y >= 0 and y < CMap:get():get_info():get_map_height() and RawTiles[y+1][0+1] ~= "Wall") then
 		return RawTiles[y+1][0+1]
-	elseif (x >= CMap:get():get_info().MapWidth and y >= 0 and y < CMap:get():get_info().MapHeight and RawTiles[y+1][CMap:get():get_info().MapWidth] ~= "Wall") then
-		return RawTiles[y+1][CMap:get():get_info().MapWidth]
-	elseif (x >= 0 and x < CMap:get():get_info().MapWidth and y < 0 and RawTiles[0+1][x+1] ~= "Wall") then
+	elseif (x >= CMap:get():get_info():get_map_width() and y >= 0 and y < CMap:get():get_info():get_map_height() and RawTiles[y+1][CMap:get():get_info():get_map_width()] ~= "Wall") then
+		return RawTiles[y+1][CMap:get():get_info():get_map_width()]
+	elseif (x >= 0 and x < CMap:get():get_info():get_map_width() and y < 0 and RawTiles[0+1][x+1] ~= "Wall") then
 		return RawTiles[0+1][x+1]
-	elseif (x >= 0 and x < CMap:get():get_info().MapWidth and y >= CMap:get():get_info().MapHeight and RawTiles[CMap:get():get_info().MapHeight][x+1] ~= "Wall") then
-		return RawTiles[CMap:get():get_info().MapHeight][x+1]
+	elseif (x >= 0 and x < CMap:get():get_info():get_map_width() and y >= CMap:get():get_info():get_map_height() and RawTiles[CMap:get():get_info():get_map_height()][x+1] ~= "Wall") then
+		return RawTiles[CMap:get():get_info():get_map_height()][x+1]
 	elseif (x < 0 and y < 0 and RawTiles[0+1][0+1] ~= "Wall") then
 		return RawTiles[0+1][0+1]
-	elseif (x >= CMap:get():get_info().MapWidth and y < 0 and RawTiles[0+1][CMap:get():get_info().MapWidth] ~= "Wall") then
-		return RawTiles[0+1][CMap:get():get_info().MapWidth]
-	elseif (x < 0 and y >= CMap:get():get_info().MapHeight and RawTiles[CMap:get():get_info().MapHeight][0+1] ~= "Wall") then
-		return RawTiles[CMap:get():get_info().MapHeight][0+1]
-	elseif (x >= CMap:get():get_info().MapWidth and y >= CMap:get():get_info().MapHeight and RawTiles[CMap:get():get_info().MapHeight][CMap:get():get_info().MapWidth] ~= "Wall") then
-		return RawTiles[CMap:get():get_info().MapHeight][CMap:get():get_info().MapWidth]
+	elseif (x >= CMap:get():get_info():get_map_width() and y < 0 and RawTiles[0+1][CMap:get():get_info():get_map_width()] ~= "Wall") then
+		return RawTiles[0+1][CMap:get():get_info():get_map_width()]
+	elseif (x < 0 and y >= CMap:get():get_info():get_map_height() and RawTiles[CMap:get():get_info():get_map_height()][0+1] ~= "Wall") then
+		return RawTiles[CMap:get():get_info():get_map_height()][0+1]
+	elseif (x >= CMap:get():get_info():get_map_width() and y >= CMap:get():get_info():get_map_height() and RawTiles[CMap:get():get_info():get_map_height()][CMap:get():get_info():get_map_width()] ~= "Wall") then
+		return RawTiles[CMap:get():get_info():get_map_height()][CMap:get():get_info():get_map_width()]
 	else
 		return ""
 	end
@@ -2432,8 +2432,8 @@ function ApplyRawTiles()
 			end
 		end
 
-		for x=0,(CMap:get():get_info().MapWidth - 1) do
-			for y=0,(CMap:get():get_info().MapHeight - 1) do
+		for x=0,(CMap:get():get_info():get_map_width() - 1) do
+			for y=0,(CMap:get():get_info():get_map_height() - 1) do
 				if (RawTile(x, y) == "Mush") then
 					SetRawTile(x, y, "Land")
 					if (SyncRand(4) <= 2) then
@@ -2559,8 +2559,8 @@ function ApplyRawTiles()
 			end
 		end
 
-		for x=0,(CMap:get():get_info().MapWidth - 1) do
-			for y=0,(CMap:get():get_info().MapHeight - 1) do
+		for x=0,(CMap:get():get_info():get_map_width() - 1) do
+			for y=0,(CMap:get():get_info():get_map_height() - 1) do
 				local solid_slot = 0
 				local mixed_slot = 0
 				local value = 0
@@ -2937,8 +2937,8 @@ function FindAppropriateTileTypeSpawnPoint(tile_type)
 	local location_found = false
 	local WhileCount = 0
 	while (location_found == false and WhileCount < 10000) do
-		RandomX = SyncRand(CMap:get():get_info().MapWidth)
-		RandomY = SyncRand(CMap:get():get_info().MapHeight)
+		RandomX = SyncRand(CMap:get():get_info():get_map_width())
+		RandomY = SyncRand(CMap:get():get_info():get_map_height())
 		
 		if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			if (RawTile(RandomX - 1, RandomY) == tile_type or RawTile(RandomX + 1, RandomY) == tile_type or RawTile(RandomX, RandomY - 1) == tile_type or RawTile(RandomX, RandomY + 1) == tile_type or RawTile(RandomX - 2, RandomY) == tile_type or RawTile(RandomX + 2, RandomY) == tile_type or RawTile(RandomX, RandomY - 2) == tile_type or RawTile(RandomX, RandomY + 2) == tile_type) then
@@ -2995,8 +2995,8 @@ function FindAppropriateGoldMineSpawnPoint(min_x, max_x, min_y, max_y, symmetric
 		local WhileCount = 0
 		while (location_found == false and WhileCount < 100) do
 			if (symmetric) then
-				RandomX = SyncRand((CMap:get():get_info().MapWidth / 2) - 24)
-				RandomY = SyncRand((CMap:get():get_info().MapHeight / 2) - 24)
+				RandomX = SyncRand((CMap:get():get_info():get_map_width() / 2) - 24)
+				RandomY = SyncRand((CMap:get():get_info():get_map_height() / 2) - 24)
 			else
 				RandomX = SyncRand(max_x - min_x + 1) + min_x
 				RandomY = SyncRand(max_y - min_y + 1) + min_y
@@ -3104,8 +3104,8 @@ end
 function GetTileTerrainCount(terrain)
 	local tile_terrain_count = 0
 
-	for x=0,(CMap:get():get_info().MapWidth - 1) do
-		for y=0,(CMap:get():get_info().MapHeight - 1) do
+	for x=0,(CMap:get():get_info():get_map_width() - 1) do
+		for y=0,(CMap:get():get_info():get_map_height() - 1) do
 			if (GetTileTerrainName(x, y) == terrain) then
 				tile_terrain_count = tile_terrain_count + 1
 			end
@@ -3118,8 +3118,8 @@ end
 function GetTileTerrainFlagCount(flag)
 	local tile_flag_count = 0
 
-	for x=0,(CMap:get():get_info().MapWidth - 1) do
-		for y=0,(CMap:get():get_info().MapHeight - 1) do
+	for x=0,(CMap:get():get_info():get_map_width() - 1) do
+		for y=0,(CMap:get():get_info():get_map_height() - 1) do
 			if (GetTileTerrainHasFlag(x, y, flag)) then
 				tile_flag_count = tile_flag_count + 1
 			end
@@ -3821,7 +3821,7 @@ function SpreadTiles(x1, y1, x2, y2, src, des)
 			end
 		end
 	end
-	ReplaceTiles(0, 0, CMap:get():get_info().MapWidth - 1, CMap:get():get_info().MapHeight - 1, "Replace", src)
+	ReplaceTiles(0, 0, CMap:get():get_info():get_map_width() - 1, CMap:get():get_info():get_map_height() - 1, "Replace", src)
 end
 
 function RotateArea(x, y, size, count)
@@ -3894,7 +3894,7 @@ function CreateStartingGoldMine(player, x, y, no_raw_tile)
 				end
 			end
 		end
-		if ((gold_mine_spawn_point[1] + 2) > CMap:get():get_info().MapWidth or (gold_mine_spawn_point[2] + 2) > CMap:get():get_info().MapHeight or gold_mine_spawn_point[1] < 0 or gold_mine_spawn_point[2] < 0) then
+		if ((gold_mine_spawn_point[1] + 2) > CMap:get():get_info():get_map_width() or (gold_mine_spawn_point[2] + 2) > CMap:get():get_info():get_map_height() or gold_mine_spawn_point[1] < 0 or gold_mine_spawn_point[2] < 0) then
 			free_square = false
 		end
 		if (free_square) then
@@ -3962,7 +3962,7 @@ function CreateStartingBuilding(player, building_type)
 					if (RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Land" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Rough" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Dark-Land" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Dark-Rough" and RawTile(building_spawn_point[1] + sub_x, building_spawn_point[2] + sub_y) ~= "Road") then
 						free_square = false
 					end
-					if (building_spawn_point[1] + sub_x < 0 or building_spawn_point[1] + sub_x >= CMap:get():get_info().MapWidth or building_spawn_point[2] + sub_y < 0 or building_spawn_point[2] + sub_y >= CMap:get():get_info().MapHeight) then
+					if (building_spawn_point[1] + sub_x < 0 or building_spawn_point[1] + sub_x >= CMap:get():get_info():get_map_width() or building_spawn_point[2] + sub_y < 0 or building_spawn_point[2] + sub_y >= CMap:get():get_info():get_map_height()) then
 						free_square = false
 					end
 			end
@@ -3999,31 +3999,31 @@ function GenerateValley(direction, lake_quantity)
 		lake_quantity = SyncRand(4) -- 0-3 lakes
 	end
 
-	FillArea(0, 0, (CMap:get():get_info().MapWidth - 1), (CMap:get():get_info().MapHeight - 1), "Land", false)
+	FillArea(0, 0, (CMap:get():get_info():get_map_width() - 1), (CMap:get():get_info():get_map_height() - 1), "Land", false)
 	
 	if (direction == "north-south") then
-		CreatePlayers(round(CMap:get():get_info().MapWidth / 6), round(CMap:get():get_info().MapWidth * 5 / 6), 0, CMap:get():get_info().MapHeight, true, false, true, nil, nil, false)
+		CreatePlayers(round(CMap:get():get_info():get_map_width() / 6), round(CMap:get():get_info():get_map_width() * 5 / 6), 0, CMap:get():get_info():get_map_height(), true, false, true, nil, nil, false)
 		
-		GenerateRocks(((CMap:get():get_info().MapWidth / 6 * CMap:get():get_info().MapHeight) / 32), ((CMap:get():get_info().MapWidth / 6 * CMap:get():get_info().MapHeight) / 4), "Land", 0, round(CMap:get():get_info().MapWidth / 6), 0, CMap:get():get_info().MapHeight)
+		GenerateRocks(((CMap:get():get_info():get_map_width() / 6 * CMap:get():get_info():get_map_height()) / 32), ((CMap:get():get_info():get_map_width() / 6 * CMap:get():get_info():get_map_height()) / 4), "Land", 0, round(CMap:get():get_info():get_map_width() / 6), 0, CMap:get():get_info():get_map_height())
 		
-		GenerateRocks(((CMap:get():get_info().MapWidth / 6 * CMap:get():get_info().MapHeight) / 32), ((CMap:get():get_info().MapWidth / 6 * CMap:get():get_info().MapHeight) / 4), "Land", round(CMap:get():get_info().MapWidth * 5 / 6), CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+		GenerateRocks(((CMap:get():get_info():get_map_width() / 6 * CMap:get():get_info():get_map_height()) / 32), ((CMap:get():get_info():get_map_width() / 6 * CMap:get():get_info():get_map_height()) / 4), "Land", round(CMap:get():get_info():get_map_width() * 5 / 6), CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 
-		GenerateWater(lake_quantity, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 16, round(CMap:get():get_info().MapWidth / 6), round(CMap:get():get_info().MapWidth * 5 / 6), 0, CMap:get():get_info().MapHeight)
+		GenerateWater(lake_quantity, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 16, round(CMap:get():get_info():get_map_width() / 6), round(CMap:get():get_info():get_map_width() * 5 / 6), 0, CMap:get():get_info():get_map_height())
 	elseif (direction == "west-east") then
-		CreatePlayers(0, CMap:get():get_info().MapWidth, round(CMap:get():get_info().MapHeight / 6), round(CMap:get():get_info().MapHeight * 5 / 6), true, false, true, nil, nil, false)
+		CreatePlayers(0, CMap:get():get_info():get_map_width(), round(CMap:get():get_info():get_map_height() / 6), round(CMap:get():get_info():get_map_height() * 5 / 6), true, false, true, nil, nil, false)
 		
-		GenerateRocks(((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight / 6) / 32), ((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight / 6) / 4), "Land", 0, CMap:get():get_info().MapWidth, 0, round(CMap:get():get_info().MapHeight / 6))
+		GenerateRocks(((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height() / 6) / 32), ((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height() / 6) / 4), "Land", 0, CMap:get():get_info():get_map_width(), 0, round(CMap:get():get_info():get_map_height() / 6))
 		
-		GenerateRocks(((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight / 6) / 32), ((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight / 6) / 4), "Land", 0, CMap:get():get_info().MapWidth, round(CMap:get():get_info().MapHeight * 5 / 6), CMap:get():get_info().MapHeight)
+		GenerateRocks(((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height() / 6) / 32), ((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height() / 6) / 4), "Land", 0, CMap:get():get_info():get_map_width(), round(CMap:get():get_info():get_map_height() * 5 / 6), CMap:get():get_info():get_map_height())
 		
-		GenerateWater(lake_quantity, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 16, 0, CMap:get():get_info().MapWidth, round(CMap:get():get_info().MapHeight / 6), round(CMap:get():get_info().MapHeight * 5 / 6))
+		GenerateWater(lake_quantity, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 16, 0, CMap:get():get_info():get_map_width(), round(CMap:get():get_info():get_map_height() / 6), round(CMap:get():get_info():get_map_height() * 5 / 6))
 	end
 
-	AdjustTransitions(0, CMap:get():get_info().MapWidth - 1, 0, CMap:get():get_info().MapHeight - 1)
+	AdjustTransitions(0, CMap:get():get_info():get_map_width() - 1, 0, CMap:get():get_info():get_map_height() - 1)
 	
---	GenerateRoughLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 8)
+--	GenerateRoughLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 8)
 
-	GenerateTrees((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 16, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+	GenerateTrees((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 32, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 16, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 
 	ApplyRawTiles()
 
@@ -4039,16 +4039,16 @@ function GenerateValley(direction, lake_quantity)
 		end
 	end
 
-	CreateGoldSpots((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 2048, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+	CreateGoldSpots((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 2048, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 
-	CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
-	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+	CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
+	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		
 	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "cave") then
-		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 	end
 
-	CreateRoamingFog((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096)
+	CreateRoamingFog((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096)
 	
 	CreateCritters()
 
@@ -4064,9 +4064,9 @@ function GenerateValley(direction, lake_quantity)
 	end
 			
 	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "conifer-forest-summer" or GetCurrentTileset() == "conifer-forest-autumn" or GetCurrentTileset() == "fairlimbed-forest") then
-		CreateNeutralBuildings("unit-tree-stump", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 2, 0, CMap:get():get_info().MapHeight - 2, false)
+		CreateNeutralBuildings("unit-tree-stump", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096, 0, CMap:get():get_info():get_map_width() - 2, 0, CMap:get():get_info():get_map_height() - 2, false)
 	elseif (GetCurrentTileset() == "cave") then
-		CreateNeutralBuildings("unit-hole", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 2, 0, CMap:get():get_info().MapHeight - 2, false)
+		CreateNeutralBuildings("unit-hole", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096, 0, CMap:get():get_info():get_map_width() - 2, 0, CMap:get():get_info():get_map_height() - 2, false)
 	end
 	
 	CleanRawTiles()
@@ -4112,8 +4112,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 		SetRawTile(35, 33, "Wall")
 		SetRawTile(35, 34, "Wall")
 
-		for x=0,(CMap:get():get_info().MapWidth - 1) do
-			for y=0,(CMap:get():get_info().MapHeight - 1) do
+		for x=0,(CMap:get():get_info():get_map_width() - 1) do
+			for y=0,(CMap:get():get_info():get_map_height() - 1) do
 				if (RawTile(x, y) == "") then
 					SetRawTile(x, y, "Wall")
 				end
@@ -4884,8 +4884,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			
 			-- dungeon generation algorithm inspired by Mike Anderson's code for Tyrant, which was released under the GPLv2 license
 			while ((Count > 0 or FeastHallArea == nil) and WhileCount < 64 * 100) do
-				RandomX = SyncRand(CMap:get():get_info().MapWidth)
-				RandomY = SyncRand(CMap:get():get_info().MapHeight)
+				RandomX = SyncRand(CMap:get():get_info():get_map_width())
+				RandomY = SyncRand(CMap:get():get_info():get_map_height())
 				if (RawTile(RandomX, RandomY) == "Wall" and (RawTile(RandomX - 1, RandomY) == "Land" or RawTile(RandomX + 1, RandomY) == "Land" or RawTile(RandomX, RandomY - 1) == "Land" or RawTile(RandomX, RandomY + 1) == "Land")) then
 					RandomNumber = SyncRand(100)
 					if (RandomNumber < 45 and Count > 0) then -- corridors
@@ -5234,8 +5234,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			Count = 24
 
 			while (Count > 0) do
-				for x=0,(CMap:get():get_info().MapWidth - 1) do
-					for y=0,(CMap:get():get_info().MapHeight - 1) do
+				for x=0,(CMap:get():get_info():get_map_width() - 1) do
+					for y=0,(CMap:get():get_info():get_map_height() - 1) do
 						if (RawTile(x, y) == "Land" or RawTile(x, y) == "Door" or RawTile(x, y) == "Dark-Land") then
 							local adjacent_floor_tiles = 0
 							if (RawTile(x + 1, y) == "Land" or RawTile(x + 1, y) == "Door" or RawTile(x + 1, y) == "Dark-Land") then
@@ -5259,7 +5259,7 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				Count = Count - 1
 			end
 
-			GenerateDarkRoughLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 512, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight, "Land")
+			GenerateDarkRoughLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 512, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height(), "Land")
 
 			-- remove gold pile and random rug tiles from feast hall
 			for x=FeastHallArea[1][1],FeastHallArea[2][1] do
@@ -5402,8 +5402,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			Count = 16
 			WhileCount = 0
 			while (Count > 0 and WhileCount < 1000) do
-				RandomX = SyncRand(CMap:get():get_info().MapWidth)
-				RandomY = SyncRand(CMap:get():get_info().MapHeight)
+				RandomX = SyncRand(CMap:get():get_info():get_map_width())
+				RandomY = SyncRand(CMap:get():get_info():get_map_height())
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 					local adjacent_floor_tiles = 0
 					for x=(RandomX - 1),(RandomX + 1) do
@@ -5463,8 +5463,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			--Count = 1
 			--WhileCount = 0
 			--while (Count > 0 and WhileCount < 100) do
-			--	RandomX = SyncRand(CMap:get():get_info().MapWidth)
-			--	RandomY = SyncRand(CMap:get():get_info().MapHeight)
+			--	RandomX = SyncRand(CMap:get():get_info():get_map_width())
+			--	RandomY = SyncRand(CMap:get():get_info():get_map_height())
 			--	if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 			--		local adjacent_floor_tiles = 0
 			--		for x=(RandomX - 1),(RandomX + 1) do
@@ -5487,8 +5487,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			Count = 1
 			WhileCount = 0
 			while (Count > 0 and WhileCount < 10000) do
-				RandomX = SyncRand(CMap:get():get_info().MapWidth)
-				RandomY = SyncRand(CMap:get():get_info().MapHeight)
+				RandomX = SyncRand(CMap:get():get_info():get_map_width())
+				RandomY = SyncRand(CMap:get():get_info():get_map_height())
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 					if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
 						local adjacent_floor_tiles = 0
@@ -5592,8 +5592,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			end
 			WhileCount = 0
 			while (Count > 0 and WhileCount < 10000) do
-				RandomX = SyncRand(CMap:get():get_info().MapWidth)
-				RandomY = SyncRand(CMap:get():get_info().MapHeight)
+				RandomX = SyncRand(CMap:get():get_info():get_map_width())
+				RandomY = SyncRand(CMap:get():get_info():get_map_height())
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 					if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
 						local adjacent_floor_tiles = 0
@@ -5695,8 +5695,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				Count = 1
 				WhileCount = 0
 				while (Count > 0 and WhileCount < 10000) do
-					RandomX = SyncRand(CMap:get():get_info().MapWidth)
-					RandomY = SyncRand(CMap:get():get_info().MapHeight)
+					RandomX = SyncRand(CMap:get():get_info():get_map_width())
+					RandomY = SyncRand(CMap:get():get_info():get_map_height())
 					if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 						if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 							local adjacent_floor_tiles = 0
@@ -5738,8 +5738,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 			Count = hostile_creep_number
 			WhileCount = 0
 			while (Count > 0 and WhileCount < hostile_creep_number * 1000) do
-				RandomX = SyncRand(CMap:get():get_info().MapWidth)
-				RandomY = SyncRand(CMap:get():get_info().MapHeight)
+				RandomX = SyncRand(CMap:get():get_info():get_map_width())
+				RandomY = SyncRand(CMap:get():get_info():get_map_height())
 				if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 					if (GetNumUnitsAt(0, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1 and GetNumUnitsAt(1, "any", {RandomX - 8, RandomY - 8}, {RandomX + 8, RandomY + 8}) < 1) then
 						RandomNumber = SyncRand(100)
@@ -5820,8 +5820,8 @@ function GenerateRandomDungeon(player_civilization, player_name, player_hero, se
 				Count = passive_dweller_number
 				WhileCount = 0
 				while (Count > 0 and WhileCount < passive_dweller_number * 100) do
-					RandomX = SyncRand(CMap:get():get_info().MapWidth)
-					RandomY = SyncRand(CMap:get():get_info().MapHeight)
+					RandomX = SyncRand(CMap:get():get_info():get_map_width())
+					RandomY = SyncRand(CMap:get():get_info():get_map_height())
 					if (GetTileTerrainHasFlag(RandomX, RandomY, "land") and GetTileTerrainHasFlag(RandomX, RandomY, "unpassable") == false) then
 						if not (RandomX >= FeastHallArea[1][1] and RandomX <= FeastHallArea[2][1] and RandomY >= FeastHallArea[1][2] and RandomY <= FeastHallArea[2][2]) then
 							if (GetNumUnitsAt(0, "any", {RandomX - 4, RandomY - 4}, {RandomX + 4, RandomY + 4}) < 1 and GetNumUnitsAt(1, "any", {RandomX - 4, RandomY - 4}, {RandomX + 4, RandomY + 4}) < 1) then
@@ -5939,27 +5939,27 @@ function GenerateCave(town_halls, symmetric)
 	local Count = 0
 	local EntranceExists = false
 
-	for x=0,(CMap:get():get_info().MapWidth - 1) do
-		for y=0,(CMap:get():get_info().MapHeight - 1) do
+	for x=0,(CMap:get():get_info():get_map_width() - 1) do
+		for y=0,(CMap:get():get_info():get_map_height() - 1) do
 			SetRawTile(x, y, "Land")
 		end
 	end
 
 	SetMapBorders("Rock", true)
 
-	CreatePlayers(16, CMap:get():get_info().MapWidth - 16, 16, CMap:get():get_info().MapHeight - 16, town_halls, symmetric, true, nil, nil, false)
+	CreatePlayers(16, CMap:get():get_info():get_map_width() - 16, 16, CMap:get():get_info():get_map_height() - 16, town_halls, symmetric, true, nil, nil, false)
 
-	GenerateRocks(((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024),  ((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4), "Land", 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+	GenerateRocks(((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024),  ((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4), "Land", 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 
-	GenerateWater((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 64, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+	GenerateWater((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 64, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 
-	GenerateRoughLand((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32)
+	GenerateRoughLand((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 32)
 
-	GenerateTrees((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 32, 0, CMap:get():get_info().MapWidth, 0, CMap:get():get_info().MapHeight)
+	GenerateTrees((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 32, 0, CMap:get():get_info():get_map_width(), 0, CMap:get():get_info():get_map_height())
 
 	if (symmetric) then
-		for x=(CMap:get():get_info().MapWidth / 2),(CMap:get():get_info().MapWidth - 1) do
-			for y=0,(CMap:get():get_info().MapHeight - 1) do
+		for x=(CMap:get():get_info():get_map_width() / 2),(CMap:get():get_info():get_map_width() - 1) do
+			for y=0,(CMap:get():get_info():get_map_height() - 1) do
 				local mirrored_tile_x = x + 1 - 128
 				if (mirrored_tile_x < 0) then
 					mirrored_tile_x = mirrored_tile_x * -1
@@ -5970,8 +5970,8 @@ function GenerateCave(town_halls, symmetric)
 			end
 		end
 
-		for x=0,(CMap:get():get_info().MapWidth - 1) do
-			for y=(CMap:get():get_info().MapHeight / 2),(CMap:get():get_info().MapHeight - 1) do
+		for x=0,(CMap:get():get_info():get_map_width() - 1) do
+			for y=(CMap:get():get_info():get_map_height() / 2),(CMap:get():get_info():get_map_height() - 1) do
 				local mirrored_tile_y = y + 1 - 128
 				if (mirrored_tile_y < 0) then
 					mirrored_tile_y = mirrored_tile_y * -1
@@ -5983,23 +5983,23 @@ function GenerateCave(town_halls, symmetric)
 		end
 	end
 	
-	AdjustTransitions(0, CMap:get():get_info().MapWidth - 1, 0, CMap:get():get_info().MapHeight - 1)
+	AdjustTransitions(0, CMap:get():get_info():get_map_width() - 1, 0, CMap:get():get_info():get_map_height() - 1)
 
 	ApplyRawTiles()
 
-	CreateGoldSpots((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 2048, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+	CreateGoldSpots((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 2048, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 
 	CreateCritters()
 
 	if (GetCurrentTileset() == "cave") then
-		CreateNeutralBuildings("unit-hole", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096, 0, CMap:get():get_info().MapWidth - 2, 0, CMap:get():get_info().MapHeight - 2, symmetric)
+		CreateNeutralBuildings("unit-hole", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096, 0, CMap:get():get_info():get_map_width() - 2, 0, CMap:get():get_info():get_map_height() - 2, symmetric)
 	end
 
-	CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
-	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+	CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
+	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		
 	
-	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, symmetric)
+	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 
 	for i=0,(PlayerMax - 2) do
 		if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
@@ -6021,7 +6021,7 @@ end
 function FindNearestTerrainTile(terrain, starting_x, starting_y)
 	local search_range = 0
 	
-	while (search_range < CMap:get():get_info().MapWidth and search_range < CMap:get():get_info().MapHeight) do
+	while (search_range < CMap:get():get_info():get_map_width() and search_range < CMap:get():get_info():get_map_height()) do
 		for x=(starting_x - search_range), (starting_x + search_range) do
 			for y=(starting_y - search_range), (starting_y + search_range) do
 				if (GetTileTerrainName(x, y) == terrain) then
@@ -6038,7 +6038,7 @@ end
 function FindNearestTerrainFlagTile(terrain_flag, starting_x, starting_y)
 	local search_range = 0
 	
-	while (search_range < CMap:get():get_info().MapWidth and search_range < CMap:get():get_info().MapHeight) do
+	while (search_range < CMap:get():get_info():get_map_width() and search_range < CMap:get():get_info():get_map_height()) do
 		for x=(starting_x - search_range), (starting_x + search_range) do
 			for y=(starting_y - search_range), (starting_y + search_range) do
 				if (GetTileTerrainHasFlag(x, y, terrain_flag)) then

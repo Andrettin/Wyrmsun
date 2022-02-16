@@ -282,11 +282,11 @@ function RunEditorMapProperties()
 	menu:addLabel(_("Map Name:") .. " ", 45 * get_scale_factor(), (11 + 36) * get_scale_factor(), nil, false)
 	local desc = menu:addTextInputField(CMap:get():get_info():get_name(), 15 * get_scale_factor(), 36 * 2 * get_scale_factor(), 350 * get_scale_factor())
 
-	menu:addLabel(_("Size:") .. " " .. CMap:get():get_info().MapWidth .. " x " .. CMap:get():get_info().MapHeight, 45 * get_scale_factor(), 36 * 3 * get_scale_factor(), nil, false)
+	menu:addLabel(_("Size:") .. " " .. CMap:get():get_info():get_map_width() .. " x " .. CMap:get():get_info():get_map_height(), 45 * get_scale_factor(), 36 * 3 * get_scale_factor(), nil, false)
 --	menu:addLabel("Size : ", 15, 36 * 3, nil, false)
---	local sizeX = menu:addTextInputField(CMap:get():get_info().MapWidth, 75, 36 * 3, 50)
+--	local sizeX = menu:addTextInputField(CMap:get():get_info():get_map_width(), 75, 36 * 3, 50)
 --	menu:addLabel(" x ", 130, 36 * 3, nil, false)
---	local sizeY = menu:addTextInputField(CMap:get():get_info().MapHeight, 160, 36 * 3, 50)
+--	local sizeY = menu:addTextInputField(CMap:get():get_info():get_map_height(), 160, 36 * 3, 50)
 
 	menu:addHalfButton(_("~!OK"), "o", 1 * (sizeX / 3) + (-106 - 10) * get_scale_factor(), sizeY + (-16 - 27) * get_scale_factor(),
 		function()

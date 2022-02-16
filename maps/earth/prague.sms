@@ -40,7 +40,7 @@ if (LoadedGame == false) then
 	})
 end
 
-CreateGoldMines(1, 50000, 0, CMap:get():get_info().MapWidth - 3, math.floor(CMap:get():get_info().MapHeight * 3 / 4), CMap:get():get_info().MapHeight - 3, false, true)
+CreateGoldMines(1, 50000, 0, CMap:get():get_info():get_map_width() - 3, math.floor(CMap:get():get_info():get_map_height() * 3 / 4), CMap:get():get_info():get_map_height() - 3, false, true)
 if (LoadedGame == false) then
 	SetUnitVariable(unit, "Unique", "the-wedding-veil")
 end

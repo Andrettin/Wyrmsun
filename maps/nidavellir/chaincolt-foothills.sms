@@ -223,9 +223,9 @@ if (GetCurrentQuest() == "a-bargain-is-struck") then
 	arg.NoMightyCreeps = true
 end
 
-CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 256, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, false)
-CreateNeutralBuildings("unit_building_site", (CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 1024, 0, CMap:get():get_info().MapWidth - 3, 0, CMap:get():get_info().MapHeight - 3, false)
+CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)
+CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)
 
 CreateCritters(arg)
 
-CreateRoamingFog((CMap:get():get_info().MapWidth * CMap:get():get_info().MapHeight) / 4096)
+CreateRoamingFog((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096)

@@ -76,7 +76,7 @@ if (LoadedGame == false) then
 	
 	-- create allied Germanic forces
 	-- Vandals (Lugii)
-	local player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get():get_info().MapHeight - 1)
+	local player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get():get_info():get_map_height() - 1)
 	SetStartView(2, player_spawn_point[1], player_spawn_point[2])
 	unit = CreateUnit("unit-teuton-swordsman", 2, {GetPlayerData(2, "StartPosX"), GetPlayerData(2, "StartPosY")})
 	unit = CreateUnit("unit-teuton-swordsman", 2, {GetPlayerData(2, "StartPosX"), GetPlayerData(2, "StartPosY")})
@@ -84,7 +84,7 @@ if (LoadedGame == false) then
 	unit = CreateUnit("unit-teuton-ritter", 2, {GetPlayerData(2, "StartPosX"), GetPlayerData(2, "StartPosY")})
 
 	-- Suebi (Semnones)
-	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get():get_info().MapHeight - 1)
+	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get():get_info():get_map_height() - 1)
 	SetStartView(3, player_spawn_point[1], player_spawn_point[2])
 	unit = CreateUnit("unit-suebi-swordsman", 3, {GetPlayerData(3, "StartPosX"), GetPlayerData(3, "StartPosY")})
 	unit = CreateUnit("unit-suebi-swordsman", 3, {GetPlayerData(3, "StartPosX"), GetPlayerData(3, "StartPosY")})
@@ -92,7 +92,7 @@ if (LoadedGame == false) then
 	unit = CreateUnit("unit-teuton-ritter", 3, {GetPlayerData(3, "StartPosX"), GetPlayerData(3, "StartPosY")})
 
 	-- Lombards
-	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get():get_info().MapHeight - 1)
+	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get():get_info():get_map_height() - 1)
 	SetStartView(4, player_spawn_point[1], player_spawn_point[2])
 	unit = CreateUnit("unit-teuton-swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 	unit = CreateUnit("unit-teuton-swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})

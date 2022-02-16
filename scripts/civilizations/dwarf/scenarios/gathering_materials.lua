@@ -218,8 +218,8 @@ if (LoadedGame == false) then
 		SetUnitVariable(unit, "Active", false)
 	end
 	
-	CreateCoalMines(1, 12500, CMap:get():get_info().MapWidth / 2, CMap:get():get_info().MapWidth - 3, CMap:get():get_info().MapHeight / 2, CMap:get():get_info().MapHeight - 3, false)
-	CreateCoalMines(1, 12500, 0, CMap:get():get_info().MapWidth / 2, 0, CMap:get():get_info().MapHeight / 2, false)
+	CreateCoalMines(1, 12500, CMap:get():get_info():get_map_width() / 2, CMap:get():get_info():get_map_width() - 3, CMap:get():get_info():get_map_height() / 2, CMap:get():get_info():get_map_height() - 3, false)
+	CreateCoalMines(1, 12500, 0, CMap:get():get_info():get_map_width() / 2, 0, CMap:get():get_info():get_map_height() / 2, false)
 end
 
 -- If Rugnur dies, any quests of the Scepter of Fire campaign currently being pursued fail
