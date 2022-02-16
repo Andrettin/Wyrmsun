@@ -1,0 +1,16 @@
+acthna = {
+	name = "Acthna"
+	map_template = acthna
+	base_unit_type = unit_settlement_site
+	
+	history = {
+		-25000 = {
+			owner = acthnic_tribe #maybe should be later?
+			building_classes += town_hall
+		}
+		
+		1 = {
+			owner = acthna #maybe should be at another date?
+		}
+	}
+}

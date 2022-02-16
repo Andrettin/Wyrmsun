@@ -9,6 +9,9 @@ untersberg = { #Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 1, 12-13.
 	core_settlements = {
 		gnana
 	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 	character_title_names = {
 		chancellor = "Grand Chancellor" #the grand chancellor was the head of government, apparently; Source: Franz Hartmann, "Among the Gnomes", 1895, pp. 201, 206.
 		#education_minister = "Superintendent of Public Schools" #Source: Franz Hartmann, "Among the Gnomes", 1895, p. 201.

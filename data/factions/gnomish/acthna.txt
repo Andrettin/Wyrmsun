@@ -10,4 +10,7 @@ acthna = {
 	core_settlements = {
 		acthna
 	}
+	conditions = {
+		scripted_condition = is_civilized
+	}
 }

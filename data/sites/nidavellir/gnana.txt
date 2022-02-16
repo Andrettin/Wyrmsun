@@ -1,0 +1,16 @@
+gnana = { #capital of Untersberg; Source: Franz Hartmann, "Among the Gnomes", 1895, p. 179.
+	name = "Gnana"
+	map_template = untersberg
+	base_unit_type = unit_settlement_site
+	
+	history = {
+		-25000 = {
+			owner = sagan_tribe #maybe should be later?
+			building_classes += town_hall
+		}
+		
+		1 = {
+			owner = untersberg #maybe should be at another date?
+		}
+	}
+}
