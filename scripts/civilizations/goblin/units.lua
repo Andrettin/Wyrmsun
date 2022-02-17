@@ -564,6 +564,8 @@ DefineUnitType("unit-goblin-masons-shop", {
 	Image = {"file", "goblin/buildings/masons_shop.png", "size", {96, 96}},
 	Shadow = {"file", "goblin/buildings/masons_shop_shadow.png", "size", {96, 96}},
 	Icon = "icon-goblin-masons-shop",
+	Animations = "animations-active-building",
+	Construction = "land_building_active",
 	Sounds = {
 		"help", "basic-goblin-voices-help-town"
 	}

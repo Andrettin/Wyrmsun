@@ -61,6 +61,7 @@ https://github.com/Andrettin/Wyrmsun
 - Farms and towers can now only be built on top of "Minor Building Site" locations.
 - Added Troll Farm building. If it is owned by the neutral player, it will spawn Troll Warriors.
 - Elven Farms will now spawn Elven Swordsmen if they are owned by the neutral player.
+- Fixed the Goblin Mason's Shop animations.
 
 * Map Editor
 - Fixed issue which caused the F10 editor menu to no longer work after exiting and re-entering the map editor.
