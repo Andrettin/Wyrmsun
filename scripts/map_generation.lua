@@ -3070,6 +3070,17 @@ function FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, m
 				end
 			end
 
+			-- check if any building is adjacent
+			if (in_buildable_land) then
+				for x_offset=-1, (GetUnitTypeData(building_type, "TileWidth") + 1) do
+					for y_offset=-1, (GetUnitTypeData(building_type, "TileHeight") + 1) do
+						if (GetTileTerrainHasFlag(RandomX + x_offset, RandomY + y_offset, "building")) then
+							in_buildable_land = false
+						end
+					end
+				end
+			end
+
 			if (in_buildable_land) then
 				if (is_building_site) then
 					location_found = true
