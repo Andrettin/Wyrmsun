@@ -1,0 +1,21 @@
+upgrade_wesnoth_modifiers = {
+	name = "Battle for Wesnoth Modifiers"
+	modifier = {
+		capture_hp_threshold = 80
+		hit_points = {
+			increase = 2
+		}
+		unit_classes = {
+			barracks
+			farm
+		}
+	}
+	modifier = {
+		incomes = {
+			copper = 100
+		}
+		unit_classes = {
+			farm
+		}
+	}
+}

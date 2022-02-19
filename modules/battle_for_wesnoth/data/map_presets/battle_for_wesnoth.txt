@@ -1,0 +1,11 @@
+battle_for_wesnoth = {
+	name = "Battle for Wesnoth"
+	disabled_unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		#unit_major_building_site
+	}
+	starting_upgrades = {
+		upgrade_wesnoth_modifiers
+	}
+}
