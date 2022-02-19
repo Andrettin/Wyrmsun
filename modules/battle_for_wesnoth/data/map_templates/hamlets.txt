@@ -1,0 +1,22 @@
+hamlets = {
+	name = "Hamlets"
+	size = { 29 30 }
+	terrain_file = "hamlets.wes"
+	terrain_substitutions = {
+		dry_mud = dirt
+		ford = dirt
+		mud = dirt
+		semi_dry_grass = grass
+		teutonic_wall = grass
+	}
+	units = {
+		unit_dwarven_steelclad = {
+			pos = { 14 4 }
+			faction = norlund_clan
+		}
+		unit_dwarven_steelclad = {
+			pos = { 14 25 }
+			faction = shorbear_clan
+		}
+	}
+}

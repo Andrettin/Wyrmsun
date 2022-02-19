@@ -1,0 +1,3 @@
+LoadTileModels("scripts/tilesets/forest.lua")
+
+ApplyMapTemplate("hamlets")
