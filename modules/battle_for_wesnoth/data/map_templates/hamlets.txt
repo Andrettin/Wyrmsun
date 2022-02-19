@@ -10,13 +10,30 @@ hamlets = {
 		teutonic_wall = grass
 	}
 	units = {
-		unit_dwarven_steelclad = {
+		{
+			unit_class = barracks
 			pos = { 14 4 }
-			faction = norlund_clan
+			player = 0
 		}
-		unit_dwarven_steelclad = {
+		{
+			unit_class = veteran_infantry
+			pos = { 14 4 }
+			player = 0
+		}
+		{
+			unit_class = barracks
 			pos = { 14 25 }
-			faction = shorbear_clan
+			player = 1
+		}
+		{
+			unit_class = veteran_infantry
+			pos = { 14 25 }
+			player = 1
+		}
+		{
+			unit_class = farm
+			pos = { 22 27 }
+			player = 1
 		}
 	}
 }

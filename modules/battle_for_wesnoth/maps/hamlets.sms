@@ -1,3 +1,7 @@
 LoadTileModels("scripts/tilesets/conifer_forest_summer.lua")
 
+SetPlayerData(0, "RaceName", "dwarven")
+SetPlayerData(1, "RaceName", "dwarven")
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
+
 ApplyMapTemplate("hamlets")
