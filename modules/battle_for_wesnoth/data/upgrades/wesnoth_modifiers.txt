@@ -18,4 +18,10 @@ upgrade_wesnoth_modifiers = {
 			farm
 		}
 	}
+	modifier = {
+		supply = -3
+		unit_classes = {
+			farm
+		}
+	}
 }
