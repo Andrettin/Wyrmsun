@@ -63,6 +63,9 @@ https://github.com/Andrettin/Wyrmsun
 - Elven Farms will now spawn Elven Swordsmen if they are owned by the neutral player.
 - Fixed the Goblin Mason's Shop animations.
 
+* Difficulties
+- Fixed issue with the AI resource gathering bonus under Hard difficulty which actually made it earn less resources than under Normal difficulty.
+
 * Map Editor
 - Fixed issue which caused the F10 editor menu to no longer work after exiting and re-entering the map editor.
 
