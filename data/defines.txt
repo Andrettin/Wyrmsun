@@ -241,7 +241,8 @@ ignored_wesnoth_terrain_strings = {
 	Pr\o #Open Rusty Gate
 	Pr/o #Open Rusty Gate
 	Pr|o #Open Rusty Gate
-	Uf #Mushroom Grove
+	Tf #Mushroom Grove
+	Uf #Non-Mixed Mushroom Grove
 	Vc #Hut
 	Ve #Elven Village
 	Vea #Snowy Elven Village
@@ -253,5 +254,6 @@ ignored_wesnoth_terrain_strings = {
 	Vo #Orcish Village
 	Vu #Cave Village
 	Vud #Dwarven Village
+	Wm #Windmill
 	Xm #Impassable (Mountains)
 }

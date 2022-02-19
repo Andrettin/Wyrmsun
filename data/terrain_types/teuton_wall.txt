@@ -82,7 +82,9 @@ teuton_wall = {
 		2048 2064 2080 2096 2112 2113 2128 2144 2160 2176 2192 2193 2208 2224 2240 2256
 	}
 	wesnoth_strings = {
+		Ch #Human Castle
 		Cv #Elven Castle
+		Kh #Human Castle Keep
 		Kv #Elven Castle Keep
 	}
 }
