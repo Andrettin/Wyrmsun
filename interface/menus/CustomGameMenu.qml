@@ -212,7 +212,7 @@ MenuBase {
 		anchors.topMargin: 20 * wyrmgus.scale_factor
 		anchors.bottom: start_game_button.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
-		text: selected_map ? selected_map.description : ""
+		text: selected_map ? selected_map.text : ""
 	}
 	
 	LargeButton {

@@ -26,7 +26,7 @@ MenuBase {
 			+ "\n\nStart Year: " + date_year_string(campaign.start_date)
 			+ "\n\nDescription: " + campaign.description
 			+ "\n\nHighest Completed Difficulty: " + (campaign.quest ? wyrmgus.get_difficulty_name(campaign.quest.highest_completed_difficulty_index) : "Unknown")
-			+ (campaign.map_presets ? ("\n\n" + campaign.map_presets.description) : "")
+			+ (campaign.map_presets ? ("\n\n" + campaign.map_presets.text) : "")
 	}
 	
 	NormalText {
