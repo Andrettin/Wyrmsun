@@ -79,5 +79,42 @@ hamlets = {
 		unit_teuton_farm = { #Cottage
 			pos = { 23 24 }
 		}
+		
+		unit_teutonic_smithy = { #Windmill
+			pos = { 4 23 }
+		}
+		unit_teuton_lumber_mill = { #Windmill
+			#pos = { 5 12 }
+			pos = { 4 12 } #so that it is not adjacent to another building
+		}
+		unit_teuton_lumber_mill = { #Windmill
+			#pos = { 23 18 }
+			pos = { 25 18 } #so that it is not adjacent to another building
+		}
+		unit_teutonic_smithy = { #Windmill
+			#pos = { 24 6 }
+			pos = { 25 6 } #so that it is not adjacent to another building
+		}
+		
+		#unit_teuton_watch_tower = { #Human Castle
+		#	#pos = { 2 13 }
+		#	pos = { 0 13 } #so that it is not adjacent to another building
+		#}
+		#unit_teuton_watch_tower = { #Human Castle
+		#	pos = { 7 15 }
+		#}
+		#unit_teuton_watch_tower = { #Human Castle
+		#	pos = { 10 19 }
+		#}
+		#unit_teuton_watch_tower = { #Human Castle
+		#	pos = { 18 10 }
+		#}
+		#unit_teuton_watch_tower = { #Human Castle
+		#	pos = { 21 15 }
+		#}
+		#unit_teuton_watch_tower = { #Human Castle
+		#	#pos = { 26 16 }
+		#	pos = { 26 14 } #so that it is not adjacent to another building
+		#}
 	}
 }

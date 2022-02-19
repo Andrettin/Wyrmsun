@@ -6,8 +6,22 @@ upgrade_wesnoth_modifiers = {
 			increase = 2
 		}
 		unit_classes = {
-			barracks
 			farm
+			lumber_mill
+			smithy
+		}
+	}
+	modifier = {
+		capture_hp_threshold = 20
+		hit_points = {
+			increase = 2
+		}
+		unit_classes = {
+			barracks
+			#watch_tower
+			#guard_tower
+			#heavy_tower
+			#cannon_tower
 		}
 	}
 	modifier = {
@@ -16,6 +30,14 @@ upgrade_wesnoth_modifiers = {
 		}
 		unit_classes = {
 			farm
+		}
+	}
+	modifier = {
+		incomes = {
+			lumber = 200
+		}
+		unit_classes = {
+			lumber_mill
 		}
 	}
 	modifier = {
