@@ -784,6 +784,7 @@
 /graphics/icons/units/human/gothic/swordsman.png (by Artyom Brullov) (licensed under the CC0)
 /graphics/icons/units/human/gothic/veteran_swordsman.png (by Artyom Brullov) (licensed under the CC0)
 /graphics/icons/units/human/alchemist.png (by Jinn) (licensed under the CC0)
+/graphics/icons/units/human/peasant.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/human/sailor.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/units/troll/warrior.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/troll/warrior_extra_1.png (by Jinn) (licensed under the CC0)
