@@ -63,7 +63,15 @@ Item {
 				anchors.leftMargin: 4 * wyrmgus.scale_factor
 				anchors.top: parent.top
 				anchors.topMargin: 1 * wyrmgus.scale_factor
-				text: stored_resource_label_string(resource_icon.resource_stored)
+				text: limited_number_string(resource_icon.resource_stored, resource_icon.income > 0 ? 10000 : 1000000, false)
+			}
+			
+			TinyText {
+				id: resource_income_label
+				anchors.left: resource_label.right
+				anchors.verticalCenter: resource_label.verticalCenter
+				text: limited_number_string(resource_icon.income, 1000, true)
+				visible: resource_icon.income > 0
 			}
 			
 			MouseArea {
@@ -77,14 +85,6 @@ Item {
 				onExited: {
 					tooltip_manager.tooltip_y_override = 0
 				}
-			}
-			
-			function stored_resource_label_string(amount) {
-				if (amount >= 1000000) {
-					return number_string(amount / 1000) + "k"
-				}
-				
-				return number_string(amount)
 			}
 		}
 	}

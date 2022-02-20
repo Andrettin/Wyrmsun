@@ -107,6 +107,36 @@ Window {
 		return n.toLocaleString(Qt.locale("en_US"), 'f', 0)
 	}
 	
+	function signed_number_string(n) {
+		if (n >= 0) {
+			return "+" + number_string(n)
+		}
+		
+		return number_string(n)
+	}
+	
+	function limited_number_string(amount, threshold, signed) {
+		var suffix = ""
+		
+		if (amount >= threshold) {
+			amount /= 1000
+			suffix = "k"
+		}
+		
+		if (amount >= threshold) {
+			amount /= 1000
+			suffix = "m"
+		}
+		
+		amount = Math.floor(amount)
+		
+		if (signed) {
+			return signed_number_string(amount) + suffix
+		} else {
+			return number_string(amount) + suffix
+		}
+	}
+	
 	function date_year_string(date) {
 		var year = date.getUTCFullYear()
 		
