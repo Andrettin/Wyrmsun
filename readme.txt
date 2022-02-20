@@ -73,7 +73,8 @@ https://github.com/Andrettin/Wyrmsun
 - Minor building sites are now generated on many maps.
 - Added many predefined minor building sites for the Earth scenario map.
 - Added support for maps to have their own settings which affect game rules (e.g. whether building sites are required for buildings).
-- Disabled the building site feature for the Central Park, Little Island, Looking Upwards, No Man's Land, North-South Conflict, Northern Lakes and Time for Decisions maps.
+- Disabled the building site feature for the Central Park, Little Island, Looking Upwards, No Man's Land, North-South Conflict, Northern Lakes and Time for Decisions custom maps.
+- Added "Hamlets" custom map, based on the map from Battle for Wesnoth of the same name. This map has rules which make gameplay more akin to Wesnoth: buildings are capturable, each player starts only with a barracks (no town hall or workers) and a military unit, farms are capturable and provide copper income per minute, and many neutral farms are pre-placed on the map.
 
 * Pathfinding
 - Made improvements to pathfinder performance.

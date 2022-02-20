@@ -7,6 +7,7 @@ ResourceIconBase {
 	tooltip: format_text(resource.name + "\n" + small_text(
 		(resource.luxury ? "\nLuxury Resource" : "")
 		+ ((resource_stored > 0 || resource.luxury === false) ? "\nStored: " + number_string(resource_stored) : "")
+		+ (income > 0 ? "\nIncome: " + number_string(income) : "")
 		+ (conversion_rates_string.length > 0 ? "\n" : "") + conversion_rates_string
 		+ (processing_bonus > 0 ? ("\nProcessing Bonus: +" + processing_bonus + "%") : "")
 		+ (children_processing_bonus_string.length > 0 ? "\n" : "") + children_processing_bonus_string
@@ -18,6 +19,7 @@ ResourceIconBase {
 	property var resource: null
 	
 	property int resource_stored: wyrmgus.this_player.get_resource_sync(resource)
+	property int income: wyrmgus.this_player.get_income_sync(resource)
 	property int processing_bonus: wyrmgus.this_player.get_processing_bonus_sync(resource)
 	readonly property string conversion_rates_string: resource.conversion_rates_string
 	property string children_processing_bonus_string: wyrmgus.this_player.get_children_processing_bonus_string_sync(resource)
@@ -31,6 +33,12 @@ ResourceIconBase {
 		function onResource_stored_changed(resource_index, amount) {
 			if (resource_index == resource.index) {
 				resource_icon.resource_stored = amount
+			}
+		}
+		
+		function onIncome_changed(resource_index, income) {
+			if (resource_index == resource.index) {
+				resource_icon.income = income
 			}
 		}
 		
