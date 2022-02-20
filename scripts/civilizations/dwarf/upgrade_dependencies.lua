@@ -41,3 +41,7 @@ DefineDependency("unit-dwarven-cannon-tower",
 DefineDependency("unit-dwarven-witness",
 	{"upgrade-deity-odin"}, "or", {"upgrade-deity-thor"}, "or", {"upgrade-deity-loki"}
 )
+
+DefinePredependency("unit-joruvellir-yale-rider",
+	{"upgrade-faction-goldhoof-clan"}, "or", {"upgrade_faction_eikinskjaldi_clan"}, "or", {"upgrade_faction_joruvellir"}, "or", {"upgrade-faction-yawning-yales"}
+)
