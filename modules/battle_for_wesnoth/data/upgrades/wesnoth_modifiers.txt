@@ -25,6 +25,12 @@ upgrade_wesnoth_modifiers = {
 		}
 	}
 	modifier = {
+		supply = 1
+		unit_classes = {
+			barracks
+		}
+	}
+	modifier = {
 		incomes = {
 			copper = 100
 		}
