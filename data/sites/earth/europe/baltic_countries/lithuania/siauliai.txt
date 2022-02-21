@@ -1,0 +1,9 @@
+siauliai = {
+	name = "Siauliai" #"Šiauliai"
+	map_template = earth
+	geocoordinate = { 23.32502559280 55.93863852860 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		lithuania
+	}
+}
