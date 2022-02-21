@@ -4,3 +4,21 @@ baltic_countries = {
 		soviet_union
 	}
 }
+
+estonia = {
+	superregions = {
+		baltic_countries
+	}
+}
+
+latvia = {
+	superregions = {
+		baltic_countries
+	}
+}
+
+lithuania = {
+	superregions = {
+		baltic_countries
+	}
+}

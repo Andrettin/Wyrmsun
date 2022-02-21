@@ -5,7 +5,7 @@ riga = {
 	base_unit_type = unit_settlement_site
 	color = { 142 59 246 }
 	regions = {
-		baltic_countries
+		latvia
 	}
 	
 	history = {

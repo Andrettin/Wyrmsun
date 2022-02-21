@@ -5,7 +5,7 @@ vilnius = {
 	base_unit_type = unit_settlement_site
 	color = { 126 243 201 }
 	regions = {
-		baltic_countries
+		lithuania
 	}
 	
 	history = {

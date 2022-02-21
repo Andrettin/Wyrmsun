@@ -7,7 +7,7 @@ jelgava = {
 		teutonic = "Mitau"
 	}
 	regions = {
-		baltic_countries
+		latvia
 	}
 	
 	history = {

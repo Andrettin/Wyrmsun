@@ -9,6 +9,6 @@ haapsalu = {
 		norse = "Stein" #here we identify Haapsalu with the place called Stein mentioned in the Ynglinga saga, said to be in the Estonian coast, and where the Swedish king Yngvar died
 	}
 	regions = {
-		baltic_countries
+		estonia
 	}
 }
