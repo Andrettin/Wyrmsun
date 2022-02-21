@@ -61,23 +61,3 @@ DefineSite("kolberg", {
 	},
 	Regions = {"germany"}
 })
-
-DefineSite("poznan", {
-	Name = "Poznan",
-	MapTemplate = "old_earth",
-	Position = {4225, 855},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"slav", "Poznan", -- "Poznań"
-		"teuton", "Posen" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalOwners = {
-		1560, "poland", -- Posen was a Polish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1569, "poland-lithuania", -- the Union of Lublin occurred in 1569; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1815, "prussia" -- Posen was part of the Kingdom of Prussia in the 1815-1866 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1560, 0, "town_hall"
-	},
-	Regions = {"poland"}
-})
