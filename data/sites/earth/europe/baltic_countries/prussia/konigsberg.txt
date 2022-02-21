@@ -5,7 +5,7 @@ konigsberg = {
 	base_unit_type = unit_settlement_site
 	color = { 72 145 47 }
 	cultural_names = {
-		#slav = "Kaliningrad" #Russian
+		#slavic = "Kaliningrad" #Russian
 	}
 	regions = {
 		european_russia
