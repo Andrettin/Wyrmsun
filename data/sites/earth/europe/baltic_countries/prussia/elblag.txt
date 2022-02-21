@@ -1,0 +1,12 @@
+elblag = {
+	name = "Elblag" #"Elbląg"
+	map_template = earth
+	geocoordinate = { 19.40268102890 54.18995973620 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		teutonic = "Elbing"
+	}
+	regions = {
+		poland
+	}
+}

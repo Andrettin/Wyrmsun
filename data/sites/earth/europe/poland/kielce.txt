@@ -1,0 +1,9 @@
+kielce = {
+	name = "Kielce"
+	map_template = earth
+	geocoordinate = { 20.66002030300 50.89039369620 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		poland
+	}
+}

@@ -1,0 +1,9 @@
+chernyakhovsk = {
+	name = "Chernyakhovsk"
+	map_template = earth
+	geocoordinate = { 21.81085445020 54.63163820300 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		european_russia
+	}
+}

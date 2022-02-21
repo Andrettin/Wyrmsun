@@ -1,0 +1,12 @@
+bromberg = {
+	name = "Bromberg"
+	map_template = earth
+	geocoordinate = { 18.01000117870 53.12041261710 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		slavic = "Bydgoszcz"
+	}
+	regions = {
+		poland
+	}
+}
