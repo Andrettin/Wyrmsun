@@ -1,0 +1,22 @@
+torsburgen = {
+	name = "Torsburgen"
+	map_template = gotland
+	geocoordinate = { 18.719208 57.411308 }
+	base_unit_type = unit_minor_building_site
+	regions = {
+		scandinavia
+	}
+	
+	history = {
+		300 = {
+			#the enormous hill fort of Torsburgen had two phases, one dated to 300-400 AD, and the other to 800-1100 AD; Source: "Guta Saga: The History of the Gotlanders", 1999, pp. xxvii-xxviii.
+			owner = gotland
+			building_classes += guard_tower
+		}
+		
+		1100 = {
+			owner = none
+			building_classes -= guard_tower
+		}
+	}
+}
