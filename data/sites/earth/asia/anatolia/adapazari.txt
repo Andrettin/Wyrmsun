@@ -1,0 +1,9 @@
+adapazari = {
+	name = "Adapazari" #"Adapazarı"
+	map_template = earth
+	geocoordinate = { 30.41503210320 40.79997601220 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		anatolia
+	}
+}

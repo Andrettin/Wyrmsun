@@ -1,0 +1,9 @@
+karabuk = {
+	name = "Karabuk" #"Karabük"
+	map_template = earth
+	geocoordinate = { 32.60001501340 41.20000327460 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		anatolia
+	}
+}

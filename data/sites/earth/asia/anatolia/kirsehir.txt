@@ -1,0 +1,9 @@
+kirsehir = {
+	name = "Kirsehir" #"Kırşehir"
+	map_template = earth
+	geocoordinate = { 34.17100260080 39.14199916540 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		anatolia
+	}
+}

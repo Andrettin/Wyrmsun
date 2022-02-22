@@ -1,0 +1,9 @@
+bilecik = {
+	name = "Bilecik"
+	map_template = earth
+	geocoordinate = { 29.98299659770 40.14999902230 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		anatolia
+	}
+}

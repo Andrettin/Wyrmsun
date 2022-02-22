@@ -1,0 +1,9 @@
+kutahya = {
+	name = "Kutahya" #"Kütahya"
+	map_template = earth
+	geocoordinate = { 29.92999710970 39.42000856430 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		anatolia
+	}
+}

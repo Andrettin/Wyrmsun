@@ -1,0 +1,9 @@
+eregli = {
+	name = "Eregli" #"Ereğli"
+	map_template = earth
+	geocoordinate = { 34.05165767290 37.50627524720 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		anatolia
+	}
+}

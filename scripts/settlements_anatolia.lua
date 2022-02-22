@@ -99,23 +99,3 @@ DefineSite("sinope", {
 	},
 	Regions = {"asia"}
 })
-
-DefineSite("tarsus", {
-	Name = "Tarsus",
-	MapTemplate = "old_earth",
-	Position = {4632, 1208},
-	CulturalNames = {
-		"assyrian", "Tarsus",
-		"greek", "Tarsus",
-		"latin", "Tarsus", -- Source: "Ancient Warfare VII.6", 2013, p. 7.
-		"persian", "Tarsus"
-	},
-	HistoricalOwners = {
-		-720, "assyria", -- Tarsus was part of the Assyrian Empire under Sargon II (720 BC); Source: William R. Shepherd, "Historical Atlas", 1911, p. 5.
-		-500, "persia" -- Tarsus was part of the Persian Empire about 500 BC; Source: William R. Shepherd, "Historical Atlas", 1911, p. 8.
-	},
-	HistoricalBuildings = {
-		-720, 0, "farm"
-	},
-	Regions = {"asia"}
-})

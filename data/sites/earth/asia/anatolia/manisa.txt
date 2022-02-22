@@ -1,0 +1,9 @@
+manisa = {
+	name = "Manisa"
+	map_template = earth
+	geocoordinate = { 27.43996821970 38.63039267890 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		anatolia
+	}
+}

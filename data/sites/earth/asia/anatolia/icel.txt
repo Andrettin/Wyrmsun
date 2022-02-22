@@ -1,0 +1,9 @@
+icel = {
+	name = "Icel"
+	map_template = earth
+	geocoordinate = { 34.61999507520 36.79998760890 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		anatolia
+	}
+}

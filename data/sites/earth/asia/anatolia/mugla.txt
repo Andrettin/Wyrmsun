@@ -1,0 +1,9 @@
+mugla = {
+	name = "Mugla" #"Muğla"
+	map_template = earth
+	geocoordinate = { 28.36389115270 37.21637046210 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		anatolia
+	}
+}
