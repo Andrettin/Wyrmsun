@@ -175,12 +175,14 @@ DefineSite("mittelberg", {
 	Regions = {"germany"}
 })
 
+--[[
 DefineSite("regensburg", {
 	HistoricalUnits = {
 		170, 172, "unit-teuton-swordsman", 375, "rome", -- the "Cohors II Aquitanorum equitata civium Romanorum" (a mixed unit, which contained circa 375 auxiliary infantry and 125 cavalry) was stationed at Regensburg-Kumpfmühl when it was attacked and destroyed in 172, during the First Marcomannic War; it likely was stationed there at the beginning of that war as well; Source: "Ancient Warfare VII.6", 2013, p. 25.
 		170, 172, "unit-teuton-ritter", 125, "rome"
 	}
 })
+--]]
 
 DefineSite("scheidungen", {
 	Name = "Scheidungen",

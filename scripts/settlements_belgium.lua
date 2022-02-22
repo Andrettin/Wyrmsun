@@ -25,13 +25,13 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("duisburg", {
+DefineSite("duisburg_belgium", {
 	Name = "Duisburg",
 	MapTemplate = "old_earth",
 	Position = {3944, 890},
 	HistoricalOwners = {
-		481, "francia", -- Duisbury's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		{486, 12, 30}, "francia", -- Duisbury was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		481, "francia", -- Duisburg's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		{486, 12, 30}, "francia", -- Duisburg was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		1648, "spain", -- Duisburg's area was a Spanish possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		1831, "belgium" -- Duisburg's area became a part of Belgium in 1831; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
