@@ -2197,7 +2197,7 @@ DefineUnitType("unit-dwarven-yale-pen", {
 	GivesResource = "leather",
 	MaxHarvesters = 3,
 	ButtonKey = "y",
-	Drops = {"unit_stone_pile", "unit-yale"},
+	Drops = {"unit_stone_pile", "unit_yale"},
 	BuildingRulesString = "Cannot be built close to town halls",
 	BuildingRules = {
 		"and", {

@@ -1567,7 +1567,7 @@ function GetRandomCritterUnitType()
 		if (RandomNumber == 0) then
 			critter_unit_type = "unit-slime"
 		elseif (RandomNumber == 1) then
-			critter_unit_type = "unit-yale"
+			critter_unit_type = "unit_yale"
 		elseif (RandomNumber == 2) then
 			critter_unit_type = "unit-snigill"
 		end

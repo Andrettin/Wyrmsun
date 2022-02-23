@@ -1,0 +1,47 @@
+unit_yale = {
+	name = "Yale"
+	parent = unit_goat
+	species = yale
+	description = "Yales are caprid creatures who inhabit Nidavellir. They have sturdy, golden tusks and horns, and their fur is covered by golden spots. Dwarves often use them as mounts or as beasts of carry."
+	image_file = "neutral/units/yale.png"
+	frame_size = { 72 72 }
+	animation_set = animations_yale
+	icon = icon_yale
+	strength = 12 #somewhat weaker than the horse
+	dexterity = 13 #same as the horse
+	hit_points = 30
+	basic_damage = 3
+	points = 15
+	coward = false
+	variations = {
+		brown_fur = {
+		}
+		gray_brown_fur = {
+			image_file = "neutral/units/yale_gray_brown_fur.png"
+			icon = icon_yale_gray_brown_fur
+		}
+		gray_fur = {
+			image_file = "neutral/units/yale_gray_fur.png"
+			icon = icon_yale_gray_fur
+		}
+		white_fur = {
+			image_file = "neutral/units/yale_white_fur.png"
+			icon = icon_yale_white_fur
+		}
+	}
+	sounds = {
+		selected = yale_selected
+		acknowledge = yale_acknowledge
+		idle = yale_acknowledge
+		ready = yale_selected
+		dead = yale_dead
+		hit = club_attack
+		miss = attack_miss
+		step = step_dirt
+		step_dirt = step_dirt
+		step_gravel = step_gravel
+		step_mud = step_mud
+		step_stone = step_stone
+		step_grass = step_leaves
+	}
+}
