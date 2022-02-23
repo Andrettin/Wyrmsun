@@ -803,65 +803,6 @@ DefineUnitType("unit-wood-pile", {
 	}
 } )
 
-DefineUnitType("unit-stone-pile", {
-	Name = "Stone Pile",
-	Image = {"file", "neutral/buildings/stone_pile.png", "size", {43, 43}},
-	Animations = "animations-decoration", Icon = "icon_stone",
-	NeutralMinimapColor = {92, 92, 92},
-	Costs = {"time", 150},
-	HitPoints = 25500,
-	DrawLevel = 30,
-	TileSize = {1, 1}, BoxSize = {36, 36},
-	SightRange = 1,
-	Armor = 20, Missile = "missile-none",
-	Priority = 0,
---	Corpse = "unit-destroyed-3x3-place",
-	Domain = "land",
---	StartingResources = {200, 400},
-	StartingResources = {400},
-	NumDirections = 1,
-	Building = false, VisibleUnderFog = true,
-	GivesResource = "stone", CanHarvest = true,
-	HarvestFromOutside = true,
-	Variations = {
-		{
-			"variation-id", "1",
-			"resource-min", 201
-		},
-		{
-			"variation-id", "2",
-			"resource-min", 201
-		},
-		{
-			"variation-id", "3",
-			"resource-min", 201
-		},
-		{
-			"variation-id", "4",
-			"resource-min", 201
-		},
-		{
-			"variation-id", "small-1",
-			"resource-max", 200
-		},
-		{
-			"variation-id", "small-2",
-			"resource-max", 200
-		},
-		{
-			"variation-id", "small-3",
-			"resource-max", 200
-		},
-		{
-			"variation-id", "small-4",
-			"resource-max", 200
-		}
-	},
-	Sounds = {
-		"selected", "click"
-	}
-} )
-
 DefineUnitType("unit-template-lair", {
 	Name = "Lair",
 	Parent = "unit-template-base-deposit",
@@ -4026,7 +3967,7 @@ DefineUnitType("unit-template-stronghold", {
 	PierceDamage = true,
 	ButtonLevelForTransporter = "garrison-level",
 	ButtonKey = "h",
-	Drops = {"unit-stone-pile"},
+	Drops = {"unit_stone_pile"},
 	AiDrops = {"unit_helmet"}, -- worker-related items, as well as those we would expect a center of administration to have; and military ones, since this is a stronghold
 	Affixes = {"upgrade-item-suffix-of-the-colossus"},
 	RequirementsString = "Barracks and Masonry",
@@ -4268,7 +4209,7 @@ DefineUnitType("unit-template-masons-shop", {
 	BuilderOutside = true,
 	IncreasesLuxuryDemand = true,
 	MaxHarvesters = 5,
-	Drops = {"unit-wood-pile", "unit-stone-pile"},
+	Drops = {"unit-wood-pile", "unit_stone_pile"},
 	CostModifier = 25,
 	BurnPercent = 50,
 	BurnDamageRate = 1,
@@ -4430,7 +4371,7 @@ DefineUnitType("unit-template-watch-tower", {
 	SaveCargo = true,
 	BuilderOutside = true,
 	NeutralHostile = true,
-	Drops = {"unit-wood-pile", "unit-stone-pile"},
+	Drops = {"unit-wood-pile", "unit_stone_pile"},
 --	RightMouseAction = "attack",
 	BurnPercent = 50,
 	BurnDamageRate = 1,
@@ -4481,7 +4422,7 @@ DefineUnitType("unit-template-guard-tower", {
 	SaveCargo = true,
 	PierceDamage = true,
 	NeutralHostile = true,
-	Drops = {"unit-wood-pile", "unit-stone-pile"},
+	Drops = {"unit-wood-pile", "unit_stone_pile"},
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	RequirementsString = "Lumber Mill and Masonry",
@@ -4526,7 +4467,7 @@ DefineUnitType("unit-template-heavy-tower", {
 	CanTargetLand = true, CanTargetSea = true,
 	DetectCloak = true,
 	NeutralHostile = true,
-	Drops = {"unit-wood-pile", "unit-stone-pile"},
+	Drops = {"unit-wood-pile", "unit_stone_pile"},
 	BurnPercent = 50,
 	BurnDamageRate = 1,
 	RequirementsString = "Lumber Mill, Smithy, Engineering and Masonry",

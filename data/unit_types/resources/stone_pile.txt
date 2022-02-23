@@ -1,0 +1,53 @@
+unit_stone_pile = {
+	name = "Stone Pile"
+	image_file = "neutral/buildings/stone_pile.png"
+	frame_size = { 43 43 }
+	animation_set = animations_decoration
+	icon = icon_stone
+	neutral_minimap_color = { 255 255 0 }
+	hit_points = 25500
+	draw_level = 30
+	tile_size = { 1 1 }
+	box_size = { 36 36 }
+	sight_range = 1
+	armor = 20
+	missile = missile_none
+	priority = 0
+	domain = land
+	starting_resources = 400
+	num_directions = 1
+	building = false
+	visible_under_fog = true
+	can_harvest = true
+	harvest_from_outside = true
+	given_resource = stone
+	variations = {
+		1 = {
+			resource_min = 201
+		}
+		2 = {
+			resource_min = 201
+		}
+		3 = {
+			resource_min = 201
+		}
+		4 = {
+			resource_min = 201
+		}
+		small_1 = {
+			resource_max = 200
+		}
+		small_2 = {
+			resource_max = 200
+		}
+		small_3 = {
+			resource_max = 200
+		}
+		small_4 = {
+			resource_max = 200
+		}
+	}
+	sounds = {
+		selected = click
+	}
+}

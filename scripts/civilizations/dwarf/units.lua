@@ -1614,7 +1614,7 @@ DefineUnitType("unit-dwarven-town-hall", {
 	Costs = {"lumber", 0, "stone", 2400},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	Drops = {"unit-stone-pile"},
+	Drops = {"unit_stone_pile"},
 	AiDrops = {"unit-boots"},
 	DropSpells = {"spell-joruvellir-allegiance"},
 	ButtonKey = "h",
@@ -1997,7 +1997,7 @@ DefineUnitType("unit-dwarven-mushroom-farm", {
 	Costs = {"lumber", 0, "stone", 750},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	Drops = {"unit-wood-pile", "unit-stone-pile"},
+	Drops = {"unit-wood-pile", "unit_stone_pile"},
 	Variations = {
 		{
 			"variation-id", "mushroom-farm",
@@ -2035,7 +2035,7 @@ DefineUnitType("unit-dwarven-barracks", {
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
 	ButtonKey = "w",
-	Drops = {"unit-stone-pile"},
+	Drops = {"unit_stone_pile"},
 	AiDrops = {"unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe", "unit-hand-cannon", "unit-round-shield", "unit-brising-round-shield", "unit-joruvellir-wooden-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-boots"},
 	Variations = {
 		{
@@ -2074,7 +2074,7 @@ DefineUnitType("unit-dwarven-lumber-mill", {
 	Costs = {"time", 165, "copper", 660, "lumber", 0, "stone", 1485},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	Drops = {"unit-stone-pile"},
+	Drops = {"unit_stone_pile"},
 	AiDrops = {"unit-short-spear", "unit-long-spear", "unit-pike", "unit-throwing-axe", "unit-sharp-throwing-axe", "unit-bearded-throwing-axe"},
 	Variations = {
 		{
@@ -2116,7 +2116,7 @@ DefineUnitType("unit-dwarven-smithy", {
 	Costs = {"time", 190, "copper", 800, "lumber", 0, "stone", 1560},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	Drops = {"unit-stone-pile"},
+	Drops = {"unit_stone_pile"},
 	AiDrops = {"unit-runesmiths-hammer", "unit-battle-axe", "unit-broad-axe", "unit-great-axe", "unit-hand-cannon", "unit-round-shield", "unit-heater-shield", "unit-thrymgjol-shield", "unit-spatha"}, -- drops Spatha to allow dropping dwarven unique swords
 	Variations = {
 		{
@@ -2197,7 +2197,7 @@ DefineUnitType("unit-dwarven-yale-pen", {
 	GivesResource = "leather",
 	MaxHarvesters = 3,
 	ButtonKey = "y",
-	Drops = {"unit-stone-pile", "unit-yale"},
+	Drops = {"unit_stone_pile", "unit-yale"},
 	BuildingRulesString = "Cannot be built close to town halls",
 	BuildingRules = {
 		"and", {
@@ -2246,7 +2246,7 @@ DefineUnitType("unit-dwarven-temple", {
 	Costs = {"lumber", 0, "stone", 1500},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	Drops = {"unit-stone-pile"},
+	Drops = {"unit_stone_pile"},
 	Variations = {
 		{
 			"variation-id", "temple",

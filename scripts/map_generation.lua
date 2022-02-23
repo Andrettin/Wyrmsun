@@ -1929,7 +1929,7 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 						unit = CreateUnit("unit_germanic_worker", i, {player_spawn_point[1], player_spawn_point[2]})
 						CreateStartingGoldMine(i, nil, nil, true) -- create the player's gold mine
 						if (GetPlayerData(i, "RaceName") == "dwarf") then
-							CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
+							CreateStartingLocationResourcePiles(i, "unit_stone_pile", 12)
 							CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
 						else
 							CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
@@ -2324,7 +2324,7 @@ function GenerateRandomMap(arg)
 		for i=0,(PlayerMax - 2) do
 			if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 				if (GetPlayerData(i, "RaceName") == "dwarf") then
-					CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
+					CreateStartingLocationResourcePiles(i, "unit_stone_pile", 12)
 					CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
 				else
 					CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
@@ -4066,7 +4066,7 @@ function GenerateValley(direction, lake_quantity)
 	for i=0,(PlayerMax - 2) do
 		if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 			if (GetPlayerData(i, "RaceName") == "dwarf") then
-				CreateStartingLocationResourcePiles(i, "unit-stone-pile", 12)
+				CreateStartingLocationResourcePiles(i, "unit_stone_pile", 12)
 				CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
 			else
 				CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
