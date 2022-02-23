@@ -1853,7 +1853,6 @@ Units = {
 	"unit-minecart",
 --	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-megacricetodon-collongensis", "unit-rat",
 	"unit-adelobasileus-cromptoni", "unit-galerix-exilis", "unit-rat",
-	"unit-wolf",
 	"unit-slime", "unit-gryphon", "unit-water-elemental",
 	"unit-gold-mine",
 	"unit-silver-mine",

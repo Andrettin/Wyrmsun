@@ -109,7 +109,7 @@ DefineCharacter("ganglot", { -- Hel's maidservant in Norse mythology; Source: Ke
 DefineCharacter("garm", { -- Hel's wolf-hound in Norse mythology, who guards the entrance to Niflheim; Source: Kevin Crossley-Holland, "The Norse Myths", 1980, pp. 147, 193.
 	Name = "Garm",
 	Gender = "male",
-	Type = "unit-wolf", -- wolf-hound
+	Type = "unit_wolf", -- wolf-hound
 	Faction = "hel",
 	Level = 3,
 	StartDate = -30000,

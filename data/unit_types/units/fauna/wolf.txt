@@ -1,0 +1,56 @@
+unit_wolf = {
+	name = "Wolf"
+	parent = unit_template_fauna_unit
+	species = wolf
+	description = "Wolves are pack hunters who dwell in temperate woodlands."
+	tile_size = { 1 1 }
+	box_size = { 32 32 }
+	image_file = "neutral/units/wolf.png"
+	frame_size = { 76 76 }
+	animation_set = animations_melee_unit_new_movement
+	icon = icon_wolf
+	pierce_damage = true
+	strength = 13
+	dexterity = 15
+	intelligence = 2
+	charisma = 6
+	hit_points = 45
+	basic_damage = 6
+	max_attack_range = 1
+	accuracy = 12
+	evasion = 12
+	sight_range = 4
+	speed = 13
+	missile = missile_none
+	priority = 37
+	points = 40
+	demand = 1
+	domain = land
+	right_mouse_action = attack
+	can_attack = true
+	can_target_land = true
+	random_movement_probability = 1
+	random_movement_distance = 5
+	people_aversion = true
+	predator = true
+	flesh = true
+	carnivore = true
+	sounds = {
+		selected = wolf_growl
+		acknowledge = wolf_growl
+		idle = wolf_growl
+		ready = wolf_growl
+		dead = wolf_dead
+		hit = bite_attack
+		miss = attack_miss
+		step = step_dirt
+		step_dirt = step_dirt
+		step_gravel = step_gravel
+		step_mud = step_mud
+		step_stone = step_stone
+		step_grass = step_leaves
+	}
+	0_ad_template_names = {
+		gaia/fauna_lion
+	}
+}
