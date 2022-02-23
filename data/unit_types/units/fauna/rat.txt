@@ -1,0 +1,62 @@
+unit_rat = {
+	name = "Rat"
+	parent = unit_template_fauna_unit
+	species = rat
+	description = "Rats are rodents of medium size and long tails. They usually live in forests or within human dwellings. They are often reviled due to carrying diseases."
+	tile_size = { 1 1 }
+	box_size = { 32 32 }
+	draw_level = 35
+	image_file = "neutral/units/rat.png"
+	frame_size = { 72 72 }
+	animation_set = animations_rat
+	icon = icon_rat
+	pierce_damage = true
+	strength = 2
+	dexterity = 15
+	intelligence = 2
+	charisma = 2
+	hit_points = 5
+	basic_damage = 2
+	max_attack_range = 1
+	accuracy = 15
+	evasion = 15
+	sight_range = 3
+	speed = 8
+	missile = missile_none
+	priority = 10
+	points = 1
+	demand = 1
+	domain = land
+	right_mouse_action = move
+	can_attack = true
+	can_target_land = true
+	random_movement_probability = 1
+	random_movement_distance = 3
+	flesh = true
+	carnivore = true
+	sounds = {
+		selected = click
+		dead = rat_dead
+		hit = bite_attack
+		miss = attack_miss
+		step = step_dirt
+		step_dirt = step_dirt
+		step_gravel = step_gravel
+		step_mud = step_mud
+		step_stone = step_stone
+		step_grass = step_leaves
+	}
+	variations = {
+		dark_gray_fur = {
+		}
+		light_gray_fur = {
+			image_file = "neutral/units/rat_light_gray_fur.png"
+		}
+		black_fur = {
+			image_file = "neutral/units/rat_black_fur.png"
+		}
+	}
+	0_ad_template_names = {
+		gaia/fauna_chicken
+	}
+}
