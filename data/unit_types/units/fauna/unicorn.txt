@@ -1,0 +1,16 @@
+unit_unicorn = {
+	name = "Unicorn"
+	parent = unit_horse
+	species = unicorn
+	description = "Unicorns inhabit the woods of Alfheim, frequently being used by elves as mounts."
+	image_file = "neutral/units/unicorn.png"
+	frame_size = { 72 72 }
+	icon = icon_unicorn
+	strength = 20
+	dexterity = 17
+	hit_points = 45 #more resilient than a horse, +15 hit points
+	basic_damage = 4
+	accuracy = 12 #more dextrous than a horse
+	evasion = 12 #more dextrous than a horse
+	points = 25
+}

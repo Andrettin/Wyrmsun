@@ -197,7 +197,7 @@ DefineUnitType("unit-latin-stables", {
 	Image = {"file", "latin/buildings/stables.png", "size", {96, 96}},
 	Shadow = {"file", "latin/buildings/stables_shadow.png", "size", {96, 96}},
 	Icon = "icon-latin-stables",
-	Drops = {"unit-horse"},
+	Drops = {"unit_horse"},
 	RequirementsString = "Carpenter's Shop/Lumber Mill",
 	Sounds = {
 --		"help", "basic-teuton-voices-help-town"

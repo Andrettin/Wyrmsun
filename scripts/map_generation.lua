@@ -1551,7 +1551,7 @@ function GetRandomCritterUnitType()
 		elseif (RandomNumber == 3) then
 			critter_unit_type = "unit-frog"
 		elseif (RandomNumber == 4) then
-			critter_unit_type = "unit-horse"
+			critter_unit_type = "unit_horse"
 		end
 	elseif (GetCurrentTileset() == "dungeon") then
 		RandomNumber = SyncRand(3)
