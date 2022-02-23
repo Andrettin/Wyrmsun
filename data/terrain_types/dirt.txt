@@ -87,4 +87,11 @@ dirt = {
 		Rb #Dark Dirt
 		Hh #Regular Hills
 	}
+	0_ad_texture_names = {
+		temp_dirt_gravel
+		temp_dirt_gravel_b
+		temp_mud_a
+		temp_mud_plants
+		temp_plants_bog
+	}
 }

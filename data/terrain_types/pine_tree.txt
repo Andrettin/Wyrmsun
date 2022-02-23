@@ -57,4 +57,12 @@ pine_tree = {
 		Fmf #Fall Mixed Forest
 		Fms #Summer Mixed Forest
 	}
+	0_ad_template_names = {
+		gaia/tree/aleppo_pine
+		gaia/tree/dead
+		gaia/tree/euro_beech
+		gaia/tree/oak
+		gaia/tree/pine
+		gaia/tree/poplar
+	}
 }
