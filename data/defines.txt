@@ -257,3 +257,33 @@ ignored_wesnoth_terrain_strings = {
 	Wm #Windmill
 	Xm #Impassable (Mountains)
 }
+
+ignored_0_ad_template_names = {
+	actor|geology/stone_granite_med.xml
+	actor|props/flora/grass_temp_field.xml
+	actor|props/flora/grass_temp_field_brown.xml
+	actor|props/flora/grass_tropic_field.xml
+	actor|props/flora/plant_sm.xml
+	actor|props/flora/reeds_pond_lush_a.xml
+	actor|props/flora/reeds_pond_lush_b.xml
+	actor|props/flora/water_lillies.xml
+	actor|props/flora/water_log.xml
+	birds/buzzard
+	gaia/fish/generic
+	gaia/fruit/berry_01
+	gaia/tree/bush_temperate
+	skirmish/structures/iber_wall_long
+	skirmish/structures/iber_wall_medium
+	skirmish/structures/iber_wall_short
+	skirmish/units/special_starting_unit
+	structures/fence_long
+}
+
+0_ad_template_resource_amounts = {
+	gaia/ore/temperate_large = 50000
+	gaia/rock/mediterranean_large = 50000
+	gaia/rock/temperate_large = 50000
+	gaia/rock/temperate_large_02 = 50000
+}
+
+0_ad_water_height_multiplier = 80
