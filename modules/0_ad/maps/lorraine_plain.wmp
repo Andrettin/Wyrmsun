@@ -1,0 +1,8 @@
+name = "Lorraine Plain"
+description = "The map is cut through the center by a river traversing east-west with some land bridges.\n\nFairly open-wooded and basically flat. Plenty of building room. Well balanced resources.\n\nPlayer territories are divided by the main river and its tributaries (with necessary land bridges for crossings)."
+map_size = { 256 256 }
+player_types = {
+	person
+	person
+}
+settings = classic_skirmish

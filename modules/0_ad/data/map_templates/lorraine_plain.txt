@@ -1,0 +1,7 @@
+lorraine_plain = {
+	name = "Lorraine Plain"
+	size = { 256 256 }
+	terrain_file = "lorraine_plain.pmp"
+	default_water_terrain_type = shallow_water
+	circle = true #apply nothing outside the circle, generating based on the nearest terrain
+}
