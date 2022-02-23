@@ -8,6 +8,10 @@ shooter = {
 			upgrade = upgrade_mercenary_company
 		}
 	}
+	
+	0_ad_template_names = {
+		skirmish/units/default_infantry_ranged_b
+	}
 }
 
 veteran_shooter = {

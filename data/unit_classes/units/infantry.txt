@@ -5,6 +5,9 @@ militia = {
 infantry = {
 	name = "Infantry"
 	tech_tree_parent_unit_class = barracks
+	0_ad_template_names = {
+		skirmish/units/default_infantry_melee_b
+	}
 }
 
 veteran_infantry = {

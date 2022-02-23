@@ -1,5 +1,8 @@
 worker = {
 	name = "Worker"
+	0_ad_template_names = {
+		skirmish/units/default_support_female_citizen
+	}
 }
 
 skilled_miner = {

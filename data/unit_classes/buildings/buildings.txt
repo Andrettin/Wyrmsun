@@ -2,6 +2,9 @@ town_hall = {
 	name = "Town Hall"
 	town_hall = true
 	tech_tree_parent_unit_class = worker
+	0_ad_template_names = {
+		skirmish/structures/default_civil_centre
+	}
 }
 
 fortress = {
@@ -38,6 +41,9 @@ masons_shop = {
 watch_tower = {
 	name = "Watch Tower"
 	tech_tree_parent_unit_class = worker
+	0_ad_template_names = {
+		skirmish/structures/iber_wall_tower
+	}
 }
 
 cannon_tower = {
