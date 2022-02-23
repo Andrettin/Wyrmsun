@@ -683,54 +683,6 @@ DefineUnitType("unit-unicorn", {
 	Variations = {}
 } )
 
-DefineUnitType("unit-boar", {
-	Name = "Boar",
-	Parent = "unit-template-fauna-unit",
-	Species = "boar",
-	Description = "Boars live in woodlands, and are often hunted for meat.",
-	Image = {"file", "neutral/units/boar.png", "size", {72, 72}},
-	Animations = "animations-melee-unit-new-movement", Icon = "icon-boar",
-	Strength = 15,
-	Dexterity = 10,
-	Intelligence = 2,
-	Charisma = 4,
-	Speed = 13,
-	HitPoints = 15,
-	TileSize = {1, 1}, BoxSize = {32, 32},
-	SightRange = 4,
-	BasicDamage = 2, Missile = "missile-none",
-	MaxAttackRange = 1,
-	Accuracy = 10,
-	Evasion = 10,
-	Priority = 37,
-	Points = 5,
-	Demand = 1,
-	Domain = "land",
-	RightMouseAction = "move",
-	CanAttack = true,
-	CanTargetLand = true,
-	RandomMovementProbability = 1,
-	RandomMovementDistance = 5,
-	Flesh = true,
-	Herbivore = true,
-	BluntDamage = true,
-	Sounds = {
-		"selected", "pig",
-		"acknowledge", "pig",
-		"idle", "pig",
-		"ready", "pig",
-		"dead", "pig",
-		"hit", "club-attack",
-		"miss", "attack-miss",
-		"step", "step-dirt",
-		"step-dirt", "step-dirt",
-		"step-gravel", "step-gravel",
-		"step-mud", "step-mud",
-		"step-stone", "step-stone",
-		"step-grass", "step-leaves"
-	}
-})
-
 DefineUnitType("unit-wolf", {
 	Name = "Wolf",
 	Parent = "unit-template-fauna-unit",
