@@ -19,7 +19,4 @@ unit_copper_rock = {
 			image_file = "neutral/buildings/copper_rock_4.png"
 		}
 	}
-	0_ad_template_names = {
-		gaia/ore/temperate_large
-	}
 }

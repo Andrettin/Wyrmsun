@@ -49,4 +49,7 @@ unit_goat = {
 		step_stone = step_stone
 		step_grass = step_leaves
 	}
+	0_ad_template_names = {
+		gaia/fauna_sheep
+	}
 }

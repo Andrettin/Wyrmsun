@@ -51,4 +51,8 @@ unit_horse = {
 		step_stone = step_stone
 		step_grass = step_leaves
 	}
+	0_ad_template_names = {
+		gaia/fauna_deer
+		gaia/fauna_horse
+	}
 }
