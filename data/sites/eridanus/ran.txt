@@ -4,4 +4,5 @@ ran = { #Epsilon Eridani
 	astrocoordinate = { 53.2327 -9.4583 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 10.475
 	base_unit_type = unit_orange_star #dwarf star
+	astrodistance_additive_modifier = 16 #so that it does not end up too close to the Solar System
 }
