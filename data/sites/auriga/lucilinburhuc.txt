@@ -4,4 +4,5 @@ lucilinburhuc = {
 	astrocoordinate = { 97.1905 38.963 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 160
 	base_unit_type = unit_yellow_star #giant star
+	astrodistance_additive_modifier = 16 #so that it does not end up too close to Nervia, which also has a planetary system
 }
