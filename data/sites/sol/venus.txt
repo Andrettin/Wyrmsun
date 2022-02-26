@@ -1,8 +1,7 @@
 venus = {
 	name = "Venus"
-	map_template = sol_system
 	base_unit_type = unit_barren_world
-	map_template_orbit = true
+	orbit_center = sol
 	distance_from_orbit_center = 108 #108 million kilometers
 	cultural_names = {
 		norse = "Friggjarstjarna" #the name means "Frigg's Star"; Source: Richard Cleasby and Gudbrand Vigfusson, "An Icelandic-English Dictionary", 1874, p. 174.

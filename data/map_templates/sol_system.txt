@@ -1,6 +1,6 @@
 sol_system = {
 	name = "Sol System"
-	main_template = universe
+	#main_template = universe
 	size = { 416 416 }
 	subtemplate_top_left_pos = { 48 48 }
 	circle = true

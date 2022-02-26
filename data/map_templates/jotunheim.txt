@@ -59,7 +59,7 @@ jotunheim_space = {
 
 jotunheim_system = {
 	name = "Jotunheim System"
-	main_template = universe
+	#main_template = universe
 	size = { 52 52 }
 	circle = true
 }

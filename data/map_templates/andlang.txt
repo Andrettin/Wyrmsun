@@ -1,6 +1,6 @@
 andlang = {
 	name = "Andlang"
-	main_template = universe
+	#main_template = universe
 	world = andlang
 	size = { 32 32 }
 	#min_subtemplate_pos = { 160 0 }

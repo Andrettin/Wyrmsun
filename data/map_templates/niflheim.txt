@@ -13,7 +13,7 @@ niflheim = {
 
 niflheim_space = {
 	name = "Niflheim"
-	main_template = universe
+	#main_template = universe
 	world = niflheim
 	size = { 32 32 }
 	circle = true

@@ -33,7 +33,7 @@ alfheim_space = {
 
 alfheim_system = {
 	name = "Alfheim System"
-	main_template = universe
+	#main_template = universe
 	size = { 88 88 }
 	circle = true
 }

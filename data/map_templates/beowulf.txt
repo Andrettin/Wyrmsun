@@ -1,6 +1,6 @@
 beowulf = {
 	name = "Beowulf"
-	main_template = universe
+	#main_template = universe
 	world = beowulf
 	size = { 32 32 }
 	circle = true

@@ -1,6 +1,6 @@
 sol = {
 	name = "Sol"
-	map_template = sol_system
+	map_template = universe
 	base_unit_type = unit_yellow_star #dwarf star
-	map_template_orbit = true
+	pos = { 255 255 }
 }
