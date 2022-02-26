@@ -1,0 +1,6 @@
+moravia = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=1901
+	name = "Moravia"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 3.2452233 #semi-major axis
+}

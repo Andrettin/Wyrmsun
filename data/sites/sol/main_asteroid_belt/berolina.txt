@@ -1,0 +1,6 @@
+berolina = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=422
+	name = "Berolina"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 2.2280896 #semi-major axis
+}

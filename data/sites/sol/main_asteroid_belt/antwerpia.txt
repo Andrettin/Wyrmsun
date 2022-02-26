@@ -1,0 +1,6 @@
+antwerpia = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=1294
+	name = "Antwerpia"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 2.6874535 #semi-major axis
+}
