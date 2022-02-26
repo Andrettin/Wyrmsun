@@ -1,9 +1,9 @@
 unit_troll_farm = {
 	parent = unit_template_farm
 	civilization = troll
-	image_file = "buildings/goblin/farm.png"
+	image_file = "buildings/troll/farm.png"
 	frame_size = { 64 64 }
-	icon = icon_goblin_farm
+	icon = troll_farm
 	neutral_spawned_units = {
 		unit_troll_warrior
 	}

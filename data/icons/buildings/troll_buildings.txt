@@ -1,0 +1,3 @@
+troll_farm = {
+	file = "icons/buildings/troll/farm.png"
+}
