@@ -1,7 +1,0 @@
-luna = {
-	name = "Luna"
-	map_template = sol_system
-	base_unit_type = unit_barren_moon
-	map_template_orbit = true
-	mass = 73420 #in zettagrams
-}

@@ -1,0 +1,6 @@
+terra = {
+	name = "Terra"
+	base_unit_type = unit_barren_world #should be a continental world
+	orbit_center = sol
+	distance_from_orbit_center = 149.598023 #in millions of kilometers; semi-major axes
+}

@@ -1,0 +1,7 @@
+luna = {
+	name = "Luna"
+	base_unit_type = unit_barren_moon
+	orbit_center = terra
+	mass = 73420 #in zettagrams
+	distance_from_orbit_center = 0.384399 #in millions of kilometers; semi-major axes
+}
