@@ -1,8 +1,7 @@
 pluto = {
 	name = "Pluto"
-	map_template = sol_system
 	base_unit_type = unit_barren_dwarf_world
-	map_template_orbit = true
+	orbit_center = sol
 	distance_from_orbit_center_au = 39.4815 #average; apastron of 49.305 AU AU and periastron of 29.658 AU
 	mass = 13030 #in zettagrams
 }
