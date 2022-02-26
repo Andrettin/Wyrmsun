@@ -1,7 +1,6 @@
 mercury = {
 	name = "Mercury"
-	map_template = sol_system
 	base_unit_type = unit_barren_world
-	map_template_orbit = true
+	orbit_center = sol
 	distance_from_orbit_center = 58 #58 million kilometers
 }

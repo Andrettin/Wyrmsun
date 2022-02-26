@@ -1,8 +1,7 @@
 mars = {
 	name = "Mars"
-	map_template = sol_system
 	base_unit_type = unit_barren_world
-	map_template_orbit = true
+	orbit_center = sol
 	distance_from_orbit_center = 230 #230 million kilometers
 	mass = 641710 #in zettagrams
 }
