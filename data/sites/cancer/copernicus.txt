@@ -4,5 +4,5 @@ copernicus = {
 	astrocoordinate = { 133.1492 28.3308 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 41.06
 	base_unit_type = unit_orange_star #giant star
-	astrodistance_additive_modifier = 16 #so that it does not end up too close to Pollux, which also has a planetary system
+	astrodistance_additive_modifier = 24 #so that it does not end up too close to Pollux, which also has a planetary system
 }

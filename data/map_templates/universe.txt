@@ -1,9 +1,8 @@
 universe = {
 	name = "Universe"
 	size = { 512 512 }
-	astrodistance_multiplier = 16
+	astrodistance_multiplier = 10
 	astrodistance_additive_modifier = 64 #in tiles
-	#default_astrocoordinate_reference_subtemplate = earth
 	orbit_distance_multiplier = 4
 	base_terrain_type = dirt
 	base_overlay_terrain_type = space
