@@ -194,6 +194,8 @@ function HandleCheats(str)
 	elseif (string.sub(str, 0, 19) == "numunitsconstructed") then
 		local message_player = tonumber(string.sub(str, 21))
 		AddMessage("Player " .. message_player .. " has " .. GetPlayerData(message_player, "NumBuildingsUnderConstruction") .. " under construction buildings.")
+	elseif (string.sub(str, 0, 4) == "item") then
+		unit = CreateUnit(string.sub(str, 6), PlayerNumNeutral, {GetPlayerData(GetThisPlayer(), "StartPosX"), GetPlayerData(GetThisPlayer(), "StartPosY")})
 	elseif (string.sub(str, 0, 13) == "prefixed item") then
         local string_list = {}
 		local sep = " "
