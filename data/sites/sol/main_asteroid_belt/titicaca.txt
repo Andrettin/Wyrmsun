@@ -1,7 +1,6 @@
 titicaca = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=1801
 	name = "Titicaca"
-	map_template = sol_system
 	base_unit_type = unit_asteroid
-	map_template_orbit = true
+	orbit_center = sol
 	distance_from_orbit_center_au = 3.0192433 #semi-major axis
 }

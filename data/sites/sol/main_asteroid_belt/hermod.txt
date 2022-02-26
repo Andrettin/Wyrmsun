@@ -1,7 +1,6 @@
 hermod = {
 	name = "Hermod"
-	map_template = sol_system
 	base_unit_type = unit_asteroid
-	map_template_orbit = true
+	orbit_center = sol
 	distance_from_orbit_center_au = 3.0738105 #semi-major axis
 }

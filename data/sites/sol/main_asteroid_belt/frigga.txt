@@ -1,7 +1,6 @@
 frigga = {
 	name = "Frigga"
-	map_template = sol_system
 	base_unit_type = unit_asteroid
-	map_template_orbit = true
+	orbit_center = sol
 	distance_from_orbit_center = 399.212 #semi-major axis
 }

@@ -1,7 +1,6 @@
 strauss = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=4559
 	name = "Strauss"
-	map_template = sol_system
 	base_unit_type = unit_asteroid
-	map_template_orbit = true
+	orbit_center = sol
 	distance_from_orbit_center_au = 3.0239584 #semi-major axis
 }

@@ -1,7 +1,6 @@
 vala = {
 	name = "Vala"
-	map_template = sol_system
 	base_unit_type = unit_asteroid
-	map_template_orbit = true
+	orbit_center = sol
 	distance_from_orbit_center = 363.82 #semi-major axis
 }

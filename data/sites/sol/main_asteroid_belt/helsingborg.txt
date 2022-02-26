@@ -1,7 +1,6 @@
 helsingborg_asteroid = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=10549
 	name = "Helsingborg"
-	map_template = sol_system
 	base_unit_type = unit_asteroid
-	map_template_orbit = true
+	orbit_center = sol
 	distance_from_orbit_center_au = 2.5587753 #semi-major axis
 }
