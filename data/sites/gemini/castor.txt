@@ -1,6 +1,6 @@
 castor = { #Alpha Geminorum
 	name = "Castor"
-	map_template = universe
+	#map_template = universe #too close to Copernicus, which has a planetary system
 	astrocoordinate = { 113.6495 31.8883 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 51
 	base_unit_type = unit_white_star #class A dwarf star
