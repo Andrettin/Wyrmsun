@@ -1,6 +1,6 @@
 wasat = { #Delta Geminorum
 	name = "Wasat"
-	#map_template = universe #too close to Copernicus, which has a planetary system
+	map_template = universe
 	astrocoordinate = { 110.0307 21.9823 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 60.5
 	base_unit_type = unit_yellow_white_star #giant star

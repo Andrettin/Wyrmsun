@@ -8,6 +8,7 @@ unit_template_star = {
 	icon = star
 	tile_size = { 4 4 }
 	box_size = { 128 128 }
+	star = true
 }
 
 unit_yellow_star = { #Class G

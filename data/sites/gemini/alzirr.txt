@@ -1,6 +1,6 @@
 alzirr = { #Xi Geminorum
 	name = "Alzirr"
-	#map_template = universe #too close to Copernicus, which has a planetary system
+	map_template = universe
 	astrocoordinate = { 101.3224 12.8956 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 58.7
 	base_unit_type = unit_yellow_white_star #dwarf star #F5IV-V

@@ -1,6 +1,6 @@
 aldebaran = { #Alpha Tauri
 	name = "Aldebaran"
-	#map_template = universe #too close to Copernicus, which has a planetary system
+	map_template = universe
 	astrocoordinate = { 68.9802 16.5093 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 65.3
 	base_unit_type = unit_orange_star #giant star
