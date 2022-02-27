@@ -1,0 +1,10 @@
+cynocephalus = {
+	name = "Cynocephalus"
+	supertaxon = canidae
+	era = holocene
+	#homeworld = ? #planet near Sirius? as in Lucian's A True History, there were dog-faced men from Sirius (the Cynobalanians)
+	sapient = true
+	pre_evolutions = {
+		osteoborus #common ancestor with wolves/dogs
+	}
+}
