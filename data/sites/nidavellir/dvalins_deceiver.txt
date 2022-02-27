@@ -1,7 +1,6 @@
-dvalins_deceiver = { #dwarven name for the sun in the Lay of Alvis, here used as the sun of the dwarven homeworld, Nidavellir
-	name = "Dvalin's Deceiver"
-	#map_template = universe
-	map_template_orbit = true
-	#astrocoordinate_reference_subtemplate = nidavellir_space
-	base_unit_type = unit_yellow_star
+fafnir += { #as the star is named after a dwarf, its system is thematically-appropriate for the dwarven homeworld
+	aliases += dvalins_deceiver
+	cultural_names = {
+		dwarven = "Dvalin's Deceiver" #dwarven name for the sun in the Lay of Alvis, here used as the sun of the dwarven homeworld, Nidavellir
+	}
 }
