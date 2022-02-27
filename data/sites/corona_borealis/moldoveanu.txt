@@ -1,0 +1,9 @@
+moldoveanu = {
+	name = "Moldoveanu"
+	map_template = universe
+	right_ascension = 16.2.11.846
+	declination = 28.169561
+	astrodistance = 536
+	base_unit_type = unit_yellow_star #dwarf star
+	astrodistance_additive_modifier = -32 #so that it appears on the map
+}

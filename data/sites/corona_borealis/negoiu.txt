@@ -1,0 +1,7 @@
+negoiu = {
+	name = "Negoiu"
+	base_unit_type = unit_gas_giant
+	orbit_center = moldoveanu
+	distance_from_orbit_center_au = 0.0493 #semi-major axis
+	mass_jm = 0.913
+}
