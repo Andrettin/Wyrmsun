@@ -1,0 +1,6 @@
+leleakuhonua = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=541132
+	name = "Leleakuhonua" #Leleākūhonua
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 1031.4852692 #semi-major axis
+}
