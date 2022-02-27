@@ -1,7 +1,11 @@
 sham = { #Alpha Sagittae
 	name = "Sham"
+	aliases += fairwheel #the star's name means arrow, as does the name of its constellation, and elves are associated with arrows (e.g. "elf-shot"), this makes the star appropriate to house the elven homeworld
 	map_template = universe
 	astrocoordinate = { -64.9759 18.0139 } #from www.github.com/ofrohn/d3-celestial
 	astrodistance = 382
 	base_unit_type = unit_yellow_star #giant star
+	cultural_names = {
+		elven = "Fairwheel" #elven name for the sun in the Lay of Alvis, here used as the sun of the elven homeworld, Alfheim
+	}
 }
