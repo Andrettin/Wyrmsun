@@ -1,0 +1,5 @@
+kairet = { #Source: Robert William Cole, "The Struggle for Empire: A Story of the Year 2236", 1900, p. 13.
+	name = "Kairet" #planet orbiting Sirius in the novel
+	base_unit_type = unit_barren_world #should be a habitable world
+	orbit_center = sirius
+}
