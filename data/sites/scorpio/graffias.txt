@@ -1,0 +1,7 @@
+graffias = { #Xi Scorpii
+	name = "Graffias"
+	map_template = universe
+	astrocoordinate = { -118.9099 -11.3736 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 90.9
+	base_unit_type = unit_yellow_white_star #dwarf star
+}
