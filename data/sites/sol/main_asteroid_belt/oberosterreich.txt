@@ -1,0 +1,6 @@
+oberosterreich = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=96506
+	name = "Oberosterreich" #"Oberösterreich"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 2.6269017 #semi-major axis
+}
