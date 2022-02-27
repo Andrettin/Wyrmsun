@@ -1,0 +1,5 @@
+jotunheim = {
+	name = "Jotunheim"
+	base_unit_type = unit_barren_world #should be a habitable world
+	orbit_center = everbright
+}

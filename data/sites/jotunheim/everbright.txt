@@ -1,7 +1,6 @@
-everbright = { #giant/ettin name for the sun in the Lay of Alvis, here used as the sun of the giant/ettin homeworld, Jotunheim
-	name = "Everbright"
-	map_template = jotunheim_system
-	map_template_orbit = true
-	astrocoordinate_reference_subtemplate = jotunheim_space
-	base_unit_type = unit_yellow_star
-}
+#saiph += { #the star's name means "sword of the giant" in Arabic, making it appropriate to house the giant/ettin homeworld
+#	aliases += everbright
+#	cultural_names = {
+#		ettin = "Everbright" #giant/ettin name for the sun in the Lay of Alvis, here used as the sun of the giant/ettin homeworld, Jotunheim
+#	}
+#}

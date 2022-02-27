@@ -1,4 +1,5 @@
 #sham += { #the star's name means arrow, as does the name of its constellation, and elves are associated with arrows (e.g. "elf-shot"), this makes the star appropriate to house the elven homeworld
+#	aliases += fairwheel
 #	cultural_names = {
 #		elven = "Fairwheel" #elven name for the sun in the Lay of Alvis, here used as the sun of the elven homeworld, Alfheim
 #	}

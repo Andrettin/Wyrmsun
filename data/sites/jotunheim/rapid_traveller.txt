@@ -1,7 +1,5 @@
 rapid_traveller = { #giant/ettin name for the moon in the Lay of Alvis, here used as the moon of the giant/ettin homeworld, Jotunheim
 	name = "Rapid Traveller"
-	map_template = jotunheim_system
-	map_template_orbit = true
-	astrocoordinate_reference_subtemplate = jotunheim_space
 	base_unit_type = unit_barren_moon
+	orbit_center = jotunheim
 }
