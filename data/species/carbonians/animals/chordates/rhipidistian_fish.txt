@@ -1,5 +1,5 @@
 rhipidistian_fish = {
 	name = "Rhipidistian Fish"
-	supertaxon = chordata
+	supertaxon = sarcopterygii
 	homeworld = earth
 }
