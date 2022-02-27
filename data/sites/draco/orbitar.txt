@@ -2,4 +2,5 @@ orbitar = {
 	name = "Orbitar"
 	base_unit_type = unit_barren_world
 	orbit_center = fafnir
+	distance_from_orbit_center_au = 1.19 #semi-major axis
 }
