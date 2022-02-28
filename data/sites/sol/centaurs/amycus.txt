@@ -1,0 +1,6 @@
+amycus = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=55576
+	name = "Amycus"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 25.1540890 #semi-major axis
+}

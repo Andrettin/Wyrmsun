@@ -1,0 +1,6 @@
+nessus = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=7066
+	name = "Nessus"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 24.6412374 #semi-major axis
+}

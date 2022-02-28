@@ -1,0 +1,6 @@
+bienor = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=54598
+	name = "Bienor"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 16.4912993 #semi-major axis
+}

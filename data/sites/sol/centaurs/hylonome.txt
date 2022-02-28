@@ -1,0 +1,6 @@
+hylonome = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=10370
+	name = "Hylonome"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 25.1987495 #semi-major axis
+}

@@ -1,0 +1,6 @@
+asbolus = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=8405
+	name = "Asbolus"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 17.9735009 #semi-major axis
+}
