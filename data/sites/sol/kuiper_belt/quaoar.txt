@@ -1,0 +1,6 @@
+quaoar = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=50000
+	name = "Quaoar"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 43.6154393 #semi-major axis
+}

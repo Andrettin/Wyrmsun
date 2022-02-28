@@ -1,0 +1,6 @@
+arawn = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=15810
+	name = "Arawn"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 39.6693172 #semi-major axis
+}

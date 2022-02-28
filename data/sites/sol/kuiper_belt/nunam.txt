@@ -1,0 +1,5 @@
+nunam = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=79360
+	name = "Nunam"
+	base_unit_type = unit_asteroid
+	orbit_center = sila
+}

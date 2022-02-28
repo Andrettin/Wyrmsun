@@ -1,0 +1,6 @@
+arrokoth = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=486958
+	name = "Arrokoth"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 44.5813998 #semi-major axis
+}

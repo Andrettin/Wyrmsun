@@ -1,0 +1,6 @@
+logos = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=58534
+	name = "Logos"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 45.0701848 #semi-major axis
+}

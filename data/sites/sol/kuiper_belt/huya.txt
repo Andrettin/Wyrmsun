@@ -1,0 +1,6 @@
+huya = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=38628
+	name = "Huya"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 39.6155270 #semi-major axis
+}

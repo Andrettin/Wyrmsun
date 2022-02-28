@@ -1,0 +1,6 @@
+altjira = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=148780
+	name = "Altjira"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 44.0672550 #semi-major axis
+}

@@ -1,0 +1,6 @@
+borasisi = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=66652
+	name = "Borasisi"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 44.0927848 #semi-major axis
+}

@@ -1,0 +1,6 @@
+chaos = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=19521
+	name = "Chaos"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 45.6678201 #semi-major axis
+}
