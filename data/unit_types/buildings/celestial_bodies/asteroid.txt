@@ -15,6 +15,7 @@ unit_template_asteroid = {
 	starting_resources = 1000
 	num_directions = 1
 	building = false
+	asteroid = true
 	visible_under_fog = true
 	can_harvest = true
 	harvest_from_outside = true
