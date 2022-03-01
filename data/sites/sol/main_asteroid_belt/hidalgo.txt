@@ -1,0 +1,6 @@
+hidalgo = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=944
+	name = "Hidalgo"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 5.7307466 #semi-major axis
+}

@@ -1,0 +1,6 @@
+elatus = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=31824
+	name = "Elatus"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 11.7778925 #semi-major axis
+}

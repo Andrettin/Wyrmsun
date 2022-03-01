@@ -1,0 +1,6 @@
+pelion = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=49036
+	name = "Pelion"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 19.9627526 #semi-major axis
+}

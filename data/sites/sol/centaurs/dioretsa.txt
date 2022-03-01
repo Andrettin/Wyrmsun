@@ -1,0 +1,6 @@
+dioretsa = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=20461
+	name = "Dioretsa"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 23.9044674 #semi-major axis
+}

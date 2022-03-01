@@ -1,0 +1,6 @@
+damocles = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=5335
+	name = "Damocles"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 11.8305615 #semi-major axis
+}

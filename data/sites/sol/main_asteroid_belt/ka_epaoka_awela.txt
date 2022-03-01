@@ -1,0 +1,6 @@
+ka_epaoka_awela = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=514107
+	name = "Ka'epaoka'awela"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 5.1394275 #semi-major axis
+}
