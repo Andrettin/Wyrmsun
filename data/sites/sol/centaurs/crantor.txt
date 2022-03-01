@@ -1,0 +1,6 @@
+crantor = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=83982
+	name = "Crantor"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 19.5135840 #semi-major axis
+}

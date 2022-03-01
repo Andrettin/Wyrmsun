@@ -1,0 +1,6 @@
+clete = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=385695
+	name = "Clete"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 30.1125861 #semi-major axis
+}

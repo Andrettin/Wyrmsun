@@ -1,0 +1,6 @@
+otrera = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=385571
+	name = "Otrera"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 30.1848570 #semi-major axis
+}

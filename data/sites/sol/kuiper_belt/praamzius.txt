@@ -1,0 +1,6 @@
+praamzius = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=420356
+	name = "Praamzius"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 42.4621453 #semi-major axis
+}

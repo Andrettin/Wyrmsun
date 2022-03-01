@@ -1,0 +1,6 @@
+amazone = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=1042
+	name = "Amazone"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 3.2362372 #semi-major axis
+}
