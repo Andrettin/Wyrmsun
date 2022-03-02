@@ -10,8 +10,8 @@ unit_template_barren_world = {
 	box_size = { 96 96 }
 	neutral_minimap_color = { 128 128 0 }
 	starting_resources = 50000
-	can_harvest = true
-	max_harvesters = 5
+	#can_harvest = true
+	#max_harvesters = 5
 }
 
 unit_barren_world = {
