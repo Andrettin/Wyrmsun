@@ -117,3 +117,13 @@ aether_transport_ship = {
 		}
 	}
 }
+
+aether_workship = {
+	code = tinker
+	
+	effects = {
+		create_unit = {
+			unit_class = aether_workship
+		}
+	}
+}
