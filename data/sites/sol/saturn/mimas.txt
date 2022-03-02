@@ -1,0 +1,5 @@
+mimas = {
+	name = "Mimas"
+	base_unit_type = unit_asteroid
+	orbit_center = saturn
+}
