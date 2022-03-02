@@ -1,0 +1,6 @@
+greifswald_asteroid = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=10114
+	name = "Greifswald"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 2.8832058 #semi-major axis
+}

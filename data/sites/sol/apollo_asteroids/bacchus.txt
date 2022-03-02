@@ -1,0 +1,6 @@
+bacchus = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=2063
+	name = "Bacchus"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 1.0781002 #semi-major axis
+}

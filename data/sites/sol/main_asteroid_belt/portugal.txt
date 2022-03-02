@@ -1,0 +1,6 @@
+portugal = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=3933
+	name = "Portugal"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 3.2485878 #semi-major axis
+}

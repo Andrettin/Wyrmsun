@@ -1,0 +1,6 @@
+hypnos = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=14827
+	name = "Hypnos"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 2.8404730 #semi-major axis
+}

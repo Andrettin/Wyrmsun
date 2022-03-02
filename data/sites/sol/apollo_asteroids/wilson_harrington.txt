@@ -1,0 +1,6 @@
+wilson_harrington = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=4015
+	name = "Wilson-Harrington"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 2.6255575 #semi-major axis
+}

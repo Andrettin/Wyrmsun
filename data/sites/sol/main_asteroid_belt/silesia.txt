@@ -1,0 +1,6 @@
+silesia = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=257
+	name = "Silesia"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 3.1184252 #semi-major axis
+}

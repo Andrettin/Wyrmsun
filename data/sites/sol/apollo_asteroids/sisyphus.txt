@@ -1,0 +1,6 @@
+sisyphus = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=1866
+	name = "Sisyphus"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 1.8933538 #semi-major axis
+}
