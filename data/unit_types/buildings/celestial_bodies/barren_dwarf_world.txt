@@ -10,8 +10,9 @@ unit_template_barren_dwarf_world = {
 	box_size = { 64 64 }
 	neutral_minimap_color = { 128 128 0 }
 	starting_resources = 10000
-	can_harvest = true
-	max_harvesters = 3
+	inexhaustible = true
+	#can_harvest = true
+	#max_harvesters = 3
 }
 
 unit_barren_dwarf_world = {
