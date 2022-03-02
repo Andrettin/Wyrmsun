@@ -1,0 +1,6 @@
+amor = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=1221
+	name = "Amor"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 1.9187312 #semi-major axis
+}

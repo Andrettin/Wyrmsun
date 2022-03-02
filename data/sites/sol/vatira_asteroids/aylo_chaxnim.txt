@@ -1,0 +1,6 @@
+aylo_chaxnim = { #Source: https://minorplanetcenter.net/db_search/show_object?object_id=594913
+	name = "Aylo'chaxnim" #"ꞌAylóꞌchaxnim"
+	base_unit_type = unit_asteroid
+	orbit_center = sol
+	distance_from_orbit_center_au = 0.5554385 #semi-major axis
+}
