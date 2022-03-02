@@ -1,0 +1,74 @@
+unit_aether_workship = {
+	name = "Aether Workship"
+	parent = unit_template_space_ship
+	unit_class = aether_workship
+	civilization = neutral
+	image_file = "units/aether_workship.png"
+	frame_size = { 108 108 }
+	animation_set = workship
+	icon = aether_workship
+	costs = {
+		time = 50
+		copper = 400
+		lumber = 600
+	}
+	speed = 11
+	hit_points = 90
+	tile_size = { 2 2 }
+	box_size = { 64 64 }
+	sight_range = 4
+	armor = 5
+	missile = missile_none
+	evasion = 5
+	priority = 50
+	annoy_computer_factor = 10
+	points = 40
+	demand = 2
+	right_mouse_action = harvest
+	can_dock = true
+	button_key = w
+	requirements_string = "Lumber Mill"
+	affixes = {
+		upgrade_item_prefix_frail
+		upgrade_item_prefix_impregnable
+		upgrade_item_prefix_sturdy
+		upgrade_item_prefix_vulnerable
+		upgrade_item_suffix_of_frailty
+		upgrade_item_suffix_of_slowness
+		upgrade_item_suffix_of_speed
+		upgrade_item_suffix_of_swiftness
+		upgrade_item_suffix_of_vulnerability
+	}
+	resource_gathering = {
+		gold = {
+			resource_capacity = 200
+			resource_step = 4
+			wait_at_resource = 12
+			wait_at_depot = 150
+		}
+		silver = {
+			resource_capacity = 200
+			resource_step = 4
+			wait_at_resource = 12
+			wait_at_depot = 150
+		}
+		copper = {
+			resource_capacity = 200
+			resource_step = 4
+			wait_at_resource = 12
+			wait_at_depot = 150
+		}
+		iron = {
+			resource_capacity = 200
+			resource_step = 4
+			wait_at_resource = 12
+			wait_at_depot = 150
+		}
+		mithril = {
+			resource_capacity = 200
+			resource_step = 4
+			wait_at_resource = 12
+			wait_at_depot = 150
+		}
+	}
+}

@@ -1,3 +1,7 @@
 aether_transport_ship = {
 	file = "icons/units/aether_transport.png"
 }
+
+aether_workship = {
+	file = "icons/units/aether_workship.png"
+}

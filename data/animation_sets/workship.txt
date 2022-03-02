@@ -1,0 +1,35 @@
+workship = {
+	still = {
+		frame = 0
+		wait = 4
+		frame = 0
+		wait = 1
+	}
+	
+	move = animations_transport_ship_move
+	
+	harvest_copper = {
+		frame = 0
+		wait = 29
+		frame = 0
+		wait = 1
+	}
+	
+	harvest_silver = workship_harvest_copper
+	harvest_gold = workship_harvest_copper
+	harvest_iron = workship_harvest_copper
+	harvest_mithril = workship_harvest_copper
+	harvest_lumber = workship_harvest_copper
+	harvest_stone = workship_harvest_copper
+	
+	death = {
+		unbreakable = begin
+		frame = 5
+		wait = 50
+		frame = 10
+		wait = 50
+		frame = 10
+		unbreakable = end
+		wait = 1
+	}
+}
