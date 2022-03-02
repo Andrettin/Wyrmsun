@@ -1,0 +1,32 @@
+leeuwarden = {
+	name = "Leeuwarden"
+	map_template = earth
+	geocoordinate = { 5.78335729841 53.25037884430 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		netherlands
+	}
+	
+	history = {
+		-264 = {
+			owner = friesland #Leeuwarden's area was territory of the Frisians in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		486 = {
+			owner = friesland #Leeuwarden's area was territory of the Frisians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		1560 = {
+			owner = spain #Leeuwarden's area was a Spanish possession about 1560; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
+		}
+		
+		1648 = {
+			owner = netherlands #Leeuwarden's area was a Dutch possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+			#Leeuwarden's area ceased to be a part of the Holy Roman Empire in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		}
+		
+		1815 = {
+			owner = netherlands #Leeuwarden's area was part of the Kingdom of the Netherlands in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

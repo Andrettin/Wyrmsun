@@ -1,0 +1,9 @@
+charleroi = {
+	name = "Charleroi"
+	map_template = earth
+	geocoordinate = { 4.45000199242 50.42039654450 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		belgium
+	}
+}

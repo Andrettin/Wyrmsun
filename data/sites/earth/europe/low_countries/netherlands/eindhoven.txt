@@ -1,0 +1,9 @@
+eindhoven = {
+	name = "Eindhoven"
+	map_template = earth
+	geocoordinate = { 5.50001542016 51.42997316400 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		netherlands
+	}
+}

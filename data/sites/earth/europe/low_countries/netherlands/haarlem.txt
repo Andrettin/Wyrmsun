@@ -1,0 +1,9 @@
+haarlem = {
+	name = "Haarlem"
+	map_template = earth
+	geocoordinate = { 4.62999100609 52.38043194490 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		netherlands
+	}
+}

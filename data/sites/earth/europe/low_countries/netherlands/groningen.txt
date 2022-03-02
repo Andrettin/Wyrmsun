@@ -1,0 +1,9 @@
+groningen = {
+	name = "Groningen"
+	map_template = earth
+	geocoordinate = { 6.58000117862 53.22040651360 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		netherlands
+	}
+}

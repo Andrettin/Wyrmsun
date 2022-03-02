@@ -1,0 +1,9 @@
+hertogenbosch = {
+	name = "Hertogenbosch"
+	map_template = earth
+	geocoordinate = { 5.31666048481 51.68333714270 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		netherlands
+	}
+}

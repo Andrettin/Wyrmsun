@@ -1,0 +1,9 @@
+utrecht = {
+	name = "Utrecht"
+	map_template = earth
+	geocoordinate = { 5.12003861351 52.10034568190 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		netherlands
+	}
+}

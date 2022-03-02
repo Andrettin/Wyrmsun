@@ -1,0 +1,9 @@
+assen = {
+	name = "Assen"
+	map_template = earth
+	geocoordinate = { 6.55000258464 53.00000109240 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		netherlands
+	}
+}
