@@ -2,4 +2,5 @@ mimas = {
 	name = "Mimas"
 	base_unit_type = unit_asteroid
 	orbit_center = saturn
+	distance_from_orbit_center = 0.185539 #millions of kilometers; semi-major axis
 }

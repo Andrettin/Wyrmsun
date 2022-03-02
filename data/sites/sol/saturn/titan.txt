@@ -2,4 +2,5 @@ titan = {
 	name = "Titan"
 	base_unit_type = unit_barren_moon
 	orbit_center = saturn
+	distance_from_orbit_center = 1.221870 #millions of kilometers; semi-major axis
 }
