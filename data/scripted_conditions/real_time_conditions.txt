@@ -4,11 +4,15 @@ is_christmas_season = {
 }
 
 is_easter_season = {
-	#either March, or the first week of April
+	#around the time from shortly before the Western date for Easter, to shortly after the Eastern date for it
 	or = {
-		real_month = march
 		and = {
-			real_month = april
+			real_month = march
+			real_day = 21
+		}
+		real_month = april
+		and = {
+			real_month = may
 			not = {
 				real_day = 8
 			}
