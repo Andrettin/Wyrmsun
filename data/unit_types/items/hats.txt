@@ -11,16 +11,18 @@ unit_christmas_hat = {
 	}
 	conditions = {
 		or = {
-			season = winter
+			and = {
+				season = winter
+				or = {
+					upgrade = upgrade_deity_christian_god
+					upgrade = upgrade_deity_odin
+					upgrade = upgrade_deity_thor
+					upgrade = upgrade_deity_loki
+					upgrade = upgrade_deity_frey
+					upgrade = upgrade_deity_gathaarl
+				}
+			}
 			scripted_condition = is_christmas_season
-		}
-		or = {
-			upgrade = upgrade_deity_christian_god
-			upgrade = upgrade_deity_odin
-			upgrade = upgrade_deity_thor
-			upgrade = upgrade_deity_loki
-			upgrade = upgrade_deity_frey
-			upgrade = upgrade_deity_gathaarl
 		}
 	}
 }

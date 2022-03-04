@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 * Difficulties
 - Fixed issue with the AI resource gathering bonus under Hard difficulty which actually made it earn less resources than under Normal difficulty.
 
+* Items
+- Added Easter Egg item (consumable, heals 5 HP). This item only drops in the game when it is Easter season in the real world.
+
 * Map Editor
 - Fixed issue which caused the F10 editor menu to no longer work after exiting and re-entering the map editor.
 

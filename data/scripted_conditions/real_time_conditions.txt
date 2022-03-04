@@ -3,6 +3,19 @@ is_christmas_season = {
 	real_day = 16
 }
 
+is_easter_season = {
+	#either March, or the first week of April
+	or = {
+		real_month = march
+		and = {
+			real_month = april
+			not = {
+				real_day = 8
+			}
+		}
+	}
+}
+
 is_international_workers_day = {
 	real_month = may
 	real_day = 1

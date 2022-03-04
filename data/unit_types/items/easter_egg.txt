@@ -1,0 +1,20 @@
+unit_easter_egg = {
+	name = "Easter Egg"
+	parent = unit_template_item
+	icon = easter_egg
+	item_class = food
+	image_file = "items/easter_egg.png"
+	frame_size = { 16 16 }
+	hit_point_healing = 5
+	costs = {
+		time = 50
+		copper = 25
+	}
+	sounds = {
+		used = eat
+	}
+	conditions = {
+		unit_class = farm
+		scripted_condition = is_easter_season
+	}
+}

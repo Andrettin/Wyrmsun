@@ -1,0 +1,3 @@
+easter_egg = {
+	file = "icons/items/easter_egg.png"
+}
