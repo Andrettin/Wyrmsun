@@ -1,0 +1,12 @@
+pilsen = {
+	name = "Pilsen"
+	map_template = earth
+	geocoordinate = { 13.36000077180 49.74043804840 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		slavic = "Plzen"
+	}
+	regions = {
+		bohemia
+	}
+}

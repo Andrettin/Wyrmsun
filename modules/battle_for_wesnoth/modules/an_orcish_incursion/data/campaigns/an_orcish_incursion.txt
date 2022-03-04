@@ -5,7 +5,7 @@ an_orcish_incursion = {
 	faction = wesmere
 	start_date = 8
 	start_date_calendar = years_wesnoth
-	map_templates = { universe }
+	map_templates = { alfheim }
 	required_map_templates = {
 		northern_marches_of_wesmere
 		valley_of_trolls

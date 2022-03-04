@@ -25,27 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("brunn", {
-	Name = "Brno",
-	MapTemplate = "old_earth",
-	Position = {4206, 936},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"slav", "Brno",
-		"teuton", "Brunn" -- "Brünn"
-	},
-	HistoricalOwners = {
-		1477, "hungary", -- Brünn was a Hungarian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1490, "bohemia", -- Brünn was reunited with Bohemia in 1490; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1526, "austria", -- Brünn became an Austrian Habsburg possession in 1526; Source: William R. Shepherd, "Historical Atlas", 1926, pp. 118-119.
-		1815, "austria" -- Brünn was a part of the Austrian province of Moravia in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
-	},
-	HistoricalBuildings = {
-		1815, 0, "town_hall"
-	},
-	Regions = {"cisleithania", "czechoslovakia"}
-})
-
 DefineSite("doubravnik", {
 	Name = "Doubravnik",
 	MapTemplate = "old_earth",
