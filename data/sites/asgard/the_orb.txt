@@ -1,0 +1,5 @@
+the_orb = {
+	name = "The Orb" #Aesir name for the sun in the Lay of Alvis, here used as the sun of Asgard
+	#map_template = universe
+	base_unit_type = unit_yellow_star
+}

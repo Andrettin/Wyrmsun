@@ -1,0 +1,5 @@
+flame = { #Aesir name for the moon in the Lay of Alvis, here used as the moon of Asgard
+	name = "Flame"
+	base_unit_type = unit_barren_moon
+	orbit_center = asgard
+}

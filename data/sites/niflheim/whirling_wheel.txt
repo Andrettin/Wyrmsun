@@ -1,0 +1,5 @@
+whirling_wheel = { #name in Hel for the moon in the Lay of Alvis, here used as the moon of Niflheim
+	name = "Whirling Wheel"
+	base_unit_type = unit_barren_moon
+	orbit_center = niflheim
+}
