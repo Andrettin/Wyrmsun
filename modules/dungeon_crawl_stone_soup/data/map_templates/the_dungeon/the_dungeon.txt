@@ -47,5 +47,8 @@ the_dungeon = {
 			unit_trap
 			unit_caltrops
 		}
+		heroes = {
+			robin_of_the_strong_arm
+		}
 	}
 }

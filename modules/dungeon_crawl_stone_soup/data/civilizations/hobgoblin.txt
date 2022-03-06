@@ -1,5 +1,5 @@
 hobgoblin += {
 	personal_names = {
-		"Robin" #Robin of the Strong Arm (unique goblin of indeterminate gender)
+		"Robin" #Robin of the Strong Arm (unique hobgoblin of indeterminate gender)
 	}
 }

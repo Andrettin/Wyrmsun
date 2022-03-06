@@ -9,6 +9,16 @@ mountain_high = {
 	}
 }
 
+of_the_strong_arm = {
+	name = "of the Strong Arm"
+	conditions = {
+		or = {
+			trait = upgrade_strong
+			trait = upgrade_mighty
+		}
+	}
+}
+
 the_blessed = {
 	name = "the Blessed"
 	conditions = {

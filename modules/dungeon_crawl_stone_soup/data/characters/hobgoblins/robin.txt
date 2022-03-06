@@ -1,0 +1,13 @@
+robin_of_the_strong_arm = { #Robin of the Strong Arm
+	name = "Robin"
+	epithet = of_the_strong_arm
+	unit_type = unit_hobgoblin_warrior
+	civilization = hobgoblin
+	gender = male #not given
+	base_level = 2 #2 HD
+	trait = upgrade_strong
+	description = "A mountain hobgoblin, recently come in search of the legendary Orb. Not foolhardy or reckless enough to delve into the depths of the Dungeon alone, Robin has built a small army of minions. Potential competitors will quickly find a stream of screaming goblins flying toward them!"
+	base_abilities = {
+		upgrade_toughness
+	}
+}
