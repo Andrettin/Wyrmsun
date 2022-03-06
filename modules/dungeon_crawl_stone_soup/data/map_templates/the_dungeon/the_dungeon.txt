@@ -1,0 +1,51 @@
+the_dungeon = {
+	name = "The Dungeon"
+	size = { 128 128 }
+	dungeon_generation = {
+		floor_terrain = cave_floor
+		wall_terrain = goblin_wall
+		deep_wall_terrain = cave_wall
+		water_terrain = gray_shallow_water
+		glyph = unit_glyph
+		units = {
+			#weight = [number of levels the monster is present on in DCSS] * [the monster's rarity]
+			
+			unit_bat = 3000
+			unit_rat = 3000
+			
+			#goblin (weight: 4000)
+			unit_goblin_swordsman = 1334
+			unit_goblin_spearman = 1333
+			unit_goblin_archer = 1333
+			
+			unit_kobold_footpad = 4000 #kobold
+			unit_hobgoblin_warrior = 4000 #hobgoblin
+			unit_wolf = 600 #jackal
+			unit_wolf = 400 #jackal
+			unit_gnoll_warrior = 1600 #gnoll
+			
+			#orc (weight: 6000)
+			unit_orc_spearthrower = 6000
+			
+			unit_wolf = 4000 #hound
+			unit_skeleton_warrior = 4000 #skeleton
+			unit_slime = 2500 #jelly
+			unit_skeleton_warrior = 1750 #necrophage
+			unit_black_bear = 1750
+			
+			unit_kobold_slasher = 3000 #kobold brigand
+			unit_troll_warrior = 4800 #troll
+		}
+		items = {
+			unit_potion_of_healing = 100
+			unit_potion_of_mana
+			unit_carrots
+			unit_cheese
+			unit_meat
+		}
+		traps = {
+			unit_trap
+			unit_caltrops
+		}
+	}
+}
