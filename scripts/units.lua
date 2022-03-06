@@ -1208,24 +1208,24 @@ DefineUnitType("unit-flowers", {
 			"file", "neutral/decorations/flowers_swamp_1.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/flowers_swamp_2.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/flowers_swamp_3.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		}
 	},
 	Sounds = {}
@@ -1281,96 +1281,96 @@ DefineUnitType("unit-large-flower", {
 			"file", "neutral/decorations/large_flower_swamp_1.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_2.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_3.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_4.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_5.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_6.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_7.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_8.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_9.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_10.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_11.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/large_flower_swamp_12.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		}
 	},
 	Sounds = {}
@@ -1407,32 +1407,32 @@ DefineUnitType("unit-fern", { Name = "Fern",
 			"file", "neutral/decorations/fern_swamp_1.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/fern_swamp_2.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/fern_swamp_3.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		},
 		{
 			"variation-id", "swamp",
 			"file", "neutral/decorations/fern_swamp_4.png",
 			"terrain", "dry-mud",
 			"terrain", "mud",
-			"terrain", "cave-floor",
-			"terrain", "rockbound-cave-floor"
+			"terrain", "cave_floor",
+			"terrain", "rockbound_cave_floor"
 		}
 	},
 	Sounds = {}

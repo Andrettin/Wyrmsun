@@ -28,7 +28,7 @@
 DefineTerrainType("chasm", {
 	Name = "Chasm",
 	Color = {32, 32, 0},
-	BaseTerrainTypes = {"dirt", "dry_dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "snow", "grass", "semi_dry_grass", "dry_grass", "ice", "ford"},
+	BaseTerrainTypes = {"dirt", "dry_dirt", "mud", "dry-mud", "rockbound_cave_floor", "cave_floor", "snow", "grass", "semi_dry_grass", "dry_grass", "ice", "ford"},
 	Overlay = true,
 	Flags = {"unpassable"},
 	AllowSingle = true,
@@ -112,7 +112,7 @@ DefineTerrainType("floor", {
 	Character = "f",
 	Buildable = true,
 	Flags = {"land", "stone_floor", "underground"},
-	OuterBorderTerrains = {"rockbound-cave-floor", "cave-floor"},
+	OuterBorderTerrains = {"rockbound_cave_floor", "cave_floor"},
 	Graphics = "terrain/floor.png",
 	SolidTiles = {17, 20, 23, 26},
 	AdjacentTransitionTiles = {
@@ -217,7 +217,7 @@ DefineTerrainType("gold-pile", {
 DefineTerrainType("dungeon-wall", {
 	Name = "Dungeon Wall",
 	Buildable = true,
-	BaseTerrainTypes = {"floor", "cave-floor"},
+	BaseTerrainTypes = {"floor", "cave_floor"},
 	Overlay = true,
 	Flags = {"land", "wall", "unpassable", "air-unpassable"},
 	AllowSingle = true,
@@ -415,7 +415,7 @@ DefineTerrainType("dungeon-wall", {
 DefineTerrainType("limestone-rock", {
 	Name = "Limestone Rock",
 	Color = {128, 160, 128},
-	BaseTerrainTypes = {"dirt", "dry_dirt", "mud", "dry-mud", "rockbound-cave-floor", "cave-floor", "desert-sand"},
+	BaseTerrainTypes = {"dirt", "dry_dirt", "mud", "dry-mud", "rockbound_cave_floor", "cave_floor", "desert-sand"},
 	Overlay = true,
 	Flags = {"land", "rock", "unpassable"},
 	Graphics = "terrain/limestone_rock.png",

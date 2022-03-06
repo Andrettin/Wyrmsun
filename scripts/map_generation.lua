@@ -1691,17 +1691,17 @@ function CreateDecorations()
 						unit = CreateUnit("unit-mushroom-patch", PlayerNumNeutral, {RandomX, RandomY})
 						Count = Count - 1
 					elseif (RandomNumber >= 200 and RandomNumber < 300) then
-						if (GetTileTerrainName(RandomX, RandomY) ~= "cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound-cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
+						if (GetTileTerrainName(RandomX, RandomY) ~= "cave_floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound_cave_floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
 							unit = CreateUnit("unit-flowers", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					elseif (RandomNumber >= 300 and RandomNumber < 400) then
-						if (GetTileTerrainName(RandomX, RandomY) ~= "cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound-cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
+						if (GetTileTerrainName(RandomX, RandomY) ~= "cave_floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound_cave_floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
 							unit = CreateUnit("unit-large-flower", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					elseif (RandomNumber >= 400 and RandomNumber < 600) then
-						if ((GetTileTerrainName(RandomX, RandomY) == "cave-floor" or GetTileTerrainName(RandomX, RandomY) == "rockbound-cave-floor") and SyncRand(2) == 0) then
+						if ((GetTileTerrainName(RandomX, RandomY) == "cave_floor" or GetTileTerrainName(RandomX, RandomY) == "rockbound_cave_floor") and SyncRand(2) == 0) then
 							unit = CreateUnit("unit-stalagmites", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						else
@@ -1709,7 +1709,7 @@ function CreateDecorations()
 							Count = Count - 1
 						end
 					elseif (RandomNumber >= 600 and RandomNumber < 800) then
-						if (GetTileTerrainName(RandomX, RandomY) ~= "cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound-cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
+						if (GetTileTerrainName(RandomX, RandomY) ~= "cave_floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound_cave_floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
 							unit = CreateUnit("unit-twigs", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						elseif (GetTileTerrainName(RandomX, RandomY) == "floor") then
@@ -1717,12 +1717,12 @@ function CreateDecorations()
 							Count = Count - 1
 						end
 					elseif (RandomNumber >= 800 and RandomNumber < 875) then
-						if (GetTileTerrainName(RandomX, RandomY) ~= "cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound-cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
+						if (GetTileTerrainName(RandomX, RandomY) ~= "cave_floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound_cave_floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
 							unit = CreateUnit("unit-fern", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						end
 					elseif (RandomNumber >= 875 and RandomNumber < 900) then
-						if (GetTileTerrainName(RandomX, RandomY) ~= "cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound-cave-floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
+						if (GetTileTerrainName(RandomX, RandomY) ~= "cave_floor" and GetTileTerrainName(RandomX, RandomY) ~= "rockbound_cave_floor" and GetTileTerrainName(RandomX, RandomY) ~= "floor" and GetTileTerrainName(RandomX, RandomY) ~= "rug" and GetTileTerrainName(RandomX, RandomY) ~= "gold-pile") then
 							unit = CreateUnit("unit-log", PlayerNumNeutral, {RandomX, RandomY})
 							Count = Count - 1
 						end
@@ -6075,7 +6075,7 @@ end
 
 function GetTerrainCivilizations(terrain)
 	local terrain_civilizations = {}
-	if (terrain == "dry_mud" or terrain == "cave-floor") then
+	if (terrain == "dry_mud" or terrain == "cave_floor") then
 		table.insert(terrain_civilizations, "dwarf")
 		table.insert(terrain_civilizations, "gnome")
 		table.insert(terrain_civilizations, "goblin")

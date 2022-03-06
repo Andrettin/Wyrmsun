@@ -47,11 +47,11 @@ DefineTileset("name", "Cave",
 			{ 400, 401, 402, 400 }},						-- 010
 		"solid", { "unused",
 			{}},								-- 020
-		"solid", { "rockbound-cave-floor", "land", "no-building", "gravel",
+		"solid", { "rockbound_cave_floor", "land", "no-building", "gravel",
 			{ 432, 433, 434, 432}},						-- 030
 		"solid", { "unused",
 			{}},								-- 040
-		"solid", { "cave-floor", "land", "stone_floor",
+		"solid", { "cave_floor", "land", "stone_floor",
 			{ 464, 465, 466, 464}},						-- 050
 		"solid", { "unused",
 			{}},								-- 060
@@ -90,7 +90,7 @@ DefineTileset("name", "Cave",
 			{ 229, 230},							-- 1D0
 			{},									-- 1E0
 			{}},								-- 1F0
-		"mixed", { "gray-shallow-water", "rockbound-cave-floor", "coast",
+		"mixed", { "gray-shallow-water", "rockbound_cave_floor", "coast",
 			{ 240, 241, 240},							-- 200
 			{ 242, 243, 242},							-- 210
 			{ 244, 245, 246},							-- 220
@@ -107,7 +107,7 @@ DefineTileset("name", "Cave",
 			{ 268, 269, 268},							-- 2D0
 			{},									-- 2E0
 			{}},								-- 2F0
-		"mixed", { "dark-rockbound-cave-floor", "rockbound-cave-floor", "land", "no-building", "gravel",
+		"mixed", { "dark_rockbound_cave_floor", "rockbound_cave_floor", "land", "no-building", "gravel",
 			{ 177, 177, 177},							-- 300
 			{ 178, 178, 178},							-- 310
 			{ 179, 180, 181},							-- 320
@@ -124,7 +124,7 @@ DefineTileset("name", "Cave",
 			{ 200, 200, 200},							-- 3D0
 			{},									-- 3E0
 			{}},								-- 3F0
-		"mixed", { "cave-wall", "rockbound-cave-floor", "land", "rock", "unpassable", "air-unpassable",
+		"mixed", { "cave-wall", "rockbound_cave_floor", "land", "rock", "unpassable", "air-unpassable",
 			{ 35, 38, 35},							-- 400
 			{ 33, 36, 33},							-- 410
 			{ 34, 37, 40},							-- 420
@@ -141,7 +141,7 @@ DefineTileset("name", "Cave",
 			{ 10, 10, 10},							-- 4D0
 			{},										-- 4E0
 			{}},									-- 4F0
-		"mixed", { "rockbound-cave-floor", "cave-floor", "land", "no-building", "gravel",
+		"mixed", { "rockbound_cave_floor", "cave_floor", "land", "no-building", "gravel",
 			{ 272, 273, 272},							-- 500
 			{ 274, 275, 274},							-- 510
 			{ 276, 277, 278},							-- 520
