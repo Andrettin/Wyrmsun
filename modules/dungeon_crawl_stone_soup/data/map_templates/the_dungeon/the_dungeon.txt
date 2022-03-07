@@ -37,7 +37,7 @@ the_dungeon = {
 			unit_troll_warrior = 4800 #troll
 		}
 		items = {
-			unit_potion_of_healing = 100
+			unit_potion_of_healing = 10
 			unit_potion_of_mana
 			unit_carrots
 			unit_cheese
