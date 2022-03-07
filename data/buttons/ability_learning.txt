@@ -129,7 +129,7 @@ learn_critical_strike = {
 	key = c
 	hint = "Learn ~!Critical Strike"
 	popup = popup_learn_ability
-	description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead."
+	description = "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat."
 	unit_classes = {
 		expert_miner
 		grandmaster_smith
@@ -173,7 +173,7 @@ learn_deadly_precision = {
 	key = d
 	hint = "Learn ~!Deadly Precision"
 	popup = popup_learn_ability
-	description = "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead."
+	description = "Deadly Precision is a passive ability that increases critical strike chance by 10%."
 	unit_classes = {
 		grandmaster_smith
 		heroic_infantry
