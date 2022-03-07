@@ -1,6 +1,6 @@
 the_dungeon = {
 	name = "The Dungeon"
-	size = { 128 128 }
+	size = { 64 64 }
 	dungeon_generation = {
 		floor_terrain = cave_floor
 		wall_terrain = goblin_wall
