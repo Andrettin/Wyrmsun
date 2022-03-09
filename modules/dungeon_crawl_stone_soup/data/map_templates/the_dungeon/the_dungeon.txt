@@ -9,32 +9,33 @@ the_dungeon = {
 		glyph = unit_glyph
 		units = {
 			#weight = [number of levels the monster is present on in DCSS] * [the monster's rarity]
+			#only use monsters up to (and excluding) the level of the next lowest-level branch (Orcish Mines/Lair: level 10), i.e. only use monsters available for dungeon levels 1-9
 			
-			unit_bat = 3000
-			unit_rat = 3000
+			unit_bat = 3000 #levels 1-3, rarity 1000
+			unit_rat = 3000 #levels 1-3, rarity 1000
 			
-			#goblin (weight: 4000)
+			#goblin (levels 1-4, rarity 1000 -> weight: 4000)
 			unit_goblin_swordsman = 1334
 			unit_goblin_spearman = 1333
 			unit_goblin_archer = 1333
 			
-			unit_kobold_footpad = 4000 #kobold
-			unit_hobgoblin_warrior = 4000 #hobgoblin
-			unit_wolf = 600 #jackal
-			unit_wolf = 400 #jackal
-			unit_gnoll_warrior = 1600 #gnoll
+			unit_kobold_footpad = 4000 #kobold; levels 1-4, rarity 1000
+			unit_hobgoblin_warrior = 4000 #hobgoblin; levels 1-4, rarity 1000
+			unit_wolf = 600 #jackal; levels 1-3, rarity 200
+			unit_wolf = 400 #jackal; levels 4-5, rarity 200
+			unit_gnoll_warrior = 1600 #gnoll; levels 1-8, rarity 200
 			
-			#orc (weight: 6000)
+			#orc (levels 3-8, rarity 1000 -> weight: 6000)
 			unit_orc_spearthrower = 6000
 			
-			unit_wolf = 4000 #hound
-			unit_skeleton_warrior = 4000 #skeleton
-			unit_slime = 2500 #jelly
-			unit_skeleton_warrior = 1750 #necrophage
-			unit_black_bear = 1750
+			unit_wolf = 4000 #hound; levels 4-7, rarity 1000
+			unit_skeleton_warrior = 4000 #skeleton; levels 4-7, rarity 1000
+			unit_slime = 2500 #jelly; levels 4-8, rarity 500
+			unit_skeleton_warrior = 1750 #necrophage; levels 4-8, rarity 350
+			unit_black_bear = 1750 #levels 4-8, rarity 350
 			
-			unit_kobold_slasher = 3000 #kobold brigand
-			unit_troll_warrior = 4800 #troll
+			unit_kobold_slasher = 2000 #kobold brigand; levels 6-11, rarity 500
+			unit_troll_warrior = 800 #troll; levels 9-14, rarity 800
 		}
 		items = {
 			unit_potion_of_healing = 10

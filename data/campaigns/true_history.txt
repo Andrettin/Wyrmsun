@@ -1,0 +1,11 @@
+true_history = {
+	name = "True History"
+	description = "The invention of a steam engine by Hero of Alexandria was soon followed by further discoveries which shook the Hellenistic world. A nascent industrial revolution blossomed in Greek lands, combining science with the power of cosmic, mystical forces. In short order, Greek ingenuity reached even further heights, as ships that can move through the aether were developed..."
+	faction = macedon
+	start_date = 150
+	timeline = true_history
+	map_templates = { universe }
+	#quest = true_history
+	icon = aether_transport_ship
+	hidden = true
+}

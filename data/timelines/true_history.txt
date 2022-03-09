@@ -1,0 +1,4 @@
+true_history = {
+	name = "True History"
+	point_of_divergence = 50 #approximate year when Hero of Alexandria would have invented his steam engine
+}
