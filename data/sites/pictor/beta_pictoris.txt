@@ -1,0 +1,7 @@
+beta_pictoris = { #Beta Pictoris
+	name = "Beta Pictoris"
+	map_template = universe
+	astrocoordinate = { 86.8212 -51.0665 } #from www.github.com/ofrohn/d3-celestial
+	astrodistance = 63.4
+	base_unit_type = unit_white_star #class A dwarf star
+}
