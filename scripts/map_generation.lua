@@ -1356,7 +1356,8 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 		while (Count > 0 and WhileCount < building_number * 100) do
 			local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, min_y, max_y, symmetric)
 			if (building_type == "unit-mercenary-camp" and building_player == PlayerNumNeutral) then
-				local potential_civilizations = GetTerrainCivilizations(GetTileTerrainName(building_spawn_point[1], building_spawn_point[2]))
+				local tile_terrain = GetTileTerrainName(building_spawn_point[1], building_spawn_point[2])
+				local potential_civilizations = GetTerrainCivilizations(tile_terrain)
 				local all_factions = GetFactions()
 				local potential_factions = {}
 				for i=1, table.getn(all_factions) do
@@ -1370,6 +1371,8 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 					if (building_player == -1) then
 						return;
 					end
+				else
+					return;
 				end
 			end
 			unit = CreateUnit(building_type, building_player, {building_spawn_point[1], building_spawn_point[2]})
@@ -2337,13 +2340,13 @@ function GenerateRandomMap(arg)
 		else
 			CreateGoldSpots((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 2048, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		end
-
-		CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
-		CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		
 		if (arg.MercenaryCamp) then
 			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		end
+		
+		CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
+		CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 
 		-- create oil patches
 	--	Count = 2

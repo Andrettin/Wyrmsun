@@ -79,6 +79,7 @@ https://github.com/Andrettin/Wyrmsun
 - Disabled the building site feature for the Central Park, Little Island, Looking Upwards, No Man's Land, North-South Conflict, Northern Lakes and Time for Decisions custom maps.
 - Added the "Hamlets" custom map, based on the map from Battle for Wesnoth of the same name (which is licensed under an open-source license). This map has rules which make gameplay more akin to Wesnoth: buildings are capturable, each player starts only with a barracks (no town hall or workers) and a military unit, farms are capturable and provide copper income per minute, and many neutral farms are pre-placed on the map.
 - Added the "Lorraine Plain" custom map (256x256, 2 players), based on the map from 0 A.D. of the same name (which is licensed under an open-source license).
+- Fixed a bug which could cause mercenary camps to be generated without a civilization.
 
 * Pathfinding
 - Made improvements to pathfinder performance.
