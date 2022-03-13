@@ -66,6 +66,9 @@ https://github.com/Andrettin/Wyrmsun
 * Difficulties
 - Fixed issue with the AI resource gathering bonus under Hard difficulty which actually made it earn less resources than under Normal difficulty.
 
+* Heroes
+- Fixed issue which could cause character experience to not be properly applied when loading a saved game.
+
 * Items
 - Added Easter Egg item (consumable, heals 5 HP). This item only drops in the game when it is Easter season in the real world.
 
