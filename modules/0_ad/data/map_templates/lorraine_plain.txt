@@ -4,4 +4,63 @@ lorraine_plain = {
 	terrain_file = "lorraine_plain.pmp"
 	default_water_terrain_type = shallow_water
 	circle = true #apply nothing outside the circle, generating based on the nearest terrain
+	units = {
+		#copper rocks for player 1
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		
+		#copper rocks for player 2
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+	}
 }
