@@ -1,0 +1,18 @@
+unit_stone_quarry = {
+	name = "Stone Quarry"
+	parent = unit_template_mine
+	unit_class = stone_quarry
+	civilization = neutral
+	description = "Stone quarries are a valuable source of stone, to be used in monuments or fortifications."
+	notes = "Stone is used for constructing defensive structures."
+	image_file = "buildings/resources/stone_quarry.png"
+	frame_size = { 96 96 }
+	icon = stone_quarry
+	costs = {
+		time = 200
+		lumber = 2050
+	}
+	given_resource = stone
+	button_key = s
+	building_rules_string = "Must be built on top of a Stone Deposit"
+}

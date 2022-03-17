@@ -1,0 +1,3 @@
+stone_quarry = {
+	name = "Stone Quarry"
+}

@@ -90,6 +90,8 @@
 /graphics/buildings/norse/great_temple_player_color.png (by Exidelo) (licensed under the CC0)
 /graphics/buildings/norse/runestone.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/norse/runestone_blank.png (by Jinn) (licensed under the CC0)
+/graphics/buildings/resources/stone_deposit.png (by Jinn) (licensed under the CC0)
+/graphics/buildings/resources/stone_quarry.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/sites/building_construction_site.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/sites/building_site.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/sites/major_building_construction_site.png (by Jinn) (licensed under the CC0)

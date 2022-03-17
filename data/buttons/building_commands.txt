@@ -52,6 +52,7 @@ salvage_building = {
 		coal_mine
 		diamond_mine
 		emerald_mine
+		stone_quarry
 		yale_hunting_lodge
 		mercenary_camp
 	}

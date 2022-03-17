@@ -1,0 +1,7 @@
+stone_deposit = {
+	file = "icons/buildings/resources/stone_deposit.png"
+}
+
+stone_quarry = {
+	file = "icons/buildings/resources/stone_quarry.png"
+}

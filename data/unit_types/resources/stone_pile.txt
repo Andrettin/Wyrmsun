@@ -50,9 +50,4 @@ unit_stone_pile = {
 	sounds = {
 		selected = click
 	}
-	0_ad_template_names = {
-		gaia/rock/mediterranean_large
-		gaia/rock/temperate_large
-		gaia/rock/temperate_large_02
-	}
 }

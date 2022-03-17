@@ -1,0 +1,15 @@
+unit_stone_deposit = {
+	name = "Stone Deposit"
+	parent = unit_template_deposit
+	description = "Stone deposits are a valuable source of stone, to be used in monuments or fortifications."
+	notes = "Stone is used for constructing defensive structures."
+	image_file = "buildings/resources/stone_deposit.png"
+	frame_size = { 96 96 }
+	icon = stone_deposit
+	given_resource = stone
+	0_ad_template_names = {
+		gaia/rock/mediterranean_large
+		gaia/rock/temperate_large
+		gaia/rock/temperate_large_02
+	}
+}

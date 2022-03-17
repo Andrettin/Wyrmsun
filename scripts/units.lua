@@ -665,6 +665,10 @@ DefineUnitType("unit-emerald-mine", {
 	ButtonKey = "e"
 } )
 
+DefineUnitType("unit_stone_quarry", {
+	BuildingRules = { "and", { "ontop", { Type = "unit_stone_deposit", ReplaceOnDie = true, ReplaceOnBuild = true } } }
+} )
+
 DefineUnitType("unit-diamond-rock", {
 	Name = "Diamond Rock",
 	Image = {"file", "neutral/buildings/diamond_rock_1.png", "size", {43, 43}},
@@ -4216,6 +4220,12 @@ DefineUnitType("unit-template-masons-shop", {
 	ButtonKey = "n",
 	ResourceDemand = {"jewelry", 1, "furniture", 3, "leather", 3},
 	Affixes = {"upgrade_prefix_frail", "upgrade-item-prefix-impregnable", "upgrade-item-prefix-industrious", "upgrade-item-prefix-sturdy", "upgrade-item-prefix-vulnerable", "upgrade-item-suffix-of-diligence", "upgrade-item-suffix-of-frailty", "upgrade-item-suffix-of-vulnerability"},
+	BuildingRules = {
+		"and", {
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_stone_deposit" },
+			"distance", { Distance = 3, DistanceType = ">", Type = "unit_stone_quarry" },
+		}
+	},
 	Sounds = {
 		"selected", "storehouse-selected",
 --		"acknowledge", "dwarven-lumber-mill-acknowledge",
