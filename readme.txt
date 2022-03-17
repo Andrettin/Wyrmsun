@@ -54,6 +54,16 @@ https://github.com/Andrettin/Wyrmsun
 ############################################################
 
 -----------------------------------------------------------------------
+- 5.3.6
+-----------------------------------------------------------------------
+
+* Buildings
+- Added Stone Deposit and Stone Quarry. These function similarly to metal deposits and mines, but provide stone instead.
+
+* Scenarios
+- Added Stone Deposit at Storugns in Gotland.
+
+-----------------------------------------------------------------------
 - 5.3.5
 -----------------------------------------------------------------------
 
