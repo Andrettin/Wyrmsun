@@ -1,29 +1,29 @@
-[unit_type]
-	ident = unit_bat
+unit_bat = {
 	name = "Bat"
 	parent = unit_template_fauna_unit
 	species = bat
 	description = "Bats are flying nocturnal creatures who locate themselves through sound."
-	animations = animations_bird
+	tile_size = { 1 1 }
+	box_size = { 32 32 }
+	image_file = "neutral/units/bat.png"
+	frame_size = { 32 32 }
+	animation_set = animations_bird
 	icon = icon_bat
+	pierce_damage = true
 	strength = 1
 	dexterity = 15
 	intelligence = 2
 	charisma = 4
-	speed = 14
 	hit_points = 5
-	tile_width = 1
-	tile_height = 1
-	box_width = 32
-	box_height = 32
-	sight_range = 4
 	basic_damage = 2
-	missile = missile_none
+	max_attack_range = 1
 	accuracy = 15
 	evasion = 15
-	max_attack_range = 1
+	sight_range = 4
+	speed = 14
 	day_sight_range_bonus = -1
 	night_sight_range_bonus = 1
+	missile = missile_none
 	priority = 37
 	points = 1
 	demand = 1
@@ -37,29 +37,24 @@
 	people_aversion = true
 	flesh = true
 	insectivore = true
-	pierce_damage = true
-	[image]
-		file = "neutral/units/bat.png"
-		width = 32
-		height = 32
-	[/image]
-	[sounds]
+	sounds = {
 		selected = bat_selected
 		acknowledge = bat_selected
 		ready = bat_selected
 		dead = rat_dead
 		hit = bite_attack
 		miss = attack_miss
-	[/sounds]
-[/unit_type]
+	}
+}
 
-[unit_type]
-	ident = unit_blood_bat
+unit_blood_bat = {
 	name = "Blood Bat"
 	parent = unit_template_fauna_unit
 	species = blood_bat
 	description = "Blood bats are so named because of their ruddy hue, which some mark as a symbol of their preferred diet. These creatures are fast and can drain the blood of those they attack." #Source: "Battle for Wesnoth"
-	animations = animations_bird
+	animation_set = animations_bird
+	image_file = "neutral/units/blood_bat.png"
+	frame_size = { 64 64 }
 	icon = icon_blood_bat
 	strength = 9 #between the bat and dread bat
 	dexterity = 18 #between the bat and dread bat
@@ -67,10 +62,8 @@
 	charisma = 5 #between the bat and dread bat
 	speed = 14
 	hit_points = 45
-	tile_width = 1
-	tile_height = 1
-	box_width = 32
-	box_height = 32
+	tile_size = { 1 1 }
+	box_size = { 32 32 }
 	sight_range = 4
 	basic_damage = 6
 	missile = missile_none
@@ -95,28 +88,24 @@
 	carnivore = true
 	insectivore = true #so that they eat snigills
 	pierce_damage = true
-	[image]
-		file = "neutral/units/blood_bat.png"
-		width = 64
-		height = 64
-	[/image]
-	[sounds]
+	sounds = {
 		selected = bat_selected
 		acknowledge = bat_selected
 		ready = bat_selected
 		dead = rat_dead
 		hit = bite_attack
 		miss = attack_miss
-	[/sounds]
-[/unit_type]
+	}
+}
 
-[unit_type]
-	ident = unit_dread_bat
+unit_dread_bat = {
 	name = "Dread Bat"
 	parent = unit_template_fauna_unit
 	species = dread_bat
 	description = "Dread bats are the most vicious, predatory, and dangerous bats to roam Nidavellir. They drain not merely the blood but the very life energy of their victims." #modified from the source to better fit Wyrmsun; Source: "Battle for Wesnoth"
-	animations = animations_bird
+	image_file = "neutral/units/dread_bat.png"
+	frame_size = { 64 64 }
+	animation_set = animations_bird
 	icon = icon_dread_bat
 	strength = 17
 	dexterity = 22
@@ -124,10 +113,8 @@
 	charisma = 6
 	speed = 14
 	hit_points = 75
-	tile_width = 1
-	tile_height = 1
-	box_width = 32
-	box_height = 32
+	tile_size = { 1 1 }
+	box_size = { 32 32 }
 	sight_range = 4
 	basic_damage = 10
 	armor = 2
@@ -153,17 +140,12 @@
 	carnivore = true
 	insectivore = true #so that they eat snigills
 	pierce_damage = true
-	[image]
-		file = "neutral/units/dread_bat.png"
-		width = 64
-		height = 64
-	[/image]
-	[sounds]
+	sounds = {
 		selected = bat_selected
 		acknowledge = bat_selected
 		ready = bat_selected
 		dead = rat_dead
 		hit = bite_attack
 		miss = attack_miss
-	[/sounds]
-[/unit_type]
+	}
+}
