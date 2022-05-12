@@ -1,0 +1,25 @@
+upgrade_horse_mount_breed = {
+	name = "Horse Mount Breed"
+	parent = upgrade_mount_breed
+	modifier = {
+		hit_points = 10
+		points = 10
+		unit_types = {
+			unit_frank_horseman
+			unit_frank_knight_lord
+			unit_gothic_horse_rider
+			unit_gothic_horse_lord
+			unit_teuton_ritter
+			unit_teuton_knight_lord
+		}
+	}
+}
+
+upgrade_lipizzaner_horse = {
+	name = "Lipizzaner Horse"
+	parent = upgrade_horse_mount_breed
+	civilization = teutonic
+	icon = lipizzaner_horse
+	description = "Lipizzaners are a famous breed of horses, bred for endurance."
+	button_key = l
+}

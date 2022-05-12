@@ -1,0 +1,3 @@
+lipizzaner_horse = {
+	file = "icons/units/fauna/horse/lipizzaner_horse.png"
+}

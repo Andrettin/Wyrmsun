@@ -1,22 +1,8 @@
-upgrade_skynborg_yale = {
-	name = "Skynborg Yale" #Beaufort Yale; "Skynborg" is a rendition of Beaufort in Old Norse, replacing the "-fort" element with "-borg", both of which have similar meanings and are used in place names; "Beau-" was replaced by "Skyn-", as the latter is a cognate of German "Schön-", which means the same as "Beau-" and is also similarly used in place names
+upgrade_mount_breed = {
+	name = "Mount Breed"
 	upgrade_class = mount_breed
-	civilization = dwarven
-	icon = icon_yale_white_fur
-	description = "Skynborg Yales are renowned for their resilience and beauty.\n\nEffect: +10 HP for Yale Riders."
-	button_key = s
 	costs = {
 		time = 200
 		copper = 1500
-	}
-	modifier = {
-		hit_points = 10
-		points = 10
-		unit_types = {
-			unit_dwarven_yale_rider
-			unit_dwarven_yale_lord
-			unit_joruvellir_yale_rider
-			unit_joruvellir_yale_lord
-		}
 	}
 }

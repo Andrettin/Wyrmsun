@@ -764,6 +764,7 @@
 /graphics/icons/units/dwarven/sailor.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/units/elven/archer.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/units/elven/worker.png (by Jinn) (licensed under the CC0)
+/graphics/icons/units/fauna/horse/lipizzaner_horse.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/fauna/black_bear.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/fauna/brown_bear.png (by Jinn) (licensed under the CC0)
 /graphics/icons/units/fauna/crow.png (by Jinn) (licensed under the CC0)

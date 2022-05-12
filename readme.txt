@@ -58,10 +58,13 @@ https://github.com/Andrettin/Wyrmsun
 -----------------------------------------------------------------------
 
 * Buildings
-- Added Stone Deposit and Stone Quarry. These function similarly to metal deposits and mines, but provide stone instead.
+- Added Stone Deposit and Stone Quarry (graphics by Jinn). These function similarly to metal deposits and mines, but provide stone instead.
 
 * Scenarios
 - Added Stone Deposit at Storugns in Gotland.
+
+* Upgrades
+- Added Lipizzaner Horse upgrade (icon by Jinn) for the Teutonic civilization (researchable at the Stables). This upgrade increases cavalry HP.
 
 -----------------------------------------------------------------------
 - 5.3.5
