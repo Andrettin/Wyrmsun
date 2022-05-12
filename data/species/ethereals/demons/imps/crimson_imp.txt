@@ -3,4 +3,8 @@ crimson_imp = {
 	supertaxon = invidia
 	homeworld = hell
 	sapient = true
+	native_terrain_types = {
+		dry_mud_hell
+		mud_hell
+	}
 }
