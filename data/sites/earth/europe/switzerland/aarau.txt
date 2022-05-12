@@ -1,0 +1,8 @@
+aarau = {
+	name = "Aarau"
+	map_template = earth
+	geocoordinate = { 8.03400361048 47.39000410020 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

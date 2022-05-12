@@ -1,0 +1,9 @@
+schwyz = {
+	name = "Schwyz"
+	map_template = earth
+	geocoordinate = { 8.64800160284 47.01999604240 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		switzerland
+	}
+}

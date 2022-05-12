@@ -1,0 +1,28 @@
+geneva = {
+	name = "Geneva"
+	map_template = earth
+	geocoordinate = { 6.14002803409 46.21000754710 } #from Natural Earth
+	base_unit_type = unit_building_site
+	regions = {
+		switzerland
+	}
+	
+	history = {
+		395 = {
+			owner = rome #Geneva was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += temple #Geneva was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		481 = {
+			owner = burgundy #Geneva was a Burgundian possession in the 481-532 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		}
+		
+		486 = {
+			owner = burgundy #Geneva was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		561 = {
+			owner = burgundia #Geneva went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		}
+	}
+}

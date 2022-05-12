@@ -1,0 +1,9 @@
+sion = {
+	name = "Sion"
+	map_template = earth
+	geocoordinate = { 7.35399948193 46.23900302860 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		switzerland
+	}
+}

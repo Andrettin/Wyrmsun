@@ -1,0 +1,8 @@
+stans = {
+	name = "Stans"
+	map_template = earth
+	geocoordinate = { 8.38330254672 46.95000307390 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

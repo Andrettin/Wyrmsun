@@ -1,0 +1,8 @@
+frauenfeld = {
+	name = "Frauenfeld"
+	map_template = earth
+	geocoordinate = { 9.10800050195 47.56799716570 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

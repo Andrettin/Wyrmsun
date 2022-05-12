@@ -1,0 +1,9 @@
+saint_gallen = {
+	name = "Saint Gallen"
+	map_template = earth
+	geocoordinate = { 9.36199855724 47.42299806670 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		switzerland
+	}
+}

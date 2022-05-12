@@ -1,0 +1,8 @@
+zug = {
+	name = "Zug"
+	map_template = earth
+	geocoordinate = { 8.48700056499 47.17899903050 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

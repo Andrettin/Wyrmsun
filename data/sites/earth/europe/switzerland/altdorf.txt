@@ -1,0 +1,8 @@
+altdorf = {
+	name = "Altdorf"
+	map_template = earth
+	geocoordinate = { 8.63800258370 46.87900214440 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

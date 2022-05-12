@@ -1,0 +1,9 @@
+appenzell = {
+	name = "Appenzell"
+	map_template = earth
+	geocoordinate = { 9.41670050466 47.33330410310 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		switzerland
+	}
+}

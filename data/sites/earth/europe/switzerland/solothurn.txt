@@ -1,0 +1,8 @@
+solothurn = {
+	name = "Solothurn"
+	map_template = earth
+	geocoordinate = { 7.53699660776 47.21200209860 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

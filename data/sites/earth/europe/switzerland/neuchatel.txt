@@ -1,0 +1,9 @@
+neuchatel = {
+	name = "Neuchatel" #"Neuchâtel"
+	map_template = earth
+	geocoordinate = { 6.92299861540 46.99899914470 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		switzerland
+	}
+}

@@ -25,27 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("geneva", {
-	Name = "Geneva",
-	MapTemplate = "old_earth",
-	Position = {3982, 997},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"french", "Geneva"
-	},
-	HistoricalOwners = {
-		395, "rome", -- Geneva was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		481, "burgundy", -- Geneva was a Burgundian possession in the 481-532 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "burgundy", -- Geneva was a part of the Kingdom of the Burgundians in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "burgundia" -- Geneva went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-	},
-	HistoricalBuildings = {
-		395, 0, "town_hall",
-		395, 0, "temple" -- Geneva was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"europe"}
-})
-
 DefineSite("martigny", {
 	Name = "Martigny",
 	MapTemplate = "old_earth",

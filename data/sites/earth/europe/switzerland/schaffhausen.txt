@@ -1,0 +1,8 @@
+schaffhausen = {
+	name = "Schaffhausen"
+	map_template = earth
+	geocoordinate = { 8.63299852333 47.70600309070 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

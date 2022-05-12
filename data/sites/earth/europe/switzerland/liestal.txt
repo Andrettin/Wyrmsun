@@ -1,0 +1,8 @@
+liestal = {
+	name = "Liestal"
+	map_template = earth
+	geocoordinate = { 7.73700346795 47.48300111760 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

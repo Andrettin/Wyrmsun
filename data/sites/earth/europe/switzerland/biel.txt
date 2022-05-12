@@ -1,0 +1,8 @@
+biel = {
+	name = "Biel"
+	map_template = earth
+	geocoordinate = { 7.25003779972 47.16658998520 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

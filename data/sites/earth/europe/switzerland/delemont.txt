@@ -1,0 +1,8 @@
+delemont = {
+	name = "Delemont" #"Delémont"
+	map_template = earth
+	geocoordinate = { 7.34499948764 47.36999712580 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

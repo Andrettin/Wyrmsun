@@ -1,0 +1,9 @@
+lausanne = {
+	name = "Lausanne"
+	map_template = earth
+	geocoordinate = { 6.65002274438 46.53042726550 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		switzerland
+	}
+}

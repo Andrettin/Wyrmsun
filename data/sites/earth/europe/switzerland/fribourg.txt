@@ -1,0 +1,9 @@
+fribourg = {
+	name = "Fribourg"
+	map_template = earth
+	geocoordinate = { 7.14999652234 46.80000008000 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		switzerland
+	}
+}

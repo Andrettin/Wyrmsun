@@ -1,0 +1,8 @@
+herisau = {
+	name = "Herisau"
+	map_template = earth
+	geocoordinate = { 9.28330247214 47.38329903330 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

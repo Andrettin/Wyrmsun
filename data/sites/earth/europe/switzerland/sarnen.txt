@@ -1,0 +1,8 @@
+sarnen = {
+	name = "Sarnen"
+	map_template = earth
+	geocoordinate = { 8.24300152884 46.89900001720 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

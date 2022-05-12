@@ -1,0 +1,8 @@
+glarus = {
+	name = "Glarus"
+	map_template = earth
+	geocoordinate = { 9.06669958673 47.05000203590 } #from Natural Earth
+	regions = {
+		switzerland
+	}
+}

@@ -1,0 +1,9 @@
+bellinzona = {
+	name = "Bellinzona"
+	map_template = earth
+	geocoordinate = { 9.01999860875 46.19700013170 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		switzerland
+	}
+}
