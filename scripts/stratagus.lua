@@ -293,7 +293,7 @@ function SinglePlayerTriggers()
 		Load(GetQuestData(GetCurrentQuest(), "Scenario"))
 	end
 
-	if (LoadedGame == false and GetCurrentCampaign() ~= "" and GetCampaignData(GetCurrentCampaign(), "Sandbox") == false) then
+	if (LoadedGame == false and GetCurrentCampaign() ~= "") then
 		RemovePlayerObjective(GetThisPlayer(), "- Defeat your rivals")
 	end
 	
