@@ -421,33 +421,6 @@ InitGameSettings()
 mapname = "maps/random/random-map-swamp.smp"
 local buttonStatut = 0 -- 0:not initialised, 1: Ok, 2: Cancel
 
-main_menu = nil
-
-function BuildProgramStartMenu()
-	SetPlayerData(GetThisPlayer(), "RaceName", "gnome")
-	
-	local menu = WarMenu()
-	main_menu = menu
-	
-	PersistencyUpdates()
-	
-	if (CanAccessFile("wyr/quests.lua")) then
-		Load("wyr/quests.lua") -- load the quests here, so that the achievement unlocked dialogs can appear properly
-		SaveQuestCompletion()
-		save_achievements()
-	end
-	
-	return menu:run()
-end
-
-function RunProgramStartMenu()
-	local continue = 1
-
-	while continue == 1 do
-		continue = BuildProgramStartMenu(menu)
-	end
-end
-
 Load("scripts/menus/save.lua")
 Load("scripts/menus/options.lua")
 Load("scripts/menus/editor.lua")
@@ -483,9 +456,3 @@ LoadingPersistentHeroes = false
 initialize_database()
 
 --pack_image_folder("C:/Wyrmsun/models/units/aether_workship/Sprites")
-
-if (is_test_run()) then
-	return
-end
-
-RunProgramStartMenu()

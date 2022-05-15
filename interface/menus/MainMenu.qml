@@ -150,4 +150,11 @@ MenuBase {
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 	}
+	
+	Component.onCompleted: {
+		//load the quests here, so that the achievement unlocked dialogs can appear properly
+		wyrmgus.call_lua_command("SetPlayerData(GetThisPlayer(), \"RaceName\", \"gnome\");")
+		wyrmgus.call_lua_command("PersistencyUpdates();")
+		wyrmgus.call_lua_command("if (CanAccessFile(\"wyr/quests.lua\")) then Load(\"wyr/quests.lua\"); SaveQuestCompletion(); save_achievements(); end;")
+	}
 }
