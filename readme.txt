@@ -60,6 +60,10 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Added Stone Deposit and Stone Quarry (graphics by Jinn). These function similarly to metal deposits and mines, but provide stone instead.
 
+* Miscellaneous
+- Improved the performance of the database parsing.
+- Reworked the engine to take advantage of coroutines for asynchronous operations.
+
 * Scenarios
 - Added Stone Deposit at Storugns in Gotland.
 
