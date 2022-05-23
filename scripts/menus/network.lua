@@ -251,13 +251,8 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	menu = WarMenu(nil)
 	server_multi_game_menu = menu
 
-	local function fowCb(dd)
-		server:get():get_setup().FogOfWar = bool2int(dd:isMarked())
-		NetworkServerResyncClients()
-		GameSettings.NoFogOfWar = not dd:isMarked()
-	end
-	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+150 * get_scale_factor(), fowCb)
-	fow:setMarked(true)
+	NetworkInitServerConnect(numplayers)
+	
 	local function revealMapCb(dd)
 		server:get():get_setup().RevealMap = bool2int(dd:isMarked())
 		NetworkServerResyncClients()
@@ -323,12 +318,10 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	local updatePlayers = addPlayersList(menu, numplayers)
 
 	NetworkMapName = map
-	NetworkInitServerConnect(numplayers)
-	server:get():get_setup().FogOfWar = 1
 	GameSettings.Inside = false
 	startgame = menu:addFullButton(_("~!Start Game"), "s", sx * 11,  sy*14,
 		function(s)
-			SetFogOfWar(fow:isMarked())
+			SetFogOfWar(server:get():get_setup().FogOfWar)
 			if revealmap:isMarked() == true then
 				RevealMap()
 			end

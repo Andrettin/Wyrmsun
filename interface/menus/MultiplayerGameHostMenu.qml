@@ -52,6 +52,23 @@ MenuBase {
 		text: "Size: " + selected_map.map_width + "x" + selected_map.map_height
 	}
 	
+	LabeledRadioImageButton {
+		id: fog_of_war_radio_button
+		anchors.left: map_size_label.left
+		anchors.top: map_size_label.bottom
+		anchors.topMargin: 16 * wyrmgus.scale_factor
+		text: "Fog of War"
+		checked: true
+		
+		onCheckedChanged: {
+			wyrmgus.network_manager.server.set_fog_of_war(checked)
+		}
+	
+		Component.onCompleted: {
+			wyrmgus.network_manager.server.set_fog_of_war(checked)
+		}
+	}
+	
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
