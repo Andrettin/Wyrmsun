@@ -251,8 +251,6 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	menu = WarMenu(nil)
 	server_multi_game_menu = menu
 
-	NetworkInitServerConnect(numplayers)
-	
 	local function revealMapCb(dd)
 		server:get():get_setup().RevealMap = bool2int(dd:isMarked())
 		NetworkServerResyncClients()

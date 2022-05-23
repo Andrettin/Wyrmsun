@@ -63,7 +63,7 @@ MenuBase {
 		onCheckedChanged: {
 			wyrmgus.network_manager.server.set_fog_of_war(checked)
 		}
-	
+		
 		Component.onCompleted: {
 			wyrmgus.network_manager.server.set_fog_of_war(checked)
 		}
