@@ -131,15 +131,15 @@ function RunJoiningMapMenu(s)
 
 	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120 * get_scale_factor(), function() end)
 	fow:setMarked(true)
-	CClient:get():get_server_setup().FogOfWar = 1
+	client:get():get_server_setup().FogOfWar = 1
 	fow:setEnabled(true)
-	fow:setMarked(int2bool(CClient:get():get_server_setup().FogOfWar))
+	fow:setMarked(int2bool(client:get():get_server_setup().FogOfWar))
 	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150 * get_scale_factor(), function() end)
 	revealmap:setEnabled(true)
-	revealmap:setMarked(int2bool(CClient:get():get_server_setup().RevealMap))
+	revealmap:setMarked(int2bool(client:get():get_server_setup().RevealMap))
 	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scale_factor(), function() end)
 	computer_opponents:setEnabled(true)
-	computer_opponents:setMarked(CClient:get():get_server_setup().Opponents > 0)
+	computer_opponents:setMarked(client:get():get_server_setup().Opponents > 0)
 
 	menu:writeText(_("Civilization:"), sx, sy*11)
 	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
@@ -150,10 +150,10 @@ function RunJoiningMapMenu(s)
 				chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
 				chosen_civilization = string.lower(chosen_civilization)
 				GameSettings.Presets[NetLocalHostsSlot].Race = GetCivilizationID(chosen_civilization)
-				CClient:get():get_local_setup().Race[NetLocalHostsSlot] = GetCivilizationID(chosen_civilization)
+				client:get():get_local_setup().Race[NetLocalHostsSlot] = GetCivilizationID(chosen_civilization)
 			else
 				GameSettings.Presets[NetLocalHostsSlot].Race = -1
-				CClient:get():get_local_setup().Race[NetLocalHostsSlot] = -1
+				client:get():get_local_setup().Race[NetLocalHostsSlot] = -1
 			end
 		end)
 	race:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
@@ -187,7 +187,7 @@ function RunJoiningMapMenu(s)
 	-- Security: The map name is checked by the stratagus engine.
 	Load(NetworkMapName)
 	local function readycb(dd)
-		CClient:get():get_local_setup().Ready[NetLocalHostsSlot] = bool2int(dd:isMarked())
+		client:get():get_local_setup().Ready[NetLocalHostsSlot] = bool2int(dd:isMarked())
 	end
 	menu:addImageCheckBox(_("Ready"), sx*11, sy*14, readycb)
 
@@ -196,18 +196,18 @@ function RunJoiningMapMenu(s)
 	local joincounter = 0
 	local function listen()
 		NetworkProcessClientRequest()
-		fow:setMarked(int2bool(CClient:get():get_server_setup().FogOfWar))
-		GameSettings.NoFogOfWar = not int2bool(CClient:get():get_server_setup().FogOfWar)
-		revealmap:setMarked(int2bool(CClient:get():get_server_setup().RevealMap))
-		GameSettings.RevealMap = CClient:get():get_server_setup().RevealMap
-		computer_opponents:setMarked(CClient:get():get_server_setup().Opponents > 0)
-		resources:setSelected(CClient:get():get_server_setup().ResourcesOption)
-		GameSettings.Resources = CClient:get():get_server_setup().ResourcesOption
-		difficulty:setSelected(CClient:get():get_server_setup().Difficulty - 1)
-		GameSettings.Difficulty = CClient:get():get_server_setup().Difficulty
-		difficulty:setVisible(CClient:get():get_server_setup().Opponents > 0)
-		difficulty_label:setVisible(CClient:get():get_server_setup().Opponents > 0)
-		updatePlayersList(CClient:get():get_server_setup())
+		fow:setMarked(int2bool(client:get():get_server_setup().FogOfWar))
+		GameSettings.NoFogOfWar = not int2bool(client:get():get_server_setup().FogOfWar)
+		revealmap:setMarked(int2bool(client:get():get_server_setup().RevealMap))
+		GameSettings.RevealMap = client:get():get_server_setup().RevealMap
+		computer_opponents:setMarked(client:get():get_server_setup().Opponents > 0)
+		resources:setSelected(client:get():get_server_setup().ResourcesOption)
+		GameSettings.Resources = client:get():get_server_setup().ResourcesOption
+		difficulty:setSelected(client:get():get_server_setup().Difficulty - 1)
+		GameSettings.Difficulty = client:get():get_server_setup().Difficulty
+		difficulty:setVisible(client:get():get_server_setup().Opponents > 0)
+		difficulty_label:setVisible(client:get():get_server_setup().Opponents > 0)
+		updatePlayersList(client:get():get_server_setup())
 		state = GetNetworkState()
 		-- FIXME: don't use numbers
 		if (state == 15) then -- ccs_started, server started the game
