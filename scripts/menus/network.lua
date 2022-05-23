@@ -82,7 +82,7 @@ function addPlayersList(menu, numplayers)
   end
   numplayers_text = menu:writeText(_("Open slots") .. " : " .. numplayers - 1, sx *11, sy*4 + 144 * get_scale_factor())
 
-  local function updatePlayers()
+  local function updatePlayers(server_setup)
     local connected_players = 0
     local ready_players = 0
     players_state[1]:setCaption(_("Creator"))
@@ -93,7 +93,7 @@ function addPlayersList(menu, numplayers)
         players_state[i]:setCaption("")
       else
         connected_players = connected_players + 1
-        if ServerSetupState.Ready[i-1] == 1 then
+        if server_setup.Ready[i-1] == 1 then
           ready_players = ready_players + 1
           players_state[i]:setCaption(_("Ready"))
         else
@@ -131,15 +131,15 @@ function RunJoiningMapMenu(s)
 
 	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120 * get_scale_factor(), function() end)
 	fow:setMarked(true)
-	ServerSetupState.FogOfWar = 1
+	CClient:get():get_server_setup().FogOfWar = 1
 	fow:setEnabled(true)
-	fow:setMarked(int2bool(ServerSetupState.FogOfWar))
+	fow:setMarked(int2bool(CClient:get():get_server_setup().FogOfWar))
 	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150 * get_scale_factor(), function() end)
 	revealmap:setEnabled(true)
-	revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
+	revealmap:setMarked(int2bool(CClient:get():get_server_setup().RevealMap))
 	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scale_factor(), function() end)
 	computer_opponents:setEnabled(true)
-	computer_opponents:setMarked(ServerSetupState.Opponents > 0)
+	computer_opponents:setMarked(CClient:get():get_server_setup().Opponents > 0)
 
 	menu:writeText(_("Civilization:"), sx, sy*11)
 	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
@@ -150,10 +150,10 @@ function RunJoiningMapMenu(s)
 				chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
 				chosen_civilization = string.lower(chosen_civilization)
 				GameSettings.Presets[NetLocalHostsSlot].Race = GetCivilizationID(chosen_civilization)
-				LocalSetupState.Race[NetLocalHostsSlot] = GetCivilizationID(chosen_civilization)
+				CClient:get():get_local_setup().Race[NetLocalHostsSlot] = GetCivilizationID(chosen_civilization)
 			else
 				GameSettings.Presets[NetLocalHostsSlot].Race = -1
-				LocalSetupState.Race[NetLocalHostsSlot] = -1
+				CClient:get():get_local_setup().Race[NetLocalHostsSlot] = -1
 			end
 		end)
 	race:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
@@ -187,7 +187,7 @@ function RunJoiningMapMenu(s)
 	-- Security: The map name is checked by the stratagus engine.
 	Load(NetworkMapName)
 	local function readycb(dd)
-		LocalSetupState.Ready[NetLocalHostsSlot] = bool2int(dd:isMarked())
+		CClient:get():get_local_setup().Ready[NetLocalHostsSlot] = bool2int(dd:isMarked())
 	end
 	menu:addImageCheckBox(_("Ready"), sx*11, sy*14, readycb)
 
@@ -196,19 +196,18 @@ function RunJoiningMapMenu(s)
 	local joincounter = 0
 	local function listen()
 		NetworkProcessClientRequest()
-		fow:setMarked(int2bool(ServerSetupState.FogOfWar))
-		GameSettings.NoFogOfWar = not int2bool(ServerSetupState.FogOfWar)
-		revealmap:setMarked(int2bool(ServerSetupState.RevealMap))
-		GameSettings.RevealMap = ServerSetupState.RevealMap
-		computer_opponents:setMarked(ServerSetupState.Opponents > 0)
-		resources:setSelected(ServerSetupState.ResourcesOption)
-		GameSettings.Resources = ServerSetupState.ResourcesOption
-		difficulty:setSelected(ServerSetupState.Difficulty - 1)
-		GameSettings.Difficulty = ServerSetupState.Difficulty
-		difficulty:setVisible(ServerSetupState.Opponents > 0)
-		difficulty_label:setVisible(ServerSetupState.Opponents > 0)
---		GameSettings.Inside = int2bool(ServerSetupState.Inside)
-		updatePlayersList()
+		fow:setMarked(int2bool(CClient:get():get_server_setup().FogOfWar))
+		GameSettings.NoFogOfWar = not int2bool(CClient:get():get_server_setup().FogOfWar)
+		revealmap:setMarked(int2bool(CClient:get():get_server_setup().RevealMap))
+		GameSettings.RevealMap = CClient:get():get_server_setup().RevealMap
+		computer_opponents:setMarked(CClient:get():get_server_setup().Opponents > 0)
+		resources:setSelected(CClient:get():get_server_setup().ResourcesOption)
+		GameSettings.Resources = CClient:get():get_server_setup().ResourcesOption
+		difficulty:setSelected(CClient:get():get_server_setup().Difficulty - 1)
+		GameSettings.Difficulty = CClient:get():get_server_setup().Difficulty
+		difficulty:setVisible(CClient:get():get_server_setup().Opponents > 0)
+		difficulty_label:setVisible(CClient:get():get_server_setup().Opponents > 0)
+		updatePlayersList(CClient:get():get_server_setup())
 		state = GetNetworkState()
 		-- FIXME: don't use numbers
 		if (state == 15) then -- ccs_started, server started the game
@@ -253,29 +252,29 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	server_multi_game_menu = menu
 
 	local function fowCb(dd)
-		ServerSetupState.FogOfWar = bool2int(dd:isMarked())
+		server:get():get_setup().FogOfWar = bool2int(dd:isMarked())
 		NetworkServerResyncClients()
 		GameSettings.NoFogOfWar = not dd:isMarked()
 	end
 	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+150 * get_scale_factor(), fowCb)
 	fow:setMarked(true)
 	local function revealMapCb(dd)
-		ServerSetupState.RevealMap = bool2int(dd:isMarked())
+		server:get():get_setup().RevealMap = bool2int(dd:isMarked())
 		NetworkServerResyncClients()
 		GameSettings.RevealMap = bool2int(dd:isMarked())
 	end
 	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+180 * get_scale_factor(), revealMapCb)
 	
-	ServerSetupState.Opponents = 0
+	server:get():get_setup().Opponents = 0
 	local function computer_opponentsCb(dd)
 		if (dd:isMarked()) then
-			ServerSetupState.Opponents = 1
+			server:get():get_setup().Opponents = 1
 		else
-			ServerSetupState.Opponents = 0
+			server:get():get_setup().Opponents = 0
 		end
 		NetworkServerResyncClients()
-		difficulty:setVisible(ServerSetupState.Opponents > 0)
-		difficulty_label:setVisible(ServerSetupState.Opponents > 0)
+		difficulty:setVisible(server:get():get_setup().Opponents > 0)
+		difficulty_label:setVisible(server:get():get_setup().Opponents > 0)
 	end
 	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scale_factor(), computer_opponentsCb)
 	computer_opponents:setMarked(false)
@@ -289,10 +288,10 @@ function RunServerMultiGameMenu(map, description, numplayers)
 				chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
 				chosen_civilization = string.lower(chosen_civilization)
 				GameSettings.Presets[0].Race = GetCivilizationID(chosen_civilization)
-				ServerSetupState.Race[0] = GetCivilizationID(chosen_civilization)
+				server:get():get_setup().Race[0] = GetCivilizationID(chosen_civilization)
 			else
 				GameSettings.Presets[0].Race = -1
-				ServerSetupState.Race[0] = -1
+				server:get():get_setup().Race[0] = -1
 			end
 			NetworkServerResyncClients()
 		end)
@@ -302,7 +301,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	d = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100 * get_scale_factor(), sy*11+50 * get_scale_factor(),
 		function(dd)
 			GameSettings.Resources = dd:getSelected()
-			ServerSetupState.ResourcesOption = GameSettings.Resources
+			server:get():get_setup().ResourcesOption = GameSettings.Resources
 			NetworkServerResyncClients()
 		end)
 	d:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
@@ -311,7 +310,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	difficulty = menu:addDropDown({_("Easy"), _("Normal"), _("Hard"), _("Brutal")}, sx + 100 * get_scale_factor(), sy * 11 + 75 * get_scale_factor(),
 		function(dd)
 			GameSettings.Difficulty = dd:getSelected() + 1
-			ServerSetupState.Difficulty = GameSettings.Difficulty
+			server:get():get_setup().Difficulty = GameSettings.Difficulty
 			NetworkServerResyncClients()
 		end)
 	difficulty:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
@@ -319,14 +318,13 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	difficulty:setVisible(false)
 	difficulty_label:setVisible(false)
 	GameSettings.Difficulty = DifficultyNormal
-	ServerSetupState.Difficulty = GameSettings.Difficulty
+	server:get():get_setup().Difficulty = GameSettings.Difficulty
 
 	local updatePlayers = addPlayersList(menu, numplayers)
 
 	NetworkMapName = map
 	NetworkInitServerConnect(numplayers)
-	ServerSetupState.FogOfWar = 1
---	ServerSetupState.Inside = 0
+	server:get():get_setup().FogOfWar = 1
 	GameSettings.Inside = false
 	startgame = menu:addFullButton(_("~!Start Game"), "s", sx * 11,  sy*14,
 		function(s)
@@ -347,7 +345,7 @@ function RunServerMultiGameMenu(map, description, numplayers)
 		waitingtext:setVisible(not ready)
 	end
 
-	local listener = LuaActionListener(function(s) updateStartButton(updatePlayers()) end)
+	local listener = LuaActionListener(function(s) updateStartButton(updatePlayers(server:get():get_setup())) end)
 	menu:addLogicCallback(listener)
 
 	menu:run()

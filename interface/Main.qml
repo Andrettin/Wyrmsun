@@ -45,8 +45,6 @@ Window {
 				}
 				
 				window.visible = true
-				
-				//wyrmgus.crop_image_frames("C:/Wyrmsun/graphics/units/undead/skeleton_warrior.png", Qt.size(116, 116), Qt.size(72, 72))
 			}
 		}
 	}
