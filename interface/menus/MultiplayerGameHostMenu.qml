@@ -30,7 +30,7 @@ MenuBase {
 		anchors.bottom: players_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
-		text: "File: " + selected_map.presentation_filepath
+		text: "File: " + selected_map.presentation_filename
 	}
 	
 	NormalText {
