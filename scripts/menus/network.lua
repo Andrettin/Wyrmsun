@@ -244,83 +244,18 @@ function RunServerMultiGameMenu(map, description, numplayers)
 	local sx = Video.Width / 20
 	local sy = Video.Height / 20
 	local startgame
-	local difficulty
-	local difficulty_label
-	local d
-
+	
 	menu = WarMenu(nil)
 	server_multi_game_menu = menu
-
-	local function revealMapCb(dd)
-		server:get():get_setup().RevealMap = bool2int(dd:isMarked())
-		NetworkServerResyncClients()
-		GameSettings.RevealMap = bool2int(dd:isMarked())
-	end
-	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+180 * get_scale_factor(), revealMapCb)
-	
-	server:get():get_setup().Opponents = 0
-	local function computer_opponentsCb(dd)
-		if (dd:isMarked()) then
-			server:get():get_setup().Opponents = 1
-		else
-			server:get():get_setup().Opponents = 0
-		end
-		NetworkServerResyncClients()
-		difficulty:setVisible(server:get():get_setup().Opponents > 0)
-		difficulty_label:setVisible(server:get():get_setup().Opponents > 0)
-	end
-	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scale_factor(), computer_opponentsCb)
-	computer_opponents:setMarked(false)
-
-	menu:writeText(_("Civilization:"), sx, sy*11+25 * get_scale_factor())
-	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
-	d = menu:addDropDown(civilization_list, sx + 100 * get_scale_factor(), sy*11+25 * get_scale_factor(),
-		function(dd)
-			if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
-				local chosen_civilization = civilization_list[dd:getSelected() + 1]
-				chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
-				chosen_civilization = string.lower(chosen_civilization)
-				GameSettings.Presets[0].Race = GetCivilizationID(chosen_civilization)
-				server:get():get_setup().Race[0] = GetCivilizationID(chosen_civilization)
-			else
-				GameSettings.Presets[0].Race = -1
-				server:get():get_setup().Race[0] = -1
-			end
-			NetworkServerResyncClients()
-		end)
-	d:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
-
-	menu:writeText("Resources:", sx, sy*11+50 * get_scale_factor())
-	d = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100 * get_scale_factor(), sy*11+50 * get_scale_factor(),
-		function(dd)
-			GameSettings.Resources = dd:getSelected()
-			server:get():get_setup().ResourcesOption = GameSettings.Resources
-			NetworkServerResyncClients()
-		end)
-	d:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
-
-	difficulty_label = menu:writeText(_("Difficulty:"), sx, sy * 11 + 75 * get_scale_factor())
-	difficulty = menu:addDropDown({_("Easy"), _("Normal"), _("Hard"), _("Brutal")}, sx + 100 * get_scale_factor(), sy * 11 + 75 * get_scale_factor(),
-		function(dd)
-			GameSettings.Difficulty = dd:getSelected() + 1
-			server:get():get_setup().Difficulty = GameSettings.Difficulty
-			NetworkServerResyncClients()
-		end)
-	difficulty:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
-	difficulty:setSelected(1)
-	difficulty:setVisible(false)
-	difficulty_label:setVisible(false)
-	GameSettings.Difficulty = DifficultyNormal
-	server:get():get_setup().Difficulty = GameSettings.Difficulty
 
 	local updatePlayers = addPlayersList(menu, numplayers)
 
 	NetworkMapName = map
-	GameSettings.Inside = false
+
 	startgame = menu:addFullButton(_("~!Start Game"), "s", sx * 11,  sy*14,
 		function(s)
 			SetFogOfWar(server:get():get_setup().FogOfWar)
-			if revealmap:isMarked() == true then
+			if server:get():get_setup().RevealMap == true then
 				RevealMap()
 			end
 			NetworkServerStartGame()
