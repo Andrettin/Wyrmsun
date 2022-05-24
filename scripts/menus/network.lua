@@ -252,22 +252,8 @@ function RunServerMultiGameMenu(map, description, numplayers)
 
 	NetworkMapName = map
 
-	startgame = menu:addFullButton(_("~!Start Game"), "s", sx * 11,  sy*14,
-		function(s)
-			SetFogOfWar(server:get():get_setup().FogOfWar)
-			if server:get():get_setup().RevealMap == true then
-				RevealMap()
-			end
-			NetworkServerStartGame()
-			NetworkGamePrepareGameSettings()
-			RunMap(map)
-			menu:stop()
-		end
-	)
-	startgame:setVisible(false)
 	local waitingtext = menu:writeText(_("Waiting for players"), sx*11, sy*14)
 	local function updateStartButton(ready)
-		startgame:setVisible(ready)
 		waitingtext:setVisible(not ready)
 	end
 

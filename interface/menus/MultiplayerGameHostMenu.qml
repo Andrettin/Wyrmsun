@@ -206,6 +206,20 @@ MenuBase {
 		}
 	}
 	
+	LargeButton {
+		id: start_game_button
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.bottom: previous_menu_button.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		text: "Start Game"
+		hotkey: "s"
+		visible: wyrmgus.network_manager.server.ready_to_start
+		
+		onClicked: {
+			wyrmgus.network_manager.server.start_game()
+		}
+	}
+	
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
