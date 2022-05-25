@@ -70,6 +70,9 @@ https://github.com/Andrettin/Wyrmsun
 * Upgrades
 - Added Lipizzaner Horse upgrade (icon by Jinn) for the Teutonic civilization (researchable at the Stables). This upgrade increases cavalry HP.
 
+* User Interface
+- Reworked the multiplayer host game menu.
+
 -----------------------------------------------------------------------
 - 5.3.5
 -----------------------------------------------------------------------

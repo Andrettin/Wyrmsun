@@ -97,7 +97,6 @@ MenuBase {
 		anchors.verticalCenter: parent.verticalCenter
 		text: "Create Game"
 		hotkey: "c"
-		lua_command: selected_map ? ("RunServerMultiGameMenu(\"" + escape_string(selected_map.presentation_filepath) + "\", \"" + escape_string(selected_map.name) + "\", " + selected_map.player_count + ");") : ""
 		
 		onClicked: {
 			wyrmgus.network_manager.init_server_connect(selected_map.player_count)

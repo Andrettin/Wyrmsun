@@ -236,29 +236,3 @@ function RunJoiningMapMenu(s)
 
 	menu:run()
 end
-
-server_multi_game_menu = nil
-
-function RunServerMultiGameMenu(map, description, numplayers)
-	local menu
-	local sx = Video.Width / 20
-	local sy = Video.Height / 20
-	local startgame
-	
-	menu = WarMenu(nil)
-	server_multi_game_menu = menu
-
-	local updatePlayers = addPlayersList(menu, numplayers)
-
-	NetworkMapName = map
-
-	local waitingtext = menu:writeText(_("Waiting for players"), sx*11, sy*14)
-	local function updateStartButton(ready)
-		waitingtext:setVisible(not ready)
-	end
-
-	local listener = LuaActionListener(function(s) updateStartButton(updatePlayers(server:get():get_setup())) end)
-	menu:addLogicCallback(listener)
-
-	menu:run()
-end
