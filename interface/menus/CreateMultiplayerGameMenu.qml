@@ -99,7 +99,7 @@ MenuBase {
 		hotkey: "c"
 		
 		onClicked: {
-			wyrmgus.network_manager.init_server_connect(selected_map.player_count)
+			wyrmgus.network_manager.init_server_connect(selected_map.presentation_filepath, selected_map.player_count)
 			
 			menu_stack.push("MultiplayerGameHostMenu.qml", {
 				selected_map: create_multiplayer_game_menu.selected_map
