@@ -80,12 +80,6 @@ MenuBase {
 			currentIndex = 0
 		}
 		
-		onSelectedEntryChanged: {
-			if (selectedEntry !== null) {
-				wyrmgus.call_lua_command("Load(\"" + escape_string(selectedEntry.presentation_filepath) + "\");")
-			}
-		}
-		
 		function get_entry_name(entry) {
 			return entry.name
 		}
