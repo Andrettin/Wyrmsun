@@ -132,4 +132,14 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		lua_command: "NetworkDetachFromServer(); joining_map_menu:stop();"
 	}
+	
+	Timer {
+		interval: 100
+		repeat: true
+		running: !wyrmgus.game.running
+		
+		onTriggered: {
+			wyrmgus.network_manager.process_client_request()
+		}
+	}
 }

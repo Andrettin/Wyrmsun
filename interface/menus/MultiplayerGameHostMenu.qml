@@ -315,4 +315,14 @@ MenuBase {
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		lua_command: "InitGameSettings();"
 	}
+	
+	Timer {
+		interval: 100
+		repeat: true
+		running: !wyrmgus.game.running
+		
+		onTriggered: {
+			wyrmgus.network_manager.process_server_request()
+		}
+	}
 }
