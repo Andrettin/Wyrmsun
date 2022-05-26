@@ -43,8 +43,6 @@ MenuBase {
 	
 	NormalText {
 		id: map_size_label
-		//anchors.bottom: previous_menu_button.top
-		//anchors.bottomMargin: 64 * wyrmgus.scale_factor
 		anchors.verticalCenter: parent.verticalCenter
 		anchors.verticalCenterOffset: -64 * wyrmgus.scale_factor
 		anchors.left: parent.left

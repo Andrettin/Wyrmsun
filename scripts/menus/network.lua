@@ -69,46 +69,27 @@ end
 
 function addPlayersList(menu, numplayers)
   local i
-  local players_name = {}
-  local players_state = {}
   local sx = Video.Width / 20
   local sy = Video.Height / 20
   local numplayers_text
 
-  menu:writeLargeText(_("Players"), sx * 11, sy*3)
-  for i=1,8 do
-    players_name[i] = menu:writeText(_("Player")..i, sx * 11, sy*4 + i*18 * get_scale_factor())
-    players_state[i] = menu:writeText(_("Preparing"), sx * 11 + 80 * get_scale_factor(), sy*4 + i*18 * get_scale_factor())
-  end
   numplayers_text = menu:writeText(_("Open slots") .. " : " .. numplayers - 1, sx *11, sy*4 + 144 * get_scale_factor())
 
   local function updatePlayers(server_setup)
     local connected_players = 0
-    local ready_players = 0
-    players_state[1]:setCaption(_("Creator"))
-    players_name[1]:setCaption(Hosts[0].PlyName)
     for i=2,8 do
-      if Hosts[i-1].PlyName == "" then
-        players_name[i]:setCaption("")
-        players_state[i]:setCaption("")
-      else
+      if Hosts[i-1].PlyName ~= "" then
         connected_players = connected_players + 1
-        if server_setup.Ready[i-1] == 1 then
-          ready_players = ready_players + 1
-          players_state[i]:setCaption(_("Ready"))
-        else
-          players_state[i]:setCaption(_("Preparing"))
-        end
-        players_name[i]:setCaption(Hosts[i-1].PlyName)
      end
     end
     numplayers_text:setCaption(_("Open slots") .. " : " .. numplayers - 1 - connected_players)
     numplayers_text:adjustSize()
-    return (connected_players > 0 and ready_players == connected_players)
   end
 
   return updatePlayers
 end
+
+joining_map_menu = nil
 
 function RunJoiningMapMenu(s)
 	local menu
@@ -119,15 +100,9 @@ function RunJoiningMapMenu(s)
 	local state
 	local d
 
-	menu = WarMenu(_("Joining Game: Map"))
-
-	menu:writeLargeText(_("Map"), sx, sy*3)
-	menu:writeText(_("Name:"), sx, sy*3+30 * get_scale_factor())
-	descr = menu:writeText(description, sx+70 * get_scale_factor(), sy*3+30 * get_scale_factor())
-	menu:writeText(_("File:"), sx, sy*3+50 * get_scale_factor())
-	maptext = menu:writeText(string.sub(NetworkMapName, 6), sx+70 * get_scale_factor(), sy*3+50 * get_scale_factor())
-	menu:writeText(_("Players:"), sx, sy*3+70 * get_scale_factor())
-	players = menu:writeText(numplayers, sx+70 * get_scale_factor(), sy*3+70 * get_scale_factor())
+	menu = WarMenu("")
+	
+	joining_map_menu = menu
 
 	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120 * get_scale_factor(), function() end)
 	fow:setMarked(true)
@@ -177,10 +152,6 @@ function RunJoiningMapMenu(s)
 	local OldPresentMap = PresentMap
 	PresentMap = function(desc, nplayers, w, h, id)
 		numplayers = nplayers
-		players:setCaption(""..nplayers)
-		players:adjustSize()
-		descr:setCaption(desc)
-		descr:adjustSize()
 		OldPresentMap(desc, nplayers, w, h, id)
 	end
 
@@ -230,9 +201,6 @@ function RunJoiningMapMenu(s)
 	end
 	listener = LuaActionListener(listen)
 	menu:addLogicCallback(listener)
-
-	menu:addFullButton(_("~!Cancel"), "c", Video.Width / 2 - 100 * get_scale_factor(), Video.Height - 100 * get_scale_factor(),
-		function() NetworkDetachFromServer(); menu:stop() end)
 
 	menu:run()
 end
