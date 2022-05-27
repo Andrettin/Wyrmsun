@@ -38,9 +38,12 @@ DialogBase {
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "Play Quest"
 		hotkey: "p"
-		lua_command: quest ? "SetCurrentQuest(\"" + quest.identifier + "\"); GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + "; mapname = GetQuestData(\"" + quest.identifier + "\", \"Map\"); RunMap(mapname);" : ""
 		
 		onClicked: {
+			if (quest) {
+				wyrmgus.call_lua_command("SetCurrentQuest(\"" + quest.identifier + "\"); GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + "; mapname = GetQuestData(\"" + quest.identifier + "\", \"Map\");")
+				wyrmgus.game.run_map_async(quest.map)
+			}
 			legacy_quest_dialog.close()
 		}
 	}
