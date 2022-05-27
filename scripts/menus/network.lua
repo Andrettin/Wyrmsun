@@ -67,28 +67,6 @@ function ErrorMenu(errmsg)
   menu:run()
 end
 
-function addPlayersList(menu, numplayers)
-  local i
-  local sx = Video.Width / 20
-  local sy = Video.Height / 20
-  local numplayers_text
-
-  numplayers_text = menu:writeText(_("Open slots") .. " : " .. numplayers - 1, sx *11, sy*4 + 144 * get_scale_factor())
-
-  local function updatePlayers(server_setup)
-    local connected_players = 0
-    for i=2,8 do
-      if Hosts[i-1].PlyName ~= "" then
-        connected_players = connected_players + 1
-     end
-    end
-    numplayers_text:setCaption(_("Open slots") .. " : " .. numplayers - 1 - connected_players)
-    numplayers_text:adjustSize()
-  end
-
-  return updatePlayers
-end
-
 joining_map_menu = nil
 
 function RunJoiningMapMenu(s)
@@ -96,30 +74,12 @@ function RunJoiningMapMenu(s)
 	local listener
 	local sx = Video.Width / 20
 	local sy = Video.Height / 20
-	local numplayers = 3
 	local state
 	local d
 
 	menu = WarMenu("")
 	
 	joining_map_menu = menu
-
-	menu:writeText(_("Civilization:"), sx, sy*11)
-	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
-	local race = menu:addDropDown(civilization_list, sx + 100 * get_scale_factor(), sy*11,
-		function(dd)
-			if (civilization_list[dd:getSelected() + 1] ~= _("Map Default")) then
-				local chosen_civilization = civilization_list[dd:getSelected() + 1]
-				chosen_civilization = string.gsub(chosen_civilization, "Human %- ", "")
-				chosen_civilization = string.lower(chosen_civilization)
-				GameSettings.Presets[NetLocalHostsSlot].Race = GetCivilizationID(chosen_civilization)
-				client:get():get_local_setup().Race[NetLocalHostsSlot] = GetCivilizationID(chosen_civilization)
-			else
-				GameSettings.Presets[NetLocalHostsSlot].Race = -1
-				client:get():get_local_setup().Race[NetLocalHostsSlot] = -1
-			end
-		end)
-	race:setSize(190 * get_scale_factor(), 20 * get_scale_factor())
 
 	menu:writeText(_("Resources:"), sx, sy*11+50 * get_scale_factor())
 	local resources = menu:addDropDown({_("Map Default"), _("Low"), _("Medium"), _("High")}, sx + 100 * get_scale_factor(), sy*11+50 * get_scale_factor(),
@@ -137,20 +97,12 @@ function RunJoiningMapMenu(s)
 	difficulty:setSelected(1)
 	GameSettings.Difficulty = DifficultyNormal
 
-	local OldPresentMap = PresentMap
-	PresentMap = function(desc, nplayers, w, h, id)
-		numplayers = nplayers
-		OldPresentMap(desc, nplayers, w, h, id)
-	end
-
 	-- Security: The map name is checked by the stratagus engine.
 	Load(NetworkMapName)
 	local function readycb(dd)
 		client:get():get_local_setup().Ready[NetLocalHostsSlot] = bool2int(dd:isMarked())
 	end
 	menu:addImageCheckBox(_("Ready"), sx*11, sy*14, readycb)
-
-	local updatePlayersList = addPlayersList(menu, numplayers)
 
 	local joincounter = 0
 	local function listen()
@@ -161,16 +113,7 @@ function RunJoiningMapMenu(s)
 		GameSettings.Difficulty = client:get():get_server_setup().Difficulty
 		difficulty:setVisible(client:get():get_server_setup().Opponents > 0)
 		difficulty_label:setVisible(client:get():get_server_setup().Opponents > 0)
-		updatePlayersList(client:get():get_server_setup())
 		state = GetNetworkState()
-		-- FIXME: don't use numbers
-		if (state == 15) then -- ccs_started, server started the game
-			joincounter = joincounter + 1
-			if (joincounter == 30) then
-				PresentMap = OldPresentMap
-				menu:stop()
-			end
-		end
 	end
 	listener = LuaActionListener(listen)
 	menu:addLogicCallback(listener)

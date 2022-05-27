@@ -119,10 +119,6 @@ MenuBase {
 		
 		readonly property var civilization_index: selectedEntry !== -1 ? selectedEntry.index : -1
 		
-		onModelChanged: {
-			set_selected_entry(2) //normal difficulty
-		}
-		
 		onSelectedEntryChanged: {
 			wyrmgus.network_manager.server.set_player_civilization(0, civilization_dropdown.civilization_index)
 		}
