@@ -9,8 +9,11 @@ WidgetBase {
 	mouse_area_anchor_source: radio_button
 	
 	property bool checked: false
+	property bool checkable: true
 	
 	onClicked: {
-		checked = !checked
+		if (checkable) {
+			checked = !checked
+		}
 	}
 }

@@ -104,18 +104,6 @@ function RunJoiningMapMenu(s)
 	
 	joining_map_menu = menu
 
-	local fow = menu:addImageCheckBox(_("Fog of War"), sx, sy*3+120 * get_scale_factor(), function() end)
-	fow:setMarked(true)
-	client:get():get_server_setup().FogOfWar = 1
-	fow:setEnabled(true)
-	fow:setMarked(int2bool(client:get():get_server_setup().FogOfWar))
-	local revealmap = menu:addImageCheckBox(_("Reveal Map"), sx, sy*3+150 * get_scale_factor(), function() end)
-	revealmap:setEnabled(true)
-	revealmap:setMarked(int2bool(client:get():get_server_setup().RevealMap))
-	local computer_opponents = menu:addImageCheckBox(_("Computer Opponents"), sx, sy*3+210 * get_scale_factor(), function() end)
-	computer_opponents:setEnabled(true)
-	computer_opponents:setMarked(client:get():get_server_setup().Opponents > 0)
-
 	menu:writeText(_("Civilization:"), sx, sy*11)
 	local civilization_list = {_("Map Default"), _("Dwarf"), _("Goblin"), _("Human - Germanic")}
 	local race = menu:addDropDown(civilization_list, sx + 100 * get_scale_factor(), sy*11,
@@ -167,11 +155,6 @@ function RunJoiningMapMenu(s)
 	local joincounter = 0
 	local function listen()
 		NetworkProcessClientRequest()
-		fow:setMarked(int2bool(client:get():get_server_setup().FogOfWar))
-		GameSettings.NoFogOfWar = not int2bool(client:get():get_server_setup().FogOfWar)
-		revealmap:setMarked(int2bool(client:get():get_server_setup().RevealMap))
-		GameSettings.RevealMap = client:get():get_server_setup().RevealMap
-		computer_opponents:setMarked(client:get():get_server_setup().Opponents > 0)
 		resources:setSelected(client:get():get_server_setup().ResourcesOption)
 		GameSettings.Resources = client:get():get_server_setup().ResourcesOption
 		difficulty:setSelected(client:get():get_server_setup().Difficulty - 1)
@@ -182,21 +165,11 @@ function RunJoiningMapMenu(s)
 		state = GetNetworkState()
 		-- FIXME: don't use numbers
 		if (state == 15) then -- ccs_started, server started the game
-			SetThisPlayer(1)
 			joincounter = joincounter + 1
 			if (joincounter == 30) then
-				SetFogOfWar(fow:isMarked())
-				if revealmap:isMarked() == true then
-					RevealMap()
-				end
-				NetworkGamePrepareGameSettings()
-				RunMap(NetworkMapName)
 				PresentMap = OldPresentMap
 				menu:stop()
 			end
-		elseif (state == 10) then -- ccs_unreachable
-			ErrorMenu(_("Cannot reach server"))
-			menu:stop()
 		end
 	end
 	listener = LuaActionListener(listen)

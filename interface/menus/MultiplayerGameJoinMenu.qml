@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Dialogs 1.3
 import ".."
+import "../dialogs"
 
 MenuBase {
 	id: multiplayer_game_join_menu
@@ -48,6 +49,35 @@ MenuBase {
 		anchors.left: parent.left
 		anchors.leftMargin: 64 * wyrmgus.scale_factor
 		text: "Size: " + selected_map.map_width + "x" + selected_map.map_height
+	}
+	
+	LabeledRadioImageButton {
+		id: fog_of_war_radio_button
+		anchors.left: map_size_label.left
+		anchors.top: map_size_label.bottom
+		anchors.topMargin: 16 * wyrmgus.scale_factor
+		text: "Fog of War"
+		checked: wyrmgus.network_manager.client.fog_of_war
+		checkable: false
+	}
+	
+	LabeledRadioImageButton {
+		id: reveal_map_radio_button
+		anchors.left: map_size_label.left
+		anchors.top: fog_of_war_radio_button.bottom
+		anchors.topMargin: 8 * wyrmgus.scale_factor
+		text: "Reveal Map"
+		checked: wyrmgus.network_manager.client.reveal_map
+	}
+	
+	LabeledRadioImageButton {
+		id: computer_opponents_radio_button
+		anchors.left: map_size_label.left
+		anchors.top: reveal_map_radio_button.bottom
+		anchors.topMargin: 8 * wyrmgus.scale_factor
+		text: "Computer Opponents"
+		checked: wyrmgus.network_manager.client.computer_opponents
+		checkable: false
 	}
 	
 	LargeText {
@@ -133,13 +163,33 @@ MenuBase {
 		lua_command: "NetworkDetachFromServer(); joining_map_menu:stop();"
 	}
 	
+	GenericDialog {
+		id: error_dialog
+		title: "Error"
+	}
+	
 	Timer {
 		interval: 100
 		repeat: true
 		running: !wyrmgus.game.running
 		
+		property int join_counter: 0
+		
 		onTriggered: {
 			wyrmgus.network_manager.process_client_request()
+			
+			//FIXME: do not use numbers
+			if (state == 15) { //ccs_started, server started the game
+				++join_counter
+				
+				if (join_counter == 30) {
+					wyrmgus.network_manager.client.start_game()
+				}
+			} else if (state == 10) { //ccs_unreachable
+				error_dialog.text = "Cannot reach server."
+				error_dialog.open()
+				menu_stack.pop()
+			}
 		}
 	}
 }
