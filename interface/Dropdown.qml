@@ -65,17 +65,23 @@ ComboBox {
 		pressed: dropdown.down
 	}
 	
+	function get_entry_index(chosen_entry) {
+		for (var i = 0; i < dropdown.model.length; ++i) {
+			var entry = dropdown.model[i]
+			if (entry == chosen_entry) {
+				return i
+			}
+		}
+		
+		return -1
+	}
+	
 	function set_selected_entry(chosen_entry) {
 		if (chosen_entry == null) {
 			return
 		}
 		
-		for (var i = 0; i < dropdown.model.length; ++i) {
-			var entry = dropdown.model[i]
-			if (entry == chosen_entry) {
-				dropdown.currentIndex = i
-			}
-		}
+		dropdown.currentIndex = get_entry_index(chosen_entry)
 	}
 	
 	//override this if the entry list is not a string list

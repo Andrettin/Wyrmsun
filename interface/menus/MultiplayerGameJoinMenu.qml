@@ -128,7 +128,6 @@ MenuBase {
 		}
 	}
 	
-	/*
 	NormalText {
 		id: resources_label
 		text: "Resources:"
@@ -144,10 +143,8 @@ MenuBase {
 		anchors.topMargin: 8 * wyrmgus.scale_factor
 		width: 150 * wyrmgus.scale_factor
 		model: ["Map Default", "Low", "Medium", "High"]
-		
-		onSelectedEntryChanged: {
-			wyrmgus.network_manager.server.set_resources_option(currentIndex)
-		}
+		enabled: false
+		currentIndex: wyrmgus.network_manager.client.resources_option
 	}
 	
 	NormalText {
@@ -167,20 +164,13 @@ MenuBase {
 		width: 150 * wyrmgus.scale_factor
 		model: wyrmgus.get_difficulties()
 		visible: computer_opponents_radio_button.checked
-		
-		onModelChanged: {
-			set_selected_entry(2) //normal difficulty
-		}
-		
-		onSelectedEntryChanged: {
-			wyrmgus.network_manager.server.set_difficulty(selectedEntry)
-		}
+		enabled: false
+		currentIndex: get_entry_index(wyrmgus.network_manager.client.difficulty)
 		
 		function get_entry_name(entry) {
 			return wyrmgus.get_difficulty_name(entry)
 		}
 	}
-	*/
 	
 	LargeText {
 		id: players_label
@@ -265,11 +255,23 @@ MenuBase {
 		text: "Open slots: " + (selected_map.player_count - wyrmgus.network_manager.connected_player_count - 1)
 	}
 	
+	LabeledRadioImageButton {
+		id: ready_button
+		anchors.verticalCenter: difficulty_label.verticalCenter
+		anchors.left: players_label.left
+		text: "Ready"
+		checked: false
+		
+		onCheckedChanged: {
+			wyrmgus.network_manager.client.set_ready(checked)
+		}
+	}
+	
 	PreviousMenuButton {
 		id: previous_menu_button
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		lua_command: "NetworkDetachFromServer(); joining_map_menu:stop();"
+		lua_command: "NetworkDetachFromServer();"
 	}
 	
 	GenericDialog {

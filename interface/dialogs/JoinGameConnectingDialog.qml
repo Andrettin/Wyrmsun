@@ -54,7 +54,6 @@ DialogBase {
 			//FIXME: do not use numbers
 			if (state == 3) { //ccs_mapinfo
 				//got ICMMap => load map
-				wyrmgus.call_lua_command("RunJoiningMapMenu();")
 				menu_stack.push("../menus/MultiplayerGameJoinMenu.qml")
 				
 				join_game_dialog.close()
