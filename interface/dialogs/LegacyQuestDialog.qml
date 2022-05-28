@@ -41,7 +41,7 @@ DialogBase {
 		
 		onClicked: {
 			if (quest) {
-				wyrmgus.call_lua_command("SetCurrentQuest(\"" + quest.identifier + "\"); GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + "; mapname = GetQuestData(\"" + quest.identifier + "\", \"Map\");")
+				wyrmgus.call_lua_command("SetCurrentQuest(\"" + quest.identifier + "\"); GameSettings.Difficulty = " + wyrmgus.preferences.get_difficulty_index() + ";")
 				wyrmgus.game.run_map_async(quest.map)
 			}
 			legacy_quest_dialog.close()

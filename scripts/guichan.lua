@@ -418,7 +418,6 @@ function InitGameSettings()
 end
 InitGameSettings()
 
-mapname = "maps/random/random-map-swamp.smp"
 local buttonStatut = 0 -- 0:not initialised, 1: Ok, 2: Cancel
 
 Load("scripts/menus/save.lua")
