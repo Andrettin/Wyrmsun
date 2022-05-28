@@ -426,7 +426,6 @@ Load("scripts/menus/editor.lua")
 Load("scripts/menus/game.lua")
 Load("scripts/menus/objectives.lua")
 Load("scripts/menus/results.lua")
-Load("scripts/menus/network.lua")
 Load("scripts/menus/mods.lua")
 Load("scripts/grand_strategy/grand_strategy.lua")
 
