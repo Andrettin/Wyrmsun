@@ -289,6 +289,8 @@ MenuBase {
 		onTriggered: {
 			wyrmgus.network_manager.process_client_request()
 			
+			var state = wyrmgus.network_manager.get_network_state()
+			
 			//FIXME: do not use numbers
 			if (state == 15) { //ccs_started, server started the game
 				++join_counter
