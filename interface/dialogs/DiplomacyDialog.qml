@@ -63,16 +63,16 @@ DialogBase {
 				id: allied_radio_button
 				x: allied_label.x - diplomacy_list.contentItem.x + allied_label.width / 2 - width / 2 //place at the horizontal center of the label
 				anchors.verticalCenter: parent.verticalCenter
-				checked: wyrmgus.this_player.has_allied_stance_with_sync(modelData)
+				checked: wyrmgus.this_player.has_allied_stance_with(modelData)
 				interface_style: diplomacy_dialog.interface_style
 				
 				onCheckedChanged: {
 					if (checked) {
-						if (!wyrmgus.this_player.has_allied_stance_with_sync(modelData)) {
+						if (!wyrmgus.this_player.has_allied_stance_with(modelData)) {
 							wyrmgus.this_player.set_allied_diplomatic_stance_with_async(modelData)
 						}
 					} else {
-						if (wyrmgus.this_player.has_allied_stance_with_sync(modelData)) {
+						if (wyrmgus.this_player.has_allied_stance_with(modelData)) {
 							wyrmgus.this_player.set_neutral_diplomatic_stance_with_async(modelData)
 						}
 					}
@@ -83,16 +83,16 @@ DialogBase {
 				id: enemy_radio_button
 				x: enemy_label.x - diplomacy_list.contentItem.x + enemy_label.width / 2 - width / 2 //place at the horizontal center of the label
 				anchors.verticalCenter: parent.verticalCenter
-				checked: wyrmgus.this_player.has_enemy_stance_with_sync(modelData)
+				checked: wyrmgus.this_player.has_enemy_stance_with(modelData)
 				interface_style: diplomacy_dialog.interface_style
 				
 				onCheckedChanged: {
 					if (checked) {
-						if (!wyrmgus.this_player.has_enemy_stance_with_sync(modelData)) {
+						if (!wyrmgus.this_player.has_enemy_stance_with(modelData)) {
 							wyrmgus.this_player.set_enemy_diplomatic_stance_with_async(modelData)
 						}
 					} else {
-						if (wyrmgus.this_player.has_enemy_stance_with_sync(modelData)) {
+						if (wyrmgus.this_player.has_enemy_stance_with(modelData)) {
 							wyrmgus.this_player.set_neutral_diplomatic_stance_with_async(modelData)
 						}
 					}
@@ -103,16 +103,16 @@ DialogBase {
 				id: shared_vision_radio_button
 				x: shared_vision_label.x - diplomacy_list.contentItem.x + shared_vision_label.width / 2 - width / 2 //place at the horizontal center of the label
 				anchors.verticalCenter: parent.verticalCenter
-				checked: wyrmgus.this_player.has_shared_vision_with_sync(modelData)
+				checked: wyrmgus.this_player.has_shared_vision_with(modelData)
 				interface_style: diplomacy_dialog.interface_style
 				
 				onCheckedChanged: {
 					if (checked) {
-						if (!wyrmgus.this_player.has_shared_vision_with_sync(modelData)) {
+						if (!wyrmgus.this_player.has_shared_vision_with(modelData)) {
 							wyrmgus.this_player.set_shared_vision_with_async(modelData, true)
 						}
 					} else {
-						if (wyrmgus.this_player.has_shared_vision_with_sync(modelData)) {
+						if (wyrmgus.this_player.has_shared_vision_with(modelData)) {
 							wyrmgus.this_player.set_shared_vision_with_async(modelData, false)
 						}
 					}
@@ -123,8 +123,8 @@ DialogBase {
 				target: wyrmgus.this_player
 				
 				function onDiplomatic_stances_changed() {
-					allied_radio_button.checked = wyrmgus.this_player.has_allied_stance_with_sync(modelData)
-					enemy_radio_button.checked = wyrmgus.this_player.has_enemy_stance_with_sync(modelData)
+					allied_radio_button.checked = wyrmgus.this_player.has_allied_stance_with(modelData)
+					enemy_radio_button.checked = wyrmgus.this_player.has_enemy_stance_with(modelData)
 				}
 			}
 			
@@ -132,7 +132,7 @@ DialogBase {
 				target: wyrmgus.this_player
 				
 				function onShared_vision_changed() {
-					shared_vision_radio_button.checked = wyrmgus.this_player.has_shared_vision_with_sync(modelData)
+					shared_vision_radio_button.checked = wyrmgus.this_player.has_shared_vision_with(modelData)
 				}
 			}
 		}
