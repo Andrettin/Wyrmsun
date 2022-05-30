@@ -102,7 +102,7 @@ DialogBase {
 	
 	Timer {
 		id: close_timer
-		interval: 1
+		interval: 35
 		onTriggered: {
 			dialogue_dialog.close()
 			dialogue_dialog.destroy()
