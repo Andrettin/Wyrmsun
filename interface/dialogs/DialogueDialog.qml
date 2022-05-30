@@ -16,6 +16,8 @@ DialogBase {
 	property var option_tooltips: []
 	property int unit_number: -1
 	
+	property bool option_picked: false
+	
 	IconButton {
 		id: icon_button
 		anchors.horizontalCenter: parent.horizontalCenter
@@ -59,6 +61,12 @@ DialogBase {
 				interface_style: dialogue_dialog.interface_style
 				
 				onClicked: {
+					if (option_picked) {
+						//an option was already picked
+						return
+					}
+					
+					option_picked = true
 					dialogue.call_node_option_effect(node_index, index, unit_number)
 					close_timer.start() //use a timer so that this will happen after any subsequent dialogue nodes have been shown
 				}
