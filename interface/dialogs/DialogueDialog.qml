@@ -6,15 +6,14 @@ DialogBase {
 	id: dialogue_dialog
 	panel: 5
 	
-	property var dialogue: null
-	property int node_index: 0
-	property string text: ""
-	property string icon: ""
-	property string player_color: wyrmgus.defines.neutral_player_color.identifier
-	property var options: []
-	property var option_hotkeys: []
-	property var option_tooltips: []
-	property int unit_number: -1
+	property var dialogue_node_instance: null
+	readonly property string text: dialogue_node_instance.text
+	readonly property string icon: dialogue_node_instance.icon ? dialogue_node_instance.icon.identifier : ""
+	readonly property string player_color: dialogue_node_instance.player_color ? dialogue_node_instance.player_color.identifier : wyrmgus.defines.neutral_player_color.identifier
+	readonly property var options: dialogue_node_instance.options
+	readonly property var option_hotkeys: dialogue_node_instance.option_hotkeys
+	readonly property var option_tooltips: dialogue_node_instance.option_tooltips
+	readonly property int unit_number: dialogue_node_instance.unit_number
 	
 	property bool option_picked: false
 	
@@ -67,8 +66,7 @@ DialogBase {
 					}
 					
 					option_picked = true
-					dialogue.call_node_option_effect(node_index, index, unit_number)
-					close_timer.start() //use a timer so that this will happen after any subsequent dialogue nodes have been shown
+					dialogue_node_instance.call_option_effect(index)
 				}
 			}
 		}
@@ -100,12 +98,14 @@ DialogBase {
 		}
 	}
 	
-	Timer {
-		id: close_timer
-		interval: 35
-		onTriggered: {
-			dialogue_dialog.close()
-			dialogue_dialog.destroy()
+	Connections {
+		target: wyrmgus
+		
+		function onDialogue_node_closed(node_instance) {
+			if (node_instance === dialogue_dialog.dialogue_node_instance) {
+				dialogue_dialog.close()
+				dialogue_dialog.destroy()
+			}
 		}
 	}
 }

@@ -360,23 +360,14 @@ Item {
 			faction_choice_dialog.open()
 		}
 		
-		function onDialogueNodeCalled(dialogue, node_index, title_str, text, icon_identifier, player_color_identifier, options, option_hotkeys, option_tooltips, unit_number) {
+		function onDialogue_node_called(dialogue_node_instance, title_str, text, icon_identifier, player_color_identifier, options, option_hotkeys, option_tooltips, unit_number) {
 			if (dialogue_component.status == Component.Error) {
 				console.error(dialogue_component.errorString())
 				return
 			}
 			
 			var dialogue_dialog = dialogue_component.createObject(map_view, {
-				dialogue: dialogue,
-				node_index: node_index,
-				title: title_str,
-				text: text,
-				icon: icon_identifier,
-				player_color: player_color_identifier,
-				options: options,
-				option_hotkeys: option_hotkeys,
-				option_tooltips: option_tooltips,
-				unit_number: unit_number,
+				dialogue_node_instance: dialogue_node_instance,
 				interface_style: wyrmgus.current_interface_style.identifier
 			})
 			
