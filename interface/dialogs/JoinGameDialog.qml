@@ -38,17 +38,7 @@ DialogBase {
 			var server_address = ip_text_field.text
 			
 			//FIXME: allow port ("localhost:1234")
-			var result = wyrmgus.network_manager.setup_server_address(server_address)
-			if (result === false) {
-				error_dialog.text = "Invalid address."
-				error_dialog.open()
-				return
-			}
-			
-			wyrmgus.network_manager.init_client_connect()
-			
-			join_game_connecting_dialog.server_address = server_address
-			join_game_connecting_dialog.open()
+			wyrmgus.network_manager.setup_server_address(server_address)
 		}
 	}
 	
@@ -63,6 +53,25 @@ DialogBase {
 		
 		onClicked: {
 			join_game_dialog.close()
+		}
+	}
+	
+	Connections {
+		target: wyrmgus.network_manager
+		
+		function onServer_address_setup_completed(result) {
+			if (result === false) {
+				error_dialog.text = "Invalid address."
+				error_dialog.open()
+				join_game_connecting_dialog.close()
+				return
+			}
+			
+			wyrmgus.network_manager.init_client_connect()
+			
+			var server_address = ip_text_field.text
+			join_game_connecting_dialog.server_address = server_address
+			join_game_connecting_dialog.open()
 		}
 	}
 }
