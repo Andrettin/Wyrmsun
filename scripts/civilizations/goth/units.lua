@@ -47,7 +47,7 @@ DefineUnitType("unit-gothic-horse-rider", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	ChargeBonus = 7,
+	ChargeBonus = 10,
 	Points = 85, -- +10 points
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,
@@ -87,7 +87,7 @@ DefineUnitType("unit-gothic-horse-lord", {
 		{"shield", "unit-wooden-shield"},
 		{"boots", "unit-boots"}
 	},
-	ChargeBonus = 7,
+	ChargeBonus = 10,
 	Points = 110, -- +10 points
 	DaySightRangeBonus = 1,
 	NightSightRangeBonus = -1,

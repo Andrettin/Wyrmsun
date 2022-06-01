@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * Scenarios
 - Added Stone Deposit at Storugns in Gotland.
 
+* Units
+- Increased the charge bonus of Gothic cavalry from 7% to 10%.
+
 * Upgrades
 - Added Lipizzaner Horse upgrade (icon by Jinn) for the Teutonic civilization (researchable at the Stables). This upgrade increases cavalry HP.
 - Added Stirrups upgrade (icon by Jinn), for all civilizations which possess cavalry  (researchable at the Stables or Yale Pen). This upgrade increases the charge bonus of cavalry.
