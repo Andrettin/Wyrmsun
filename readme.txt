@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Upgrades
 - Added Lipizzaner Horse upgrade (icon by Jinn) for the Teutonic civilization (researchable at the Stables). This upgrade increases cavalry HP.
+- Added Stirrups upgrade (icon by Jinn), for all civilizations which possess cavalry  (researchable at the Stables or Yale Pen). This upgrade increases the charge bonus of cavalry.
 
 * User Interface
 - Reworked the multiplayer host and client game menus.

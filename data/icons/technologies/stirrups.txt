@@ -1,0 +1,3 @@
+stirrups = {
+	file = "icons/technologies/argentinian/stirrups.png"
+}

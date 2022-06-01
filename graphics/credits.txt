@@ -729,6 +729,7 @@
 /graphics/icons/resources/labor.png (by Jinn) (licensed under the CC0)
 /graphics/icons/resources/phlogiston.png (by Jinn) (licensed under the CC0)
 /graphics/icons/resources/research.png (by Jinn) (licensed under the CC0)
+/graphics/icons/technologies/argentinian/stirrups.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/dwarven/coinage.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/norse/house_burning.png (by Jinn) (licensed under the CC0)
 /graphics/icons/technologies/norse/runewriting.png (by Jinn) (licensed under the CC0)

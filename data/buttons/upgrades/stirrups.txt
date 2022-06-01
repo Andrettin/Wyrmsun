@@ -1,0 +1,11 @@
+research_stirrups = {
+	pos = 2
+	action = research_class
+	value = stirrups
+	allowed = check_single_research
+	description =  "+10% Charge Bonus for cavalry."
+	popup = popup_research
+	unit_classes = {
+		stables
+	}
+}

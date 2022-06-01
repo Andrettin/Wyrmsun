@@ -1,0 +1,23 @@
+upgrade_stirrups = {
+	name = "Stirrups"
+	upgrade_class = stirrups
+	civilization = neutral
+	icon = stirrups
+	description = "Stirrups provide cavalry with more stability, allowing riders to put more force into their blows.\n\nEffect: +10% Charge Bonus for cavalry."
+	button_key = s
+	costs = {
+		time = 250
+		copper = 2400
+	}
+	modifier = {
+		charge_bonus = 10
+		unit_classes = {
+			cavalry
+			heroic_cavalry
+			desert_cavalry
+			heroic_desert_cavalry
+			spear_cavalry
+			heroic_spear_cavalry
+		}
+	}
+}
