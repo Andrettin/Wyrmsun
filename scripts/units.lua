@@ -3611,6 +3611,7 @@ DefineUnitType("unit_template_mage", {
 	Class = "mage",
 	Template = true,
 	Costs = {"time", 90, "copper", 900},
+	PopulationClass = "scholars",
 	Intelligence = 14,
 	Speed = 8,
 	HitPoints = 40,

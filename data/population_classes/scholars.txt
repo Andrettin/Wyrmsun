@@ -1,0 +1,4 @@
+scholars = {
+	name = "Scholars"
+	resource_icon = population
+}
