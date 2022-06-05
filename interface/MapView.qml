@@ -19,6 +19,7 @@ Item {
 	readonly property var quest_completed_dialog_component: Qt.createComponent("dialogs/QuestCompletedDialog.qml")
 	readonly property var quest_failed_dialog_component: Qt.createComponent("dialogs/QuestFailedDialog.qml")
 	readonly property var population_dialog_component: Qt.createComponent("dialogs/PopulationDialog.qml")
+	readonly property int tile_size: wyrmgus.defines.tile_size.width * wyrmgus.scale_factor
 	
 	MouseArea {
 		id: mouse_area
@@ -42,8 +43,10 @@ Item {
 		rightMargin: 0
 		topMargin: 0
 		bottomMargin: 0
-		contentWidth: tile_size * map_width
-		contentHeight: tile_size * map_height
+		contentWidth: tile_size * wyrmgus.map_info.map_width
+		contentHeight: tile_size * wyrmgus.map_info.map_height
+		contentX: wyrmgus.map_view_top_left_pixel_pos.x
+		contentY: wyrmgus.map_view_top_left_pixel_pos.y
 		boundsBehavior: Flickable.StopAtBounds
 		clip: true
 		model: MapGridModel {
