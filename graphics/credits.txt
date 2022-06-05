@@ -695,6 +695,7 @@
 /graphics/icons/items/dwarven/throwing_axe.png (by Jinn) (licensed under the CC0)
 /graphics/icons/items/saxon/iron_shield.png (by Jinn) (licensed under the CC0)
 /graphics/icons/items/saxon/iron_shield_extra_1.png (by Jinn) (licensed under the CC0)
+/graphics/icons/items/teutonic/crossbow.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/items/baronial_crown.png (by Jinn and Exidelo) (licensed under the CC0)
 /graphics/icons/items/belt.png (by Exidelo) (licensed under the CC0)
 /graphics/icons/items/bodkin_arrow.png (by Jinn) (licensed under the CC0)
