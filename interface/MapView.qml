@@ -38,7 +38,12 @@ Item {
 	/*
 	TableView {
 		id: map
-		anchors.fill: parent
+		anchors.top: parent.top
+		anchors.topMargin: wyrmgus.defines.map_area_top_margin * wyrmgus.scale_factor
+		anchors.bottom: parent.bottom
+		anchors.bottomMargin: wyrmgus.defines.map_area_bottom_margin * wyrmgus.scale_factor
+		anchors.left: parent.left
+		anchors.right: parent.right
 		leftMargin: 0
 		rightMargin: 0
 		topMargin: 0
@@ -49,6 +54,7 @@ Item {
 		contentY: wyrmgus.map_view_top_left_pixel_pos.y
 		boundsBehavior: Flickable.StopAtBounds
 		clip: true
+		interactive: false //scrolled via the engine
 		model: MapGridModel {
 			map_layer: 0
 		}
