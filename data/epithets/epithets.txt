@@ -137,6 +137,16 @@ the_great = {
 	weight = 0 #don't generate it as a random epithet
 }
 
+the_grim = {
+	name = "the Grim"
+	conditions = {
+		or = {
+			trait = upgrade_dutiful
+			trait = upgrade_harsh
+		}
+	}
+}
+
 the_hardy = {
 	name = "the Hardy"
 	conditions = {
@@ -187,6 +197,13 @@ the_old = {
 
 the_pious = {
 	name = "the Pious"
+	conditions = {
+		trait = upgrade_pious
+	}
+}
+
+the_pure = {
+	name = "the Pure"
 	conditions = {
 		trait = upgrade_pious
 	}
