@@ -4785,7 +4785,7 @@ DefineUnitType("unit-long-swordsman", {
 	Name = "Long Swordsman",
 	Parent = "unit-template-unit",
 	Image = {"file", "neutral/units/long_swordsman.png", "size", {72, 72}},
-	Animations = "animations-static-npc", Icon = "icon-long-swordsman",
+	Animations = "animations-static-npc", Icon = "western_footman",
 	Costs = {"time", 60, "copper", 600},
 	Speed = 10,
 	HitPoints = 60,

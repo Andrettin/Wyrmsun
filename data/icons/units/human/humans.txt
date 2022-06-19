@@ -1,3 +1,7 @@
+western_footman = {
+	file = "icons/units/human/footman.png"
+}
+
 human_sailor = {
 	file = "icons/units/human/sailor.png"
 }

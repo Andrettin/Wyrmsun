@@ -806,12 +806,6 @@ DefineIcon({
 })
 
 DefineIcon({
-	Name = "icon-long-swordsman",
-	Size = {46, 38},
-	File = "neutral/icons/long_swordsman.png"
-})
-
-DefineIcon({
 	Name = "icon-os-rune",
 	Size = {46, 38},
 	File = "neutral/icons/os_rune.png"
