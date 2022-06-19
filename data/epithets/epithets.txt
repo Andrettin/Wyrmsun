@@ -169,6 +169,11 @@ the_iron_shield = {
 	}
 }
 
+the_leatherworker = {
+	name = "the Leatherworker"
+	weight = 0 #don't generate it as a random epithet
+}
+
 the_magnificent = {
 	name = "the Magnificent"
 	weight = 0
@@ -188,6 +193,28 @@ the_mild = {
 	}
 }
 
+the_moneylender = {
+	name = "the Moneylender"
+	weight = 0 #don't generate it as a random epithet
+}
+
+the_mysterious = {
+	name = "the Mysterious"
+	conditions = {
+		or = {
+			trait = upgrade_intelligent
+			trait = upgrade_genius
+		}
+	}
+}
+
+the_ogre = {
+	name = "the Ogre"
+	conditions = {
+		civilization = ogre
+	}
+}
+
 the_old = {
 	name = "the Old"
 	conditions = {
@@ -200,6 +227,11 @@ the_pious = {
 	conditions = {
 		trait = upgrade_pious
 	}
+}
+
+the_priest = {
+	name = "the Priest"
+	weight = 0 #don't generate it as a random epithet
 }
 
 the_pure = {
@@ -260,6 +292,11 @@ the_saint = {
 	conditions = {
 		trait = upgrade_pious
 	}
+}
+
+the_scribe = {
+	name = "the Scribe"
+	weight = 0 #don't generate it as a random epithet
 }
 
 the_severe = {
