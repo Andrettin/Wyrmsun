@@ -2,6 +2,16 @@ western_footman = {
 	file = "icons/units/human/footman.png"
 }
 
+western_peasant_male = {
+	file = "icons/units/human/peasant.png"
+	frame = 0
+}
+
+western_peasant_female = {
+	file = "icons/units/human/peasant.png"
+	frame = 1
+}
+
 human_sailor = {
 	file = "icons/units/human/sailor.png"
 }
