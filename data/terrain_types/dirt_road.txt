@@ -1,5 +1,6 @@
 dirt_road = {
 	name = "Dirt Road"
+	color = { 208 144 0 }
 	overlay = true
 	pathway = true
 	allow_single = true
