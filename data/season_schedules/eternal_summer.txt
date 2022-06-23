@@ -1,0 +1,8 @@
+eternal_summer = {
+	name = "Eternal Summer"
+	scheduled_seasons = {
+		summer = {
+			days = 365
+		}
+	}
+}
