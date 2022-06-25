@@ -77,6 +77,7 @@ https://github.com/Andrettin/Wyrmsun
 * User Interface
 - Reworked the multiplayer host and client game menus.
 - Fixed issue which caused the screen to shake when mousewheel-scrolling to the edge of the map.
+- Reworked the game results menu.
 
 -----------------------------------------------------------------------
 - 5.3.5
