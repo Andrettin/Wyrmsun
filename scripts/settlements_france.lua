@@ -356,26 +356,6 @@ DefineSite("soissons", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("toul", {
-	Name = "Toul",
-	MapTemplate = "old_earth",
-	Position = {3969, 948},
-	CulturalNames = {
-		"french", "Toul"
-	},
-	HistoricalOwners = {
-		395, "rome", -- Toul was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		481, "francia", -- Toul's area was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		{486, 12, 30}, "francia", -- Toul's area was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "austrasia", -- Toul's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Toul was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		395, 0, "temple" -- Toul was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("toulon", {
 	Name = "Toulon",
 	MapTemplate = "old_earth",
