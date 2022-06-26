@@ -11,3 +11,17 @@ france = {
 		}
 	}
 }
+
+alsace = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+lorraine = {
+	superregions = {
+		france
+		gaul
+	}
+}

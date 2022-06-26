@@ -1,0 +1,35 @@
+metz = {
+	name = "Metz"
+	map_template = earth
+	geocoordinate = { 6.18002559269 49.12034669910 } #from Natural Earth
+	base_unit_type = unit_building_site
+	cultural_names = {
+		frankish = "Mettis"
+	}
+	regions = {
+		lorraine
+	}
+	
+	history = {
+		395 = {
+			owner = rome #Metz was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			building_classes += temple #Metz was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		481 = {
+			owner = francia #Metz was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		}
+		
+		486.12.30 = {
+			owner = francia #Metz was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		561 = {
+			owner = austrasia #Mettis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+		}
+		
+		1648 = {
+			owner = france #Metz was a French possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
+		}
+	}
+}

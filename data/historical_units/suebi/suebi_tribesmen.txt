@@ -1,13 +1,38 @@
 ariovistus_warriors = {
 	name = "Ariovistus' Warriors"
 	unit_type = unit_suebi_swordsman
-	quantity = 15 #15,000 Germanics first entered Gaul with Ariovistus; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
+	quantity = 2 #15,000 Germanics first entered Gaul with Ariovistus; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
 	
 	history = {
 		-71 = {
 			active = true
 			faction = suebi_tribe
 			location = stuttgart
+		}
+		
+		-61 = {
+			#135,000 (15,000 + 120,000) Germanic warriors participated in Ariovistus' invasion of Gaul; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
+			location = strasbourg
+		}
+		
+		-58 = {
+			#in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
+			active = false
+		}
+	}
+}
+
+ariovistus_reinforcements = {
+	name = "Ariovistus' Reinforcements"
+	unit_type = unit_suebi_swordsman
+	quantity = 12 #120,000
+	
+	history = {
+		-61 = {
+			#135,000 (15,000 + 120,000) Germanic warriors participated in Ariovistus' invasion of Gaul; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
+			active = true
+			faction = suebi_tribe
+			location = strasbourg
 		}
 		
 		-58 = {

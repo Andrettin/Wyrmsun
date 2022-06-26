@@ -226,29 +226,6 @@ DefineSite("langres", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("metz", {
-	Name = "Metz",
-	MapTemplate = "old_earth",
-	Position = {3981, 931},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"frankish", "Mettis",
-		"french", "Metz"
-	},
-	HistoricalOwners = {
-		395, "rome", -- Metz was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		481, "francia", -- Metz was a Frankish possession as of 481; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		{486, 12, 30}, "francia", -- Metz was a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "austrasia", -- Mettis went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1648, "france" -- Metz was a French possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
-	},
-	HistoricalBuildings = {
-		395, 0, "town_hall",
-		395, 0, "temple" -- Metz was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("narbonne", {
 	Name = "Narbonne",
 	MapTemplate = "old_earth",
@@ -375,47 +352,6 @@ DefineSite("soissons", {
 	HistoricalBuildings = {
 		395, 0, "town_hall",
 		395, 0, "temple" -- Soissons was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"france", "gaul"}
-})
-
-DefineSite("strassburg", {
-	Name = "Strasbourg",
-	MapTemplate = "old_earth",
-	Position = {4010, 945},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"celt", "Argentoratum",
-		"frankish", "Argentoratum",
-		"french", "Strasbourg",
-		"gaul", "Argentoratum",
-		"latin", "Argentoratum", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		"teuton", "Strassburg"
-	},
-	HistoricalOwners = {
-		-61, "suebi_tribe", -- the Battle of Magetobria, in which Ariovistus defeated a number of Gaulish tribes, and afterwards established himself in Alsace and began lording over the Gauls, occurred in 61 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 139; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 218.
-		-58, "", -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
-		-54, "tribocci-tribe", -- the Tribocci held the lands between Strasbourg and Artzenheim (apparently) in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
-		-50, "rome", -- Gaul (where Argentoratum was located) was acquired by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		413, "burgundy", -- Argentoratum/Strassburg conquered by the Burgundians in 413 AD, after which they founded a kingdom that lasted until 436; Source: Edward G. Fichtner, "Sigfrid's Merovingian Origins", 2004, p. 329.
-		436, "",
-		481, "alamanni-tribe", -- Strasburg was an Alamannic possession in the 481-536 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		506, "francia", -- the Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) were conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		561, "austrasia", -- Argentoratum went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		919, "holy-rome", -- Duchy of Swabia within the Holy Roman Empire; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1789, "france" -- Strasburg was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		-61, 161, "town_hall",
-		161, 0, "stronghold", -- Legionary base present in Argentorate in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
-		161, 0, "barracks",
-		395, 0, "temple" -- Strassburg was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		-- Bureau de finance and chambre du domaine existent in Strasbourg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-		-- Prévôt des maréchaux existent in Strasbourg in 1789. Source: William R. Shepherd, Historical Atlas, 1911, p. 147.
-	},
-	HistoricalUnits = {
-		-61, -58, "unit-suebi-swordsman", 135000, "suebi_tribe" -- 135,000 (15,000 + 120,000) Germanic warriors participated in Ariovistus' invasion of Gaul; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
-		-- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 	},
 	Regions = {"france", "gaul"}
 })

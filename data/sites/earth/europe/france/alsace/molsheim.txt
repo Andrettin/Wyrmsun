@@ -4,8 +4,7 @@ molsheim = {
 	geocoordinate = { 7.4922222222222 48.542777777778 }
 	base_unit_type = unit_building_site
 	regions = {
-		france
-		gaul
+		alsace
 	}
 	
 	history = {
