@@ -18,6 +18,14 @@ MenuBase {
 	}
 	
 	LargeText {
+		id: player_label
+		anchors.right: units_label.left
+		anchors.rightMargin: 96 * wyrmgus.scale_factor
+		anchors.top: units_label.top
+		text: "Player"
+	}
+	
+	LargeText {
 		id: units_label
 		anchors.right: buildings_label.left
 		anchors.rightMargin: 32 * wyrmgus.scale_factor
@@ -36,15 +44,15 @@ MenuBase {
 	
 	LargeText {
 		id: copper_label
-		anchors.right: lumber_label.left
-		anchors.rightMargin: 32 * wyrmgus.scale_factor
+		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: units_label.top
 		text: "Copper"
 	}
 	
 	LargeText {
 		id: lumber_label
-		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.left: copper_label.right
+		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.top: units_label.top
 		text: "Lumber"
 	}
@@ -90,7 +98,14 @@ MenuBase {
 		spacing: 16 * wyrmgus.scale_factor
 		model: wyrmgus.game.results.player_results
 		delegate: Item {
-			height: player_units_label.height + 8 * wyrmgus.scale_factor + player_label.height
+			height: player_name_label.height
+			
+			LargeText {
+				id: player_name_label
+				text: modelData.name + " (" + (modelData.this_player ? "You" : (modelData.ally ? "Ally" : (modelData.enemy ? "Enemy" : "Neutral"))) + ")"
+				x: player_label.x - player_results_list.contentItem.x + player_label.width / 2 - width / 2
+				anchors.top: parent.top
+			}
 			
 			LargeText {
 				id: player_units_label
@@ -139,14 +154,6 @@ MenuBase {
 				text: modelData.razing_count
 				x: razings_label.x - player_results_list.contentItem.x + razings_label.width / 2 - width / 2
 				anchors.top: parent.top
-			}
-			
-			LargeText {
-				id: player_label
-				text: modelData.name + " - " + (modelData.this_player ? "You" : (modelData.ally ? "Ally" : (modelData.enemy ? "Enemy" : "Neutral")))
-				x: player_results_list.contentItem.width / 2 - width / 2
-				anchors.top: player_units_label.bottom
-				anchors.topMargin: 8 * wyrmgus.scale_factor
 			}
 		}
 	}
