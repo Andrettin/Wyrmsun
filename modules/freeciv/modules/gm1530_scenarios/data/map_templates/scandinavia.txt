@@ -1,0 +1,84 @@
+scandinavia_gm1530 = {
+	name = "Scandinavia"
+	size = { 350 350 }
+	terrain_file = "scandinavia-350x350-v1.0.sav"
+	units = {
+		{
+			unit_class = town_hall
+			pos = { 208 300 } #Prussian starting location
+			site = konigsberg
+			player = 0
+		}
+		{
+			unit_class = town_hall
+			pos = { 26 324 } #Oldenburgian starting location
+			site = oldenburg_settlement
+			player = 1
+		}
+		{
+			unit_class = town_hall
+			pos = { 242 198 } #Finnish starting location
+			site = helsinki
+			player = 2
+		}
+		{
+			unit_class = town_hall
+			pos = { 220 260 } #Curonian starting location
+			site = jelgava_settlement
+			player = 3
+		}
+		{
+			unit_class = town_hall
+			pos = { 336 172 } #Slavic starting location
+			site = lodeynoye_pole_settlement
+			player = 4
+		}
+		{
+			unit_class = town_hall
+			pos = { 315 191 } #Russian starting location
+			site = saint_petersburg
+			player = 5
+		}
+		{
+			unit_class = town_hall
+			pos = { 250 256 } #Latvian starting location
+			site = riga
+			player = 6
+		}
+		{
+			unit_class = town_hall
+			pos = { 58 325 } #Saxon starting location
+			site = hamburg_settlement
+			player = 7
+		}
+		{
+			unit_class = town_hall
+			pos = { 328 305 } #Belarusian starting location
+			site = minsk
+			player = 8
+		}
+		{
+			unit_class = town_hall
+			pos = { 179 212 } #Swedish starting location
+			site = stockholm
+			player = 9
+		}
+		{
+			unit_class = town_hall
+			pos = { 95 324 } #German starting location
+			site = rostock_settlement
+			player = 10
+		}
+		{
+			unit_class = town_hall
+			pos = { 324 292 } #Lipka Tatar starting location
+			site = vileyka_settlement
+			player = 11
+		}
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 8
+	}
+}

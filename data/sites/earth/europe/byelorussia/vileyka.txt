@@ -1,0 +1,13 @@
+vileyka = {
+	name = "Vileyka"
+	map_template = earth
+	geocoordinate = { 26.916666666667 54.483333333333 }
+	regions = {
+		byelorussia
+	}
+}
+
+vileyka_settlement = {
+	name = "Vileyka"
+	base_unit_type = unit_settlement_site
+}

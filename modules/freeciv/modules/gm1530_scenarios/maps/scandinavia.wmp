@@ -1,0 +1,17 @@
+name = "Scandinavia"
+map_size = { 350 350 }
+player_types = {
+	person
+	person
+	person
+	person
+	person
+	person
+	person
+	person
+	person
+	person
+	person
+	person
+}
+settings = classic_skirmish

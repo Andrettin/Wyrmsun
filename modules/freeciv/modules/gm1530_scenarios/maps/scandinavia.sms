@@ -1,0 +1,25 @@
+LoadTileModels("scripts/tilesets/conifer_forest_summer.lua")
+
+SetPlayerData(0, "RaceName", "germanic")
+SetPlayerData(1, "RaceName", "germanic")
+SetPlayerData(2, "RaceName", "germanic")
+SetPlayerData(3, "RaceName", "germanic")
+SetPlayerData(4, "RaceName", "slavic")
+SetPlayerData(5, "RaceName", "slavic")
+SetPlayerData(6, "RaceName", "germanic")
+SetPlayerData(7, "RaceName", "germanic")
+SetPlayerData(8, "RaceName", "slavic")
+SetPlayerData(9, "RaceName", "germanic")
+SetPlayerData(10, "RaceName", "germanic")
+SetPlayerData(11, "RaceName", "germanic")
+
+for i = 0, 11 do
+	SetPlayerData(i, "Resources", "copper", 2500)
+	SetPlayerData(i, "Resources", "lumber", 2500)
+	SetPlayerData(i, "Resources", "stone", 2500)
+	SetAiType(i, "land-attack")
+end
+
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
+
+ApplyMapTemplate("scandinavia_gm1530")

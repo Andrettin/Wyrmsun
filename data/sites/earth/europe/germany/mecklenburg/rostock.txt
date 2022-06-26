@@ -17,3 +17,8 @@ rostock = {
 		}
 	}
 }
+
+rostock_settlement = {
+	name = "Rostock"
+	base_unit_type = unit_settlement_site
+}

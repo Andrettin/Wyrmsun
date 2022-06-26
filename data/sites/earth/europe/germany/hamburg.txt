@@ -25,3 +25,8 @@ hamburg = {
 		}
 	}
 }
+
+hamburg_settlement = {
+	name = "Hamburg"
+	base_unit_type = unit_settlement_site
+}

@@ -1,0 +1,13 @@
+lodeynoye_pole = {
+	name = "Lodeynoye Pole"
+	map_template = earth
+	geocoordinate = { 33.55 60.733333333333 }
+	regions = {
+		european_russia
+	}
+}
+
+lodeynoye_pole_settlement = {
+	name = "Lodeynoye Pole"
+	base_unit_type = unit_settlement_site
+}
