@@ -26,3 +26,4 @@ player_types = {
 	computer
 }
 settings = classic_skirmish
+hidden = true
