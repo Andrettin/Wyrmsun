@@ -83,4 +83,8 @@ snow = {
 		Aa
 		Ha #Snow Hills
 	}
+	freeciv_chars = {
+		a #glacier
+		t #tundra
+	}
 }

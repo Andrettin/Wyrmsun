@@ -65,4 +65,8 @@ pine_tree = {
 		gaia/tree/pine
 		gaia/tree/poplar
 	}
+	freeciv_chars = {
+		f #forest
+		j #jungle
+	}
 }

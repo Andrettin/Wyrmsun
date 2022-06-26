@@ -79,4 +79,7 @@ dry_mud = {
 	wesnoth_strings = {
 		Tb #Mycelium
 	}
+	freeciv_chars = {
+		s #swamp
+	}
 }

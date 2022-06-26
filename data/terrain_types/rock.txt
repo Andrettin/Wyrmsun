@@ -52,4 +52,7 @@ rock = {
 		Mm #Regular Mountains
 		Md #Dry Mountains
 	}
+	freeciv_chars = {
+		m #mountains
+	}
 }

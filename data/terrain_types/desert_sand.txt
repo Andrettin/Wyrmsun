@@ -76,4 +76,7 @@ desert_sand = {
 	wesnoth_strings = {
 		Hd #Dunes
 	}
+	freeciv_chars = {
+		d #desert
+	}
 }

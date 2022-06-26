@@ -102,4 +102,8 @@ grass = {
 		temp_grass_long_b
 		temp_grass_plants
 	}
+	freeciv_chars = {
+		g #grassland
+		p #plains
+	}
 }

@@ -85,4 +85,9 @@ shallow_water = {
 		Wwr #Medium Coastal Reef
 		Wwt #Tropical Shallow Water
 	}
+	freeciv_chars = {
+		" " #ocean
+		: #deep ocean
+		+ #lake
+	}
 }
