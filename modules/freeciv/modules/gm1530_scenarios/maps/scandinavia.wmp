@@ -3,15 +3,26 @@ map_size = { 350 350 }
 player_types = {
 	person
 	person
+	computer
+	person
+	computer
+	computer
+	computer
+	person
+	computer
 	person
 	person
+	computer
+	person
+	computer
+	person
+	computer
+	computer
 	person
 	person
+	computer
 	person
 	person
-	person
-	person
-	person
-	person
+	computer
 }
 settings = classic_skirmish

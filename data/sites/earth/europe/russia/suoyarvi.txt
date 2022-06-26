@@ -1,14 +1,14 @@
-lodeynoye_pole = {
-	name = "Lodeynoye Pole"
+suoyarvi = {
+	name = "Suoyarvi"
 	map_template = earth
-	geocoordinate = { 33.55 60.733333333333 }
+	geocoordinate = { 32.366666666667 62.083333333333 }
 	base_unit_type = unit_minor_building_site
 	regions = {
 		european_russia
 	}
 }
 
-lodeynoye_pole_settlement = {
-	name = "Lodeynoye Pole"
+suoyarvi_settlement = {
+	name = "Suoyarvi"
 	base_unit_type = unit_settlement_site
 }

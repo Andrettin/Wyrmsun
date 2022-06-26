@@ -26,3 +26,8 @@ lubeck = {
 		}
 	}
 }
+
+lubeck_settlement = {
+	name = "Lubeck"
+	base_unit_type = unit_settlement_site
+}

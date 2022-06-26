@@ -10,3 +10,11 @@ memel = {
 		lithuania
 	}
 }
+
+memel_settlement = {
+	name = "Memel"
+	base_unit_type = unit_settlement_site
+	cultural_names = {
+		baltic = "Klaipeda"
+	}
+}

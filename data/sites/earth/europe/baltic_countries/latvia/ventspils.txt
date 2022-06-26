@@ -7,3 +7,8 @@ ventspils = {
 		latvia
 	}
 }
+
+ventspils_settlement = {
+	name = "Ventspils"
+	base_unit_type = unit_settlement_site
+}

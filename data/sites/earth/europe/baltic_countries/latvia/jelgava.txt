@@ -16,11 +16,3 @@ jelgava = {
 		}
 	}
 }
-
-jelgava_settlement = {
-	name = "Jelgava"
-	base_unit_type = unit_settlement_site
-	cultural_names = {
-		teutonic = "Mitau"
-	}
-}

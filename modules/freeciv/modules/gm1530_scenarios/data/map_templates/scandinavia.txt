@@ -24,7 +24,7 @@ scandinavia_gm1530 = {
 		{
 			unit_class = town_hall
 			pos = { 220 260 } #Curonian starting location
-			site = jelgava_settlement
+			site = ventspils_settlement
 			player = 3
 		}
 		{
@@ -75,6 +75,143 @@ scandinavia_gm1530 = {
 			site = vileyka_settlement
 			player = 11
 		}
+		{
+			unit_class = town_hall
+			pos = { 264 236 } #Teutonic starting location
+			site = viljandi_settlement
+			player = 12
+		}
+		{
+			unit_class = town_hall
+			pos = { 185 318 } #Polish starting location
+			site = danzig
+			player = 13
+		}
+		{
+			unit_class = town_hall
+			pos = { 59 279 } #Danish starting location
+			site = aarhus
+			player = 14
+		}
+		{
+			unit_class = town_hall
+			pos = { 253 215 } #Estonian starting location
+			site = tallinn
+			player = 15
+		}
+		{
+			unit_class = town_hall
+			pos = { 308 157 } #Karelian starting location
+			site = suoyarvi_settlement
+			player = 16
+		}
+		{
+			unit_class = town_hall
+			pos = { 76 320 } #Hanseatic starting location
+			site = lubeck_settlement
+			player = 17
+		}
+		{
+			unit_class = town_hall
+			pos = { 53 344 } #Hanoverian starting location
+			site = hanover
+			player = 18
+		}
+		{
+			unit_class = town_hall
+			pos = { 314 210 } #Soviet starting location
+			site = luga_settlement
+			player = 19
+		}
+		{
+			unit_class = town_hall
+			pos = { 87 199 } #Norwegian starting location
+			site = oslo
+			player = 20
+		}
+		{
+			unit_class = town_hall
+			pos = { 20 160 } #Viking starting location
+			site = bergen_settlement
+			player = 21
+		}
+		{
+			unit_class = town_hall
+			pos = { 218 283 } #Lithuanian starting location
+			site = memel_settlement
+			player = 22
+		}
+	}
+	generated_neutral_units = {
+		unit_gold_deposit = 4
+		unit_silver_deposit = 8
+		unit_copper_deposit = 16
+		unit_iron_deposit = 16
+		unit_stone_deposit = 8
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
+		unit_wood_pile = 16
 	}
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1

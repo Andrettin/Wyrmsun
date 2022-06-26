@@ -7,3 +7,8 @@ bergen = {
 		scandinavia
 	}
 }
+
+bergen_settlement = {
+	name = "Bergen"
+	base_unit_type = unit_settlement_site
+}
