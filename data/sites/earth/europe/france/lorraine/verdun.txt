@@ -4,8 +4,7 @@ verdun = {
 	geocoordinate = { 5.3827777777778 49.159722222222 }
 	base_unit_type = unit_building_site
 	regions = {
-		france
-		gaul
+		lorraine
 	}
 	
 	history = {
@@ -44,4 +43,9 @@ verdun = {
 			owner = france #Verdun was a French possession about 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 		}
 	}
+}
+
+verdun_settlement = {
+	name = "Verdun"
+	base_unit_type = unit_settlement_site
 }

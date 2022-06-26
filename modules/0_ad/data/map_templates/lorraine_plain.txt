@@ -4,6 +4,13 @@ lorraine_plain = {
 	terrain_file = "lorraine_plain.pmp"
 	default_water_terrain_type = shallow_water
 	circle = true #apply nothing outside the circle, generating based on the nearest terrain
+	created_settlements = {
+		metz_settlement
+		nancy_settlement
+		toul_settlement
+		verdun_settlement
+	}
+	random_created_settlements = true
 	units = {
 		#copper rocks for player 1
 		unit_copper_rock = {

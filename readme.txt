@@ -60,6 +60,9 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Added Stone Deposit and Stone Quarry (graphics by Jinn). These function similarly to metal deposits and mines, but provide stone instead.
 
+* Maps
+- The settlements in the Lorraine Plain map are now settlements which are actually in Lorraine.
+
 * Miscellaneous
 - Improved the performance of the database parsing.
 - Reworked the engine to take advantage of coroutines for asynchronous operations.

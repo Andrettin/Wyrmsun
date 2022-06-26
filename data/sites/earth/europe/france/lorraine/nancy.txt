@@ -7,3 +7,8 @@ nancy = {
 		lorraine
 	}
 }
+
+nancy_settlement = {
+	name = "Nancy"
+	base_unit_type = unit_settlement_site
+}

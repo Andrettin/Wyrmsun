@@ -33,3 +33,11 @@ metz = {
 		}
 	}
 }
+
+metz_settlement = {
+	name = "Metz"
+	base_unit_type = unit_settlement_site
+	cultural_names = {
+		frankish = "Mettis"
+	}
+}
