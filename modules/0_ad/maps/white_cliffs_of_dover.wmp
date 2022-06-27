@@ -1,0 +1,12 @@
+name = "White Cliffs of Dover"
+description = "Foreigners are invading Britannia. The native Britons must fight against a massive enemy invasion force to secure their homeland for the next generation!\n\nPlayer 1 is the Britons. Players 2-5 are the invasion force, garrisoned aboard their stout ships in the channel off the White Cliffs of Dover."
+map_size = { 384 384 }
+player_types = {
+	person
+	person
+	person
+	person
+	person
+}
+settings = classic_skirmish
+hidden = true

@@ -4,4 +4,84 @@ white_cliffs_of_dover = {
 	terrain_file = "white_cliffs_of_dover_5p.pmp"
 	default_water_terrain_type = shallow_water
 	circle = true #apply nothing outside the circle, generating based on the nearest terrain
+	created_settlements = { #settlements in the Dover district of Kent
+		#Dover
+		dover_settlement
+		
+		#towns in the Dover district
+		deal_settlement
+		sandwich_settlement
+		
+		#villages in the Dover district
+		alkham_settlement
+		northbourne_settlement
+	}
+	random_created_settlements = true
+	units = {
+		#settlement sites for the disembarking players
+		unit_settlement_site = {
+			pos = { 100 245 }
+		}
+		unit_settlement_site = {
+			pos = { 232 228 }
+		}
+		
+		#copper rocks for player 1
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		
+		#copper rocks for player 2
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+	}
 }
