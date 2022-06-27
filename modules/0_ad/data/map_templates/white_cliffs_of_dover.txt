@@ -1,0 +1,7 @@
+white_cliffs_of_dover = {
+	name = "White Cliffs of Dover"
+	size = { 384 384 }
+	terrain_file = "white_cliffs_of_dover_5p.pmp"
+	default_water_terrain_type = shallow_water
+	circle = true #apply nothing outside the circle, generating based on the nearest terrain
+}
