@@ -1,0 +1,13 @@
+sandwich = {
+	name = "Sandwich"
+	map_template = earth
+	geocoordinate = { 1.3388888888889 51.274722222222 }
+	regions = {
+		england
+	}
+}
+
+sandwich_settlement = {
+	name = "Sandwich"
+	base_unit_type = unit_settlement_site
+}

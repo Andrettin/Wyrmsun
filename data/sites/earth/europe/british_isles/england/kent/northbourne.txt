@@ -1,0 +1,13 @@
+northbourne = {
+	name = "Northbourne"
+	map_template = earth
+	geocoordinate = { 1.339 51.22 }
+	regions = {
+		england
+	}
+}
+
+northbourne_settlement = {
+	name = "Northbourne"
+	base_unit_type = unit_settlement_site
+}

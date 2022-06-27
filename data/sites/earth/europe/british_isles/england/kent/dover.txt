@@ -33,3 +33,14 @@ dover = {
 		}
 	}
 }
+
+dover_settlement = {
+	name = "Dover"
+	base_unit_type = unit_settlement_site
+	cultural_names = {
+		anglo_saxon = "Dofras"
+		briton = "Dubrae"
+		celtic = "Dubrae"
+		latin = "Dubrae"
+	}
+}

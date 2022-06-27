@@ -1,0 +1,13 @@
+alkham = {
+	name = "Alkham"
+	map_template = earth
+	geocoordinate = { 1.2211 51.1347 }
+	regions = {
+		england
+	}
+}
+
+alkham_settlement = {
+	name = "Alkham"
+	base_unit_type = unit_settlement_site
+}

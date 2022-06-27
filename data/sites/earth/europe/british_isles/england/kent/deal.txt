@@ -1,0 +1,13 @@
+deal = {
+	name = "Deal"
+	map_template = earth
+	geocoordinate = { 1.4006 51.2226 }
+	regions = {
+		england
+	}
+}
+
+deal_settlement = {
+	name = "Deal"
+	base_unit_type = unit_settlement_site
+}
