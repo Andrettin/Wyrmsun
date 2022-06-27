@@ -1,0 +1,19 @@
+unit_celtic_farm = {
+	parent = unit_template_farm
+	civilization = celtic
+	image_file = "buildings/celtic/farm.png"
+	frame_size = { 70 66 }
+	icon = celtic_farm
+	construction = minor_building_site_simple
+	description = "Farms are essential for supporting a settlement's population."
+	sounds = {
+		selected = corral_selected
+		ready = corral_ready
+	}
+	0_ad_template_names = {
+		structures/brit/corral
+		structures/brit/rotarymill
+		structures/celt_hut
+		structures/celt_longhouse
+	}
+}

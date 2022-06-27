@@ -757,8 +757,7 @@ DefineUnitType("unit-germanic-farm", {
 	Sounds = {
 		"selected", "corral-selected",
 		"ready", "corral-ready",
-		"help", "basic-germanic-voices-help-town",
-		"dead", "building-destroyed"
+		"help", "basic-germanic-voices-help-town"
 	}
 } )
 

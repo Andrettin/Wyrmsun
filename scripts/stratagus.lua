@@ -1794,7 +1794,6 @@ Units = {
 	"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman", "unit-frank-spearman",
 	"unit-frank-horseman", "unit-frank-knight-lord",
 	"unit-gothic-horse-rider", "unit-gothic-horse-lord",
-	"unit-celt-farm",
 	"unit-dwarven-skilled-miner", "unit-dwarven-expert-miner",
 	"unit-dwarven-runesmith", "unit-dwarven-runemaster", "unit-dwarven-arcanister",
 	"unit-dwarven-militia",

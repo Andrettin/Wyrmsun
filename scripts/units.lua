@@ -4632,7 +4632,6 @@ DefineUnitType("unit-template-wall", {
 } )
 
 -- Load the different civilizations
-Load("scripts/civilizations/celt/units.lua")
 Load("scripts/civilizations/dwarf/units.lua")
 Load("scripts/civilizations/elf/units.lua")
 Load("scripts/civilizations/ettin/units.lua")

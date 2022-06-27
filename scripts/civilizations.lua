@@ -50,7 +50,7 @@ DefineCivilization("germanic", {
 })
 
 DefineCivilization("celt", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
-	Display = "Celt",
+	Display = "Celtic",
 	Visible = true,
 	Language = "proto-celtic",
 	ParentCivilization = "germanic",

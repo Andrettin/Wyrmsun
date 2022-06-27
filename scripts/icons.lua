@@ -1019,7 +1019,6 @@ else
 	})
 end
 
-Load("scripts/civilizations/celt/icons.lua")
 Load("scripts/civilizations/dwarf/icons.lua")
 Load("scripts/civilizations/elf/icons.lua")
 Load("scripts/civilizations/english/icons.lua")

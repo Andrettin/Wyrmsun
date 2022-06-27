@@ -1,0 +1,3 @@
+celtic_farm = {
+	file = "icons/buildings/celtic/farm.png"
+}

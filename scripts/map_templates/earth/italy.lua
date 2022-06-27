@@ -67,13 +67,13 @@ SetMapTemplateUnit("old_earth", "unit-latin-smithy", "mycenae", {4214, 1143}, -1
 SetMapTemplateUnit("old_earth", "unit_germanic_smithy", "celtic-cimmerian-tribe", {4076, 1021}, -1700, -1350) -- the settlement of Castellaro del Vhò was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); the settlement (apparently) specialized in metalworking; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
 -- Fiavè
-SetMapTemplateUnit("old_earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4087, 1001}, -1700, -1350) -- a settlement at Fiavè was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
+SetMapTemplateUnit("old_earth", "unit_celtic_farm", "celtic-cimmerian-tribe", {4087, 1001}, -1700, -1350) -- a settlement at Fiavè was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
 -- Frattesina
 SetMapTemplateUnit("old_earth", "unit_germanic_smithy", "celtic-cimmerian-tribe", {4105, 1023}, -1200, -801) -- the site of Frattesina was occupied between the 12th and 9th centuries BC; the settlement imported raw materials (such as amber, ivory, ostrich eggs and copper) and exported manufactured products (such as works in glass, glazed pottery, bone, antler, elephant ivory, bronze, iron and amber); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 39.
 
 -- Mercurago
-SetMapTemplateUnit("old_earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4034, 1007}, -1700, -1350) -- the settlement of Mercurago was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
+SetMapTemplateUnit("old_earth", "unit_celtic_farm", "celtic-cimmerian-tribe", {4034, 1007}, -1700, -1350) -- the settlement of Mercurago was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
 -- Nola
 SetMapTemplateUnit("old_earth", "unit-latin-farm", "samnite-tribe", {4170, 1116}, -2300, -1701) -- the settlement of Nola was inhabited in the Italian Early Bronze Age (c. 2300-1700 BC), until it was destroyed by an eruption of Mount Vesuvius in the 18th century BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 43-44.
@@ -118,7 +118,7 @@ SetMapTemplateHero("old_earth", "marcus-aurelius", "rome", {4126, 1096}, 176, 17
 --SetMapTemplateUnit("old_earth", "unit-latin-smithy", "sicel-tribe", {4177, 1170}, -1700, -1350) -- a settlement at Portella (located on the island of Salina) was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); it contained casting molds and thus probably had a metalworking industry; it was destroyed violently at the end of the Italian Middle Bronze Age; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 37.
 
 -- Santa Rosa di Poviglio
-SetMapTemplateUnit("old_earth", "unit-celt-farm", "celtic-cimmerian-tribe", {4080, 1026}, -1700, -1350) -- a settlement at Santa Rosa di Poviglio was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
+SetMapTemplateUnit("old_earth", "unit_celtic_farm", "celtic-cimmerian-tribe", {4080, 1026}, -1700, -1350) -- a settlement at Santa Rosa di Poviglio was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC); Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36.
 
 -- Thapsos
 SetMapTemplateUnit("old_earth", "unit_latin_dock", "sicel-tribe", {4185, 1202}, -1700, -1150) -- the settlement of Thapsos was inhabited during the Italian Middle Bronze Age (c. 1700-1350 BC) and Recent Bronze Age (c. 1350-1150 BC); it contained circular and sub-circular huts and possibly a stone wall; the settlement was probably built for conducting sea trade; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, pp. 34, 36-37.
