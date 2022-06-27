@@ -1997,7 +1997,7 @@ DefineUnitType("unit-dwarven-mushroom-farm", {
 	Costs = {"lumber", 0, "stone", 750},
 	RepairCosts = {"lumber", 0, "stone", 1},
 	FireResistance = 20,
-	Drops = {"unit-wood-pile", "unit_stone_pile"},
+	Drops = {"unit_wood_pile", "unit_stone_pile"},
 	Variations = {
 		{
 			"variation-id", "mushroom-farm",

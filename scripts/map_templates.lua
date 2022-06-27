@@ -44,7 +44,7 @@ DefineMapTemplate("island-of-the-lizard-god", {
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit_copper_deposit", 1,
-		"unit-wood-pile", 16,
+		"unit_wood_pile", 16,
 		"unit_stone_pile", 16
 	}
 })
@@ -58,18 +58,18 @@ DefineMapTemplate("island-of-the-lizard-god-underground", {
 	SubtemplatePositionTopLeft = {748, 536},
 	GeneratedNeutralUnits = {
 		"unit_copper_deposit", 1,
-		"unit-wood-pile", 32,
-		"unit-wood-pile", 32,
-		"unit-wood-pile", 32,
-		"unit-wood-pile", 32,
-		"unit-wood-pile", 32,
-		"unit-wood-pile", 32,
+		"unit_wood_pile", 32,
+		"unit_wood_pile", 32,
+		"unit_wood_pile", 32,
+		"unit_wood_pile", 32,
+		"unit_wood_pile", 32,
+		"unit_wood_pile", 32,
 		"unit-snigill", 8,
 		"unit-slime", 4
 	},
 	PlayerLocationGeneratedNeutralUnits = {
 		"unit_copper_deposit", 1,
-		"unit-wood-pile", 16,
+		"unit_wood_pile", 16,
 		"unit_stone_pile", 16
 	}
 })

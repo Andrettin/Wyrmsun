@@ -1933,9 +1933,9 @@ function CreatePlayers(min_x, max_x, min_y, max_y, town_halls, symmetric, starti
 						CreateStartingGoldMine(i, nil, nil, true) -- create the player's gold mine
 						if (GetPlayerData(i, "RaceName") == "dwarf") then
 							CreateStartingLocationResourcePiles(i, "unit_stone_pile", 12)
-							CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
+							CreateStartingLocationResourcePiles(i, "unit_wood_pile", 4)
 						else
-							CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
+							CreateStartingLocationResourcePiles(i, "unit_wood_pile", 16)
 						end
 					else
 						for sub_x=-1,4 do
@@ -2328,9 +2328,9 @@ function GenerateRandomMap(arg)
 			if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 				if (GetPlayerData(i, "RaceName") == "dwarf") then
 					CreateStartingLocationResourcePiles(i, "unit_stone_pile", 12)
-					CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
+					CreateStartingLocationResourcePiles(i, "unit_wood_pile", 4)
 				else
-					CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
+					CreateStartingLocationResourcePiles(i, "unit_wood_pile", 16)
 				end
 			end
 		end
@@ -2444,7 +2444,7 @@ function ApplyRawTiles()
 					end
 				elseif (RawTile(x, y) == "Tree" and (GetCurrentTileset() == "cave" or GetCurrentTileset() == "dungeon")) then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
 					SetRawTile(x, y, "Land")
-					unit = CreateUnit("unit-wood-pile", PlayerNumNeutral, {x, y})
+					unit = CreateUnit("unit_wood_pile", PlayerNumNeutral, {x, y})
 				elseif (RawTile(x, y) == "Door") then
 					SetRawTile(x, y, "Land")
 					unit = CreateUnit("unit-door", PlayerNumNeutral, {x, y})
@@ -3153,7 +3153,7 @@ function AdjustRawMapTileIrregularities(min_x, max_x, min_y, max_y, count, adjus
 				end
 			elseif (RawTile(x, y) == "Tree" and GetCurrentTileset() == "cave" or GetCurrentTileset() == "dungeon") then -- if the cave or dungeon tileset is being used, then the trees are wood pile objects instead, and the tile is set to buildable land
 				SetRawTile(x, y, "Land")
-				unit = CreateUnit("unit-wood-pile", PlayerNumNeutral, {x, y})
+				unit = CreateUnit("unit_wood_pile", PlayerNumNeutral, {x, y})
 			end
 		end
 	end
@@ -4070,9 +4070,9 @@ function GenerateValley(direction, lake_quantity)
 		if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then
 			if (GetPlayerData(i, "RaceName") == "dwarf") then
 				CreateStartingLocationResourcePiles(i, "unit_stone_pile", 12)
-				CreateStartingLocationResourcePiles(i, "unit-wood-pile", 4)
+				CreateStartingLocationResourcePiles(i, "unit_wood_pile", 4)
 			else
-				CreateStartingLocationResourcePiles(i, "unit-wood-pile", 16)
+				CreateStartingLocationResourcePiles(i, "unit_wood_pile", 16)
 			end
 		end
 	end

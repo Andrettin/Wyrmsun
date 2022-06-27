@@ -1,0 +1,40 @@
+unit_wood_pile = {
+	name = "Wood Pile"
+	image_file = "neutral/buildings/wood_pile_1.png"
+	frame_size = { 43 43 }
+	animation_set = animations_building
+	icon = icon_lumber
+	neutral_minimap_color = { 165 42 42 }
+	hit_points = 25500
+	draw_level = 30
+	tile_size = { 1 1 }
+	box_size = { 36 36 }
+	sight_range = 1
+	armor = 20
+	missile = missile_none
+	priority = 0
+	domain = land
+	starting_resources = 400
+	num_directions = 1
+	building = false
+	visible_under_fog = true
+	can_harvest = true
+	harvest_from_outside = true
+	given_resource = lumber
+	variations = {
+		1 = {
+		}
+		2 = {
+			image_file = "neutral/buildings/wood_pile_2.png"
+		}
+		3 = {
+			image_file = "neutral/buildings/wood_pile_3.png"
+		}
+		4 = {
+			image_file = "neutral/buildings/wood_pile_4.png"
+		}
+	}
+	sounds = {
+		selected = tree_selected
+	}
+}
