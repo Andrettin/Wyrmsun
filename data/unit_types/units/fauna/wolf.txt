@@ -52,5 +52,6 @@ unit_wolf = {
 	}
 	0_ad_template_names = {
 		gaia/fauna_lion
+		gaia/fauna_wolf
 	}
 }

@@ -8,4 +8,8 @@ siege_warship = {
 		unit_class = lumber_mill
 		upgrade_class = engineering
 	}
+	
+	0_ad_template_names = {
+		skirmish/units/default_ship_trireme
+	}
 }

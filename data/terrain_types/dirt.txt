@@ -88,11 +88,13 @@ dirt = {
 		Hh #Regular Hills
 	}
 	0_ad_texture_names = {
+		temp_dirt_a
 		temp_dirt_gravel
 		temp_dirt_gravel_b
 		temp_mud_a
 		temp_mud_plants
 		temp_plants_bog
+		temperate_rocks_dirt_01
 	}
 	freeciv_chars = {
 		h #hills

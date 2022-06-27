@@ -50,4 +50,7 @@ unit_stone_pile = {
 	sounds = {
 		selected = click
 	}
+	0_ad_template_names = {
+		gaia/treasure/stone_pile_granite
+	}
 }

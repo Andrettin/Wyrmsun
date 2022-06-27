@@ -16,6 +16,12 @@ fortress = {
 farm = {
 	name = "Farm"
 	tech_tree_parent_unit_class = worker
+	0_ad_template_names = {
+		structures/brit/corral
+		structures/brit/rotarymill
+		structures/celt_hut
+		structures/celt_longhouse
+	}
 }
 
 barracks = {
@@ -43,6 +49,7 @@ watch_tower = {
 	tech_tree_parent_unit_class = worker
 	0_ad_template_names = {
 		skirmish/structures/iber_wall_tower
+		structures/brit/outpost
 	}
 }
 

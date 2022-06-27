@@ -61,7 +61,13 @@ pine_tree = {
 		gaia/tree/aleppo_pine
 		gaia/tree/dead
 		gaia/tree/euro_beech
+		gaia/tree/euro_beech_aut
 		gaia/tree/oak
+		gaia/tree/oak_aut
+		gaia/tree/oak_aut_new
+		gaia/tree/oak_holly
+		gaia/tree/oak_hungarian
+		gaia/tree/oak_hungarian_autumn
 		gaia/tree/pine
 		gaia/tree/poplar
 	}

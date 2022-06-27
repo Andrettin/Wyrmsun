@@ -9,4 +9,8 @@ workship = {
 			upgrade = upgrade_trading_company
 		}
 	}
+	
+	0_ad_template_names = {
+		units/brit/ship_fishing
+	}
 }

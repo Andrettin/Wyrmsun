@@ -260,6 +260,12 @@ ignored_wesnoth_terrain_strings = {
 
 ignored_0_ad_template_names = {
 	actor|geology/stone_granite_med.xml
+	actor|particle/cloud.xml
+	actor|particle/rain_shower.xml
+	actor|props/flora/bush_tempe_a.xml
+	actor|props/flora/bush_tempe_sm.xml
+	actor|props/flora/bush_tempe_sm_dry.xml
+	actor|props/flora/cattails.xml
 	actor|props/flora/grass_temp_field.xml
 	actor|props/flora/grass_temp_field_brown.xml
 	actor|props/flora/grass_tropic_field.xml
@@ -271,19 +277,28 @@ ignored_0_ad_template_names = {
 	birds/buzzard
 	gaia/fish/generic
 	gaia/fruit/berry_01
+	gaia/treasure/food_bin
+	gaia/treasure/food_persian_big
+	gaia/treasure/food_persian_small
 	gaia/tree/bush_temperate
 	skirmish/structures/iber_wall_long
 	skirmish/structures/iber_wall_medium
 	skirmish/structures/iber_wall_short
 	skirmish/units/special_starting_unit
 	structures/fence_long
+	structures/uffington_horse
 }
 
 0_ad_template_resource_amounts = {
+	gaia/ore/temperate_01 = 50000
 	gaia/ore/temperate_large = 50000
 	gaia/rock/mediterranean_large = 50000
 	gaia/rock/temperate_large = 50000
 	gaia/rock/temperate_large_02 = 50000
+	gaia/rock/temperate_large_03 = 50000
+	gaia/treasure/shipwreck = 5000
+	gaia/treasure/shipwreck_ram_bow = 5500
+	gaia/treasure/stone_pile_granite = 2000
 }
 
 0_ad_water_height_multiplier = 80

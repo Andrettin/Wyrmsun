@@ -5,4 +5,8 @@ temple = {
 	conditions = {
 		unit_class = lumber_mill
 	}
+	
+	0_ad_template_names = {
+		structures/stonehenge
+	}
 }

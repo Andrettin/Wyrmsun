@@ -11,5 +11,6 @@ unit_stone_deposit = {
 		gaia/rock/mediterranean_large
 		gaia/rock/temperate_large
 		gaia/rock/temperate_large_02
+		gaia/rock/temperate_large_03
 	}
 }
