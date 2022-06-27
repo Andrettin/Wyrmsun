@@ -24,3 +24,25 @@ minor_building_site = {
 		}
 	}
 }
+
+minor_building_site_simple = {
+	image_file = "buildings/sites/minor_building_construction_site.png"
+	frame_size = { 64 64 }
+	frames = {
+		{
+			percent = 0
+			image_type = construction
+			frame = 0
+		}
+		{
+			percent = 16
+			image_type = construction
+			frame = 1
+		}
+		{
+			percent = 33
+			image_type = construction
+			frame = 2
+		}
+	}
+}
