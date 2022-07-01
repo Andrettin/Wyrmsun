@@ -329,24 +329,6 @@ DefineSite("soissons", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("toulon", {
-	Name = "Toulon",
-	MapTemplate = "old_earth",
-	Position = {3974, 1065},
-	CulturalNames = {
-		"frankish", "Tolo",
-		"french", "Toulon"
-	},
-	HistoricalOwners = {
-		561, "burgundia", -- Tolo went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Toulon was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		561, 0, "farm"
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("tours", {
 	Name = "Tours",
 	MapTemplate = "old_earth",

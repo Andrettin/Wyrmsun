@@ -1,0 +1,10 @@
+vichy = {
+	name = "Vichy"
+	map_template = earth
+	geocoordinate = { 3.41668005231 46.11714499820 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		france
+		gaul
+	}
+}

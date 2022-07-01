@@ -1,0 +1,10 @@
+lorient = {
+	name = "Lorient"
+	map_template = earth
+	geocoordinate = { -3.36657515605 47.75040447900 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		france
+		gaul
+	}
+}

@@ -1,0 +1,24 @@
+toulon = {
+	name = "Toulon"
+	map_template = earth
+	geocoordinate = { 5.91882156569 43.13418645070 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	cultural_names = {
+		frankish = "Tolo"
+	}
+	regions = {
+		france
+		gaul
+	}
+	
+	history = {
+		561 = {
+			owner = burgundia #Tolo went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
+			building_classes += farm
+		}
+		
+		1789 = {
+			owner = france #Toulon was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
+		}
+	}
+}

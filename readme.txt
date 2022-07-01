@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - The settlements in the Lorraine Plain map are now settlements which are actually in Lorraine.
 - Added the Bordeaux and Clermont settlement sites for the Earth scenario map, and updated the predefined settlement territories accordingly.
+- Added many building sites in France, for the Earth scenario map.
 
 * Miscellaneous
 - Improved the performance of the database parsing.

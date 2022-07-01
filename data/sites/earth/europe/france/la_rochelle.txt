@@ -1,0 +1,10 @@
+la_rochelle = {
+	name = "La Rochelle"
+	map_template = earth
+	geocoordinate = { -1.14999210754 46.16665102040 } #from Natural Earth
+	base_unit_type = unit_minor_building_site #should be a coastal building site instead, when those are implemented
+	regions = {
+		france
+		gaul
+	}
+}

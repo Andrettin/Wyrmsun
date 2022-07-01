@@ -1,0 +1,10 @@
+saint_etienne = {
+	name = "Saint-Etienne" #"Saint-Étienne"
+	map_template = earth
+	geocoordinate = { 4.38003210310 45.43039105130 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		france
+		gaul
+	}
+}
