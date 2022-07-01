@@ -6,7 +6,7 @@ arverni_warriors = {
 	history = {
 		-71 = {
 			active = true
-			faction = arverni_tribe
+			faction = arvernia
 			location = clermont
 		}
 		
@@ -24,7 +24,7 @@ arverni_archers = {
 	history = {
 		-71 = {
 			active = true
-			faction = arverni_tribe
+			faction = arvernia
 			location = clermont
 		}
 		

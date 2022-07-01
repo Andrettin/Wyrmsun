@@ -22,7 +22,7 @@ suebi_tribe = {
 			}
 			
 			diplomacy_state = {
-				faction = arverni_tribe
+				faction = arvernia
 				state = alliance
 			}
 			

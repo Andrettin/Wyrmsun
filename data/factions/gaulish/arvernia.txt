@@ -1,11 +1,14 @@
-sequania = {
-	name = "Sequania"
-	adjective = "Sequani"
+arvernia = {
+	name = "Arvernia"
+	adjective = "Arverni"
 	civilization = gaulish
 	type = polity
-	color = pink
+	color = blue
 	default_tier = duchy
 	default_government_type = tribe
+	core_settlements = {
+		clermont
+	}
 	
 	history = {
 		-71 = {
@@ -15,11 +18,6 @@ sequania = {
 			diplomacy_state = {
 				faction = aeduia
 				state = war
-			}
-			
-			diplomacy_state = {
-				faction = arvernia
-				state = alliance
 			}
 		}
 	}

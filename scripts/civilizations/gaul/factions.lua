@@ -25,17 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("arverni-tribe", {
-	Name = "Arverni Tribe",
-	Adjective = "Arverni",
-	Civilization = "gaul",
-	Type = "tribe",
-	Color = "blue",
-	HistoricalDiplomacyStates = {
-		-71, "aeduia", "war" -- the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
-	}
-})
-
 DefineFaction("caerasi-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 223.
 	Name = "Caerasi Tribe",
 	Adjective = "Caesari",

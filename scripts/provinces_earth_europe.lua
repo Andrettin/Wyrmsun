@@ -121,13 +121,13 @@ DefineProvince("Aquitaine", {
 	},
 --	SettlementLocation = {484, 131}, -- Toulouse
 	Claims = {
-		"gaul", "arverni-tribe"
+		"gaul", "arvernia"
 --		"french", "france"
 	},
 	HistoricalOwners = {
 		-- The Suebic king Ariovistus enters Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
 		-- The Arverni inhabited Aquitania; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-		-71, "gaul", "arverni-tribe",
+		-71, "gaul", "arvernia",
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		412, "goth", "visigothia", -- The Visigoths migrated to Aquitaine in 412 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		507, "frankish", "francia", -- political situation in 507-534 in Europe; Aquitania conquered by the Franks in 507; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.

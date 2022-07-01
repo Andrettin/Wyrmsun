@@ -39,9 +39,9 @@ local TeutonEvents = {
 				and ProvinceHasBorderWith(WorldMapProvinces.Baden, WorldMapProvinces.Alsace)
 				and ProvinceHasBorderWith(WorldMapProvinces.Alsace, WorldMapProvinces.FrancheComte)
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "aeduia") == "peace"
-				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "arverni-tribe") == "peace"
+				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "arvernia") == "peace"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "sequania") == "peace"
-				and GetFactionDiplomacyState("celt", "arverni-tribe", "celt", "aeduia") == "war"
+				and GetFactionDiplomacyState("celt", "arvernia", "celt", "aeduia") == "war"
 				and GetFactionDiplomacyState("celt", "sequania", "celt", "aeduia") == "war"
 			) then
 				return true
@@ -65,9 +65,9 @@ local TeutonEvents = {
 			if (
 				EventFaction.Name == "suebi_tribe"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "aeduia") == "war"
-				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "arverni-tribe") == "peace"
+				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "arvernia") == "peace"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "sequania") == "peace"
-				and GetFactionDiplomacyState("celt", "arverni-tribe", "celt", "aeduia") == "war"
+				and GetFactionDiplomacyState("celt", "arvernia", "celt", "aeduia") == "war"
 				and GetFactionDiplomacyState("celt", "sequania", "celt", "aeduia") == "war"
 				and GetProvinceOwner("Franche Comte") == "sequania"
 				and GetProvinceOwner("Burgundy") == "aeduia"

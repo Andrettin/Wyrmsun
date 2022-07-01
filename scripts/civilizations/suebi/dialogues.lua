@@ -37,10 +37,10 @@ DefineDialogue("ariovistus-claims-victory-over-the-aedui", {
 					SetSharedVision(trigger_player, false, GetFactionPlayer("sequania"))
 					SetSharedVision(GetFactionPlayer("sequania"), false, trigger_player)
 					
-					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("arverni-tribe"))
-					SetDiplomacy(GetFactionPlayer("arverni-tribe"), "enemy", trigger_player)
-					SetSharedVision(trigger_player, false, GetFactionPlayer("arverni-tribe"))
-					SetSharedVision(GetFactionPlayer("arverni-tribe"), false, trigger_player)
+					SetDiplomacy(trigger_player, "enemy", GetFactionPlayer("arvernia"))
+					SetDiplomacy(GetFactionPlayer("arvernia"), "enemy", trigger_player)
+					SetSharedVision(trigger_player, false, GetFactionPlayer("arvernia"))
+					SetSharedVision(GetFactionPlayer("arvernia"), false, trigger_player)
 				end
 			}
 		}
