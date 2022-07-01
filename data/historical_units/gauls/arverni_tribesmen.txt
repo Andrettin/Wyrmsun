@@ -1,0 +1,35 @@
+arverni_warriors = {
+	unit_class = infantry
+	quantity = 4
+	ai_active = false
+	
+	history = {
+		-71 = {
+			active = true
+			faction = arverni_tribe
+			location = clermont
+		}
+		
+		-61 = {
+			active = false
+		}
+	}
+}
+
+arverni_archers = {
+	unit_class = shooter
+	quantity = 2
+	ai_active = false
+	
+	history = {
+		-71 = {
+			active = true
+			faction = arverni_tribe
+			location = clermont
+		}
+		
+		-61 = {
+			active = false
+		}
+	}
+}

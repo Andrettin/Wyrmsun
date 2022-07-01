@@ -1,7 +1,7 @@
 #some troops to defend against the Suebi
 
 aedui_warriors = {
-	unit_type = unit_teuton_swordsman
+	unit_class = infantry
 	quantity = 6
 	
 	history = {
@@ -18,7 +18,7 @@ aedui_warriors = {
 }
 
 aedui_archers = {
-	unit_type = unit_teuton_archer
+	unit_class = shooter
 	quantity = 3
 	
 	history = {

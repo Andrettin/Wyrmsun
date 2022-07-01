@@ -1,7 +1,5 @@
-#some troops to defend against the Suebi, if necessary
-
 sequani_warriors = {
-	unit_type = unit_teuton_swordsman
+	unit_class = infantry
 	quantity = 4
 	
 	history = {
@@ -18,7 +16,7 @@ sequani_warriors = {
 }
 
 sequani_archers = {
-	unit_type = unit_teuton_archer
+	unit_class = shooter
 	quantity = 2
 	
 	history = {
