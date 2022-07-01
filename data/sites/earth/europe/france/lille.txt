@@ -1,0 +1,10 @@
+lille = {
+	name = "Lille"
+	map_template = earth
+	geocoordinate = { 3.08000809593 50.64996909490 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		france
+		gaul
+	}
+}

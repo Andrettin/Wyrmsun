@@ -1,0 +1,10 @@
+annecy = {
+	name = "Annecy"
+	map_template = earth
+	geocoordinate = { 6.11667028670 45.89997479150 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		france
+		gaul
+	}
+}

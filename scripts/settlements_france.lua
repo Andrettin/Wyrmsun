@@ -25,29 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineSite("amiens", {
-	Name = "Amiens",
-	MapTemplate = "old_earth",
-	Position = {3888, 913},
-	CulturalNames = {
-		"celt", "Samarobriva",
-		"frankish", "Ambiani",
-		"french", "Amiens", -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-		"gaul", "Samarobriva",
-		"latin", "Samarobriva" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
-	},
-	HistoricalOwners = {
-		395, "rome", -- Amiens' area was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		{486, 12, 30}, "francia", -- Amiens' area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "salia", -- Ambiani went to Chilperich when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Amiens was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		561, 0, "farm"
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("antibes", {
 	Name = "Antibes",
 	MapTemplate = "old_earth",
@@ -220,32 +197,6 @@ DefineSite("narbonne", {
 	Regions = {"france", "gaul"}
 })
 
-DefineSite("nice", {
-	Name = "Nice",
-	MapTemplate = "old_earth",
-	Position = {4006, 1051},
-	CulturalNames = {
-		"celt", "Nicaea",
-		"frankish", "Nicea",
-		"french", "Nice",
-		"gaul", "Nicaea",
-		"latin", "Nicaea"
-	},
-	HistoricalOwners = {
-		395, "rome", -- Nicaea was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		480, "visigothia", -- Nice's area became a part of the Kingdom of the Visigoths in 480; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		526, "ostrogothia", -- Nice was a part of the Kingdom of the Ostrogoths in 526; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
-		561, "burgundia", -- Nicea went to Gunthram when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1477, "savoy", -- Nice's area was a Savoyard possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
-		1494, "savoy", -- Nice was a possession of the Duchy of Savoy in 1494; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 90-91.
-		1789, "sardinia" -- Nice's area was a possession of the Kingdom of Sardinia in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		395, 0, "temple" -- Nicaea was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-	},
-	Regions = {"france", "gaul"}
-})
-
 DefineSite("rodez", {
 	Name = "Rodez",
 	MapTemplate = "old_earth",
@@ -261,27 +212,6 @@ DefineSite("rodez", {
 	HistoricalBuildings = {
 		561, 0, "farm"
 		-- Chief court of the salt tax existent in Rodez in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, p. 147.
-	},
-	Regions = {"france", "gaul"}
-})
-
-DefineSite("rouen", {
-	Name = "Rouen",
-	MapTemplate = "old_earth",
-	Position = {3871, 926},
-	CulturalNames = {
-		"frankish", "Rotomagus",
-		"french", "Rouen"
-	},
-	HistoricalOwners = {
-		395, "rome", -- Rouen was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		{486, 12, 30}, "francia", -- Rouen's area became a part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		561, "neustria", -- Rotomagus went to Charibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
-		1789, "france" -- Rouen was a possession of the Kingdom of France in 1789; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 146-147.
-	},
-	HistoricalBuildings = {
-		395, 768, "farm",
-		768, 0, "temple" -- Archbishopric existent in Rouen during 768-814 AD; Source: "Medieval Warfare V.2", 2013, pp. 8-9.
 	},
 	Regions = {"france", "gaul"}
 })
