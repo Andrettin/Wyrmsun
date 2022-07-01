@@ -58,6 +58,18 @@ germanic = {
 			acquired_upgrade_classes += iron_shield
 		}
 		
+		-100 = {
+			explored_settlements += amsterdam
+			explored_settlements += berlin
+			explored_settlements += danzig
+			explored_settlements += erfurt
+			explored_settlements += frankfurt
+			explored_settlements += hanover
+			explored_settlements += stettin
+			explored_settlements += stuttgart
+			explored_settlements += warsaw
+		}
+		
 		180 = {
 			#in the 180-400 AD period, Germanic peoples began forging long cavalry swords; Source: C. Scott Littleton, "The Germanic Sword in the Tree: Parallel Development or Diffusion?", The Heroic Age (11), 2008, p. 4.
 			acquired_upgrade_classes += melee_weapon_2 #longsword
