@@ -2,7 +2,8 @@ bordeaux = {
 	name = "Bordeaux"
 	map_template = earth
 	geocoordinate = { -0.59501306294 44.85001304020 } #from Natural Earth
-	base_unit_type = unit_building_site
+	base_unit_type = unit_settlement_site
+	color = { 229 227 133 }
 	cultural_names = {
 		celtic = "Burdigala"
 		frankish = "Burdegala"
@@ -17,6 +18,7 @@ bordeaux = {
 	history = {
 		-200 = {
 			owner = biturigia #part of the territory of the Bituriges in the 200-120 BC period; Source: Jeremy Black, "Atlas der Weltgeschichte", 2006, p. 179.
+			building_classes += town_hall
 		}
 		
 		161 = {
@@ -25,7 +27,7 @@ bordeaux = {
 		
 		395 = {
 			owner = rome #Bordeaux was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-			building_classes += temple #Bordeaux was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+			#building_classes += temple #Bordeaux was the seat of a bishopric in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
 		}
 		
 		481 = {
