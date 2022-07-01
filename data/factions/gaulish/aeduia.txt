@@ -1,0 +1,18 @@
+aeduia = {
+	name = "Aeduia"
+	adjective = "Aedui"
+	civilization = gaulish
+	type = polity
+	color = green
+	default_tier = duchy
+	default_government_type = tribe
+	core_settlements = {
+		dijon
+	}
+	
+	history = {
+		-71 = {
+			government_type = tribe
+		}
+	}
+}

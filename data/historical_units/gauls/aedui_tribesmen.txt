@@ -7,7 +7,7 @@ aedui_warriors = {
 	history = {
 		-71 = {
 			active = true
-			faction = aedui_tribe
+			faction = aeduia
 			location = dijon
 		}
 		
@@ -24,7 +24,7 @@ aedui_archers = {
 	history = {
 		-71 = {
 			active = true
-			faction = aedui_tribe
+			faction = aeduia
 			location = dijon
 		}
 		

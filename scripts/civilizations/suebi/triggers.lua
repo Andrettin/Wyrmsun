@@ -28,7 +28,7 @@
 AddTrigger("ariovistus-claims-victory-over-the-aedui",
 	function()
 		for i=0,(PlayerMax - 2) do
-			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("ariovistus", i) ~= nil and GetFactionExists("sequani-tribe") and GetFactionExists("arverni-tribe") and not GetFactionExists("aedui-tribe", true)) then
+			if (GetPlayerData(i, "TotalNumUnitsConstructed") > 0 and FindHero("ariovistus", i) ~= nil and GetFactionExists("sequani-tribe") and GetFactionExists("arverni-tribe") and not GetFactionExists("aeduia", true)) then
 				trigger_player = i
 				return true
 			end

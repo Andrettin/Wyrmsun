@@ -81,7 +81,7 @@ local EarthEvents = {
 		Description = "We have been completely beaten by the Suebi in the battlefield, but there may still be hope for us if the Romans intervene on our side. Shall we send Divitiacus to ask for their aid?",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "aedui-tribe"
+				EventFaction.Name == "aeduia"
 				and GetProvinceOwner("Provence") == "rome"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, Factions.suebi_tribe.Civilization, "suebi_tribe") == "war"
 				and GetFactionDiplomacyState("latin", "rome", Factions.suebi_tribe.Civilization, "suebi_tribe") == "peace"

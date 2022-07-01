@@ -732,7 +732,7 @@ if (GrandStrategyYear >= -58) then -- in 58 BC Caesar fought Ariovistus' Suebi a
 	GrandStrategyEvents.DivitiacusPleaForAssistance = nil
 	
 	-- gold (northern) Gallic currency, the gold staters, in existence when Caesar began his campaigns in Gaul; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, pp. 190-191.
---	SetFactionTechnology("celt", "aedui-tribe", "upgrade-teuton-coinage", true)
+--	SetFactionTechnology("celt", "aeduia", "upgrade-teuton-coinage", true)
 --	SetFactionTechnology("celt", "sequani-tribe", "upgrade-teuton-coinage", true)
 
 --	SetFactionTechnology("celt", "arverni-tribe", "upgrade-teuton-coinage", true) -- in southern Gaul there was currency, mostly of silver however; Source: F. Seebohm, "On the early currencies of the German Tribes", 1903, p. 191.

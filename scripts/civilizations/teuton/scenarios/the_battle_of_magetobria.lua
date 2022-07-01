@@ -31,7 +31,7 @@ if (LoadedGame == false) then
 	SetPlayerData(0, "Resources", "lumber", 5000)
 	SetPlayerData(0, "Resources", "stone", 2500)
 	SetAiType(0, "land-attack")
-	SetPlayerData(1, "Faction", "aedui-tribe")
+	SetPlayerData(1, "Faction", "aeduia")
 	SetPlayerData(1, "Resources", "copper", 2000)
 	SetPlayerData(1, "Resources", "lumber", 2000)
 	SetPlayerData(1, "Resources", "stone", 1000)
