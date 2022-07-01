@@ -2,7 +2,7 @@
 
 sequani_warriors = {
 	unit_type = unit_teuton_swordsman
-	quantity = 6
+	quantity = 4
 	
 	history = {
 		-71 = {
@@ -19,7 +19,7 @@ sequani_warriors = {
 
 sequani_archers = {
 	unit_type = unit_teuton_archer
-	quantity = 3
+	quantity = 2
 	
 	history = {
 		-71 = {
