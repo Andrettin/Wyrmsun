@@ -27,7 +27,7 @@ suebi_tribe = {
 			}
 			
 			diplomacy_state = {
-				faction = sequani_tribe
+				faction = sequania
 				state = alliance
 			}
 		}

@@ -1,0 +1,26 @@
+sequania = {
+	name = "Sequania"
+	adjective = "Sequani"
+	civilization = gaulish
+	type = polity
+	color = pink
+	default_tier = duchy
+	default_government_type = tribe
+	
+	history = {
+		-71 = {
+			government_type = tribe
+			
+			#the Suebic king Ariovistus entered Gaul at the request of the Arverni and the Sequani to fight the Aedui in 71 BC; Source: Dáithí Ó hÓgáin, "The Celts: A History", 2002, p. 138; Source: Heiko Steuer, "Warrior bands, war lords and the birth of tribes and states in the first millenium AD in Middle Europe", 2006, p. 230.
+			diplomacy_state = {
+				faction = aeduia
+				state = war
+			}
+			
+			diplomacy_state = {
+				faction = arverni_tribe
+				state = alliance
+			}
+		}
+	}
+}

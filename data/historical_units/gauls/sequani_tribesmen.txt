@@ -5,7 +5,7 @@ sequani_warriors = {
 	history = {
 		-71 = {
 			active = true
-			faction = sequani_tribe
+			faction = sequania
 			location = besancon
 		}
 		
@@ -22,7 +22,7 @@ sequani_archers = {
 	history = {
 		-71 = {
 			active = true
-			faction = sequani_tribe
+			faction = sequania
 			location = besancon
 		}
 		
