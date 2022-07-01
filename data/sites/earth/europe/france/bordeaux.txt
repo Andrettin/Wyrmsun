@@ -6,7 +6,7 @@ bordeaux = {
 	cultural_names = {
 		celtic = "Burdigala"
 		frankish = "Burdegala"
-		gaul = "Burdigala"
+		gaulish = "Burdigala"
 		latin = "Burdigala" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 	regions = {
@@ -15,6 +15,10 @@ bordeaux = {
 	}
 	
 	history = {
+		-200 = {
+			owner = biturigia #part of the territory of the Bituriges in the 200-120 BC period; Source: Jeremy Black, "Atlas der Weltgeschichte", 2006, p. 179.
+		}
+		
 		161 = {
 			owner = rome #Burdigala was in existence and under Roman ownership in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		}

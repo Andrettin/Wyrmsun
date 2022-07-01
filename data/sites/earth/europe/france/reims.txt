@@ -6,7 +6,7 @@ reims = {
 	cultural_names = {
 		celtic = "Durocortorum"
 		frankish = "Remi"
-		gaul = "Durocortorum"
+		gaulish = "Durocortorum"
 		latin = "Durocortorum" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 	regions = {

@@ -7,7 +7,7 @@ toulouse = {
 	cultural_names = {
 		celt = "Tolosa"
 		frankish = "Tolosa"
-		gaul = "Tolosa"
+		gaulish = "Tolosa"
 		latin = "Tolosa" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 	regions = {

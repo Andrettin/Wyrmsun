@@ -7,7 +7,7 @@ marseilles = {
 	cultural_names = {
 		celt = "Massilia"
 		frankish = "Massilia"
-		gaul = "Massilia"
+		gaulish = "Massilia"
 		greek = "Massilia"
 		latin = "Massilia" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}

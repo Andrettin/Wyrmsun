@@ -6,7 +6,7 @@ lyon = {
 	cultural_names = {
 		celtic = "Lugdunum"
 		frankish = "Lugdunum"
-		gaul = "Lugdunum"
+		gaulish = "Lugdunum"
 		latin = "Lugdunum" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 	regions = {

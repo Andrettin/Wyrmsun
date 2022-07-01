@@ -1,0 +1,18 @@
+biturigia = {
+	name = "Biturigia"
+	adjective = "Biturigian"
+	civilization = gaulish
+	type = polity
+	color = blue
+	default_tier = duchy
+	default_government_type = tribe
+	core_settlements = {
+		bordeaux
+	}
+	
+	history = {
+		-200 = {
+			government_type = tribe
+		}
+	}
+}

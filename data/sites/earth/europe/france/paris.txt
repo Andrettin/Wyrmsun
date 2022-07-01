@@ -7,7 +7,7 @@ paris = {
 	cultural_names = {
 		celt = "Lutetia"
 		frankish = "Parisii"
-		gaul = "Lutetia"
+		gaulish = "Lutetia"
 		latin = "Lutetia" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 	regions = {

@@ -6,7 +6,7 @@ vienna = {
 	color = { 42 3 128 }
 	cultural_names = {
 		celt = "Vindobona"
-		gaul = "Vindobona"
+		gaulish = "Vindobona"
 		latin = "Vindobona" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 		#teutonic = "Wien"
 	}

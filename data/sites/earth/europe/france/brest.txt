@@ -5,7 +5,7 @@ brest = {
 	base_unit_type = unit_copper_deposit #tin deposits nearby; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 2, p. 7.
 	cultural_names = {
 		celtic = "Gesocribate"
-		gaul = "Gesocribate"
+		gaulish = "Gesocribate"
 		latin = "Gesocribate" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 	regions = {
