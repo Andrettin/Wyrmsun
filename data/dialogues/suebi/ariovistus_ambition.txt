@@ -9,6 +9,8 @@ ariovistus_enters_gaul = {
 					site = dijon
 					ttl = 600
 				}
+				
+				center_on_site = dijon
 			}
 		}
 	}
