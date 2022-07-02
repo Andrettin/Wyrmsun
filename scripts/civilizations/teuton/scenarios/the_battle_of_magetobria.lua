@@ -42,7 +42,7 @@ if (LoadedGame == false) then
 	SetPlayerData(2, "Resources", "stone", 0)
 	SetAiType(2, "passive")
 	
-	SetPlayerData(GetFactionPlayer("Sequani Tribe"), "Allow", "unit-teuton-barracks", "F")
+	SetPlayerData(GetFactionPlayer("sequania"), "Allow", "unit-teuton-barracks", "F")
 	
 	if (GrandStrategy == false) then
 		unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
