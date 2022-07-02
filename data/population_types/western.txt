@@ -4,3 +4,10 @@ western_sailors = {
 	civilization_group = western
 	icon = human_sailor
 }
+
+western_scholars = {
+	name = "Scholars"
+	population_class = scholars
+	civilization_group = western
+	icon = human_scholar
+}

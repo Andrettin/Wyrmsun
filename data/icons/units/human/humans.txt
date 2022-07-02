@@ -15,3 +15,7 @@ western_peasant_female = {
 human_sailor = {
 	file = "icons/units/human/sailor.png"
 }
+
+human_scholar = {
+	file = "icons/units/human/scholar.png"
+}
