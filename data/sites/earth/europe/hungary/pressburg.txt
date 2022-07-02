@@ -13,7 +13,9 @@ pressburg = {
 	
 	history = {
 		-5500 = {
-			owner = linearware_tribe #Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+			#part of the Linear Pottery culture in the 7000-2000 BC period; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+			#the people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, so they presumably arrived in Slovakia at a similar time; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
+			owner = linearware_tribe
 			building_classes += town_hall
 		}
 		

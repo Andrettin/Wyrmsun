@@ -9,9 +9,13 @@ barcelona = {
 	}
 	
 	history = {
+		-7000 = {
+			owner = cardialware_tribe #part of the Cardial Pottery culture in the 7000-2000 BC period; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+			building_classes += town_hall
+		}
+		
 		-201 = {
 			owner = rome #acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-			building_classes += town_hall
 		}
 		
 		395 = {

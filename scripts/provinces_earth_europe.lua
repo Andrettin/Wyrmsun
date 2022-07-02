@@ -152,26 +152,7 @@ DefineProvince("Aragon", {
 	CulturalNames = {
 		"latin", "Hither Baetica"
 	},
-	FactionCulturalNames = {
-		"portuguese", "portugal", "Aragon",
-		"castillian", "spain", "Aragon"
-	},
 --	SettlementLocation = {477, 137}, -- Zaragoza
-	Claims = {
-		"basque", "cardialware-tribe"
-	},
-	HistoricalOwners = {
-		-7000, "basque", "cardialware-tribe", -- Cardial Pottery culture existed in the eastern Iberian coast between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-201, "latin", "rome", -- Hither Baetica acquired by Rome in 201 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		486, "goth", "visigothia", -- Kingdom of the Visigoths; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-		1560, "castillian", "spain" -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
-	},
-	HistoricalCultures = {
-		-7000, "basque" -- Cardial Pottery culture existed in the eastern Iberian coast between 7000 and 2000 BC; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-	},
-	HistoricalClaims = {
-		-201, "latin", "rome"
-	},
 	HistoricalModifiers = {
 		1354, "upgrade-university", true, -- Major university founded in Huesca in 1354; Source: "The Cambridge Modern History Atlas", 1912, p. 9, Atlas de História Mundial, 2001, p. 144; Source: Enrique Martínez Ruiz, Consuelo Maqueda, "Atlas Histórico de España I", 2000, p. 225.
 		1483, "upgrade-university", true, -- University founded in Palma in 1483; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
@@ -448,31 +429,18 @@ DefineProvince("Bohemia", {
 		"slav", "Bohemia",
 		"teuton", "Bohemia" -- Böhmen
 	},
-	FactionCulturalNames = {
-		"suebi", "marcomannia", "Marcomannia",
-		"suebi", "suebi_tribe", "Marcomannia"
-	},
 --	SettlementLocation = {520, 113}, -- Prague
 	Claims = {
-		"basque", "linearware-tribe",
 		"gaul", "boii-tribe",
 		"slav", "bohemia",
 		"suebi", "marcomannia",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-5500, "basque", "linearware-tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-400, "gaul", "boii-tribe", -- Boii attested c. 400 BC; Source: John T. Koch, "Celtic Culture: Aberdeen breviary-celticism", 2006, pp. 223-224.
-		-9, "suebi", "marcomannia", -- Marbod, king of the Suebic tribe of the Marcomanni, conquers Bohemia
-		526, "teuton", "bavaria", -- political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		788, "slav", "bohemia", -- (Slavic) Bohemians inhabited Bohemia in 788; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
-		919, "teuton", "holy-rome", -- Duchy of Bohemia; political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		1560, "teuton", "austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
 	},
 	HistoricalCultures = {
-		-5500, "basque",
-		-400, "celt",
-		-9, "teuton",
 		788, "slav" -- (Slavic) Bohemians inhabited Bohemia in 788; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 611.
 	},
 	HistoricalSettlementBuildings = {

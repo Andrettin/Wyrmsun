@@ -9,9 +9,15 @@ frankfurt = {
 	}
 	
 	history = {
+		-5500 = {
+			#part of the Linear Pottery culture in the 7000-2000 BC period; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+			#the people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
+			owner = linearware_tribe
+			building_classes += town_hall
+		}
+		
 		486 = {
 			owner = francia #part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
-			building_classes += town_hall
 		}
 		
 		814 = {

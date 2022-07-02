@@ -12,9 +12,15 @@ prague = {
 	}
 	
 	history = {
+		-5500 = {
+			#part of the Linear Pottery culture in the 7000-2000 BC period; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+			#the people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC, so they presumably arrived in Bohemia at a similar time; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
+			owner = linearware_tribe
+			building_classes += town_hall
+		}
+		
 		-9 = {
 			owner = marcomannia #Marbod, king of the Suebic tribe of the Marcomanni, conquered Bohemia in 9 BC
-			building_classes += town_hall
 		}
 		
 		395 = {
