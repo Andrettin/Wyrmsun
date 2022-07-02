@@ -1,6 +1,6 @@
 the_first_marcomannic_war = {
 	name = "The First Marcomannic War"
-	icon = icon_suebi_swordsman
+	icon = suebi_swordsman
 	description = "Complete the The Sack of Iuvavum and The Razing of Opitergium missions."
 	player_color = orange
 	required_quests = {

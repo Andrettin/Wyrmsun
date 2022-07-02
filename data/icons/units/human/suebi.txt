@@ -1,0 +1,9 @@
+suebi_swordsman = {
+	file = "icons/units/human/suebi/swordsman.png"
+	frame = 0
+}
+
+suebi_swordsman_gray_hair = {
+	file = "icons/units/human/suebi/swordsman.png"
+	frame = 1
+}

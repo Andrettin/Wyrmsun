@@ -27,7 +27,7 @@
 
 DefineQuest("the-battle-of-magetobria", {
 	Name = "The Battle of Magetobria",
-	Icon = "icon-suebi-swordsman",
+	Icon = "suebi_swordsman",
 	Description = "Under the leadership of Ariovistus, we have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui, and now an Aedui army approaches the Sequani settlement of Magetobria...\n\nMap: Belfort",
 	World = "earth",
 	Civilization = "suebi",
@@ -52,7 +52,7 @@ DefineQuest("the-home-of-the-boii", {
 
 DefineQuest("the-first-marcomannic-war", {
 	Name = "The First Marcomannic War",
-	Icon = "icon-suebi-swordsman",
+	Icon = "suebi_swordsman",
 	Civilization = "suebi",
 	PlayerColor = "orange",
 	FailEffects = function(s)

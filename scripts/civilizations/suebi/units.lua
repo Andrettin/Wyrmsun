@@ -53,7 +53,7 @@ DefineUnitType("unit-suebi-swordsman", {
 		{"layer", "weapon", "file", "teuton/units/long_iron_sword.png"}
 	},
 	Animations = "animations-melee-unit-new",
-	Icon = "icon-suebi-swordsman",
+	Icon = "suebi_swordsman",
 	Armor = 0, BasicDamage = 11, Accuracy = 12, -- -2 armor, +2 damage, +2 accuracy
 	Points = 60, -- +10 points
 	DefaultEquipment = {

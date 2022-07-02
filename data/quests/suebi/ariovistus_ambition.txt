@@ -1,6 +1,6 @@
 ariovistus_ambition = {
 	name = "Ariovistus' Ambition"
-	icon = icon_suebi_swordsman
+	icon = suebi_swordsman
 	player_color = black
 	description = "Under the leadership of Ariovistus, the Suebi have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui. The Suebi leader has, however, greater ambitions than his allies imagine... he wishes to conquer the entirety of Gaul."
 	unobtainable = true

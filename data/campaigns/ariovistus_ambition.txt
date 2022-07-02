@@ -5,6 +5,6 @@ ariovistus_ambition = {
 	start_date = -71.7
 	map_templates = { earth }
 	quest = ariovistus_ambition
-	icon = icon_suebi_swordsman
+	icon = suebi_swordsman
 	hidden = true
 }

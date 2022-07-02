@@ -2,5 +2,5 @@ suebi_soldiers = {
 	name = "Soldiers"
 	population_class = soldiers
 	civilization = suebi
-	icon = icon_suebi_swordsman
+	icon = suebi_swordsman
 }
