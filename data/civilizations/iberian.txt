@@ -1,4 +1,19 @@
 iberian = {
 	language = iberian
 	default_color = brown
+	
+	personal_names = {
+		male = {
+			"Budar"
+			"Busadines"
+			"Indibil"
+			"Korbis"
+			"Korribilo"
+			"Mandonio"
+		}
+		
+		female = {
+			"Himilce"
+		}
+	}
 }

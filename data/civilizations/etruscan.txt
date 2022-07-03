@@ -6,6 +6,28 @@ etruscan = {
 	visible = false
 	playable = false
 	
+	personal_names = {
+		male = {
+			"Aruns"
+			"Lars" #"Lars Porsena"
+			"Lars" #"Lars Tolumnius"
+			"Osiniu"
+			"Tarquinius"
+			"Thefarie" #"Thefarie Velianas"
+			"Tyrsenos"
+		}
+		
+		female = {
+			"Sleparis"
+		}
+	}
+	
+	surnames = {
+		"Porsena" #"Lars Porsena"
+		"Tolumnius" #"Lars Tolumnius"
+		"Velianas" #"Thefarie Velianas"
+	}
+	
 	history = {
 		-750 = {
 			#the usage of an arch in construction was first properly developed by the Etruscans c. 750 BC; Source: Isaac Asimov, "Cronologia das Ciências e das Descobertas", 1993, pp. 93-94.
