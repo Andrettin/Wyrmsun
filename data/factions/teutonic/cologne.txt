@@ -7,6 +7,9 @@ cologne = {
 	default_tier = duchy #Cologne was an archbishopric in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
 	icon = icon_flag_five_black_birds_on_purple
 	upgrade = upgrade_faction_cologne
+	core_settlements = {
+		cologne
+	}
 	conditions = {
 		scripted_condition = is_civilized
 		unit_type = unit_teuton_temple

@@ -1336,39 +1336,14 @@ DefineProvince("Franche Comte", {
 
 DefineProvince("Franconia", {
 	World = "earth",
-	CulturalNames = {
-		"teuton", "Franconia"
-	},
-	FactionCulturalNames = {
-		"frankish", "francia", "Franconia",
-		"teuton", "netherlands", "Franconia"
-	},
 --	SettlementLocation = {508, 114}, -- Würzburg
-	Claims = {
-		"basque", "linearware-tribe",
-		"gaul", "turone-tribe",
-		"suebi", "hermunduri-tribe",
-		"teuton", "thuringia",
-		"teuton", "franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
-		"teuton", "holy-rome"
-	},
 	HistoricalOwners = {
-		-5500, "basque", "linearware-tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-264, "suebi", "hermunduri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		-27, "gaul", "turone-tribe", -- Political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		161, "suebi", "hermunduri-tribe", -- The area was inhabited by the Hermunduri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		507, "teuton", "thuringia", -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		531, "frankish", "francia", -- Conquest of the Thuringian lands by Francia in 531 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
-		919, "teuton", "holy-rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		531, "frankish", "francia" -- Conquest of the Thuringian lands by Francia in 531 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	},
 	HistoricalClaims = {
 		531, "frankish", "francia"
-	},
-	HistoricalCultures = {
-		-5500, "basque",
-		-264, "teuton",
-		-27, "celt",
-		161, "teuton"
 	}
 })
 

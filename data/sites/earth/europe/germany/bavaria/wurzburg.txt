@@ -2,14 +2,46 @@ wurzburg = {
 	name = "Wurzburg" #"Würzburg"
 	map_template = earth
 	geocoordinate = { 9.95002803411 49.80043438630 } #from Natural Earth
-	base_unit_type = unit_building_site
+	base_unit_type = unit_settlement_site
+	color = { 53 10 147 }
 	regions = {
 		bavaria
 	}
 	
 	history = {
+		-5500 = {
+			#part of the Linear Pottery culture in the 7000-2000 BC period; Source: "Atlas de História Mundial", 2001, pp. 40-41.
+			#the people of the Linear Pottery culture arrived in northern Poland and Germany about 5500 BC; Source: "Ancient Europe 8000 B.C.-A.D. 1000: Encyclopedia of the Barbarian World", 2004, vol. 1, p. 139.
+			owner = linearware_tribe
+			building_classes += town_hall
+		}
+		
+		-264 = {
+			owner = hermunduri_tribe #part of Hermunduri territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		}
+		
+		-27 = {
+			owner = turone_tribe #part of the territory of the Turones at (presumably) the time of Augustus
+		}
+		
+		395 = {
+			owner = burgundy #part of Burgundian territory c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		486 = {
+			owner = thuringia #part of Thuringian territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		814 = {
+			owner = francia #part of the Carolingian Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
+		919 = {
+			owner = franconia #part of the Duchy of Franconia in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
 		1402 = {
-			building_classes += university #University founded in Wurzburg in 1402; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+			#building_classes += university #University founded in Wurzburg in 1402; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
 		}
 	}
 }
