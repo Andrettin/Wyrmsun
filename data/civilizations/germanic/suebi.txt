@@ -1,6 +1,41 @@
 suebi = {
+	name = "Suebi"
+	parent_civilization = teutonic
+	group = west_germanic
+	language = old_high_german
+	visible = true
 	default_color = black
+	upgrade = upgrade_suebi_civilization
+	description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."
+	develops_from = {
+		germanic
+	}
 	conditions = {
 		upgrade_class = ironworking
+	}
+	
+	personal_names = {
+		male = {
+			#Suebi kings in Hispania
+			"Andeka"
+			"Aiulf" #or "Ajulf"
+			"Arjamir"
+			"Eborik"
+			"Framta"
+			"Frumar"
+			"Heremigarius" #or "Harjamigarjas"
+			"Hermeric" #or "Hermenerik"
+			"Malarik"
+			"Maldras"
+			"Miro"
+			"Rechiar" #or "Rexjar"
+			"Rechila" #or "Rexwila"
+			"Rechimund" #or "Reximund"
+			"Remismund"
+			"Theudemir"
+			"Theudemund"
+			"Weremund"
+			"Xararik"
+		}
 	}
 }

@@ -295,18 +295,6 @@ DefineCivilization("frankish", {
 	}
 })
 
-DefineCivilization("suebi", {
-	Display = "Suebi",
-	Visible = true,
-	Group = "west_germanic",
-	Language = "old-high-german",
-	ParentCivilization = "teuton",
-	Adjective = "Suebi",
-	CivilizationUpgrade = "upgrade-suebi-civilization",
-	DevelopsFrom = {"germanic"},
-	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."
-})
-
 DefineCivilization("briton", {
 	--[[
 	SettlementNames = {
