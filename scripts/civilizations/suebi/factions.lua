@@ -39,7 +39,7 @@ DefineFaction("buri-tribe", {
 	Name = "Buri Tribe",
 	Adjective = "Buri",
 	Civilization = "suebi", -- accurate?
-	ParentFaction = "suebi_tribe", -- accurate?
+	ParentFaction = "suebia", -- accurate?
 	Type = "tribe",
 	Color = "violet",
 	FactionUpgrade = "upgrade-faction-buri-tribe",

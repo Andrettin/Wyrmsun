@@ -31,7 +31,7 @@ local TeutonEvents = {
 		Description = "The Gaulish tribes of the Sequani and the Arverni are embroiled in a war with the Aedui. The Sequani have come to us asking to enlist our help in their war.",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "suebi_tribe"
+				EventFaction.Name == "suebia"
 				and GetProvinceOwner("Brandenburg") == EventFaction.Name
 --				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Franconia)
 				and ProvinceHasBorderWith(WorldMapProvinces.Brandenburg, WorldMapProvinces.Bavaria)
@@ -63,7 +63,7 @@ local TeutonEvents = {
 		Description = "Under the leadership of Ariovistus, we have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui, and now an Aedui army approaches the Sequani settlement of Magetobria...",
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "suebi_tribe"
+				EventFaction.Name == "suebia"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "aeduia") == "war"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "arvernia") == "peace"
 				and GetFactionDiplomacyState(EventFaction.Civilization, EventFaction.Name, "celt", "sequania") == "peace"
@@ -80,15 +80,15 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebi_tribe" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebia" and wyr.preferences.AutomaticBattles == false) then
 					if (GameResult == GameVictory) then
-						AcquireProvince(WorldMapProvinces.Alsace, "suebi_tribe")
+						AcquireProvince(WorldMapProvinces.Alsace, "suebia")
 						SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 6) -- to give the Aedui something of a defense
 					elseif (GameResult == GameDefeat) then
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebi_tribe" or wyr.preferences.AutomaticBattles)) then
-					AcquireProvince(WorldMapProvinces.Alsace, "suebi_tribe")
-					if (GrandStrategyFaction.Name ~= "suebi_tribe") then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebia" or wyr.preferences.AutomaticBattles)) then
+					AcquireProvince(WorldMapProvinces.Alsace, "suebia")
+					if (GrandStrategyFaction.Name ~= "suebia") then
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 4) -- to give them something of a defense
 					end
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
@@ -106,7 +106,7 @@ local TeutonEvents = {
 		},
 		Conditions = function(s)
 			if (
-				EventFaction.Name == "suebi_tribe"
+				EventFaction.Name == "suebia"
 				and GetProvinceOwner("Bohemia") == "boii-tribe"
 			) then
 				return true
@@ -119,22 +119,22 @@ local TeutonEvents = {
 			function(s)
 				AcquireProvince(WorldMapProvinces.Bohemia, "marcomannia")
 				SetProvinceHero("Bohemia", "Marbod", 2)
-				AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomannia.Civilization, "marcomannia")
+				AcquireFactionTechnologies(Factions.suebia.Civilization, Factions.suebia.Name, Factions.marcomannia.Civilization, "marcomannia")
 				SetProvinceCivilization("Bohemia", "teuton")
 			end,
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebi_tribe" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebia" and wyr.preferences.AutomaticBattles == false) then
 					GrandStrategyFaction = Factions.marcomannia
 					SetPlayerFaction("teuton", "marcomannia")
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Bohemia, "marcomannia")
-						AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomannia.Civilization, "marcomannia")
+						AcquireFactionTechnologies(Factions.suebia.Civilization, Factions.suebia.Name, Factions.marcomannia.Civilization, "marcomannia")
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebi_tribe" or wyr.preferences.AutomaticBattles)) then
+				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebia" or wyr.preferences.AutomaticBattles)) then
 					AcquireProvince(WorldMapProvinces.Bohemia, "marcomannia")
 					SetProvinceHero("Bohemia", "Marbod", 2)
 					SetProvinceCivilization("Bohemia", "teuton")
-					AcquireFactionTechnologies(Factions.suebi_tribe.Civilization, Factions.suebi_tribe.Name, Factions.marcomannia.Civilization, "marcomannia")
+					AcquireFactionTechnologies(Factions.suebia.Civilization, Factions.suebia.Name, Factions.marcomannia.Civilization, "marcomannia")
 
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GrandStrategyFaction = Factions.marcomannia

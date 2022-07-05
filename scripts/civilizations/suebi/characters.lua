@@ -90,10 +90,10 @@ DefineCharacter("hermeric", { -- Suebic chieftain who sacked central Galicia
 	Gender = "male",
 	Type = "unit-teuton-heroic-swordsman", -- chieftain
 	Civilization = "suebi",
-	Faction = "suebi_tribe",
+	Faction = "suebia",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "suebi_tribe" or GetPlayerData(trigger_player, "Faction") == "galicia") then
+		if (GetPlayerData(trigger_player, "Faction") == "suebia" or GetPlayerData(trigger_player, "Faction") == "galicia") then
 			return true
 		end
 		return false
@@ -108,7 +108,7 @@ DefineCharacter("rechilas", { -- Suebic chieftain who defeated a Roman army led 
 	Faction = "galicia",
 	Deities = {"christian-god"},
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "Faction") == "suebi_tribe" or GetPlayerData(trigger_player, "Faction") == "galicia") then
+		if (GetPlayerData(trigger_player, "Faction") == "suebia" or GetPlayerData(trigger_player, "Faction") == "galicia") then
 			return true
 		end
 		return false

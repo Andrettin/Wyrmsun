@@ -33,11 +33,11 @@ local LatinEvents = {
 		Options = {"~!Accept", "~!Decline"},
 		OptionEffects = {
 			function(s)
-				DeclareWar(EventFaction.Name, "suebi_tribe")
+				DeclareWar(EventFaction.Name, "suebia")
 			end,
 			function(s)
 			end
 		},
-		OptionTooltips = {"War with the Suebi Tribe", ""}
+		OptionTooltips = {"War with the Suebi", ""}
 	}
 }

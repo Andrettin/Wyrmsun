@@ -26,7 +26,7 @@
 --
 
 if (LoadedGame == false) then
-	SetPlayerData(0, "Faction", "suebi_tribe")
+	SetPlayerData(0, "Faction", "suebia")
 	SetPlayerData(0, "Resources", "copper", 5000)
 	SetPlayerData(0, "Resources", "lumber", 5000)
 	SetPlayerData(0, "Resources", "stone", 2500)
@@ -72,8 +72,8 @@ AddTrigger("the-battle-of-magetobria-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Suebi Tribe") and PlayerHasObjective(GetFactionPlayer("Suebi Tribe"), "- Defeat the Aedui") == false) then
-			player = GetFactionPlayer("Suebi Tribe")
+		if (GetFactionExists("suebia") and PlayerHasObjective(GetFactionPlayer("suebia"), "- Defeat the Aedui") == false) then
+			player = GetFactionPlayer("suebia")
 			return true
 		end
 		return false
@@ -98,8 +98,8 @@ AddTrigger("the-battle-of-magetobria-victory",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Suebi Tribe") and PlayerHasObjective(GetFactionPlayer("Suebi Tribe"), "- Defeat the Aedui") and GetNumRivals(GetFactionPlayer("Suebi Tribe")) == 0) then
-			player = GetFactionPlayer("Suebi Tribe")
+		if (GetFactionExists("suebia") and PlayerHasObjective(GetFactionPlayer("suebia"), "- Defeat the Aedui") and GetNumRivals(GetFactionPlayer("suebia")) == 0) then
+			player = GetFactionPlayer("suebia")
 			return true
 		end
 		return false

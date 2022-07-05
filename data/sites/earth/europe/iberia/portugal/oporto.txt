@@ -15,7 +15,7 @@ oporto = {
 		}
 		
 		411.12.31 = {
-			owner = suebi_tribe #Oporto's area was conquered by the Suebi in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
+			owner = suebia #Oporto's area was conquered by the Suebi in 411 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 45.
 		}
 		
 		486 = {

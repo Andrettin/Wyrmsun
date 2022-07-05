@@ -61,7 +61,10 @@ https://github.com/Andrettin/Wyrmsun
 - Added Stone Deposit and Stone Quarry (graphics by Jinn). These function similarly to metal deposits and mines, but provide stone instead.
 
 * Civilizations
-- Added more personal names for the Celts and the Suebi
+- Added more personal names for the Celts and the Suebi.
+
+* Factions
+- The Suebi Tribe is now a polity instead.
 
 * Maps
 - The settlements in the Lorraine Plain map are now settlements which are actually in Lorraine.

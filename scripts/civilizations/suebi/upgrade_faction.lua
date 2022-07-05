@@ -50,12 +50,6 @@ DefineModifier("upgrade-faction-quadi-tribe",
 	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-suebi-tribe",
-	{"Evasion", 2},
-	{"Points", 10},
-	{"apply-to", "unit-suebi-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
 DefineModifier("upgrade-faction-galicia",
 	{"BasicDamage", 2},
 	{"Points", 10},

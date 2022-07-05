@@ -15,7 +15,7 @@ berlin = {
 		}
 		
 		486 = {
-			owner = suebi_tribe #part of Suebic territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = suebia #part of Suebic territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		814 = {

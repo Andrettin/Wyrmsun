@@ -6,7 +6,7 @@ ariovistus_warriors = {
 	history = {
 		-71 = {
 			active = true
-			faction = suebi_tribe
+			faction = suebia
 			location = stuttgart
 		}
 		
@@ -31,7 +31,7 @@ ariovistus_reinforcements = {
 		-61 = {
 			#135,000 (15,000 + 120,000) Germanic warriors participated in Ariovistus' invasion of Gaul; Source: Caius Julius Caesar, "Caesar's Commentaries", 1915, Section XXXI.
 			active = true
-			faction = suebi_tribe
+			faction = suebia
 			location = strasbourg
 		}
 		

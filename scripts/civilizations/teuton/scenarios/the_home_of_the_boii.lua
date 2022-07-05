@@ -31,7 +31,7 @@ if (LoadedGame == false) then
 	SetPlayerData(2, "RaceName", "goth")
 	SetPlayerData(2, "Faction", "vandalia")
 	SetPlayerData(3, "RaceName", "suebi")
-	SetPlayerData(3, "Faction", "suebi_tribe")
+	SetPlayerData(3, "Faction", "suebia")
 	SetPlayerData(4, "RaceName", "teuton")
 	SetPlayerData(4, "Faction", "lombardy")
 	SetPlayerData(0, "Resources", "copper", 5000)
@@ -321,7 +321,7 @@ AddTrigger("the-home-of-the-boii-suebi-found",
 		end
 		if (PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii")) then
 			local uncount = 0
-			uncount = GetUnits(GetFactionPlayer("Suebi Tribe"))
+			uncount = GetUnits(GetFactionPlayer("suebia"))
 			for unit1 = 1,table.getn(uncount) do 
 				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Marcomanni Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
@@ -338,7 +338,7 @@ AddTrigger("the-home-of-the-boii-suebi-found",
 		local suebi_unit
 		
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Suebi Tribe"))
+		uncount = GetUnits(GetFactionPlayer("suebia"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 				local nearby_uncount = 0

@@ -43,7 +43,7 @@ if (LoadedGame == false) then
 	if (GrandStrategy == false) then
 		local rome_player = GetFactionPlayer("Rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-masonry", "R")
-		SetPlayerData(0, "Faction", "suebi_tribe")
+		SetPlayerData(0, "Faction", "suebia")
 		
 		unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
@@ -60,8 +60,8 @@ AddTrigger("moving-into-galicia-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Suebi Tribe") and PlayerHasObjective(GetFactionPlayer("Suebi Tribe"), "- Take Bracara Augusta") == false) then
-			player = GetFactionPlayer("Suebi Tribe")
+		if (GetFactionExists("suebia") and PlayerHasObjective(GetFactionPlayer("suebia"), "- Take Bracara Augusta") == false) then
+			player = GetFactionPlayer("suebia")
 			return true
 		end
 		return false
@@ -94,8 +94,8 @@ AddTrigger("moving-into-galicia-victory",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Suebi Tribe") and PlayerHasObjective(GetFactionPlayer("Suebi Tribe"), "- Take Bracara Augusta") and GetPlayerData(GetFactionPlayer("Rome"), "TotalNumUnitsConstructed") == 0) then
-			player = GetFactionPlayer("Suebi Tribe")
+		if (GetFactionExists("suebia") and PlayerHasObjective(GetFactionPlayer("suebia"), "- Take Bracara Augusta") and GetPlayerData(GetFactionPlayer("Rome"), "TotalNumUnitsConstructed") == 0) then
+			player = GetFactionPlayer("suebia")
 			return true
 		end
 		return false

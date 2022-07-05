@@ -1,7 +1,7 @@
 ariovistus_ambition = {
 	name = "Ariovistus' Ambition"
 	description = "Under the leadership of Ariovistus, the Suebi have crossed the Rhine to aid the Sequani and the Arverni in defeating the Aedui. The Suebi leader has, however, greater ambitions than his allies imagine... he wishes to conquer the entirety of Gaul."
-	faction = suebi_tribe
+	faction = suebia
 	start_date = -71.7
 	map_templates = { earth }
 	quest = ariovistus_ambition

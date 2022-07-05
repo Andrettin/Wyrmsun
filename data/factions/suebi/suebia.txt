@@ -1,11 +1,12 @@
-suebi_tribe = {
-	name = "Suebi Tribe"
+suebia = {
+	name = "Suebia"
 	adjective = "Suebi"
 	civilization = suebi
-	type = tribe
+	type = polity
 	color = black
 	default_tier = duchy
-	upgrade = upgrade_faction_suebi_tribe
+	default_government_type = tribe
+	upgrade = upgrade_faction_suebia
 	icon = icon_flag_green_lion_on_purple
 	description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."
 	core_settlements = {
@@ -30,6 +31,8 @@ suebi_tribe = {
 				faction = sequania
 				state = alliance
 			}
+			
+			government_type = tribe
 		}
 		
 		-55 = {
