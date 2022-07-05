@@ -1,3 +1,25 @@
 gael = {
+	name = "Gael"
+	parent_civilization = teutonic #so that it can use Teutonic buildings/units
+	group = gaelic
+	language = irish
+	visible = false
+	playable = false
 	default_color = green
+	
+	personal_names = {
+		male = {
+			"Aed" #Áed Róin
+			"Conall" #Conall Echlúath
+			"Conn" #Conn Cétchathac
+			"Mac Cairthinn" #Mac Cairthinn mac Coelboth
+			"Naomh" #Naomh Breandán
+			"Naomh" #Naomh Pádraig
+		}
+		
+		female = {
+			"Brigid" #Brigid ingen Cobthaig
+			"Iseabail" #Iseabail Ní Mheic Cailéin
+		}
+	}
 }

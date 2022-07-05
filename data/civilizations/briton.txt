@@ -1,4 +1,23 @@
 briton = {
+	name = "Briton"
+	parent_civilization = teutonic #so that it can use Teutonic buildings/units
 	group = brythonic
+	language = british
+	visible = false
+	playable = false
 	default_color = red
+	
+	personal_names = {
+		male = {
+			"Caratacos"
+			#"Cassivellaunus" #ancient Celt; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 137.
+			"Cassiwellaunos"
+			"Cunobelinos"
+		}
+		
+		female = {
+			"Boudica"
+			"Cartismandua"
+		}
+	}
 }

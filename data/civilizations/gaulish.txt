@@ -1,5 +1,25 @@
 gaul = {
+	name = "Gaulish"
 	aliases += gaulish
+	parent_civilization = teutonic #so that it can use Teutonic buildings/units
 	group = gaulish
+	language = gaulish
+	visible = false
+	playable = false
 	default_color = black
+	
+	personal_names = {
+		male = {
+			"Ambiorix"
+			"Brennus"
+			"Dumnorix"
+			"Leonnorius"
+			"Orgetorix"
+			"Vercingetorix"
+		}
+		
+		female = {
+			"Julia" #Julia Pacata
+		}
+	}
 }

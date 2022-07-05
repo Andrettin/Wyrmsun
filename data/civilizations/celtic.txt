@@ -1,5 +1,33 @@
 celt = {
+	name = "Celtic"
 	aliases += celtic
+	parent_civilization = germanic
 	group = celtic
+	language = proto_celtic
+	visible = true
+	playable = false
 	default_color = green
+	upgrade = upgrade_celtic_civilization
+	description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken."
+	
+	personal_names = {
+		male = {
+			"Arktorios" #Arthur Gernow
+			"Bolgios" #Bolgius
+			"Brennos" #Brennus
+			"Diwitiakos" #Divitiacus
+			"Keretrios" #Cerethrius
+			"Milesios" #Míl Espáine
+			"Noudentos" #Nuada Airgetlám
+			"Rigotamos" #Riothamus
+			"Talorgos" #Talorc
+			"Werkingetorix" #Vercingetorix
+			"Wiridomaros" #Viridomarus
+		}
+		
+		female = {
+			"Boudikka" #Boadicea
+			"Windoseibara" #Guinevere
+		}
+	}
 }

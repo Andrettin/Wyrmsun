@@ -50,21 +50,11 @@ DefineCivilization("germanic", {
 })
 
 DefineCivilization("celt", { -- has to be defined after the germanic civilization because it uses it as its parent civilization
-	Display = "Celtic",
-	Visible = true,
-	Language = "proto-celtic",
-	ParentCivilization = "germanic",
-	Adjective = "Celtic",
-	Playable = false,
-	CivilizationUpgrade = "upgrade-celtic-civilization",
-	Description = "During the late Stone Age, Indo-Europeans migrated from the Pontic steppes to a number of areas in Europe and beyond, displacing, mixing with, and assimilating previous populations. One group of Indo-Europeans spoke a dialect which would later develop into the Celtic and Italic languages. Celtic peoples occupied large swathes of Europe, from France to the Middle Danube. They had trade contacts with Greeks and Romans, and warred a number of times with the latter. Eventually, most Celts would be conquered and assimilated by other peoples, leaving only small areas where Celtic languages were still spoken.",
 	PersonalNames = {
 		"female", "Rigantona", -- "Rīgantonā"; Proto-Celtic version of the Welsh name "Rhiannon"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 124.
-		"male", "Cassivellaunus", -- ancient Celt; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 137.
 		"male", "Tigernonos", -- Proto-Celtic version of the Welsh name "Teyrnon"; means "great lord"; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 126.
 		
 		-- some Briton/Gaul names, so that the Celtic name list is bigger
-		"male", "Ambiorix",
 		"male", "Cativolcus",
 		"male", "Indutiomarus"
 	}
@@ -317,25 +307,7 @@ DefineCivilization("suebi", {
 	Description = "The Suebi were a powerful tribe in ancient Germania, battling the Romans a number of times. From the Suebi tribes such as the Marcomanni and the Quadi would originate. In the 5th century a group of Suebi settled and conquered Galicia, establishing a kingdom there."
 })
 
-DefineCivilization("gaul", {
-	Display = "Gaul",
-	Visible = false,
-	Language = "gaulish",
-	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
-	Adjective = "Gaul",
-	Playable = false
-})
-
 DefineCivilization("briton", {
-	Display = "Briton",
-	Visible = false,
-	Language = "british",
-	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
-	Adjective = "Briton",
-	Playable = false,
-	PersonalNames = {
-		"male", "Cassivellaunus", -- ancient Celt; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 137.
-	},
 	--[[
 	SettlementNames = {
 		"Moridunum" -- the modern Carmarthen; main settlement of the Demetae (ancient Briton people); Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
@@ -398,16 +370,6 @@ DefineCivilization("welsh", {
 		"Penfro", -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 		"Rhos" -- cantref (administrative division) of Dyfed; Source: Bernhard Maier (trans.), "Das Sagenbuch der Walisischen Kelten", 1999, p. 117.
 	}
-})
-
-DefineCivilization("gael", {
-	Display = "Gael",
-	Visible = false,
-	Group = "gaelic",
-	Language = "irish",
-	ParentCivilization = "teuton", -- so that it can use Teuton buildings/units
-	Adjective = "Gael",
-	Playable = false
 })
 
 DefineCivilization("latin", {

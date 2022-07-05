@@ -6,8 +6,8 @@ london = {
 	color = { 242 84 91 }
 	cultural_names = {
 		anglo_saxon = "Lunden" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
-		briton = "Londinium"
-		celtic = "Londinium"
+		briton = "Londinion"
+		celtic = "Londinion"
 		latin = "Londinium" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 51.
 	}
 	regions = {
