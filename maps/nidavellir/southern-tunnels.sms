@@ -315,7 +315,7 @@ unit = CreateUnit("unit-dwarven-sentry-tower", 3, {47, 48})
 unit = CreateUnit("unit-dwarven-sentry-tower", 3, {51, 48})
 
 if (LoadedGame == false) then
-	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)
+	CreateNeutralBuildings("unit_mercenary_camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)
 
 	CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)
 	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)

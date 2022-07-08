@@ -826,7 +826,7 @@ function StandardTriggers()
 		if (GetArrayIncludes(wyr.preferences.TipsShown, "Mercenary Camp") == false) then
 			AddTrigger("tip-mercenary-camp",
 				function()
-					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-mercenary-camp") then
+					if (table.getn(GetSelectedUnits()) > 0 and GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_mercenary_camp") then
 						return true
 					else
 						return false
@@ -1860,7 +1860,6 @@ Units = {
 	"unit-diamond-rock", "unit-diamond-deposit", "unit-diamond-mine",
 	"unit-emerald-rock", "unit-emerald-deposit", "unit-emerald-mine",
 	"unit-yale-hunting-lodge",
-	"unit-mercenary-camp",
 --	"unit-cavern-entrance",
 --	"unit-portal",
 	"unit-road", "unit-railroad",

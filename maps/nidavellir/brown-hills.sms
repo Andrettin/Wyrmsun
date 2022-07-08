@@ -247,7 +247,7 @@ SetUnitVariable(unit, "Active", false)
 unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {8, 51})
 unit = CreateUnit("unit-potion-of-healing", PlayerNumNeutral, {52, 96})
 
-CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)
+CreateNeutralBuildings("unit_mercenary_camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)
 
 CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)
 CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, false)

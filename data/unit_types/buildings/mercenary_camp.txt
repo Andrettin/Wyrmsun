@@ -1,0 +1,82 @@
+unit_mercenary_camp = {
+	name = "Mercenary Camp"
+	parent = unit_template_building
+	unit_class = mercenary_camp
+	civilization = neutral
+	description = "This camp houses a number of mercenary groups, who offer their talents for hire."
+	image_file = "buildings/neutral/mercenary_camp.png"
+	frame_size = { 96 99 }
+	animation_set = animations_mercenary_camp
+	icon = icon_mercenary_camp
+	neutral_minimap_color = { 192 192 192 }
+	tile_size = { 3 3 }
+	box_size = { 96 96 }
+	construction = land_building
+	costs = {
+		time = 200
+		copper = 700
+		lumber = 1350
+	}
+	repair_hp = 4
+	repair_costs = {
+		copper = 1
+		lumber = 1
+	}
+	hit_points = 800
+	armor = 20
+	missile = missile_none
+	priority = 30
+	annoy_computer_factor = 35
+	explode_when_killed = missile_explosion
+	corpse_type = unit_destroyed_3x3_place
+	domain = land
+	right_mouse_action = rally_point
+	burn_percent = 50
+	burn_damage_rate = 1
+	recruit_heroes = true
+	drops = {
+		unit_wood_pile
+	}
+	unit_stocks = {
+		unit_ettin = 1
+		unit_troll_warrior = 2
+	}
+	unit_class_stocks = {
+		thief = 6
+		infantry = 4
+		spearman = 4
+		shooter = 3
+		gunpowder_infantry = 3
+		cavalry = 2
+		siege_engine = 1
+		glider = 1
+		flying_rider = 1
+	}
+	affixes = {
+		upgrade_prefix_frail
+		upgrade-item-prefix-impregnable
+		upgrade-item-prefix-sturdy
+		upgrade-item-prefix-vulnerable
+		upgrade-item-suffix-of-frailty
+		upgrade-item-suffix-of-vulnerability
+	}
+	variations = {
+		mercenary_camp = {
+			unit_conditions = {
+				not = {
+					scripted_condition = is_on_snowy_terrain
+				}
+			}
+		}
+		mercenary_camp_snow = {
+			image_file = "buildings/neutral/mercenary_camp_snow.png"
+			unit_conditions = {
+				scripted_condition = is_on_snowy_terrain
+			}
+		}
+	}
+	sounds = {
+		selected = click
+		dead = building_destroyed
+	}
+}

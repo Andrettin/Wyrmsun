@@ -1355,7 +1355,7 @@ function CreateNeutralBuildings(building_type, building_number, min_x, max_x, mi
 		local building_player = PlayerNumNeutral
 		while (Count > 0 and WhileCount < building_number * 100) do
 			local building_spawn_point = FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, min_y, max_y, symmetric)
-			if (building_type == "unit-mercenary-camp" and building_player == PlayerNumNeutral) then
+			if (building_type == "unit_mercenary_camp" and building_player == PlayerNumNeutral) then
 				local tile_terrain = GetTileTerrainName(building_spawn_point[1], building_spawn_point[2])
 				local potential_civilizations = GetTerrainCivilizations(tile_terrain)
 				local all_factions = GetFactions()
@@ -2342,7 +2342,7 @@ function GenerateRandomMap(arg)
 		end
 		
 		if (arg.MercenaryCamp) then
-			CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
+			CreateNeutralBuildings("unit_mercenary_camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		end
 		
 		CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
@@ -4059,7 +4059,7 @@ function GenerateValley(direction, lake_quantity)
 	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		
 	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "cave") then
-		CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
+		CreateNeutralBuildings("unit_mercenary_camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 	end
 
 	CreateRoamingFog((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096)
@@ -6013,7 +6013,7 @@ function GenerateCave(town_halls, symmetric)
 	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		
 	
-	CreateNeutralBuildings("unit-mercenary-camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
+	CreateNeutralBuildings("unit_mercenary_camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 
 	for i=0,(PlayerMax - 2) do
 		if (GetPlayerData(i, "Type") == PlayerPerson or GetPlayerData(i, "Type") == PlayerComputer) then

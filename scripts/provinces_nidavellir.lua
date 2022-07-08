@@ -235,7 +235,7 @@ DefineProvince("Southern Tunnels", {
 	HistoricalSettlementBuildings = {
 		25, "unit-dwarven-barracks", true, -- had capability to train warriors
 		25, "unit-dwarven-lumber-mill", true, -- had the capability to train scouts
-		35, "unit-mercenary-camp", true -- at some point between 35 and 40 the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
+		35, "unit_mercenary_camp", true -- at some point between 35 and 40 the Shinsplitters had the capacity to recruit mercenaries, as shown by them having hired the Surghan Mercenaries
 	}
 })
 

@@ -64,12 +64,12 @@ DefineModifier("upgrade_holy_order", -- holy orders' temples have a unit stock f
 
 DefineModifier("upgrade_mercenary_company", -- mercenary companies' mercenary camps produce food, to allow them to train units despite not having farms
 	{"Supply", 8},
-	{"apply-to", "unit-mercenary-camp"}
+	{"apply-to", "unit_mercenary_camp"}
 )
 
 DefineModifier("upgrade_mercenary_company", -- mercenary companies' mercenary camps "regenerate", since they aren't supposed to have workers to repair them
 	{"HitPoints", 1, "Increase"},
-	{"apply-to", "unit-mercenary-camp"}
+	{"apply-to", "unit_mercenary_camp"}
 )
 
 DefineModifier("upgrade_trading_company",
