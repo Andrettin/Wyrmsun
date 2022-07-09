@@ -766,8 +766,7 @@ DefineUnitType("unit-germanic-barracks", {
 	Parent = "unit-template-barracks",
 	Civilization = "germanic",
 	Description = "The Germanic war lodge serves as a gathering place for the tribe's warriors.",
-	Image = {"file", "germanic/buildings/barracks.png", "size", {96, 96}},
-	Shadow = {"file", "germanic/buildings/barracks_shadow.png", "size", {96, 96}},
+	Image = {"file", "buildings/germanic/barracks.png", "size", {96, 96}},
 	Icon = "icon-germanic-barracks",
 	AiDrops = {"unit-short-sword", "unit-broad-sword", "unit-short-spear", "unit-long-spear", "unit-composite-bow", "unit-longbow", "unit-wooden-shield", "unit-bronze-shield", "unit-boots", "unit-arrows", "unit-barbed-arrows"},
 	ButtonKey = "w",
@@ -779,7 +778,7 @@ DefineUnitType("unit-germanic-barracks", {
 		},
 		{
 			"variation-id", "barracks-snow-winter",
-			"file", "germanic/buildings/barracks_snow.png",
+			"file", "buildings/germanic/barracks_snow.png",
 			"terrain", "dirt",
 			"terrain", "dry-mud",
 			"terrain", "grass",
@@ -790,7 +789,7 @@ DefineUnitType("unit-germanic-barracks", {
 		},
 		{
 			"variation-id", "barracks-snow",
-			"file", "germanic/buildings/barracks_snow.png",
+			"file", "buildings/germanic/barracks_snow.png",
 			"terrain", "snow"
 		}
 	},
