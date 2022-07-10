@@ -1,0 +1,49 @@
+hire_tribal_infantry = {
+	pos = 1
+	action = train_unit_class
+	value = infantry
+	popup = popup_unit
+	unit_classes = {
+		tribal_camp
+	}
+}
+
+hire_tribal_spearman = {
+	pos = 2
+	action = train_unit_class
+	value = spearman
+	popup = popup_unit
+	unit_classes = {
+		tribal_camp
+	}
+}
+
+hire_tribal_shooter = {
+	pos = 3
+	action = train_unit_class
+	value = shooter
+	popup = popup_unit
+	unit_classes = {
+		tribal_camp
+	}
+}
+
+hire_tribal_cavalry = {
+	pos = 4
+	action = train_unit_class
+	value = cavalry
+	popup = popup_unit
+	unit_classes = {
+		tribal_camp
+	}
+}
+
+hire_tribal_flying_rider = {
+	pos = 5
+	action = train_unit_class
+	value = flying_rider
+	popup = popup_unit
+	unit_classes = {
+		tribal_camp
+	}
+}

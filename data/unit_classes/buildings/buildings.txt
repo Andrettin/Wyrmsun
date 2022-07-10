@@ -72,6 +72,10 @@ yale_hunting_lodge = {
 	name = "Yale Hunting Lodge"
 }
 
+tribal_camp = {
+	name = "Tribal Camp"
+}
+
 mercenary_camp = {
 	name = "Mercenary Camp"
 }

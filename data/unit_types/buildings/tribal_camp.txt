@@ -1,13 +1,12 @@
-unit_mercenary_camp = {
-	name = "Mercenary Camp"
+unit_tribal_camp = {
+	name = "Tribal Camp"
 	parent = unit_template_building
-	unit_class = mercenary_camp
+	unit_class = tribal_camp
 	civilization = neutral
-	description = "This camp houses a mercenary company, which offers its talents for hire."
-	image_file = "buildings/neutral/mercenary_camp.png"
-	frame_size = { 96 99 }
-	animation_set = animations_mercenary_camp
-	icon = icon_mercenary_camp
+	#description = "This camp is home to a tribe, which offers its martial prowess to the overlord of its surrounding lands."
+	image_file = "buildings/germanic/barracks.png"
+	frame_size = { 96 96 }
+	icon = icon_germanic_barracks
 	neutral_minimap_color = { 192 192 192 }
 	tile_size = { 3 3 }
 	box_size = { 96 96 }
@@ -34,24 +33,18 @@ unit_mercenary_camp = {
 	burn_percent = 50
 	burn_damage_rate = 1
 	recruit_heroes = true
+	indestructible = true
 	drops = {
 		unit_wood_pile
 	}
-	unit_stocks = {
-		unit_ettin = 1
-		unit_troll_warrior = 2
-	}
 	unit_class_stocks = {
-		thief = 6
 		infantry = 4
 		spearman = 4
 		shooter = 3
-		gunpowder_infantry = 3
 		cavalry = 2
-		siege_engine = 1
-		glider = 1
 		flying_rider = 1
 	}
+	max_spawned_demand = 4
 	affixes = {
 		upgrade_prefix_frail
 		upgrade-item-prefix-impregnable
@@ -60,16 +53,26 @@ unit_mercenary_camp = {
 		upgrade-item-suffix-of-frailty
 		upgrade-item-suffix-of-vulnerability
 	}
+	build_restrictions = {
+		and = {
+			on_top = {
+				type = unit_building_site
+				replace_on_die = true
+				replace_on_build = true
+			}
+		}
+	}
+	build_restrictions_string = "Must be built on top of a Building Site"
 	variations = {
-		mercenary_camp = {
+		tribal_camp = {
 			unit_conditions = {
 				not = {
 					scripted_condition = is_on_snowy_terrain
 				}
 			}
 		}
-		mercenary_camp_snow = {
-			image_file = "buildings/neutral/mercenary_camp_snow.png"
+		tribal_camp_snow = {
+			image_file = "buildings/germanic/barracks_snow.png"
 			unit_conditions = {
 				scripted_condition = is_on_snowy_terrain
 			}
