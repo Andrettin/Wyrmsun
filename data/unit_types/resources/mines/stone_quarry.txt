@@ -14,5 +14,5 @@ unit_stone_quarry = {
 	}
 	given_resource = stone
 	button_key = s
-	building_rules_string = "Must be built on top of a Stone Deposit"
+	build_restrictions_string = "Must be built on top of a Stone Deposit"
 }

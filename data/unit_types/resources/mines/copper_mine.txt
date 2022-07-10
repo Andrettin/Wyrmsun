@@ -14,7 +14,7 @@ unit_copper_mine = {
 	}
 	given_resource = copper
 	button_key = c
-	building_rules_string = "Must be built on top of a Copper Deposit"
+	build_restrictions_string = "Must be built on top of a Copper Deposit"
 	variations = {
 		copper_mine = {
 			conditions = {
