@@ -6,6 +6,7 @@ gunpowder_infantry = {
 		or = {
 			unit_class = smithy
 			upgrade = upgrade_mercenary_company
+			upgrade = upgrade_minor_tribe
 		}
 		upgrade_class = gunpowder
 	}

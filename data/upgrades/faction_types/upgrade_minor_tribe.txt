@@ -1,0 +1,12 @@
+upgrade_minor_tribe = {
+	name = "Minor Tribe"
+	
+	modifier = {
+		hit_points = {
+			increase = 1
+		}
+		unit_classes = {
+			tribal_camp
+		}
+	}
+}

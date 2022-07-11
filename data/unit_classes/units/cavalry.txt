@@ -9,6 +9,7 @@ cavalry = {
 				unit_class = stables
 			}
 			upgrade = upgrade_mercenary_company
+			upgrade = upgrade_minor_tribe
 		}
 	}
 	

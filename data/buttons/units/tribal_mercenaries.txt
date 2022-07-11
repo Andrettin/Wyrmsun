@@ -47,3 +47,13 @@ hire_tribal_flying_rider = {
 		tribal_camp
 	}
 }
+
+hire_tribal_gunpowder_infantry = {
+	pos = 6
+	action = train_unit_class
+	value = gunpowder_infantry
+	popup = popup_unit
+	unit_classes = {
+		tribal_camp
+	}
+}

@@ -6,6 +6,7 @@ shooter = {
 		or = {
 			unit_class = lumber_mill
 			upgrade = upgrade_mercenary_company
+			upgrade = upgrade_minor_tribe
 		}
 	}
 	
