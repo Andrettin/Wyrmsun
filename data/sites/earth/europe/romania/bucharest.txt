@@ -5,6 +5,7 @@ bucharest = {
 	base_unit_type = unit_settlement_site
 	color = { 177 111 178 }
 	regions = {
+		dacia
 		romania
 	}
 	

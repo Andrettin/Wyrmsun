@@ -8,6 +8,7 @@ cluj = {
 		teutonic = "Klausenburg"
 	}
 	regions = {
+		dacia
 		romania
 	}
 	

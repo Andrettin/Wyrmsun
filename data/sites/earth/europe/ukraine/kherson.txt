@@ -5,6 +5,7 @@ kherson = {
 	base_unit_type = unit_settlement_site
 	color = { 178 153 242 }
 	regions = {
+		oium
 		ukraine
 	}
 	

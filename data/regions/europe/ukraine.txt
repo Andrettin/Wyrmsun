@@ -4,3 +4,9 @@ ukraine = {
 		commonwealth_of_independent_states
 	}
 }
+
+oium = {
+	superregions = {
+		europe
+	}
+}

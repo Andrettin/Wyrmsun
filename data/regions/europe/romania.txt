@@ -1,3 +1,7 @@
 romania = {
 	superregions = { west_and_central_europe }
 }
+
+dacia = {
+	superregions = { europe }
+}

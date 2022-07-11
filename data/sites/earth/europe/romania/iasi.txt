@@ -5,6 +5,7 @@ iasi = {
 	base_unit_type = unit_settlement_site
 	color = { 251 88 106 }
 	regions = {
+		dacia
 		romania
 	}
 	
