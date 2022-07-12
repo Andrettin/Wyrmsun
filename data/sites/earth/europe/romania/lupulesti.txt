@@ -1,0 +1,10 @@
+lupulesti = {
+	name = "Lupulesti" #Lupulești
+	map_template = earth
+	geocoordinate = { 23.193488 46.253377 }
+	base_unit_type = unit_building_site
+	regions = {
+		dacia
+		romania
+	}
+}

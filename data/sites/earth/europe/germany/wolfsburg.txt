@@ -1,0 +1,9 @@
+wolfsburg = {
+	name = "Wolfsburg"
+	map_template = earth
+	geocoordinate = { 10.787222222222 52.423055555556 }
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+}

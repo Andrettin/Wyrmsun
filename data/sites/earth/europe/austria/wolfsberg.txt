@@ -1,0 +1,9 @@
+wolfsberg = {
+	name = "Wolfsberg"
+	map_template = earth
+	geocoordinate = { 14.840833333333 46.841944444444 }
+	base_unit_type = unit_building_site
+	regions = {
+		carinthia
+	}
+}

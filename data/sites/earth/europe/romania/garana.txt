@@ -1,0 +1,17 @@
+garana = {
+	name = "Garana" #Gărâna
+	map_template = earth
+	geocoordinate = { 22.09861111 45.225 }
+	base_unit_type = unit_building_site
+	cultural_names = {
+		anglo_saxon = "Wolfsberg"
+		frankish = "Wolfsberg"
+		gothic = "Wolfsberg"
+		suebi = "Wolfsberg"
+		teutonic = "Wolfsberg"
+	}
+	regions = {
+		dacia
+		romania
+	}
+}
