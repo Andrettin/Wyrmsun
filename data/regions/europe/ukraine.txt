@@ -5,6 +5,34 @@ ukraine = {
 	}
 }
 
+cherkasy = {
+	superregions = {
+		oium
+		ukraine
+	}
+}
+
+kirovohrad = {
+	superregions = {
+		oium
+		ukraine
+	}
+}
+
+mykolayiv = {
+	superregions = {
+		oium
+		ukraine
+	}
+}
+
+odessa = {
+	superregions = {
+		oium
+		ukraine
+	}
+}
+
 oium = {
 	superregions = {
 		europe

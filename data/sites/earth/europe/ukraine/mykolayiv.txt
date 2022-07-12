@@ -1,0 +1,9 @@
+mykolayiv = {
+	name = "Mykolayiv"
+	map_template = earth
+	geocoordinate = { 31.98434199900 46.96773907380 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		mykolayiv
+	}
+}

@@ -1,0 +1,9 @@
+izmayil = {
+	name = "Izmayil"
+	map_template = earth
+	geocoordinate = { 28.83735062530 45.35034425770 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		odessa
+	}
+}

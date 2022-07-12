@@ -1,0 +1,9 @@
+cherkasy = {
+	name = "Cherkasy"
+	map_template = earth
+	geocoordinate = { 32.07090002310 49.43472027500 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		cherkasy
+	}
+}

@@ -1,0 +1,9 @@
+odessa = {
+	name = "Odessa"
+	map_template = earth
+	geocoordinate = { 30.71000117870 46.49001629540 } #from Natural Earth
+	base_unit_type = unit_minor_building_site
+	regions = {
+		odessa
+	}
+}
