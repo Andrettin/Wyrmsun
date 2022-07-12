@@ -1,5 +1,13 @@
+troll_town_hall = {
+	file = "icons/buildings/troll/town_hall.png"
+}
+
 troll_farm = {
 	file = "icons/buildings/troll/farm.png"
+}
+
+troll_barracks = {
+	file = "icons/buildings/troll/barracks.png"
 }
 
 troll_lumber_mill = {
