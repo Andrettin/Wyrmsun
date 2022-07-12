@@ -1,5 +1,6 @@
 unit_stone_pile = {
 	name = "Stone Pile"
+	#description = "A pile of stones."
 	image_file = "neutral/buildings/stone_pile.png"
 	frame_size = { 43 43 }
 	animation_set = animations_decoration

@@ -39,7 +39,7 @@ flanking = {
 
 food = {
 	name = "Food"
-	description = "Food is produced by farms in the RTS mode, and determines the maximum amount of units a player can have."
+	description = "Food is produced by farms, and determines the maximum amount of units a player can have."
 	hotkey = "f"
 }
 
@@ -57,7 +57,7 @@ garrisoning = {
 
 harvesting = {
 	name = "Harvesting"
-	description = "Resources can be harvested by worker units. Copper is mined by assigning workers to copper rocks and copper mines (built on copper deposits), or to their silver and gold equivalents - which when delivered will be converted to copper. Lumber is gathered by harvesting trees or wood piles, while stone is harvested from rocks. Coal mines are used in a similar manner to copper mines, but they appear only in specific scenarios."
+	description = "Resources can be harvested by worker units. Copper is mined by assigning workers to <a href='unit_type:unit_copper_rock'>Copper Rocks</a> and <a href='unit_type:unit_copper_mine'>Copper Mines</a> (built on <a href='unit_type:unit_copper_deposit'>Copper Deposits</a>), or to their silver and gold equivalents - which when delivered will be converted to copper. Lumber is gathered by harvesting trees or <a href='unit_type:unit_wood_pile'>Wood Piles</a>, while stone is harvested from rocks. <a href='unit_type:unit_coal_mine'>Coal Mines</a> are used in a similar manner to Copper Mines, but they appear only in specific scenarios."
 	hotkey = "v"
 }
 
@@ -98,7 +98,7 @@ luxury_resources = {
 
 mercenaries = {
 	name = "Mercenaries"
-	description = "Mercenaries can be hired at mercenary camps. They do not take any time to train, becoming ready instantly. However, mercenary camp unit stocks take some time to recover."
+	description = "Mercenaries can be hired at <a href='unit_type:unit_mercenary_camp'>Mercenary Camps</a>. They do not take any time to train, becoming ready instantly. However, mercenary unit stocks take some time to recover.\n\nMercenary Camps are only accessible for the owner of the settlement they are located in."
 	hotkey = "c"
 }
 

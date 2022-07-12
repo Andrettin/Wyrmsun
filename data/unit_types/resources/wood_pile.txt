@@ -1,5 +1,6 @@
 unit_wood_pile = {
 	name = "Wood Pile"
+	#description = "A pile of wood."
 	image_file = "neutral/buildings/wood_pile_1.png"
 	frame_size = { 43 43 }
 	animation_set = animations_building
