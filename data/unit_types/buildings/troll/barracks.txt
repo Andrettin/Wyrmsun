@@ -1,0 +1,16 @@
+unit_troll_barracks = {
+	parent = unit_template_barracks
+	civilization = troll
+	description = "In this building, troll warriors hone their impressive physical prowess."
+	image_file = "buildings/troll/barracks.png"
+	frame_size = { 96 96 }
+	icon = troll_barracks
+	neutral_spawned_units = {
+		unit_troll_warrior
+	}
+	max_spawned_demand = 8
+	ai_drops = {
+		unit_club
+		unit_boots
+	}
+}

@@ -1,6 +1,7 @@
 unit_troll_farm = {
 	parent = unit_template_farm
 	civilization = troll
+	description = "A farm where trolls grow the necessary sustenance for their folk."
 	image_file = "buildings/troll/farm.png"
 	frame_size = { 64 64 }
 	icon = troll_farm
