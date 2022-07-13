@@ -1,0 +1,29 @@
+research_composite_bow = {
+	pos = 9
+	action = research_class
+	value = composite_bow
+	allowed = check_single_research
+	description =  "+2 Damage for archers, strongholds and guard towers."
+	popup = popup_research
+	unit_types = {
+		unit_germanic_carpenters_shop
+		unit_goblin_lumber_mill
+		unit_norse_lumber_mill
+		unit_teuton_lumber_mill
+	}
+}
+
+research_longbow = {
+	pos = 10
+	action = research_class
+	value = longbow
+	allowed = check_single_research
+	description =  "+1 Range for archers, strongholds and guard towers."
+	popup = popup_research
+	unit_types = {
+		unit_germanic_carpenters_shop
+		unit_goblin_lumber_mill
+		unit_norse_lumber_mill
+		unit_teuton_lumber_mill
+	}
+}
