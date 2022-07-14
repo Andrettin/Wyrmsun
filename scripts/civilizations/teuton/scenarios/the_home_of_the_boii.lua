@@ -106,8 +106,8 @@ AddTrigger("the-home-of-the-boii-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii") == false) then
-			player = GetFactionPlayer("Marcomanni Tribe")
+		if (GetFactionExists("marcomannia") and PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Defeat the Boii") == false) then
+			player = GetFactionPlayer("marcomannia")
 			return true
 		end
 		return false
@@ -151,8 +151,8 @@ AddTrigger("the-home-of-the-boii-marbods-ambition",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii") and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-farm") >= 4) then
-			player = GetFactionPlayer("Marcomanni Tribe")
+		if (GetFactionExists("marcomannia") and PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Defeat the Boii") and GetPlayerData(GetFactionPlayer("marcomannia"), "UnitTypesCount", "unit-teuton-farm") >= 4) then
+			player = GetFactionPlayer("marcomannia")
 			return true
 		end
 		return false
@@ -177,13 +177,13 @@ AddTrigger("the-home-of-the-boii-marbods-time-in-rome",
 			return false
 		end
 		if (
-			GetFactionExists("Marcomanni Tribe")
-			and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii")
-			and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-farm") >= 4
-			and GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-barracks") >= 1
-			and (GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-teuton-swordsman") + GetPlayerData(GetFactionPlayer("Marcomanni Tribe"), "UnitTypesCount", "unit-suebi-swordsman")) >= 8
+			GetFactionExists("marcomannia")
+			and PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Defeat the Boii")
+			and GetPlayerData(GetFactionPlayer("marcomannia"), "UnitTypesCount", "unit-teuton-farm") >= 4
+			and GetPlayerData(GetFactionPlayer("marcomannia"), "UnitTypesCount", "unit-teuton-barracks") >= 1
+			and (GetPlayerData(GetFactionPlayer("marcomannia"), "UnitTypesCount", "unit-teuton-swordsman") + GetPlayerData(GetFactionPlayer("marcomannia"), "UnitTypesCount", "unit_suebi_swordsman")) >= 8
 		) then
-			player = GetFactionPlayer("Marcomanni Tribe")
+			player = GetFactionPlayer("marcomannia")
 			return true
 		end
 		return false
@@ -206,8 +206,8 @@ AddTrigger("the-home-of-the-boii-victory",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii") and GetNumRivals(GetFactionPlayer("Marcomanni Tribe")) == 0) then
-			player = GetFactionPlayer("Marcomanni Tribe")
+		if (GetFactionExists("marcomannia") and PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Defeat the Boii") and GetNumRivals(GetFactionPlayer("marcomannia")) == 0) then
+			player = GetFactionPlayer("marcomannia")
 			return true
 		end
 		return false
@@ -237,13 +237,13 @@ AddTrigger("the-home-of-the-boii-marbod-dies",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Marbod must survive") and FindHero("marbod", GetFactionPlayer("Marcomanni Tribe")) == nil) then
+		if (GetFactionExists("marcomannia") and PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Marbod must survive") and FindHero("marbod", GetFactionPlayer("marcomannia")) == nil) then
 			return true
 		end
 		return false
 	end,
 	function()
-		if (GetFactionPlayer("Marcomanni Tribe") == GetThisPlayer()) then
+		if (GetFactionPlayer("marcomannia") == GetThisPlayer()) then
 			ActionDefeat()
 		end
 		return false
@@ -256,14 +256,14 @@ AddTrigger("the-home-of-the-boii-vandals-found",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii")) then
+		if (PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Defeat the Boii")) then
 			local uncount = 0
-			uncount = GetUnits(GetFactionPlayer("Vandal Tribe"))
+			uncount = GetUnits(GetFactionPlayer("vandalia"))
 			for unit1 = 1,table.getn(uncount) do 
 				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
-					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Marcomanni Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
+					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("marcomannia"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
 					if (unit_quantity > 0) then
-						player = GetFactionPlayer("Marcomanni Tribe")
+						player = GetFactionPlayer("marcomannia")
 						return true
 					end
 				end
@@ -275,13 +275,13 @@ AddTrigger("the-home-of-the-boii-vandals-found",
 		local vandal_unit
 		
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Vandal Tribe"))
+		uncount = GetUnits(GetFactionPlayer("vandalia"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 				local nearby_uncount = 0
 				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
 				for unit2 = 1,table.getn(nearby_uncount) do 
-					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Marcomanni Tribe")) then
+					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("marcomannia")) then
 						vandal_unit = uncount[unit1]
 						break
 					end
@@ -319,14 +319,14 @@ AddTrigger("the-home-of-the-boii-suebi-found",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii")) then
+		if (PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Defeat the Boii")) then
 			local uncount = 0
 			uncount = GetUnits(GetFactionPlayer("suebia"))
 			for unit1 = 1,table.getn(uncount) do 
 				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
-					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Marcomanni Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
+					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("marcomannia"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
 					if (unit_quantity > 0) then
-						player = GetFactionPlayer("Marcomanni Tribe")
+						player = GetFactionPlayer("marcomannia")
 						return true
 					end
 				end
@@ -344,7 +344,7 @@ AddTrigger("the-home-of-the-boii-suebi-found",
 				local nearby_uncount = 0
 				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
 				for unit2 = 1,table.getn(nearby_uncount) do 
-					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Marcomanni Tribe")) then
+					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("marcomannia")) then
 						suebi_unit = uncount[unit1]
 						break
 					end
@@ -383,14 +383,14 @@ AddTrigger("the-home-of-the-boii-lombards-found",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Defeat the Boii")) then
+		if (PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Defeat the Boii")) then
 			local uncount = 0
-			uncount = GetUnits(GetFactionPlayer("Lombard Tribe"))
+			uncount = GetUnits(GetFactionPlayer("lombardy"))
 			for unit1 = 1,table.getn(uncount) do 
 				if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
-					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Marcomanni Tribe"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
+					local unit_quantity = GetNumUnitsAt(GetFactionPlayer("marcomannia"), "units", {GetUnitVariable(uncount[unit1],"PosX") - 3, GetUnitVariable(uncount[unit1],"PosY") - 3}, {GetUnitVariable(uncount[unit1],"PosX") + 3, GetUnitVariable(uncount[unit1],"PosY") + 3})
 					if (unit_quantity > 0) then
-						player = GetFactionPlayer("Marcomanni Tribe")
+						player = GetFactionPlayer("marcomannia")
 						return true
 					end
 				end
@@ -402,13 +402,13 @@ AddTrigger("the-home-of-the-boii-lombards-found",
 		local lombard_unit
 		
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Lombard Tribe"))
+		uncount = GetUnits(GetFactionPlayer("lombardy"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (uncount[unit1] and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Organic")) then
 				local nearby_uncount = 0
 				nearby_uncount = GetUnitsAroundUnit(uncount[unit1], 3, true)
 				for unit2 = 1,table.getn(nearby_uncount) do 
-					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("Marcomanni Tribe")) then
+					if (GetUnitVariable(nearby_uncount[unit2], "Player") == GetFactionPlayer("marcomannia")) then
 						lombard_unit = uncount[unit1]
 						break
 					end

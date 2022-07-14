@@ -89,8 +89,8 @@ AddTrigger("the-sack-of-iuvavum-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Leave no building standing") == false) then
-			player = GetFactionPlayer("Marcomanni Tribe")
+		if (GetFactionExists("marcomannia") and PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Leave no building standing") == false) then
+			player = GetFactionPlayer("marcomannia")
 			return true
 		end
 		return false
@@ -126,8 +126,8 @@ AddTrigger("the-sack-of-iuvavum-victory",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Leave no building standing") and GetPlayerData(GetFactionPlayer("Rome"), "NumBuildings") == 0) then
-			player = GetFactionPlayer("Marcomanni Tribe")
+		if (GetFactionExists("marcomannia") and PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Leave no building standing") and GetPlayerData(GetFactionPlayer("Rome"), "NumBuildings") == 0) then
+			player = GetFactionPlayer("marcomannia")
 			return true
 		end
 		return false

@@ -41,7 +41,7 @@ if (LoadedGame == false) then
 	SetAiType(1, "land-attack")
 
 	if (GrandStrategy == false) then
-		local rome_player = GetFactionPlayer("Rome")
+		local rome_player = GetFactionPlayer("rome")
 		SetPlayerData(rome_player, "Allow", "upgrade-masonry", "R")
 		SetPlayerData(0, "Faction", "suebia")
 		
@@ -94,7 +94,7 @@ AddTrigger("moving-into-galicia-victory",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("suebia") and PlayerHasObjective(GetFactionPlayer("suebia"), "- Take Bracara Augusta") and GetPlayerData(GetFactionPlayer("Rome"), "TotalNumUnitsConstructed") == 0) then
+		if (GetFactionExists("suebia") and PlayerHasObjective(GetFactionPlayer("suebia"), "- Take Bracara Augusta") and GetPlayerData(GetFactionPlayer("rome"), "TotalNumUnitsConstructed") == 0) then
 			player = GetFactionPlayer("suebia")
 			return true
 		end

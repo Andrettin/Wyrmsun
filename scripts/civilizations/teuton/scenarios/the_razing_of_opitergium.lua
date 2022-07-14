@@ -38,7 +38,7 @@ if (LoadedGame == false) then
 	SetPlayerData(1, "Resources", "oil", 0)
 	SetAiType(1, "land-attack")
 
-	local rome_player = GetFactionPlayer("Rome")
+	local rome_player = GetFactionPlayer("rome")
 	SetPlayerData(rome_player, "Allow", "upgrade-masonry", "R")
 	SetPlayerData(0, "Faction", "marcomannia")
 
@@ -55,8 +55,8 @@ AddTrigger("the-razing-of-opitergium-introduction",
 		if (GameCycle == 0) then
 			return false
 		end
-		if (GetFactionExists("Marcomanni Tribe") and PlayerHasObjective(GetFactionPlayer("Marcomanni Tribe"), "- Destroy Opitergium") == false) then
-			player = GetFactionPlayer("Marcomanni Tribe")
+		if (GetFactionExists("marcomannia") and PlayerHasObjective(GetFactionPlayer("marcomannia"), "- Destroy Opitergium") == false) then
+			player = GetFactionPlayer("marcomannia")
 			return true
 		end
 		return false
