@@ -62,11 +62,11 @@ DefineModifier("upgrade-suebi-civilization",
 )
 
 DefineModifier("upgrade-suebi-civilization",
-	{"apply-to", "unit-germanic-warrior"}, {"convert-to", "unit-suebi-swordsman"}
+	{"apply-to", "unit-germanic-warrior"}, {"convert-to", "unit_suebi_swordsman"}
 )
 
 DefineModifier("upgrade-suebi-civilization",
-	{"apply-to", "unit-teuton-swordsman"}, {"convert-to", "unit-suebi-swordsman"}
+	{"apply-to", "unit-teuton-swordsman"}, {"convert-to", "unit_suebi_swordsman"}
 )
 
 DefineModifier("upgrade-suebi-civilization",

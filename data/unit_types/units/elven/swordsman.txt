@@ -28,6 +28,7 @@ unit_elven_swordsman = {
 		unit_broad_sword
 		unit_wooden_shield
 		unit_bronze_shield
+		unit_iron_shield
 		unit_boots
 		unit_cheese
 		unit_meat

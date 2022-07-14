@@ -44,6 +44,8 @@ Window {
 					window.showMaximized()
 				}
 				
+				//wyrmgus.get_link_target("unit_type:unit_suebi_swordsman").pack_image_layers("packed_image.png");
+				
 				window.visible = true
 			}
 		}

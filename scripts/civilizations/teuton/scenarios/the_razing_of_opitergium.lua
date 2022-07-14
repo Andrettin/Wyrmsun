@@ -42,10 +42,10 @@ if (LoadedGame == false) then
 	SetPlayerData(rome_player, "Allow", "upgrade-masonry", "R")
 	SetPlayerData(0, "Faction", "marcomannia")
 
---	unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")}) -- add Ballomar here later
+--	unit = CreateUnit("unit_suebi_swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")}) -- add Ballomar here later
 
-	unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
-	unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
+	unit = CreateUnit("unit_suebi_swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
+	unit = CreateUnit("unit_suebi_swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 	unit = CreateUnit("unit-teuton-archer", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 end
 

@@ -45,9 +45,9 @@ if (LoadedGame == false) then
 	SetPlayerData(GetFactionPlayer("sequania"), "Allow", "unit-teuton-barracks", "F")
 	
 	if (GrandStrategy == false) then
-		unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
+		unit = CreateUnit("unit_suebi_swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
+		unit = CreateUnit("unit_suebi_swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-archer", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)

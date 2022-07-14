@@ -511,7 +511,7 @@ function StandardTriggers()
 						table.getn(GetSelectedUnits()) > 0
 						and (
 							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-swordsman"
-							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-suebi-swordsman"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_suebi_swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-frank-swordsman"
 						)
 					) then
@@ -535,7 +535,7 @@ function StandardTriggers()
 						table.getn(GetSelectedUnits()) > 0
 						and (
 							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-swordsman"
-							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-suebi-swordsman"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_suebi_swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-frank-swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-norse-swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-slavic-swordsman"
@@ -1790,7 +1790,6 @@ Units = {
 	"upgrade-teuton-spatha", "upgrade-frank-spatha", "upgrade-teuton-pike", "upgrade-teuton-iron-shield", "upgrade-teuton-bodkin-arrow",
 	"upgrade-teuton-catapult-projectile-1", "upgrade-teuton-catapult-projectile-2",
 	"upgrade-teuton-alchemy",
-	"unit-suebi-swordsman", 
 	"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman", "unit-frank-spearman",
 	"unit-frank-horseman", "unit-frank-knight-lord",
 	"unit-gothic-horse-rider", "unit-gothic-horse-lord",

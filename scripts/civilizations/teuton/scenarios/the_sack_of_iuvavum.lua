@@ -46,7 +46,7 @@ if (LoadedGame == false) then
 			SetPlayerData(rome_player, "Allow", "unit-teuton-stronghold", "F")
 		end
 
-	--	unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")}) -- add Ballomar here later
+	--	unit = CreateUnit("unit_suebi_swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")}) -- add Ballomar here later
 	
 		unit = CreateUnit("unit-latin-legionary", rome_player, {GetPlayerData(rome_player, "StartPosX"), GetPlayerData(rome_player, "StartPosY")})
 		SetUnitVariable(unit, "Active", false) -- set town defender to passive AI (so that they do not participate in attacks)
@@ -71,11 +71,11 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-latin-javelineer", rome_player, {GetPlayerData(rome_player, "StartPosX"), GetPlayerData(rome_player, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
 		
-		unit = CreateUnit("unit-suebi-swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
-		unit = CreateUnit("unit-suebi-swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
-		unit = CreateUnit("unit-suebi-swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
-		unit = CreateUnit("unit-suebi-swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
-		unit = CreateUnit("unit-suebi-swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
+		unit = CreateUnit("unit_suebi_swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
+		unit = CreateUnit("unit_suebi_swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
+		unit = CreateUnit("unit_suebi_swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
+		unit = CreateUnit("unit_suebi_swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
+		unit = CreateUnit("unit_suebi_swordsman", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 		unit = CreateUnit("unit-teuton-archer", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 		unit = CreateUnit("unit-teuton-archer", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})
 		unit = CreateUnit("unit-teuton-archer", 4, {GetPlayerData(4, "StartPosX"), GetPlayerData(4, "StartPosY")})

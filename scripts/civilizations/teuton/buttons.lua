@@ -215,7 +215,7 @@ DefineButton( { Pos = 9, Level = "choose-individual-upgrade-level", Icon = "icon
 	ForUnit = {
 		"unit_teuton_worker",
 		"unit-norse-swordsman", "unit-norse-veteran-swordsman", "unit-norse-heroic-swordsman",
-		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
+		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit_suebi_swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
 		"unit-latin-legionary", "unit-latin-veteran-legionary", "unit-latin-centurion", "unit-latin-javelineer",
 		"unit-slavic-swordsman",
@@ -235,7 +235,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 	Description = "Choose Wodan as your hero's major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Incompatible with the Christianity religion or with the Thunor major deity.",
 	ForUnit = {
 		"unit_teuton_worker",
-		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
+		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit_suebi_swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer",
@@ -253,7 +253,7 @@ DefineButton( { Pos = 11, Level = "choose-individual-upgrade-level", Icon = "ico
 	Description = "Choose Thunor as your hero's major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Incompatible with the Christianity religion or with the Wodan major deity.",
 	ForUnit = {
 		"unit_teuton_worker",
-		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
+		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit_suebi_swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer",
@@ -272,7 +272,7 @@ DefineButton( { Pos = 12, Level = "choose-individual-upgrade-level", Icon = "ico
 	Description = "Choose Ziu as a minor deity for your hero. +2 Damage for sword infantry and enables Inspire spell for Gudjans. Incompatible with the Hella minor deity.",
 	ForUnit = {
 		"unit_teuton_worker",
-		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
+		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit_suebi_swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer",
@@ -301,7 +301,7 @@ DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "ico
 	Description = "Choose Hella as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Ziu minor deity.",
 	ForUnit = {
 		"unit_teuton_worker",
-		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit-suebi-swordsman",
+		"unit-teuton-swordsman", "unit-teuton-veteran-swordsman", "unit-teuton-heroic-swordsman", "unit_suebi_swordsman",
 		"unit-frank-swordsman", "unit-frank-veteran-swordsman", "unit-frank-heroic-swordsman",
 		"unit-teuton-spearman", "unit-frank-spearman",
 		"unit-teuton-archer",
@@ -342,7 +342,7 @@ DefineButton( { Pos = 2, Icon = "icon-teuton-catapult-tower",
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 	Action = "experience-upgrade-to", Value = "unit-teuton-veteran-swordsman",
 	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup_unit",
-	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman"}
+	ForUnit = {"unit-teuton-swordsman", "unit_suebi_swordsman"}
 })
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
@@ -354,7 +354,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-teuton-ritter",
 	Action = "experience-upgrade-to", Value = "unit-teuton-ritter",
 	Key = "k", Hint = "Upgrade to ~!Knight", Popup = "popup_unit",
-	ForUnit = {"unit-teuton-swordsman", "unit-suebi-swordsman", "unit-norse-swordsman", "unit-latin-legionary", "unit-slavic-swordsman"}
+	ForUnit = {"unit-teuton-swordsman", "unit_suebi_swordsman", "unit-norse-swordsman", "unit-latin-legionary", "unit-slavic-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",

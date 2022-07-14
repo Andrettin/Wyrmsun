@@ -46,10 +46,10 @@ if (LoadedGame == false) then
 	SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
 	
 	if (GrandStrategy == false) then
-		unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
+		unit = CreateUnit("unit_suebi_swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Character", "marbod")
 		SetUnitVariable(unit, "Active", false)
-		unit = CreateUnit("unit-suebi-swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
+		unit = CreateUnit("unit_suebi_swordsman", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-archer", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
@@ -86,8 +86,8 @@ if (LoadedGame == false) then
 	-- Suebi (Semnones)
 	player_spawn_point = FindAppropriateSpawnPoint(0, 48, 0, CMap:get():get_info():get_map_height() - 1)
 	SetStartView(3, player_spawn_point[1], player_spawn_point[2])
-	unit = CreateUnit("unit-suebi-swordsman", 3, {GetPlayerData(3, "StartPosX"), GetPlayerData(3, "StartPosY")})
-	unit = CreateUnit("unit-suebi-swordsman", 3, {GetPlayerData(3, "StartPosX"), GetPlayerData(3, "StartPosY")})
+	unit = CreateUnit("unit_suebi_swordsman", 3, {GetPlayerData(3, "StartPosX"), GetPlayerData(3, "StartPosY")})
+	unit = CreateUnit("unit_suebi_swordsman", 3, {GetPlayerData(3, "StartPosX"), GetPlayerData(3, "StartPosY")})
 	unit = CreateUnit("unit-teuton-archer", 3, {GetPlayerData(3, "StartPosX"), GetPlayerData(3, "StartPosY")})
 	unit = CreateUnit("unit-teuton-ritter", 3, {GetPlayerData(3, "StartPosX"), GetPlayerData(3, "StartPosY")})
 
