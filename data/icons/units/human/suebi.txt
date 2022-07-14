@@ -7,3 +7,23 @@ suebi_swordsman_gray_hair = {
 	file = "icons/units/human/suebi/swordsman.png"
 	frame = 1
 }
+
+suebi_veteran_swordsman = {
+	file = "icons/units/human/suebi/veteran_swordsman.png"
+	frame = 0
+}
+
+suebi_veteran_swordsman_gray_hair = {
+	file = "icons/units/human/suebi/veteran_swordsman.png"
+	frame = 1
+}
+
+suebi_chieftain = {
+	file = "icons/units/human/suebi/chieftain.png"
+	frame = 0
+}
+
+suebi_chieftain_gray_hair = {
+	file = "icons/units/human/suebi/chieftain.png"
+	frame = 1
+}
