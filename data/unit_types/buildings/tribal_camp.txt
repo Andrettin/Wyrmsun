@@ -1,12 +1,14 @@
 unit_tribal_camp = {
-	name = "Tribal Camp"
+	#name = "Tribal Camp"
+	name = "Mercenary Camp"
 	parent = unit_template_building
 	unit_class = tribal_camp
 	civilization = neutral
 	#description = "This camp is home to a tribe, which offers its martial prowess to the overlord of its surrounding lands."
-	image_file = "buildings/germanic/barracks.png"
-	frame_size = { 96 96 }
-	icon = icon_germanic_barracks
+	image_file = "buildings/neutral/mercenary_camp.png"
+	frame_size = { 96 99 }
+	animation_set = animations_mercenary_camp
+	icon = icon_mercenary_camp
 	neutral_minimap_color = { 192 192 192 }
 	tile_size = { 3 3 }
 	box_size = { 96 96 }
@@ -44,7 +46,7 @@ unit_tribal_camp = {
 		cavalry = 2
 		flying_rider = 1
 	}
-	max_spawned_demand = 4
+	max_spawned_demand = 8
 	affixes = {
 		upgrade_prefix_frail
 		upgrade-item-prefix-impregnable
@@ -72,7 +74,7 @@ unit_tribal_camp = {
 			}
 		}
 		tribal_camp_snow = {
-			image_file = "buildings/germanic/barracks_snow.png"
+			image_file = "buildings/neutral/mercenary_camp_snow.png"
 			unit_conditions = {
 				scripted_condition = is_on_snowy_terrain
 			}
