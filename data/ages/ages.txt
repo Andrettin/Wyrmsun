@@ -37,9 +37,21 @@ feudal_age = {
 	}
 }
 
+castle_age = {
+	name = "Castle Age"
+	priority = 5
+	icon = score
+	conditions = {
+		civilization_group = western
+		upgrade_class = architecture
+		upgrade_class = engineering
+		upgrade_class = stirrups
+	}
+}
+
 gunpowder_age = {
 	name = "Gunpowder Age"
-	priority = 5
+	priority = 6
 	icon = burning_coal
 	conditions = {
 		upgrade_class = gunpowder
@@ -48,7 +60,7 @@ gunpowder_age = {
 
 industrial_age = {
 	name = "Industrial Age"
-	priority = 6
+	priority = 7
 	icon = coal
 	conditions = {
 		upgrade = upgrade_steam_engine

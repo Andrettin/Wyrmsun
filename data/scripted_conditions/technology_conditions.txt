@@ -1,0 +1,5 @@
+has_high_medieval_technology = {
+	upgrade_class = architecture
+	upgrade_class = engineering
+	upgrade_class = stirrups
+}
