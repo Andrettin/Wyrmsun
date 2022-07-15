@@ -82,6 +82,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Units
 - Increased the charge bonus of Gothic cavalry from 7% to 10%.
+- Made it so the Suebi Kregar uses a single-layer image once again (with two variations, one with the Suebi shield and one without), both for the sake of memory efficiency, and because the layered version had some minor graphical issues.
+- Added Suebi level 2 and 3 infantry units, the Veteran Kregar and the Truhtin.
 
 * Upgrades
 - Added Lipizzaner Horse upgrade (icon by Jinn) for the Teutonic civilization (researchable at the Stables). This upgrade increases cavalry HP.

@@ -122,6 +122,7 @@ cast_puncture = {
 		unit_goblin_warlord
 		unit_latin_centurion
 		unit_norse_heroic_swordsman
+		unit_suebi_chieftain
 		unit_teuton_heroic_swordsman
 		unit_teuton_spearman
 		unit_western_footman

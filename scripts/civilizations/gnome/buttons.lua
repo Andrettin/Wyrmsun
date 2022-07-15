@@ -36,37 +36,37 @@ DefineButton( { Pos = 1,
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gnomish-duelist",
-	Action = "experience-upgrade-to", Value = "unit-gnomish-duelist",
+	Action = "experience_upgrade_to", Value = "unit-gnomish-duelist",
 	Key = "u", Hint = "~!Upgrade to Duelist", Popup = "popup_unit",
 	ForUnit = {"unit-gnomish-recruit"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gnomish-master-at-arms",
-	Action = "experience-upgrade-to", Value = "unit-gnomish-master-at-arms",
+	Action = "experience_upgrade_to", Value = "unit-gnomish-master-at-arms",
 	Key = "u", Hint = "~!Upgrade to Master at Arms", Popup = "popup_unit",
 	ForUnit = {"unit-gnomish-duelist"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gnomish-duelist",
-	Action = "experience-upgrade-to", Value = "unit-deep-gnomish-duelist",
+	Action = "experience_upgrade_to", Value = "unit-deep-gnomish-duelist",
 	Key = "u", Hint = "~!Upgrade to Duelist", Popup = "popup_unit",
 	ForUnit = {"unit-deep-gnomish-recruit"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-gnomish-master-at-arms",
-	Action = "experience-upgrade-to", Value = "unit-deep-gnomish-master-at-arms",
+	Action = "experience_upgrade_to", Value = "unit-deep-gnomish-master-at-arms",
 	Key = "u", Hint = "~!Upgrade to Master at Arms", Popup = "popup_unit",
 	ForUnit = {"unit-deep-gnomish-duelist"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "derro_executioner",
-	Action = "experience-upgrade-to", Value = "unit-derro-executioner",
+	Action = "experience_upgrade_to", Value = "unit-derro-executioner",
 	Key = "u", Hint = "~!Upgrade to Executioner", Popup = "popup_unit",
 	ForUnit = {"unit-derro-thug"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "derro_shadowguard",
-	Action = "experience-upgrade-to", Value = "unit-derro-shadowguard",
+	Action = "experience_upgrade_to", Value = "unit-derro-shadowguard",
 	Key = "u", Hint = "~!Upgrade to Shadowguard", Popup = "popup_unit",
 	ForUnit = {"unit-derro-executioner"}
 } )

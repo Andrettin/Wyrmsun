@@ -28,13 +28,13 @@
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-gothic-horse-rider",
+	Action = "experience_upgrade_to", Value = "unit-gothic-horse-rider",
 	Key = "r", Hint = "Upgrade to Horse ~!Rider", Popup = "popup_unit",
 	ForUnit = {"unit-teuton-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-gothic-horse-lord",
+	Action = "experience_upgrade_to", Value = "unit-gothic-horse-lord",
 	Key = "u", Hint = "~!Upgrade to Horse Lord", Popup = "popup_unit",
 	ForUnit = {"unit-gothic-horse-rider"}
 } )

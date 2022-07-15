@@ -31,8 +31,8 @@ upgrade_faction_marcomannia = {
 		points = 10
 		unit_types = {
 			unit_suebi_swordsman
-			unit_teuton_veteran_swordsman
-			unit_teuton_heroic_swordsman
+			unit_suebi_veteran_swordsman
+			unit_suebi_chieftain
 		}
 	}
 }
@@ -46,8 +46,8 @@ upgrade_faction_semnonia = {
 		points = 10
 		unit_types = {
 			unit_suebi_swordsman
-			unit_teuton_veteran_swordsman
-			unit_teuton_heroic_swordsman
+			unit_suebi_veteran_swordsman
+			unit_suebi_chieftain
 		}
 	}
 }
@@ -60,8 +60,8 @@ upgrade_faction_suebia = {
 		points = 10
 		unit_types = {
 			unit_suebi_swordsman
-			unit_teuton_veteran_swordsman
-			unit_teuton_heroic_swordsman
+			unit_suebi_veteran_swordsman
+			unit_suebi_chieftain
 		}
 	}
 }

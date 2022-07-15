@@ -70,11 +70,19 @@ DefineModifier("upgrade-suebi-civilization",
 )
 
 DefineModifier("upgrade-suebi-civilization",
-	{"apply-to", "unit-germanic-veteran-warrior"}, {"convert-to", "unit-teuton-veteran-swordsman"}
+	{"apply-to", "unit-germanic-veteran-warrior"}, {"convert-to", "unit_suebi_veteran_swordsman"}
 )
 
 DefineModifier("upgrade-suebi-civilization",
-	{"apply-to", "unit-germanic-chieftain"}, {"convert-to", "unit-teuton-heroic-swordsman"}
+	{"apply-to", "unit-teuton-veteran-swordsman"}, {"convert-to", "unit_suebi_veteran_swordsman"}
+)
+
+DefineModifier("upgrade-suebi-civilization",
+	{"apply-to", "unit-germanic-chieftain"}, {"convert-to", "unit_suebi_chieftain"}
+)
+
+DefineModifier("upgrade-suebi-civilization",
+	{"apply-to", "unit-teuton-heroic-swordsman"}, {"convert-to", "unit_suebi_chieftain"}
 )
 
 DefineModifier("upgrade-suebi-civilization",

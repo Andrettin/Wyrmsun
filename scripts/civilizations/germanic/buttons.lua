@@ -168,13 +168,13 @@ DefineButton( { Pos = 14, Level = "choose-individual-upgrade-level", Icon = "ico
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-germanic-veteran-warrior",
+	Action = "experience_upgrade_to", Value = "unit-germanic-veteran-warrior",
 	Key = "k", Hint = "Upgrade to ~!Kuni", Popup = "popup_unit",
 	ForUnit = {"unit-germanic-warrior"}
 })
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-germanic-chieftain",
+	Action = "experience_upgrade_to", Value = "unit-germanic-chieftain",
 	Key = "d", Hint = "Upgrade to ~!Druhtana", Popup = "popup_unit",
 	ForUnit = {"unit-germanic-veteran-warrior"}
 })

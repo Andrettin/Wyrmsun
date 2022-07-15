@@ -1,0 +1,25 @@
+upgrade_to_suebi_veteran_swordsman = {
+	pos = 1
+	level = choose_individual_upgrade_level
+	action = experience_upgrade_to
+	value = unit_suebi_veteran_swordsman
+	key = k
+	hint = "Upgrade to Veteran ~!Kregar"
+	popup = popup_unit
+	unit_types = {
+		unit_suebi_swordsman
+	}
+}
+
+upgrade_to_suebi_chieftain = {
+	pos = 1
+	level = choose_individual_upgrade_level
+	action = experience_upgrade_to
+	value = unit_suebi_chieftain
+	key = t
+	hint = "Upgrade to ~!Truhtin"
+	popup = popup_unit
+	unit_types = {
+		unit_suebi_veteran_swordsman
+	}
+}

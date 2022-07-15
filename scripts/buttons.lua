@@ -180,7 +180,7 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 		"unit-latin-centurion", "unit-latin-javelineer",
 		"unit-norse-heroic-swordsman",
 		"unit-orc-spearthrower",
---		"unit-teuton-heroic-swordsman", "unit-frank-heroic-swordsman",
+--		"unit-teuton-heroic-swordsman", "unit_suebi_chieftain", "unit-frank-heroic-swordsman",
 --		"unit-teuton-spearman", "unit-frank-spearman",
 --		"unit-teuton-archer",
 		"unit-teuton-gunpowder-infantry",

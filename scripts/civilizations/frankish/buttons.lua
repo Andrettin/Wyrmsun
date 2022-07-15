@@ -38,25 +38,25 @@ DefineButton( { Pos = 2, Icon = "icon-frankish-spatha",
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-frank-veteran-swordsman",
+	Action = "experience_upgrade_to", Value = "unit-frank-veteran-swordsman",
 	Key = "a", Hint = "Upgrade to ~!Adal", Popup = "popup_unit",
 	ForUnit = {"unit-frank-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-frank-heroic-swordsman",
+	Action = "experience_upgrade_to", Value = "unit-frank-heroic-swordsman",
 	Key = "d", Hint = "Upgrade to ~!Truhtin", Popup = "popup_unit",
 	ForUnit = {"unit-frank-veteran-swordsman"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-frank-horseman",
+	Action = "experience_upgrade_to", Value = "unit-frank-horseman",
 	Key = "r", Hint = "Upgrade to ~!Ritar", Popup = "popup_unit",
 	ForUnit = {"unit-frank-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-frank-knight-lord",
+	Action = "experience_upgrade_to", Value = "unit-frank-knight-lord",
 	Key = "h", Hint = "Upgrade to ~!Heriro", Popup = "popup_unit",
 	ForUnit = {"unit-frank-horseman"}
 } )

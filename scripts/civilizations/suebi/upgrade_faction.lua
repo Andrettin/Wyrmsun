@@ -28,30 +28,30 @@
 DefineModifier("upgrade-faction-alamanni-tribe",
 	{"HitPoints", 10},
 	{"Points", 10},
-	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit_suebi_veteran_swordsman"}, {"apply-to", "unit_suebi_chieftain"}
 )
 
 DefineModifier("upgrade-faction-buri-tribe",
 	{"Speed", 1},
 	{"Points", 10},
-	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit_suebi_veteran_swordsman"}, {"apply-to", "unit_suebi_chieftain"}
 )
 
 DefineModifier("upgrade-faction-hermunduri-tribe",
 	{"HitPoints", 5},
 	{"BasicDamage", 1},
 	{"Points", 10},
-	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit_suebi_veteran_swordsman"}, {"apply-to", "unit_suebi_chieftain"}
 )
 
 DefineModifier("upgrade-faction-quadi-tribe",
 	{"Armor", 2},
 	{"Points", 10},
-	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit_suebi_veteran_swordsman"}, {"apply-to", "unit_suebi_chieftain"}
 )
 
 DefineModifier("upgrade-faction-galicia",
 	{"BasicDamage", 2},
 	{"Points", 10},
-	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
+	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit_suebi_veteran_swordsman"}, {"apply-to", "unit_suebi_chieftain"}
 )

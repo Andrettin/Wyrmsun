@@ -28,13 +28,13 @@
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-kobold-slasher",
-	Action = "experience-upgrade-to", Value = "unit-kobold-slasher",
+	Action = "experience_upgrade_to", Value = "unit-kobold-slasher",
 	Key = "u", Hint = "~!Upgrade to Slasher", Popup = "popup_unit",
 	ForUnit = {"unit-kobold-footpad"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-kobold-champion",
-	Action = "experience-upgrade-to", Value = "unit-kobold-champion",
+	Action = "experience_upgrade_to", Value = "unit-kobold-champion",
 	Key = "u", Hint = "~!Upgrade to Champion", Popup = "popup_unit",
 	ForUnit = {"unit-kobold-slasher"}
 } )

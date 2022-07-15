@@ -28,7 +28,7 @@
 DefineCharacter("marbod", {
 	Name = "Marbod",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- chieftain/king
+	Type = "unit_suebi_chieftain", -- chieftain/king
 	Civilization = "suebi",
 	Faction = "marcomannia",
 	Trait = "upgrade-keen",
@@ -52,7 +52,7 @@ DefineCharacter("marbod", {
 DefineCharacter("catualda", { -- Marcomannic noble who was exiled by Marbod, and later returned with an army behind him and deposed Marbod
 	Name = "Catualda",
 	Gender = "male",
-	Type = "unit-teuton-veteran-swordsman", -- noble
+	Type = "unit_suebi_veteran_swordsman", -- noble
 	Civilization = "suebi",
 	Faction = "marcomannia",
 	Deities = {"odin", "tyr"},
@@ -70,7 +70,7 @@ DefineCharacter("catualda", { -- Marcomannic noble who was exiled by Marbod, and
 DefineCharacter("ballomar", { -- Source: "Ancient Warfare VII.6", 2013, pp. 29-32.
 	Name = "Ballomar",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- chieftain
+	Type = "unit_suebi_chieftain", -- chieftain
 	Civilization = "suebi",
 	Faction = "marcomannia",
 	Trait = "upgrade-intelligent",
@@ -88,7 +88,7 @@ DefineCharacter("ballomar", { -- Source: "Ancient Warfare VII.6", 2013, pp. 29-3
 DefineCharacter("hermeric", { -- Suebic chieftain who sacked central Galicia
 	Name = "Hermeric",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- chieftain
+	Type = "unit_suebi_chieftain", -- chieftain
 	Civilization = "suebi",
 	Faction = "suebia",
 	Deities = {"christian-god"},
@@ -103,7 +103,7 @@ DefineCharacter("hermeric", { -- Suebic chieftain who sacked central Galicia
 DefineCharacter("rechilas", { -- Suebic chieftain who defeated a Roman army led by Andevotus near the Singilis river in 438 AD
 	Name = "Rechilas",
 	Gender = "male",
-	Type = "unit-teuton-heroic-swordsman", -- chieftain
+	Type = "unit_suebi_chieftain", -- chieftain
 	Civilization = "suebi",
 	Faction = "galicia",
 	Deities = {"christian-god"},

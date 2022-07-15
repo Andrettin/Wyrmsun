@@ -28,13 +28,13 @@
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-latin-veteran-legionary",
+	Action = "experience_upgrade_to", Value = "unit-latin-veteran-legionary",
 	Key = "l", Hint = "Upgrade to Veteran ~!Legionary", Popup = "popup_unit",
 	ForUnit = {"unit-latin-legionary"}
 })
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-latin-centurion",
+	Action = "experience_upgrade_to", Value = "unit-latin-centurion",
 	Key = "c", Hint = "Upgrade to ~!Centurion", Popup = "popup_unit",
 	ForUnit = {"unit-latin-veteran-legionary"}
 })

@@ -1,6 +1,6 @@
 ariovistus = {
 	name = "Ariovistus"
-	unit_type = unit_teuton_heroic_swordsman #chieftain
+	unit_type = unit_suebi_chieftain #chieftain
 	civilization = suebi
 	default_faction = suebia
 	gender = male

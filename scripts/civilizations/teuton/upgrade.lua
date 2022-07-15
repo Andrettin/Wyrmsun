@@ -88,7 +88,7 @@ DefineModifier("upgrade-teuton-spatha",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
-	{"apply-to", "unit_suebi_swordsman"},
+	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit_suebi_veteran_swordsman"}, {"apply-to", "unit_suebi_chieftain"},
 	{"apply-to", "unit-norse-swordsman"}, {"apply-to", "unit-norse-veteran-swordsman"}, {"apply-to", "unit-norse-heroic-swordsman"},
 	{"apply-to", "unit-teuton-ritter"}, {"apply-to", "unit-teuton-knight-lord"},
 	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"},
@@ -106,7 +106,7 @@ DefineModifier("upgrade-teuton-iron-shield",
 	{"Armor", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"},
-	{"apply-to", "unit_suebi_swordsman"},
+	{"apply-to", "unit_suebi_swordsman"}, {"apply-to", "unit_suebi_veteran_swordsman"}, {"apply-to", "unit_suebi_chieftain"},
 	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"},
 	{"apply-to", "unit-norse-swordsman"}, {"apply-to", "unit-norse-veteran-swordsman"}, {"apply-to", "unit-norse-heroic-swordsman"},
 	{"apply-to", "unit-teuton-spearman"}, {"apply-to", "unit-frank-spearman"},
@@ -226,7 +226,15 @@ DefineModifier("upgrade_teutonic_civilization",
 )
 
 DefineModifier("upgrade_teutonic_civilization",
+	{"apply-to", "unit_suebi_veteran_swordsman"}, {"convert-to", "unit-teuton-veteran-swordsman"}
+)
+
+DefineModifier("upgrade_teutonic_civilization",
 	{"apply-to", "unit-germanic-chieftain"}, {"convert-to", "unit-teuton-heroic-swordsman"}
+)
+
+DefineModifier("upgrade_teutonic_civilization",
+	{"apply-to", "unit_suebi_chieftain"}, {"convert-to", "unit-teuton-heroic-swordsman"}
 )
 
 DefineModifier("upgrade_teutonic_civilization",

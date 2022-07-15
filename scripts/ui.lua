@@ -1192,10 +1192,10 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {ExperienceRequirementsString = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Requirements: "), TypeExperienceRequirementsString("Type")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
-				{ 	Margin = {1, 1}, Condition = {ButtonAction = "experience-upgrade-to"},
+				{ 	Margin = {1, 1}, Condition = {ButtonAction = "experience_upgrade_to"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {ButtonAction = "experience-upgrade-to"}, HighlightColor = "yellow",
+				{ 	Condition = {ButtonAction = "experience_upgrade_to"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Requires 1 Level Up Point"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {Opponent = "false", Neutral = "false"}, Margin = {1, 1},

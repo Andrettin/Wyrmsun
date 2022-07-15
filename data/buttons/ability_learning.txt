@@ -62,6 +62,7 @@ learn_sword_mastery_bronze = {
 		unit_kobold_champion
 		unit_latin_centurion
 		unit_norse_heroic_swordsman
+		unit_suebi_chieftain
 		unit_teuton_heroic_swordsman
 		unit_teuton_knight_lord
 		unit_western_footman
@@ -95,6 +96,7 @@ learn_sword_mastery = {
 		unit_kobold_champion
 		unit_latin_centurion
 		unit_norse_heroic_swordsman
+		unit_suebi_chieftain
 		unit_teuton_heroic_swordsman
 		unit_teuton_knight_lord
 		unit_western_footman
@@ -349,6 +351,7 @@ learn_puncture = {
 		unit_goblin_warlord
 		unit_latin_centurion
 		unit_norse_heroic_swordsman
+		unit_suebi_chieftain
 		unit_teuton_heroic_swordsman
 		unit_teuton_spearman
 		unit_western_footman

@@ -112,13 +112,13 @@ DefineButton( { Pos = 15, Level = "choose-individual-upgrade-level", Icon = "ico
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-norse-veteran-swordsman",
+	Action = "experience_upgrade_to", Value = "unit-norse-veteran-swordsman",
 	Key = "w", Hint = "Upgrade to Veteran S~!wordsman", Popup = "popup_unit",
 	ForUnit = {"unit-norse-swordsman", "unit-slavic-swordsman"}
 })
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-norse-heroic-swordsman",
+	Action = "experience_upgrade_to", Value = "unit-norse-heroic-swordsman",
 	Key = "h", Hint = "Upgrade to ~!Hersir", Popup = "popup_unit",
 	ForUnit = {"unit-norse-veteran-swordsman"}
 })

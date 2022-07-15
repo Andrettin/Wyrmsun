@@ -1,0 +1,79 @@
+unit_suebi_veteran_swordsman = {
+	name = "Veteran Kregar"
+	parent = unit_template_veteran_infantry
+	civilization = suebi
+	description = "These high-ranking swordsmen have honed their combat skills to a greater degree than many of their counterparts."
+	background = "\"Krêg\" is the Old High German word for \"tenacity\", and possibly \"war\"."
+	image_file = "units/suebi/swordsman.png"
+	frame_size = { 72 72 }
+	animation_set = animations_melee_unit
+	icon = suebi_veteran_swordsman
+	corpse_type = unit_human_dead_body
+	armor = 0 #-2 armor
+	basic_damage = 12 #+2 damage
+	accuracy = 12 #+2 accuracy
+	day_sight_range_bonus = 1
+	night_sight_range_bonus = -1
+	points = 85 #+10 points
+	weapon_classes = {
+		sword
+		thrusting_sword
+	}
+	hack_damage = true
+	ai_drops = {
+		unit_short_sword
+		unit_broad_sword
+		unit_spatha
+		unit_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_kite_shield
+		unit_boots
+		unit_carrots
+		unit_cheese
+		unit_meat
+		unit_potion_of_healing
+	}
+	default_equipment = {
+		weapon = unit_short_sword
+		shield = unit_wooden_shield
+		boots = unit_boots
+	}
+	variations = {
+		blond_hair = {
+			name = "Blond Hair"
+			tags = { blond_hair }
+			conditions = {
+				not = {
+					upgrade = upgrade_teuton_iron_shield
+					equipment = unit_heater_shield
+					equipment = unit_iron_shield
+					equipment = unit_kite_shield
+					equipment = unit_thrymgjol_shield
+				}
+			}
+		}
+		blond_hair_with_shield = {
+			image_file = "units/suebi/swordsman_with_shield.png"
+			tags = { blond_hair }
+			conditions = {
+				or = {
+					upgrade = upgrade_teuton_iron_shield
+					equipment = unit_heater_shield
+					equipment = unit_iron_shield
+					equipment = unit_kite_shield
+					equipment = unit_thrymgjol_shield
+				}
+			}
+		}
+	}
+	sounds = {
+		selected = basic_teuton_voices_selected_group
+		acknowledge = basic_teuton_voices_acknowledge
+		ready = basic_teuton_voices_ready
+		help = basic_teuton_voices_help
+		dead = basic_human_voices_dead
+		hit = sword_attack
+		miss = attack_miss
+	}
+}

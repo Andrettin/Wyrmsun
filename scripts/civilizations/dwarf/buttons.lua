@@ -302,349 +302,349 @@ DefineButton( { Pos = 13, Level = "choose-individual-upgrade-level", Icon = "ico
 -- Upgrades ---------------------------------------------------------
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-skilled-miner",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-skilled-miner",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-skilled-miner",
 	Key = "u", Hint = "~!Upgrade to Skilled Miner", Popup = "popup_unit",
 	ForUnit = {"unit_dwarven_miner"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-expert-miner",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-expert-miner",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-expert-miner",
 	Key = "u", Hint = "~!Upgrade to Expert Miner", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-skilled-miner"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-brising-skilled-miner",
-	Action = "experience-upgrade-to", Value = "unit-brising-skilled-miner",
+	Action = "experience_upgrade_to", Value = "unit-brising-skilled-miner",
 	Key = "u", Hint = "~!Upgrade to Skilled Miner", Popup = "popup_unit",
 	ForUnit = {"unit_brising_miner"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-brising-expert-miner",
-	Action = "experience-upgrade-to", Value = "unit-brising-expert-miner",
+	Action = "experience_upgrade_to", Value = "unit-brising-expert-miner",
 	Key = "u", Hint = "~!Upgrade to Expert Miner", Popup = "popup_unit",
 	ForUnit = {"unit-brising-skilled-miner"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-runesmith",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-runesmith",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-runesmith",
 	Key = "r", Hint = "Upgrade to ~!Runesmith", Popup = "popup_unit",
 	ForUnit = {"unit_dwarven_miner", "unit_brising_miner"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-runemaster",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-runemaster",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-runemaster",
 	Key = "r", Hint = "Upgrade to ~!Runemaster", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-runesmith"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-arcanister",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-arcanister",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-arcanister",
 	Key = "a", Hint = "Upgrade to ~!Arcanister", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-runemaster"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-steelclad",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-steelclad",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-steelclad",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
 	Key = "u", Hint = "~!Upgrade to Steelclad", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-steelclad-gray-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-steelclad",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-steelclad",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
 	Key = "u", Hint = "~!Upgrade to Steelclad", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-steelclad",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-steelclad",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-steelclad",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
 	Key = "u", Hint = "~!Upgrade to Steelclad", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-steelclad-blond-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-steelclad",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-steelclad",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "3"},
 	Key = "u", Hint = "~!Upgrade to Steelclad", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-steelclad-black-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-steelclad",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-steelclad",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "4"},
 	Key = "u", Hint = "~!Upgrade to Steelclad", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-steelclad-brown-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-steelclad",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-steelclad",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "5"},
 	Key = "u", Hint = "~!Upgrade to Steelclad", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-surghan-mercenary-steelclad",
-	Action = "experience-upgrade-to", Value = "unit-surghan-mercenary-steelclad",
+	Action = "experience_upgrade_to", Value = "unit-surghan-mercenary-steelclad",
 	Key = "u", Hint = "~!Upgrade to Steelclad", Popup = "popup_unit",
 	ForUnit = {"unit-surghan-mercenary-axefighter"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
 	Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-steelclad"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "6"},
 	Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-steelclad"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane-gray-hair",
-  Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+  Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
   Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
   ForUnit = {"unit-dwarven-steelclad"} } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane-gray-hair",
-  Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+  Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "7"},
   Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
   ForUnit = {"unit-dwarven-steelclad"} } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane",
-  Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+  Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
   Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
   ForUnit = {"unit-dwarven-steelclad"} } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane",
-  Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+  Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "8"},
   Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
   ForUnit = {"unit-dwarven-steelclad"} } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane-blond-hair",
-  Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+  Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "3"},
   Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
   ForUnit = {"unit-dwarven-steelclad"} } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane-blond-hair",
-  Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+  Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "9"},
   Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
   ForUnit = {"unit-dwarven-steelclad"} } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane-black-hair",
-  Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+  Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "4"},
   Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
   ForUnit = {"unit-dwarven-steelclad"} } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane-black-hair",
-  Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+  Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "10"},
   Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
   ForUnit = {"unit-dwarven-steelclad"} } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane-brown-hair",
-  Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+  Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "5"},
   Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
   ForUnit = {"unit-dwarven-steelclad"} } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-thane-brown-hair",
-  Action = "experience-upgrade-to", Value = "unit-dwarven-thane",
+  Action = "experience_upgrade_to", Value = "unit-dwarven-thane",
   Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "11"},
   Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
   ForUnit = {"unit-dwarven-steelclad"} } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-surghan-mercenary-thane",
-	Action = "experience-upgrade-to", Value = "unit-surghan-mercenary-thane",
+	Action = "experience_upgrade_to", Value = "unit-surghan-mercenary-thane",
 	Key = "u", Hint = "~!Upgrade to Stonelord", Popup = "popup_unit",
 	ForUnit = {"unit-surghan-mercenary-steelclad"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-rider",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-rider",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-rider",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
 	Key = "y", Hint = "Upgrade to ~!Yale Rider", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter", "unit-surghan-mercenary-axefighter"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-rider-gray-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-rider",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-rider",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
 	Key = "y", Hint = "Upgrade to ~!Yale Rider", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-rider-orange-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-rider",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-rider",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
 	Key = "y", Hint = "Upgrade to ~!Yale Rider", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-rider-blond-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-rider",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-rider",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "3"},
 	Key = "y", Hint = "Upgrade to ~!Yale Rider", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-rider-black-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-rider",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-rider",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "4"},
 	Key = "y", Hint = "Upgrade to ~!Yale Rider", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-rider-brown-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-rider",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-rider",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "5"},
 	Key = "y", Hint = "Upgrade to ~!Yale Rider", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-lord",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-lord",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "0"},
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-lord",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-lord",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "1"},
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-lord-black-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-lord",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "2"},
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-lord-black-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-lord",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "3"},
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-lord-blond-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-lord",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "4"},
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-lord-brown-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-lord",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "5"},
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-lord-brown-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-lord",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "6"},
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-lord-gray-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-lord",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "7"},
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-lord-orange-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-lord",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "8"},
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-dwarven-yale-lord-orange-hair",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-yale-lord",
 	Allowed = "check-unit-variable", AllowArg = {"Variation", "Value", "==", "9"},
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-yale-rider"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-joruvellir-yale-rider",
+	Action = "experience_upgrade_to", Value = "unit-joruvellir-yale-rider",
 	Key = "y", Hint = "Upgrade to ~!Yale Rider", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-axefighter"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-joruvellir-yale-lord",
+	Action = "experience_upgrade_to", Value = "unit-joruvellir-yale-lord",
 	Key = "y", Hint = "Upgrade to ~!Yale Lord", Popup = "popup_unit",
 	ForUnit = {"unit-joruvellir-yale-rider"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-stalwart",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-stalwart",
 	Key = "u", Hint = "~!Upgrade to Stalwart", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-guard"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-sentinel",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-sentinel",
 	Key = "u", Hint = "~!Upgrade to Sentinel", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-stalwart"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-pathfinder",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-pathfinder",
 	Key = "u", Hint = "~!Upgrade to Pathfinder", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-scout"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-joruvellir-pathfinder",
+	Action = "experience_upgrade_to", Value = "unit-joruvellir-pathfinder",
 	Key = "u", Hint = "~!Upgrade to Pathfinder", Popup = "popup_unit",
 	ForUnit = {"unit-joruvellir-scout"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-explorer",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-explorer",
 	Key = "u", Hint = "~!Upgrade to Explorer", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-pathfinder"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-joruvellir-explorer",
+	Action = "experience_upgrade_to", Value = "unit-joruvellir-explorer",
 	Key = "u", Hint = "~!Upgrade to Explorer", Popup = "popup_unit",
 	ForUnit = {"unit-joruvellir-pathfinder"}
 } )
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit_dwarven_gryphon_rider",
+	Action = "experience_upgrade_to", Value = "unit_dwarven_gryphon_rider",
 	Key = "g", Hint = "Upgrade to ~!Gryphon Rider", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-pathfinder", "unit-joruvellir-pathfinder"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-annalist",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-annalist",
 	Key = "u", Hint = "~!Upgrade to Annalist", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-witness"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
-	Action = "experience-upgrade-to", Value = "unit-dwarven-loremaster",
+	Action = "experience_upgrade_to", Value = "unit-dwarven-loremaster",
 	Key = "u", Hint = "~!Upgrade to Loremaster", Popup = "popup_unit",
 	ForUnit = {"unit-dwarven-annalist"}
 } )
