@@ -13,4 +13,9 @@ brown_bear = {
 		grass
 		dirt
 	}
+	specimen_names = {
+		male = {
+			"Wojtek" #Polish World War II army brown bear
+		}
+	}
 }
