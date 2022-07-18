@@ -48,6 +48,7 @@ wolfing_clan = {
 	neutral_target_sites = {
 		garana #called "Wolfsberg" in German
 		lupulesti #the name is presumably related to wolves (wolf in Romanian = "lup")
+		vlkov_pod_oskobrhem #the name is presumably related to wolves (wolf in Czech = "vlk"), and it is called "Wolfsberg" in German
 		wolfsberg
 		wolfsburg
 	}
