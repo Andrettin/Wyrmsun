@@ -34,6 +34,7 @@ unit_mercenary_camp = {
 	burn_percent = 50
 	burn_damage_rate = 1
 	recruit_heroes = true
+	#indestructible = true
 	drops = {
 		unit_wood_pile
 	}
@@ -52,6 +53,7 @@ unit_mercenary_camp = {
 		glider = 1
 		flying_rider = 1
 	}
+	max_spawned_demand = 8
 	affixes = {
 		upgrade_prefix_frail
 		upgrade-item-prefix-impregnable
@@ -60,6 +62,16 @@ unit_mercenary_camp = {
 		upgrade-item-suffix-of-frailty
 		upgrade-item-suffix-of-vulnerability
 	}
+	build_restrictions = {
+		and = {
+			on_top = {
+				type = unit_building_site
+				replace_on_die = true
+				replace_on_build = true
+			}
+		}
+	}
+	build_restrictions_string = "Must be built on top of a Building Site"
 	variations = {
 		mercenary_camp = {
 			unit_conditions = {
