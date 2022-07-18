@@ -1,3 +1,10 @@
 upgrade_mercenary_company = {
 	name = "Mercenary Company"
+	
+	modifier = {
+		convert_to = unit_mercenary_camp
+		unit_types = {
+			unit_tribal_camp
+		}
+	}
 }

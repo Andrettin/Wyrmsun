@@ -61,6 +61,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added Stone Deposit and Stone Quarry (graphics by Jinn). These function similarly to metal deposits and mines, but provide stone instead.
 - Neutral faction buildings (like Mercenary Camps) are now only accessible for the owner of the settlement they are located in.
 - Neutral faction buildings can now spawn neutral hostile units if the building is located in a non-owned settlement.
+- Mercenary Camps are now indestructible.
 
 * Civilizations
 - Added more personal names for the Celts and the Suebi.
