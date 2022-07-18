@@ -1,0 +1,9 @@
+bernburg = {
+	name = "Bernburg"
+	map_template = earth
+	geocoordinate = { 11.733333333333 51.8 }
+	base_unit_type = unit_building_site
+	regions = {
+		germany
+	}
+}

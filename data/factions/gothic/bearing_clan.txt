@@ -1,12 +1,12 @@
-wolfing_clan = {
-	name = "Wolfing Clan"
-	adjective = "Wolfing"
+bearing_clan = {
+	name = "Bearing Clan"
+	adjective = "Bearing"
 	civilization = gothic
 	type = minor_tribe
-	color = red
+	color = brown
 	default_tier = barony
 	icon = icon_flag_habsburg
-	#description = "A Gothic clan renowned for its ferocious warriors."
+	#description = "A Gothic clan famous for its physical prowess."
 	neutral_site_conditions = {
 		not = {
 			settlement_owner = {
@@ -21,11 +21,9 @@ wolfing_clan = {
 		tribal_camp
 	}
 	neutral_target_sites = {
-		garana #called "Wolfsberg" in German
-		lupulesti #the name is presumably related to wolves (wolf in Romanian = "lup")
-		vlkov_pod_oskobrhem #the name is presumably related to wolves (wolf in Czech = "vlk"), and it is called "Wolfsberg" in German
-		wolfsberg
-		wolfsburg
+		bernburg #i.e. "bear castle"
+		bernstein_im_burgenland #i.e. "bear stone"
+		burshtyn #called "Bernstein" in German
 	}
 	max_neutral_buildings = 1
 }

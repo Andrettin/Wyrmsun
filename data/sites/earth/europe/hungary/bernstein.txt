@@ -1,0 +1,9 @@
+bernstein_im_burgenland = {
+	name = "Bernstein"
+	map_template = earth
+	geocoordinate = { 16.2606 47.4059 }
+	base_unit_type = unit_building_site
+	regions = {
+		burgenland
+	}
+}

@@ -1,0 +1,16 @@
+burshtyn = {
+	name = "Burshtyn"
+	map_template = earth
+	geocoordinate = { 24.635 49.26 }
+	base_unit_type = unit_building_site
+	cultural_names = {
+		anglo_saxon = "Bernstein"
+		frankish = "Bernstein"
+		gothic = "Bernstein"
+		suebi = "Bernstein"
+		teutonic = "Bernstein"
+	}
+	regions = {
+		ukraine
+	}
+}

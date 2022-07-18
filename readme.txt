@@ -69,7 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 * Factions
 - The Suebi Tribe is now a polity instead.
 - Added support for the Minor Tribe neutral faction type. Minor tribes function in a similar way to mercenary companies.
-- Added the Wolfing Clan minor tribe (Gothic), from the 19th century novel The House of the Wolfings. The Wolfing Clan can be spawned on the Earth scenario map if certain conditions are met.
+- Added the Bearing Clan and Wolfing Clan minor tribes (Gothic), from the 19th century novel The House of the Wolfings. These clans can be spawned on the Earth scenario map if certain conditions are met.
 
 * Maps
 - The settlements in the Lorraine Plain map are now settlements which are actually in Lorraine.
