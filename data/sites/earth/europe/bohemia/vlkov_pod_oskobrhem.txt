@@ -1,0 +1,12 @@
+vlkov_pod_oskobrhem = {
+	name = "Vlkov pod Oskobrhem" #"Vlkov pod Oškobrhem"
+	map_template = earth
+	geocoordinate = { 15.220486987874 50.156052750822 }
+	base_unit_type = unit_building_site
+	cultural_names = {
+		teutonic = "Wolfsberg"
+	}
+	regions = {
+		bohemia
+	}
+}
