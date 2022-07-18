@@ -1,0 +1,55 @@
+wolfing_clan = {
+	name = "Wolfing Clan"
+	adjective = "Wolfing"
+	civilization = gothic
+	type = minor_tribe
+	color = red
+	default_tier = barony
+	icon = icon_flag_habsburg
+	#description = "A Gothic clan, renowned for its mighty warriors."
+	neutral_site_conditions = {
+		not = {
+			settlement_owner = {
+				scripted_condition = has_high_medieval_technology
+			}
+		}
+	}
+	neutral_site_spawn_conditions = {
+		or = {
+			settlement_owner = {
+				civilization = gothic
+				not = {
+					scripted_condition = has_high_medieval_technology
+				}
+			}
+			any_neighbor_settlement_owner = {
+				civilization = gothic
+				not = {
+					scripted_condition = has_high_medieval_technology
+				}
+			}
+			any_settlement_neutral_building_owner = {
+				civilization = gothic
+				not = {
+					scripted_condition = has_high_medieval_technology
+				}
+			}
+			any_neighbor_settlement_neutral_building_owner = {
+				civilization = gothic
+				not = {
+					scripted_condition = has_high_medieval_technology
+				}
+			}
+		}
+	}
+	neutral_building_classes = {
+		tribal_camp
+	}
+	neutral_target_sites = {
+		garana #called "Wolfsberg" in German
+		lupulesti #the name is presumably related to wolves (wolf in Romanian = "lup")
+		wolfsberg
+		wolfsburg
+	}
+	max_neutral_buildings = 1
+}
