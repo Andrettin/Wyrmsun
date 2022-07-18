@@ -34,7 +34,7 @@ unit_mercenary_camp = {
 	burn_percent = 50
 	burn_damage_rate = 1
 	recruit_heroes = true
-	#indestructible = true
+	indestructible = true
 	drops = {
 		unit_wood_pile
 	}
