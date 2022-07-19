@@ -15,7 +15,7 @@ wolfing_clan = {
 		}
 	}
 	neutral_site_spawn_conditions = {
-		scripted_condition = can_spawn_gothic_minor_tribe
+		nearby_civilization = gothic
 	}
 	neutral_building_classes = {
 		tribal_camp
