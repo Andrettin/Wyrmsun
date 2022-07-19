@@ -2603,24 +2603,27 @@ if not (ui_loaded_first_time) then
 				{ 	Margin = {1, 1}, Condition = {RequirementsString = "only", UpgradeResearched = "false"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {FactionUpgrade = "false", RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {Faction = "false", RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Requirements: "), UpgradeRequirementsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {FactionUpgrade = "only", RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
+				{ 	Condition = {Faction = "only", RequirementsString = "only", UpgradeResearched = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Requirements: "), FactionRequirementsString("Faction")), Font = PopupDescriptionFont}}
 				},
 				-- Already Acquired
 				{ 	Margin = {1, 1}, Condition = {UpgradeResearched = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {UpgradeResearched = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {UpgradeResearched = "only", Faction = "false"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Already acquired"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
 				},
+				{ 	Condition = {UpgradeResearched = "only", Faction = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = _("Already the current faction"), MaxWidth = Video.Width / 5, Font = PopupDescriptionFont}}
+				},
 				-- Costs
-				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "false", UpgradeResearched = "false"},
+				{ 	Margin = {1, 1}, Condition = {Faction = "false", UpgradeResearched = "false"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				}, 
-				{ 	Condition = {FactionUpgrade = "false", UpgradeResearched = "false"}, More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
+				{ 	Condition = {Faction = "false", UpgradeResearched = "false"}, More = {"Costs", {Font = PopupFont}}, HighlightColor = "yellow",
 				},
 				-- Description
 				{ 	Margin = {1, 1}, Condition = {HasDescription = true}, 
@@ -2630,25 +2633,25 @@ if not (ui_loaded_first_time) then
 					More = {"ButtonInfo", {InfoType = "Description", MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				-- Faction Button Information
-				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "only"},
+				{ 	Margin = {1, 1}, Condition = {Faction = "only"},
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {Faction = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Civilization: "), FactionCivilization("Faction")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {Faction = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Type: "), FactionType("Faction")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Faction Bonus: "), UpgradeEffectsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
-				{ 	Margin = {1, 1}, Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, 
+				{ 	Margin = {1, 1}, Condition = {Faction = "only", FactionCoreSettlements = "only"}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
-				{ 	Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, HighlightColor = "yellow",
+				{ 	Condition = {Faction = "only", FactionCoreSettlements = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = _("Required Settlements:"), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {FactionUpgrade = "only", FactionCoreSettlements = "only"}, HighlightColor = "dark_gray",
+				{ 	Condition = {Faction = "only", FactionCoreSettlements = "only"}, HighlightColor = "dark_gray",
 					More = {"Text", {Text = FactionCoreSettlements("Faction"), Font = PopupDescriptionFont}}
 				},
 				-- Dynasty Button Information
