@@ -39,3 +39,6 @@ cancel_level = {
 
 garrison_level = {
 }
+
+potential_neutral_factions_level = {
+}

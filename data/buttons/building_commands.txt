@@ -18,6 +18,75 @@ set_rally_point = {
 	}
 }
 
+see_potential_neutral_factions = {
+	pos = 14
+	icon = heater_shield
+	action = button
+	value = potential_neutral_factions_level
+	allowed = check_has_sub_buttons
+	key = n
+	hint = "See Potential ~!Neutral Factions"
+	description = "See the list of neutral factions which can spawn on this building site."
+	popup = popup_commands
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+cancel_see_potential_neutral_factions = {
+	pos = 16
+	level = potential_neutral_factions_level
+	icon = icon_cancel
+	action = button
+	value = none
+	key = escape
+	hint = "Cancel (~<Esc~>)"
+	popup = popup_commands
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
 salvage_building = {
 	pos = 16
 	icon = icon_salvage
@@ -54,6 +123,5 @@ salvage_building = {
 		emerald_mine
 		stone_quarry
 		yale_hunting_lodge
-		mercenary_camp
 	}
 }

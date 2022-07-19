@@ -1,0 +1,464 @@
+potential_neutral_faction_1 = {
+	pos = 1
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_2 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_3 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_4 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_5 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_6 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_7 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_8 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_9 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_10 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_11 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_12 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_13 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_14 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
+
+potential_neutral_faction_15 = {
+	pos = 2
+	level = potential_neutral_factions_level
+	action = potential_neutral_faction
+	value = -1
+	popup = popup_research
+	unit_classes = {
+		farm
+		barracks
+		lumber_mill
+		smithy
+		masons_shop
+		stables
+		market
+		dock
+		temple
+		university
+		watch_tower
+		guard_tower
+		heavy_tower
+		cannon_tower
+		tribal_camp
+		mercenary_camp
+	}
+	unit_types = {
+		unit_minor_building_site
+		unit_building_site
+		unit_major_building_site
+	}
+}
