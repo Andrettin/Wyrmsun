@@ -25,8 +25,8 @@ see_potential_neutral_factions = {
 	value = potential_neutral_factions_level
 	allowed = check_has_sub_buttons
 	key = n
-	hint = "See Potential ~!Neutral Factions"
-	description = "See the list of neutral factions which can spawn on this building site."
+	hint = "Show Potential ~!Neutral Factions"
+	description = "Show the list of neutral factions which can spawn on this building site."
 	popup = popup_commands
 	unit_classes = {
 		farm
