@@ -103,6 +103,7 @@ grass = {
 		temp_grass_long_b
 		temp_grass_plants
 		temp_grass_wet
+		temp_road_broken
 		temperate_forestfloor_01
 		temperate_forestfloor_01_autumn
 		temperate_forestfloor_02

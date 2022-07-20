@@ -8,4 +8,7 @@ unit_black_bear = {
 	offset = { 0 4 }
 	animation_set = animations_bear
 	icon = black_bear
+	0_ad_template_names = {
+		gaia/fauna_bear_black
+	}
 }

@@ -3,6 +3,10 @@ stronghold = {
 	town_hall = true
 	tech_tree_parent_unit_class = town_hall
 	
+	0_ad_template_names = {
+		structures/gaul/fortress
+	}
+	
 	conditions = {
 		unit_class = barracks
 		upgrade_class = masonry

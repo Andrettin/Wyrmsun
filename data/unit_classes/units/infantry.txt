@@ -16,6 +16,10 @@ veteran_infantry = {
 
 heroic_infantry = {
 	name = "Heroic Infantry"
+	0_ad_template_names = {
+		units/cart/infantry_swordsman_gaul_e
+		units/gaul/champion_fanatic
+	}
 }
 
 spearman = {

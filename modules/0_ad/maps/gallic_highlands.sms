@@ -1,0 +1,15 @@
+LoadTileModels("scripts/tilesets/conifer_forest_summer.lua")
+
+SetPlayerData(0, "RaceName", "germanic")
+SetPlayerData(0, "Resources", "copper", 2500)
+SetPlayerData(0, "Resources", "lumber", 2500)
+SetPlayerData(0, "Resources", "stone", 2500)
+SetAiType(0, "land-attack")
+SetPlayerData(1, "RaceName", "germanic")
+SetPlayerData(1, "Resources", "copper", 2500)
+SetPlayerData(1, "Resources", "lumber", 2500)
+SetPlayerData(1, "Resources", "stone", 2500)
+SetAiType(1, "land-attack")
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
+
+ApplyMapTemplate("gallic_highlands")

@@ -1,0 +1,9 @@
+name = "Gallic Highlands"
+description = "The Highlands of central Gaul."
+map_size = { 256 256 }
+player_types = {
+	person
+	person
+}
+settings = classic_skirmish
+hidden = true

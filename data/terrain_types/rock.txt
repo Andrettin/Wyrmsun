@@ -53,7 +53,10 @@ rock = {
 		Md #Dry Mountains
 	}
 	0_ad_texture_names = {
+		aegean_mountain_01
 		medit_cliff_aegean
+		temperate_cliff_01
+		temperate_cliff_02
 		temperate_cliff_02_dover
 	}
 	freeciv_chars = {

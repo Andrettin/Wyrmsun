@@ -263,18 +263,37 @@ ignored_0_ad_template_names = {
 	actor|geology/stone_granite_med.xml
 	actor|particle/cloud.xml
 	actor|particle/rain_shower.xml
+	actor|props/flora/bush_medit_sm.xml
 	actor|props/flora/bush_tempe_a.xml
 	actor|props/flora/bush_tempe_sm.xml
 	actor|props/flora/bush_tempe_sm_dry.xml
 	actor|props/flora/cattails.xml
+	actor|props/flora/grass_field_lush_tall.xml
+	actor|props/flora/grass_medit_field.xml
+	actor|props/flora/grass_soft_small.xml
+	actor|props/flora/grass_soft_small_tall.xml
+	actor|props/flora/grass_summer.xml
 	actor|props/flora/grass_temp_field.xml
 	actor|props/flora/grass_temp_field_brown.xml
 	actor|props/flora/grass_tropic_field.xml
+	actor|props/flora/plant_lg.xml
 	actor|props/flora/plant_sm.xml
 	actor|props/flora/reeds_pond_lush_a.xml
 	actor|props/flora/reeds_pond_lush_b.xml
 	actor|props/flora/water_lillies.xml
 	actor|props/flora/water_log.xml
+	actor|props/special/eyecandy/ground_dirt_decal_01.xml
+	actor|props/special/eyecandy/handcart_1.xml
+	actor|props/special/eyecandy/handcart_1_broken.xml
+	actor|props/special/eyecandy/hay_cart.xml
+	actor|props/structures/construction/scaffold.xml
+	actor|props/structures/construction/scaffold_small.xml
+	actor|props/structures/decals/field_temperate_5x5.xml
+	actor|props/structures/decals/field_temperate_b_5x5.xml
+	actor|props/structures/decals/gravel_4x5.xml
+	actor|props/structures/decals/gravel_5x5.xml
+	actor|props/structures/decals/iber_corral_mud.xml
+	actor|props/structures/decals/spart_3x3.xml
 	birds/buzzard
 	gaia/fish/generic
 	gaia/fruit/berry_01
@@ -287,13 +306,17 @@ ignored_0_ad_template_names = {
 	skirmish/structures/iber_wall_short
 	skirmish/units/special_starting_unit
 	structures/fence_long
+	structures/trading_post_celtic
 	structures/uffington_horse
+	units/gaul/catafalque
 }
 
 0_ad_template_resource_amounts = {
 	gaia/ore/temperate_01 = 50000
+	gaia/ore/temperate_02 = 50000
 	gaia/ore/temperate_large = 50000
 	gaia/rock/mediterranean_large = 50000
+	gaia/rock/temperate_cut = 20000
 	gaia/rock/temperate_large = 50000
 	gaia/rock/temperate_large_02 = 50000
 	gaia/rock/temperate_large_03 = 50000

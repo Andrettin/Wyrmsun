@@ -1,0 +1,73 @@
+gallic_highlands = {
+	name = "Gallic Highlands"
+	size = { 256 256 }
+	terrain_file = "gallic_highlands_2p.pmp"
+	default_water_terrain_type = shallow_water
+	circle = true #apply nothing outside the circle, generating based on the nearest terrain
+	created_settlements = {
+		metz_settlement
+		nancy_settlement
+		toul_settlement
+		verdun_settlement
+	}
+	random_created_settlements = true
+	units = {
+		#copper rocks for player 1 (their location should be fixed)
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		unit_copper_rock = {
+			pos = { 107 58 }
+		}
+		
+		#copper rocks for player 2 (their location should be fixed)
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+		unit_copper_rock = {
+			pos = { 167 196 }
+		}
+	}
+}

@@ -4,6 +4,7 @@ town_hall = {
 	tech_tree_parent_unit_class = worker
 	0_ad_template_names = {
 		skirmish/structures/default_civil_centre
+		structures/gaul/civil_centre
 	}
 }
 
@@ -44,6 +45,8 @@ watch_tower = {
 	0_ad_template_names = {
 		skirmish/structures/iber_wall_tower
 		structures/brit/outpost
+		structures/brit/sentry_tower
+		structures/gaul/sentry_tower
 	}
 }
 

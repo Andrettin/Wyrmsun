@@ -24,6 +24,7 @@ unit_copper_deposit = {
 	}
 	0_ad_template_names = {
 		gaia/ore/temperate_01
+		gaia/ore/temperate_02
 		gaia/ore/temperate_large
 	}
 }

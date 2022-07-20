@@ -94,6 +94,7 @@ dirt = {
 		temp_mud_a
 		temp_mud_plants
 		temp_plants_bog
+		temperate_mud_01
 		temperate_rocks_dirt_01
 	}
 	freeciv_chars = {

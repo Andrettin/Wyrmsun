@@ -60,16 +60,20 @@ pine_tree = {
 	0_ad_template_names = {
 		gaia/tree/aleppo_pine
 		gaia/tree/dead
+		gaia/tree/elm_dead
 		gaia/tree/euro_beech
 		gaia/tree/euro_beech_aut
+		gaia/tree/maple
 		gaia/tree/oak
 		gaia/tree/oak_aut
 		gaia/tree/oak_aut_new
+		gaia/tree/oak_dead
 		gaia/tree/oak_holly
 		gaia/tree/oak_hungarian
 		gaia/tree/oak_hungarian_autumn
 		gaia/tree/pine
 		gaia/tree/poplar
+		gaia/tree/temperate
 	}
 	freeciv_chars = {
 		f #forest

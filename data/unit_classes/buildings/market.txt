@@ -2,6 +2,11 @@ market = {
 	name = "Market"
 	tech_tree_parent_unit_class = lumber_mill
 	
+	0_ad_template_names = {
+		structures/brit/market
+		structures/gaul/market
+	}
+	
 	conditions = {
 		unit_class = lumber_mill
 	}

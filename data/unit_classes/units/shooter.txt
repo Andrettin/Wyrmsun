@@ -12,13 +12,22 @@ shooter = {
 	
 	0_ad_template_names = {
 		skirmish/units/default_infantry_ranged_b
+		units/gaul/infantry_javelineer_b
 	}
 }
 
 veteran_shooter = {
 	name = "Veteran Shooter"
+	
+	0_ad_template_names = {
+		units/gaul/infantry_javelineer_a
+	}
 }
 
 heroic_shooter = {
 	name = "Heroic Shooter"
+	
+	0_ad_template_names = {
+		units/gaul/infantry_javelineer_e
+	}
 }
