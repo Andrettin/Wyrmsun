@@ -132,8 +132,8 @@ random_earth = {
 		shallow_water = {
 			seed_count = 128
 			use_existing_as_seeds = true
-			max_percent = 20
 			target_terrain_type = dirt
+			target_terrain_type = grass
 		}
 		rock = {
 			seed_count = 128

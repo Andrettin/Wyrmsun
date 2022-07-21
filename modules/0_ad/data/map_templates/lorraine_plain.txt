@@ -1,9 +1,17 @@
 lorraine_plain = {
 	name = "Lorraine Plain"
+	#size = { 128 128 }
 	size = { 256 256 }
+	#main_template = random_earth
+	optional = true
 	terrain_file = "lorraine_plain.pmp"
 	default_water_terrain_type = shallow_water
 	circle = true #apply nothing outside the circle, generating based on the nearest terrain
+	#scale_divisor = 2
+	east_of = gallic_fields
+	east_of = gallic_highlands
+	north_of = azure_coast
+	north_of = gallic_highlands
 	created_settlements = {
 		metz_settlement
 		nancy_settlement

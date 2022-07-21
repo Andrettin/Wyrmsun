@@ -1,5 +1,6 @@
 name = "Gallic Highlands"
 description = "The Highlands of central Gaul."
+#map_size = { 128 128 }
 map_size = { 256 256 }
 player_types = {
 	person
