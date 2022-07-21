@@ -1,0 +1,16 @@
+name = "Azure Coast"
+description = "Help the young Massilia to settle or expel the Greeks from Gaul."
+#map_size = { 192 192 }
+map_size = { 384 384 }
+player_types = {
+	person
+	person
+	person
+	person
+	person
+	person
+	person
+	person
+}
+settings = classic_skirmish
+hidden = true

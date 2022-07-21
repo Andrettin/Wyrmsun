@@ -1,0 +1,27 @@
+azure_coast = {
+	name = "Azure Coast"
+	#size = { 192 192 }
+	size = { 384 384 }
+	#main_template = random_earth
+	optional = true
+	terrain_file = "azure_coast_8p.pmp"
+	default_water_terrain_type = shallow_water
+	#scale_divisor = 2
+	south_of = gallic_fields
+	south_of = gallic_highlands
+	south_of = lorraine_plain
+	created_settlements = {
+		marseilles
+		brussels
+		bordeaux
+		paris
+		clermont
+		dijon
+		toulouse
+		metz_settlement
+		nancy_settlement
+		toul_settlement
+		verdun_settlement
+	}
+	random_created_settlements = true
+}

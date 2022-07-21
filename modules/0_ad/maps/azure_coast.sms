@@ -1,0 +1,12 @@
+LoadTileModels("scripts/tilesets/conifer_forest_summer.lua")
+
+for i = 0,7 do
+	SetPlayerData(i, "RaceName", "germanic")
+	SetPlayerData(i, "Resources", "copper", 2500)
+	SetPlayerData(i, "Resources", "lumber", 2500)
+	SetPlayerData(i, "Resources", "stone", 2500)
+	SetAiType(i, "land-attack")
+end
+SetPlayerData(PlayerNumNeutral, "RaceName", "neutral")
+
+ApplyMapTemplate("azure_coast")
