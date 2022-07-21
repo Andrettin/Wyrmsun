@@ -1,0 +1,19 @@
+gallic_fields = {
+	name = "Gallic Fields"
+	#size = { 128 128 }
+	size = { 256 256 }
+	#main_template = random_earth
+	optional = true
+	terrain_file = "gallic_fields_3p.pmp"
+	default_water_terrain_type = shallow_water
+	circle = true #apply nothing outside the circle, generating based on the nearest terrain
+	#scale_divisor = 2
+	west_of = lorraine_plain
+	north_of = azure_coast
+	created_settlements = {
+		brussels
+		bordeaux
+		paris
+	}
+	random_created_settlements = true
+}
