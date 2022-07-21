@@ -77,4 +77,7 @@ dry_grass = {
 	wesnoth_strings = {
 		Gd #Dry Grass
 	}
+	0_ad_texture_names = {
+		medit_grass_field_dry
+	}
 }

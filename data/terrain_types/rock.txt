@@ -55,6 +55,15 @@ rock = {
 	0_ad_texture_names = {
 		aegean_mountain_01
 		medit_cliff_aegean
+		medit_cliff_aegean_shrubs
+		medit_cliff_grass
+		medit_cliff_greek
+		medit_cliff_greek_2
+		medit_cliff_italia
+		medit_cliff_italia_grass
+		temp_cliff_a
+		temp_cliff_b
+		temp_cliff_c
 		temperate_cliff_01
 		temperate_cliff_02
 		temperate_cliff_02_dover

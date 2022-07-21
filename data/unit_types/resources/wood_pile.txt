@@ -41,5 +41,6 @@ unit_wood_pile = {
 	0_ad_template_names = {
 		gaia/treasure/shipwreck
 		gaia/treasure/shipwreck_ram_bow
+		gaia/treasure/wood
 	}
 }

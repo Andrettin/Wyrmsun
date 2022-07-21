@@ -91,19 +91,48 @@ grass = {
 	}
 	0_ad_texture_names = {
 		alpine_forrestfloor
+		medit_farmland
+		medit_forestfloor_a
+		medit_grass_field
+		medit_grass_field_a
+		medit_grass_field_b
+		medit_grass_field_brown
+		medit_grass_flowers
+		medit_grass_shrubs
+		medit_grass_wild
+		medit_grass_wild_2
 		temp_dirt_gravel_plants
 		temp_farmland
 		temp_forestfloor_a
+		temp_forestfloor_aut
+		temp_forestfloor_autumn
 		temp_forestfloor_pine
 		temp_grass
-		temp_grass_clovers_2
+		temp_grass_1
+		temp_grass_2
+		temp_grass_3
+		temp_grass_4
+		temp_grass_aut
+		temp_grass_b
+		temp_grass_b_aut
 		temp_grass_c
+		temp_grass_c_aut
+		temp_grass_clovers
+		temp_grass_clovers_2
 		temp_grass_d
+		temp_grass_d_aut
 		temp_grass_long
 		temp_grass_long_b
+		temp_grass_long_b_aut
+		temp_grass_mossy
 		temp_grass_plants
+		temp_grass_plants_aut
 		temp_grass_wet
+		temp_road
+		temp_road_aut
 		temp_road_broken
+		temp_road_overgrown
+		temp_road_overgrown_aut
 		temperate_forestfloor_01
 		temperate_forestfloor_01_autumn
 		temperate_forestfloor_02

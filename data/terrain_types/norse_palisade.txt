@@ -80,4 +80,11 @@ norse_palisade = {
 		Ce #Encampment
 		Ke #Encampment Keep
 	}
+	0_ad_template_names = {
+		structures/palisades_curve
+		structures/palisades_end
+		structures/palisades_fort
+		structures/palisades_medium
+		structures/palisades_straight
+	}
 }

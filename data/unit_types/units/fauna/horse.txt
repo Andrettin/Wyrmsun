@@ -56,5 +56,6 @@ unit_horse = {
 		gaia/fauna_cattle_cow
 		gaia/fauna_deer
 		gaia/fauna_horse
+		gaia/fauna_muskox
 	}
 }

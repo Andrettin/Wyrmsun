@@ -88,6 +88,14 @@ dirt = {
 		Hh #Regular Hills
 	}
 	0_ad_texture_names = {
+		bridge_wood_a
+		bridge_wood_b
+		bridge_wood_c
+		medit_dirt
+		medit_dirt_b
+		medit_dirt_c
+		medit_dirt_d
+		medit_dirt_e
 		temp_dirt_a
 		temp_dirt_gravel
 		temp_dirt_gravel_b

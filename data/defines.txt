@@ -282,6 +282,8 @@ ignored_0_ad_template_names = {
 	actor|props/flora/reeds_pond_lush_b.xml
 	actor|props/flora/water_lillies.xml
 	actor|props/flora/water_log.xml
+	actor|props/special/eyecandy/bridge_edge_wooden.xml
+	actor|props/special/eyecandy/campfire.xml
 	actor|props/special/eyecandy/ground_dirt_decal_01.xml
 	actor|props/special/eyecandy/handcart_1.xml
 	actor|props/special/eyecandy/handcart_1_broken.xml
@@ -296,8 +298,12 @@ ignored_0_ad_template_names = {
 	actor|props/structures/decals/spart_3x3.xml
 	birds/buzzard
 	gaia/fish/generic
+	gaia/fruit/apple
 	gaia/fruit/berry_01
+	gaia/ruins/standing_stone
+	gaia/treasure/food_barrel
 	gaia/treasure/food_bin
+	gaia/treasure/food_crate
 	gaia/treasure/food_persian_big
 	gaia/treasure/food_persian_small
 	gaia/tree/bush_temperate
@@ -306,8 +312,14 @@ ignored_0_ad_template_names = {
 	skirmish/structures/iber_wall_short
 	skirmish/units/special_starting_unit
 	structures/fence_long
+	structures/palisades_spike_angle
+	structures/palisades_spikes_small
+	structures/palisades_spikes_tall
 	structures/trading_post_celtic
 	structures/uffington_horse
+	trigger/trigger_point_A
+	trigger/trigger_point_B
+	trigger/trigger_point_C
 	units/gaul/catafalque
 }
 
@@ -322,7 +334,9 @@ ignored_0_ad_template_names = {
 	gaia/rock/temperate_large_03 = 50000
 	gaia/treasure/shipwreck = 5000
 	gaia/treasure/shipwreck_ram_bow = 5500
+	gaia/treasure/stone = 3000
 	gaia/treasure/stone_pile_granite = 2000
+	gaia/treasure/wood = 3000
 }
 
 0_ad_water_height_multiplier = 80

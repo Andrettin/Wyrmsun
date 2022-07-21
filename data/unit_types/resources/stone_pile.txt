@@ -54,6 +54,7 @@ unit_stone_pile = {
 	0_ad_template_names = {
 		actor|props/special/eyecandy/blocks_granite_pile_a.xml
 		actor|props/special/eyecandy/blocks_granite_pile_b.xml
+		gaia/treasure/stone
 		gaia/treasure/stone_pile_granite
 	}
 }
