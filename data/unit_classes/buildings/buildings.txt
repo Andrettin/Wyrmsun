@@ -20,6 +20,11 @@ farm = {
 	tech_tree_parent_unit_class = worker
 	0_ad_template_names = {
 		structures/athen/house
+		structures/brit/corral
+		structures/brit/farmstead
+		structures/brit/house
+		structures/brit/rotarymill
+		structures/gaul/house
 	}
 }
 

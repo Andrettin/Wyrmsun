@@ -11,12 +11,7 @@ unit_celtic_farm = {
 		ready = corral_ready
 	}
 	0_ad_template_names = {
-		structures/brit/corral
-		structures/brit/farmstead
-		structures/brit/house
-		structures/brit/rotarymill
 		structures/celt_hut
 		structures/celt_longhouse
-		structures/gaul/house
 	}
 }

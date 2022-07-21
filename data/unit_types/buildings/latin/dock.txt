@@ -21,7 +21,4 @@ unit_latin_dock = {
 			}
 		}
 	}
-	0_ad_template_names = {
-		structures/athen/dock
-	}
 }
