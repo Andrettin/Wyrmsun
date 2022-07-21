@@ -23,6 +23,7 @@ bearing_clan = {
 	neutral_target_sites = {
 		bernburg #i.e. "bear castle"
 		bernstein_im_burgenland #i.e. "bear stone"
+		bernstejn
 		burshtyn #called "Bernstein" in German
 	}
 	max_neutral_buildings = 1
