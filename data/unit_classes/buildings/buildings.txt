@@ -4,6 +4,7 @@ town_hall = {
 	tech_tree_parent_unit_class = worker
 	0_ad_template_names = {
 		skirmish/structures/default_civil_centre
+		structures/athen/civil_centre
 		structures/gaul/civil_centre
 	}
 }
@@ -17,6 +18,9 @@ fortress = {
 farm = {
 	name = "Farm"
 	tech_tree_parent_unit_class = worker
+	0_ad_template_names = {
+		structures/athen/house
+	}
 }
 
 barracks = {

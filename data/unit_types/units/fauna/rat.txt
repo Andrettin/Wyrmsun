@@ -58,5 +58,6 @@ unit_rat = {
 	}
 	0_ad_template_names = {
 		gaia/fauna_chicken
+		gaia/fauna_rabbit
 	}
 }

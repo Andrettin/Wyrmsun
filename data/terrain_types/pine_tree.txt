@@ -59,6 +59,10 @@ pine_tree = {
 	}
 	0_ad_template_names = {
 		gaia/tree/aleppo_pine
+		gaia/tree/carob
+		gaia/tree/cretan_date_palm_patch
+		gaia/tree/cretan_date_palm_short
+		gaia/tree/cretan_date_palm_tall
 		gaia/tree/dead
 		gaia/tree/elm_dead
 		gaia/tree/euro_beech
@@ -71,8 +75,10 @@ pine_tree = {
 		gaia/tree/oak_holly
 		gaia/tree/oak_hungarian
 		gaia/tree/oak_hungarian_autumn
+		gaia/tree/oak_large
 		gaia/tree/pine
 		gaia/tree/poplar
+		gaia/tree/poplar_lombardy
 		gaia/tree/temperate
 	}
 	freeciv_chars = {

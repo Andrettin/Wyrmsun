@@ -29,6 +29,10 @@ spearman = {
 
 veteran_spearman = {
 	name = "Veteran Spearman"
+	0_ad_template_names = {
+		units/athen/infantry_spearman_a
+		units/gaul/infantry_spearman_a
+	}
 }
 
 heroic_spearman = {

@@ -85,6 +85,11 @@ shallow_water = {
 		Wwr #Medium Coastal Reef
 		Wwt #Tropical Shallow Water
 	}
+	0_ad_texture_names = {
+		medit_sea_coral_deep
+		medit_sea_coral_plants
+		medit_sea_depths
+	}
 	freeciv_chars = {
 		" " #ocean
 		: #deep ocean

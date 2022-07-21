@@ -2,6 +2,11 @@ guard_tower = {
 	name = "Guard Tower"
 	tech_tree_parent_upgrade_class = masonry
 	
+	0_ad_template_names = {
+		structures/athen/defense_tower
+		structures/gaul/defense_tower
+	}
+	
 	conditions = {
 		unit_class = lumber_mill
 		upgrade_class = masonry

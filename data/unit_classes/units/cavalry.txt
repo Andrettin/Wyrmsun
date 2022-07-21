@@ -15,6 +15,9 @@ cavalry = {
 	
 	0_ad_template_names = {
 		skirmish/units/default_cavalry
+		units/athen/cavalry_javelineer_a
+		units/athen/cavalry_swordsman_a
+		units/gaul/cavalry_javelineer_a
 	}
 }
 

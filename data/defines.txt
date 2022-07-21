@@ -263,31 +263,46 @@ ignored_0_ad_template_names = {
 	actor|geology/stone_granite_med.xml
 	actor|particle/cloud.xml
 	actor|particle/rain_shower.xml
+	actor|props/flora/bush_medit_me.xml
+	actor|props/flora/bush_medit_me_lush.xml
 	actor|props/flora/bush_medit_sm.xml
+	actor|props/flora/bush_medit_sm_lush.xml
+	actor|props/flora/bush_medit_underbrush.xml
 	actor|props/flora/bush_tempe_a.xml
 	actor|props/flora/bush_tempe_sm.xml
 	actor|props/flora/bush_tempe_sm_dry.xml
 	actor|props/flora/cattails.xml
+	actor|props/flora/grass_field_bloom_short.xml
+	actor|props/flora/grass_field_flowering_tall.xml
+	actor|props/flora/grass_field_lush_short.xml
 	actor|props/flora/grass_field_lush_tall.xml
 	actor|props/flora/grass_medit_field.xml
+	actor|props/flora/grass_medit_flowering_tall.xml
+	actor|props/flora/grass_soft_dry_large_tall.xml
 	actor|props/flora/grass_soft_small.xml
 	actor|props/flora/grass_soft_small_tall.xml
+	actor|props/flora/grass_soft_tuft_a.xml
 	actor|props/flora/grass_summer.xml
 	actor|props/flora/grass_temp_field.xml
 	actor|props/flora/grass_temp_field_brown.xml
 	actor|props/flora/grass_tropic_field.xml
 	actor|props/flora/plant_lg.xml
+	actor|props/flora/plant_medit_artichoke.xml
 	actor|props/flora/plant_sm.xml
+	actor|props/flora/reeds_a.xml
+	actor|props/flora/reeds_pond_dry.xml
 	actor|props/flora/reeds_pond_lush_a.xml
 	actor|props/flora/reeds_pond_lush_b.xml
 	actor|props/flora/water_lillies.xml
 	actor|props/flora/water_log.xml
+	actor|props/special/eyecandy/bridge_edge_hele.xml
 	actor|props/special/eyecandy/bridge_edge_wooden.xml
 	actor|props/special/eyecandy/campfire.xml
 	actor|props/special/eyecandy/ground_dirt_decal_01.xml
 	actor|props/special/eyecandy/handcart_1.xml
 	actor|props/special/eyecandy/handcart_1_broken.xml
 	actor|props/special/eyecandy/hay_cart.xml
+	actor|props/special/eyecandy/statue_aphrodite_huge.xml
 	actor|props/structures/construction/scaffold.xml
 	actor|props/structures/construction/scaffold_small.xml
 	actor|props/structures/decals/field_temperate_5x5.xml
@@ -297,6 +312,8 @@ ignored_0_ad_template_names = {
 	actor|props/structures/decals/iber_corral_mud.xml
 	actor|props/structures/decals/spart_3x3.xml
 	birds/buzzard
+	gaia/fauna_whale_fin
+	gaia/fauna_whale_humpback
 	gaia/fish/generic
 	gaia/fruit/apple
 	gaia/fruit/berry_01
@@ -304,14 +321,19 @@ ignored_0_ad_template_names = {
 	gaia/treasure/food_barrel
 	gaia/treasure/food_bin
 	gaia/treasure/food_crate
+	gaia/treasure/food_jars
 	gaia/treasure/food_persian_big
 	gaia/treasure/food_persian_small
+	gaia/treasure/standing_stone
+	gaia/tree/bush_badlands
 	gaia/tree/bush_temperate
 	skirmish/structures/iber_wall_long
 	skirmish/structures/iber_wall_medium
 	skirmish/structures/iber_wall_short
 	skirmish/units/special_starting_unit
+	structures/column_doric_fallen
 	structures/fence_long
+	structures/palisades_gate
 	structures/palisades_spike_angle
 	structures/palisades_spikes_small
 	structures/palisades_spikes_tall
@@ -324,14 +346,17 @@ ignored_0_ad_template_names = {
 }
 
 0_ad_template_resource_amounts = {
+	gaia/ore/mediterranean_small = 10000
 	gaia/ore/temperate_01 = 50000
 	gaia/ore/temperate_02 = 50000
 	gaia/ore/temperate_large = 50000
 	gaia/rock/mediterranean_large = 50000
+	gaia/rock/mediterranean_small = 10000
 	gaia/rock/temperate_cut = 20000
 	gaia/rock/temperate_large = 50000
 	gaia/rock/temperate_large_02 = 50000
 	gaia/rock/temperate_large_03 = 50000
+	gaia/treasure/metal = 3000
 	gaia/treasure/shipwreck = 5000
 	gaia/treasure/shipwreck_ram_bow = 5500
 	gaia/treasure/stone = 3000

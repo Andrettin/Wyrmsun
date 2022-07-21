@@ -4,6 +4,7 @@ stronghold = {
 	tech_tree_parent_unit_class = town_hall
 	
 	0_ad_template_names = {
+		structures/athen/fortress
 		structures/gaul/fortress
 	}
 	

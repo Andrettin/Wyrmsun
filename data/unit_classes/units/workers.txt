@@ -2,6 +2,8 @@ worker = {
 	name = "Worker"
 	0_ad_template_names = {
 		skirmish/units/default_support_female_citizen
+		units/athen/support_female_citizen
+		units/gaul/support_female_citizen
 	}
 }
 

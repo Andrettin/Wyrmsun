@@ -53,4 +53,7 @@ unit_teuton_dock = {
 			}
 		}
 	}
+	0_ad_template_names = {
+		structures/gaul/dock
+	}
 }

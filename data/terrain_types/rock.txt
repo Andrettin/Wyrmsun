@@ -61,6 +61,11 @@ rock = {
 		medit_cliff_greek_2
 		medit_cliff_italia
 		medit_cliff_italia_grass
+		medit_rocks
+		medit_rocks_grass
+		medit_rocks_grass_shrubs
+		medit_rocks_shrubs
+		medit_rocks_wet
 		temp_cliff_a
 		temp_cliff_b
 		temp_cliff_c

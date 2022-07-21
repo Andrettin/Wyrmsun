@@ -91,6 +91,27 @@ grass = {
 	}
 	0_ad_texture_names = {
 		alpine_forrestfloor
+		alpine_grass
+		alpine_grass_a
+		alpine_grass_a_fancy
+		alpine_grass_b
+		alpine_grass_b_fancy
+		alpine_grass_b_wild
+		alpine_grass_c
+		alpine_grass_c_fancy
+		alpine_grass_d
+		alpine_grass_d_fancy
+		alpine_grass_d_wild
+		alpine_grass_e
+		alpine_grass_fancy
+		grass_field
+		grass_field_a
+		grass_field_b
+		grass_moss
+		grass1
+		grass1_spring
+		grass1_spring_fancy
+		medit_city_pavement
 		medit_farmland
 		medit_forestfloor_a
 		medit_grass_field
@@ -101,6 +122,11 @@ grass = {
 		medit_grass_shrubs
 		medit_grass_wild
 		medit_grass_wild_2
+		medit_shrubs
+		medit_shrubs_a
+		medit_shrubs_golden
+		road_med
+		road_med_a
 		temp_dirt_gravel_plants
 		temp_farmland
 		temp_forestfloor_a

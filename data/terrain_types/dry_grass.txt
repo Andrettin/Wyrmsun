@@ -78,6 +78,8 @@ dry_grass = {
 		Gd #Dry Grass
 	}
 	0_ad_texture_names = {
+		grass_field_dry
 		medit_grass_field_dry
+		medit_shrubs_dry
 	}
 }
