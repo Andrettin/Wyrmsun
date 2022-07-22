@@ -2645,6 +2645,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {FactionUpgrade = "only"}, HighlightColor = "yellow",
 					More = {"Text", {Text = Concat(_("Faction Bonus: "), UpgradeEffectsString("Upgrade")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
 				},
+				{ 	Condition = {Faction = "only", FactionMaxNeutralBuildings = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(_("Max Buildings: "), FactionMaxNeutralBuildings("Faction")), MaxWidth = math.max(256, Video.Width / 5), Font = PopupDescriptionFont}}
+				},
 				{ 	Margin = {1, 1}, Condition = {Faction = "only", FactionCoreSettlements = "only"}, 
 					More = {"Line", {Width = 0, Height = 1, Color = PopupBorderColor}}
 				},
