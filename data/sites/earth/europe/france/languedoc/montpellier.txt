@@ -4,8 +4,7 @@ montpellier = {
 	geocoordinate = { 3.86998571637 43.61039878240 } #from Natural Earth
 	base_unit_type = unit_building_site
 	regions = {
-		france
-		gaul
+		languedoc
 	}
 	
 	history = {

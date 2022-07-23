@@ -4,7 +4,6 @@ beziers = {
 	geocoordinate = { 3.20997432314 43.35049216620 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		france
-		gaul
+		languedoc
 	}
 }

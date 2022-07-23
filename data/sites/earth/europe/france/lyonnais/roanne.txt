@@ -4,7 +4,6 @@ roanne = {
 	geocoordinate = { 4.06666621768 46.03332582510 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		france
-		gaul
+		lyonnais
 	}
 }

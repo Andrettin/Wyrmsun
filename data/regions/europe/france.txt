@@ -19,7 +19,49 @@ alsace = {
 	}
 }
 
+auvergne = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+bourbonnais = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+burgundy = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+languedoc = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+limousin = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
 lorraine = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+lyonnais = {
 	superregions = {
 		france
 		gaul

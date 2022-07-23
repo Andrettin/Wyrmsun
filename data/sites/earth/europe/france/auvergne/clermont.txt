@@ -8,8 +8,7 @@ clermont = {
 		frankish = "Arverni"
 	}
 	regions = {
-		france
-		gaul
+		auvergne
 	}
 	
 	history = {

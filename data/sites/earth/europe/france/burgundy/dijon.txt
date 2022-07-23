@@ -8,8 +8,7 @@ dijon = {
 		frankish = "Divio"
 	}
 	regions = {
-		france
-		gaul
+		burgundy
 	}
 	
 	history = {
