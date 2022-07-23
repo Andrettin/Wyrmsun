@@ -4,6 +4,10 @@ vlkov_pod_oskobrhem = {
 	geocoordinate = { 15.220486987874 50.156052750822 }
 	base_unit_type = unit_building_site
 	cultural_names = {
+		anglo_saxon = "Wolfsberg"
+		frankish = "Wolfsberg"
+		gothic = "Wolfsberg"
+		suebi = "Wolfsberg"
 		teutonic = "Wolfsberg"
 	}
 	regions = {

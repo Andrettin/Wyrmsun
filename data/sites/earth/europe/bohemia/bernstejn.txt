@@ -4,6 +4,10 @@ bernstejn = {
 	geocoordinate = { 12.65668 49.5087 }
 	base_unit_type = unit_building_site
 	cultural_names = {
+		anglo_saxon = "Bernstein"
+		frankish = "Bernstein"
+		gothic = "Bernstein"
+		suebi = "Bernstein"
 		teutonic = "Bernstein"
 	}
 	regions = {
