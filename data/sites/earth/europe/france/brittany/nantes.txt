@@ -7,8 +7,7 @@ nantes = {
 		frankish = "Namnetes"
 	}
 	regions = {
-		france
-		gaul
+		brittany
 	}
 	
 	history = {

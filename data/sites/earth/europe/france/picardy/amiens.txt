@@ -10,8 +10,7 @@ amiens = {
 		latin = "Samarobriva" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 	}
 	regions = {
-		france
-		gaul
+		picardy
 	}
 	
 	history = {

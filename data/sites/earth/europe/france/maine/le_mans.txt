@@ -4,7 +4,6 @@ le_mans = {
 	geocoordinate = { 0.09998327495 48.00041505850 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		france
-		gaul
+		maine
 	}
 }

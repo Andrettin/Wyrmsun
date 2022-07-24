@@ -19,7 +19,21 @@ alsace = {
 	}
 }
 
+anjou = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
 auvergne = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+berry = {
 	superregions = {
 		france
 		gaul
@@ -33,7 +47,21 @@ bourbonnais = {
 	}
 }
 
+brittany = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
 burgundy = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+ile_de_france = {
 	superregions = {
 		france
 		gaul
@@ -62,6 +90,48 @@ lorraine = {
 }
 
 lyonnais = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+maine = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+nivernais = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+normandy = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+orleanais = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+picardy = {
+	superregions = {
+		france
+		gaul
+	}
+}
+
+poitou = {
 	superregions = {
 		france
 		gaul

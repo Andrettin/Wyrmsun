@@ -4,8 +4,7 @@ caen = {
 	geocoordinate = { -0.34998925923 49.18375368150 } #from Natural Earth
 	base_unit_type = unit_building_site
 	regions = {
-		france
-		gaul
+		normandy
 	}
 	
 	history = {

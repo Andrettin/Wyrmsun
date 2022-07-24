@@ -11,8 +11,7 @@ paris = {
 		latin = "Lutetia" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 	regions = {
-		france
-		gaul
+		ile_de_france
 	}
 	
 	history = {

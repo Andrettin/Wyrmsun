@@ -4,7 +4,6 @@ rennes = {
 	geocoordinate = { -1.67001204569 48.10002138170 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		france
-		gaul
+		brittany
 	}
 }

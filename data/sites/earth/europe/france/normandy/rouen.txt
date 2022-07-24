@@ -7,8 +7,7 @@ rouen = {
 		frankish = "Rotomagus"
 	}
 	regions = {
-		france
-		gaul
+		normandy
 	}
 	
 	history = {

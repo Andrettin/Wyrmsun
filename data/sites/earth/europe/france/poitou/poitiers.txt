@@ -7,8 +7,7 @@ poitiers = {
 		frankish = "Pictavis"
 	}
 	regions = {
-		france
-		gaul
+		poitou
 	}
 	
 	history = {

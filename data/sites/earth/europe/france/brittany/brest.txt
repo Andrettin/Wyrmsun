@@ -9,8 +9,7 @@ brest = {
 		latin = "Gesocribate" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
 	regions = {
-		france
-		gaul
+		brittany
 	}
 	
 	history = {
