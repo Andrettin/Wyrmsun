@@ -76,6 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Bordeaux, Clermont, Nancy, Vannes and Wurzburg settlement sites for the Earth scenario map, and updated the predefined settlement territories accordingly.
 - Added many building sites in France, for the Earth scenario map.
 - Placed more pre-Indo-European tribes on the Earth scenario map for the Stone/Bronze age.
+- The Vosges rock terrain feature is now semi-randomly generated (similar to the Alps).
 
 * Miscellaneous
 - Improved the performance of the database parsing.

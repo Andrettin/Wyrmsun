@@ -153,6 +153,10 @@ vatnajokull = {
 
 vosges = {
 	name = "Vosges"
+	aliases += grand_ballon
+	aliases += hohneck
+	aliases += storkenkopf
 	terrain_type = rock #mountains
 	color = { 60 8 9 }
+	terrain_generation_seed = true
 }
