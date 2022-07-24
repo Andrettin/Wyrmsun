@@ -1,0 +1,10 @@
+vannes = {
+	name = "Vannes"
+	map_template = earth
+	geocoordinate = { -2.7616666666667 47.655 }
+	base_unit_type = unit_settlement_site
+	color = { 159 122 254 }
+	regions = {
+		brittany
+	}
+}

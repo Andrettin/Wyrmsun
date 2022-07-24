@@ -14,7 +14,7 @@ lorraine_plain = {
 	north_of = gallic_highlands
 	created_settlements = {
 		metz_settlement
-		nancy_settlement
+		nancy
 		toul_settlement
 		verdun_settlement
 	}

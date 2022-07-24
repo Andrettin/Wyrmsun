@@ -73,7 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - The settlements in the Lorraine Plain map are now settlements which are actually in Lorraine.
-- Added the Bordeaux, Clermont and Wurzburg settlement sites for the Earth scenario map, and updated the predefined settlement territories accordingly.
+- Added the Bordeaux, Clermont, Nancy, Vannes and Wurzburg settlement sites for the Earth scenario map, and updated the predefined settlement territories accordingly.
 - Added many building sites in France, for the Earth scenario map.
 - Placed more pre-Indo-European tribes on the Earth scenario map for the Stone/Bronze age.
 

@@ -19,7 +19,7 @@ azure_coast = {
 		dijon
 		toulouse
 		metz_settlement
-		nancy_settlement
+		nancy
 		toul_settlement
 		verdun_settlement
 	}
