@@ -7,7 +7,10 @@ livestock = { #grunt_livestock
 	constructed_only = true
 	optional = true
 	character_units = {
-		1 = unit_germanic_warrior #human ; animal skin . hand axe
+		1 = {
+			unit_type = unit_germanic_warrior #human ; animal skin . hand axe
+			ai_active = false
+		}
 		2 = {
 			unit_types = {
 				unit_boar = 10 #hog w:(14 - absdepth) #the average depth this map is generated on is 10.5

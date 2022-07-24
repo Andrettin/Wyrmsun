@@ -6,10 +6,18 @@ ruffians = { #minmay_ruffians
 	constructed_only = true
 	optional = true
 	character_units = {
-		1 = unit_germanic_warrior #human; club | mace w:3 . animal skin | leather armour
-		2 = unit_germanic_archer #human; hunting sling . stone | sling bullet w:3 . animal skin | \
-        leather armour
-		3 = unit_germanic_chieftain #human; flail . ring mail | scale mail
+		1 = {
+			unit_type = unit_germanic_warrior #human; club | mace w:3 . animal skin | leather armour
+			ai_active = false
+		}
+		2 = {
+			unit_type = unit_germanic_archer #human; hunting sling . stone | sling bullet w:3 . animal skin | \ leather armour
+			ai_active = false
+		}
+		3 = {
+			unit_type = unit_germanic_chieftain #human; flail . ring mail | scale mail
+			ai_active = false
+		}
 	}
 	character_substitutions = {
 		#character conversions

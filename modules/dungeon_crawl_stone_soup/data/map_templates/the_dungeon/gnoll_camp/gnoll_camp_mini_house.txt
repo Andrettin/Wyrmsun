@@ -9,9 +9,18 @@ gnoll_camp_mini_house = {
 	min_subtemplate_geocoordinate = { -18 40 }
 	max_subtemplate_geocoordinate = { 63 -35 }
 	character_units = {
-		1 = unit_gnoll_warrior
-		2 = unit_gnoll_warrior #gnoll shaman
-		3 = unit_gnoll_warrior #gnoll sergeant
+		1 = {
+			unit_type = unit_gnoll_warrior
+			ai_active = false
+		}
+		2 = {
+			unit_type = unit_gnoll_warrior #gnoll shaman
+			ai_active = false
+		}
+		3 = {
+			unit_type = unit_gnoll_warrior #gnoll sergeant
+			ai_active = false
+		}
 		4 = {
 			unit_types = {
 				unit_wolf = 1 #hound

@@ -8,7 +8,10 @@ cavepeople = { #erik_cavepeople
 	character_units = {
 		1 = unit_wolf #jackal / hound
 		2 = unit_horse #yak
-		3 = unit_germanic_warrior #human
+		3 = {
+			unit_type = unit_germanic_warrior #human
+			ai_active = false
+		}
 	}
 	character_substitutions = {
 		{

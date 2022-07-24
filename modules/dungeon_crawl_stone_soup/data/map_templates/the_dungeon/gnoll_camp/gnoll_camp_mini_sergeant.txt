@@ -15,7 +15,10 @@ gnoll_camp_mini_sergeant = {
 				none = 2 #nothing w:2
 			}
 		}
-		2 = unit_gnoll_warrior #gnoll sergeant
+		2 = {
+			unit_type = unit_gnoll_warrior #gnoll sergeant
+			ai_active = false
+		}
 	}
 	character_substitutions = {
 		#character conversions

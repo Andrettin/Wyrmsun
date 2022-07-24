@@ -9,7 +9,10 @@ gnoll_camp_mini_basic = {
 	min_subtemplate_geocoordinate = { -18 40 }
 	max_subtemplate_geocoordinate = { 63 -35 }
 	character_units = {
-		1 = unit_gnoll_warrior
+		1 = {
+			unit_type = unit_gnoll_warrior
+			ai_active = false
+		}
 		2 = {
 			unit_types = {
 				unit_wolf = 1 #jackal
@@ -18,8 +21,14 @@ gnoll_camp_mini_basic = {
 			}
 			ai_active = false #to prevent them from wandering away
 		}
-		3 = unit_gnoll_warrior #gnoll shaman
-		4 = unit_gnoll_warrior #gnoll sergeant
+		3 = {
+			unit_type = unit_gnoll_warrior #gnoll shaman
+			ai_active = false
+		}
+		4 = {
+			unit_type = unit_gnoll_warrior #gnoll sergeant
+			ai_active = false
+		}
 	}
 	character_substitutions = {
 		{

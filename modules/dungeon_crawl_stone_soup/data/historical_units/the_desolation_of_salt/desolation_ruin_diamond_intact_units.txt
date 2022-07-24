@@ -13,6 +13,7 @@ desolation_ruin_diamond_intact_saltling_band = {
 
 desolation_ruin_diamond_intact_imperial_myrmidon_1 = {
 	unit_type = unit_latin_centurion #Imperial Myrmidon
+	ai_active = false
 	
 	history = {
 		active = true
@@ -25,6 +26,7 @@ desolation_ruin_diamond_intact_imperial_myrmidon_1 = {
 
 desolation_ruin_diamond_intact_imperial_myrmidon_2 = {
 	unit_type = unit_latin_centurion #Imperial Myrmidon
+	ai_active = false
 	
 	history = {
 		active = true

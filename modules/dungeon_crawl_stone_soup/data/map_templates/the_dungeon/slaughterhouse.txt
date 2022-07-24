@@ -13,7 +13,10 @@ slaughterhouse = {
 				unit_horse = 7 #yak w:7
 			}
 		}
-		2 = unit_germanic_warrior #generate_awake human ; dagger | hand axe #represents a butcher
+		2 = {
+			unit_type = unit_germanic_warrior #generate_awake human ; dagger | hand axe #represents a butcher
+			ai_active = false
+		}
 		d = {
 			unit_types = {
 				unit_meat = 5 #ration w:5
