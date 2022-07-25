@@ -1,0 +1,16 @@
+thiodolf_of_the_wolfings = { #Source: William Morris, "The House of the Wolfings", 1889, p. 13.
+	name = "Thiodolf" #a tentative rendering in Gothic would be "Þiudavulfs"
+	unit_type = unit_teuton_heroic_swordsman #chieftain
+	civilization = gothic
+	default_faction = wolfing_clan
+	gender = male
+	variation_tags = { black_hair }
+	deities = {
+		odin
+		tyr
+	}
+	
+	conditions = {
+		faction = wolfing_clan
+	}
+}
