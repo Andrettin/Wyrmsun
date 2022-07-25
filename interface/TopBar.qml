@@ -6,6 +6,7 @@ Item {
 	height: image.height
 	
 	property string interface_style: "default"
+	readonly property int special_icon_list_size: wyrmgus.this_player.current_special_resources.length + wyrmgus.this_player.modifiers.length
 	
 	Image {
 		id: image
@@ -95,9 +96,25 @@ Item {
 		ResourceIcon {
 			id: resource_icon
 			anchors.left: top_bar.left
-			anchors.leftMargin: (154 + (75 * 3) + (Math.min(18, 72 / wyrmgus.this_player.current_special_resources.length) * index)) * wyrmgus.scale_factor
+			anchors.leftMargin: (154 + (75 * 3) + (Math.min(18, 72 / special_icon_list_size) * index)) * wyrmgus.scale_factor
 			anchors.top: top_bar.top
 			resource: model.modelData
+		}
+	}
+	
+	Repeater {
+		model: wyrmgus.this_player.modifiers
+		
+		ResourceIconBase {
+			id: modifier_icon
+			anchors.left: top_bar.left
+			anchors.leftMargin: (154 + (75 * 3) + (Math.min(18, 72 / special_icon_list_size) * (wyrmgus.this_player.current_special_resources.length + index))) * wyrmgus.scale_factor
+			anchors.top: top_bar.top
+			icon: model.modelData.key.resource_icon.identifier
+			tooltip: format_text(model.modelData.key.name + "\n" + small_text(
+				"\nEffects: " + model.modelData.key.effects_string
+				+ "\nUntil Cycle: " + model.modelData.value
+			))
 		}
 	}
 	
