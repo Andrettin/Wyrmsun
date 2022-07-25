@@ -32,9 +32,9 @@ choose_level_up_upgrade = {
 		veteran_shooter
 		heroic_shooter
 		gunpowder_infantry
-		flying_rider
 		cavalry
 		heroic_cavalry
+		flying_rider
 		priest
 		veteran_priest
 		high_priest
@@ -84,9 +84,9 @@ cancel_level_up_upgrade_choice = {
 		veteran_shooter
 		heroic_shooter
 		gunpowder_infantry
-		flying_rider
 		cavalry
 		heroic_cavalry
+		flying_rider
 		priest
 		veteran_priest
 		high_priest

@@ -1,0 +1,27 @@
+upgrade_inspired_army = {
+	name = "Inspired Army"
+	resource_icon = leadership
+	effects_string = "+1 Damage for organic military units"
+	modifier = {
+		basic_damage = 1
+		unit_classes = {
+			infantry
+			veteran_infantry
+			heroic_infantry
+			spearman
+			veteran_spearman
+			heroic_spearman
+			shooter
+			veteran_shooter
+			heroic_shooter
+			gunpowder_infantry
+			cavalry
+			heroic_cavalry
+			desert_cavalry
+			heroic_desert_cavalry
+			spear_cavalry
+			heroic_spear_cavalry
+			flying_rider
+		}
+	}
+}
