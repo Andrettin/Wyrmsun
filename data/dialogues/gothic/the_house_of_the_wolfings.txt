@@ -1,0 +1,23 @@
+thiodolf_the_wolfings_go_to_war = { #Source: William Morris, "The House of the Wolfings", 1889, p. 13.
+	trigger = {
+		only_once = true
+		conditions = {
+			character = thiodolf_of_the_wolfings
+			war = true
+			random = 0.01
+		}
+	}
+	{
+		speaker = thiodolf_of_the_wolfings
+		text = "Forth will we Wolfing children, and cast a sound abroad:\nThe mouth of the sea-beast's weapon shall speak the battle-word;\nAnd ye warriors hearken and hasten, and\ndight the weed of war,\nAnd then to acre and meadow wend ye adown no more."
+		#text = "Forth will we Wolfing children, and cast a sound abroad:\nThe mouth of the sea-beast's weapon shall speak the battle-word;\nAnd ye warriors hearken and hasten, and\ndight the weed of war,\nAnd then to acre and meadow wend ye adown no more,\nFor this work shall be for the women to drive our neat from the mead,\nAnd to yoke the wains, and to load them as the men of war have need." #original
+		option = {
+			effects = {
+				add_modifier = {
+					modifier = upgrade_inspired_army
+					minutes = 5
+				}
+			}
+		}
+	}
+}
