@@ -13,6 +13,9 @@ skutan = {
 		}
 	}
 	completion_effects = {
-		scripted_effect = minor_copper_reward
+		add_modifier = {
+			modifier = upgrade_inspired_army
+			minutes = 1
+		}
 	}
 }

@@ -19,6 +19,9 @@ swedish_veterans_day = {
 		}
 	}
 	completion_effects = {
-		scripted_effect = major_copper_reward
+		add_modifier = {
+			modifier = upgrade_inspired_army
+			minutes = 5
+		}
 	}
 }

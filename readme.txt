@@ -82,6 +82,13 @@ https://github.com/Andrettin/Wyrmsun
 - Improved the performance of the database parsing.
 - Reworked the engine to take advantage of coroutines for asynchronous operations.
 
+* Modifiers
+- Added support for players to receive temporary modifiers during the game.
+- Added the Inspired Army temporary modifier (+1 damage for organic military units).
+
+* Quests
+- The Gadrauhts, Harjis, Miles, Skutan and Swedish Veterans' Day quests now grant the Inspired Army temporary modifier on completion.
+
 * Scenarios
 - Added Stone Deposit at Storugns in Gotland.
 
