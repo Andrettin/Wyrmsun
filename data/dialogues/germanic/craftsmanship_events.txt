@@ -14,7 +14,7 @@ the_curved_swords = { #Source: http://natmus.dk/en/historical-knowledge/denmark/
 			name = "Marvelous!"
 			hotkey = m
 			effects = {
-				copper += 500
+				copper += 500 #could increase prestige instead?
 			}
 		}
 	}
@@ -36,7 +36,7 @@ the_sun_chariot = { #Source: http://natmus.dk/en/historical-knowledge/denmark/pr
 			name = "Inspiring!"
 			hotkey = i
 			effects = {
-				copper += 500
+				copper += 500 #could increase prestige instead?
 			}
 		}
 	}

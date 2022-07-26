@@ -3,6 +3,7 @@ thiodolf_the_wolfings_go_to_war = { #Source: William Morris, "The House of the W
 		only_once = true
 		conditions = {
 			character = thiodolf_of_the_wolfings
+			neutral_faction = wolfing_clan
 			war = true
 			random = 0.01
 		}
@@ -15,7 +16,7 @@ thiodolf_the_wolfings_go_to_war = { #Source: William Morris, "The House of the W
 			effects = {
 				add_modifier = {
 					modifier = upgrade_inspired_army
-					minutes = 5
+					minutes = 2
 				}
 			}
 		}

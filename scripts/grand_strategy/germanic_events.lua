@@ -235,52 +235,6 @@ local GermanicEvents = {
 		},
 		OptionTooltips = {"Form the Yngling Tribe\n+250 Copper\n+1 Prestige"}
 	},
-	TheCurvedSwords = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-roerby-swords/
-		Name = "The Curved Swords",
-		Description = "One of our artisans has crafted two curved bronze swords, one of which he engraved with the image of a ship. Although they aren't very practical for combat, these swords serve to embellish ceremonies and bring prestige to their bearer.",
-		Conditions = function(s)
-			if (
-				GetProvinceOwner("Jutland") == EventFaction.Name
-				and GetProvinceCivilization("Jutland") == "germanic"
-				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit_germanic_smithy") -- Jutland must have a smithy
-				and SyncRand(100) < 1
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Options = {"~!Marvelous!"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	},
-	TheSunChariot = { -- Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/the-sun-chariot/
-		Name = "The Sun Chariot",
-		Description = "One of our artisans has made a delicate bronze figure of a sun chariot, representing the divine horse that carries the sun on its eternal journey across the sky.",
-		Conditions = function(s)
-			if (
-				GetProvinceOwner("Jutland") == EventFaction.Name
-				and GetProvinceCivilization("Jutland") == "germanic"
-				and GetProvinceSettlementBuilding(WorldMapProvinces.Jutland.Name, "unit_germanic_smithy") -- Jutland must have a smithy
-				and SyncRand(100) < 1
-			) then
-				return true
-			else
-				return false
-			end
-		end,
-		Options = {"~!Inspiring!"},
-		OptionEffects = {
-			function(s)
-				ChangeFactionResource(EventFaction.Civilization, EventFaction.Name, "prestige", 1)
-			end
-		},
-		OptionTooltips = {"+1 Prestige"}
-	},
 	NoblemansBurial = { -- the man from Muldbjerg; Source: http://natmus.dk/en/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-bronze-age/men-and-woman-in-the-bronze-age/the-man-from-muldbjerg/
 		Name = "Nobleman's Burial",
 		Description = "In 1365 BC, a nobleman was buried in the northwestern parts of the Jutland peninsula. Dressed in wool, he was laid down with his bronze sword in an oak coffin, which was then placed in a mound.",
