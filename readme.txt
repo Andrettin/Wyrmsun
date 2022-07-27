@@ -84,7 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Modifiers
 - Added support for players to receive temporary modifiers during the game.
-- Added the Inspired Army temporary modifier (+1 damage for organic military units).
+- Added the Inspired Army temporary modifier (+2 damage for organic military units).
 
 * Quests
 - The Gadrauhts, Harjis, Miles, Skutan and Swedish Veterans' Day quests now grant the Inspired Army temporary modifier on completion.

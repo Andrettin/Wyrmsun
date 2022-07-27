@@ -1,9 +1,9 @@
 upgrade_inspired_army = {
 	name = "Inspired Army"
 	resource_icon = leadership
-	effects_string = "+1 Damage for organic military units"
+	effects_string = "+2 Damage for organic military units"
 	modifier = {
-		basic_damage = 1
+		basic_damage = 2
 		unit_classes = {
 			infantry
 			veteran_infantry
