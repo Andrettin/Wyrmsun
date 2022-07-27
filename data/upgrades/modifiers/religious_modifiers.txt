@@ -1,0 +1,13 @@
+upgrade_religious_fervor = {
+	name = "Religious Fervor"
+	resource_icon = priests
+	effects_string = "+20 Mana for priests"
+	modifier = {
+		mana = 20
+		unit_classes = {
+			priest
+			veteran_priest
+			high_priest
+		}
+	}
+}
