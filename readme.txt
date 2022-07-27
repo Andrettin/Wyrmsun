@@ -96,6 +96,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - The Gadrauhts, Harjis, Miles, Skutan and Swedish Veterans' Day quests now grant the Inspired Army temporary modifier on completion.
+- The Gudja, Gudjan, Haimadala's Stones and The Great Temple quests now grant the Religious Fervor temporary modifier on completion.
 
 * Scenarios
 - Added Stone Deposit at Storugns in Gotland.

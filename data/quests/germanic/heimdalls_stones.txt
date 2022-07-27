@@ -19,6 +19,9 @@ heimdalls_stones = {
 		last_created_unit = {
 			unique = heimdalls_stones
 		}
-		scripted_effect = minor_copper_reward
+		add_modifier = {
+			modifier = upgrade_religious_fervor
+			minutes = 5
+		}
 	}
 }

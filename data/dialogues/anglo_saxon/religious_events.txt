@@ -17,7 +17,7 @@ horse_meat_eating_prohibited_in_mercia = { #Source: Snorri Sturlson, "Heimskring
 			effects = {
 				add_modifier = { #should increase Faith instead when that resource is implemented
 					modifier = upgrade_religious_fervor
-					minutes = 10
+					minutes = 5
 				}
 			}
 		}

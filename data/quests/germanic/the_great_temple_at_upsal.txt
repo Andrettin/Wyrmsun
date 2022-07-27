@@ -18,6 +18,9 @@ the_great_temple_at_upsal = { #Source: Snorri Sturlson, "Heimskringla", 1844, vo
 		}
 	}
 	completion_effects = {
-		copper += 2000
+		add_modifier = {
+			modifier = upgrade_religious_fervor
+			minutes = 15
+		}
 	}
 }
