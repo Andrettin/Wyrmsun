@@ -63,8 +63,15 @@ https://github.com/Andrettin/Wyrmsun
 - Neutral faction buildings can now spawn neutral hostile units if the building is located in a non-owned settlement.
 - Mercenary Camps are now indestructible.
 
+* Characters
+- Added Thiodolf, recruitable from the Wolfing Clan.
+
 * Civilizations
 - Added more personal names for the Celts and the Suebi.
+
+* Events
+- Added event in which Thiodolf gives a war-speech in poetry form, providing the Inspired Army modifier temporarily.
+- Added Horse-Meat Eating Prohibited event for Mercia, if it has Christianity as its religion. The event provides the Religious Fervor modifier temporarily.
 
 * Factions
 - The Suebi Tribe is now a polity instead.

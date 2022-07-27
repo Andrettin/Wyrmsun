@@ -1,0 +1,25 @@
+horse_meat_eating_prohibited_in_mercia = { #Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 69.
+	trigger = {
+		only_once = true
+		historical_date = 785
+		conditions = {
+			faction = mercia
+			upgrade = upgrade_deity_christian_god
+			random = 0.01
+			#should take a while for this to happen after Christianization
+			#eating horse-meat was a Germanic custom
+		}
+	}
+	{
+		title = "Horse-Meat Eating Prohibited"
+		text = "A council gathered in Mercia has declared the old custom of eating horse-meat to be forbidden, judging it to be incompatible with Christian doctrine."
+		option = {
+			effects = {
+				add_modifier = { #should increase Faith instead when that resource is implemented
+					modifier = upgrade_religious_fervor
+					minutes = 10
+				}
+			}
+		}
+	}
+}
