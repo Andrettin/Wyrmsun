@@ -6,7 +6,7 @@ galicia = { #Suebi kingdom of Galicia
 	color = black
 	default_tier = kingdom
 	upgrade = upgrade_faction_galicia
-	icon = icon_flag_green_lion_on_purple
+	icon = flag_osterby_cyan_on_black
 	core_settlements = {
 		oporto
 	}

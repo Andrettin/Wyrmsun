@@ -32,7 +32,7 @@ DefineFaction("alamanni-tribe", {
 	Type = "tribe",
 	Color = "blue",
 	FactionUpgrade = "upgrade-faction-alamanni-tribe",
-	Icon = "icon-flag-blue-lion-on-yellow"
+	Icon = "flag_osterby_yellow_on_blue"
 })
 
 DefineFaction("buri-tribe", {
@@ -43,7 +43,7 @@ DefineFaction("buri-tribe", {
 	Type = "tribe",
 	Color = "violet",
 	FactionUpgrade = "upgrade-faction-buri-tribe",
-	Icon = "icon-flag-red-lion-on-green"
+	Icon = "flag_osterby_white_on_violet"
 })
 
 DefineFaction("hermunduri-tribe", {
@@ -51,9 +51,9 @@ DefineFaction("hermunduri-tribe", {
 	Adjective = "Hermunduri",
 	Civilization = "suebi", -- accurate?
 	Type = "tribe",
-	Color = "blue",
+	Color = "green",
 	FactionUpgrade = "upgrade-faction-hermunduri-tribe",
-	Icon = "icon-flag-habsburg",
+	Icon = "flag_osterby",
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
 		171, "rome", "peace" -- in 171 the Romans forced most of the tribes of the Marcomannic coalition to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
@@ -68,7 +68,7 @@ DefineFaction("quadi-tribe", {
 	Type = "tribe",
 	Color = "brown",
 	FactionUpgrade = "upgrade-faction-quadi-tribe",
-	Icon = "icon-flag-green-lion-on-orange",
+	Icon = "flag_osterby_orange_on_gray",
 	HistoricalDiplomacyStates = {
 		170, "rome", "war", -- in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
 		170, "marcomannia", "alliance",

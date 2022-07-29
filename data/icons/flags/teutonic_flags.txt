@@ -1,3 +1,39 @@
 icon_flag_holy_roman_empire = {
 	file = "icons/flags/teutonic/flag_holy_roman_empire.png"
 }
+
+flag_osterby = {
+	file = "icons/flags/teutonic/flag_osterby.png"
+	frame = 0
+	conversible_player_color = burgundy #so that it does not convert the violet
+}
+
+flag_osterby_yellow_on_blue = {
+	file = "icons/flags/teutonic/flag_osterby.png"
+	frame = 1
+	conversible_player_color = burgundy
+}
+
+flag_osterby_orange_on_red = {
+	file = "icons/flags/teutonic/flag_osterby.png"
+	frame = 2
+	conversible_player_color = burgundy
+}
+
+flag_osterby_cyan_on_black = {
+	file = "icons/flags/teutonic/flag_osterby.png"
+	frame = 3
+	conversible_player_color = burgundy
+}
+
+flag_osterby_white_on_violet = {
+	file = "icons/flags/teutonic/flag_osterby.png"
+	frame = 4
+	conversible_player_color = burgundy
+}
+
+flag_osterby_orange_on_gray = {
+	file = "icons/flags/teutonic/flag_osterby.png"
+	frame = 5
+	conversible_player_color = burgundy
+}

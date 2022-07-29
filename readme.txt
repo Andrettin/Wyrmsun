@@ -62,6 +62,7 @@ https://github.com/Andrettin/Wyrmsun
 - Neutral faction buildings (like Mercenary Camps) are now only accessible for the owner of the settlement they are located in.
 - Neutral faction buildings can now spawn neutral hostile units if the building is located in a non-owned settlement.
 - Mercenary Camps are now indestructible.
+- Added Tribal Camp building, which is used for the new Minor Tribe faction type. Tribal Camps function in a similar way to Mercenary Camps.
 
 * Characters
 - Added Thiodolf, recruitable from the Wolfing Clan.
@@ -77,6 +78,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Suebi Tribe is now a polity instead.
 - Added support for the Minor Tribe neutral faction type. Minor tribes function in a similar way to mercenary companies.
 - Added the Bearing Clan and Wolfing Clan minor tribes (Gothic), from the 19th century novel The House of the Wolfings. These clans can be spawned on the Earth scenario map if certain conditions are met.
+- Added new flags for Suebi factions, displaying a Suebian knot.
 
 * Maps
 - The settlements in the Lorraine Plain map are now settlements which are actually in Lorraine.

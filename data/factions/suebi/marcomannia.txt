@@ -7,7 +7,7 @@ marcomannia = {
 	default_tier = duchy
 	default_government_type = tribe
 	upgrade = upgrade_faction_marcomannia
-	icon = icon_flag_cyan_lion_on_red
+	icon = flag_osterby_orange_on_red
 	description = "The Marcomanni were a Suebic tribe. Eventually they migrated to the east, settling in Bohemia and expelling the local Boii tribe. In the 2nd century they fought the terrible Marcomannic Wars against the Romans. The name \"Marcomanni\" means \"march-men\", or \"frontier-men\"."
 	core_settlements = {
 		prague

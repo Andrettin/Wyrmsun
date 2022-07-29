@@ -7,7 +7,7 @@ semnonia = {
 	default_tier = duchy
 	default_government_type = tribe
 	upgrade = upgrade_faction_semnonia
-	icon = icon_flag_green_lion_on_purple
+	icon = flag_osterby_orange_on_gray
 	core_settlements = {
 		berlin
 	}
