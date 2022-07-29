@@ -8,6 +8,9 @@ teutonia = {
 	default_government_type = tribe
 	upgrade = upgrade_faction_teutonia
 	icon = icon_flag_five_red_birds_on_yellow
+	class_upgrades = {
+		military_tradition = upgrade_furor_teutonicus
+	}
 	core_settlements = {
 		kiel
 	}

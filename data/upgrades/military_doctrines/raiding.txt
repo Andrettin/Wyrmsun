@@ -8,9 +8,6 @@ upgrade_chevauchee = {
 		time = 250
 		copper = 2400
 	}
-	preconditions = {
-		civilization = english
-	}
 	modifier = {
 		raiding = 50
 		points = 10

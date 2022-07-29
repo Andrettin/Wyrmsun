@@ -1,6 +1,9 @@
 upgrade_furor_teutonicus = {
 	name = "Furor Teutonicus"
+	upgrade_class = military_tradition
+	civilization = teutonic
 	icon = furor_teutonicus
+	description = "Furor Teutonicus is an expression referring to the ferocity of the Teutons in battle. Originally it was applied to the tribe of the Teutones, but eventually came to be used for medieval Germans as well."
 	costs = {
 		time = 200
 		copper = 1200
@@ -20,6 +23,9 @@ upgrade_furor_teutonicus = {
 		}
 	}
 	preconditions = {
-		civilization = teutonic
+		or = {
+			civilization = teutonic
+			faction = teutonia
+		}
 	}
 }
