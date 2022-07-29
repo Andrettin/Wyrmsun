@@ -1,0 +1,3 @@
+noba_tribal_camp = {
+	file = "icons/buildings/noba/tribal_camp.png"
+}

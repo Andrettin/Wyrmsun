@@ -1,14 +1,12 @@
 unit_tribal_camp = {
-	#name = "Tribal Camp"
-	name = "Mercenary Camp"
+	name = "Tribal Camp"
 	parent = unit_template_building
 	unit_class = tribal_camp
 	civilization = neutral
-	#description = "This camp is home to a tribe, which offers its martial prowess to the overlord of its surrounding lands."
-	image_file = "buildings/neutral/mercenary_camp.png"
-	frame_size = { 96 99 }
-	animation_set = animations_mercenary_camp
-	icon = icon_mercenary_camp
+	description = "This camp is home to a tribe, which offers its martial prowess to the overlord of its surrounding lands."
+	image_file = "buildings/noba/tribal_camp.png"
+	frame_size = { 96 96 }
+	icon = noba_tribal_camp
 	neutral_minimap_color = { 192 192 192 }
 	tile_size = { 3 3 }
 	box_size = { 96 96 }
@@ -65,21 +63,6 @@ unit_tribal_camp = {
 		}
 	}
 	build_restrictions_string = "Must be built on top of a Building Site"
-	variations = {
-		tribal_camp = {
-			unit_conditions = {
-				not = {
-					scripted_condition = is_on_snowy_terrain
-				}
-			}
-		}
-		tribal_camp_snow = {
-			image_file = "buildings/neutral/mercenary_camp_snow.png"
-			unit_conditions = {
-				scripted_condition = is_on_snowy_terrain
-			}
-		}
-	}
 	sounds = {
 		selected = click
 		dead = building_destroyed
