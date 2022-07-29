@@ -66,16 +66,6 @@ DefineCharacter("agnar-ii", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Deities = {"odin", "tyr"}
 })
 
-DefineCharacter("odoacer", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-9.
-	Name = "Odoacer",
-	Gender = "male",
-	Type = "unit-gothic-horse-lord",
-	Civilization = "goth",
-	StartDate = 480, -- Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
-	DeathDate = 493, -- was put to death by Theoderic in 493 AD
-	Deities = {"christian-god"}
-})
-
 DefineCharacter("tufa", { -- Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, p. 8-9.
 	Name = "Tufa", -- follower of Odoacer who deserted to Theoderic in or just after 489 AD, only to return his allegiance to Odoacer afterwards, betraying Theoderic
 	Gender = "male",

@@ -1,0 +1,20 @@
+sciria = {
+	name = "Sciria"
+	adjective = "Scirian"
+	civilization = gothic
+	type = polity
+	color = blue
+	default_tier = duchy
+	default_government_type = tribe
+	upgrade = upgrade_faction_sciria
+	icon = icon_flag_blue_lion_on_yellow
+	core_settlements = {
+		pressburg
+	}
+	
+	history = {
+		-200 = {
+			government_type = tribe
+		}
+	}
+}

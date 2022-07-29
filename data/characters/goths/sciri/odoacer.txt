@@ -1,0 +1,28 @@
+odoacer = { #Source: F. E. Sandbach, "The Heroic Saga-Cycle of Dietrich of Bern", 1906, pp. 7-9.
+	name = "Odoacer"
+	unit_type = unit_gothic_horse_lord #king
+	civilization = gothic
+	default_faction = sciria
+	gender = male
+	deities = {
+		christian_god
+	}
+	
+	conditions = {
+		faction = sciria
+	}
+	
+	history = {
+		480 = {
+			#Odoacer deposed Romulus Augustus in 480 AD, going then on to rule Italy as an independent king
+			active = true
+			faction = sciria
+			location = ravenna
+		}
+		
+		493 = {
+			#was put to death by Theoderic in 493 AD
+			active = false
+		}
+	}
+}

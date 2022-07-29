@@ -84,6 +84,20 @@ upgrade_faction_rugia = {
 	}
 }
 
+upgrade_faction_sciria = {
+	name = "Sciria"
+	effects_string = "+2 Damage for Swordsmen"
+	modifier = {
+		basic_damage = 2
+		points = 10
+		unit_types = {
+			unit_teuton_swordsman
+			unit_teuton_veteran_swordsman
+			unit_teuton_heroic_swordsman
+		}
+	}
+}
+
 upgrade_faction_vandalia = {
 	name = "Vandalia"
 	effects_string = "+1 Speed for Cogs"
