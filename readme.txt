@@ -69,6 +69,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Civilizations
 - Added more personal names for the Celts and the Suebi.
+- Renamed the "Goth" civilization to "Gothic" and the "Teuton" civilization to "Teutonic".
 
 * Events
 - Added event in which Thiodolf gives a war-speech in poetry form, providing the Inspired Army modifier temporarily.

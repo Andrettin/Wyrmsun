@@ -484,20 +484,7 @@ DefineCivilization("basque", { -- represents not only the speakers of Vasconic l
 })
 
 DefineCivilization("goth", {
-	Display = "Goth",
-	Visible = true,
-	Group = "east_germanic",
-	Language = "gothic",
-	ParentCivilization = "teuton",
-	Adjective = "Gothic",
-	CivilizationUpgrade = "upgrade-gothic-civilization",
-	DevelopsFrom = {"germanic"},
-	Currency = "tremissis",
-	Description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures.",
-	PersonalNames = {
-		-- Burgundian names
-		"male", "Hanhualdus", -- presumably a male name; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
-	}
+	Currency = "tremissis"
 })
 
 DefineCivilization("assyrian", {

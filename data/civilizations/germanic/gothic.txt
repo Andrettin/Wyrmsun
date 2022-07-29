@@ -1,7 +1,24 @@
 goth = {
+	name = "Gothic"
 	aliases += gothic
+	parent_civilization = teutonic
+	group = east_germanic
+	language = gothic
+	visible = true
 	default_color = black
+	upgrade = upgrade_gothic_civilization
+	description = "During the Iron Age, Germanic peoples split off into three different groups - the North Germanics (like the Danes and Swedes), the East Germanics (like the Goths and Vandals) and the West Germanics (like the Suebi, Saxons and Franks). The Goths and the Vandals played an important role in the wars and migrations of late antiquity, and apportioned a part of the Roman empire for themselves. The Visigoths (the Western Goths) settled in Spain and southern France, the Ostrogoths (the Eastern Goths) in Italy, and the Vandals in North Africa. Being a small minority relative to the populations they had conquered, eventually Goths and Vandals would assimilate into the local cultures."
+	develops_from = {
+		germanic
+	}
 	conditions = {
 		upgrade_class = ironworking
+	}
+	
+	personal_names = {
+		male = {
+			#Burgundian names
+			"Hanhualdus" #presumably a male name; Source: Winfred P. Lehmann, "A Grammar of Proto-Germanic", 2005, 2.7.3.
+		}
 	}
 }

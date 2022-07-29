@@ -1,7 +1,6 @@
 teuton = {
-	name = "Teuton"
+	name = "Teutonic"
 	aliases += teutonic
-	adjective = "Teutonic"
 	parent_civilization = germanic
 	group = west_germanic
 	language = high_german
