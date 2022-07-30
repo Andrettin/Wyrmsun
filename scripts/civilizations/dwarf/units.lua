@@ -962,7 +962,7 @@ DefineUnitType("unit-dwarven-scout", {
 		{"weapon", "unit-throwing-axe"},
 		{"boots", "unit-boots"}
 	},
-	BasicDamage = 11,
+	BonusAgainstInfantry = 25,
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,
@@ -1067,7 +1067,7 @@ DefineUnitType("unit-dwarven-pathfinder", {
 		{"weapon", "unit-throwing-axe"},
 		{"boots", "unit-boots"}
 	},
-	BasicDamage = 12,
+	BonusAgainstInfantry = 25,
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,
@@ -1123,7 +1123,7 @@ DefineUnitType("unit-dwarven-explorer", {
 		{"weapon", "unit-throwing-axe"},
 		{"boots", "unit-boots"}
 	},
-	BasicDamage = 13,
+	BonusAgainstInfantry = 25,
 	Missile = "missile-throwing-axe",
 	FireMissile = "missile-flaming-throwing-axe",
 	MaxAttackRange = 4,

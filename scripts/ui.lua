@@ -1625,6 +1625,9 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {Backstab = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Backstab Bonus: "), Variable = "Backstab", Font = PopupDescriptionFont}}
 				},
+				{ 	Condition = {BonusAgainstInfantry = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
+					More = {"Variable", {Text = _("Bonus vs. Infantry: "), Variable = "BonusAgainstInfantry", Font = PopupDescriptionFont}}
+				},
 				{ 	Condition = {BonusAgainstMounted = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = _("Bonus vs. Mounted: "), Variable = "BonusAgainstMounted", Font = PopupDescriptionFont}}
 				},
@@ -2199,6 +2202,19 @@ if not (ui_loaded_first_time) then
 									If(GreaterThan(UnitVar("CriticalStrikeChance", "Change"), 0), "+", "")
 								),
 								String(UnitVar("CriticalStrikeChance", "Change"))
+							),
+							"%"
+						),
+						Font = PopupDescriptionFont}}
+				},
+				{ 	Condition = {BonusAgainstInfantry = "only"}, HighlightColor = "yellow",
+					More = {"Text", {Text = Concat(
+							Concat(
+								Concat(
+									_("Bonus vs. Infantry: "),
+									If(GreaterThan(UnitVar("BonusAgainstInfantry", "Change"), 0), "+", "")
+								),
+								String(UnitVar("BonusAgainstInfantry", "Change"))
 							),
 							"%"
 						),

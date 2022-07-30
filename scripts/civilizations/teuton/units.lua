@@ -697,7 +697,7 @@ DefineUnitType("unit-teuton-gunpowder-infantry", {
 	Name = "Gunpowder Infantry",
 	Parent = "unit-template-gunpowder-infantry",
 	Civilization = "teuton",
-	Description = "With the invention of gunpowder Teuton craftsmen were able to construct formidable weapons of war, bringing fire and desolation.",
+	Description = "With the invention of gunpowder, Teutonic craftsmen were able to construct formidable weapons of war, bringing fire and desolation.",
 	Image = {"file", "teuton/units/austrian_musketeer.png", "size", {72, 72}},
 	Animations = "animations-gunpowder-infantry", Icon = "icon-austrian-musketeer",
 	DefaultEquipment = {
