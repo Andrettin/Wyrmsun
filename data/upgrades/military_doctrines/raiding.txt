@@ -20,4 +20,7 @@ upgrade_chevauchee = {
 			heroic_spear_cavalry
 		}
 	}
+	preconditions = {
+		civilization = english
+	}
 }
