@@ -552,13 +552,13 @@ DefineProvince("Brunswick", {
 	},
 --	SettlementLocation = {509, 107}, -- Brunswick
 	Claims = {
-		"teuton", "cherusci-tribe",
+		"teuton", "cheruscia",
 		"teuton", "brunswick",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-264, "teuton", "cherusci-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "teuton", "cherusci-tribe", -- The area was inhabited by the Cherusci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-264, "teuton", "cheruscia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		161, "teuton", "cheruscia", -- The area was inhabited by the Cherusci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalClaims = {
@@ -2252,12 +2252,12 @@ DefineProvince("Magdeburg", {
 	},
 --	SettlementLocation = {513, 107}, -- Magdeburg
 	Claims = {
-		"teuton", "cherusci-tribe",
+		"teuton", "cheruscia",
 		"teuton", "magdeburg",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-264, "teuton", "cherusci-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "teuton", "cheruscia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "teuton", "lombardy", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1547, "teuton", "magdeburg" -- Political situation in Central Europe in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
@@ -3951,7 +3951,7 @@ DefineProvince("Westphalia", {
 	},
 	HistoricalOwners = {
 		-264, "frankish", "sugambri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "teuton", "cherusci-tribe", -- The area was inhabited by the Cherusci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "teuton", "cheruscia", -- The area was inhabited by the Cherusci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1648, "teuton", "westphalia" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},

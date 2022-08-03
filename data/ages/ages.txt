@@ -34,6 +34,10 @@ feudal_age = {
 	icon = prestige
 	conditions = {
 		upgrade = upgrade_serfdom
+		upgrade_class = stirrups
+		not = {
+			government_type = tribe
+		}
 	}
 }
 

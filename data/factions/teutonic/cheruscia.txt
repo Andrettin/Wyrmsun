@@ -8,7 +8,7 @@ cheruscia = {
 	icon = icon_flag_green_lion_on_purple
 	upgrade = upgrade_faction_cheruscia
 	core_settlements = {
-		hanover
+		erfurt
 	}
 	
 	history = {

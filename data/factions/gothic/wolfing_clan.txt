@@ -10,7 +10,7 @@ wolfing_clan = {
 	neutral_site_conditions = {
 		not = {
 			settlement_owner = {
-				scripted_condition = has_high_medieval_technology
+				scripted_condition = has_high_medieval_or_later_age
 			}
 		}
 	}
