@@ -132,6 +132,30 @@ Item {
 			var achievement_dialog = component.createObject(dialog_parent, { achievement: achievement })
 			achievement_dialog.open()
 		}
+		
+		function onError_occurred(error_message) {
+			var component = Qt.createComponent("dialogs/GenericDialog.qml")
+			
+			if (component.status == Component.Error) {
+				console.error(component.errorString())
+				return
+			}
+			
+			var dialog_parent = null
+			if (wyrmgus.game.running) {
+				dialog_parent = map_view
+			} else {
+				dialog_parent = menu_stack.currentItem
+			}
+			
+			var error_dialog = component.createObject(dialog_parent, {
+				title: "Error",
+				text: error_message,
+				interface_style: wyrmgus.current_interface_style ? wyrmgus.current_interface_style.identifier : "default"
+			})
+			
+			error_dialog.open()
+		}
 	}
 	
 	Component.onCompleted: {

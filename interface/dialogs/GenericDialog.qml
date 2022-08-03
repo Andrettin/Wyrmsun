@@ -28,6 +28,7 @@ DialogBase {
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		text: "OK"
 		hotkey: "o"
+		interface_style: dialog.interface_style
 		
 		onClicked: {
 			dialog.close()
