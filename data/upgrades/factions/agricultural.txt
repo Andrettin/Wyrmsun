@@ -1,0 +1,10 @@
+upgrade_agricultural_faction = {
+	name = "Agricultural Faction"
+	effects_string = "+1 Food for farms"
+	modifier = {
+		supply = 1
+		unit_classes = {
+			farm
+		}
+	}
+}

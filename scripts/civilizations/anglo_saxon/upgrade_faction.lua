@@ -63,12 +63,6 @@ DefineModifier("upgrade_faction_east_anglia",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-englaland",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
-)
-
 DefineModifier("upgrade-faction-essex",
 	{"Accuracy", 2},
 	{"Points", 10},
@@ -91,22 +85,11 @@ DefineModifier("upgrade-faction-kent",
 --	{"apply-to", "unit_teuton_dock"}
 )
 
-DefineModifier("upgrade-faction-mercia",
-	{"Armor", 2},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
 DefineModifier("upgrade_faction_middle_anglia",
 	{"Armor", 3},
 	{"BasicDamage", -1},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
-)
-
-DefineModifier("upgrade-faction-middlesex",
-	{"TradeCost", -5},
-	{"apply-to", "unit-teuton-market"}
 )
 
 DefineModifier("upgrade-faction-northumbria",
@@ -117,12 +100,6 @@ DefineModifier("upgrade-faction-northumbria",
 
 DefineModifier("upgrade-faction-sussex",
 	{"HitPoints", 10},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-archer"}
-)
-
-DefineModifier("upgrade-faction-wessex",
-	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
 )

@@ -1,0 +1,16 @@
+upgrade_riding_faction = {
+	name = "Riding Faction"
+	effects_string = "+2 Damage for cavalry"
+	modifier = {
+		basic_damage = 2
+		points = 10
+		unit_classes = {
+			cavalry
+			heroic_cavalry
+			desert_cavalry
+			heroic_desert_cavalry
+			spear_cavalry
+			heroic_spear_cavalry
+		}
+	}
+}

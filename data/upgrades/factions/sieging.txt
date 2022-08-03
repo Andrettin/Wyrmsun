@@ -1,0 +1,11 @@
+upgrade_sieging_faction = {
+	name = "Sieging Faction"
+	effects_string = "+12 Damage for siege engines"
+	modifier = {
+		basic_damage = 12
+		points = 10
+		unit_classes = {
+			siege_engine
+		}
+	}
+}

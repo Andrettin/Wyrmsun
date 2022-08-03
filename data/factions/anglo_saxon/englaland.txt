@@ -6,7 +6,7 @@ englaland = {
 	color = red
 	default_tier = kingdom
 	default_capital = london
-	upgrade = upgrade_faction_englaland
+	upgrade = upgrade_hunting_faction
 	icon = icon_flag_cyan_lion_on_red
 	core_settlements = {
 		london

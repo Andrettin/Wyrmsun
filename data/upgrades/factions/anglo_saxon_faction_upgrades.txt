@@ -35,18 +35,6 @@ upgrade_faction_anglia = {
 	}
 }
 
-upgrade_faction_avionia = {
-	name = "Avionia"
-	effects_string = "+2 Damage for Archers"
-	modifier = {
-		basic_damage = 2
-		points = 10
-		unit_types = {
-			unit_teuton_archer
-		}
-	}
-}
-
 upgrade_faction_bernicia = {
 	name = "Bernicia"
 	effects_string = "+1 Damage, +1 Accuracy for Swordsmen"
@@ -60,11 +48,6 @@ upgrade_faction_deira = {
 upgrade_faction_east_anglia = {
 	name = "East Anglia"
 	effects_string = "+2 Accuracy for Swordsmen"
-}
-
-upgrade_faction_englaland = {
-	name = "Englaland"
-	effects_string = "+2 Damage for Archers"
 }
 
 upgrade_faction_essex = {
@@ -82,19 +65,9 @@ upgrade_faction_kent = {
 	effects_string = "+10% Research Speed for buildings"
 }
 
-upgrade_faction_mercia = {
-	name = "Mercia"
-	effects_string = "+2 Armor for Swordsmen"
-}
-
 upgrade_faction_middle_anglia = {
 	name = "Middle Anglia"
 	effects_string = "-1 Damage, +3 Armor for Swordsmen"
-}
-
-upgrade_faction_middlesex = {
-	name = "Middlesex"
-	effects_string = "-5% Trade Cost for Markets"
 }
 
 upgrade_faction_northumbria = {
@@ -120,9 +93,4 @@ upgrade_faction_teutonia = {
 			unit_teuton_heroic_swordsman
 		}
 	}
-}
-
-upgrade_faction_wessex = {
-	name = "Wessex"
-	effects_string = "+2 Damage for Archers"
 }

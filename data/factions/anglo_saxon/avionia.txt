@@ -6,7 +6,7 @@ avionia = {
 	color = white
 	default_tier = duchy
 	default_government_type = tribe
-	upgrade = upgrade_faction_avionia
+	upgrade = upgrade_hunting_faction
 	icon = icon_flag_five_white_birds_on_red
 	core_settlements = {
 		aarhus

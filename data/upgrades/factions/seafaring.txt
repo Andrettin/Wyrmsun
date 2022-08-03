@@ -1,0 +1,25 @@
+upgrade_seafaring_faction = {
+	name = "Seafaring Faction"
+	effects_string = "+1 Speed for ships"
+	modifier = {
+		speed = 1
+		unit_classes = {
+			workship
+			transport_ship
+			siege_warship
+		}
+	}
+	modifier = {
+		points = 10
+		unit_classes = {
+			siege_warship
+		}
+	}
+	modifier = {
+		points = 5
+		unit_classes = {
+			workship
+			transport_ship
+		}
+	}
+}

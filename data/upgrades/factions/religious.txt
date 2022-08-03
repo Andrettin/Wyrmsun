@@ -1,0 +1,13 @@
+upgrade_religious_faction = {
+	name = "Religious Faction"
+	effects_string = "+30 Mana for priests"
+	modifier = {
+		mana = 30
+		points = 10
+		unit_classes = {
+			priest
+			veteran_priest
+			high_priest
+		}
+	}
+}

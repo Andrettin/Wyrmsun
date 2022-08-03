@@ -23,11 +23,6 @@ upgrade_faction_thralling_tribe = {
 	effects_string = "+5% Lumber Processing for Carpenter's Shops"
 }
 
-upgrade_faction_yngling_tribe = {
-	name = "Yngling Tribe"
-	effects_string = "+2 Damage for Skutans"
-}
-
 upgrade_faction_gautalanda = {
 	name = "Gautalanda"
 	effects_string = "+1 Damage and +1 Accuracy for Eralas"

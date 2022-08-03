@@ -63,6 +63,7 @@ https://github.com/Andrettin/Wyrmsun
 - Neutral faction buildings can now spawn neutral hostile units if the building is located in a non-owned settlement.
 - Mercenary Camps are now indestructible.
 - Added Tribal Camp building, which is used for the new Minor Tribe faction type. Tribal Camps function in a similar way to Mercenary Camps.
+- Fixed issue which caused human players to be able to build structures on resource deposits and building sites on others' territories.
 
 * Characters
 - Added Thiodolf, recruitable from the Wolfing Clan.
@@ -81,6 +82,8 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Bearing Clan and Wolfing Clan minor tribes (Gothic), from the 19th century novel The House of the Wolfings. These clans can be spawned on the Earth scenario map if certain conditions are met.
 - Added new flags for Suebi factions, displaying a Suebian knot.
 - Teutonia now has access to the Furor Teutonicus upgrade.
+- Mercia now grants a bonus to cavalry instead of infantry.
+- The Yngling Tribe now grants a bonus to food supply instead of to archers.
 
 * Maps
 - The settlements in the Lorraine Plain map are now settlements which are actually in Lorraine.

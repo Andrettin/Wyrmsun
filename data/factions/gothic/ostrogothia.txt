@@ -6,7 +6,7 @@ ostrogothia = {
 	color = red
 	default_tier = kingdom
 	icon = icon_flag_five_black_birds_on_purple
-	upgrade = upgrade_faction_ostrogothia
+	upgrade = upgrade_riding_faction
 	core_settlements = {
 		kherson
 	}

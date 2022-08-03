@@ -33,11 +33,6 @@ upgrade_faction_burgundy = {
 	effects_string = "+10 HP for Horse Riders"
 }
 
-upgrade_faction_gothia = {
-	name = "Gothia"
-	effects_string = "+2 Damage for Horse Riders"
-}
-
 upgrade_faction_herulia = {
 	name = "Herulia"
 	effects_string = "Disembarkment Bonus for Swordsmen and Spearmen"
@@ -63,11 +58,6 @@ upgrade_faction_lugia = {
 			unit_teuton_spearman
 		}
 	}
-}
-
-upgrade_faction_ostrogothia = {
-	name = "Ostrogothia"
-	effects_string = "+2 Damage for Horse Riders"
 }
 
 upgrade_faction_rugia = {
@@ -96,11 +86,6 @@ upgrade_faction_sciria = {
 			unit_teuton_heroic_swordsman
 		}
 	}
-}
-
-upgrade_faction_vandalia = {
-	name = "Vandalia"
-	effects_string = "+1 Speed for Cogs"
 }
 
 upgrade_faction_visigothia = {

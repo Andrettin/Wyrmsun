@@ -7,5 +7,5 @@ yngling_tribe = { #mythical Swedish dynasty, Yngve was a son of Odin set to succ
 	default_tier = duchy #tribe
 	default_capital = stockholm
 	icon = flag_blue_raven_on_yellow
-	upgrade = upgrade_faction_yngling_tribe
+	upgrade = upgrade_agricultural_faction
 }

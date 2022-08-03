@@ -7,7 +7,7 @@ vandalia = {
 	default_tier = kingdom
 	default_capital = carthage
 	icon = icon_flag_five_blue_birds_on_orange
-	upgrade = upgrade_faction_vandalia
+	upgrade = upgrade_seafaring_faction
 	core_settlements = {
 		stettin
 	}

@@ -7,7 +7,7 @@ wessex = {
 	default_tier = kingdom
 	default_capital = winchester
 	icon = icon_flag_cyan_lion_on_red
-	upgrade = upgrade_faction_wessex
+	upgrade = upgrade_hunting_faction
 	core_settlements = {
 		winchester
 	}

@@ -49,24 +49,6 @@ DefineModifier("upgrade-faction-burgundy",
 	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
 )
 
-DefineModifier("upgrade-faction-gothia",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
-)
-
-DefineModifier("upgrade-faction-ostrogothia",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-gothic-horse-rider"}, {"apply-to", "unit-gothic-horse-lord"}
-)
-
-DefineModifier("upgrade-faction-vandalia",
-	{"Speed", 1},
-	{"Points", 10},
-	{"apply-to", "unit-teuton-kogge"}
-)
-
 DefineModifier("upgrade-faction-visigothia",
 	{"Speed", 1},
 	{"Points", 10},

@@ -1,0 +1,20 @@
+upgrade_protective_faction = {
+	name = "Protective Faction"
+	effects_string = "+100 HP for strongholds and +50 HP for towers"
+	modifier = {
+		hit_points = 100
+		unit_classes = {
+			stronghold
+			fortress
+		}
+	}
+	modifier = {
+		hit_points = 50
+		unit_classes = {
+			watch_tower
+			guard_tower
+			heavy_tower
+			cannon_tower
+		}
+	}
+}

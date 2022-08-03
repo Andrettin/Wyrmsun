@@ -62,9 +62,3 @@ DefineModifier("upgrade_faction_thralling_tribe",
 	{"improve-production", "lumber", 5},
 	{"apply-to", "unit-germanic-carpenters-shop"}
 )
-
-DefineModifier("upgrade_faction_yngling_tribe",
-	{"BasicDamage", 2},
-	{"Points", 10},
-	{"apply-to", "unit-germanic-archer"}
-)

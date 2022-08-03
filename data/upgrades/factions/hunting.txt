@@ -1,0 +1,13 @@
+upgrade_hunting_faction = {
+	name = "Hunting Faction"
+	effects_string = "+2 Damage for ranged units"
+	modifier = {
+		basic_damage = 2
+		points = 10
+		unit_classes = {
+			shooter
+			veteran_shooter
+			heroic_shooter
+		}
+	}
+}

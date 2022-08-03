@@ -5,7 +5,7 @@ middlesex = {
 	type = polity
 	color = blue
 	default_tier = county #shire
-	upgrade = upgrade_faction_middlesex
+	upgrade = upgrade_mercantile_faction
 	icon = icon_flag_five_purple_birds_on_green
 	core_settlements = {
 		london

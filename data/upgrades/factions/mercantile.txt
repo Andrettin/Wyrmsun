@@ -1,0 +1,10 @@
+upgrade_mercantile_faction = {
+	name = "Mercantile Faction"
+	effects_string = "-5% Trade Cost for Markets"
+	modifier = {
+		trade_cost = -5
+		unit_classes = {
+			market
+		}
+	}
+}
