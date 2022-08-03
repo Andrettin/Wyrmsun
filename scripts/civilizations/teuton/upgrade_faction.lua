@@ -31,7 +31,7 @@ DefineModifier("upgrade-faction-chauci-tribe",
 	{"apply-to", "unit-teuton-spearman"}
 )
 
-DefineModifier("upgrade-faction-cherusci-tribe",
+DefineModifier("upgrade_faction_cheruscia",
 	{"BasicDamage", 1},
 	{"HitPoints", 5},
 	{"Points", 10},

@@ -35,16 +35,6 @@ DefineFaction("chauci-tribe", {
 	Icon = "icon-flag-five-purple-birds-on-green"
 })
 
-DefineFaction("cherusci-tribe", {
-	Name = "Cherusci Tribe",
-	Adjective = "Cherusci",
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "teal",
-	FactionUpgrade = "upgrade-faction-cherusci-tribe",
-	Icon = "icon-flag-green-lion-on-purple"
-})
-
 DefineFaction("varini-tribe", {
 	Name = "Varini Tribe",
 	Adjective = "Varini",

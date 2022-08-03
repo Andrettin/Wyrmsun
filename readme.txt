@@ -84,6 +84,7 @@ https://github.com/Andrettin/Wyrmsun
 - Teutonia now has access to the Furor Teutonicus upgrade.
 - Mercia now grants a bonus to cavalry instead of infantry.
 - The Yngling Tribe now grants a bonus to food supply instead of to archers.
+- The Cherusci Tribe is now a polity instead.
 
 * Maps
 - The settlements in the Lorraine Plain map are now settlements which are actually in Lorraine.
