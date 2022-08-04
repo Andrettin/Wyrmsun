@@ -129,6 +129,8 @@ forest_regeneration_threshold = 1200
 #destroyed overlay terrain decay speed, in seconds (0 = disabled)
 destroyed_overlay_terrain_decay_threshold = -1200
 
+deselect_in_mine = true
+
 population_per_unit = 100000
 
 default_menu_background_file = "backgrounds/wyrmsun_sepia.png"

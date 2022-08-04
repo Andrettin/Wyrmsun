@@ -116,6 +116,7 @@ https://github.com/Andrettin/Wyrmsun
 - Neutral hostile infantry, ranged units, cavalry and flying riders now randomly move around.
 - Added "Wojtek" to the brown bear name generation list.
 - The Dwarven Scout now has a bonus against infantry of 25%, instead of +2 damage.
+- Workers are now deselected when they enter a mine.
 
 * Upgrades
 - Added Lipizzaner Horse upgrade (icon by Jinn) for the Teutonic civilization (researchable at the Stables). This upgrade increases cavalry HP.
