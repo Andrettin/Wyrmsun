@@ -89,6 +89,7 @@ https://github.com/Andrettin/Wyrmsun
 * Maps
 - The settlements in the Lorraine Plain map are now settlements which are actually in Lorraine.
 - Added the Bordeaux, Clermont, Nancy, Vannes and Wurzburg settlement sites for the Earth scenario map, and updated the predefined settlement territories accordingly.
+- Added Stone Deposit at Storugns in Gotland, for the Earth scenario map.
 - Added many building sites in France, for the Earth scenario map.
 - Placed more pre-Indo-European tribes on the Earth scenario map for the Stone/Bronze age.
 - The Vosges rock terrain feature is now semi-randomly generated (similar to the Alps).
@@ -105,9 +106,6 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - The Gadrauhts, Harjis, Miles, Skutan and Swedish Veterans' Day quests now grant the Inspired Army temporary modifier on completion.
 - The Gudja, Gudjan, Haimadala's Stones and The Great Temple quests now grant the Religious Fervor temporary modifier on completion.
-
-* Scenarios
-- Added Stone Deposit at Storugns in Gotland.
 
 * Units
 - Increased the charge bonus of Gothic cavalry from 7% to 10%.
