@@ -7,4 +7,39 @@ nancy = {
 	regions = {
 		lorraine
 	}
+	
+	history = {
+		-50 = {
+			owner = rome #became part of the Roman Empire in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			building_classes += town_hall
+		}
+		
+		395 = {
+			owner = rome #part of the Western Roman Empire c. 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
+		}
+		
+		486 = {
+			owner = francia #part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		}
+		
+		814 = {
+			owner = francia #part of the Carolingian Empire c. 814; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 54-55.
+		}
+		
+		911 = {
+			owner = france #became part of France in 911; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		925 = {
+			owner = lorraine #became part of the Duchy of Lorraine in 925; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		959 = {
+			owner = lorraine #became part of the Duchy of Upper Lorraine in 959; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		1815 = {
+			owner = france #part of France in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
 }

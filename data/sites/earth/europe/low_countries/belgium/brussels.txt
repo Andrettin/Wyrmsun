@@ -27,11 +27,15 @@ brussels = {
 		}
 		
 		911 = {
-			owner = lorraine #the area was part of the Duchy of Lorraine in 911; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = france #became part of France in 911; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+		}
+		
+		925 = {
+			owner = lorraine #became part of the Duchy of Lorraine in 925; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 		
 		959 = {
-			owner = lorraine #the area was part of the Duchy of Lower Lorraine from 959; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			owner = lorraine #became part of the Duchy of Lower Lorraine in 959; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 		
 		1815 = {
