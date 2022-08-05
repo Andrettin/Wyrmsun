@@ -107,7 +107,7 @@ MenuBase {
 		anchors.bottom: game_type_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		width: custom_game_menu.dropdown_width
-		model: ["Map Default", "Low", "Medium", "High"]
+		model: [qsTr("Map Default"), qsTr("Low"), qsTr("Medium"), qsTr("High")]
 		
 		onSelectedEntryChanged: {
 			wyrmgus.call_lua_command("GameSettings.Resources = " + resources_dropdown.currentIndex + ";")

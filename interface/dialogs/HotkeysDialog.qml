@@ -95,7 +95,7 @@ DialogBase {
 			
 			SmallText {
 				id: hotkey_description_label
-				text: modelData[1]
+				text: qsTr(modelData[1])
 				anchors.left: parent.left
 				anchors.leftMargin: 84 * wyrmgus.scale_factor
 				anchors.verticalCenter: parent.verticalCenter
