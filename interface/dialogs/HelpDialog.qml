@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: help_dialog
 	panel: 1
-	title: "Help"
+	title: qsTr("Help")
 	
 	LargeButton {
 		id: encyclopedia_button

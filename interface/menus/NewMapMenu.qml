@@ -6,7 +6,7 @@ import "../dialogs"
 
 MenuBase {
 	id: new_map_menu
-	title: "Map Editor"
+	title: qsTr("Map Editor")
 	
 	Pane {
 		anchors.fill: parent
@@ -133,6 +133,6 @@ MenuBase {
 	
 	GenericDialog {
 		id: error_dialog
-		title: "Error"
+		title: qsTr("Error")
 	}
 }

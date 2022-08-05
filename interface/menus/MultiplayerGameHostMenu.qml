@@ -5,7 +5,7 @@ import ".."
 
 MenuBase {
 	id: multiplayer_game_host_menu
-	title: "Multiplayer Game"
+	title: qsTr("Multiplayer Game")
 	
 	property var selected_map: null
 	

@@ -4,7 +4,7 @@ import ".."
 
 MenuBase {
 	id: custom_game_menu
-	title: "Custom Game"
+	title: qsTr("Custom Game")
 	
 	readonly property var selected_map: map_dropdown.selectedEntry
 	readonly property int dropdown_width: 150 * wyrmgus.scale_factor

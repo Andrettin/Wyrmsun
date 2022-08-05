@@ -4,7 +4,7 @@ import ".."
 
 MenuBase {
 	id: options_menu
-	title: "Options"
+	title: qsTr("Options")
 	
 	LargeButton {
 		id: gameplay_options_button

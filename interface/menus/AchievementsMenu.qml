@@ -5,7 +5,7 @@ import "../dialogs"
 
 ButtonTreeMenuBase {
 	id: achievements_menu
-	title: "Achievements"
+	title: qsTr("Achievements")
 	entries: wyrmgus.get_achievements()
 	icon_button_component: Qt.createComponent("../AchievementTreeIconButton.qml")
 	

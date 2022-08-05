@@ -6,7 +6,7 @@ import "../dialogs"
 
 MenuBase {
 	id: multiplayer_game_menu
-	title: "Multiplayer Game"
+	title: qsTr("Multiplayer Game")
 	
 	Pane {
 		anchors.fill: parent
@@ -84,6 +84,6 @@ MenuBase {
 	
 	GenericDialog {
 		id: error_dialog
-		title: "Error"
+		title: qsTr("Error")
 	}
 }

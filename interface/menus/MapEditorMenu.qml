@@ -5,7 +5,7 @@ import ".."
 
 MenuBase {
 	id: map_editor_menu
-	title: "Map Editor"
+	title: qsTr("Map Editor")
 	
 	LargeButton {
 		id: new_map_button

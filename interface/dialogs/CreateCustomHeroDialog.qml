@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: create_custom_hero_dialog
 	panel: 5
-	title: "Create Custom Hero"
+	title: qsTr("Create Custom Hero")
 	
 	readonly property var civilization: civilization_dropdown.selectedEntry
 	readonly property var unit_type: unit_type_dropdown.selectedEntry

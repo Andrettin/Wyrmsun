@@ -5,7 +5,7 @@ import "../dialogs"
 
 ButtonMenuBase {
 	id: legacy_quests_menu
-	title: "Legacy Quests"
+	title: qsTr("Legacy Quests")
 	button_component: Qt.createComponent("../LegacyQuestIconButton.qml")
 	entries: wyrmgus.get_legacy_quests()
 	button_area_bottom_anchor: difficulty_label.top

@@ -4,7 +4,7 @@ import ".."
 
 MenuBase {
 	id: results_menu
-	title: "Results"
+	title: qsTr("Results")
 	music_type: wyrmgus.game.results.victory ? "victory" : (wyrmgus.game.results.defeat ? "defeat" : "menu")
 	
 	LargeText {

@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: quest_dialog
 	panel: 5
-	title: "Quest Completed"
+	title: qsTr("Quest Completed")
 	
 	property var quest: null
 	property string rewards_string: ""

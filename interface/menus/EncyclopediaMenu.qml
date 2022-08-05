@@ -4,7 +4,7 @@ import ".."
 
 MenuBase {
 	id: encyclopedia_menu
-	title: "Encyclopedia"
+	title: qsTr("Encyclopedia")
 	focus: true //true even if the game is running, so that the encyclopedia can be used in that case
 	
 	LargeButton {

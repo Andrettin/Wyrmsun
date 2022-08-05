@@ -4,7 +4,7 @@ import ".."
 
 MenuBase {
 	id: tech_tree_menu
-	title: "Tech Tree"
+	title: qsTr("Tech Tree")
 	
 	Dropdown {
 		id: civilization_dropdown

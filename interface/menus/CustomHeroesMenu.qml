@@ -5,7 +5,7 @@ import "../dialogs"
 
 ButtonMenuBase {
 	id: custom_heroes_menu
-	title: "Custom Heroes"
+	title: qsTr("Custom Heroes")
 	button_component: Qt.createComponent("../CustomHeroIconButton.qml")
 	entries: wyrmgus.custom_heroes
 	button_area_bottom_anchor: create_custom_hero_button.top
@@ -29,6 +29,6 @@ ButtonMenuBase {
 	
 	GenericDialog {
 		id: error_dialog
-		title: "Error"
+		title: qsTr("Error")
 	}
 }

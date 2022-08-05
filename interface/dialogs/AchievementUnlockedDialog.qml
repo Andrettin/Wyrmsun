@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: achievement_dialog
 	panel: 2
-	title: "Achievement Unlocked!"
+	title: qsTr("Achievement Unlocked!")
 	interface_style: wyrmgus.current_interface_style ? wyrmgus.current_interface_style.identifier : "default"
 	
 	property var achievement: null

@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: quest_dialog
 	panel: 5
-	title: "Quest Failed"
+	title: qsTr("Quest Failed")
 	
 	property var quest: null
 	property string failure_reason_string: ""

@@ -72,7 +72,7 @@ Window {
 		
 		FileDialog {
 			id: upload_mod_dialog
-			title: "Upload Mod"
+			title: qsTr("Upload Mod")
 			selectExisting: true
 			selectFolder: true
 			sidebarVisible: false
@@ -94,13 +94,13 @@ Window {
 		
 		LauncherGenericDialog {
 			id: progress_dialog
-			title: "Progress"
+			title: qsTr("Progress")
 			closable: false
 		}
 		
 		LauncherGenericDialog {
 			id: error_dialog
-			title: "Error"
+			title: qsTr("Error")
 		}
 		
 		Timer {

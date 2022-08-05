@@ -6,7 +6,7 @@ import "../dialogs"
 
 MenuBase {
 	id: load_map_menu
-	title: "Map Editor"
+	title: qsTr("Map Editor")
 	
 	property var selected_map: null
 	
@@ -75,7 +75,7 @@ MenuBase {
 	
 	FileDialog {
 		id: select_map_dialog
-		title: "Select Map"
+		title: qsTr("Select Map")
 		defaultSuffix: ".smp.gz"
 		folder: "file:" + wyrmgus.user_maps_path
 		nameFilters: ["Stratagus Map Presentation Files (*.smp.gz *.smp)"]

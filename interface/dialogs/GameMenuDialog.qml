@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: game_menu_dialog
 	panel: 1
-	title: "Game Menu"
+	title: qsTr("Game Menu")
 	enabled: map_view.menu_stack === null
 	
 	LargeButton {

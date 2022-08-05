@@ -5,7 +5,7 @@ import ".."
 
 MenuBase {
 	id: video_and_audio_options_menu
-	title: "Video and Audio Options"
+	title: qsTr("Video and Audio Options")
 	
 	NormalText {
 		id: scale_factor_label

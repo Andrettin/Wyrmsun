@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: hotkeys_dialog
 	panel: 5
-	title: "Hotkeys"
+	title: qsTr("Hotkeys")
 	
 	Rectangle {
 		id: text_background

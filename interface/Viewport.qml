@@ -149,7 +149,7 @@ Item {
 			}
 			
 			var error_dialog = component.createObject(dialog_parent, {
-				title: "Error",
+				title: qsTr("Error"),
 				text: error_message,
 				interface_style: wyrmgus.current_interface_style ? wyrmgus.current_interface_style.identifier : "default"
 			})

@@ -4,7 +4,7 @@ import ".."
 
 MenuBase {
 	id: credits_menu
-	title: "Credits"
+	title: qsTr("Credits")
 	music_type: "credits"
 	
 	Item {

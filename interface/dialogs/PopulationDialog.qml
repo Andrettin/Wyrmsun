@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: population_dialog
 	panel: 5
-	title: "Population"
+	title: qsTr("Population")
 	pause_game: false
 	
 	property var settlement_game_data: null

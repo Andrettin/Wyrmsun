@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: options_dialog
 	panel: 1
-	title: "Options"
+	title: qsTr("Options")
 	
 	LargeButton {
 		id: sound_button

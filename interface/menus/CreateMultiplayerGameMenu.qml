@@ -5,7 +5,7 @@ import ".."
 
 MenuBase {
 	id: create_multiplayer_game_menu
-	title: "Create Multiplayer Game"
+	title: qsTr("Create Multiplayer Game")
 	
 	readonly property var selected_map: map_dropdown.selectedEntry
 	

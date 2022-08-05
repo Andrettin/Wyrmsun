@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: faction_choice_dialog
 	panel: 1
-	title: "Choose Your Faction"
+	title: qsTr("Choose Your Faction")
 	
 	property var factions: []
 	readonly property var selected_faction: faction_dropdown.selectedEntry

@@ -5,7 +5,7 @@ import ".."
 
 FileDialog {
 	id: save_game_dialog
-	title: "Save Game"
+	title: qsTr("Save Game")
 	defaultSuffix: ".sav.gz"
 	folder: "file:" + wyrmgus.save_path
 	nameFilters: ["Stratagus Save Files (*.sav.gz *.sav)"]

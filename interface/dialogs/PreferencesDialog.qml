@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: preferences_dialog
 	panel: 5
-	title: "Preferences"
+	title: qsTr("Preferences")
 	
 	LabeledRadioImageButton {
 		id: show_hotkeys_radio_button

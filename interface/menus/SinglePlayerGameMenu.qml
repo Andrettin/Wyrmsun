@@ -5,7 +5,7 @@ import "../dialogs"
 
 MenuBase {
 	id: single_player_game_menu
-	title: "Single Player Game"
+	title: qsTr("Single Player Game")
 	
 	LargeButton {
 		id: scenarios_button

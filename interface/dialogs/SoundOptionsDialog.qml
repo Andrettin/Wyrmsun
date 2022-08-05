@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: sound_options_dialog
 	panel: 5
-	title: "Sound Options"
+	title: qsTr("Sound Options")
 	
 	SoundEffectsSlider {
 		id: sound_effects_slider

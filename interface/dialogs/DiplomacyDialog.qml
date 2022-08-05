@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: diplomacy_dialog
 	panel: 5
-	title: "Diplomacy"
+	title: qsTr("Diplomacy")
 	
 	NormalText {
 		id: allied_label

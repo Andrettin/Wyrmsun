@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: change_custom_hero_description_dialog
 	panel: 5
-	title: "Change Description"
+	title: qsTr("Change Description")
 	
 	property var custom_hero: null
 	

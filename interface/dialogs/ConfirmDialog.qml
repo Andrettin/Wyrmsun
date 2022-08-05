@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: confirm_dialog
 	panel: 1
-	title: "Are you sure?"
+	title: qsTr("Are you sure?")
 	
 	signal confirmed()
 	

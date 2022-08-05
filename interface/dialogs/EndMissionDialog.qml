@@ -5,7 +5,7 @@ import ".."
 DialogBase {
 	id: end_mission_dialog
 	panel: 1
-	title: "End Mission"
+	title: qsTr("End Mission")
 	
 	LargeButton {
 		id: restart_mission_button

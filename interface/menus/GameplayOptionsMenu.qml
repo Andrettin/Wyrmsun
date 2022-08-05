@@ -4,7 +4,7 @@ import ".."
 
 MenuBase {
 	id: gameplay_options_menu
-	title: "Gameplay Options"
+	title: qsTr("Gameplay Options")
 	
 	NormalText {
 		id: hotkey_setup_label

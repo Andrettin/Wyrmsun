@@ -6,7 +6,7 @@ import "../dialogs"
 
 MenuBase {
 	id: multiplayer_game_join_menu
-	title: "Multiplayer Game"
+	title: qsTr("Multiplayer Game")
 	
 	readonly property var selected_map: wyrmgus.network_manager.map_info
 	

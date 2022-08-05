@@ -4,7 +4,7 @@ import ".."
 
 MenuBase {
 	id: campaign_menu
-	title: "Scenarios"
+	title: qsTr("Scenarios")
 	background: scenario_background
 	
 	property var campaign: null
