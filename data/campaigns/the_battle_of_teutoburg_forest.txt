@@ -1,0 +1,10 @@
+the_battle_of_the_teutoburg_forest = {
+	name = "The Battle of the Teutoburg Forest"
+	description = "."
+	faction = cheruscia
+	start_date = 9.9
+	map_templates = { earth }
+	#quest = the_battle_of_the_teutoburg_forest
+	icon = suebi_swordsman
+	hidden = true
+}
