@@ -26,7 +26,7 @@ DialogBase {
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.left: population_icon_button.right
 		anchors.leftMargin: 16 * wyrmgus.scale_factor
-		text: "Type"
+		text: qsTr("Type")
 	}
 	
 	NormalText {
@@ -34,7 +34,7 @@ DialogBase {
 		anchors.top: population_type_label.top
 		anchors.left: population_type_label.left
 		anchors.leftMargin: 72 * wyrmgus.scale_factor
-		text: "Population"
+		text: qsTr("Population")
 	}
 	
 	NormalText {
@@ -42,7 +42,7 @@ DialogBase {
 		anchors.top: population_type_label.top
 		anchors.left: population_label.left
 		anchors.leftMargin: 88 * wyrmgus.scale_factor
-		text: "Employment"
+		text: qsTr("Employment")
 	}
 	
 	ListView {
@@ -97,7 +97,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "OK"
+		text: qsTr("OK")
 		hotkey: "o"
 		interface_style: population_dialog.interface_style
 		

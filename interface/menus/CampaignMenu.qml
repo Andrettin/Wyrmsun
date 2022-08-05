@@ -21,17 +21,17 @@ MenuBase {
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.bottom: difficulty_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
-		text: "Faction: " + campaign.faction.link_string + " (" + campaign_civilization.link_string + ")"
-			+ (campaign.timeline ? ("\n\nTimeline: " + campaign.timeline.name) : "")
-			+ "\n\nStart Year: " + date_year_string(campaign.start_date)
-			+ "\n\nDescription: " + campaign.description
-			+ "\n\nHighest Completed Difficulty: " + (campaign.quest ? wyrmgus.get_difficulty_name(campaign.quest.highest_completed_difficulty_index) : "Unknown")
+		text: qsTr("Faction") + ": " + campaign.faction.link_string + " (" + campaign_civilization.link_string + ")"
+			+ (campaign.timeline ? ("\n\n" + qsTr("Timeline") + ": " + campaign.timeline.name) : "")
+			+ "\n\n" + qsTr("Start Year") + ": " + date_year_string(campaign.start_date)
+			+ "\n\n" + qsTr("Description") + ": " + campaign.description
+			+ "\n\n" + qsTr("Highest Completed Difficulty") + ": " + (campaign.quest ? wyrmgus.get_difficulty_name(campaign.quest.highest_completed_difficulty_index) : qsTr("Unknown"))
 			+ (campaign.map_presets ? ("\n\n" + campaign.map_presets.text) : "")
 	}
 	
 	NormalText {
 		id: difficulty_label
-		text: "Difficulty:"
+		text: qsTr("Difficulty") + ":"
 		anchors.left: difficulty_dropdown.left
 		anchors.bottom: difficulty_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -66,7 +66,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: previous_menu_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Start Scenario"
+		text: qsTr("Start Scenario")
 		hotkey: "s"
 		
 		onClicked: {

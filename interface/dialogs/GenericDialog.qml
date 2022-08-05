@@ -26,7 +26,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "OK"
+		text: qsTr("OK")
 		hotkey: "o"
 		interface_style: dialog.interface_style
 		

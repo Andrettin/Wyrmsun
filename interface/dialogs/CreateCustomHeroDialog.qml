@@ -27,7 +27,7 @@ DialogBase {
 		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
-		text: "Name:"
+		text: qsTr("Name") + ":"
 	}
 	
 	CustomTextField {
@@ -44,7 +44,7 @@ DialogBase {
 		anchors.verticalCenter: name_label.verticalCenter
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
-		text: "Generate"
+		text: qsTr("Generate")
 		hotkey: "g"
 		
 		onClicked: {
@@ -58,7 +58,7 @@ DialogBase {
 		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
-		text: "Surname:"
+		text: qsTr("Surname") + ":"
 	}
 	
 	CustomTextField {
@@ -77,7 +77,7 @@ DialogBase {
 		anchors.verticalCenter: surname_label.verticalCenter
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
-		text: "Generate"
+		text: qsTr("Generate")
 		
 		onClicked: {
 			surname_text_field.text = civilization.generate_male_surname()
@@ -91,7 +91,7 @@ DialogBase {
 		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
-		text: "Civilization:"
+		text: qsTr("Civilization") + ":"
 	}
 	
 	Dropdown {
@@ -114,7 +114,7 @@ DialogBase {
 		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
-		text: "Unit Type:"
+		text: qsTr("Unit Type") + ":"
 	}
 	
 	Dropdown {
@@ -137,7 +137,7 @@ DialogBase {
 		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
-		text: "Trait:"
+		text: qsTr("Trait") + ":"
 	}
 	
 	Dropdown {
@@ -160,7 +160,7 @@ DialogBase {
 		anchors.topMargin: 24 * wyrmgus.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
-		text: "Hair Color:"
+		text: qsTr("Hair Color") + ":"
 	}
 	
 	Dropdown {
@@ -187,7 +187,7 @@ DialogBase {
 		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
-		text: "Create"
+		text: qsTr("Create")
 		hotkey: "t"
 		
 		onClicked: {
@@ -218,7 +218,7 @@ DialogBase {
 		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
-		text: "Cancel"
+		text: qsTr("Cancel")
 		hotkey: "c"
 		
 		onClicked: {

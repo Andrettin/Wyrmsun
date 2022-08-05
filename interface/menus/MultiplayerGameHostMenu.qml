@@ -14,7 +14,7 @@ MenuBase {
 		anchors.bottom: name_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
-		text: "Map"
+		text: qsTr("Map")
 	}
 	
 	NormalText {
@@ -22,7 +22,7 @@ MenuBase {
 		anchors.bottom: file_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
-		text: "Name: " + selected_map.name
+		text: qsTr("Name") + ": " + selected_map.name
 	}
 	
 	NormalText {
@@ -30,7 +30,7 @@ MenuBase {
 		anchors.bottom: map_players_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
-		text: "File: " + selected_map.presentation_filename
+		text: qsTr("File") + ": " + selected_map.presentation_filename
 	}
 	
 	NormalText {
@@ -38,7 +38,7 @@ MenuBase {
 		anchors.bottom: map_size_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: map_size_label.left
-		text: "Players: " + selected_map.player_count
+		text: qsTr("Players") + ": " + selected_map.player_count
 	}
 	
 	NormalText {
@@ -47,7 +47,7 @@ MenuBase {
 		anchors.verticalCenterOffset: -64 * wyrmgus.scale_factor
 		anchors.left: parent.left
 		anchors.leftMargin: 64 * wyrmgus.scale_factor
-		text: "Size: " + selected_map.map_width + "x" + selected_map.map_height
+		text: qsTr("Size") + ": " + selected_map.map_width + "x" + selected_map.map_height
 	}
 	
 	LabeledRadioImageButton {
@@ -55,7 +55,7 @@ MenuBase {
 		anchors.left: map_size_label.left
 		anchors.top: map_size_label.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
-		text: "Fog of War"
+		text: qsTr("Fog of War")
 		checked: true
 		
 		onCheckedChanged: {
@@ -72,7 +72,7 @@ MenuBase {
 		anchors.left: map_size_label.left
 		anchors.top: fog_of_war_radio_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Reveal Map"
+		text: qsTr("Reveal Map")
 		checked: false
 		
 		onCheckedChanged: {
@@ -89,7 +89,7 @@ MenuBase {
 		anchors.left: map_size_label.left
 		anchors.top: reveal_map_radio_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Computer Opponents"
+		text: qsTr("Computer Opponents")
 		checked: false
 		
 		onCheckedChanged: {
@@ -103,7 +103,7 @@ MenuBase {
 	
 	NormalText {
 		id: civilization_label
-		text: "Civilization:"
+		text: qsTr("Civilization") + ":"
 		anchors.left: computer_opponents_radio_button.left
 		anchors.verticalCenter: civilization_dropdown.verticalCenter
 	}
@@ -150,7 +150,7 @@ MenuBase {
 	
 	NormalText {
 		id: resources_label
-		text: "Resources:"
+		text: qsTr("Resources") + ":"
 		anchors.left: computer_opponents_radio_button.left
 		anchors.verticalCenter: resources_dropdown.verticalCenter
 	}
@@ -162,7 +162,7 @@ MenuBase {
 		anchors.top: civilization_dropdown.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
 		width: 150 * wyrmgus.scale_factor
-		model: ["Map Default", "Low", "Medium", "High"]
+		model: [qsTr("Map Default"), qsTr("Low"), qsTr("Medium"), qsTr("High")]
 		
 		onSelectedEntryChanged: {
 			wyrmgus.network_manager.server.set_resources_option(currentIndex)
@@ -171,7 +171,7 @@ MenuBase {
 	
 	NormalText {
 		id: difficulty_label
-		text: "Difficulty:"
+		text: qsTr("Difficulty") + ":"
 		anchors.left: computer_opponents_radio_button.left
 		anchors.verticalCenter: difficulty_dropdown.verticalCenter
 		visible: difficulty_dropdown.visible

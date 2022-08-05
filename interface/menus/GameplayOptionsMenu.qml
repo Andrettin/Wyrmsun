@@ -8,7 +8,7 @@ MenuBase {
 	
 	NormalText {
 		id: hotkey_setup_label
-		text: "Hotkey Setup:"
+		text: qsTr("Hotkey Setup") + ":"
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: hotkey_setup_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -42,7 +42,7 @@ MenuBase {
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: time_of_day_shading_radio_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Autosave"
+		text: qsTr("Autosave")
 		checked: wyrmgus.preferences.autosave
 		
 		onCheckedChanged: {
@@ -55,7 +55,7 @@ MenuBase {
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: show_hero_symbol_radio_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Enable Time of Day Shading"
+		text: qsTr("Enable Time of Day Shading")
 		checked: wyrmgus.preferences.time_of_day_shading
 		
 		onCheckedChanged: {
@@ -68,7 +68,7 @@ MenuBase {
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.bottom: show_hp_bar_radio_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Show Hero Symbol"
+		text: qsTr("Show Hero Symbol")
 		checked: wyrmgus.preferences.hero_symbol
 		
 		onCheckedChanged: {
@@ -80,7 +80,7 @@ MenuBase {
 		id: show_hp_bar_radio_button
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.verticalCenter: parent.verticalCenter
-		text: "Show HP Bar"
+		text: qsTr("Show HP Bar")
 		checked: wyrmgus.preferences.hp_bar
 		
 		onCheckedChanged: {
@@ -93,7 +93,7 @@ MenuBase {
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_hp_bar_radio_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Show Messages"
+		text: qsTr("Show Messages")
 		checked: wyrmgus.preferences.show_messages
 		
 		onCheckedChanged: {
@@ -106,7 +106,7 @@ MenuBase {
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_messages_radio_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Show Pathlines"
+		text: qsTr("Show Pathlines")
 		checked: wyrmgus.preferences.pathlines
 		
 		onCheckedChanged: {
@@ -119,7 +119,7 @@ MenuBase {
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_pathlines_radio_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Show Player Color Circle"
+		text: qsTr("Show Player Color Circle")
 		checked: wyrmgus.preferences.player_color_circle
 		
 		onCheckedChanged: {
@@ -132,7 +132,7 @@ MenuBase {
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_player_color_circle_radio_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Show Resource Bar"
+		text: qsTr("Show Resource Bar")
 		checked: wyrmgus.preferences.resource_bar
 		
 		onCheckedChanged: {
@@ -145,7 +145,7 @@ MenuBase {
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_resource_bar_radio_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Show Tips"
+		text: qsTr("Show Tips")
 		checked: wyrmgus.preferences.show_tips
 		
 		onCheckedChanged: {
@@ -158,7 +158,7 @@ MenuBase {
 		anchors.left: hotkey_setup_dropdown.left
 		anchors.top: show_tips_radio_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Show Water Borders"
+		text: qsTr("Show Water Borders")
 		checked: wyrmgus.preferences.show_water_borders
 		
 		onCheckedChanged: {
@@ -171,7 +171,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: show_water_borders_radio_button.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
-		text: "OK"
+		text: qsTr("OK")
 		hotkey: "o"
 		
 		onClicked: {

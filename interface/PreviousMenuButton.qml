@@ -3,7 +3,7 @@ import QtQuick.Controls 2.12
 
 LargeButton {
 	anchors.horizontalCenter: parent.horizontalCenter
-	text: "Previous Menu"
+	text: qsTr("Previous Menu")
 	hotkey: "p"
 	
 	onClicked: {

@@ -12,7 +12,7 @@ Item {
 		id: sound_effects_volume_slider
 		anchors.left: parent.left
 		anchors.top: parent.top
-		text: "Sound Effects Volume"
+		text: qsTr("Sound Effects Volume")
 		from: 0
 		to: 255
 		value: wyrmgus.preferences.sound_effects_volume
@@ -30,7 +30,7 @@ Item {
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.top: sound_effects_volume_slider.top
 		anchors.topMargin: sound_effects_volume_slider.slider_item.y + (sound_effects_radio_button.height / 2) - (sound_effects_volume_slider.slider_item.height / 2)
-		text: "Enabled"
+		text: qsTr("Enabled")
 		checked: wyrmgus.preferences.sound_effects_enabled
 		interface_style: sound_effects_slider.interface_style
 		

@@ -8,8 +8,8 @@ Item {
 	
 	property string interface_style: "default"
 	property string text: ""
-	property string min_text: "min"
-	property string max_text: "max"
+	property string min_text: qsTr("min")
+	property string max_text: qsTr("max")
 	property real from: 0
 	property real to: 255
 	property real step_size: to / 10

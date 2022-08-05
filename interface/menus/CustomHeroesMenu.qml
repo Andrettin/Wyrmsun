@@ -15,7 +15,7 @@ ButtonMenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: previous_menu_button_item.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Create Custom Hero"
+		text: qsTr("Create Custom Hero")
 		hotkey: "c"
 		
 		onClicked: {

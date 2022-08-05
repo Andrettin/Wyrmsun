@@ -12,7 +12,7 @@ EncyclopediaEntryMenu {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: change_custom_hero_description_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Change Description"
+		text: qsTr("Change Description")
 		hotkey: "c"
 		
 		onClicked: {
@@ -26,7 +26,7 @@ EncyclopediaEntryMenu {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: previous_menu_button_item.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Delete Custom Hero"
+		text: qsTr("Delete Custom Hero")
 		hotkey: "d"
 		
 		onClicked: {

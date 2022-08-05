@@ -14,7 +14,7 @@ DialogBase {
 		anchors.top: title_item.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.horizontalCenter: parent.horizontalCenter
-		text: "Are you sure? This cannot be undone."
+		text: qsTr("Are you sure? This cannot be undone.")
 	}
 	
 	SmallButton {
@@ -23,7 +23,7 @@ DialogBase {
 		anchors.leftMargin: 16 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
-		text: "Yes"
+		text: qsTr("Yes")
 		hotkey: "y"
 		
 		onClicked: {
@@ -39,7 +39,7 @@ DialogBase {
 		anchors.rightMargin: 16 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
-		text: "No"
+		text: qsTr("No")
 		hotkey: "n"
 		
 		onClicked: {

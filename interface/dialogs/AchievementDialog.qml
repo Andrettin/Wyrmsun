@@ -41,7 +41,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Close"
+		text: qsTr("Close")
 		hotkey: "c"
 		
 		onClicked: {

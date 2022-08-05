@@ -12,13 +12,13 @@ MenuBase {
 		anchors.right: game_concepts_button.right
 		anchors.bottom: civilizations_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Buildings"
+		text: qsTr("Buildings")
 		hotkey: "b"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
 				category: "buildings",
-				category_name: "Buildings",
+				category_name: qsTr("Buildings"),
 				entries: wyrmgus.get_building_encyclopedia_entries()
 			})
 		}
@@ -29,13 +29,13 @@ MenuBase {
 		anchors.right: game_concepts_button.right
 		anchors.bottom: deities_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Civilizations"
+		text: qsTr("Civilizations")
 		hotkey: "c"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryMenu.qml", {
 				category: "civilizations",
-				category_name: "Civilizations",
+				category_name: qsTr("Civilizations"),
 				entries: wyrmgus.get_civilization_encyclopedia_entries()
 			})
 		}
@@ -46,13 +46,13 @@ MenuBase {
 		anchors.right: game_concepts_button.right
 		anchors.bottom: dynasties_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Deities"
+		text: qsTr("Deities")
 		hotkey: "d"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
 				category: "deities",
-				category_name: "Deities",
+				category_name: qsTr("Deities"),
 				entries: wyrmgus.get_deity_encyclopedia_entries()
 			})
 		}
@@ -63,13 +63,13 @@ MenuBase {
 		anchors.right: game_concepts_button.right
 		anchors.bottom: factions_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Dynasties"
+		text: qsTr("Dynasties")
 		hotkey: "y"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
 				category: "dynasties",
-				category_name: "Dynasties",
+				category_name: qsTr("Dynasties"),
 				entries: wyrmgus.get_dynasty_encyclopedia_entries()
 			})
 		}
@@ -79,13 +79,13 @@ MenuBase {
 		id: factions_button
 		anchors.right: game_concepts_button.right
 		anchors.verticalCenter: parent.verticalCenter
-		text: "Factions"
+		text: qsTr("Factions")
 		hotkey: "f"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
 				category: "factions",
-				category_name: "Factions",
+				category_name: qsTr("Factions"),
 				entries: wyrmgus.get_faction_encyclopedia_entries()
 			})
 		}
@@ -97,13 +97,13 @@ MenuBase {
 		anchors.rightMargin: 4
 		anchors.top: factions_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Game Concepts"
+		text: qsTr("Game Concepts")
 		hotkey: "g"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryMenu.qml", {
 				category: "game_concepts",
-				category_name: "Game Concepts",
+				category_name: qsTr("Game Concepts"),
 				entries: wyrmgus.get_game_concept_encyclopedia_entries()
 			})
 		}
@@ -114,13 +114,13 @@ MenuBase {
 		anchors.right: game_concepts_button.right
 		anchors.top: game_concepts_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Heroes"
+		text: qsTr("Heroes")
 		hotkey: "h"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
 				category: "heroes",
-				category_name: "Heroes",
+				category_name: qsTr("Heroes"),
 				entries: wyrmgus.get_character_encyclopedia_entries()
 			})
 		}
@@ -131,13 +131,13 @@ MenuBase {
 		anchors.right: game_concepts_button.right
 		anchors.top: heroes_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Items"
+		text: qsTr("Items")
 		hotkey: "i"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
 				category: "items",
-				category_name: "Items",
+				category_name: qsTr("Items"),
 				entries: wyrmgus.get_item_encyclopedia_entries()
 			})
 		}
@@ -148,13 +148,13 @@ MenuBase {
 		anchors.right: game_concepts_button.right
 		anchors.top: items_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Magic Prefixes"
+		text: qsTr("Magic Prefixes")
 		hotkey: "r"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryMenu.qml", {
 				category: "item_prefixes",
-				category_name: "Magic Prefixes",
+				category_name: qsTr("Magic Prefixes"),
 				entries: wyrmgus.get_magic_prefix_encyclopedia_entries()
 			})
 		}
@@ -165,13 +165,13 @@ MenuBase {
 		anchors.right: game_concepts_button.right
 		anchors.top: magic_prefixes_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Magic Suffixes"
+		text: qsTr("Magic Suffixes")
 		hotkey: "s"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryMenu.qml", {
 				category: "item_suffixes",
-				category_name: "Magic Suffixes",
+				category_name: qsTr("Magic Suffixes"),
 				entries: wyrmgus.get_magic_suffix_encyclopedia_entries()
 			})
 		}
@@ -181,13 +181,13 @@ MenuBase {
 		id: technologies_button
 		anchors.left: worlds_button.left
 		anchors.top: buildings_button.top
-		text: "Technologies"
+		text: qsTr("Technologies")
 		hotkey: "t"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
 				category: "technologies",
-				category_name: "Technologies",
+				category_name: qsTr("Technologies"),
 				entries: wyrmgus.get_technology_encyclopedia_entries()
 			})
 		}
@@ -198,13 +198,13 @@ MenuBase {
 		anchors.left: worlds_button.left
 		anchors.top: technologies_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Texts"
+		text: qsTr("Texts")
 		hotkey: "x"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
 				category: "texts",
-				category_name: "Texts",
+				category_name: qsTr("Texts"),
 				entries: wyrmgus.get_literary_text_encyclopedia_entries()
 			})
 		}
@@ -215,13 +215,13 @@ MenuBase {
 		anchors.left: worlds_button.left
 		anchors.top: texts_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Uniques"
+		text: qsTr("Uniques")
 		hotkey: "n"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
 				category: "unique_items",
-				category_name: "Uniques",
+				category_name: qsTr("Uniques"),
 				entries: wyrmgus.get_unique_item_encyclopedia_entries()
 			})
 		}
@@ -232,13 +232,13 @@ MenuBase {
 		anchors.left: worlds_button.left
 		anchors.top: uniques_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Units"
+		text: qsTr("Units")
 		hotkey: "u"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryIconMenu.qml", {
 				category: "units",
-				category_name: "Units",
+				category_name: qsTr("Units"),
 				entries: wyrmgus.get_unit_encyclopedia_entries()
 			})
 		}
@@ -250,13 +250,13 @@ MenuBase {
 		anchors.leftMargin: 4
 		anchors.top: units_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Worlds"
+		text: qsTr("Worlds")
 		hotkey: "w"
 		
 		onClicked: {
 			menu_stack.push("EncyclopediaCategoryMenu.qml", {
 				category: "worlds",
-				category_name: "Worlds",
+				category_name: qsTr("Worlds"),
 				entries: wyrmgus.get_world_encyclopedia_entries()
 			})
 		}

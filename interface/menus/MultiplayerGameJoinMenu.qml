@@ -177,7 +177,7 @@ MenuBase {
 		anchors.top: map_label.top
 		anchors.left: parent.right
 		anchors.leftMargin: -384 * wyrmgus.scale_factor
-		text: "Players"
+		text: qsTr("Players")
 	}
 	
 	NormalText {
@@ -193,7 +193,7 @@ MenuBase {
 		anchors.top: host_player_label.top
 		anchors.left: host_player_label.left
 		anchors.leftMargin: 128 * wyrmgus.scale_factor
-		text: "Creator"
+		text: qsTr("Creator")
 		visible: host_player_label.visible
 	}
 	
@@ -252,14 +252,14 @@ MenuBase {
 		id: open_slots_label
 		anchors.top: civilization_label.top
 		anchors.left: players_label.left
-		text: "Open slots: " + (selected_map.player_count - wyrmgus.network_manager.connected_player_count - 1)
+		text: qsTr("Open slots") + ": " + (selected_map.player_count - wyrmgus.network_manager.connected_player_count - 1)
 	}
 	
 	LabeledRadioImageButton {
 		id: ready_button
 		anchors.verticalCenter: difficulty_label.verticalCenter
 		anchors.left: players_label.left
-		text: "Ready"
+		text: qsTr("Ready")
 		checked: false
 		
 		onCheckedChanged: {

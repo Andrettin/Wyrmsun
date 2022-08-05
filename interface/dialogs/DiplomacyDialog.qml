@@ -13,7 +13,7 @@ DialogBase {
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.right: enemy_label.left
 		anchors.rightMargin: 16 * wyrmgus.scale_factor
-		text: "Allied"
+		text: qsTr("Allied")
 	}
 	
 	NormalText {
@@ -22,7 +22,7 @@ DialogBase {
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.right: shared_vision_label.left
 		anchors.rightMargin: 16 * wyrmgus.scale_factor
-		text: "Enemy"
+		text: qsTr("Enemy")
 	}
 	
 	NormalText {
@@ -31,7 +31,7 @@ DialogBase {
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.right: parent.right
 		anchors.rightMargin: 8 * wyrmgus.scale_factor
-		text: "Shared Vision"
+		text: qsTr("Shared Vision")
 	}
 	
 	ListView {
@@ -156,7 +156,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Previous Menu (Esc)"
+		text: qsTr("Previous Menu")
 		hotkey: "esc"
 		interface_style: diplomacy_dialog.interface_style
 		

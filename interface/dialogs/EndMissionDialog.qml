@@ -12,7 +12,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: title_item.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
-		text: "Restart Mission"
+		text: qsTr("Restart Mission")
 		hotkey: "r"
 		interface_style: end_mission_dialog.interface_style
 		enabled: !wyrmgus.game.multiplayer
@@ -27,7 +27,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: restart_mission_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Quit Mission"
+		text: qsTr("Quit Mission")
 		hotkey: "q"
 		interface_style: end_mission_dialog.interface_style
 		
@@ -41,7 +41,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: quit_mission_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Exit to Desktop"
+		text: qsTr("Exit to Desktop")
 		hotkey: "x"
 		interface_style: end_mission_dialog.interface_style
 		
@@ -55,7 +55,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: exit_to_desktop_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Previous Menu (Esc)"
+		text: qsTr("Previous Menu")
 		hotkey: "esc"
 		interface_style: end_mission_dialog.interface_style
 		

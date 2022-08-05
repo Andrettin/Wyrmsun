@@ -31,7 +31,7 @@ DialogBase {
 		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
-		text: "OK"
+		text: qsTr("OK")
 		hotkey: "o"
 		
 		onClicked: {
@@ -47,7 +47,7 @@ DialogBase {
 		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
-		text: "Cancel"
+		text: qsTr("Cancel")
 		hotkey: "c"
 		
 		onClicked: {

@@ -45,7 +45,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: previous_menu_button_item.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Dynastic Tree"
+		text: qsTr("Dynastic Tree")
 		hotkey: "d"
 		visible: is_dynasty && entry.dynastic_tree_characters.length > 0
 		

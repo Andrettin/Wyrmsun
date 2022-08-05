@@ -35,7 +35,7 @@ Item {
 	
 	LargeText {
 		id: paused_label
-		text: "Paused"
+		text: qsTr("Paused")
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: top_bar.bottom
 		anchors.verticalCenterOffset: (parent.height - (wyrmgus.defines.map_area_top_margin + wyrmgus.defines.map_area_bottom_margin) * wyrmgus.scale_factor) / 2

@@ -44,7 +44,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: multiplayer_menu_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Single Player Game"
+		text: qsTr("Single Player Game")
 		hotkey: "s"
 		
 		onClicked: {
@@ -57,7 +57,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: achievements_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Multiplayer Game"
+		text: qsTr("Multiplayer Game")
 		hotkey: "m"
 		lua_command: "InitGameSettings(); InitNetwork1();"
 		
@@ -70,7 +70,7 @@ MenuBase {
 		id: achievements_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-		text: "Achievements"
+		text: qsTr("Achievements")
 		hotkey: "a"
 		
 		onClicked: {
@@ -83,7 +83,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: achievements_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Options"
+		text: qsTr("Options")
 		hotkey: "o"
 		
 		onClicked: {
@@ -96,7 +96,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: options_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Map Editor"
+		text: qsTr("Map Editor")
 		hotkey: "e"
 		
 		onClicked: {
@@ -109,7 +109,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: map_editor_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Encyclopedia"
+		text: qsTr("Encyclopedia")
 		hotkey: "c"
 		
 		onClicked: {
@@ -122,7 +122,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: encyclopedia_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Credits"
+		text: qsTr("Credits")
 		hotkey: "i"
 		
 		onClicked: {
@@ -135,7 +135,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: credits_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Exit"
+		text: qsTr("Exit")
 		hotkey: "x"
 		
 		onClicked: {
@@ -145,7 +145,7 @@ MenuBase {
 	
 	TinyText {
 		id: copyright_text
-		text: "Copyright (c) 2013-2021 by Andrettin"
+		text: qsTr("Copyright (c) 2013-2021 by Andrettin")
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor

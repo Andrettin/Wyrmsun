@@ -20,7 +20,7 @@ ButtonMenuBase {
 	
 	NormalText {
 		id: difficulty_label
-		text: "Difficulty:"
+		text: qsTr("Difficulty") + ":"
 		anchors.left: difficulty_dropdown.left
 		anchors.bottom: difficulty_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor

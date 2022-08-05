@@ -12,7 +12,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: title_item.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
-		text: "Encyclopedia"
+		text: qsTr("Encyclopedia")
 		hotkey: "c"
 		interface_style: help_dialog.interface_style
 		
@@ -32,7 +32,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: encyclopedia_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Hotkeys"
+		text: qsTr("Hotkeys")
 		hotkey: "h"
 		interface_style: help_dialog.interface_style
 		
@@ -46,7 +46,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: hotkeys_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Previous Menu (Esc)"
+		text: qsTr("Previous Menu")
 		hotkey: "esc"
 		interface_style: help_dialog.interface_style
 		

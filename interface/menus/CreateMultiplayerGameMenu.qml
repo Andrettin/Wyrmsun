@@ -44,7 +44,7 @@ MenuBase {
 	
 	NormalText {
 		id: world_label
-		text: "World:"
+		text: qsTr("World") + ":"
 		anchors.left: world_dropdown.left
 		anchors.bottom: world_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -61,7 +61,7 @@ MenuBase {
 	
 	NormalText {
 		id: map_label
-		text: "Map:"
+		text: qsTr("Map") + ":"
 		anchors.left: map_dropdown.left
 		anchors.bottom: map_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -89,7 +89,7 @@ MenuBase {
 		id: create_game_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-		text: "Create Game"
+		text: qsTr("Create Game")
 		hotkey: "c"
 		
 		onClicked: {

@@ -13,7 +13,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: title_item.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
-		text: "Options (F5)"
+		text: qsTr("Options")
 		hotkey: "f5"
 		interface_style: game_menu_dialog.interface_style
 		
@@ -27,7 +27,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: options_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Help (F1)"
+		text: qsTr("Help")
 		hotkey: "f1"
 		interface_style: game_menu_dialog.interface_style
 		
@@ -41,7 +41,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: help_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Save"
+		text: qsTr("Save")
 		hotkey: "s"
 		interface_style: game_menu_dialog.interface_style
 		
@@ -55,7 +55,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: save_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Load (F12)"
+		text: qsTr("Load")
 		hotkey: "f12"
 		interface_style: game_menu_dialog.interface_style
 		
@@ -69,7 +69,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: load_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "End Mission"
+		text: qsTr("End Mission")
 		hotkey: "e"
 		interface_style: game_menu_dialog.interface_style
 		
@@ -83,7 +83,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: end_mission_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Return to Game (Esc)"
+		text: qsTr("Return to Game")
 		hotkey: "esc"
 		interface_style: game_menu_dialog.interface_style
 		

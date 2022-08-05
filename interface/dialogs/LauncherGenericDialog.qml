@@ -72,7 +72,7 @@ Popup {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * scale_factor
-		text: "OK"
+		text: qsTr("OK")
 		hotkey: "o"
 		visible: closable
 		enabled: closable

@@ -36,7 +36,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: close_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Play Quest"
+		text: qsTr("Play Quest")
 		hotkey: "p"
 		
 		onClicked: {
@@ -53,7 +53,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Close"
+		text: qsTr("Close")
 		hotkey: "c"
 		
 		onClicked: {

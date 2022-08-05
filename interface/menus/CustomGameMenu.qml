@@ -11,7 +11,7 @@ MenuBase {
 	
 	NormalText {
 		id: world_label
-		text: "World:"
+		text: qsTr("World") + ":"
 		anchors.left: world_dropdown.left
 		anchors.bottom: world_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -28,7 +28,7 @@ MenuBase {
 	
 	NormalText {
 		id: map_label
-		text: "Map:"
+		text: qsTr("Map") + ":"
 		anchors.left: map_dropdown.left
 		anchors.bottom: map_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -53,7 +53,7 @@ MenuBase {
 	
 	NormalText {
 		id: civilization_label
-		text: "Your Civilization:"
+		text: qsTr("Your Civilization") + ":"
 		anchors.left: civilization_dropdown.left
 		anchors.bottom: civilization_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -95,7 +95,7 @@ MenuBase {
 	
 	NormalText {
 		id: resources_label
-		text: "Resources:"
+		text: qsTr("Resources") + ":"
 		anchors.left: resources_dropdown.left
 		anchors.bottom: resources_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -116,7 +116,7 @@ MenuBase {
 	
 	NormalText {
 		id: opponents_label
-		text: "Opponents:"
+		text: qsTr("Opponents") + ":"
 		anchors.left: opponents_dropdown.left
 		anchors.bottom: opponents_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -152,7 +152,7 @@ MenuBase {
 	
 	NormalText {
 		id: game_type_label
-		text: "Game Type:"
+		text: qsTr("Game Type") + ":"
 		anchors.left: game_type_dropdown.left
 		anchors.bottom: game_type_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -163,7 +163,7 @@ MenuBase {
 		anchors.left: civilization_dropdown.left
 		anchors.verticalCenter: parent.verticalCenter
 		width: custom_game_menu.dropdown_width
-		model: ["Use Map Settings", "Melee", "Free for All", "Top vs Bottom", "Left vs Right", "Man vs Machine"]
+		model: [qsTr("Use Map Settings"), qsTr("Melee"), qsTr("Free for All"), qsTr("Top vs Bottom"), qsTr("Left vs Right"), qsTr("Man vs Machine")]
 		
 		onSelectedEntryChanged: {
 			wyrmgus.call_lua_command("GameSettings.GameType = " + (game_type_dropdown.currentIndex - 1) + ";")
@@ -171,7 +171,7 @@ MenuBase {
 	}
 	NormalText {
 		id: difficulty_label
-		text: "Difficulty:"
+		text: qsTr("Difficulty") + ":"
 		anchors.left: difficulty_dropdown.left
 		anchors.bottom: difficulty_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -220,7 +220,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: previous_menu_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Start Game"
+		text: qsTr("Start Game")
 		hotkey: "s"
 		
 		onClicked: {

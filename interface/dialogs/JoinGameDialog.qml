@@ -11,7 +11,7 @@ DialogBase {
 		anchors.top: parent.top
 		anchors.topMargin: 16 * wyrmgus.scale_factor
 		anchors.horizontalCenter: parent.horizontalCenter
-		text: "Enter server IP-address:"
+		text: qsTr("Enter server IP-address:")
 	}
 	
 	CustomTextField {
@@ -31,7 +31,7 @@ DialogBase {
 		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "OK"
+		text: qsTr("OK")
 		hotkey: "o"
 		
 		onClicked: {
@@ -48,7 +48,7 @@ DialogBase {
 		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Cancel"
+		text: qsTr("Cancel")
 		hotkey: "c"
 		
 		onClicked: {

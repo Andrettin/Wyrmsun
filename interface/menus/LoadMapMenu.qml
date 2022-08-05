@@ -46,7 +46,7 @@ MenuBase {
 		id: select_map_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-		text: "Select Map"
+		text: qsTr("Select Map")
 		hotkey: "s"
 		
 		onClicked: {
@@ -59,7 +59,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: select_map_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Edit Map"
+		text: qsTr("Edit Map")
 		hotkey: "e"
 		
 		onClicked: {

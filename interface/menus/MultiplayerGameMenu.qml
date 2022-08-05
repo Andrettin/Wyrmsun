@@ -19,7 +19,7 @@ MenuBase {
 		anchors.bottom: nickname_text_field.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		anchors.left: join_game_button.left
-		text: "Nickname:"
+		text: qsTr("Nickname") + "qsTr(:"
 	}
 	
 	CustomTextField {
@@ -35,7 +35,7 @@ MenuBase {
 		id: join_game_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-		text: "Join Game"
+		text: qsTr("Join Game")
 		hotkey: "j"
 		
 		onClicked: {
@@ -53,7 +53,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: join_game_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Create Game"
+		text: qsTr("Create Game")
 		hotkey: "c"
 		
 		onClicked: {

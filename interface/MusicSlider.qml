@@ -12,7 +12,7 @@ Item {
 		id: music_volume_slider
 		anchors.left: parent.left
 		anchors.top: parent.top
-		text: "Music Volume"
+		text: qsTr("Music Volume")
 		from: 0
 		to: 255
 		value: wyrmgus.preferences.music_volume
@@ -30,7 +30,7 @@ Item {
 		anchors.leftMargin: 8 * wyrmgus.scale_factor
 		anchors.top: music_volume_slider.top
 		anchors.topMargin: music_volume_slider.slider_item.y + (music_radio_button.height / 2) - (music_volume_slider.slider_item.height / 2)
-		text: "Enabled"
+		text: qsTr("Enabled")
 		checked: wyrmgus.preferences.music_enabled
 		interface_style: sound_effects_slider.interface_style
 		

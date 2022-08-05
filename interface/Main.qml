@@ -87,6 +87,14 @@ Window {
 		return str
 	}
 	
+	function capitalize(text) {
+		if (text.length <= 1) {
+			return text.toUpperCase()
+		}
+		
+		return text[0].toUpperCase() + text.substring(1)
+	}
+	
 	//generate a random number
 	function random(n) {
 		return Math.floor(Math.random() * n)

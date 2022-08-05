@@ -14,7 +14,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.verticalCenter
 		anchors.bottomMargin: 4 * wyrmgus.scale_factor
-		text: "Yes"
+		text: qsTr("Yes")
 		hotkey: "y"
 		interface_style: confirm_dialog.interface_style
 		
@@ -29,7 +29,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: parent.verticalCenter
 		anchors.topMargin: 4 * wyrmgus.scale_factor
-		text: "No"
+		text: qsTr("No")
 		hotkey: "n"
 		interface_style: confirm_dialog.interface_style
 		

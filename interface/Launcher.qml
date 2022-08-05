@@ -47,7 +47,7 @@ Window {
 			anchors.bottomMargin: 4 * scale_factor
 			anchors.right: parent.right
 			anchors.rightMargin: 8 * scale_factor
-			text: "Start"
+			text: qsTr("Start")
 			hotkey: "s"
 			
 			onClicked: {
@@ -62,7 +62,7 @@ Window {
 			anchors.bottomMargin: 4 * scale_factor
 			anchors.right: parent.right
 			anchors.rightMargin: 8 * scale_factor
-			text: "Upload Mod"
+			text: qsTr("Upload Mod")
 			hotkey: "m"
 			
 			onClicked: {

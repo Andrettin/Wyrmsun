@@ -108,7 +108,7 @@ DialogBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Previous Menu (Esc)"
+		text: qsTr("Previous Menu")
 		hotkey: "esc"
 		interface_style: hotkeys_dialog.interface_style
 		

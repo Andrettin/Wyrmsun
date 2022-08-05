@@ -11,7 +11,7 @@ MenuBase {
 		id: new_map_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-		text: "New Map"
+		text: qsTr("New Map")
 		hotkey: "n"
 		
 		onClicked: {
@@ -24,7 +24,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: new_map_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Load Map"
+		text: qsTr("Load Map")
 		hotkey: "l"
 		
 		onClicked: {
