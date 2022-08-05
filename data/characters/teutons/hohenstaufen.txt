@@ -3,7 +3,7 @@ friedrich_barbarossa = { #Friedrich I "Barbarossa" of the Holy Roman Empire; Sou
 	epithet = barbarossa
 	dynasty = hohenstaufen
 	unit_type = unit_teuton_knight_lord
-	civilization = teuton
+	civilization = teutonic
 	default_faction = holy_rome
 	gender = male
 	home_settlement = stuttgart #Swabia
@@ -18,6 +18,12 @@ friedrich_barbarossa = { #Friedrich I "Barbarossa" of the Holy Roman Empire; Sou
 	
 	history = {
 		#born in 1122; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 903.
+		
+		1149 = {
+			active = true
+			faction = swabia #Duke of Swabia
+			location = stuttgart
+		}
 		
 		1152 = {
 			#crowned king of Germany in 1152, whereupon he also assumed the title of Holy Roman Emperor; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 62.
