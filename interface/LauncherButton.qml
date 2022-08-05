@@ -79,7 +79,7 @@ Item {
 		var hotkey_pos = text.toLowerCase().search(hotkey)
 		
 		if (hotkey_pos == -1) {
-			return text
+			return text + " (" + highlight(hotkey.toUpperCase()) + ")"
 		}
 		
 		var post_hotkey_pos = hotkey_pos + hotkey.length
