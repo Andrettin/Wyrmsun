@@ -1713,14 +1713,11 @@ local defaultPreferences = {
 	EnableMouseScrolling = true,    --  Enable/disable mouse scrolling.
 	FogOfWar = true,
 	FogOfWarOpacity = 128,
-	GameTranslation = "",
 	HoldClickDelayInMs = 1000,      --  For the wanted hold-click delay (in ms).
 	MouseScrollSpeedControl = 15,   --  Same as above if Control is pressed
 	MouseScrollSpeedDefault = 4,    --  While middle-mouse is pressed: Pixels to move per scrolled mouse pixel, negative = reversed
-	StratagusTranslation = "",
 	VideoHeight = 600,
 	VideoWidth = 1066,
-	Language = "English",
 	AutomaticBattles = false,
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
@@ -1738,7 +1735,6 @@ SetLeaveStops(true)
 SetMouseScroll(wyr.preferences.EnableMouseScrolling)
 SetMouseScrollSpeedControl(wyr.preferences.MouseScrollSpeedControl)
 SetMouseScrollSpeedDefault(wyr.preferences.MouseScrollSpeedDefault)
-SetTranslationsFiles(wyr.preferences.StratagusTranslation, wyr.preferences.GameTranslation)
 SetVideoResolution(wyr.preferences.VideoWidth, wyr.preferences.VideoHeight)
 
 if not (CanAccessFile("preferences.lua")) then
