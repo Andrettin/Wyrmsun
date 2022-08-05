@@ -367,3 +367,10 @@ ignored_0_ad_template_names = {
 }
 
 0_ad_water_height_multiplier = 80
+
+translations = {
+	#de = "German (partial)"
+	#es = "Spanish (partial)"
+	#fr = "French (partial)"
+	#it = "Italian (partial)"
+}

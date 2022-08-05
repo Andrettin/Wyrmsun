@@ -7,6 +7,43 @@ MenuBase {
 	title: qsTr("Gameplay Options")
 	
 	NormalText {
+		id: translation_label
+		text: qsTr("Translation") + ":"
+		anchors.left: translation_dropdown.left
+		anchors.bottom: translation_dropdown.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		visible: translation_dropdown.visible
+	}
+	
+	Dropdown {
+		id: translation_dropdown
+		anchors.horizontalCenter: parent.horizontalCenter
+		anchors.bottom: hotkey_setup_label.top
+		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		width: 250 * wyrmgus.scale_factor
+		model: [""].concat(wyrmgus.defines.get_translation_locales_qstring_list())
+		visible: model.length > 1 || wyrmgus.preferences.locale !== ""
+		
+		onModelChanged: {
+			set_selected_entry(wyrmgus.preferences.locale)
+		}
+		
+		onSelectedEntryChanged: {
+			if (wyrmgus.preferences.locale !== selectedEntry) {
+				wyrmgus.preferences.locale = selectedEntry
+			}
+		}
+		
+		function get_entry_name(entry) {
+			if (entry === "") {
+				return qsTr("None")
+			}
+			
+			return qsTr(wyrmgus.defines.get_translation_name_qstring(entry))
+		}
+	}
+	
+	NormalText {
 		id: hotkey_setup_label
 		text: qsTr("Hotkey Setup") + ":"
 		anchors.left: hotkey_setup_dropdown.left
