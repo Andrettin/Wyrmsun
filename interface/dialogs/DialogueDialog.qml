@@ -5,6 +5,7 @@ import ".."
 DialogBase {
 	id: dialogue_dialog
 	panel: 5
+	title: dialogue_node_instance ? dialogue_node_instance.title : ""
 	
 	property var dialogue_node_instance: null
 	readonly property string text: dialogue_node_instance.text
