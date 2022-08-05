@@ -19,7 +19,7 @@ MenuBase {
 		anchors.bottom: map_description_text_field.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		anchors.left: create_map_button.left
-		text: "Map Description:"
+		text: qsTr("Map Description") + ":"
 	}
 	
 	CustomTextField {
@@ -35,7 +35,7 @@ MenuBase {
 		anchors.bottom: height_label.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: create_map_button.left
-		text: "Width:"
+		text: qsTr("Width") + ":"
 	}
 	
 	CustomTextField {
@@ -56,7 +56,7 @@ MenuBase {
 		anchors.bottom: create_map_button.top
 		anchors.bottomMargin: 16 * wyrmgus.scale_factor
 		anchors.left: create_map_button.left
-		text: "Height:"
+		text: qsTr("Height") + ":"
 	}
 	
 	CustomTextField {
@@ -76,7 +76,7 @@ MenuBase {
 		id: create_map_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-		text: "Create Map"
+		text: qsTr("Create Map")
 		hotkey: "c"
 		
 		onClicked: {

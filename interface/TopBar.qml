@@ -23,7 +23,7 @@ Item {
 		anchors.leftMargin: 26 * wyrmgus.scale_factor
 		anchors.top: parent.top
 		anchors.topMargin: 1 * wyrmgus.scale_factor
-		text: "Menu (F10)"
+		text: qsTr("Menu")
 		hotkey: "f10"
 		interface_style: parent.interface_style
 		

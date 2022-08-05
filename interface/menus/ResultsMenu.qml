@@ -22,7 +22,7 @@ MenuBase {
 		anchors.right: units_label.left
 		anchors.rightMargin: 96 * wyrmgus.scale_factor
 		anchors.top: units_label.top
-		text: "Player"
+		text: qsTr("Player")
 	}
 	
 	LargeText {
@@ -31,7 +31,7 @@ MenuBase {
 		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		anchors.top: outcome_label.bottom
 		anchors.topMargin: 64 * wyrmgus.scale_factor
-		text: "Units"
+		text: qsTr("Units")
 	}
 	
 	LargeText {
@@ -39,14 +39,14 @@ MenuBase {
 		anchors.right: copper_label.left
 		anchors.rightMargin: 32 * wyrmgus.scale_factor
 		anchors.top: units_label.top
-		text: "Buildings"
+		text: qsTr("Buildings")
 	}
 	
 	LargeText {
 		id: copper_label
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: units_label.top
-		text: "Copper"
+		text: qsTr("Copper")
 	}
 	
 	LargeText {
@@ -54,7 +54,7 @@ MenuBase {
 		anchors.left: copper_label.right
 		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.top: units_label.top
-		text: "Lumber"
+		text: qsTr("Lumber")
 	}
 	
 	LargeText {
@@ -62,7 +62,7 @@ MenuBase {
 		anchors.left: lumber_label.right
 		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.top: units_label.top
-		text: "Stone"
+		text: qsTr("Stone")
 	}
 	
 	LargeText {
@@ -70,7 +70,7 @@ MenuBase {
 		anchors.left: stone_label.right
 		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.top: units_label.top
-		text: "Kills"
+		text: qsTr("Kills")
 	}
 	
 	LargeText {
@@ -78,7 +78,7 @@ MenuBase {
 		anchors.left: kills_label.right
 		anchors.leftMargin: 32 * wyrmgus.scale_factor
 		anchors.top: units_label.top
-		text: "Razings"
+		text: qsTr("Razings")
 	}
 	
 	ListView {
@@ -102,7 +102,7 @@ MenuBase {
 			
 			LargeText {
 				id: player_name_label
-				text: modelData.name + " (" + (modelData.this_player ? "You" : (modelData.ally ? "Ally" : (modelData.enemy ? "Enemy" : "Neutral"))) + ")"
+				text: modelData.name + " (" + (modelData.this_player ? qsTr("You") : (modelData.ally ? qsTr("Ally") : (modelData.enemy ? qsTr("Enemy") : qsTr("Neutral")))) + ")"
 				x: player_label.x - player_results_list.contentItem.x + player_label.width / 2 - width / 2
 				anchors.top: parent.top
 			}
@@ -162,7 +162,7 @@ MenuBase {
 		id: continue_button
 		anchors.bottom: parent.bottom
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Continue"
+		text: qsTr("Continue")
 		hotkey: "c"
 		lua_command: "CleanPlayers();"
 	}

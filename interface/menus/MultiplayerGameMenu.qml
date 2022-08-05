@@ -19,7 +19,7 @@ MenuBase {
 		anchors.bottom: nickname_text_field.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
 		anchors.left: join_game_button.left
-		text: qsTr("Nickname") + "qsTr(:"
+		text: qsTr("Nickname") + ":"
 	}
 	
 	CustomTextField {

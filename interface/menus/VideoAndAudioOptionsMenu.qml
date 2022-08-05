@@ -9,7 +9,7 @@ MenuBase {
 	
 	NormalText {
 		id: scale_factor_label
-		text: "Scale Factor:"
+		text: qsTr("Scale Factor") + ":"
 		anchors.left: scale_factor_dropdown.left
 		anchors.bottom: scale_factor_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -34,7 +34,7 @@ MenuBase {
 	
 	NormalText {
 		id: window_size_label
-		text: "Window Size:"
+		text: qsTr("Window Size") + ":"
 		anchors.left: window_size_dropdown.left
 		anchors.bottom: window_size_dropdown.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
@@ -160,7 +160,7 @@ MenuBase {
 		anchors.left: music_slider.left
 		anchors.top: music_slider.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
-		text: "Fullscreen"
+		text: qsTr("Fullscreen")
 		checked: wyrmgus.preferences.fullscreen
 		
 		onCheckedChanged: {
@@ -184,7 +184,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: fullscreen_radio_button.bottom
 		anchors.topMargin: 16 * wyrmgus.scale_factor
-		text: "OK"
+		text: qsTr("OK")
 		hotkey: "o"
 		
 		onClicked: {

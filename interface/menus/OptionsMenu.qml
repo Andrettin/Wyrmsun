@@ -11,7 +11,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: video_and_audio_options_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Gameplay Options"
+		text: qsTr("Gameplay Options")
 		hotkey: "g"
 		
 		onClicked: {
@@ -23,7 +23,7 @@ MenuBase {
 		id: video_and_audio_options_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-		text: "Video and Audio Options"
+		text: qsTr("Video and Audio Options")
 		hotkey: "v"
 		
 		onClicked: {

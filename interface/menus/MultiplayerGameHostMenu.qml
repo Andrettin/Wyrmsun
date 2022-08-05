@@ -205,7 +205,7 @@ MenuBase {
 		anchors.top: map_label.top
 		anchors.left: parent.right
 		anchors.leftMargin: -384 * wyrmgus.scale_factor
-		text: "Players"
+		text: qsTr("Players")
 	}
 	
 	NormalText {
@@ -221,7 +221,7 @@ MenuBase {
 		anchors.top: host_player_label.top
 		anchors.left: host_player_label.left
 		anchors.leftMargin: 128 * wyrmgus.scale_factor
-		text: "Creator"
+		text: qsTr("Creator")
 		visible: host_player_label.visible
 	}
 	
@@ -280,14 +280,14 @@ MenuBase {
 		id: open_slots_label
 		anchors.top: civilization_label.top
 		anchors.left: players_label.left
-		text: "Open slots: " + (selected_map.player_count - wyrmgus.network_manager.connected_player_count - 1)
+		text: qsTr("Open slots") + ": " + (selected_map.player_count - wyrmgus.network_manager.connected_player_count - 1)
 	}
 	
 	NormalText {
 		id: waiting_for_players_label
 		anchors.top: difficulty_label.top
 		anchors.left: players_label.left
-		text: "Waiting for players..."
+		text: qsTr("Waiting for players...")
 		visible: !wyrmgus.network_manager.server.ready_to_start
 	}
 	
@@ -296,7 +296,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: previous_menu_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Start Game"
+		text: qsTr("Start Game")
 		hotkey: "s"
 		visible: wyrmgus.network_manager.server.ready_to_start
 		

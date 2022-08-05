@@ -12,7 +12,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: legacy_quests_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Scenarios"
+		text: qsTr("Scenarios")
 		hotkey: "s"
 		
 		onClicked: {
@@ -25,7 +25,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.bottom: custom_game_button.top
 		anchors.bottomMargin: 8 * wyrmgus.scale_factor
-		text: "Legacy Quests"
+		text: qsTr("Legacy Quests")
 		hotkey: "q"
 		
 		onClicked: {
@@ -37,7 +37,7 @@ MenuBase {
 		id: custom_game_button
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.verticalCenter: parent.verticalCenter
-		text: "Custom Game"
+		text: qsTr("Custom Game")
 		hotkey: "u"
 		
 		onClicked: {
@@ -51,7 +51,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: custom_game_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Load Game"
+		text: qsTr("Load Game")
 		hotkey: "l"
 		
 		onClicked: {
@@ -64,7 +64,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: load_game_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Tech Tree"
+		text: qsTr("Tech Tree")
 		hotkey: "t"
 		
 		onClicked: {
@@ -77,7 +77,7 @@ MenuBase {
 		anchors.horizontalCenter: parent.horizontalCenter
 		anchors.top: tech_tree_button.bottom
 		anchors.topMargin: 8 * wyrmgus.scale_factor
-		text: "Custom Heroes"
+		text: qsTr("Custom Heroes")
 		hotkey: "c"
 		
 		onClicked: {
