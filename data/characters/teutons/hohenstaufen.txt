@@ -25,10 +25,12 @@ friedrich_barbarossa = { #Friedrich I "Barbarossa" of the Holy Roman Empire; Sou
 			location = stuttgart
 		}
 		
-		1152 = {
+		1152.3.4 = {
 			#crowned king of Germany in 1152, whereupon he also assumed the title of Holy Roman Emperor; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 62.
 			faction = holy_rome
 			location = frankfurt
+			
+			#Kühn gives the date of Barbarossa's election as 1152.3.4 in his historical fiction book; Source: Franz Kühn, "Barbarossa", 1906, Chapter 2.
 		}
 		
 		#crowned Holy Roman Emperor by pope Hadrian IV in 1155; Source: Peter H. Wilson, "The Holy Roman Empire", 2016, p. 35.
