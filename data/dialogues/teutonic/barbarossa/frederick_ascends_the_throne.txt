@@ -1,0 +1,100 @@
+#Source: Franz Kühn, "Barbarossa", 1906, Chapter 2.
+
+frederick_ascends_the_throne = {
+	{
+		speaker = friedrich_barbarossa
+		text = "I know as well as thou, my dear Konrad, the magnitude of my task. Whichever way I turn I find difficult problems, any one of which will require almost superhuman ability to solve. Germany and Italy, so widely separated from each other, are involved in desperate complications, but I feel that I have sufficient strength and courage to face the situation and fill my high position." #changed "Conrad" to "Konrad" from the original
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "The princes were certain of that when they elected thee."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "With divine help I will prove myself worthy of their confidence. The history of our people shows that the man who is called to high duties, and places his reliance upon God, is a safe guide and protector of the people, and such an one often accomplishes important results in a short time. The incomparable Karl the Great united all classes of his people into a powerful whole, forced the most rebellious to recognize his authority, eradicated heathenism in a single generation, reformed the habits of the people by the glorious teachings of Christianity, and established a well-ordered Empire." #changed "Charles" to "Karl" from the original
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "At a later period, when princes failed to profit by what he had accomplished, when fraternal strife swept away the best and devastated the country, they suffered many years from the disgrace of it and bowed their necks under the yoke of the barbarous Magyars, until the matchless Heinrich came with all the old authority and the old virtues, and made the barbarians tremble at the very name of Germany." #changed "Henry" to "Heinrich" from the original
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "How faithfully thou hast treasured in thy memory the actions of the great!"
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "Yes, I have vowed that these men, but above all that Karl, the noble-hearted founder of German power, called 'the Great' by the world and ennobled by the Church, shall be my constant exemplar. The German authority shall again prevail, and the German Empire shall flourish again as in the days of old." #changed "Charles" to "Karl" from the original
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "And yet, how many obstacles stand in the way of this achievement!"
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "Karl also encountered obstacles, and certainly as great ones as these, but he finally overcame them. He found the most potent remedies for the evils of his time, and we must do the same for ours." #changed "Charles" to "Karl" from the original
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "But the evils now are entirely different."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "I think they are very similar. He was forced to break the power of the grand dukes and protect the common people, and that is what we must do."
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "The first task may be impossible, for it is extremely difficult to decide what the dukes have rightly inherited and what they have usurped."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "In such cases we shall have to prevent any further increase of their power,—the remedy which Heinrich attempted to apply. The great cities with their industries and commerce, where the arts and sciences are cultivated more assiduously than in many knightly castles, must employ their wealth and power to curb insolence and punish offences against the laws. This will enable them to help each other and manage their own affairs. They certainly should know better what is for their welfare than those at a distance, who are ignorant of their circumstances." #changed "Henry" to "Heinrich" from the original
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "That will exercise an important influence upon the general welfare."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "True. The Emperor will find in every city a power already organized with which to punish those who now violate the law with impunity; because the law-enforcing power is so distant they can escape with their plunder behind protecting walls."
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "But how about the people in the open country?"
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "They, too, must have the protection of the law, and their actions must not be arbitrarily controlled."
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "Excuse me, noble sire. The Italian cities manage their own affairs. The possessions claimed by the nobles were inherited from their ancestors. They associate freely with the common people, also, and yet these cities do not enjoy the blessings of freedom."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "That is true, but they mistake their real position and welfare. They dream of the glorious fame of ancient Rome, but they have not the slightest comprehension of its exalted virtues. Where will you find a Mucius, a Fabricius, or a Cincinnatus? But at every step you will find a Catiline, a Nero, or a Heliogabalus. 'Freedom for us, but none for others,' is the motto of the Lombardian cities, as it is of Rome. That is the cause of their decadence."
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "And do you expect to maintain a powerful authority there?"
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "With God's help, yes. I will curb their audacity, but will concede to them all their chartered rights. By demanding only what belongs to the sovereign, protecting the weak against the strong, and firmly and judiciously administering the government, there may be a successful result."
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "But have you considered what obstacles the temporal and spiritual powers may place in your way? Should the latter oppose you, you will find that bans and interdicts are dangerous and far-reaching weapons."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "All honor to the princes of the Church who administer its sacred functions, but in all my relations with them the great Karl shall be my exemplar. Spiritual affairs shall be respected and protected, as they were by my great predecessor; but when unjustifiable encroachments are made upon imperial rights and privileges, I will resist them just as firmly as he did. Each must keep in his own place. I will take care not to interfere in spiritual matters when I have no right to do so." #changed "Charles" to "Karl" from the original
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "The union of spiritual and temporal authority has never been productive of good."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "For that very reason it is better for them to be separated. To the emperor, the sword; to the bishop, the Scriptures. If God helps me, and grants me the good fortune to win as sovereign such friends as I have as Friedrich of Swabia, I shall not be uneasy." #changed "Frederick" to "Friedrich" from the original
+	}
+}
