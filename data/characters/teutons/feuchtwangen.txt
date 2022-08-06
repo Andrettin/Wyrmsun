@@ -1,0 +1,53 @@
+konrad_von_feuchtwangen_of_felseck = { #Source: Franz Kühn, "Barbarossa", 1906, Chapter 1.
+	name = "Konrad" #"Conrad" in the English translation
+	surname = "von Feuchtvangen"
+	unit_type = unit_teuton_knight_lord #knight, and lord of Felseck
+	civilization = teutonic
+	default_faction = holy_rome
+	gender = male
+	trait = upgrade_strong
+	deities = { christian_god }
+	
+	conditions = {
+		or = {
+			faction = holy_rome
+			faction = swabia
+		}
+		
+		dynasty = hohenstaufen #companion of Barbarossa's
+	}
+	
+	history = {
+		1149 = {
+			active = true
+			faction = swabia
+		}
+		
+		1152 = {
+			faction = holy_rome
+		}
+		
+		1190 = { #death of Barbarossa
+			active = false
+		}
+	}
+}
+
+gertrude_of_felseck = { #Source: Franz Kühn, "Barbarossa", 1906, Chapter 1.
+	name = "Gertrud" #"Gertrude" in the English translation
+	unit_type = unit_teuton_ritter
+	civilization = teutonic
+	default_faction = holy_rome
+	gender = female
+	deities = { christian_god }
+	#wife of Konrad von Feuchtwangen
+	
+	conditions = {
+		or = {
+			faction = holy_rome
+			faction = swabia
+		}
+		
+		dynasty = hohenstaufen #wife of Barbarossa's companion
+	}
+}

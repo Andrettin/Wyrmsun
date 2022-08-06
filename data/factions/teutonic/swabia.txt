@@ -18,5 +18,9 @@ swabia = {
 				state = vassal
 			}
 		}
+		
+		1149 = {
+			dynasty = hohenstaufen
+		}
 	}
 }
