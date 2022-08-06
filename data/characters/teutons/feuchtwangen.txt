@@ -21,10 +21,12 @@ konrad_von_feuchtwangen_of_felseck = { #Source: Franz Kühn, "Barbarossa", 1906,
 		1149 = {
 			active = true
 			faction = swabia
+			location = stuttgart
 		}
 		
 		1152 = {
 			faction = holy_rome
+			location = frankfurt
 		}
 		
 		1190 = { #death of Barbarossa
