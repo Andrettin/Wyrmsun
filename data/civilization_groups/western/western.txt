@@ -42,6 +42,7 @@ western = {
 		1097 = {
 			explored_settlements += vienna
 			explored_settlements += munich
+			explored_settlements += wurzburg
 			explored_settlements += stuttgart
 			explored_settlements += cologne
 			explored_settlements += frankfurt
@@ -63,6 +64,10 @@ western = {
 			
 			explored_settlements += paris
 			explored_settlements += dijon
+			explored_settlements += nancy
+			explored_settlements += vannes
+			explored_settlements += bordeaux
+			explored_settlements += clermont
 			explored_settlements += toulouse
 			
 			explored_settlements += london
@@ -84,10 +89,21 @@ western = {
 			explored_settlements += cluj
 			
 			explored_settlements += zagreb
+			explored_settlements += sarajevo
+			explored_settlements += belgrade
+			explored_settlements += skopje
+			explored_settlements += bucharest
+			explored_settlements += athens
+			explored_settlements += byzantium
 			
 			explored_settlements += barcelona
+			explored_settlements += valencia
+			explored_settlements += zaragoza
 			explored_settlements += leon
 			explored_settlements += burgos
+			explored_settlements += madrid
+			explored_settlements += seville
+			explored_settlements += lisbon
 			explored_settlements += oporto
 			
 			explored_settlements += stockholm
@@ -98,6 +114,18 @@ western = {
 			explored_settlements += aarhus
 			explored_settlements += visby
 			explored_settlements += oslo
+			
+			explored_settlements += troy
+			explored_settlements += sardis
+			explored_settlements += nicomedia
+			explored_settlements += ancyra
+			
+			explored_settlements += alexandria
+			explored_settlements += cyrene
+			explored_settlements += tripoli
+			explored_settlements += carthage
+			explored_settlements += algiers
+			explored_settlements += rabat
 		}
 	}
 }
