@@ -9,6 +9,7 @@ switzerland = {
 	upgrade = upgrade_faction_switzerland
 	conditions = {
 		scripted_condition = is_civilized
+		government_type = republic
 	}
 	title_names = {
 		republic = {

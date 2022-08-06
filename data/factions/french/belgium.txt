@@ -9,4 +9,8 @@ belgium = {
 	core_settlements = {
 		brussels
 	}
+	
+	conditions = {
+		upgrade_class = gunpowder
+	}
 }
