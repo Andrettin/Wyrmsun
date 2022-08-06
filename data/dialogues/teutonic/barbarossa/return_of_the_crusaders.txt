@@ -1,0 +1,76 @@
+#Source: Franz Kühn, "Barbarossa", 1906, Chapter 1.
+
+return_of_the_crusaders = {
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "We have had enough, noble sirs. Thanks for your painstaking service. Now join us in celebrating this happy day. You must be weary."
+	}
+	{
+		title = "Minnesinger"
+		icon = western_peasant_male
+		speaker_faction = swabia
+		text = "Oh, my lord, how could we ever tire of relating the great deeds of our ancestors? Are they not the source of all the pleasures and sorrows of the present and future? Do they not inspire emulation of noble actions, and the exercise of knightly virtues?"
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "Their remembrance is a treasure for all time, but we have also witnessed exploits worthy of our ancestors, even if the outcome was not as fortunate."
+	}
+	{
+		speaker = gertrude_of_felseck
+		icon = western_peasant_female
+		speaker_faction = swabia
+		text = "Oh, tell us of your exploits in the Holy Land among the Turkish hordes, even though it may temper our joy to hear the true account."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "As you see, we do not return as numerous or as imposing as when we set out. It was then a goodly sight to look upon,—nigh seventy thousand heavily armored knights, not including foot-soldiers, riding to the Holy War. Hungary and Greece were astonished when they saw the array, and exulted over the certain destruction of the Turkish army. Oh, the treachery of these villains, who expected their deliverance at our hands and then placed almost insurmountable obstacles in our way!"
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "They overcharged us in the sale of supplies. Our hungry men were often obliged to procure subsistence by force when they were out of money. This occasioned many fatal quarrels, and we reached Asia Minor at last needy and sorely troubled. It was there our real misfortunes began, for the Greeks carried their knavery to the extreme. Sometimes when our army, which unfortunately had chosen the shorter but more dangerous route, arrived at cities, we were not allowed to enter."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "There was no way of obtaining food except in baskets let down from the walls, for which extortionate prices were demanded. It was 'Money, or your life!' Often, when the money was sent up, the rope was not lowered again, and the unfortunate one, who perhaps had parted with his last penny, was only laughed at. Even when we obtained anything for our money it was wretched stuff, barely fit to eat, and sometimes poisoned. In some cases lime was found in the bread, which caused the death of several of our half-starved warriors."
+	}
+	{
+		speaker = gertrude_of_felseck
+		icon = western_peasant_female
+		speaker_faction = swabia
+		text = "Terrible! Was that Christian-like?"
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "The Greeks treated us even worse than the heathen Turks did, and it will always be remembered to their shame. Their guides purposely led us astray. More than once they disappeared at daybreak, when they were most needed. Once, to our great surprise, we found ourselves well-nigh delivered by those scoundrels into the hands of the Saracens."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "For Turkish gold they led us into an arid waste, where the Turks suddenly attacked us and, favored by the almost limitless stretch of level country, surrounded us and used their fatal skill at fence so dexterously that in a few days the greater part of the German army was sacrificed. Hardly the tenth part of it returned to Byzantium. We were among the fortunate ones, but our friendly reception at the hands of the Greek Emperor was poor compensation for our misfortunes. Shame upon the people of a country who would rather see their champions perish than aid them against a dangerous foe!"
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "Little grateful for this hospitality, we continued our retreat as soon as possible. At Nicea we met the French, who at the outset had as large a force as our own, and who had met with similar misfortunes. The most of them had been slaughtered by the Turks. An agreement was made to take the remainder to Antioch, whither the King of France had gone by vessel. Instead of keeping their word, however, the Greeks detained them in dark hovels, and left them a prey to hunger and disease."
+	}
+	{
+		speaker = gertrude_of_felseck #all assembled in the original
+		icon = western_peasant_female
+		speaker_faction = swabia
+		text = "Horrible!"
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "But true. Will you believe me when I tell you that thousands voluntarily surrendered to the Turks, for they expected and received better treatment from them than from those of their own faith?"
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "At last, we reached Jerusalem, where also both sovereigns came. Reduced in numbers and half-starved as we were, we nevertheless ventured to besiege Damascus, but were baffled again by these Eastern Christians, who, in consideration of Turkish gold, helped the enemy and obstructed us."
+	}
+	{
+		speaker = konrad_von_feuchtwangen_of_felseck
+		text = "So you see, we came back rich in exploits, but not crowned with victory."
+	}
+	{
+		speaker = friedrich_barbarossa
+		text = "That is not our fault, and yet it is not just to lay the blame upon Providence. It is just as unreasonable also to reproach the Abbé Bernard of Clairvaux, who advocated the Crusade, as to charge us with responsibility for the failure of the movement which he was certain would be successful. The highest human skill cannot avail against treachery. The grand work of rescuing the Holy Sepulchre will not succeed until all engaged in it are animated by Christian love and harmony, and work together for the common purpose, allowing nothing to divert them from its attainment."
+	}
+}
