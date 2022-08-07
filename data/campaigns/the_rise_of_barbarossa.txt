@@ -1,5 +1,5 @@
 the_rise_of_barbarossa = {
-	name = "The Rise of Barbarossa"
+	name = "Barbarossa"
 	description = "Friedrich Barbarossa, the duke of Swabia, has been elected to succeed his uncle as Holy Roman Emperor.\n\nWill he achieve his ambitions to consolidate the power of the Empire, and to avenge the failure of the Second Crusade?"
 	faction = holy_rome
 	start_date = 1152.3.4
