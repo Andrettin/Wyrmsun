@@ -11,6 +11,9 @@ the_rise_of_barbarossa = {
 		"Consolidate your rule over Saxony"
 		"Consolidate your rule over Bavaria"
 	}
+	accept_effects = {
+		call_dialogue = frederick_ascends_the_throne
+	}
 }
 
 the_lombard_league = {
