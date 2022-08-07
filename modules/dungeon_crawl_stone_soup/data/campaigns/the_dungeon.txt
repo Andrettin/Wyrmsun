@@ -7,4 +7,5 @@ the_dungeon = {
 	#quest = the_dungeon
 	icon = icon_cavern_entrance
 	hidden = true
+	map_presets = dungeon_crawling
 }

@@ -1,0 +1,6 @@
+dungeon_crawling = {
+	name = "Dungeon Crawling"
+	starting_upgrades = {
+		upgrade_dungeon_crawling_modifiers #FIXME: should only affect non-neutral players
+	}
+}

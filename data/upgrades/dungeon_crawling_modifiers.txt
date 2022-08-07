@@ -1,0 +1,13 @@
+upgrade_dungeon_crawling_modifiers = {
+	name = "Dungeon Crawling Modifiers"
+	modifier = {
+		hit_points = {
+			increase = 1
+		}
+		unit_classes = {
+			infantry
+			veteran_infantry
+			heroic_infantry
+		}
+	}
+}
