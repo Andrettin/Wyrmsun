@@ -81,7 +81,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Suebi Tribe is now a polity instead.
 - Added support for the Minor Tribe neutral faction type. Minor tribes function in a similar way to mercenary companies.
 - Added the Bearing Clan and Wolfing Clan minor tribes (Gothic), from the 19th century novel The House of the Wolfings. These clans can be spawned on the Earth scenario map if certain conditions are met.
-- Added new flags for Suebi factions, displaying a Suebian knot.
+- Added new flags for Suebi factions, displaying a Suebian knot (icons by Jinn).
 - Teutonia now has access to the Furor Teutonicus upgrade.
 - Mercia now grants a bonus to cavalry instead of infantry.
 - The Yngling Tribe now grants a bonus to food supply instead of to archers.
