@@ -64,6 +64,7 @@ https://github.com/Andrettin/Wyrmsun
 - Mercenary Camps are now indestructible.
 - Added Tribal Camp building, which is used for the new Minor Tribe faction type. Tribal Camps function in a similar way to Mercenary Camps.
 - Fixed issue which caused human players to be able to build structures on resource deposits and building sites on others' territories.
+- Farms and Watch Towers now display the correct construction animations when building sites are disabled.
 
 * Characters
 - Added Thiodolf, recruitable from the Wolfing Clan.

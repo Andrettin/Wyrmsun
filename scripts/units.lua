@@ -3960,7 +3960,8 @@ DefineUnitType("unit-template-farm", {
 	Costs = {"time", 100, "copper", 500, "lumber", 750},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
-	Construction = "minor_building_site",
+	Construction = "land_building",
+	OnTopConstruction = "minor_building_site",
 	HitPoints = 334, -- 400 with masonry
 	TileSize = {2, 2}, BoxSize = {64, 64},
 	Armor = 5, Missile = "missile-none",
@@ -4331,7 +4332,8 @@ DefineUnitType("unit-template-watch-tower", {
 	Costs = {"time", 60, "copper", 550, "lumber", 300, "stone", 300},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1, "stone", 1},
-	Construction = "minor_building_site",
+	Construction = "land_building",
+	OnTopConstruction = "minor_building_site",
 	HitPoints = 167, -- 200 with masonry
 	TileSize = {2, 2}, BoxSize = {64, 64},
 	SightRange = 8,
