@@ -63,7 +63,7 @@ DialogBase {
 				id: allied_radio_button
 				x: allied_label.x - diplomacy_list.contentItem.x + allied_label.width / 2 - width / 2 //place at the horizontal center of the label
 				anchors.verticalCenter: parent.verticalCenter
-				checked: wyrmgus.this_player.has_allied_stance_with(modelData)
+				checked: wyrmgus.this_player && wyrmgus.this_player.has_allied_stance_with(modelData)
 				interface_style: diplomacy_dialog.interface_style
 				
 				onCheckedChanged: {
@@ -83,7 +83,7 @@ DialogBase {
 				id: enemy_radio_button
 				x: enemy_label.x - diplomacy_list.contentItem.x + enemy_label.width / 2 - width / 2 //place at the horizontal center of the label
 				anchors.verticalCenter: parent.verticalCenter
-				checked: wyrmgus.this_player.has_enemy_stance_with(modelData)
+				checked: wyrmgus.this_player && wyrmgus.this_player.has_enemy_stance_with(modelData)
 				interface_style: diplomacy_dialog.interface_style
 				
 				onCheckedChanged: {
@@ -103,7 +103,7 @@ DialogBase {
 				id: shared_vision_radio_button
 				x: shared_vision_label.x - diplomacy_list.contentItem.x + shared_vision_label.width / 2 - width / 2 //place at the horizontal center of the label
 				anchors.verticalCenter: parent.verticalCenter
-				checked: wyrmgus.this_player.has_shared_vision_with(modelData)
+				checked: wyrmgus.this_player && wyrmgus.this_player.has_shared_vision_with(modelData)
 				interface_style: diplomacy_dialog.interface_style
 				
 				onCheckedChanged: {
