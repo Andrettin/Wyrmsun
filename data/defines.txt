@@ -228,10 +228,12 @@ tips = {
 }
 
 ignored_wesnoth_terrain_strings = {
+	Eb #Brazier
 	Ebn #Lit Brazier
 	Ecf #Campfire
 	Edb #Remains
 	Edt #Trash
+	Eff #Fence
 	Efm #Mixed Flowers
 	Efs #Sconce
 	Em #Small Mushrooms
