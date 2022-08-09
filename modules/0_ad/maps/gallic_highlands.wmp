@@ -7,4 +7,3 @@ player_types = {
 	person
 }
 settings = classic_skirmish
-hidden = true

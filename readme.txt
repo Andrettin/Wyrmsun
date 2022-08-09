@@ -57,6 +57,9 @@ https://github.com/Andrettin/Wyrmsun
 - 5.3.7
 -----------------------------------------------------------------------
 
+* Maps
+- Added the "Gallic Fields" (256x256, 3 players) and "Gallic Highlands" custom maps (256x256, 2 players), based on maps from 0 A.D. (which are licensed under an open-source license).
+
 * Quests
 - Fixed crash which occurred on start for The Wyrm legacy quest.
 

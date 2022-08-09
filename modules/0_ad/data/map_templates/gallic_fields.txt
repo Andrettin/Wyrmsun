@@ -16,4 +16,8 @@ gallic_fields = {
 		paris
 	}
 	random_created_settlements = true
+	create_starting_mine = true
+	terrain_substitutions = {
+		norse_palisade = none
+	}
 }

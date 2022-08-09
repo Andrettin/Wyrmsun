@@ -17,4 +17,5 @@ gallic_highlands = {
 		toulouse
 	}
 	random_created_settlements = true
+	create_starting_mine = true
 }

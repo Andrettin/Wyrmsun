@@ -1,5 +1,6 @@
 name = "Gallic Fields"
-description = "Defend your Gallic outpost against attacks from your treacherous neighbors!\n\nEach player begins the match with a wooden palisade and some guard towers atop a low embankment."
+#description = "Defend your Gallic outpost against attacks from your treacherous neighbors!\n\nEach player begins the match with a wooden palisade and some guard towers atop a low embankment."
+description = "Defend your outpost against attacks from your treacherous neighbors!"
 #map_size = { 128 128 }
 map_size = { 256 256 }
 player_types = {
@@ -8,4 +9,3 @@ player_types = {
 	person
 }
 settings = classic_skirmish
-hidden = true
