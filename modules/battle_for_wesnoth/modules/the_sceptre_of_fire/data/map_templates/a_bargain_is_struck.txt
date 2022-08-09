@@ -171,4 +171,21 @@ a_bargain_is_struck = {
 			23 = ice
 		}
 	}
+	units = {
+		{
+			unit_class = town_hall
+			pos = { 14 10 }
+			player = 0
+		}
+		{
+			unit_class = town_hall
+			pos = { 8 30 }
+			player = 1
+		}
+		{
+			unit_class = town_hall
+			pos = { 26 17 }
+			player = 2
+		}
+	}
 }
