@@ -1,0 +1,24 @@
+a_bargain_is_struck = {
+	name = "A Bargain is Struck"
+	size = { 64 68 }
+	terrain_file = "a_bargain_is_struck.wes"
+	scale_multiplier = 2
+	terrain_substitutions = {
+		dirt = dry_mud
+		dry_dirt = dry_mud
+		dry_grass = dry_mud
+		ford = mud
+		grass = dry_mud
+		norse_palisade = dry_mud
+		pine_tree = flamefood_tree
+		pine_tree_snow = flamefood_tree_snow
+		road = dry_mud
+		semi_dry_grass = dry_mud
+		teutonic_wall = dry_mud
+	}
+	default_base_terrains = {
+		road = dry_mud
+		rock = dry_mud
+		shallow_water = mud
+	}
+}
