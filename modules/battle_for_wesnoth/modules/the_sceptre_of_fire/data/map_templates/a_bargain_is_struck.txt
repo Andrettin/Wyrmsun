@@ -21,4 +21,154 @@ a_bargain_is_struck = {
 		rock = dry_mud
 		shallow_water = mud
 	}
+	tile_terrains = {
+		14 = {
+			35 = ice
+		}
+		16 = {
+			34 = ice
+		}
+		17 = {
+			34 = ice
+		}
+		20 = {
+			34 = ice
+		}
+		22 = {
+			33 = ice
+		}
+		30 = {
+			29 = ice
+		}
+		31 = {
+			29 = ice
+		}
+		33 = {
+			30 = ice
+		}
+		35 = {
+			31 = ice
+		}
+		36 = {
+			2 = ice
+			3 = ice
+			4 = ice
+			5 = ice
+			6 = ice
+			7 = ice
+			8 = ice
+			9 = ice
+			10 = ice
+			11 = ice
+			12 = ice
+			13 = ice
+			14 = ice
+			15 = ice
+		}
+		37 = {
+			2 = ice
+			3 = ice
+			4 = ice
+			5 = ice
+			6 = ice
+			7 = ice
+			8 = ice
+			9 = ice
+			10 = ice
+			11 = ice
+			12 = ice
+			13 = ice
+			14 = ice
+			15 = ice
+		}
+		38 = {
+			0 = ice
+			1 = ice
+			2 = ice
+			3 = ice
+			4 = ice
+			5 = ice
+			6 = ice
+			7 = ice
+			8 = ice
+			9 = ice
+			10 = ice
+			11 = ice
+			12 = ice
+			13 = ice
+			14 = ice
+			15 = ice
+			16 = ice
+			25 = ice
+			26 = ice
+			31 = ice
+		}
+		39 = {
+			0 = ice
+			1 = ice
+			2 = ice
+			3 = ice
+			4 = ice
+			5 = ice
+			6 = ice
+			7 = ice
+			8 = ice
+			9 = ice
+			10 = ice
+			11 = ice
+			12 = ice
+			13 = ice
+			14 = ice
+			15 = ice
+			16 = ice
+			25 = ice
+			26 = ice
+		}
+		40 = {
+			0 = ice
+			1 = ice
+			2 = ice
+			3 = ice
+			6 = ice
+			7 = ice
+			14 = ice
+			15 = ice
+		}
+		41 = {
+			0 = ice
+			1 = ice
+			2 = ice
+			3 = ice
+			6 = ice
+			7 = ice
+			14 = ice
+			15 = ice
+		}
+		42 = {
+			15 = ice
+			16 = ice
+			17 = ice
+			18 = ice
+			19 = ice
+			20 = ice
+			21 = ice
+			22 = ice
+			23 = ice
+			24 = ice
+		}
+		43 = {
+			21 = ice
+			22 = ice
+			23 = ice
+			24 = ice
+		}
+		44 = {
+			22 = ice
+			23 = ice
+		}
+		45 = {
+			22 = ice
+			23 = ice
+		}
+	}
 }
