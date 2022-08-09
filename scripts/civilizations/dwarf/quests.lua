@@ -284,7 +284,7 @@ DefineQuest("the-wyrm", {
 	Name = "The Wyrm",
 	Icon = "icon-wyrm-vicious",
 	Description = "Rugnur's dwarves delve deep into underground caves, seeking to escape from the Shinsplitter Clan. However, the section of the old eastern mines that they reached had long since become the lair of Svafnir... the wyrm.\n\nMap: Svafnir's Lair",
-	--RequiredQuest = "hills-of-the-shorbear-clan",
+	RequiredQuest = "hills-of-the-shorbear-clan",
 	World = "nidavellir",
 	Civilization = "dwarf",
 	Map = "maps/nidavellir/svafnirs-lair.smp",
