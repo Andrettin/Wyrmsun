@@ -36,7 +36,5 @@ pine_tree_snow = {
 	wesnoth_strings = {
 		Fpa
 		Fda #Snowy Deciduous Forest
-		Fdw #Winter Deciduous Forest
-		Fmw #Winter Mixed Forest
 	}
 }

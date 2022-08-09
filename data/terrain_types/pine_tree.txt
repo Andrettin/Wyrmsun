@@ -53,9 +53,11 @@ pine_tree = {
 	wesnoth_strings = {
 		Fp
 		Fds #Summer Deciduous Forest
+		Fdw #Winter Deciduous Forest
 		Fet #Great Tree
 		Fmf #Fall Mixed Forest
 		Fms #Summer Mixed Forest
+		Fmw #Winter Mixed Forest
 	}
 	0_ad_template_names = {
 		gaia/tree/aleppo_pine

@@ -85,10 +85,8 @@ teuton_wall = {
 		Ch #Human Castle
 		Chr #Ruined Human Castle
 		Cv #Elven Castle
-		Cva #Winter Elven Castle
 		Kh #Human Castle Keep
 		Khr #Ruined Human Castle Keep
 		Kv #Elven Castle Keep
-		Kva #Winter Elven Keep
 	}
 }

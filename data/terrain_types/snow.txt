@@ -81,7 +81,13 @@ snow = {
 	}
 	wesnoth_strings = {
 		Aa
+		Cea #Snowy Encampment
+		Cfa #Winter Dwarven Castle
+		Cva #Winter Elven Castle
 		Ha #Snow Hills
+		Kea #Snowy Encampment Keep
+		Kfa #Winter Dwarven Keep
+		Kva #Winter Elven Keep
 	}
 	freeciv_chars = {
 		a #glacier

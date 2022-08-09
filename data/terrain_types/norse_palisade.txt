@@ -78,9 +78,7 @@ norse_palisade = {
 	}
 	wesnoth_strings = {
 		Ce #Encampment
-		Cea #Snowy Encampment
 		Ke #Encampment Keep
-		Kea #Snowy Encampment Keep
 	}
 	0_ad_template_names = {
 		structures/palisades_curve

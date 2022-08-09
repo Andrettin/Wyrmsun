@@ -71,6 +71,8 @@ cave_floor = {
 		}
 	}
 	wesnoth_strings = {
+		Cud #Dwarven Underground Castle
+		Kud #Dwarven Underground Keep
 		Uu
 		Urb #Dark Flagstones
 	}
