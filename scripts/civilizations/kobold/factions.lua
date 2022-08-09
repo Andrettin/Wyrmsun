@@ -100,15 +100,6 @@ DefineFaction("shellscale-tribe", {
 	Color = "blue"
 })
 
-DefineFaction("svafning-tribe", {
-	Name = "Svafning Tribe",
-	Adjective = "Svafning",
-	Civilization = "kobold",
-	Type = "tribe",
-	Color = "blue",
-	DefaultAI = "kobolds"
-})
-
 -- Mercenary Companies
 
 DefineFaction("sellscale-company", {

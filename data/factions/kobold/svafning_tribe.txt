@@ -1,0 +1,9 @@
+svafning_tribe = {
+	name = "Svafning Tribe"
+	adjective = "Svafning"
+	civilization = kobold
+	type = tribe
+	color = blue
+	default_tier = duchy #tribe
+	default_ai = kobolds
+}

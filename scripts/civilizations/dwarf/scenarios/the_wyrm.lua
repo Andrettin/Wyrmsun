@@ -27,7 +27,8 @@
 
 if (LoadedGame == false) then
 	SetAiType(1, "land-attack")
-	SetPlayerData(2, "Name", "Svafnir")
+	SetPlayerData(2, "RaceName", "kobold")
+	SetPlayerData(2, "Faction", "svafning_tribe")
 	SetPlayerData(3, "Name", "Abandoned Stronghold")
 end
 
@@ -228,18 +229,19 @@ AddTrigger("the-wyrm-shinsplitter-and-kobold-chase",
 	end,
 	function() 
 		-- make the initial Shinsplitter units attack (later units follow the normal AI attack pattern)
-		if (GetFactionPlayer("Shinsplitter Clan") ~= GetThisPlayer()) then
+		if (GetFactionPlayer("shinsplitter_clan") ~= GetThisPlayer()) then
 			uncount = 0
-			uncount = GetUnits(GetFactionPlayer("Shinsplitter Clan"))
+			uncount = GetUnits(GetFactionPlayer("shinsplitter_clan"))
 			for unit1 = 1,table.getn(uncount) do 
 				if (uncount[unit1] and GetUnitVariable(uncount[unit1], "Idle") and GetUnitVariable(uncount[unit1],"Ident") ~= "unit_dwarven_miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-skilled-miner" and GetUnitVariable(uncount[unit1],"Ident") ~= "unit-dwarven-expert-miner" and GetUnitTypeData(GetUnitVariable(uncount[unit1], "Ident"), "Building") == false) then
 					OrderUnit(1, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, 0, {27, 63}, 0, "attack")
 				end
 			end
 			
-			if (GetPlayerData(GetFactionPlayer("Svafnir"), "TotalNumUnitsConstructed") > 1) then -- the wyrm and kobolds only attack after the kobolds have been generated, and they don't attack if the player is the Shinsplitter Clan
+			local svafnir_player = GetFactionPlayer("svafning_tribe")
+			if (svafnir_player ~= nil and GetPlayerData(svafnir_player, "TotalNumUnitsConstructed") > 1) then -- the wyrm and kobolds only attack after the kobolds have been generated, and they don't attack if the player is the Shinsplitter Clan
 				uncount = 0
-				uncount = GetUnits(GetFactionPlayer("Svafnir"))
+				uncount = GetUnits(svafnir_player)
 				for unit1 = 1,table.getn(uncount) do 
 					if (GetUnitVariable(uncount[unit1], "Idle")) then
 						OrderUnit(2, GetUnitVariable(uncount[unit1],"Ident"), {GetUnitVariable(uncount[unit1],"PosX"), GetUnitVariable(uncount[unit1],"PosY")}, 0, {27, 63}, 0, "attack")
@@ -303,7 +305,7 @@ AddTrigger("the-wyrm-svafnir-sighted",
 			return false
 		end
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Svafnir"))
+		uncount = GetUnits(GetFactionPlayer("svafning_tribe"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit_wyrm") then
 				local unit_quantity = GetNumUnitsAt(GetFactionPlayer("Norlund Clan"), "any", {GetUnitVariable(uncount[unit1],"PosX") - 4, GetUnitVariable(uncount[unit1],"PosY") - 4}, {GetUnitVariable(uncount[unit1],"PosX") + 4, GetUnitVariable(uncount[unit1],"PosY") + 4})
@@ -464,7 +466,7 @@ AddTrigger("the-wyrm-kobolds-defend-svafnir",
 			return false
 		end
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Svafnir"))
+		uncount = GetUnits(GetFactionPlayer("svafning_tribe"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit_wyrm") then
 				if (GetUnitVariable(uncount[unit1], "HitPoints") < GetUnitVariable(uncount[unit1], "HitPoints", "Max")) then
@@ -479,20 +481,20 @@ AddTrigger("the-wyrm-kobolds-defend-svafnir",
 	end,
 	function()
 		local uncount = 0
-		uncount = GetUnits(GetFactionPlayer("Svafnir"))
+		uncount = GetUnits(GetFactionPlayer("svafning_tribe"))
 		for unit1 = 1,table.getn(uncount) do 
 			if (GetUnitVariable(uncount[unit1], "Ident") == "unit_wyrm") then
-				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("svafning_tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("svafning_tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+				unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("svafning_tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 				if (GameSettings.Difficulty == DifficultyHard) then -- if difficulty is hard
-					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("svafning_tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("svafning_tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 				elseif (GameSettings.Difficulty == DifficultyBrutal) then -- if difficulty is brutal
-					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
-					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("Svafnir"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("svafning_tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("svafning_tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("svafning_tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
+					unit = CreateUnit("unit-kobold-footpad", GetFactionPlayer("svafning_tribe"), {GetUnitVariable(uncount[unit1], "PosX"), GetUnitVariable(uncount[unit1], "PosY")})
 				end
 			end
 		end
