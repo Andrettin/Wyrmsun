@@ -4,6 +4,6 @@ norrkoping = {
 	geocoordinate = { 16.17869177110 58.59542726560 } #from Natural Earth
 	base_unit_type = unit_iron_deposit #iron deposits nearby; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 	regions = {
-		scandinavia
+		gotaland
 	}
 }

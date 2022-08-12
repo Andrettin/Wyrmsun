@@ -11,3 +11,9 @@ scandinavia = {
 		}
 	}
 }
+
+gotaland = {
+	superregions = {
+		scandinavia
+	}
+}

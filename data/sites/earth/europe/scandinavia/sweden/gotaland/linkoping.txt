@@ -5,7 +5,7 @@ linkoping = {
 	base_unit_type = unit_settlement_site
 	color = { 208 38 163 }
 	regions = {
-		scandinavia
+		gotaland
 	}
 	
 	history = {
