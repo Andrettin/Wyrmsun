@@ -9,6 +9,7 @@ stockholm = {
 	}
 	regions = {
 		svealand
+		baltic_sea
 	}
 	
 	history = {

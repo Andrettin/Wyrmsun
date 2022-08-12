@@ -10,6 +10,7 @@ danzig = {
 	}
 	regions = {
 		poland
+		baltic_sea
 	}
 	
 	history = {

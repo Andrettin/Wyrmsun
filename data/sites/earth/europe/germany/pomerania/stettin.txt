@@ -9,6 +9,7 @@ stettin = {
 	}
 	regions = {
 		poland
+		baltic_sea
 	}
 	
 	history = {

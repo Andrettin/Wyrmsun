@@ -6,6 +6,7 @@ oslo = {
 	color = { 211 128 27 }
 	regions = {
 		norway
+		north_sea
 	}
 	
 	history = {

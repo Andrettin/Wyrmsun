@@ -6,6 +6,7 @@ amsterdam = {
 	color = { 235 143 160 }
 	regions = {
 		netherlands
+		north_sea
 	}
 	
 	history = {

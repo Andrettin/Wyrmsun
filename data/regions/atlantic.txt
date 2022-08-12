@@ -1,0 +1,20 @@
+atlantic = { #the Atlantic Ocean and all its connected seas, as well as their coasts
+}
+
+baltic_sea = {
+	superregions = {
+		atlantic
+	}
+}
+
+mediterranean_sea = {
+	superregions = {
+		atlantic
+	}
+}
+
+north_sea = {
+	superregions = {
+		atlantic
+	}
+}

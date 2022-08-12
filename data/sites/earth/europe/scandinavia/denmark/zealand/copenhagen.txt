@@ -9,6 +9,7 @@ copenhagen = {
 	}
 	regions = {
 		zealand
+		baltic_sea
 	}
 	
 	history = {
