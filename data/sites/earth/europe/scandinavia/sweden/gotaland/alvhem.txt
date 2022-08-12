@@ -4,7 +4,7 @@ alvhem = {
 	geocoordinate = { 12.169059824679 58.001146742209 }
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		gotaland
 	}
 	
 	history = {

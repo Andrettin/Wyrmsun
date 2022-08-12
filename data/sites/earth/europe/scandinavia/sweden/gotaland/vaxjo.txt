@@ -4,6 +4,6 @@ vaxjo = {
 	geocoordinate = { 14.81670772160 56.88369712230 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		gotaland
 	}
 }
