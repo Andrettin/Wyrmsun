@@ -8,7 +8,7 @@ aarhus = {
 		germanic = "Ahvoosa" #tentative rendering of "Aarhus" in Proto-Germanic
 	}
 	regions = {
-		scandinavia
+		jutland
 	}
 	
 	history = {

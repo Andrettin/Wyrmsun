@@ -7,7 +7,7 @@ sigtun = {
 		germanic = "Segiztuna" #"Segiztûna" is a tentative rendering of "Sigtun" in Proto-Germanic, since the Ynglinga saga the city was founded when the cultural ancestors of the Germanic peoples (= Odin's people) first settled Scandinavia
 	}
 	regions = {
-		scandinavia
+		svealand
 	}
 	
 	history = {

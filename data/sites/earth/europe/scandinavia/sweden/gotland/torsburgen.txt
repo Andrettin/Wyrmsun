@@ -4,7 +4,7 @@ torsburgen = {
 	geocoordinate = { 18.719208 57.411308 }
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		gotland
 	}
 	
 	history = {

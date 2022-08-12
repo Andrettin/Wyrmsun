@@ -4,6 +4,6 @@ odense = {
 	geocoordinate = { 10.38333491890 55.40037680980 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		funen
 	}
 }

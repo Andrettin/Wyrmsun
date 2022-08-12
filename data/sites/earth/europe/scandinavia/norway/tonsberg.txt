@@ -4,7 +4,7 @@ tonsberg = {
 	geocoordinate = { 10.42100147080 59.26400108950 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		norway
 	}
 	
 	history = {

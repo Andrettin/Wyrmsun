@@ -4,6 +4,6 @@ helsingborg = {
 	geocoordinate = { 12.70004105500 56.05049216630 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		scania
 	}
 }

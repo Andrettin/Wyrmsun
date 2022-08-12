@@ -4,7 +4,7 @@ roma_gotland = {
 	geocoordinate = { 18.455302631005 57.502749165194 }
 	base_unit_type = unit_building_site
 	regions = {
-		scandinavia
+		gotland
 	}
 	
 	history = {

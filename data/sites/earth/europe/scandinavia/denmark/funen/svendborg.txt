@@ -4,6 +4,6 @@ svendborg = {
 	geocoordinate = { 10.61665401070 55.07042278960 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		funen
 	}
 }

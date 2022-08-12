@@ -8,7 +8,7 @@ copenhagen = {
 		#norse = "København"
 	}
 	regions = {
-		scandinavia
+		zealand
 	}
 	
 	history = {

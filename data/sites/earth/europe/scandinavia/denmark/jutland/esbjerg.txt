@@ -4,6 +4,6 @@ esbjerg = {
 	geocoordinate = { 8.45001623397 55.46703940750 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		jutland
 	}
 }

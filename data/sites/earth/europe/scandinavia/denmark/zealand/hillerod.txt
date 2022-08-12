@@ -4,6 +4,6 @@ hillerod = {
 	geocoordinate = { 12.31669853590 55.93329906940 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		zealand
 	}
 }

@@ -4,7 +4,7 @@ thisted = {
 	geocoordinate = { 8.692167256 56.95277778 } #from Natural Earth (ports)
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		jutland
 	}
 	#Legård is in Thisted
 	

@@ -5,7 +5,7 @@ malmo = {
 	base_unit_type = unit_settlement_site
 	color = { 226 61 40 }
 	regions = {
-		scandinavia
+		scania
 	}
 	
 	history = {

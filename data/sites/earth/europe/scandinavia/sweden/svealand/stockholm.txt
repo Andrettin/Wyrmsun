@@ -8,7 +8,7 @@ stockholm = {
 		germanic = "Stukkahulma" #tentative rendering of "Stockholm" in Proto-Germanic
 	}
 	regions = {
-		scandinavia
+		svealand
 	}
 	
 	history = {

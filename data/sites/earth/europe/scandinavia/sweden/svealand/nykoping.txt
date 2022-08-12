@@ -4,6 +4,6 @@ nykoping = {
 	geocoordinate = { 17.01500451310 58.76399717780 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		svealand
 	}
 }

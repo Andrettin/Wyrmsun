@@ -3,6 +3,6 @@ hlesey = {
 	map_template = earth
 	geocoordinate = { 11.5 57.25 }
 	regions = {
-		scandinavia
+		denmark
 	}
 }

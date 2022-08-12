@@ -4,6 +4,6 @@ lulea = {
 	geocoordinate = { 22.15837832940 65.59663477230 } #from Natural Earth
 	base_unit_type = unit_iron_deposit #iron deposits nearby; Source: "Atlas de História Mundial", 2001, pp. 212-213.
 	regions = {
-		scandinavia
+		norrland
 	}
 }

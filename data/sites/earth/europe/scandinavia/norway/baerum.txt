@@ -4,6 +4,6 @@ baerum = {
 	geocoordinate = { 11.34723651360 59.91348605970 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		scandinavia
+		norway
 	}
 }

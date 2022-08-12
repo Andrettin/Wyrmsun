@@ -4,7 +4,7 @@ storugns = {
 	geocoordinate = { 18.8036 57.839 }
 	base_unit_type = unit_stone_deposit
 	regions = {
-		scandinavia
+		gotland
 	}
 	
 	#in the Lärbro district

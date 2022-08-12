@@ -3,6 +3,6 @@ visby_coast = {
 	map_template = earth
 	geocoordinate = { 18.2746172 57.63555556 } #from Natural Earth (ports)
 	regions = {
-		scandinavia
+		gotland
 	}
 }
