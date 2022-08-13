@@ -1,6 +1,32 @@
 random_map = {
 	name = "Random Map"
 	size = { 256 256 }
+	#base_terrain_type = dirt
+	generated_terrains = {
+	#	shallow_water = {
+	#		seed_count = 32
+	#		target_terrain_type = dirt
+	#		max_percent = 20
+	#	}
+	#	dirt = {
+	#		seed_count = 256
+	#		target_terrain_type = grass
+	#	}
+	#	rock = {
+	#		seed_count = 128
+	#		target_terrain_type = dirt
+	#		max_percent = 10
+	#	}
+	#	grass = {
+	#		seed_count = 2048
+	#		target_terrain_type = dirt
+	#	}
+	#	pine_tree = {
+	#		seed_count = 256
+	#		max_percent = 20
+	#		target_terrain_type = grass
+	#	}
+	}
 	generated_neutral_units = {
 		unit_copper_deposit = 16
 		unit_iron_deposit = 16
@@ -13,22 +39,42 @@ random_map = {
 		unit_stone_pile = 16
 	}
 	generated_factions = {
-		gothia
 		denmark
-		sweden
-		marcomannia
-		vandalia
-		francia
-		mercia
-		wessex
-		essex
-		northumbria
 		gautland
-		batavia
 		norway
-		brising_clan
+		sweden
 		
+		bastarnia
+		gothia
+		lugia
+		ostrogothia
+		sciria
+		vandalia
+		visigothia
+		
+		batavia
+		francia
+		
+		austria
+		bavaria
+		thuringia
+		
+		essex
+		mercia
+		northumbria
+		wessex
+		
+		marcomannia
+		semnonia
+		
+		jutland
 		teutonia
+		
+		aeduia
+		arvernia
+		biturigia
+		
+		brising_clan
 	}
 	generated_terrain_features = {
 		baltic_sea
@@ -41,6 +87,7 @@ random_map = {
 		stettin_lagoon
 		
 		boknafjorden
+		#danish_waters
 		kattegat
 		north_sea
 		skagerrak
@@ -51,12 +98,15 @@ random_map = {
 		english_channel
 		inner_seas
 		irish_sea
+		#north_atlantic_ocean
+		#sargasso_sea
 		
 		adriatic_sea
 		aegean_sea
 		alboran_sea
 		balearic_sea
 		black_sea
+		#eastern_mediterranean_sea
 		gulf_of_gabes
 		gulf_of_lion
 		gulf_of_sidra
@@ -66,6 +116,7 @@ random_map = {
 		sea_of_crete
 		sea_of_marmara
 		tyrrhenian_sea
+		#western_mediterranean_sea
 		
 		black_forest
 		bromswold_forest
