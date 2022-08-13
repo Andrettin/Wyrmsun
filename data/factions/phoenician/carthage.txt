@@ -7,4 +7,7 @@ carthage = {
 	default_tier = kingdom
 	default_government_type = republic
 	default_capital = carthage
+	core_settlements = {
+		carthage
+	}
 }

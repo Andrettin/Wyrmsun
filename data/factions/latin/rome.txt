@@ -8,6 +8,9 @@ rome = {
 	max_tier = empire
 	default_government_type = republic
 	default_capital = rome
+	core_settlements = {
+		rome
+	}
 	
 	history = {
 		#polities must have writing
