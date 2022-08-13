@@ -1718,7 +1718,6 @@ local defaultPreferences = {
 	MouseScrollSpeedDefault = 4,    --  While middle-mouse is pressed: Pixels to move per scrolled mouse pixel, negative = reversed
 	VideoHeight = 600,
 	VideoWidth = 1066,
-	AutomaticBattles = false,
 	TipsShown = {},
 	LastVersionPlayed = "0.0.0",
 	SortSaveGamesByTime = false

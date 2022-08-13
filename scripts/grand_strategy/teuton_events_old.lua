@@ -80,13 +80,13 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebia" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebia") then
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Alsace, "suebia")
 						SetProvinceUnitQuantity("Burgundy", "unit-germanic-warrior", 6) -- to give the Aedui something of a defense
 					elseif (GameResult == GameDefeat) then
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebia" or wyr.preferences.AutomaticBattles)) then
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "suebia") then
 					AcquireProvince(WorldMapProvinces.Alsace, "suebia")
 					if (GrandStrategyFaction.Name ~= "suebia") then
 						SetProvinceUnitQuantity("Brandenburg", "unit-germanic-warrior", 4) -- to give them something of a defense
@@ -123,14 +123,14 @@ local TeutonEvents = {
 				SetProvinceCivilization("Bohemia", "teuton")
 			end,
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebia" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "suebia") then
 					GrandStrategyFaction = Factions.marcomannia
 					SetPlayerFaction("teuton", "marcomannia")
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Bohemia, "marcomannia")
 						AcquireFactionTechnologies(Factions.suebia.Civilization, Factions.suebia.Name, Factions.marcomannia.Civilization, "marcomannia")
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "suebia" or wyr.preferences.AutomaticBattles)) then
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "suebia") then
 					AcquireProvince(WorldMapProvinces.Bohemia, "marcomannia")
 					SetProvinceHero("Bohemia", "Marbod", 2)
 					SetProvinceCivilization("Bohemia", "teuton")
@@ -188,11 +188,11 @@ local TeutonEvents = {
 		OptionEffects = {
 			function(s)
 				DeclareWar(EventFaction.Name, "rome")
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomannia" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomannia") then
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Salzburg, "marcomannia")
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomannia" or wyr.preferences.AutomaticBattles)) then
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "marcomannia") then
 					AcquireProvince(WorldMapProvinces.Salzburg, "marcomannia")
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Sack of Iuvavum", "All that was of worth in Iuvavum has been pillaged...")
@@ -223,11 +223,11 @@ local TeutonEvents = {
 		Options = {"~!OK"},
 		OptionEffects = {
 			function(s)
-				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomannia" and wyr.preferences.AutomaticBattles == false) then
+				if (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name == "marcomannia") then
 					if (GameResult == GameVictory) then
 						AcquireProvince(WorldMapProvinces.Venetia, "marcomannia")
 					end
-				elseif (GrandStrategyFaction ~= nil and (GrandStrategyFaction.Name ~= "marcomannia" or wyr.preferences.AutomaticBattles)) then
+				elseif (GrandStrategyFaction ~= nil and GrandStrategyFaction.Name ~= "marcomannia") then
 					AcquireProvince(WorldMapProvinces.Venetia, "marcomannia")
 					if (GrandStrategyFaction.Name == EventFaction.Name) then
 						GenericDialog("The Razing of Opitergium", "Opitergium became naught but ashes.")
