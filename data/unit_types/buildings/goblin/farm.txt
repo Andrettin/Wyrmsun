@@ -22,3 +22,11 @@ unit_goblin_farm = {
 		help = basic_goblin_voices_help_town
 	}
 }
+
+unit_gnoll_farm = {
+	parent = unit_goblin_farm
+	civilization = gnoll
+	neutral_spawned_units = {
+		unit_gnoll_warrior
+	}
+}
