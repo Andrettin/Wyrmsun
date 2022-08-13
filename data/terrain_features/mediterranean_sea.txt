@@ -2,30 +2,35 @@ adriatic_sea = {
 	name = "Adriatic Sea"
 	terrain_type = shallow_water
 	color = { 45 97 244 }
+	geocoordinate = { 15.426111 42.775833 }
 }
 
 aegean_sea = {
 	name = "Aegean Sea"
 	terrain_type = shallow_water
 	color = { 229 77 76 }
+	geocoordinate = { 25.3 38.5 }
 }
 
 alboran_sea = {
 	name = "Alboran Sea"
 	terrain_type = shallow_water
 	color = { 121 56 135 }
+	geocoordinate = { -3 36 }
 }
 
 balearic_sea = {
 	name = "Balearic Sea"
 	terrain_type = shallow_water
 	color = { 125 215 106 }
+	geocoordinate = { 1.5 40 }
 }
 
 black_sea = {
 	name = "Black Sea"
 	terrain_type = shallow_water
 	color = { 0 104 136 }
+	geocoordinate = { 35 44 }
 	cultural_names = {
 		latin = "Pontus Euxinos" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 	}
@@ -35,42 +40,51 @@ eastern_mediterranean_sea = {
 	name = "Eastern Mediterranean Sea"
 	terrain_type = shallow_water
 	color = { 193 100 102 }
+	regions = {
+		mediterranean_sea
+	}
 }
 
 gulf_of_gabes = {
 	name = "Gulf of Gabes" #"Gulf of Gabès"
 	terrain_type = shallow_water
 	color = { 71 246 83 }
+	geocoordinate = { 10.615278 34.23 }
 }
 
 gulf_of_lion = {
 	name = "Gulf of Lion"
 	terrain_type = shallow_water
 	color = { 57 58 13 }
+	geocoordinate = { 4.0002777777778 42.996388888889 }
 }
 
 gulf_of_sidra = {
 	name = "Gulf of Sidra"
 	terrain_type = shallow_water
 	color = { 192 164 26 }
+	geocoordinate = { 18 31.5 }
 }
 
 ionian_sea = {
 	name = "Ionian Sea"
 	terrain_type = shallow_water
 	color = { 37 18 13 }
+	geocoordinate = { 19 38 }
 }
 
 ligurian_sea = {
 	name = "Ligurian Sea"
 	terrain_type = shallow_water
 	color = { 200 75 128 }
+	geocoordinate = { 9.0416666666667 43.498333333333 }
 }
 
 sea_of_azov = {
 	name = "Sea of Azov"
 	terrain_type = shallow_water
 	color = { 68 210 89 }
+	geocoordinate = { 37 46 }
 	cultural_names = {
 		greek = "Lake Maeotis"
 		latin = "Lake Maeotis" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
@@ -81,12 +95,14 @@ sea_of_crete = {
 	name = "Sea of Crete"
 	terrain_type = shallow_water
 	color = { 192 190 18 }
+	geocoordinate = { 25.07083334 36.00027779 }
 }
 
 sea_of_marmara = {
 	name = "Sea of Marmara"
 	terrain_type = shallow_water
 	color = { 52 106 206 }
+	geocoordinate = { 28 40.75 }
 	cultural_names = {
 		greek = "Propontis" #Source: William R. Shepherd, "Historical Atlas", 1911, p. 4.
 	}
@@ -96,10 +112,14 @@ tyrrhenian_sea = {
 	name = "Tyrrhenian Sea"
 	terrain_type = shallow_water
 	color = { 162 50 140 }
+	geocoordinate = { 12 40 }
 }
 
 western_mediterranean_sea = {
 	name = "Western Mediterranean Sea"
 	terrain_type = shallow_water
 	color = { 0 144 104 }
+	regions = {
+		mediterranean_sea
+	}
 }

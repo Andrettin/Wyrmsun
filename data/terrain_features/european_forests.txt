@@ -3,6 +3,7 @@ black_forest = {
 	terrain_type = pine_tree
 	color = { 4 84 11 }
 	terrain_generation_seed = true
+	geocoordinate = { 8.15 48.3 }
 }
 
 bromswold_forest = {
@@ -10,6 +11,7 @@ bromswold_forest = {
 	terrain_type = pine_tree
 	color = { 0 120 0 }
 	terrain_generation_seed = true
+	geocoordinate = { -0.543 52.2787 }
 	cultural_names = {
 		anglo_saxon = "Bruneswald" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
@@ -20,6 +22,7 @@ morfe_forest = {
 	terrain_type = pine_tree
 	color = { 220 38 161 }
 	terrain_generation_seed = true
+	geocoordinate = { -2.346 52.523 }
 	cultural_names = {
 		anglo_saxon = "Moerheb" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}
@@ -30,6 +33,7 @@ sherwood_forest = {
 	terrain_type = pine_tree
 	color = { 0 136 0 }
 	terrain_generation_seed = true
+	geocoordinate = { -1.0727611111111 53.204469444444 }
 	cultural_names = {
 		anglo_saxon = "Scirwudu" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}
@@ -40,6 +44,7 @@ the_weald = {
 	terrain_type = pine_tree #The Weald was a forest, but of what kind?
 	color = { 0 144 0 }
 	terrain_generation_seed = true
+	geocoordinate = { 0.4 51 }
 	cultural_names = {
 		anglo_saxon = "Andredesweald" #Old English name of The Weald; Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 731.
 	}
@@ -51,6 +56,7 @@ vienna_woods = {
 	color = { 35 140 52 }
 	terrain_generation_seed = true
 	hidden = true
+	geocoordinate = { 15.91194 48.08722 }
 }
 
 wychwood_forest = {
@@ -58,6 +64,7 @@ wychwood_forest = {
 	terrain_type = pine_tree
 	color = { 6 105 93 }
 	terrain_generation_seed = true
+	geocoordinate = { -1.513 51.851 }
 	cultural_names = {
 		anglo_saxon = "Hwiccawudu" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 732.
 	}
@@ -68,6 +75,7 @@ wyre_forest = {
 	terrain_type = pine_tree
 	color = { 66 171 130 }
 	terrain_generation_seed = true
+	geocoordinate = { -2.3686111111111 52.385 }
 	cultural_names = {
 		anglo_saxon = "Weogorenaleag" #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 733.
 	}

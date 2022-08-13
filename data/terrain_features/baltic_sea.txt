@@ -2,9 +2,13 @@ baltic_sea = {
 	name = "Baltic Sea"
 	terrain_type = shallow_water
 	color = { 16 120 144 }
+	geocoordinate = { 20 58 }
 	cultural_names = {
 		latin = "Suebic Sea" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 		suebi = "Suebic Sea" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	regions = {
+		baltic_sea
 	}
 }
 
@@ -12,15 +16,23 @@ bay_of_mecklenburg = {
 	name = "Bay of Mecklenburg"
 	terrain_type = shallow_water
 	color = { 125 150 29 }
+	geocoordinate = { 11.666666666667 54.333333333333 }
+	regions = {
+		baltic_sea
+	}
 }
 
 gulf_of_bothnia = {
 	name = "Gulf of Bothnia"
 	terrain_type = shallow_water
 	color = { 16 144 144 }
+	geocoordinate = { 20 63 }
 	cultural_names = {
 		latin = "Suebic Sea" #Source: "Ancient Warfare VII.6", 2013, p. 7.
 		suebi = "Suebic Sea" #Source: "Ancient Warfare VII.6", 2013, p. 7.
+	}
+	regions = {
+		baltic_sea
 	}
 }
 
@@ -28,28 +40,48 @@ gulf_of_finland = {
 	name = "Gulf of Finland"
 	terrain_type = shallow_water
 	color = { 40 109 108 }
+	geocoordinate = { 26 59.833333333333 }
+	regions = {
+		baltic_sea
+	}
 }
 
 gulf_of_riga = {
 	name = "Gulf of Riga"
 	terrain_type = shallow_water
 	color = { 212 140 167 }
+	geocoordinate = { 23.584722222222 57.625555555556 }
+	regions = {
+		baltic_sea
+	}
 }
 
 konigsberg_lagoon = {
 	name = "Konigsberg Lagoon"
 	terrain_type = shallow_water
 	color = { 156 197 126 }
+	geocoordinate = { 19.767777777778 54.476388888889 }
+	regions = {
+		baltic_sea
+	}
 }
 
 oresund = {
 	name = "Oresund"
 	terrain_type = shallow_water
 	color = { 138 237 62 }
+	geocoordinate = { 12.75 55.75 }
+	regions = {
+		baltic_sea
+	}
 }
 
 stettin_lagoon = {
 	name = "Stettin Lagoon"
 	terrain_type = shallow_water
 	color = { 141 133 172 }
+	geocoordinate = { 14.140277777778 53.804444444444 }
+	regions = {
+		baltic_sea
+	}
 }

@@ -2,18 +2,21 @@ bay_of_biscay = {
 	name = "Bay of Biscay"
 	terrain_type = shallow_water
 	color = { 97 225 109 }
+	geocoordinate = { -4.3333333333333 45.5 }
 }
 
 bristol_channel = {
 	name = "Bristol Channel"
 	terrain_type = shallow_water
 	color = { 100 44 144 }
+	geocoordinate = { -3.6166666666667 51.3 }
 }
 
 english_channel = {
 	name = "English Channel"
 	terrain_type = shallow_water
 	color = { 48 128 128 }
+	geocoordinate = { -2 50 }
 	cultural_names = {
 		celt = "British Ocean"
 		latin = "British Ocean"
@@ -24,12 +27,14 @@ inner_seas = {
 	name = "Inner Seas"
 	terrain_type = shallow_water
 	color = { 70 247 84 }
+	geocoordinate = { -7 56 }
 }
 
 irish_sea = {
 	name = "Irish Sea"
 	terrain_type = shallow_water
 	color = { 48 144 144 }
+	geocoordinate = { -5.177222 53.721667 }
 	cultural_names = {
 		celt = "Hibernian Ocean"
 		latin = "Hibernian Ocean"
@@ -40,10 +45,15 @@ north_atlantic_ocean = {
 	name = "North Atlantic Ocean"
 	terrain_type = shallow_water
 	color = { 135 11 136 }
+	geocoordinate = { -33 47 }
+	regions = {
+		atlantic
+	}
 }
 
 sargasso_sea = {
 	name = "Sargasso Sea"
 	terrain_type = shallow_water
 	color = { 221 89 67 }
+	geocoordinate = { -66.175 28.335555555556 }
 }
