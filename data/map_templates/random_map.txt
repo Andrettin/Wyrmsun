@@ -1,0 +1,79 @@
+random_map = {
+	name = "Random Map"
+	size = { 256 256 }
+	generated_neutral_units = {
+		unit_copper_deposit = 16
+		unit_iron_deposit = 16
+		unit_tree_stump = 16
+		#unit_settlement_site = 64
+	}
+	player_location_generated_neutral_units = {
+		unit_copper_deposit = 1
+		unit_wood_pile = 16
+		unit_stone_pile = 16
+	}
+	generated_factions = {
+		gothia
+		denmark
+		sweden
+		marcomannia
+		vandalia
+		francia
+		mercia
+		wessex
+		essex
+		northumbria
+		gautland
+		batavia
+		norway
+		brising_clan
+		
+		teutonia
+	}
+	generated_terrain_features = {
+		baltic_sea
+		bay_of_mecklenburg
+		gulf_of_bothnia
+		gulf_of_finland
+		gulf_of_riga
+		konigsberg_lagoon
+		oresund
+		stettin_lagoon
+		
+		boknafjorden
+		kattegat
+		north_sea
+		skagerrak
+		waddenzee
+		
+		bay_of_biscay
+		bristol_channel
+		english_channel
+		inner_seas
+		irish_sea
+		
+		adriatic_sea
+		aegean_sea
+		alboran_sea
+		balearic_sea
+		black_sea
+		gulf_of_gabes
+		gulf_of_lion
+		gulf_of_sidra
+		ionian_sea
+		ligurian_sea
+		sea_of_azov
+		sea_of_crete
+		sea_of_marmara
+		tyrrhenian_sea
+		
+		black_forest
+		bromswold_forest
+		morfe_forest
+		sherwood_forest
+		the_weald
+		vienna_woods
+		wychwood_forest
+		wyre_forest
+	}
+}
