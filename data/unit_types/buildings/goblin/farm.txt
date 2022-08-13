@@ -1,0 +1,24 @@
+unit_goblin_farm = {
+	parent = unit_template_farm
+	civilization = goblin
+	description = "Goblin farms provide sustenance for their settlements. Due to their high population growth goblins seek to finish the construction of new farms as quickly as possible, although they sacrifice structural integrity in the process. Contrary to the dwarves, goblins tend to plant roots, rather than mushrooms, and they also breed livestock."
+	image_file = "buildings/goblin/farm.png"
+	frame_size = { 64 64 }
+	icon = icon_goblin_farm
+	costs = {
+		time = 80
+		copper = 400
+		lumber = 600
+	}
+	hit_points = 167 #200 with masonry
+	neutral_spawned_units = {
+		unit_goblin_swordsman
+		unit_goblin_spearman
+		unit_goblin_archer
+		unit_goblin_thief
+	}
+	max_spawned_demand = 4
+	sounds = {
+		help = basic_goblin_voices_help_town
+	}
+}

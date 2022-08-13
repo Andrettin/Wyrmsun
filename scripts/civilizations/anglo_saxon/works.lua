@@ -654,7 +654,7 @@ DefineDependency("upgrade-work-aecer-bot",
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple", "unit-teuton-farm"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple", "unit-dwarven-mushroom-farm"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple", "unit-gnomish-farm"},
-	"or", {"upgrade-goblin-civilization", "unit-goblin-temple", "unit-goblin-farm"}
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple", "unit_goblin_farm"}
 )
 
 DefineDependency("upgrade-work-be-galdorstafum",
@@ -690,7 +690,7 @@ DefineDependency("upgrade-work-feld-bot",
 	"or", {"upgrade-gothic-civilization", "unit-teuton-temple", "unit-teuton-farm"},
 	"or", {"upgrade-dwarven-civilization", "unit-dwarven-temple", "unit-dwarven-mushroom-farm"},
 	"or", {"upgrade-gnomish-civilization", "unit-dwarven-temple", "unit-gnomish-farm"},
-	"or", {"upgrade-goblin-civilization", "unit-goblin-temple", "unit-goblin-farm"}
+	"or", {"upgrade-goblin-civilization", "unit-goblin-temple", "unit_goblin_farm"}
 )
 
 DefineDependency("upgrade-work-gagates-craeftas",

@@ -6,7 +6,7 @@ DefineQuest("gathaarls-children", { -- based on the description of Gathaarl in T
 	Civilization = "goblin",
 	PlayerColor = "teal",
 	Conditions = function(s)
-		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit_goblin_worker") > 0 and CheckDependency(trigger_player, "unit-goblin-farm")) then -- should be made to require Gathaarl being worshiped in the future
+		if (GetPlayerData(trigger_player, "RaceName") == "goblin" and GetPlayerData(trigger_player, "UnitTypesCount", "unit_goblin_worker") > 0 and CheckDependency(trigger_player, "unit_goblin_farm")) then -- should be made to require Gathaarl being worshiped in the future
 			return true
 		end
 		return false
@@ -23,7 +23,7 @@ DefineQuest("gathaarls-children", { -- based on the description of Gathaarl in T
 			"objective-type", "build_units",
 			"objective-string", "Build 3 Farms",
 			"quantity", 3,
-			"unit-type", "unit-goblin-farm"
+			"unit-type", "unit_goblin_farm"
 		}
 	}
 })

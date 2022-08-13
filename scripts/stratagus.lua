@@ -1828,7 +1828,7 @@ Units = {
 	"unit-goblin-war-machine", "unit-goblin-glider",
 	"unit-goblin-transport-ship", "unit-goblin-warship",
 	"unit-goblin-town-hall", "unit-goblin-stronghold",
-	"unit-goblin-mess-hall", "unit-goblin-farm", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-masons-shop",
+	"unit-goblin-mess-hall", "unit-goblin-lumber-mill", "unit-goblin-smithy", "unit-goblin-masons-shop",
 	"unit-goblin-temple", "unit-goblin-market", "unit-goblin-academy",
 	"unit-goblin-watch-tower", "unit-goblin-guard-tower", "unit-goblin-catapult-tower",
 	"unit-goblin-wall",

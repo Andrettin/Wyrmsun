@@ -90,7 +90,7 @@ DefineDependency("unit-cheese",
 	{"unit-germanic-farm"},
 	"or", {"unit-latin-farm"},
 	"or", {"unit-gnomish-farm"},
-	"or", {"unit-goblin-farm"},
+	"or", {"unit_goblin_farm"},
 	"or", {"unit-norse-farm"},
 	"or", {"unit-teuton-farm"}
 )
