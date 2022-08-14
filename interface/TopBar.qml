@@ -6,7 +6,7 @@ Item {
 	height: image.height
 	
 	property string interface_style: "default"
-	readonly property int special_icon_list_size: wyrmgus.this_player.current_special_resources.length + wyrmgus.this_player.modifiers.length
+	readonly property int special_icon_list_size: wyrmgus.this_player ? (wyrmgus.this_player.current_special_resources.length + wyrmgus.this_player.modifiers.length) : 0
 	
 	Image {
 		id: image
@@ -91,7 +91,7 @@ Item {
 	}
 	
 	Repeater {
-		model: wyrmgus.this_player.current_special_resources
+		model: wyrmgus.this_player ? wyrmgus.this_player.current_special_resources : []
 		
 		ResourceIcon {
 			id: resource_icon
@@ -103,7 +103,7 @@ Item {
 	}
 	
 	Repeater {
-		model: wyrmgus.this_player.modifiers
+		model: wyrmgus.this_player ? wyrmgus.this_player.modifiers : []
 		
 		ResourceIconBase {
 			id: modifier_icon
@@ -141,7 +141,7 @@ Item {
 		anchors.left: top_bar.left
 		anchors.leftMargin: (154 + (75 * 5)) * wyrmgus.scale_factor
 		anchors.top: top_bar.top
-		icon: wyrmgus.this_player.age ? wyrmgus.this_player.age.icon.identifier : ""
+		icon: (wyrmgus.this_player && wyrmgus.this_player.age) ? wyrmgus.this_player.age.icon.identifier : ""
 	}
 	
 	SmallText {
@@ -150,7 +150,7 @@ Item {
 		anchors.leftMargin: 4 * wyrmgus.scale_factor
 		anchors.top: top_bar.top
 		anchors.topMargin: 1 * wyrmgus.scale_factor
-		text: wyrmgus.this_player.age ? wyrmgus.this_player.age.name : ""
+		text: (wyrmgus.this_player && wyrmgus.this_player.age) ? wyrmgus.this_player.age.name : ""
 		visible: !wyrmgus.map_editor.running
 	}
 	
@@ -182,7 +182,7 @@ Item {
 			anchors.top: parent.top
 			icon: "food"
 			tooltip: format_text("Food" + "\n" + small_text(
-				"\nPopulation: " + number_string(wyrmgus.this_player.population)
+				"\nPopulation: " + number_string(wyrmgus.this_player ? wyrmgus.this_player.population : 0)
 			))
 		}
 		
@@ -192,9 +192,9 @@ Item {
 			anchors.leftMargin: 4 * wyrmgus.scale_factor
 			anchors.top: parent.top
 			anchors.topMargin: 1 * wyrmgus.scale_factor
-			text: wyrmgus.this_player.demand > wyrmgus.this_player.supply ? highlight(base_text) : base_text
+			text: (wyrmgus.this_player && wyrmgus.this_player.demand > wyrmgus.this_player.supply) ? highlight(base_text) : base_text
 			
-			readonly property string base_text: wyrmgus.this_player.demand + "/" + wyrmgus.this_player.supply
+			readonly property string base_text: wyrmgus.this_player ? (wyrmgus.this_player.demand + "/" + wyrmgus.this_player.supply) : ""
 		}		
 		
 		MouseArea {

@@ -18,14 +18,14 @@ ResourceIconBase {
 	
 	property var resource: null
 	
-	property int resource_stored: wyrmgus.this_player.get_resource(resource)
-	property int income: wyrmgus.this_player.get_income(resource)
-	property int processing_bonus: wyrmgus.this_player.get_processing_bonus(resource)
+	property int resource_stored: wyrmgus.this_player ? wyrmgus.this_player.get_resource(resource) : 0
+	property int income: wyrmgus.this_player ? wyrmgus.this_player.get_income(resource) : 0
+	property int processing_bonus: wyrmgus.this_player ? wyrmgus.this_player.get_processing_bonus(resource) : 0
 	readonly property string conversion_rates_string: resource.conversion_rates_string
-	property string children_processing_bonus_string: wyrmgus.this_player.get_children_processing_bonus_qstring(resource)
-	property int effective_sell_price: wyrmgus.this_player.get_effective_resource_sell_price(resource)
-	property int effective_buy_price: wyrmgus.this_player.get_effective_resource_buy_price(resource)
-	property int effective_demand: wyrmgus.this_player.get_effective_resource_demand(resource)
+	property string children_processing_bonus_string: wyrmgus.this_player ? wyrmgus.this_player.get_children_processing_bonus_qstring(resource) : ""
+	property int effective_sell_price: wyrmgus.this_player ? wyrmgus.this_player.get_effective_resource_sell_price(resource) : 0
+	property int effective_buy_price: wyrmgus.this_player ? wyrmgus.this_player.get_effective_resource_buy_price(resource) : 0
+	property int effective_demand: wyrmgus.this_player ? wyrmgus.this_player.get_effective_resource_demand(resource) : 0
 	
 	Connections {
 		target: wyrmgus.this_player
