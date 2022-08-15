@@ -46,6 +46,14 @@ slavic_swordsman = {
 	}
 }
 
+teutonic_catapult = {
+	code = onager
+	
+	effects = {
+		create_unit = unit_teuton_catapult
+	}
+}
+
 dwarven_axefighter = {
 	code = modsognir
 	
