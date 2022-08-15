@@ -126,6 +126,14 @@ goblin_thief = {
 	}
 }
 
+goblin_war_machine = {
+	code = spearbox
+	
+	effects = {
+		create_unit = unit_goblin_war_machine
+	}
+}
+
 hobgoblin_warrior = {
 	code = "hob the gob"
 	
