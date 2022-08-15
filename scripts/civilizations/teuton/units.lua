@@ -822,7 +822,7 @@ DefineUnitType("unit-teuton-priest", {
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
 	ButtonKey = "l",
-	StartingAbilities = {"upgrade-barkskin", "upgrade-blessing", "upgrade-far-sight", "upgrade-healing", "upgrade-inspire", "upgrade-precision", "upgrade-regeneration", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
+	StartingAbilities = {"upgrade_barkskin", "upgrade_blessing", "upgrade_far_sight", "upgrade_healing", "upgrade_inspire", "upgrade_precision", "upgrade_regeneration", "upgrade_shocking_grasp", "upgrade_slow_ability", "upgrade_wither"},
 	CanCastSpell = {"spell-barkskin", "spell-blessing", "spell-far-sight", "spell-healing", "spell-inspire", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-barkskin", "spell-blessing", "spell-healing", "spell-inspire", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit_carrots", "unit-potion-of-healing", "unit_potion_of_mana"},

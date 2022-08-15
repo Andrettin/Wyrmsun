@@ -355,7 +355,7 @@ DefineUnitType("unit-goblin-shaman", {
 	Accuracy = 10,
 	Evasion = 10,
 	Corpse = "unit-goblin-dead-body",
-	StartingAbilities = {"upgrade-terror", "upgrade-wither"},
+	StartingAbilities = {"upgrade_terror", "upgrade_wither"},
 	CanCastSpell = {"spell-terror", "spell-wither"},
 	AutoCastActive = {"spell-terror", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit_potion_of_mana"},

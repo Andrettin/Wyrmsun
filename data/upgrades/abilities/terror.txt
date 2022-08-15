@@ -1,0 +1,9 @@
+upgrade_terror = {
+	name = "Terror"
+	icon = icon_terror
+	ability = true
+
+	unit_conditions = {
+		upgrade = upgrade_deity_gathaarl
+	}
+}

@@ -1,0 +1,10 @@
+upgrade_deadly_precision = {
+	name = "Deadly Precision"
+	icon = icon_deadly_precision
+	ability = true
+	requirements_string = "Critical Strike"
+
+	unit_conditions = {
+		upgrade = upgrade_critical_strike
+	}
+}

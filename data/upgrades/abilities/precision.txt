@@ -1,0 +1,9 @@
+upgrade_precision = {
+	name = "Precision"
+	icon = icon_precision
+	ability = true
+
+	unit_conditions = {
+		upgrade = upgrade_deity_heimdall
+	}
+}

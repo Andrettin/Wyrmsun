@@ -204,14 +204,14 @@ DefineButton( { Pos = 10, Level = "choose-individual-upgrade-level", Icon = "ico
 
 --[[
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level", Icon = "icon-healing",
-	Action = "learn-ability", Value = "upgrade-healing",
+	Action = "learn-ability", Value = "upgrade_healing",
 	Description = "Healing is an active ability that heals an organic unit.",
 	Key = "h", Hint = "Learn ~!Healing", Popup = "popup_learn_ability",
 	ForUnit = {"unit-dwarven-loremaster"}
 })
 
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-precision",
-	Action = "learn-ability", Value = "upgrade-precision",
+	Action = "learn-ability", Value = "upgrade_precision",
 	Key = "r", Hint = "Learn P~!recision", Popup = "popup_learn_ability",
 	Description = "Precision is an active ability that doubles the accuracy of an organic unit while in combat.",
 	ForUnit = {"unit-germanic-priest", "unit-teuton-priest", "unit-elven-priest", "unit-dwarven-loremaster"}

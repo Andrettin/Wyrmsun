@@ -1,0 +1,9 @@
+upgrade_healing = {
+	name = "Healing"
+	icon = icon_healing
+	ability = true
+
+	unit_conditions = {
+		upgrade = upgrade_deity_christian_god
+	}
+}

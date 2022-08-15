@@ -656,7 +656,7 @@ DefineUnitType("unit-germanic-priest", {
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
 	ButtonKey = "g",
-	StartingAbilities = {"upgrade-barkskin", "upgrade-far-sight", "upgrade-inspire", "upgrade-precision", "upgrade-regeneration", "upgrade-shocking-grasp", "upgrade-slow-ability", "upgrade-wither"},
+	StartingAbilities = {"upgrade_barkskin", "upgrade_far_sight", "upgrade_inspire", "upgrade_precision", "upgrade_regeneration", "upgrade_shocking_grasp", "upgrade_slow_ability", "upgrade_wither"},
 	CanCastSpell = {"spell-barkskin", "spell-far-sight", "spell-inspire", "spell-healing", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AutoCastActive = {"spell-barkskin", "spell-inspire", "spell-healing", "spell-precision", "spell-regeneration", "spell-shocking-grasp", "spell-slow", "spell-wither"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit-potion-of-healing", "unit_potion_of_mana"},

@@ -33,12 +33,6 @@ DefineUpgrade("upgrade-axe-mastery", {
 	MaxLimit = 5
 })
 
-DefineUpgrade("upgrade-blessing", {
-	Name = "Blessing",
-	Icon = "icon-blessing",
-	Ability = true
-})
-
 DefineUpgrade("upgrade-bow-mastery", {
 	Name = "Bow Mastery",
 	Icon = "icon-bow-mastery",
@@ -51,13 +45,6 @@ DefineUpgrade("upgrade-critical-strike", {
 	Name = "Critical Strike",
 	Icon = "icon-critical-strike",
 	Ability = true
-})
-
-DefineUpgrade("upgrade-deadly-precision", {
-	Name = "Deadly Precision",
-	Icon = "icon-deadly-precision",
-	Ability = true,
-	RequirementsString = "Critical Strike"
 })
 
 DefineUpgrade("upgrade-eagle-eye", {
@@ -73,30 +60,12 @@ DefineUpgrade("upgrade-ethereal-vision", {
 	Ability = true
 })
 
-DefineUpgrade("upgrade-far-sight", {
-	Name = "Far Sight",
-	Icon = "icon-far-sight",
-	Ability = true
-})
-
 DefineUpgrade("upgrade-gun-mastery", {
 	Name = "Gun Mastery",
 	Icon = "icon-gun-mastery",
 	Ability = true,
 	WeaponClasses = {"gun"},
 	MaxLimit = 5
-})
-
-DefineUpgrade("upgrade-healing", {
-	Name = "Healing",
-	Icon = "icon-healing",
-	Ability = true
-})
-
-DefineUpgrade("upgrade-inspire", {
-	Name = "Inspire",
-	Icon = "icon-inspire",
-	Ability = true
 })
 
 DefineUpgrade("upgrade-leadership", {
@@ -125,12 +94,6 @@ DefineUpgrade("upgrade-precise-shot", {
 	Ability = true
 })
 
-DefineUpgrade("upgrade-precision", {
-	Name = "Precision",
-	Icon = "icon-precision",
-	Ability = true
-})
-
 DefineUpgrade("upgrade-puncture", {
 	Name = "Puncture",
 	Icon = "icon-puncture",
@@ -140,18 +103,6 @@ DefineUpgrade("upgrade-puncture", {
 DefineUpgrade("upgrade-scouting", {
 	Name = "Scouting",
 	Icon = "icon-scouting",
-	Ability = true
-})
-
-DefineUpgrade("upgrade-shocking-grasp", {
-	Name = "Shocking Grasp",
-	Icon = "icon-shocking-grasp",
-	Ability = true
-})
-
-DefineUpgrade("upgrade-slow-ability", {
-	Name = "Slow",
-	Icon = "icon-slow",
 	Ability = true
 })
 
@@ -177,12 +128,6 @@ DefineUpgrade("upgrade-sword-mastery", {
 	MaxLimit = 5
 })
 
-DefineUpgrade("upgrade-terror", {
-	Name = "Terror",
-	Icon = "icon-terror",
-	Ability = true
-})
-
 DefineUpgrade("upgrade-throwing-mastery", {
 	Name = "Throwing Mastery",
 	Icon = "icon-throwing-mastery",
@@ -196,12 +141,6 @@ DefineUpgrade("upgrade-toughness", {
 	Icon = "icon-toughness",
 	Ability = true,
 	MaxLimit = 100
-})
-
-DefineUpgrade("upgrade-wither", {
-	Name = "Wither",
-	Icon = "icon-wither",
-	Ability = true
 })
 
 DefineModifier("upgrade-axe-mastery",

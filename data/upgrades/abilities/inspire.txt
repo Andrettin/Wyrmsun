@@ -1,0 +1,9 @@
+upgrade_inspire = {
+	name = "Inspire"
+	icon = icon_inspire
+	ability = true
+
+	unit_conditions = {
+		upgrade = upgrade_deity_tyr
+	}
+}

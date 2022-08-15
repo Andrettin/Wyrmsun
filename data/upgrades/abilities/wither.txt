@@ -1,0 +1,9 @@
+upgrade_wither = {
+	name = "Wither"
+	icon = icon_wither
+	ability = true
+
+	unit_conditions = {
+		upgrade = upgrade_deity_hel
+	}
+}

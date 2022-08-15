@@ -60,7 +60,7 @@ DefineUnitType("unit-elven-priest", {
 --	WeaponClasses = {"mace"},
 	BluntDamage = true,
 	ButtonKey = "p",
-	StartingAbilities = {"upgrade-healing"},
+	StartingAbilities = {"upgrade_healing"},
 	CanCastSpell = {"spell-healing", "spell-precision"},
 	AutoCastActive = {"spell-healing", "spell-precision"},
 	AiDrops = {"unit-boots", "unit-cheese", "unit_meat", "unit-potion-of-healing", "unit_potion_of_mana"},

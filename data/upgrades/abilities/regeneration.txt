@@ -3,7 +3,7 @@ upgrade_regeneration = {
 	icon = icon_regeneration
 	ability = true
 
-	conditions = {
+	unit_conditions = {
 		upgrade = upgrade_deity_freyja
 	}
 }

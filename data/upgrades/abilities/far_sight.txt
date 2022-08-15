@@ -1,0 +1,9 @@
+upgrade_far_sight = {
+	name = "Far Sight"
+	icon = icon_far_sight
+	ability = true
+
+	unit_conditions = {
+		upgrade = upgrade_deity_odin
+	}
+}

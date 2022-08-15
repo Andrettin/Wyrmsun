@@ -1,0 +1,9 @@
+upgrade_shocking_grasp = {
+	name = "Shocking Grasp"
+	icon = icon_shocking_grasp
+	ability = true
+
+	unit_conditions = {
+		upgrade = upgrade_deity_thor
+	}
+}

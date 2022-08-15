@@ -1,0 +1,9 @@
+upgrade_slow_ability = {
+	name = "Slow"
+	icon = icon_slow
+	ability = true
+
+	unit_conditions = {
+		upgrade = upgrade_deity_loki
+	}
+}

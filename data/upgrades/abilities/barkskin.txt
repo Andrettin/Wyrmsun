@@ -3,7 +3,7 @@ upgrade_barkskin = {
 	icon = icon_barkskin
 	ability = true
 
-	conditions = {
+	unit_conditions = {
 		upgrade = upgrade_deity_frey
 	}
 }
