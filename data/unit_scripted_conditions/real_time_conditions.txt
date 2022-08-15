@@ -1,0 +1,4 @@
+is_christmas_season = {
+	real_month = december
+	real_day = 16
+}
