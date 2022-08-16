@@ -6,4 +6,8 @@ el_daba = {
 	regions = {
 		africa
 	}
+	
+	history = {
+		neutral_building_type = unit_gnoll_farm #the name of the place apparently means "hyena"
+	}
 }
