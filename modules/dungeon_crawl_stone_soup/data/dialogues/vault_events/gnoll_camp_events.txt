@@ -1,3 +1,85 @@
+gnoll_camp_mini_house = {
+	trigger = {
+		target = player_or_neutral_player
+		conditions = {
+			random = 0.0001
+			any_settlement_center_unit = {
+				nearby_civilization = gnoll
+				
+				any_settlement_building = {
+					unit_type = unit_minor_building_site
+				}
+			}
+		}
+		effects = {
+			random_settlement_center_unit = {
+				conditions = {
+					nearby_civilization = gnoll
+					
+					any_settlement_building = {
+						unit_type = unit_minor_building_site
+					}
+				}
+				
+				random_settlement_building = {
+					conditions = {
+						unit_type = unit_minor_building_site
+					}
+					
+					set_as_current = true
+				}
+			}
+		}
+	}
+	{
+		title = "Gnoll House"
+		icon = icon_goblin_farm
+		text = "A group of hostile gnolls has built a house at [unit.site.current_cultural_name], in [unit.settlement.current_cultural_name], endangering the nearby area. Locals have reported that the gnolls keep a savage beast with them."
+		option = {
+			name = "Oh no!"
+			hotkey = o
+			effects = {
+				neutral_player = {
+					create_unit = {
+						unit_type = unit_gnoll_farm
+						use_current_unit_pos = true
+					}
+					create_unit = {
+						unit_type = unit_gnoll_warrior #gnoll
+						use_current_unit_pos = true
+					}
+					create_unit = {
+						unit_type = unit_gnoll_warrior #gnoll
+						use_current_unit_pos = true
+					}
+					
+					random_list = {
+						1 = {
+							create_unit = {
+								unit_type = unit_gnoll_warrior #gnoll shaman
+								use_current_unit_pos = true
+							}
+						}
+						1 = {
+							create_unit = {
+								unit_type = unit_gnoll_warrior #gnoll sergeant
+								level = 2
+								use_current_unit_pos = true
+							}
+						}
+					}
+					
+					#hound / wolf w:2
+					create_unit = {
+						unit_type = unit_wolf
+						use_current_unit_pos = true
+					}
+				}
+			}
+		}
+	}
+}
+
 gnoll_camp_mini_hut = {
 	trigger = {
 		target = player_or_neutral_player
@@ -34,7 +116,7 @@ gnoll_camp_mini_hut = {
 	{
 		title = "Gnoll Hut"
 		icon = icon_goblin_farm
-		text = "A group of hostile gnolls has built a hut at [unit.site.current_cultural_name], in [unit.settlement.current_cultural_name], endangering the nearby area."
+		text = "A few hostile gnolls have built a hut at [unit.site.current_cultural_name], in [unit.settlement.current_cultural_name], endangering the nearby area."
 		option = {
 			name = "Oh no!"
 			hotkey = o
