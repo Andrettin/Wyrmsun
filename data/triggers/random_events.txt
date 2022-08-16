@@ -1,5 +1,5 @@
 beautiful_statuette = {
-	type = player_trigger
+	target = player
 	conditions = {
 		unit_class = smithy
 		random = 0.0001
@@ -14,7 +14,7 @@ beautiful_statuette = {
 }
 
 brawl_at_the_barracks = {
-	type = player_trigger
+	target = player
 	conditions = {
 		unit_class = barracks
 		unit_class = town_hall #require a town hall so that the player does not go below the quantity of resources necessary to build one if they started without it
@@ -30,7 +30,7 @@ brawl_at_the_barracks = {
 }
 
 giant_mushroom_grown = {
-	type = player_trigger
+	target = player
 	conditions = {
 		unit_type = unit_dwarven_mushroom_farm
 		random = 0.0001
@@ -45,7 +45,7 @@ giant_mushroom_grown = {
 }
 
 splendid_table = {
-	type = player_trigger
+	target = player
 	conditions = {
 		unit_class = lumber_mill
 		random = 0.0001
