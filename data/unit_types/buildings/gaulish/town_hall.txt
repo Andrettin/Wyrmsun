@@ -1,0 +1,11 @@
+unit_gaulish_town_hall = {
+	parent = unit_template_town_hall
+	civilization = gaulish
+	description = "This is the gathering hall for Gaulish tribesfolk, where the important matters of the day for the community are discussed."
+	image_file = "buildings/gaulish/town_hall.png"
+	frame_size = { 128 128 }
+	icon = gaulish_town_hall
+	ai_drops = {
+		unit_boots
+	}
+}

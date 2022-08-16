@@ -2,6 +2,9 @@ celtic = {
 	name = "Celtic"
 	rank = group
 	group = western
+	class_unit_types = {
+		town_hall = unit_gaulish_town_hall
+	}
 	
 	history = {
 		-4000 = {

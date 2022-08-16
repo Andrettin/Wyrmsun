@@ -37,6 +37,7 @@
 /graphics/buildings/elven/stronghold_snow.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/elven/town_hall.png (by Kwaliti and Jinn) (licensed under the CC0)
 /graphics/buildings/elven/town_hall_snow.png (by Kwaliti and Jinn) (licensed under the CC0)
+/graphics/buildings/gaulish/town_hall.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/germanic/barracks.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/germanic/barracks_snow.png (by Jinn) (licensed under the CC0)
 /graphics/buildings/germanic/dock.png (by Jinn) (licensed under the CC0)

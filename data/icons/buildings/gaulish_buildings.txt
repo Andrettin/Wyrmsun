@@ -1,0 +1,3 @@
+gaulish_town_hall = {
+	file = "icons/buildings/gaulish/town_hall.png"
+}
