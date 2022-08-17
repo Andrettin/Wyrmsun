@@ -40,7 +40,6 @@ old_earth = {
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
 		unit_wood_pile = 16
-		unit_stone_pile = 8
 	}
 }
 
@@ -109,7 +108,6 @@ earth = {
 	player_location_generated_neutral_units = {
 		unit_copper_deposit = 1
 		unit_wood_pile = 16
-		unit_stone_pile = 8
 	}
 }
 
