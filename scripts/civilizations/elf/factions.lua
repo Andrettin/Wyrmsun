@@ -45,13 +45,15 @@ DefineFaction("lintanir", {
 })
 
 DefineFaction("ulfdalir", {
-	Name = "Ulfdalir",
+	Name = "Ulfdalir", -- the name means "Wolf-Dale"
 	Adjective = "Ulfdalir",
 	Civilization = "elf",
 	Type = "polity",
 	Color = "black",
 	DefaultTier = "kingdom", -- because Volund's father was a king (though of Finland in the original myth)
 	Description = "Ulfdalir was one of the main participants in the Winter War. Facing an attack by a neighboring elven realm, they allied themselves with the frost trolls to the north."
+	
+	-- has one lake, Ulfsjar
 })
 
 -- Mercenary Companies

@@ -66,6 +66,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Maps
 - Added the "Gallic Fields" (256x256, 3 players) and "Gallic Highlands" custom maps (256x256, 2 players), based on maps from 0 A.D. (which are licensed under an open-source license).
+- Removed the Annwn, Ulfdalir and Random Dungeon custom maps.
+- The random custom maps now use the Classic Skirmish map settings (i.e. building sites are disabled).
 
 * Quests
 - Fixed crash which occurred on start for The Wyrm legacy quest.

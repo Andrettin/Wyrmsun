@@ -1,5 +1,0 @@
-LoadTileModels("scripts/tilesets/dungeon.lua")
-
-GenerateRandomDungeon("random", "", "random", "random", "", "random", "random", "", 16, "", "", "", "", {}, "Dungeon Dwellers", 12)
-
-CreateCritters()
