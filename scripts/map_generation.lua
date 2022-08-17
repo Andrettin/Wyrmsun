@@ -1464,7 +1464,6 @@ function CreateCritters(arg)
 			if (
 				species ~= ""
 				and GetUnitTypeData(unit_type_list[i], "Fauna")
-				and (MapWorld == "" or MapWorld == "Random" or MapWorld == GetWorldData(GetSpeciesData(species, "Homeworld"), "Name"))
 				and (GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoPredators)
 				and (GetUnitTypeData(unit_type_list[i], "Domain") ~= "air" or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoFlyingCreeps)
 				and (GetUnitTypeData(unit_type_list[i], "Level") < 3 or GetUnitTypeData(unit_type_list[i], "Predator") == false or not arg.NoMightyCreeps)
@@ -2345,9 +2344,6 @@ function GenerateRandomMap(arg)
 			CreateNeutralBuildings("unit_mercenary_camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 		end
 		
-		CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
-		CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
-
 		-- create oil patches
 	--	Count = 2
 	--	while (Count > 0) do
@@ -3046,11 +3042,6 @@ function FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, m
 			max_y = max_y / 2
 		end
 		
-		local is_building_site = false
-		if (building_type == "unit_minor_building_site" or building_type == "unit_building_site" or building_type == "unit_major_building_site") then
-			is_building_site = true
-		end
-		
 		while (location_found == false and WhileCount < 1000) do
 			RandomX = SyncRand(max_x - min_x + 1) + min_x
 			RandomY = SyncRand(max_y - min_y + 1) + min_y
@@ -3085,19 +3076,15 @@ function FindAppropriateNeutralBuildingSpawnPoint(building_type, min_x, max_x, m
 			end
 
 			if (in_buildable_land) then
-				if (is_building_site) then
+				local unit_quantity = 0
+				for i=0,(PlayerMax - 2) do
+					unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 16, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 16})
+				end
+
+				unit_quantity = unit_quantity + GetNumUnitsAt(PlayerNumNeutral, "buildings", {RandomX - 16, RandomY - 16}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 16, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 16}) + GetNumUnitsAt(PlayerNumNeutral, building_type, {RandomX - 16, RandomY - 16}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 16, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 16})
+
+				if (unit_quantity < 1) then
 					location_found = true
-				else
-					local unit_quantity = 0
-					for i=0,(PlayerMax - 2) do
-						unit_quantity = unit_quantity + GetNumUnitsAt(i, "any", {RandomX - 16, RandomY - 16}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 16, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 16})
-					end
-
-					unit_quantity = unit_quantity + GetNumUnitsAt(PlayerNumNeutral, "buildings", {RandomX - 16, RandomY - 16}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 16, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 16}) + GetNumUnitsAt(PlayerNumNeutral, building_type, {RandomX - 16, RandomY - 16}, {RandomX + (GetUnitTypeData(building_type, "TileWidth") - 1) + 16, RandomY + (GetUnitTypeData(building_type, "TileHeight") - 1) + 16})
-
-					if (unit_quantity < 1) then
-						location_found = true
-					end
 				end
 			end
 			WhileCount = WhileCount + 1
@@ -4055,9 +4042,6 @@ function GenerateValley(direction, lake_quantity)
 
 	CreateGoldSpots((CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 2048, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 
-	CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
-	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
-		
 	if (GetCurrentTileset() == "swamp" or GetCurrentTileset() == "cave") then
 		CreateNeutralBuildings("unit_mercenary_camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 	end
@@ -6009,10 +5993,6 @@ function GenerateCave(town_halls, symmetric)
 		CreateNeutralBuildings("unit-hole", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 4096, 0, CMap:get():get_info():get_map_width() - 2, 0, CMap:get():get_info():get_map_height() - 2, symmetric)
 	end
 
-	CreateNeutralBuildings("unit_minor_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 256, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
-	CreateNeutralBuildings("unit_building_site", (CMap:get():get_info():get_map_width() * CMap:get():get_info():get_map_height()) / 1024, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
-		
-	
 	CreateNeutralBuildings("unit_mercenary_camp", 1, 0, CMap:get():get_info():get_map_width() - 3, 0, CMap:get():get_info():get_map_height() - 3, symmetric)
 
 	for i=0,(PlayerMax - 2) do

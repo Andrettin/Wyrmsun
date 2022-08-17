@@ -1,0 +1,10 @@
+name = "Random Valley"
+map_size = { 128 128 }
+player_types = {
+	person
+	person
+	person
+	person
+}
+settings = classic_skirmish
+map_world = "Random"
