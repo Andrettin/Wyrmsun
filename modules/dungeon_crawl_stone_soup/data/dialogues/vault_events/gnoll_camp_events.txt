@@ -1,3 +1,71 @@
+gnoll_camp_mini_sergeant = {
+	trigger = {
+		target = player_or_neutral_player
+		conditions = {
+			random = 0.0001
+			any_settlement_center_unit = {
+				nearby_civilization = gnoll
+				
+				any_settlement_building = {
+					neutral = true
+				}
+			}
+		}
+		effects = {
+			random_settlement_center_unit = {
+				conditions = {
+					nearby_civilization = gnoll
+					
+					any_settlement_building = {
+						neutral = true
+					}
+				}
+				
+				random_settlement_building = {
+					conditions = {
+						neutral = true
+					}
+					
+					set_as_current = true
+				}
+			}
+		}
+	}
+	{
+		title = "Gnoll Sergeant"
+		icon = gnoll_warrior
+		text = "A vicious gnoll sergeant has been sighted in [unit.settlement.current_cultural_name], along with a band of his fellow marauders."
+		option = {
+			name = "Oh no!"
+			hotkey = o
+			effects = {
+				neutral_player = {
+					create_unit = {
+						unit_type = unit_gnoll_warrior #gnoll sergeant
+						level = 2
+						use_current_unit_pos = true
+					}
+					for = {
+						count = 4
+						
+						random_list = {
+							1 = {
+								create_unit = {
+									unit_type = unit_gnoll_warrior #gnoll
+									use_current_unit_pos = true
+								}
+							}
+							2 = {
+								#nothing w:2
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 gnoll_camp_mini_house = {
 	trigger = {
 		target = player_or_neutral_player
@@ -34,7 +102,7 @@ gnoll_camp_mini_house = {
 	{
 		title = "Gnoll House"
 		icon = icon_goblin_farm
-		text = "A group of hostile gnolls has built a house at [unit.site.current_cultural_name], in [unit.settlement.current_cultural_name], endangering the nearby area. Locals have reported that the gnolls keep a savage beast with them."
+		text = "A group of hostile gnolls has built a house in [unit.settlement.current_cultural_name], endangering the nearby area. Locals have reported that the gnolls keep a savage beast with them."
 		option = {
 			name = "Oh no!"
 			hotkey = o
@@ -46,10 +114,7 @@ gnoll_camp_mini_house = {
 					}
 					create_unit = {
 						unit_type = unit_gnoll_warrior #gnoll
-						use_current_unit_pos = true
-					}
-					create_unit = {
-						unit_type = unit_gnoll_warrior #gnoll
+						count = 2
 						use_current_unit_pos = true
 					}
 					
@@ -116,7 +181,7 @@ gnoll_camp_mini_hut = {
 	{
 		title = "Gnoll Hut"
 		icon = icon_goblin_farm
-		text = "A few hostile gnolls have built a hut at [unit.site.current_cultural_name], in [unit.settlement.current_cultural_name], endangering the nearby area."
+		text = "A few hostile gnolls have built a hut in [unit.settlement.current_cultural_name], endangering the nearby area."
 		option = {
 			name = "Oh no!"
 			hotkey = o
