@@ -7,7 +7,3 @@ Additionally, for the Earth map the following water areas need to be touched up 
 3. The Bosphorus.
 4. The Strait of Sicily.
 5. The Strait of Gibraltar.
-
-And the following territories need to be touched up as well:
-
-1. Ensure Limburg is contiguous (part of Amsterdam's territory).
