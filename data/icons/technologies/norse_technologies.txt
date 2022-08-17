@@ -1,3 +1,7 @@
+holmgang = {
+	file = "icons/technologies/norse/holmgang.png"
+}
+
 house_burning = {
 	file = "icons/technologies/norse/house_burning.png"
 }
