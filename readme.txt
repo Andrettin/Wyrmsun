@@ -67,6 +67,9 @@ https://github.com/Andrettin/Wyrmsun
 * Quests
 - Fixed crash which occurred on start for The Wyrm legacy quest.
 
+* Upgrades
+- Added Holmgang upgrade for the Norse (+20% bonus vs. infantry for sword infantry).
+
 -----------------------------------------------------------------------
 - 5.3.6
 -----------------------------------------------------------------------

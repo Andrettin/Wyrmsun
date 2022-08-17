@@ -1,0 +1,24 @@
+upgrade_holmgang = {
+	name = "Holmgang"
+	upgrade_class = dueling
+	civilization = norse
+	icon = holmgang
+	description = "The Holmgang is a form of judicial duel, used to settle disputes.\n\nEffect: +20% Bonus vs. Infantry for sword infantry."
+	costs = {
+		time = 250
+		copper = 2000
+	}
+	modifier = {
+		bonus_against_infantry = 20
+		points = 10
+		unit_classes = {
+			infantry
+			veteran_infantry
+			heroic_infantry
+			marine_infantry
+		}
+	}
+	preconditions = {
+		civilization = norse
+	}
+}

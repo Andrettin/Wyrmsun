@@ -1,3 +1,10 @@
+dueling = {
+	name = "Dueling"
+	category = army
+	age = iron_age
+	tech_tree_parent_unit_class = barracks
+}
+
 military_tradition = {
 	name = "Military Tradition"
 	category = army

@@ -9,3 +9,15 @@ develop_house_burning = {
 	popup = popup_research
 	unit_classes = { barracks }
 }
+
+develop_holmgang = {
+	pos = 12
+	action = research
+	value = upgrade_holmgang
+	allowed = check_single_research
+	key = m
+	hint = "Develop Hol~!mgang"
+	description = "+20% Bonus vs. Infantry for sword infantry."
+	popup = popup_research
+	unit_classes = { barracks }
+}
