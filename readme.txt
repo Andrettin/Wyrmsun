@@ -61,11 +61,17 @@ https://github.com/Andrettin/Wyrmsun
 - Fixed issue which could cause the Smithy building to not update properly when changing the faction from the Brising Clan to Knalga.
 - Added Gaulish Town Hall.
 
+* Events
+- Added a few random events creating gnolls and gnoll-spawning buildings, if there are already gnolls in the general area.
+
 * Maps
 - Added the "Gallic Fields" (256x256, 3 players) and "Gallic Highlands" custom maps (256x256, 2 players), based on maps from 0 A.D. (which are licensed under an open-source license).
 
 * Quests
 - Fixed crash which occurred on start for The Wyrm legacy quest.
+
+* Scenarios
+- The Asa Tribe now starts off with a Chieftain's Hall built in Kiel for the Settlement of Scandinavia scenario.
 
 * Upgrades
 - Added Holmgang upgrade for the Norse (+20% bonus vs. infantry for sword infantry).

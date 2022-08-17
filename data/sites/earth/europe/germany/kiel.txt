@@ -11,11 +11,11 @@ kiel = {
 	history = {
 		-2800 = {
 			owner = asa_tribe
+			building_classes += town_hall
 		}
 		
 		-1600 = {
 			owner = hersing_tribe #Hersir's tribe, from the Norse myth of Rig; in the myths, there was a boggy ground between Jarl's hall and that of Hersir
-			building_classes += town_hall
 			building_classes += lumber_mill
 		}
 		
