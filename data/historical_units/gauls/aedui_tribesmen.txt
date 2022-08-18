@@ -2,7 +2,8 @@
 
 aedui_warriors = {
 	unit_class = infantry
-	quantity = 6
+	quantity = 12
+	ai_active = false
 	
 	history = {
 		-71 = {
@@ -19,7 +20,8 @@ aedui_warriors = {
 
 aedui_archers = {
 	unit_class = shooter
-	quantity = 3
+	quantity = 6
+	ai_active = false
 	
 	history = {
 		-71 = {
