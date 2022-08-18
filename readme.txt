@@ -80,6 +80,9 @@ https://github.com/Andrettin/Wyrmsun
 * Upgrades
 - Added Holmgang upgrade for the Norse (+20% bonus vs. infantry for sword infantry).
 
+* User Interface
+- Reworked how objectives and in-game messages are displayed (e.g. making use of the newer font and more modern interface capabilities).
+
 -----------------------------------------------------------------------
 - 5.3.6
 -----------------------------------------------------------------------
