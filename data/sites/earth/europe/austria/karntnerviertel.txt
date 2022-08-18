@@ -7,4 +7,10 @@ karntnerviertel = { #historical quarter of the first district of Vienna
 	regions = {
 		vienna
 	}
+	
+	history = {
+		1160 = {
+			building_classes += temple #Stephansdom
+		}
+	}
 }
