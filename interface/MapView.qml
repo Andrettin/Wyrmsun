@@ -25,6 +25,15 @@ Item {
 		acceptedButtons: Qt.AllButtons
 	}
 	
+	ObjectiveListView {
+		id: objective_list
+		anchors.top: top_bar.bottom
+		anchors.topMargin: 8 * wyrmgus.scale_factor
+		anchors.bottom: message_list.bottom //just above the infopanel
+		anchors.left: parent.left
+		width: 256 * wyrmgus.scale_factor
+	}
+	
 	MessageListView {
 		id: message_list
 		anchors.top: top_bar.bottom
