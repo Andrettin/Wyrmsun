@@ -25,6 +25,16 @@ Item {
 		acceptedButtons: Qt.AllButtons
 	}
 	
+	MessageListView {
+		id: message_list
+		anchors.top: top_bar.bottom
+		anchors.bottom: parent.bottom
+		anchors.bottomMargin: 186 * wyrmgus.scale_factor + 8 * wyrmgus.scale_factor //just above the infopanel
+		anchors.left: parent.left
+		anchors.right: parent.right
+		visible: wyrmgus.preferences.show_messages
+	}
+	
 	TopBar {
 		id: top_bar
 		anchors.top: parent.top

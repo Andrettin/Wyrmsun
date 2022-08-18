@@ -743,7 +743,6 @@ DefinePanelContents(
 
 if not (ui_loaded_first_time) then
 	CUserInterface:get().MessageFont = Fonts["game"]
-	CUserInterface:get().MessageScrollSpeed = 5
 
 	function GetRGBA(r, g, b, a)
 		return r + g*0x100 + b*0x10000 + a*0x1000000
