@@ -18,19 +18,19 @@ Item {
 		color: "black"
 		radius: 5
 		opacity: 0.5
-		height: message_list.contentHeight > 0 ? (message_list.contentHeight + 8 * wyrmgus.scale_factor * 2) : 0
+		height: message_list.contentHeight > 0 ? (message_list.contentHeight + 4 * wyrmgus.scale_factor * 2) : 0
 	}
 	
 	ListView {
 		id: message_list
 		anchors.left: message_list_item.left
-		anchors.leftMargin: 8 * wyrmgus.scale_factor
+		anchors.leftMargin: 4 * wyrmgus.scale_factor
 		anchors.right: message_list_item.right
-		anchors.rightMargin: 8 * wyrmgus.scale_factor
+		anchors.rightMargin: 4 * wyrmgus.scale_factor
 		anchors.top: message_list_item.top
-		anchors.topMargin: 8 * wyrmgus.scale_factor
+		anchors.topMargin: 4 * wyrmgus.scale_factor
 		anchors.bottom: message_list_item.bottom
-		anchors.bottomMargin: 8 * wyrmgus.scale_factor
+		anchors.bottomMargin: 4 * wyrmgus.scale_factor
 		contentY: verticalLayoutDirection === ListView.BottomToTop ? -contentHeight : 0
 		leftMargin: 0
 		rightMargin: 0
