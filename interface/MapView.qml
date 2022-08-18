@@ -31,7 +31,6 @@ Item {
 		anchors.topMargin: 8 * wyrmgus.scale_factor
 		anchors.bottom: message_list.bottom //just above the infopanel
 		anchors.left: parent.left
-		width: 256 * wyrmgus.scale_factor
 	}
 	
 	MessageListView {

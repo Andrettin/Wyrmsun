@@ -7,6 +7,7 @@ Item {
 	
 	property var model: []
 	property var layout_direction: ListView.TopToBottom
+	property bool fit_to_content_width: false
 	
 	//draw a semi-transparent rectangle behind the messages, to make them more readable
 	Rectangle {
@@ -14,10 +15,11 @@ Item {
 		anchors.top: message_list_item.layout_direction === ListView.TopToBottom ? parent.top : undefined
 		anchors.bottom: message_list_item.layout_direction === ListView.BottomToTop ? parent.bottom : undefined
 		anchors.left: parent.left
-		anchors.right: parent.right
+		anchors.right: message_list_item.fit_to_content_width ? undefined : parent.right
 		color: "black"
 		radius: 5
 		opacity: 0.5
+		width: Math.min(message_list_item.width, message_list.contentItem.childrenRect.width + 4 * wyrmgus.scale_factor * 2)
 		height: message_list.contentHeight > 0 ? (message_list.contentHeight + 4 * wyrmgus.scale_factor * 2) : 0
 	}
 	
