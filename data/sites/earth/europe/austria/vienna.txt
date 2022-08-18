@@ -50,10 +50,6 @@ vienna = {
 			owner = austria #Austria became a duchy with Vienna in its possession in 1156; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		}
 		
-		1365 = {
-			#building_classes += university #University founded in Vienna in 1365; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
-		}
-		
 		1477 = {
 			owner = austria #Vienna was an Austrian possession about 1477; Source: William R. Shepherd, "Historical Atlas", 1923, pp. 86-87.
 		}

@@ -2,7 +2,14 @@ schottenviertel = { #historical quarter of the first district of Vienna
 	name = "Schottenviertel"
 	map_template = earth
 	geocoordinate = { 16.364444444444 48.211944444444 } #Schottenstift
+	base_unit_type = unit_building_site
 	regions = {
 		vienna
+	}
+	
+	history = {
+		1365 = {
+			building_classes += university #University founded in Vienna in 1365; Source: William R. Shepherd, "Historical Atlas", 1923, p. 100.
+		}
 	}
 }
