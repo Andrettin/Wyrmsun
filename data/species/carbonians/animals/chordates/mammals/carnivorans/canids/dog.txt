@@ -1,0 +1,19 @@
+dog = {
+	name = "Dog"
+	supertaxon = canidae
+	era = holocene
+	homeworld = earth
+	ecological_niche = predator
+	domestic = true
+	pre_evolutions = {
+		osteoborus
+	}
+	native_terrain_types = {
+		grass
+		dirt
+		snow
+	}
+	specimen_names = {
+		"Surefoot" #William Morris, "The Roots of the Mountains", 1889, p. 82.
+	}
+}
