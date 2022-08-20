@@ -76,6 +76,7 @@ https://github.com/Andrettin/Wyrmsun
 - The Asa Tribe now starts off with a Chieftain's Hall built in Kiel for the Settlement of Scandinavia scenario.
 - Stone Piles are no longer generated near player starting positions for the scenarios set on Earth.
 - Increased the size of the Earth scenario map for from 384x384 to 512x512.
+- Added predefined territories for the Alexandria, Algiers, Carthage, Cyrene, Rabat and Tripoli settlements for the Earth scenario map.
 
 * Upgrades
 - Added Holmgang upgrade for the Norse (+20% bonus vs. infantry for sword infantry).

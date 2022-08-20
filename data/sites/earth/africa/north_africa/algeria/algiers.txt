@@ -3,6 +3,7 @@ algiers = {
 	map_template = earth
 	geocoordinate = { 3.05055252952 36.76306479800 } #from Natural Earth
 	base_unit_type = unit_settlement_site
+	color = { 136 222 8 }
 	regions = {
 		africa
 	}

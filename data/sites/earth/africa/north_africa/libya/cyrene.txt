@@ -3,6 +3,7 @@ cyrene = {
 	map_template = earth
 	geocoordinate = { 21.86216914740 32.82813702290 } #from Natural Earth (Shahhat)
 	base_unit_type = unit_settlement_site
+	color = { 204 54 47 }
 	cultural_names = {
 		arab = "Shahhat"
 	}
