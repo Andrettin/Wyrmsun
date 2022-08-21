@@ -36,6 +36,11 @@ marcomannia = {
 				faction = hermunduri_tribe
 				state = alliance
 			}
+			
+			diplomacy_state = {
+				faction = quadi_tribe
+				state = alliance
+			}
 		}
 		
 		172 = {

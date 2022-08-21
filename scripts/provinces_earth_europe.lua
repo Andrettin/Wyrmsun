@@ -1338,7 +1338,7 @@ DefineProvince("Franconia", {
 	World = "earth",
 --	SettlementLocation = {508, 114}, -- Würzburg
 	HistoricalOwners = {
-		161, "suebi", "hermunduri-tribe", -- The area was inhabited by the Hermunduri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "hermunduri_tribe", -- The area was inhabited by the Hermunduri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		507, "teuton", "thuringia", -- Political situation in 507-534 in Europe; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		531, "frankish", "francia" -- Conquest of the Thuringian lands by Francia in 531 AD; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 	},
@@ -1391,11 +1391,11 @@ DefineProvince("Galicia", {
 		"goth", "bastarnia",
 		"goth", "gepid_tribe",
 		"slav", "poland",
-		"suebi", "buri-tribe"
+		"suebi", "buri_tribe"
 	},
 	HistoricalOwners = {
 		-264, "goth", "bastarnia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "suebi", "buri-tribe", -- The area was inhabited by the Buri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "suebi", "buri_tribe", -- The area was inhabited by the Buri in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "slav", "poland" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
@@ -2429,13 +2429,13 @@ DefineProvince("Moravia", {
 	Claims = {
 		"basque", "linearware-tribe",
 		"slav", "moravia",
-		"suebi", "buri-tribe",
-		"suebi", "quadi-tribe",
+		"suebi", "buri_tribe",
+		"suebi", "quadi_tribe",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-5500, "basque", "linearware-tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-9, "suebi", "quadi-tribe", -- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
+		-9, "suebi", "quadi_tribe", -- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
 		161, "teuton", "lombardy", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		830, "slav", "moravia", -- Mojmír was duke of Moravia 830-846; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 606.
 		869, "frankish", "east-francia", -- Moravia conquered by East Francia in 869; Source: James Westfall Thompson, "Medieval German Expansion in Bohemia", 1926, p. 607.
@@ -3244,14 +3244,14 @@ DefineProvince("Slovakia", {
 		"basque", "linearware-tribe",
 		"gaul", "cotini-tribe",
 		"goth", "gepid_tribe",
-		"suebi", "quadi-tribe",
+		"suebi", "quadi_tribe",
 		"thracian", "carpi-tribe"
 	},
 	HistoricalOwners = {
 		-5500, "basque", "linearware-tribe", -- Linear Pottery culture existed in parts of Central Europe between 7000 and 2000 BC; since the other source gives them as arriving in northern Poland and Germany c. 5500 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-264, "gaul", "cotini-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		-9, "suebi", "quadi-tribe", -- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
-		161, "suebi", "quadi-tribe", -- Slovakia was inhabited by the Quadi in 161-180 AD (while the Cotini inhabited eastern Slovakia); Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-9, "suebi", "quadi_tribe", -- if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
+		161, "suebi", "quadi_tribe", -- Slovakia was inhabited by the Quadi in 161-180 AD (while the Cotini inhabited eastern Slovakia); Source: "Ancient Warfare VII.6", 2013, p. 7.
 		526, "teuton", "lombardy", -- Political situation in 526 in Europe; Source: William R. Shepherd, "Historical Atlas", 1911, p. 52.
 		919, "magyar", "hungary", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.
@@ -3481,11 +3481,11 @@ DefineProvince("Thuringia", {
 	},
 --	SettlementLocation = {511, 110}, -- Erfurt
 	Claims = {
-		"suebi", "hermunduri-tribe",
+		"suebi", "hermunduri_tribe",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-264, "suebi", "hermunduri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "suebi", "hermunduri_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "frankish", "ubia", -- The area was inhabited by the Ubii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
@@ -3716,12 +3716,12 @@ DefineProvince("Upper Saxony", {
 	},
 --	SettlementLocation = {515, 109}, -- Leipzig
 	Claims = {
-		"suebi", "hermunduri-tribe",
+		"suebi", "hermunduri_tribe",
 		"suebi", "suebia",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-264, "suebi", "hermunduri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "suebi", "hermunduri_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "suebi", "suebia", -- The area was inhabited by the Suebi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},

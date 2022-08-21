@@ -1,0 +1,19 @@
+buri_tribe = {
+	name = "Buri Tribe"
+	adjective = "Buri"
+	civilization = suebi #accurate?
+	parent_faction = suebia #accurate?
+	type = tribe
+	color = violet
+	default_tier = duchy
+	upgrade = upgrade_faction_buri_tribe
+	icon = flag_osterby_white_on_violet
+	develops_to = {
+		#galicia
+		bavaria
+		marcomannia
+	}
+	core_settlements = {
+		pressburg
+	}
+}

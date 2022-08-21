@@ -1,0 +1,69 @@
+quadi_tribe = {
+	name = "Quadi Tribe"
+	adjective = "Quadi"
+	civilization = suebi
+	parent_faction = marcomannia
+	type = tribe
+	color = brown
+	default_tier = duchy
+	upgrade = upgrade_faction_quadi_tribe
+	icon = flag_osterby_orange_on_gray
+	develops_to = {
+		#galicia
+		bavaria
+		marcomannia
+	}
+	core_settlements = {
+		pressburg
+	}
+	
+	history = {
+		170 = {
+			#in 170 a coalition led by the Marcomanni (which included the Quadi) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
+			diplomacy_state = {
+				faction = rome
+				state = war
+			}
+		}
+		
+		171 = {
+			#in 171 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
+			diplomacy_state = {
+				faction = rome
+				state = peace
+			}
+		}
+		
+		173 = {
+			#the Quadi entered conflict with the Romans again in (apparently) 173; Source: "Ancient Warfare VII.6", 2013, p. 8.
+			diplomacy_state = {
+				faction = rome
+				state = war
+			}
+		}
+		
+		174 = {
+			#in 174 the Romans forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
+			diplomacy_state = {
+				faction = rome
+				state = peace
+			}
+		}
+		
+		177 = {
+			#the Quadi entered conflict with the Romans again in 177; Source: "Ancient Warfare VII.6", 2013, p. 8.
+			diplomacy_state = {
+				faction = rome
+				state = war
+			}
+		}
+		
+		179 = {
+			#in 179 the Romans again forced the Quadi to a peace; Source: "Ancient Warfare VII.6", 2013, p. 8.
+			diplomacy_state = {
+				faction = rome
+				state = peace
+			}
+		}
+	}
+}

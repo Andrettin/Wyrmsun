@@ -1,0 +1,37 @@
+hermunduri_tribe = {
+	name = "Hermunduri Tribe"
+	adjective = "Hermunduri"
+	civilization = suebi #accurate?
+	type = tribe
+	color = green
+	default_tier = duchy
+	upgrade = upgrade_faction_hermunduri_tribe
+	icon = flag_osterby
+	develops_to = {
+		bavaria
+		thuringia
+	}
+	core_settlements = {
+		wurzburg
+	}
+	
+	history = {
+		170 = {
+			#in 170 a coalition led by the Marcomanni (which included the Hermunduri) crossed the Danube and attacked the Romans; Source: "Ancient Warfare VII.6", 2013, p. 29.
+			
+			diplomacy_state = {
+				faction = rome
+				state = war
+			}
+		}
+		
+		171 = {
+			#in 171 the Romans forced most of the tribes of the Marcomannic coalition to a peace; Source: "Ancient Warfare VII.6", 2013, p. 32.
+			
+			diplomacy_state = {
+				faction = rome
+				state = peace
+			}
+		}
+	}
+}
