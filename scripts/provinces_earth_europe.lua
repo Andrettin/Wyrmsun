@@ -51,7 +51,7 @@ DefineProvince("Alsace", {
 	},
 	Claims = {
 		"gaul", "tribocci-tribe",
-		"suebi", "alamanni-tribe",
+		"suebi", "alamannia",
 		"teuton", "swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "holy-rome"				
 	},
@@ -60,7 +60,7 @@ DefineProvince("Alsace", {
 		-58, "", "", -- in 58 BC Caesar fought Ariovistus' Suebi and the latter were terribly beaten; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 219.
 		-54, "gaul", "tribocci-tribe", -- the Tribocci held the lands between Strasbourg and Artzenheim (apparently) in 54 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, p. 222.
 		-50, "latin", "rome", -- Gaul conquered by Rome in 50 BC; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		481, "suebi", "alamanni-tribe", -- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		481, "suebi", "alamannia", -- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		506, "frankish", "francia", -- Alemanni lands (Alsace, Baden, Wurtemberg, Augsburg and etc.) conquered by the Franks in 506; Source: "Historica: Der Grosse Atlas der Weltgeschichte mit über 1200 Karten", 2009, p. 60.
 		919, "teuton", "holy-rome" -- Duchy of Swabia; Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
@@ -248,7 +248,7 @@ DefineProvince("Augsburg", {
 	},
 --	SettlementLocation = {510, 118}, -- Augsburg
 	Claims = {
-		"suebi", "alamanni-tribe",
+		"suebi", "alamannia",
 		"teuton", "swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "holy-rome"
 	},
@@ -265,7 +265,7 @@ DefineProvince("Baden", {
 	},
 --	SettlementLocation = {503, 117}, -- Rastatt
 	Claims = {
-		"suebi", "alamanni-tribe",
+		"suebi", "alamannia",
 		"teuton", "baden",
 		"teuton", "swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "holy-rome"
@@ -3995,7 +3995,7 @@ DefineProvince("Wurtemberg", {
 	},
 --	SettlementLocation = {506, 117}, -- Stuttgart
 	Claims = {
-		"suebi", "alamanni-tribe",
+		"suebi", "alamannia",
 		"teuton", "swabia", -- Part of the Duchy of Swabia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "wurtemberg",
 		"teuton", "holy-rome"

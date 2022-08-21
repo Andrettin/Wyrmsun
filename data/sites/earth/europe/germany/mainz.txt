@@ -26,11 +26,11 @@ mainz = {
 		}
 		
 		481 = {
-			owner = alamanni_tribe #Mayence was an Alamannic possession in the 481-496 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+			owner = alamannia #Mayence was an Alamannic possession in the 481-496 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		}
 		
 		486 = {
-			owner = alamanni_tribe #Mayence was in possession of the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = alamannia #Mayence was in possession of the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		526 = {

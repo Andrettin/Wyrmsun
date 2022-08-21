@@ -22,7 +22,7 @@ stuttgart = {
 		}
 		
 		486 = {
-			owner = alamanni_tribe #part of Alamanni territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+			owner = alamannia #part of Alamanni territory in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}
 		
 		814 = {

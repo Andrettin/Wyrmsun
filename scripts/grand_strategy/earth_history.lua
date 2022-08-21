@@ -926,10 +926,10 @@ if (GrandStrategyYear >= 481) then
 	AddProvinceClaim("Lower Rhine", "frankish", "francia")
 
 	-- Political situation of the territories surrounding the Frankish realm in 481-814 AD; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-	SetProvinceOwner("Baden", "teuton", "alamanni-tribe")
-	SetProvinceOwner("Wurtemberg", "teuton", "alamanni-tribe")
-	SetProvinceOwner("Augsburg", "teuton", "alamanni-tribe")
-	SetProvinceOwner("Palatinate", "teuton", "alamanni-tribe")
+	SetProvinceOwner("Baden", "teuton", "alamannia")
+	SetProvinceOwner("Wurtemberg", "teuton", "alamannia")
+	SetProvinceOwner("Augsburg", "teuton", "alamannia")
+	SetProvinceOwner("Palatinate", "teuton", "alamannia")
 end
 
 if (GrandStrategyYear >= 486) then

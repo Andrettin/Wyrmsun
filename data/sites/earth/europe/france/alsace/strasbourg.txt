@@ -48,7 +48,7 @@ strasbourg = {
 		}
 		
 		481 = {
-			owner = alamanni_tribe #Strasburg was an Alamannic possession in the 481-536 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+			owner = alamannia #Strasburg was an Alamannic possession in the 481-536 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		}
 		
 		506 = {

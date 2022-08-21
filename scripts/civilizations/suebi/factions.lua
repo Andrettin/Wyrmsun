@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("alamanni-tribe", {
-	Name = "Alamanni Tribe",
-	Adjective = "Alamanni",
-	Civilization = "suebi",
-	Type = "tribe",
-	Color = "blue",
-	FactionUpgrade = "upgrade-faction-alamanni-tribe",
-	Icon = "flag_osterby_yellow_on_blue"
-})
-
 DefineFaction("buri-tribe", {
 	Name = "Buri Tribe",
 	Adjective = "Buri",

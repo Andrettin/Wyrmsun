@@ -64,6 +64,9 @@ https://github.com/Andrettin/Wyrmsun
 * Events
 - Added a few random events creating gnolls and gnoll-spawning buildings, if there are already gnolls in the general area.
 
+* Faction
+- The Alamanni Tribe is now a polity instead.
+
 * Maps
 - Added the "Gallic Fields" (256x256, 3 players) and "Gallic Highlands" custom maps (256x256, 2 players), based on maps from 0 A.D. (which are licensed under an open-source license).
 - Removed the Annwn, Ulfdalir and Random Dungeon custom maps.

@@ -50,8 +50,8 @@ DefineSite("vindonissa", {
 	Position = {4029, 969},
 	HistoricalOwners = {
 		395, "rome", -- Vindonissa was a part of the Roman Empire in 395; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 42-43.
-		481, "alamanni-tribe", -- Vindonissa's area was an Alamannic possession in the 481-536 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
-		486, "alamanni-tribe", -- Vindonissa's area was belonged to the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
+		481, "alamannia", -- Vindonissa's area was an Alamannic possession in the 481-536 period; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
+		486, "alamannia", -- Vindonissa's area was belonged to the Alamanni in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		561, "austrasia" -- Vindonissa's area went to Sigibert when Chlotar I died in 561; Source: Gustav Droysen, "Droysens Allgemeiner Historischer Handatlas", 1886, p. 20.
 	},
 	HistoricalBuildings = {

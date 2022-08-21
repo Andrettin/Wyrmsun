@@ -1,0 +1,14 @@
+alamannia = {
+	name = "Alamannia"
+	adjective = "Alamanni"
+	civilization = suebi
+	type = polity
+	color = blue
+	default_tier = duchy
+	default_government_type = tribe
+	upgrade = upgrade_faction_alamannia
+	icon = flag_osterby_yellow_on_blue
+	core_settlements = {
+		stuttgart
+	}
+}
