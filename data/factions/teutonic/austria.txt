@@ -10,6 +10,9 @@ austria = {
 	icon = icon_flag_old_austria
 	upgrade = upgrade_faction_austria
 	default_capital = vienna
+	develops_to = {
+		germany
+	}
 	core_settlements = {
 		vienna
 	}

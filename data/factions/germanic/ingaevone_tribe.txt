@@ -7,6 +7,17 @@ ingaevone_tribe = { #according to Tacitus one of the earliest Germanic tribes; S
 	default_tier = duchy #tribe
 	icon = flag_black_raven_on_white
 	upgrade = upgrade_seafaring_faction
+	develops_to = {
+		anglia
+		avionia
+		charude_tribe
+		jutland
+		chaucia
+		cheruscia
+		friesland
+		saxony
+		varinia
+	}
 	
 	#lived near the sea
 }

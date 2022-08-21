@@ -9,6 +9,9 @@ denmark = {
 	default_capital = copenhagen
 	upgrade = upgrade_faction_denmark
 	icon = flag_black_raven_on_white
+	develops_to = {
+		north_sea
+	}
 	core_settlements = {
 		copenhagen
 	}

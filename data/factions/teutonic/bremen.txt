@@ -7,6 +7,9 @@ bremen = {
 	default_tier = duchy
 	icon = icon_flag_five_white_birds_on_red
 	upgrade = upgrade_faction_bremen
+	develops_to = {
+		saxony
+	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

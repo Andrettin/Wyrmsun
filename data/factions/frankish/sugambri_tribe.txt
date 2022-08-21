@@ -7,4 +7,7 @@ sugambri_tribe = {
 	default_tier = duchy
 	upgrade = upgrade_faction_sugambri_tribe
 	icon = icon_flag_five_black_birds_on_purple
+	develops_to = {
+		salia
+	}
 }

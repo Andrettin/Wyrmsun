@@ -7,6 +7,9 @@ franconia = { #represents the German region, so it uses base Teuton elements, ra
 	default_tier = duchy #Franconia was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	icon = icon_flag_five_purple_birds_on_green
 	upgrade = upgrade_faction_franconia
+	develops_to = {
+		germany
+	}
 	core_settlements = {
 		wurzburg
 	}

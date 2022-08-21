@@ -9,6 +9,7 @@ anglo_saxon = {
 	description = "When the Angles, Saxons and Jutes migrated to the British Isles, they intermingled and gave rise to a new people - the Anglo-Saxons. Conquering vast swathes of land, they founded seven kingdoms who vied with each other for supremacy. For a time, Anglo-Saxon scholarship was one of the most sophisticated in Europe, and their learned men were invited to the most powerful courts on the Continent."
 	develops_from = {
 		germanic
+		teutonic
 	}
 	conditions = {
 		upgrade_class = ironworking

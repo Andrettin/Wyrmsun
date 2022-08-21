@@ -9,4 +9,8 @@ hlesing_tribe = {
 	upgrade = upgrade_faction_jarling_tribe
 	default_ai = passive
 	background = "In Norse mythology, Thor (accompanied by Thialfi) slew a group of savage brides of berserkers at the island of Hlesey."
+	develops_to = {
+		denmark
+		jutland
+	}
 }

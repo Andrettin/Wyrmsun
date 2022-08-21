@@ -8,6 +8,9 @@ englaland = {
 	default_capital = london
 	upgrade = upgrade_hunting_faction
 	icon = icon_flag_cyan_lion_on_red
+	develops_to = {
+		england
+	}
 	core_settlements = {
 		london
 		tamworth

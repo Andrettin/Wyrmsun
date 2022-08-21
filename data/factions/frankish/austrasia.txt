@@ -1,4 +1,7 @@
 austrasia = {
+	develops_to = {
+		east_francia
+	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

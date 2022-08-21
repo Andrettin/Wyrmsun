@@ -7,4 +7,9 @@ skeldung_tribe = { #Skjoldung in the original Norse sagas, here rendered in Prot
 	default_tier = duchy #tribe
 	icon = flag_red_raven_on_brown
 	upgrade = upgrade_faction_skeldung_tribe
+	develops_to = {
+		denmark
+		jutland
+		scania
+	}
 }

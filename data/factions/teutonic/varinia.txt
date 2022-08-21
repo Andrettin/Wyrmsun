@@ -7,6 +7,10 @@ varinia = {
 	default_tier = duchy
 	icon = icon_flag_green_lion_on_orange
 	upgrade = upgrade_faction_varinia
+	develops_to = {
+		saxony
+		mecklenburg
+	}
 	core_settlements = {
 		kiel
 	}

@@ -7,6 +7,9 @@ thuringia = {
 	default_tier = duchy #Thuringia was a landgraviate in 1378; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 78-79.
 	icon = icon_flag_yellow_lion_on_cyan
 	upgrade = upgrade_faction_thuringia
+	develops_to = {
+		germany
+	}
 	core_settlements = {
 		erfurt
 	}

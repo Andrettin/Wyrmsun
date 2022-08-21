@@ -7,4 +7,7 @@ chamavi_tribe = {
 	default_tier = duchy
 	upgrade = upgrade_faction_chamavi_tribe
 	icon = icon_flag_five_orange_birds_on_black
+	develops_to = {
+		salia
+	}
 }

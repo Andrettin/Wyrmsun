@@ -7,6 +7,9 @@ jutland = {
 	default_tier = duchy
 	icon = icon_flag_cyan_lion_on_red
 	upgrade = upgrade_faction_jutland
+	develops_to = {
+		kent
+	}
 	core_settlements = {
 		aarhus
 	}

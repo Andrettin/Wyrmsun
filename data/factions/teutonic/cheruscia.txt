@@ -7,6 +7,12 @@ cheruscia = {
 	default_tier = duchy
 	icon = icon_flag_green_lion_on_purple
 	upgrade = upgrade_faction_cheruscia
+	develops_to = {
+		saxony
+		brunswick
+		magdeburg
+		westphalia
+	}
 	core_settlements = {
 		erfurt
 	}

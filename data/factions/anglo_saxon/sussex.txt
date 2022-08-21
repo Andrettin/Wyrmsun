@@ -9,6 +9,9 @@ sussex = {
 	default_capital = york
 	upgrade = upgrade_faction_sussex
 	icon = icon_flag_yellow_lion_on_cyan
+	develops_to = {
+		englaland
+	}
 	core_settlements = {
 		winchester
 	}

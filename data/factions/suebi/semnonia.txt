@@ -8,6 +8,10 @@ semnonia = {
 	default_government_type = tribe
 	upgrade = upgrade_faction_semnonia
 	icon = flag_osterby_orange_on_gray
+	develops_to = {
+		brandenburg
+		galicia
+	}
 	core_settlements = {
 		berlin
 	}

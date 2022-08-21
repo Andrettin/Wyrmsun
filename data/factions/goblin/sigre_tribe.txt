@@ -7,4 +7,10 @@ sigre_tribe = { #created by Jesse Crider
 	default_tier = duchy #tribe
 	icon = icon_flag_red_skull_on_yellow
 	upgrade = upgrade_faction_sigre_tribe
+	develops_to = {
+		ezmarria
+		myridia
+		stilgar
+		tenebris
+	}
 }

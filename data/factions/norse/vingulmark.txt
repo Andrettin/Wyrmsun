@@ -1,9 +1,9 @@
 vingulmark = {
 	default_tier = duchy #petty kingdom
+	develops_to = {
+		norway
+	}
 	core_settlements = {
 		oslo
-	}
-	conditions = {
-		scripted_condition = is_civilized
 	}
 }

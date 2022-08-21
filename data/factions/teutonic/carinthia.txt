@@ -1,4 +1,8 @@
 carinthia = {
+	develops_to = {
+		austria
+		germany
+	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

@@ -1,6 +1,9 @@
 goldhoof_clan = {
 	adjective = "Goldhoof"
 	default_tier = county #clan
+	develops_to = {
+		joruvellir
+	}
 	
 	history = {
 		-2800 = {

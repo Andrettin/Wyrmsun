@@ -7,4 +7,7 @@ prideblade_tribe = {
 	default_tier = duchy #tribe
 	icon = icon_flag_black_skull_on_white
 	upgrade = upgrade_faction_prideblade_tribe
+	develops_to = {
+		aurvang
+	}
 }

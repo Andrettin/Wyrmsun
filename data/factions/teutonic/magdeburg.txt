@@ -7,6 +7,10 @@ magdeburg = {
 	default_tier = duchy #Magdeburg was an archbishopric in 1547; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 114-115.
 	icon = icon_flag_five_white_birds_on_red
 	upgrade = upgrade_faction_magdeburg
+	develops_to = {
+		brandenburg
+		saxony
+	}
 	conditions = {
 		scripted_condition = is_civilized
 		unit_type = unit_teuton_temple

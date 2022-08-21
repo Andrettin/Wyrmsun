@@ -8,6 +8,9 @@ east_anglia = {
 	min_tier = county #ealdormanry
 	upgrade = upgrade_faction_east_anglia
 	icon = icon_flag_five_orange_birds_on_black
+	develops_to = {
+		englaland
+	}
 	core_settlements = {
 		london
 	}

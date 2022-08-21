@@ -8,6 +8,10 @@ northumbria = {
 	default_capital = york
 	upgrade = upgrade_faction_northumbria
 	icon = icon_flag_five_orange_birds_on_black
+	develops_to = {
+		englaland
+		scotland
+	}
 	core_settlements = {
 		york
 	}

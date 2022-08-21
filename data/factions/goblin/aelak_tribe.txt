@@ -7,4 +7,10 @@ aelak_tribe = { #created by Jesse Crider
 	default_tier = duchy #tribe
 	icon = icon_flag_brown_skull_on_red
 	upgrade = upgrade_faction_aelak_tribe
+	develops_to = {
+		ezmarria
+		myridia
+		stilgar
+		tenebris
+	}
 }

@@ -8,4 +8,7 @@ wildfang_tribe = {
 	icon = icon_flag_brown_skull_on_red
 	upgrade = upgrade_faction_wildfang_tribe
 	description = "The savage Wildfang tribe lives off raiding dwarven villages. Their swordsmen are renowned for their lethality."
+	develops_to = {
+		aurvang
+	}
 }

@@ -9,6 +9,10 @@ brising_clan = {
 	upgrade = upgrade_faction_brising_clan
 	description = "The Brising clan was one of the first dwarven clans ever known. It made its home in Svarinshaug, where they tamed the fierce forces of nature."
 	background = "In Norse mythology, \"Brising\" was an appelation used for the dwarves in general, or more specifically for the ones who created the necklace Brisingamen. \"Brising\" means \"flame\" in Old Norse."
+	develops_to = {
+		knalga
+		lyr
+	}
 	core_settlements = {
 		svarinshaug
 	}

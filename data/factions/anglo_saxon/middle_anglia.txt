@@ -7,6 +7,9 @@ middle_anglia = {
 	default_tier = duchy
 	upgrade = upgrade_faction_middle_anglia
 	icon = icon_flag_five_purple_birds_on_green
+	develops_to = {
+		mercia
+	}
 	core_settlements = {
 		tamworth
 	}

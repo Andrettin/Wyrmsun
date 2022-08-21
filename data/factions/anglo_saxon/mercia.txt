@@ -10,6 +10,9 @@ mercia = {
 	icon = icon_flag_five_blue_birds_on_orange
 	upgrade = upgrade_riding_faction
 	description = "The Mierce, or Mercians, were an Anglian people who inhabited marchlands close to Celtic territory. They founded Mercia, an Anglo-Saxon kingdom in the central parts of England."
+	develops_to = {
+		englaland
+	}
 	core_settlements = {
 		tamworth
 	}

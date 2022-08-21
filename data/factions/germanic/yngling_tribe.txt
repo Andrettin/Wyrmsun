@@ -8,4 +8,15 @@ yngling_tribe = { #mythical Swedish dynasty, Yngve was a son of Odin set to succ
 	default_capital = stockholm
 	icon = flag_blue_raven_on_yellow
 	upgrade = upgrade_agricultural_faction
+	develops_to = {
+		sweden
+		agder
+		halogaland
+		holmgard
+		hordaland
+		orkney
+		sogn
+		vestfold
+		vingulmark
+	}
 }

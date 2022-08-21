@@ -7,4 +7,10 @@ issudru_tribe = { #created by Jesse Crider
 	default_tier = duchy #tribe
 	icon = flag_white_skull_on_black
 	upgrade = upgrade_faction_issudru_tribe
+	develops_to = {
+		ezmarria
+		myridia
+		stilgar
+		tenebris
+	}
 }

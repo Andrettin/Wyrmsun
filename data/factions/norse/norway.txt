@@ -9,6 +9,9 @@ norway = {
 	default_capital = oslo
 	upgrade = upgrade_faction_norway
 	icon = flag_red_raven_on_brown
+	develops_to = {
+		north_sea
+	}
 	core_settlements = {
 		oslo
 	}

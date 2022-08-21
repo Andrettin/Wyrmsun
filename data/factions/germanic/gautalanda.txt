@@ -10,6 +10,23 @@ gautalanda = { #Proto-Germanic predecessors of the Goths, Geats and Gutes
 	icon = flag_black_raven_on_white
 	upgrade = upgrade_faction_gautalanda
 	background = "In the Gutasaga, Thieluar (who is identified by several scholars with the mythological figure Thialfi) was the first person to discover the island of Gotland. He lifted a curse on the island, and his lineage ruled over it for many years. As the island prospered, it grew overpopulated, and a group of locals went away to settle on the continent - a tale which is perhaps based on the historical migration of Germanic peoples to the mouth of the Vistula River."
+	develops_to = {
+		gautland
+		gotland
+		gothia
+		ostrogothia
+		visigothia
+		bastarnia
+		burgundy
+		#gepid_tribe
+		herulia
+		lugia
+		rugia
+		sciria
+		#silingae_tribe
+		#turcilingian_tribe
+		vandalia
+	}
 	core_settlements = {
 		gothenburg
 		linkoping

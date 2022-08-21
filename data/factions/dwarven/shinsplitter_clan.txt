@@ -1,3 +1,7 @@
 shinsplitter_clan = {
 	default_tier = county #clan
+	develops_to = {
+		knalga
+		kal_kartha
+	}
 }

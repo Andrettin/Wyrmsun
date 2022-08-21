@@ -65,6 +65,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added a few random events creating gnolls and gnoll-spawning buildings, if there are already gnolls in the general area.
 
 * Faction
+- Reworked the faction tree, so that factions once again have a predefined list of foundable factions which they can become.
 - The Alamanni, Chatti, Chauci, Ubii and Varini Tribes are now polities instead.
 - Removed the Driftwood faction.
 

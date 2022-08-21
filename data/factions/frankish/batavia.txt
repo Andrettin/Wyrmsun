@@ -8,6 +8,10 @@ batavia = {
 	default_government_type = tribe
 	upgrade = upgrade_faction_batavia
 	icon = icon_flag_five_blue_birds_on_orange
+	develops_to = {
+		netherlands
+		brabant
+	}
 	core_settlements = {
 		amsterdam
 	}

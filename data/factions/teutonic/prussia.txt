@@ -1,4 +1,7 @@
 prussia = {
+	develops_to = {
+		germany
+	}
 	core_settlements = {
 		konigsberg
 	}

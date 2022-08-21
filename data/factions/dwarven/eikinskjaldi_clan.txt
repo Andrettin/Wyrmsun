@@ -1,3 +1,7 @@
 eikinskjaldi_clan = {
 	default_tier = county #clan
+	develops_to = {
+		joruvellir
+		knalga
+	}
 }

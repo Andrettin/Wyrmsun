@@ -8,6 +8,12 @@ alamannia = {
 	default_government_type = tribe
 	upgrade = upgrade_faction_alamannia
 	icon = flag_osterby_yellow_on_blue
+	develops_to = {
+		baden
+		swabia
+		switzerland
+		wurtemberg
+	}
 	core_settlements = {
 		stuttgart
 	}

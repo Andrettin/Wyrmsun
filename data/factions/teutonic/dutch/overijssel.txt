@@ -7,6 +7,9 @@ overijssel = {
 	default_tier = barony #Overijssel was a lordship in 1559-1600; Source: William R. Shepherd, "Historical Atlas", 1911, p. 117.
 	icon = icon_flag_five_red_birds_on_yellow
 	upgrade = upgrade_faction_overijssel
+	develops_to = {
+		netherlands
+	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

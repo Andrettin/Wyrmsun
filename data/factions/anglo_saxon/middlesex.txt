@@ -7,6 +7,9 @@ middlesex = {
 	default_tier = county #shire
 	upgrade = upgrade_mercantile_faction
 	icon = icon_flag_five_purple_birds_on_green
+	develops_to = {
+		englaland
+	}
 	core_settlements = {
 		london
 	}

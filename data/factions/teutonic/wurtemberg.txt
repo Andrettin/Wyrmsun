@@ -1,4 +1,7 @@
 wurtemberg = {
+	develops_to = {
+		swabia
+	}
 	core_settlements = {
 		stuttgart
 	}

@@ -8,4 +8,7 @@ dreadskull_tribe = {
 	icon = flag_white_skull_on_black
 	upgrade = upgrade_faction_dreadskull_tribe
 	description = "The Dreadskull tribe is known for its mysticism, and is suspected by other tribes of practicing necromancy."
+	develops_to = {
+		aurvang
+	}
 }

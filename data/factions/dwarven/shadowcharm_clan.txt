@@ -1,3 +1,6 @@
 shadowcharm_clan = {
 	default_tier = county #clan
+	develops_to = {
+		kal_kartha
+	}
 }

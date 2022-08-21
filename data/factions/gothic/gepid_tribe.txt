@@ -7,6 +7,9 @@ gepid_tribe = {
 	default_tier = duchy #tribe
 	upgrade = upgrade_faction_gepid_tribe
 	icon = icon_flag_five_red_birds_on_yellow
+	develops_to = {
+		ostrogothia
+	}
 	core_settlements = {
 		pest
 	}

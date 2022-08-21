@@ -9,4 +9,8 @@ ubia = { #Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans
 	upgrade = upgrade_faction_ubia
 	icon = icon_flag_habsburg
 	description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti."
+	develops_to = {
+		cologne
+		salia
+	}
 }

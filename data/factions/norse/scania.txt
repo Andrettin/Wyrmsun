@@ -8,10 +8,11 @@ scania = {
 	default_capital = malmo
 	upgrade = upgrade_faction_denmark
 	icon = icon_flag_habsburg
+	develops_to = {
+		denmark
+		sweden
+	}
 	core_settlements = {
 		malmo
-	}
-	conditions = {
-		scripted_condition = is_civilized
 	}
 }

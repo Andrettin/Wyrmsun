@@ -1,4 +1,7 @@
 brunswick = {
+	develops_to = {
+		saxony
+	}
 	core_settlements = {
 		hanover
 	}

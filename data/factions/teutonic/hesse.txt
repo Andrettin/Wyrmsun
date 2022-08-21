@@ -7,6 +7,9 @@ hesse = {
 	default_tier = duchy #Hesse was a landgraviate in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	icon = icon_flag_cyan_lion_on_red
 	upgrade = upgrade_faction_hesse
+	develops_to = {
+		franconia
+	}
 	conditions = {
 		scripted_condition = is_civilized
 	}

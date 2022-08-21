@@ -8,6 +8,9 @@ aurvangling_tribe = {
 	upgrade = upgrade_faction_aurvangling_tribe
 	icon = icon_flag_orange_skull_on_teal
 	description = "The reclusive goblins of the Aurvang swamplands are wary of outsiders, with trespassers often finding themselves filled with arrows."
+	develops_to = {
+		aurvang
+	}
 	core_settlements = {
 		aurvang
 	}

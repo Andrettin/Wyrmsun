@@ -7,6 +7,14 @@ chaucia = {
 	default_tier = duchy
 	icon = icon_flag_five_purple_birds_on_green
 	upgrade = upgrade_faction_chaucia
+	develops_to = {
+		saxony
+		bremen
+		westphalia
+		essex
+		sussex
+		wessex
+	}
 	core_settlements = {
 		hanover
 	}

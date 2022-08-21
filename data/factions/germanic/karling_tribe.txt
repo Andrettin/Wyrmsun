@@ -9,6 +9,10 @@ karling_tribe = {
 	upgrade = upgrade_faction_karling_tribe
 	default_ai = passive
 	background = "In Norse mythology, Karl (rendered in Proto-Germanic as Karla) was one of the sons of the god Rig, and the ancestor of those belonging to the social class of peasants."
+	develops_to = {
+		denmark
+		jutland
+	}
 	
 	history = {
 		-3000 = {

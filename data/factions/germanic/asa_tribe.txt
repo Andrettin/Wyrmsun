@@ -9,6 +9,14 @@ asa_tribe = {
 	upgrade = upgrade_faction_asa_tribe
 	description = "The Asa are the legendary progenitors of the Germanic peoples."
 	background = "In the Ynglinga Saga, the Asa (another name for the Aesir) were Odin's people, who originally lived in Asaland (identified with Asia), a realm centered in the city of Asgard. They went forth from their original lands to Scandinavia and northern Central Europe, establishing themselves in those regions."
+	develops_to = {
+		denmark
+		sweden
+		gothia
+		saxony
+		suebia
+		francia
+	}
 	core_settlements = {
 		azov
 	}

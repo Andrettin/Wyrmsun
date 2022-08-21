@@ -5,8 +5,13 @@ saxony = {
 	type = polity
 	color = pink
 	default_tier = duchy #Saxony was a duchy in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+	max_tier = kingdom
 	icon = icon_flag_red_lion_on_green
 	upgrade = upgrade_faction_saxony
+	develops_to = {
+		germany
+		wessex
+	}
 	core_settlements = {
 		kiel
 	}

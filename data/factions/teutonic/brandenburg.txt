@@ -1,4 +1,7 @@
 brandenburg = {
+	develops_to = {
+		prussia
+	}
 	core_settlements = {
 		berlin
 	}

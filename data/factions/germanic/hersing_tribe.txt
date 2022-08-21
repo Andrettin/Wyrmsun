@@ -9,6 +9,11 @@ hersing_tribe = {
 	upgrade = upgrade_faction_skeldung_tribe
 	default_ai = passive
 	background = "In Norse mythology, Hersir was a chieftain whose daughter married Jarl."
+	develops_to = {
+		denmark
+		jutland
+		teutonia
+	}
 	core_settlements = {
 		kiel
 	}

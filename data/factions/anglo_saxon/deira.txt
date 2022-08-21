@@ -9,6 +9,9 @@ deira = { #Source: Frank Stenton, "Anglo-Saxon England", 1971, pp. 74-75.
 	icon = icon_flag_five_red_birds_on_yellow
 	upgrade = upgrade_faction_deira
 	description = "The Dere were a group of Anglian peoples, who originally dwelled in the central and eastern parts of modern Yorkshire. Their name comes from the British word \"deifr\" (meaning \"waters\"), likely due to their initial settlements being located at the confluence of multiple rivers into the Humber. Deira was the name of the kingdom which they founded in Northumbria."
+	develops_to = {
+		northumbria
+	}
 	core_settlements = {
 		york
 	}

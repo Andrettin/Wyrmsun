@@ -8,11 +8,11 @@ vestfold = {
 	default_capital = oslo
 	upgrade = upgrade_faction_norway
 	icon = icon_flag_five_red_birds_on_yellow
+	develops_to = {
+		norway
+	}
 	core_settlements = {
 		oslo
-	}
-	conditions = {
-		scripted_condition = is_civilized
 	}
 	history = {
 		841 = {

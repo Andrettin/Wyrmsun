@@ -8,6 +8,11 @@ salia = {
 	default_tier = kingdom
 	upgrade = upgrade_faction_salia
 	icon = icon_flag_five_red_birds_on_yellow
+	develops_to = {
+		austrasia
+		burgundia
+		neustria
+	}
 	core_settlements = {
 		brussels
 	}

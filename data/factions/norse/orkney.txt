@@ -1,5 +1,5 @@
 orkney = {
-	conditions = {
-		scripted_condition = is_civilized
+	develops_to = {
+		norway
 	}
 }

@@ -7,6 +7,9 @@ baden = {
 	default_tier = grand_duchy
 	icon = icon_flag_habsburg
 	upgrade = upgrade_faction_baden
+	develops_to = {
+		swabia
+	}
 	core_settlements = {
 		stuttgart
 	}

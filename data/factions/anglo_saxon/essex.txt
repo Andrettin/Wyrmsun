@@ -8,6 +8,9 @@ essex = {
 	min_tier = county #ealdormanry
 	upgrade = upgrade_faction_essex
 	icon = icon_flag_five_white_birds_on_red
+	develops_to = {
+		englaland
+	}
 	core_settlements = {
 		london
 	}

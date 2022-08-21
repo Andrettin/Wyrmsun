@@ -5,8 +5,12 @@ germany = {
 	type = polity
 	color = black
 	default_tier = kingdom
+	max_tier = empire
 	icon = icon_flag_five_orange_birds_on_black
 	upgrade = upgrade_faction_holy_rome
+	develops_to = {
+		holy_rome
+	}
 	core_settlements = {
 		berlin
 		cologne

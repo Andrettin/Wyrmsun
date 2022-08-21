@@ -8,6 +8,12 @@ anglia = {
 	default_government_type = tribe
 	upgrade = upgrade_faction_anglia
 	icon = icon_flag_green_lion_on_purple
+	develops_to = {
+		bernicia
+		deira
+		east_anglia
+		mercia
+	}
 	core_settlements = {
 		aarhus #Angeln
 	}

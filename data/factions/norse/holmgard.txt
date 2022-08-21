@@ -10,7 +10,4 @@ holmgard = {
 	core_settlements = {
 		novgorod
 	}
-	conditions = {
-		scripted_condition = is_civilized
-	}
 }

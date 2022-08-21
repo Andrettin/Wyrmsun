@@ -7,4 +7,7 @@ ampsivarii_tribe = {
 	default_tier = duchy
 	upgrade = upgrade_faction_ampsivarii_tribe
 	icon = icon_flag_five_purple_birds_on_green
+	develops_to = {
+		salia
+	}
 }

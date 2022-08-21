@@ -7,4 +7,15 @@ herminone_tribe = { #according to Tacitus one of the earliest Germanic tribes; S
 	default_tier = duchy #tribe
 	icon = flag_black_raven_on_green
 	upgrade = upgrade_faction_skeldung_tribe
+	develops_to = {
+		alamannia
+		#buri_tribe
+		#hermunduri_tribe
+		marcomannia
+		#quadi_tribe
+		semnonia
+		suebia
+		thuringia
+		lombardy
+	}
 }
