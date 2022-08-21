@@ -38,7 +38,7 @@ suebia = {
 		-55 = {
 			#the Ubii were tributaries of the Suebi in 55 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
 			diplomacy_state = {
-				faction = ubii_tribe
+				faction = ubia
 				state = overlord
 			}
 		}
