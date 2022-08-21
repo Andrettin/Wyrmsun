@@ -1,17 +1,17 @@
-quadi_tribe = {
-	name = "Quadi Tribe"
+quadia = {
+	name = "Quadia"
 	adjective = "Quadi"
 	civilization = suebi
 	parent_faction = marcomannia
-	type = tribe
+	type = polity
 	color = brown
 	default_tier = duchy
-	upgrade = upgrade_faction_quadi_tribe
+	default_government_type = tribe
+	upgrade = upgrade_faction_quadia
 	icon = flag_osterby_orange_on_gray
 	develops_to = {
-		#galicia
+		galicia
 		bavaria
-		marcomannia
 	}
 	core_settlements = {
 		pressburg

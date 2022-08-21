@@ -1,11 +1,12 @@
-hermunduri_tribe = {
-	name = "Hermunduri Tribe"
+hermunduria = {
+	name = "Hermunduria"
 	adjective = "Hermunduri"
 	civilization = suebi #accurate?
-	type = tribe
+	type = polity
 	color = green
 	default_tier = duchy
-	upgrade = upgrade_faction_hermunduri_tribe
+	default_government_type = tribe
+	upgrade = upgrade_faction_hermunduria
 	icon = flag_osterby
 	develops_to = {
 		bavaria

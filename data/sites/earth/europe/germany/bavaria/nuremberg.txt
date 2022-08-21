@@ -9,7 +9,7 @@ nuremberg = {
 	
 	history = {
 		161 = {
-			owner = hermunduri_tribe #the Hermunduri inhabited the area immediately north of the Danube in Bavaria, in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
+			owner = hermunduria #the Hermunduri inhabited the area immediately north of the Danube in Bavaria, in the 161-180 AD period; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		}
 		
 		1815 = {

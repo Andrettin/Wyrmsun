@@ -33,12 +33,12 @@ marcomannia = {
 			}
 			
 			diplomacy_state = {
-				faction = hermunduri_tribe
+				faction = hermunduria
 				state = alliance
 			}
 			
 			diplomacy_state = {
-				faction = quadi_tribe
+				faction = quadia
 				state = alliance
 			}
 		}

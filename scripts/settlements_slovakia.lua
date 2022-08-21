@@ -35,7 +35,7 @@ DefineSite("kremnica", {
 		"teuton", "Kremnitz" -- Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalOwners = {
-		161, "quadi_tribe", -- the Quadi inhabited roughly the area around Kremnica in the 161-180 AD period, so here we make them the owners of that settlement for lack of better information where they actually settled; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "quadia", -- the Quadi inhabited roughly the area around Kremnica in the 161-180 AD period, so here we make them the owners of that settlement for lack of better information where they actually settled; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1815, "austria" -- Körmöczbanya/Kremnitz was a part of the Kingdom of Hungary within the Empire of Austria in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
 	},
 	HistoricalBuildings = {

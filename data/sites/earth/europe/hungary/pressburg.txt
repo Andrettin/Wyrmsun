@@ -24,11 +24,11 @@ pressburg = {
 		}
 		
 		-9 = {
-			owner = quadi_tribe #if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
+			owner = quadia #if the Boii were conquered by the Marcomanni in 9 BC, the Quadi probably moved to Moravia and Slovakia at around the same time
 		}
 		
 		161 = {
-			owner = quadi_tribe #Slovakia was inhabited by the Quadi in 161-180 AD (while the Cotini inhabited eastern Slovakia); Source: "Ancient Warfare VII.6", 2013, p. 7.
+			owner = quadia #Slovakia was inhabited by the Quadi in 161-180 AD (while the Cotini inhabited eastern Slovakia); Source: "Ancient Warfare VII.6", 2013, p. 7.
 		}
 		
 		526 = {

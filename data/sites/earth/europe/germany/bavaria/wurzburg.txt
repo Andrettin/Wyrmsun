@@ -17,7 +17,7 @@ wurzburg = {
 		}
 		
 		-264 = {
-			owner = hermunduri_tribe #part of Hermunduri territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = hermunduria #part of Hermunduri territory in the 264 BC-180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
 		-27 = {

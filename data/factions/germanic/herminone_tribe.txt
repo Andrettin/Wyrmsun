@@ -9,10 +9,10 @@ herminone_tribe = { #according to Tacitus one of the earliest Germanic tribes; S
 	upgrade = upgrade_faction_skeldung_tribe
 	develops_to = {
 		alamannia
-		#buri_tribe
-		#hermunduri_tribe
+		buri_tribe
+		hermunduria
 		marcomannia
-		#quadi_tribe
+		quadia
 		semnonia
 		suebia
 		thuringia

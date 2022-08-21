@@ -1,26 +1,21 @@
-upgrade_faction_buri_tribe = {
-	name = "Buri Tribe"
-	effects_string = "+1 Speed for Kregars"
-}
-
-upgrade_faction_hermunduri_tribe = {
-	name = "Hermunduri Tribe"
-	effects_string = "+1 Damage, +5 HP for Kregars"
-}
-
-upgrade_faction_quadi_tribe = {
-	name = "Quadi Tribe"
-	effects_string = "+2 Armor for Kregars"
-}
-
 upgrade_faction_alamannia = {
 	name = "Alamanni Tribe"
 	effects_string = "+10 HP for Kregars"
 }
 
+upgrade_faction_buri_tribe = {
+	name = "Buri Tribe"
+	effects_string = "+1 Speed for Kregars"
+}
+
 upgrade_faction_galicia = {
 	name = "Galicia"
 	effects_string = "+2 Damage for Kregars"
+}
+
+upgrade_faction_hermunduria = {
+	name = "Hermunduria"
+	effects_string = "+1 Damage, +5 HP for Kregars"
 }
 
 upgrade_faction_marcomannia = {
@@ -35,6 +30,11 @@ upgrade_faction_marcomannia = {
 			unit_suebi_chieftain
 		}
 	}
+}
+
+upgrade_faction_quadia = {
+	name = "Quadia"
+	effects_string = "+2 Armor for Kregars"
 }
 
 upgrade_faction_semnonia = {
