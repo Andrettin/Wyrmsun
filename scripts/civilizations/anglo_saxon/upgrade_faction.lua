@@ -37,7 +37,7 @@ DefineModifier("upgrade_faction_gumeninga_tribe",
 	{"apply-to", "unit-teuton-priest"}
 )
 
-DefineModifier("upgrade-faction-lindisfaran-tribe",
+DefineModifier("upgrade_faction_lindisfaran_tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}

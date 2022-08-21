@@ -1,0 +1,14 @@
+lindisfaran_tribe = { #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
+	name = "Lindisfaran Tribe"
+	adjective = "Lindisfaran"
+	civilization = anglo_saxon
+	type = tribe
+	color = purple
+	default_tier = duchy #tribe
+	upgrade = upgrade_faction_lindisfaran_tribe
+	icon = icon_flag_five_white_birds_on_red
+	description = "The Lindisfaran were an Anglian people who inhabited the lands between the rivers Witham and Humber."
+	core_settlements = {
+		york
+	}
+}
