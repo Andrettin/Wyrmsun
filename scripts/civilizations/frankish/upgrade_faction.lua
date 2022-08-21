@@ -37,7 +37,7 @@ DefineModifier("upgrade_faction_chamavi_tribe",
 	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"}
 )
 
-DefineModifier("upgrade_faction_chatti_tribe",
+DefineModifier("upgrade_faction_chattia",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-frank-spearman"}

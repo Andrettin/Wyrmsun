@@ -1,10 +1,11 @@
-chatti_tribe = {
-	name = "Chatti Tribe"
+chattia = {
+	name = "Chattia"
 	adjective = "Chatti"
 	civilization = frankish #accurate?
-	type = tribe
+	type = polity
 	color = yellow
 	default_tier = duchy
-	upgrade = upgrade_faction_chatti_tribe
+	default_government_type = tribe
+	upgrade = upgrade_faction_chattia
 	icon = icon_flag_five_red_birds_on_yellow
 }

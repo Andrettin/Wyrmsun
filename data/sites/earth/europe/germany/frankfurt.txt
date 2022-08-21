@@ -17,7 +17,7 @@ frankfurt = {
 		}
 		
 		-100 = {
-			owner = chatti_tribe
+			owner = chattia
 		}
 		
 		486 = {

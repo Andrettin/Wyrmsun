@@ -8,11 +8,6 @@ upgrade_faction_chamavi_tribe = {
 	effects_string = "+2 Accuracy for Kregars"
 }
 
-upgrade_faction_chatti_tribe = {
-	name = "Chatti Tribe"
-	effects_string = "+2 Damage for Spearmen"
-}
-
 upgrade_faction_sugambri_tribe = {
 	name = "Sugambri Tribe"
 	effects_string = "+2 Accuracy for Archers"
@@ -41,6 +36,11 @@ upgrade_faction_batavia = {
 upgrade_faction_burgundia = {
 	name = "Burgundia"
 	effects_string = "+10 HP for Ritars"
+}
+
+upgrade_faction_chattia = {
+	name = "Chattia"
+	effects_string = "+2 Damage for Spearmen"
 }
 
 upgrade_faction_east_francia = {
