@@ -56,14 +56,6 @@ upgrade_faction_aurvang = {
 	}
 }
 
-upgrade_faction_driftwood = {
-	name = "Driftwood"
-	effects_string = "+2 Evasion for Swordsmen"
-	conditions = {
-		upgrade_class = writing
-	}
-}
-
 upgrade_faction_ezmarria = {
 	name = "Ezmarria"
 	effects_string = "+50% Research Speed for Lumber Mills and Fugla Forges"

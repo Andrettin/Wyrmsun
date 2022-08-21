@@ -39,35 +39,6 @@ DefineSite("dreadskull", { -- Dreadskull tribe settlement site; this is the name
 	}
 })
 
-DefineSite("driftwood", { -- from Will Doyle's "Island of the Lizard God"
-	Name = "Driftwood",
-	MapTemplate = "island-of-the-lizard-god",
-	Position = {59, 117},
-	BaseUnitType = "unit_settlement_site",
-	CulturalNames = {
-		"goblin", "Driftwood" -- in the original, it is a town run by a cartel of intelligent apes
-	},
---	Cores = {
---		"driftwood"
---	},
-	HistoricalOwners = {
-		600, "driftwood"
-	},
-	HistoricalBuildings = {
-		600, 0, "town_hall",
-		600, 0, "mercenary_camp", "ape-cartel",
-		600, 0, "farm",
-		600, 0, "farm",
-		600, 0, "farm",
-		600, 0, "farm",
-		600, 0, "market"
-	},
-	HistoricalUnits = { -- some units for defense
-		600, 0, "unit-goblin-swordsman", 3000, "driftwood",
-		600, 0, "unit-goblin-archer", 2000, "driftwood"
-	}
-})
-
 DefineSite("lggi", { -- Lggi tribe settlement site; this is the name of a tribe rather than a settlement, but we have no name for a settlement there yet
 	Name = "Lggi",
 	MapTemplate = "nidavellir",

@@ -67,11 +67,7 @@ DefineFaction("grafvolling-tribe", {
 	Civilization = "kobold",
 	Type = "tribe",
 	Color = "red",
-	DefaultAI = "kobolds",
-	HistoricalDiplomacyStates = {
-		600, "driftwood", "war", -- the natives of the Island of the Kobold God are hostile to the newcomers to the island and the Driftwood shipwrecks
-		600, "lyr", "war"
-	}
+	DefaultAI = "kobolds"
 })
 
 DefineFaction("moinling-tribe", {

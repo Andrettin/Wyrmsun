@@ -1,17 +1,3 @@
-DefineFaction("driftwood", { -- from Will Doyle's "Island of the Lizard God"
-	Name = "Driftwood",
-	Adjective = "Driftwood",
-	Civilization = "goblin",
-	Type = "polity",
-	Color = "brown",
-	DefaultTier = "barony",
-	DefaultGovernmentType = "republic",
-	DefaultAI = "passive", -- so that Driftwood remains a small settlement, and doesn't try to attack in the Island of the Lizard God scenario
-	FactionUpgrade = "upgrade-faction-driftwood",
-	Icon = "icon-flag-red-skull-on-yellow",
-	Description = "The cave town of Driftwood was formed from shipwrecks on a kobold isle, and peopled by lost sailors. The town is run by a goblin criminal cartel."
-})
-
 DefineFaction("ezmarria", { -- created by Jesse Crider
 	Name = "Ezmarria",
 	Adjective = "Ezmarrian",

@@ -74,13 +74,6 @@ DefineModifier("upgrade-faction-aurvang",
 	{"apply-to", "unit-goblin-archer"}, {"apply-to", "unit-goblin-headhunter"}, {"apply-to", "unit-goblin-shadowstalker"}
 )
 
-DefineModifier("upgrade-faction-driftwood",
-	{"Evasion", 2},
-	{"Points", 10},
-	{"apply-to", "unit-goblin-militia"}, 
-	{"apply-to", "unit-goblin-swordsman"}, {"apply-to", "unit-goblin-barbarian"}, {"apply-to", "unit-goblin-warlord"}
-)
-
 DefineModifier("upgrade-faction-ezmarria",
 	{"ResearchSpeedBonus", 50},
 	{"apply-to", "unit-goblin-lumber-mill"}, {"apply-to", "unit-goblin-smithy"}
