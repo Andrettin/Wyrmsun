@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("varini-tribe", {
-	Name = "Varini Tribe",
-	Adjective = "Varini",
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "brown",
-	FactionUpgrade = "upgrade-faction-varini-tribe",
-	Icon = "icon-flag-green-lion-on-orange"
-})
-
 -- Teuton polities
 
 DefineFaction("brandenburg", {

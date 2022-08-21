@@ -38,7 +38,7 @@ DefineModifier("upgrade_faction_cheruscia",
 	{"apply-to", "unit-teuton-spearman"}
 )
 
-DefineModifier("upgrade-faction-varini-tribe",
+DefineModifier("upgrade_faction_varinia",
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}

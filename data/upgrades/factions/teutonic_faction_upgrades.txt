@@ -8,8 +8,8 @@ upgrade_faction_cheruscia = {
 	effects_string = "+5 HP and +1 Damage for Spearmen"
 }
 
-upgrade_faction_varini_tribe = {
-	name = "Varini Tribe"
+upgrade_faction_varinia = {
+	name = "Varinia"
 	effects_string = "+10 HP for Swordsmen"
 }
 

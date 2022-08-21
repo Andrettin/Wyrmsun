@@ -1,14 +1,14 @@
-chaucia = {
-	name = "Chaucia"
-	adjective = "Chauci"
+varinia = {
+	name = "Varinia"
+	adjective = "Varini"
 	civilization = teutonic #should be Saxon
 	type = polity
-	color = black
+	color = brown
 	default_tier = duchy
-	icon = icon_flag_five_purple_birds_on_green
-	upgrade = upgrade_faction_chaucia
+	icon = icon_flag_green_lion_on_orange
+	upgrade = upgrade_faction_varinia
 	core_settlements = {
-		hanover
+		kiel
 	}
 	
 	history = {
