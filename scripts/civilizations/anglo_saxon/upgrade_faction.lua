@@ -31,7 +31,7 @@ DefineModifier("upgrade_faction_charude_tribe",
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade-faction-gumeninga-tribe",
+DefineModifier("upgrade_faction_gumeninga_tribe",
 	{"Mana", 30},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-priest"}

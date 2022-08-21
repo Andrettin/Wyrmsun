@@ -1,0 +1,15 @@
+gumeninga_tribe = { #Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+	name = "Gumeninga Tribe"
+	adjective = "Gumeninga"
+	civilization = anglo_saxon
+	type = tribe
+	color = brown
+	default_tier = county
+	upgrade = upgrade_faction_gumeninga_tribe #since all we know about them is their religious location, it makes sense to give them a priest-related bonus
+	icon = icon_flag_five_black_birds_on_purple
+	description = "The Gumeningas were an Anglo-Saxon tribe who inhabited the area of Middlesex."
+	background = "The name of the Gumeningas was present in the place name \"Gumeninga hearh\" (the Old English name for Harrow on the Hill), meaning \"the holy place of the Gumeningas\"."
+	core_settlements = {
+		london
+	}
+}

@@ -1173,7 +1173,7 @@ DefineProvince("Essex", {
 --	SettlementLocation = {480, 109}, -- London
 	Claims = {
 		"briton", "trinobantes-tribe",
-		"anglo-saxon", "gumeninga-tribe", -- the Gumeningas were present in Harrow on the Hill (which was in Old English called "Gumeninga hearh"); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
+		"anglo-saxon", "gumeninga_tribe", -- the Gumeningas were present in Harrow on the Hill (which was in Old English called "Gumeninga hearh"); Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
 		"english", "england"
 	},
 	HistoricalOwners = {

@@ -25,18 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("gumeninga-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 101.
-	Name = "Gumeninga Tribe",
-	Adjective = "Gumeninga",
-	Civilization = "anglo-saxon",
-	Type = "tribe",
-	Color = "brown",
-	FactionUpgrade = "upgrade-faction-gumeninga-tribe", -- since all we know about them is their religious location, it makes sense to give them a priest-related bonus
-	Icon = "icon-flag-five-black-birds-on-purple",
-	Description = "The Gumeningas were an Anglo-Saxon tribe who inhabited the area of Middlesex.",
-	Background = "The name of the Gumeningas was present in the place name \"Gumeninga hearh\" (the Old English name for Harrow on the Hill), meaning \"the holy place of the Gumeningas\"."
-})
-
 DefineFaction("lindisfaran-tribe", { -- Source: Frank Stenton, "Anglo-Saxon England", 1971, p. 37.
 	Name = "Lindisfaran Tribe",
 	Adjective = "Lindisfaran",
