@@ -13,12 +13,6 @@ choose_individual_upgrade_level = {
 found_faction_level = {
 }
 
-found_faction_level_2 = {
-}
-
-found_faction_level_3 = {
-}
-
 enact_law_level = {
 }
 

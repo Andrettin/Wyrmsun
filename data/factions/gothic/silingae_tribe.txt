@@ -7,4 +7,7 @@ silingae_tribe = {
 	default_tier = duchy #tribe
 	upgrade = upgrade_faction_silingae_tribe
 	icon = icon_flag_green_lion_on_purple
+	develops_to = {
+		vandalia
+	}
 }
