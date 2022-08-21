@@ -19,8 +19,8 @@ pressburg = {
 			building_classes += town_hall
 		}
 		
-		-27 = {
-			owner = none
+		-100 = {
+			owner = boii_tribe
 		}
 		
 		-9 = {

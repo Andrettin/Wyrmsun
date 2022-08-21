@@ -2,4 +2,12 @@ west_germanic = {
 	name = "West Germanic"
 	rank = subgroup
 	group = germanic
+	
+	history = {
+		-71 = {
+			explored_settlements += clermont
+			explored_settlements += dijon
+			explored_settlements += nancy
+		}
+	}	
 }

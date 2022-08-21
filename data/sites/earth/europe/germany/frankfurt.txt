@@ -16,6 +16,10 @@ frankfurt = {
 			building_classes += town_hall
 		}
 		
+		-100 = {
+			owner = chatti_tribe
+		}
+		
 		486 = {
 			owner = francia #part of the Kingdom of the Franks in 486; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 50-51.
 		}

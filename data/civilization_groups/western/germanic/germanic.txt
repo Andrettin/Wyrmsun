@@ -65,9 +65,12 @@ germanic = {
 			explored_settlements += erfurt
 			explored_settlements += frankfurt
 			explored_settlements += hanover
+			explored_settlements += krakow
+			explored_settlements += lvov
 			explored_settlements += stettin
 			explored_settlements += stuttgart
 			explored_settlements += warsaw
+			explored_settlements += wurzburg
 		}
 		
 		180 = {
