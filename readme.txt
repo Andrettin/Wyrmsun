@@ -67,6 +67,7 @@ https://github.com/Andrettin/Wyrmsun
 * Faction
 - The Alamanni Tribe is now a polity instead.
 - The Chauci Tribe is now a polity instead.
+- The Ubii Tribe is now a polity instead.
 
 * Maps
 - Added the "Gallic Fields" (256x256, 3 players) and "Gallic Highlands" custom maps (256x256, 2 players), based on maps from 0 A.D. (which are licensed under an open-source license).

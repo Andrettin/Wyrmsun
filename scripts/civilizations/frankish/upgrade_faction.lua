@@ -49,7 +49,7 @@ DefineModifier("upgrade_faction_sugambri_tribe",
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade_faction_ubii_tribe",
+DefineModifier("upgrade_faction_ubia",
 	{"improve-production", "copper", 5}, -- the Ubii were in a central trading position, making them more advanced than other Germanic tribes
 	{"improve-production", "silver", 5},
 	{"improve-production", "gold", 5},

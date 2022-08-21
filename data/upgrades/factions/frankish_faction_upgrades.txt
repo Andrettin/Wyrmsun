@@ -18,11 +18,6 @@ upgrade_faction_sugambri_tribe = {
 	effects_string = "+2 Accuracy for Archers"
 }
 
-upgrade_faction_ubii_tribe = {
-	name = "Ubii Tribe"
-	effects_string = "+5% Copper, Silver and Gold Processing for Smithies"
-}
-
 upgrade_faction_austrasia = {
 	name = "Austrasia"
 	effects_string = "+1 Damage and +1 Armor for Ritars"
@@ -75,4 +70,9 @@ upgrade_faction_neustria = {
 upgrade_faction_salia = {
 	name = "Salia"
 	effects_string = "+2 Accuracy for Ritars"
+}
+
+upgrade_faction_ubia = {
+	name = "Ubia"
+	effects_string = "+5% Copper, Silver and Gold Processing for Smithies"
 }
