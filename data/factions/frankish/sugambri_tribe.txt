@@ -1,0 +1,10 @@
+sugambri_tribe = {
+	name = "Sugambri Tribe"
+	adjective = "Sugambri"
+	civilization = frankish #accurate?
+	type = tribe
+	color = black
+	default_tier = duchy
+	upgrade = upgrade_faction_sugambri_tribe
+	icon = icon_flag_five_black_birds_on_purple
+}

@@ -1,0 +1,10 @@
+chatti_tribe = {
+	name = "Chatti Tribe"
+	adjective = "Chatti"
+	civilization = frankish #accurate?
+	type = tribe
+	color = yellow
+	default_tier = duchy
+	upgrade = upgrade_faction_chatti_tribe
+	icon = icon_flag_five_red_birds_on_yellow
+}

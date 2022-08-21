@@ -1,0 +1,10 @@
+chamavi_tribe = {
+	name = "Chamavi Tribe"
+	adjective = "Chamavi"
+	civilization = frankish #accurate?
+	type = tribe
+	color = pink
+	default_tier = duchy
+	upgrade = upgrade_faction_chamavi_tribe
+	icon = icon_flag_five_orange_birds_on_black
+}

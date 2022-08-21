@@ -1026,14 +1026,14 @@ DefineProvince("Drenthe", {
 --	SettlementLocation = {498, 105}, -- Assen
 	Claims = {
 		"basque", "funnelbeaker-tribe",
-		"frankish", "ampsivarii-tribe",
+		"frankish", "ampsivarii_tribe",
 		"teuton", "drenthe",
 		"teuton", "netherlands",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-3950, "basque", "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-27, "frankish", "ampsivarii-tribe", -- Political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
+		-27, "frankish", "ampsivarii_tribe", -- Political situation in Europe (presumably) at the time of Augustus; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 38-39.
 		161, "teuton", "friesland", -- Drenthe owned by the Frisii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -1560,16 +1560,16 @@ DefineProvince("Hesse", {
 	},
 --	SettlementLocation = {506, 109}, -- Kassel
 	Claims = {
-		"frankish", "chatti-tribe",
-		"frankish", "ubii-tribe",
+		"frankish", "chatti_tribe",
+		"frankish", "ubii_tribe",
 		"frankish", "austrasia", -- Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		"teuton", "franconia", -- Part of the Duchy of Franconia in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		"teuton", "hesse",
 		"teuton", "holy-rome" -- Part of the Holy Roman Empire in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalOwners = {
-		-55, "frankish", "ubii-tribe", -- The Ubii dwelled north of the Main and bordering on the Rhine in 55 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
-		161, "frankish", "chatti-tribe", -- The area was inhabited by the Chatti in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		-55, "frankish", "ubii_tribe", -- The Ubii dwelled north of the Main and bordering on the Rhine in 55 BC; Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
+		161, "frankish", "chatti_tribe", -- The area was inhabited by the Chatti in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1648, "teuton", "hesse" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
 	},
@@ -2750,13 +2750,13 @@ DefineProvince("Overijssel", {
 	},
 --	SettlementLocation = {497, 106}, -- Zwolle
 	Claims = {
-		"frankish", "chamavi-tribe",
+		"frankish", "chamavi_tribe",
 		"teuton", "overijssel",
 		"teuton", "netherlands",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-27, "frankish", "chamavi-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-27, "frankish", "chamavi_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "teuton", "chauci-tribe", -- The area was inhabited by the Chauci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
@@ -3486,7 +3486,7 @@ DefineProvince("Thuringia", {
 	},
 	HistoricalOwners = {
 		-264, "suebi", "hermunduri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "frankish", "ubii-tribe", -- The area was inhabited by the Ubii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "frankish", "ubii_tribe", -- The area was inhabited by the Ubii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
@@ -3945,12 +3945,12 @@ DefineProvince("Westphalia", {
 	},
 --	SettlementLocation = {500, 109}, -- Düsseldorf
 	Claims = {
-		"frankish", "sugambri-tribe",
+		"frankish", "sugambri_tribe",
 		"teuton", "westphalia",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
-		-264, "frankish", "sugambri-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "frankish", "sugambri_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "teuton", "cheruscia", -- The area was inhabited by the Cherusci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1648, "teuton", "westphalia" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.

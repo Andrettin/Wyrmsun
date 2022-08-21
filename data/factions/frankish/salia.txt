@@ -1,5 +1,14 @@
 salia = {
-	conditions = {
-		scripted_condition = is_civilized
+	name = "Salia"
+	adjective = "Salian"
+	civilization = frankish
+	parent_faction = francia
+	type = polity
+	color = pink
+	default_tier = kingdom
+	upgrade = upgrade_faction_salia
+	icon = icon_flag_five_red_birds_on_yellow
+	core_settlements = {
+		brussels
 	}
 }

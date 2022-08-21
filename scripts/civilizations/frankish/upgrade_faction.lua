@@ -25,31 +25,31 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineModifier("upgrade-faction-ampsivarii-tribe",
+DefineModifier("upgrade_faction_ampsivarii_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-chamavi-tribe",
+DefineModifier("upgrade_faction_chamavi_tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-frank-swordsman"}, {"apply-to", "unit-frank-veteran-swordsman"}, {"apply-to", "unit-frank-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-chatti-tribe",
+DefineModifier("upgrade_faction_chatti_tribe",
 	{"BasicDamage", 2},
 	{"Points", 10},
 	{"apply-to", "unit-frank-spearman"}
 )
 
-DefineModifier("upgrade-faction-sugambri-tribe",
+DefineModifier("upgrade_faction_sugambri_tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade-faction-ubii-tribe",
+DefineModifier("upgrade_faction_ubii_tribe",
 	{"improve-production", "copper", 5}, -- the Ubii were in a central trading position, making them more advanced than other Germanic tribes
 	{"improve-production", "silver", 5},
 	{"improve-production", "gold", 5},

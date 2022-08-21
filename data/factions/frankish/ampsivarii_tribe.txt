@@ -1,0 +1,10 @@
+ampsivarii_tribe = {
+	name = "Ampsivarii Tribe"
+	adjective = "Ampsivarii"
+	civilization = frankish #accurate?
+	type = tribe
+	color = cyan
+	default_tier = duchy
+	upgrade = upgrade_faction_ampsivarii_tribe
+	icon = icon_flag_five_purple_birds_on_green
+}

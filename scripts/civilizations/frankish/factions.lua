@@ -25,57 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("ampsivarii-tribe", {
-	Name = "Ampsivarii Tribe",
-	Adjective = "Ampsivarii",
-	Civilization = "frankish", -- accurate?
-	Type = "tribe",
-	Color = "cyan",
-	FactionUpgrade = "upgrade-faction-ampsivarii-tribe",
-	Icon = "icon-flag-five-purple-birds-on-green"
-})
-
-DefineFaction("chamavi-tribe", {
-	Name = "Chamavi Tribe",
-	Adjective = "Chamavi",
-	Civilization = "frankish", -- accurate?
-	Type = "tribe",
-	Color = "pink",
-	FactionUpgrade = "upgrade-faction-chamavi-tribe",
-	Icon = "icon-flag-five-orange-birds-on-black"
-})
-
-DefineFaction("chatti-tribe", {
-	Name = "Chatti Tribe",
-	Adjective = "Chatti",
-	Civilization = "frankish", -- accurate?
-	Type = "tribe",
-	Color = "yellow",
-	FactionUpgrade = "upgrade-faction-chatti-tribe",
-	Icon = "icon-flag-five-red-birds-on-yellow"
-})
-
-DefineFaction("sugambri-tribe", {
-	Name = "Sugambri Tribe",
-	Adjective = "Sugambri",
-	Civilization = "frankish", -- accurate?
-	Type = "tribe",
-	Color = "black",
-	FactionUpgrade = "upgrade-faction-sugambri-tribe",
-	Icon = "icon-flag-five-black-birds-on-purple"
-})
-
-DefineFaction("ubii-tribe", { -- Source: H. H. Howorth, "The Ethnology of Germany, Part II: The Germans of Caesar", 1878, pp. 227-228.
-	Name = "Ubii Tribe",
-	Adjective = "Ubii",
-	Civilization = "frankish",
-	Type = "tribe",
-	Color = "purple",
-	FactionUpgrade = "upgrade-faction-ubii-tribe",
-	Icon = "icon-flag-habsburg",
-	Description = "The Ubii were a West Germanic tribe who lived by the Rhine, north of the Main river. Due to their location in a central trading spot, they were more advanced than other Germanic tribes. Being allies of Rome, many of them eventually migrated west of the Rhine, dwelling around Colonia Agrippinenses (the modern Cologne). The ones who remained possibly became the Chatti."
-})
-
 DefineFaction("austrasia", {
 	Name = "Austrasia",
 	Adjective = "Austrasian",
@@ -133,15 +82,6 @@ DefineFaction("neustria", {
 })
 
 DefineFaction("salia", {
-	Name = "Salia",
-	Adjective = "Salian",
-	Civilization = "frankish",
-	ParentFaction = "francia",
-	Type = "polity",
-	Color = "pink",
-	DefaultTier = "kingdom",
-	FactionUpgrade = "upgrade-faction-salia",
-	Icon = "icon-flag-five-red-birds-on-yellow",
 	HistoricalCapitals = {
 		0, "soissons"
 	}
