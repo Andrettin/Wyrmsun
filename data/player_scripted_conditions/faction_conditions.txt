@@ -4,7 +4,7 @@ is_frisian_faction = {
 
 is_saxon_faction = {
 	or = {
-		faction = chauci_tribe
+		faction = chaucia
 		faction = cheruscia
 		faction = varini_tribe
 		faction = brandenburg

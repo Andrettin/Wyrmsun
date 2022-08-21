@@ -13,7 +13,7 @@ oldenburg = {
 		}
 		
 		-264 = {
-			owner = chauci_tribe #tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = chaucia #tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
 		161 = {

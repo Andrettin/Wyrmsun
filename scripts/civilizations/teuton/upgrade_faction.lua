@@ -25,7 +25,7 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineModifier("upgrade-faction-chauci-tribe",
+DefineModifier("upgrade_faction_chaucia",
 	{"HitPoints", 10},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-spearman"}

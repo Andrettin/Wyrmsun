@@ -509,13 +509,13 @@ DefineProvince("Bremen", {
 --	SettlementLocation = {504, 104}, -- Bremen
 	Claims = {
 		"basque", "funnelbeaker-tribe",
-		"teuton", "chauci-tribe",
+		"teuton", "chaucia",
 		"teuton", "bremen",
 		"teuton", "holy-rome"
 	},
 	HistoricalOwners = {
 		-3950, "basque", "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-264, "teuton", "chauci-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "teuton", "chaucia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "teuton", "lombardy", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1648, "norse", "sweden" -- Political situation in Central Europe in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123.
@@ -1143,7 +1143,7 @@ DefineProvince("East Friesland", { -- also includes Osnabrück
 	HistoricalOwners = {
 		-3950, "basque", "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
 		-264, "teuton", "friesland", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "teuton", "chauci-tribe", -- The area was inhabited by the Chauci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "teuton", "chaucia", -- The area was inhabited by the Chauci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome" -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
 	HistoricalCultures = {
@@ -2695,7 +2695,7 @@ DefineProvince("Oldenburg", {
 	},
 	HistoricalOwners = {
 		-3950, "basque", "funnelbeaker-tribe", -- Funnel Beaker culture existed in parts of Northern Europe between 7000 and 2000 BC; since the other source gives them as being present in Zealand in 3950 BC, let's place their beginnings at that date; Source: "Atlas de História Mundial", 2001, pp. 40-41.
-		-264, "teuton", "chauci-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "teuton", "chaucia", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "teuton", "lombardy", -- The area was inhabited by the Langobardi in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "teuton", "holy-rome" -- part of the Duchy of Saxony within the Holy Roman Empire in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 	},
@@ -2757,7 +2757,7 @@ DefineProvince("Overijssel", {
 	},
 	HistoricalOwners = {
 		-27, "frankish", "chamavi_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
-		161, "teuton", "chauci-tribe", -- The area was inhabited by the Chauci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
+		161, "teuton", "chaucia", -- The area was inhabited by the Chauci in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		481, "frankish", "francia", -- Frankish territory in 481 AD, and the Franks had already established their kingdom; Source: William R. Shepherd, "Historical Atlas", 1911, p. 53.
 		919, "teuton", "holy-rome", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "castillian", "spain", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

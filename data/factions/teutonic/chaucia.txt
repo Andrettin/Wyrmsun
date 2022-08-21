@@ -1,0 +1,19 @@
+chaucia = {
+	name = "Chaucia"
+	adjective = "Chauci"
+	civilization = teutonic #should be Saxon
+	type = polity
+	color = black
+	default_tier = duchy
+	icon = icon_flag_five_purple_birds_on_green
+	upgrade = upgrade_faction_chaucia
+	core_settlements = {
+		erfurt
+	}
+	
+	history = {
+		-264 = {
+			government_type = tribe
+		}
+	}
+}

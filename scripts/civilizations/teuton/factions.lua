@@ -25,16 +25,6 @@
 --      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 --
 
-DefineFaction("chauci-tribe", {
-	Name = "Chauci Tribe",
-	Adjective = "Chauci",
-	Civilization = "teuton",
-	Type = "tribe",
-	Color = "black",
-	FactionUpgrade = "upgrade-faction-chauci-tribe",
-	Icon = "icon-flag-five-purple-birds-on-green"
-})
-
 DefineFaction("varini-tribe", {
 	Name = "Varini Tribe",
 	Adjective = "Varini",

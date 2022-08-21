@@ -1,4 +1,4 @@
-upgrade_faction_chauci_tribe = {
+upgrade_faction_chaucia = {
 	name = "Chauci Tribe"
 	effects_string = "+10 HP for Spearmen"
 }

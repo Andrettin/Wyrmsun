@@ -9,7 +9,7 @@ bremen = {
 	
 	history = {
 		-264 = {
-			owner = chauci_tribe #Bremen's area was territory of the Chauci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+			owner = chaucia #Bremen's area was territory of the Chauci in the 264 BC - 180 AD period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		}
 		
 		526 = {
