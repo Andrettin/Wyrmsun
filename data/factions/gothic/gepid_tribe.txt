@@ -4,6 +4,7 @@ gepid_tribe = {
 	civilization = gothic
 	type = tribe
 	color = black
+	default_tier = duchy #tribe
 	upgrade = upgrade_faction_gepid_tribe
 	icon = icon_flag_five_red_birds_on_yellow
 	core_settlements = {

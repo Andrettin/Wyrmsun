@@ -31,13 +31,13 @@ DefineModifier("upgrade_faction_gepid_tribe",
 	{"apply-to", "unit-teuton-swordsman"}, {"apply-to", "unit-teuton-veteran-swordsman"}, {"apply-to", "unit-teuton-heroic-swordsman"}
 )
 
-DefineModifier("upgrade-faction-silingae-tribe",
+DefineModifier("upgrade_faction_silingae_tribe",
 	{"Accuracy", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}
 )
 
-DefineModifier("upgrade-faction-turcilingian-tribe",
+DefineModifier("upgrade_faction_turcilingian_tribe",
 	{"Evasion", 2},
 	{"Points", 10},
 	{"apply-to", "unit-teuton-archer"}

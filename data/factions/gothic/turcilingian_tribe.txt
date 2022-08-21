@@ -1,0 +1,10 @@
+turcilingian_tribe = {
+	name = "Turcilingian Tribe"
+	adjective = "Turcilingian"
+	civilization = gothic
+	type = tribe
+	color = blue
+	default_tier = duchy #tribe
+	upgrade = upgrade_faction_turcilingian_tribe
+	icon = icon_flag_green_lion_on_orange
+}

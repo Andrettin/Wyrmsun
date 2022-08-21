@@ -1228,10 +1228,10 @@ DefineProvince("Farther Pomerania", {
 --	SettlementLocation = {523, 102}, -- Kolberg
 	Claims = {
 		"goth", "rugia",
-		"goth", "turcilingian-tribe"
+		"goth", "turcilingian_tribe"
 	},
 	HistoricalOwners = {
-		-264, "goth", "turcilingian-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "goth", "turcilingian_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "goth", "rugia", -- The area was inhabited by the Rugii in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		1648, "teuton", "brandenburg" -- Farther Pomerania was acquired by Brandenburg in 1648; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 122-123; Source: Markus Cerman, "Villagers and Lords in Eastern Europe, 1300-1800", 2012, p. 6.
 	},
@@ -3219,10 +3219,10 @@ DefineProvince("Silesia", {
 --	SettlementLocation = {526, 110}, -- Breslau
 	Claims = {
 		"goth", "lugia",
-		"goth", "silingae-tribe"
+		"goth", "silingae_tribe"
 	},
 	HistoricalOwners = {
-		-264, "goth", "silingae-tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
+		-264, "goth", "silingae_tribe", -- Tribes in Europe between 264 BC and 180 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 		161, "suebi", "marcomannia", -- The area was inhabited by the Marcomanni in 161-180 AD; Source: "Ancient Warfare VII.6", 2013, p. 7.
 		919, "slav", "poland", -- Political situation in Central Europe in 919-1125; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
 		1560, "teuton", "austria", -- Political situation in Europe in 1560 AD; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 118-119.

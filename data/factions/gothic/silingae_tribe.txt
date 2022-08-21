@@ -1,0 +1,10 @@
+silingae_tribe = {
+	name = "Silingae Tribe"
+	adjective = "Silingae"
+	civilization = gothic
+	type = tribe
+	color = orange
+	default_tier = duchy #tribe
+	upgrade = upgrade_faction_silingae_tribe
+	icon = icon_flag_green_lion_on_purple
+}
