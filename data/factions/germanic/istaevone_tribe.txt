@@ -8,11 +8,11 @@ istaevone_tribe = { #according to Tacitus one of the earliest Germanic tribes; S
 	icon = flag_black_raven_on_white
 	upgrade = upgrade_faction_asa_tribe
 	develops_to = {
-		#ampsivarii_tribe
-		#chamavi_tribe
+		ampsivarii_tribe
+		chamavi_tribe
 		chattia
 		batavia
-		#sugambri_tribe
+		sugambri_tribe
 		ubia
 	}
 }
