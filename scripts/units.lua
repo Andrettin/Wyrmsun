@@ -4247,7 +4247,8 @@ DefineUnitType("unit-template-temple", {
 	Costs = {"time", 175, "copper", 900, "lumber", 1500},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
-	Construction = "building_site",
+	Construction = "land_building",
+	OnTopConstruction = "building_site",
 	HitPoints = 584, -- 700 with masonry
 	TileSize = {3, 3}, BoxSize = {96, 96},
 	Armor = 5, Missile = "missile-none",
@@ -4291,7 +4292,8 @@ DefineUnitType("unit-template-university", {
 	Costs = {"time", 175, "copper", 900, "lumber", 1500},
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
-	Construction = "building_site",
+	Construction = "land_building",
+	OnTopConstruction = "building_site",
 	HitPoints = 584, -- 700 with masonry
 	TileSize = {3, 3}, BoxSize = {96, 96},
 	Armor = 5, Missile = "missile-none",

@@ -60,6 +60,7 @@ https://github.com/Andrettin/Wyrmsun
 * Buildings
 - Fixed issue which could cause the Smithy building to not update properly when changing the faction from the Brising Clan to Knalga.
 - Added Gaulish Town Hall.
+- Temples and Universities now display the correct construction animations when building sites are disabled.
 
 * Events
 - Added a few random events creating gnolls and gnoll-spawning buildings, if there are already gnolls in the general area.
