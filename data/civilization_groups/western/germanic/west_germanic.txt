@@ -8,6 +8,9 @@ west_germanic = {
 			explored_settlements += clermont
 			explored_settlements += dijon
 			explored_settlements += nancy
+			explored_settlements += brussels
+			explored_settlements += cologne
+			explored_settlements += paris
 		}
 	}	
 }
