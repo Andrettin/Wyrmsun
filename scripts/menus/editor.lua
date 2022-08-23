@@ -38,10 +38,10 @@ function RunEditorSaveMenu()
 
 	local t
 	local browser
-	t = menu:addTextInputField("map.smp",
+	t = menu:addTextInputField("map.wmp",
 		(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24) * get_scale_factor(), 318 * get_scale_factor())
 
-	browser = menu:addBrowser(get_user_maps_path(), ".smp$",
+	browser = menu:addBrowser(get_user_maps_path(), ".wmp$",
 		(384 - 300 - 18) / 2 * get_scale_factor(), (11 + 24 + 22) * get_scale_factor(), 318 * get_scale_factor(), 126 * get_scale_factor())
 
 	local function cb(s)
@@ -57,9 +57,9 @@ function RunEditorSaveMenu()
 		if (string.len(name) == 0) then
 			return
 		end
-		-- append .smp
-		if (string.find(name, ".smp$") == nil) then
-			name = name .. ".smp"
+		-- append .wmp
+		if (string.find(name, ".wmp$") == nil) then
+			name = name .. ".wmp"
 		end
 		
 		-- replace invalid chars with underscore

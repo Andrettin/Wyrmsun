@@ -71,6 +71,9 @@ https://github.com/Andrettin/Wyrmsun
 - The Alamanni, Chatti, Chauci, Hermunduri, Quadi, Ubii and Varini Tribes are now polities instead.
 - Removed the Driftwood faction.
 
+* Map Editor
+- Updated the map presentation format for maps saved with the editor (old maps can still be loaded). The map presentation file extension is now ".wmp" instead of ".smp".
+
 * Maps
 - Added the "Gallic Fields" (256x256, 3 players) and "Gallic Highlands" custom maps (256x256, 2 players), based on maps from 0 A.D. (which are licensed under an open-source license).
 - Removed the Annwn, Ulfdalir and Random Dungeon custom maps.

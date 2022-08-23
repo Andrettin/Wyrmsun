@@ -76,9 +76,9 @@ MenuBase {
 	FileDialog {
 		id: select_map_dialog
 		title: qsTr("Select Map")
-		defaultSuffix: ".smp.gz"
+		defaultSuffix: ".wmp"
 		folder: "file:" + wyrmgus.user_maps_path
-		nameFilters: ["Stratagus Map Presentation Files (*.smp.gz *.smp)"]
+		nameFilters: ["Wyrmsun Map Presentation Files (*.wmp *.wmp.gz *.smp.gz *.smp)"]
 		selectExisting: true
 		sidebarVisible: false
 		
