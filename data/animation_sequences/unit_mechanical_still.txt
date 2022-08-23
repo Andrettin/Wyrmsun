@@ -1,0 +1,6 @@
+unit_mechanical_still = {
+	frame = 0
+	wait = 4
+	frame = 0
+	wait = 1
+}
