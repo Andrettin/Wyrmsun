@@ -256,10 +256,12 @@ function SinglePlayerTriggers()
 
 	if (LoadedGame == false) then
 		ClearPlayerDataObjectives()
-
-		for key, value in pairs(CustomPlayerData) do
-			CustomPlayerData[key].Objectives = {}
-			AddPlayerObjective(CustomPlayerData[key].Number, "- Defeat your rivals")
+		
+		if not (CEditor:get():is_running()) then
+			for key, value in pairs(CustomPlayerData) do
+				CustomPlayerData[key].Objectives = {}
+				AddPlayerObjective(CustomPlayerData[key].Number, "- Defeat your rivals")
+			end
 		end
 	end
 	
