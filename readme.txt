@@ -73,6 +73,7 @@ https://github.com/Andrettin/Wyrmsun
 
 * Map Editor
 - Updated the map presentation format for maps saved with the editor (old maps can still be loaded). The map presentation file extension is now ".wmp" instead of ".smp".
+- Maps created with the map editor now have the Classic Skirmish map presets by default. To make an existing map have those presets, open it with the editor and re-save it.
 
 * Maps
 - Added the "Gallic Fields" (256x256, 3 players) and "Gallic Highlands" custom maps (256x256, 2 players), based on maps from 0 A.D. (which are licensed under an open-source license).

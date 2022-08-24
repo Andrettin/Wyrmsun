@@ -133,6 +133,8 @@ deselect_in_mine = true
 
 population_per_unit = 100000
 
+map_editor_default_map_presets = classic_skirmish
+
 default_menu_background_file = "backgrounds/wyrmsun_sepia.png"
 
 loading_background_files = {
