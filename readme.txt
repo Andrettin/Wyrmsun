@@ -83,6 +83,8 @@ https://github.com/Andrettin/Wyrmsun
 
 * Quests
 - Fixed crash which occurred on start for The Wyrm legacy quest.
+- Side-quests are now made available through events, rather than buttons in the town hall.
+- Decreased the maximum amount of concurrent quests from 4 to 3.
 
 * Scenarios
 - The Asa Tribe now starts off with a Chieftain's Hall built in Kiel for the Settlement of Scandinavia scenario.

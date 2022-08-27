@@ -22,9 +22,6 @@ choose_dynasty_level = {
 inventory_level = {
 }
 
-quest_level = {
-}
-
 buy_item_level = {
 }
 

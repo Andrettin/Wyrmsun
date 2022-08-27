@@ -12,38 +12,6 @@ show_population = {
 	}
 }
 
-choose_a_quest = {
-	pos = 5
-	icon = quest
-	action = button
-	value = quest_level
-	allowed = check_has_sub_buttons
-	key = q
-	hint = "Choose a ~!Quest"
-	popup = popup_commands
-	unit_classes = {
-		town_hall
-		stronghold
-		fortress
-	}
-}
-
-cancel_choose_a_quest = {
-	pos = 16
-	level = quest_level
-	icon = icon_cancel
-	action = button
-	value = none
-	key = escape
-	hint = "Cancel (~<Esc~>)"
-	popup = popup_commands
-	unit_classes = {
-		town_hall
-		stronghold
-		fortress
-	}
-}
-
 found_a_faction = {
 	pos = 6
 	icon = royal_crown
