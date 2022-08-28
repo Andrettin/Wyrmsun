@@ -318,7 +318,7 @@ DefineCharacter("snorri-sturlson", { -- Source: Snorri Sturlson, "Heimskringla",
 	Type = "unit-teuton-priest", -- since his father was a Godar and that was a hereditary position; was a learned man in a number of old legends and mythologies
 	Civilization = "norse",
 	Father = "sturla-thordarson",
-	Trait = "upgrade-ambitious", -- described as greedy, selfish, ambitious, rapacious, bold, unprincipled and of intellectual powers far above that of his contemporaries
+	Trait = "upgrade_ambitious", -- described as greedy, selfish, ambitious, rapacious, bold, unprincipled and of intellectual powers far above that of his contemporaries
 	StartDate = 1178, -- born in 1178 at Hvam, in western Iceland
 	DeathDate = 1241 -- Snorri was murdered by his three sons-in-law, Gizurr Thórvaldsson, Kolbein and Arne, in Iceland in September 1241
 })

@@ -235,7 +235,7 @@ DefineCharacter("andvari", {
 	Civilization = "dwarf",
 	Faction = "oinling_clan",
 	Description = "The son of Oin, Andvari is famous for his large hoard of gold.",
-	Trait = "upgrade-ambitious",
+	Trait = "upgrade_greedy",
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)

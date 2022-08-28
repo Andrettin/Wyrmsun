@@ -1,0 +1,10 @@
+upgrade_gluttonous = {
+	parent = upgrade_trait
+	name = "Gluttonous"
+	modifier = {
+		cost_modifier = 5
+	}
+	conditions = {
+		character = true
+	}
+}

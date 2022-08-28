@@ -1,0 +1,10 @@
+upgrade_charitable = {
+	parent = upgrade_trait
+	name = "Charitable"
+	modifier = {
+		cost_modifier = -10
+	}
+	conditions = {
+		character = true
+	}
+}
