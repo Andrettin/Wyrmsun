@@ -4,7 +4,7 @@ upgrade_gluttonous = {
 	modifier = {
 		cost_modifier = 5
 	}
-	conditions = {
+	unit_conditions = {
 		character = true
 	}
 }

@@ -4,7 +4,7 @@ upgrade_charitable = {
 	modifier = {
 		cost_modifier = -10
 	}
-	conditions = {
+	unit_conditions = {
 		character = true
 	}
 }

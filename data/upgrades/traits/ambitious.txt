@@ -7,7 +7,7 @@ upgrade_ambitious = {
 		mana = 10
 		cost_modifier = 5
 	}
-	conditions = {
+	unit_conditions = {
 		character = true
 	}
 }
