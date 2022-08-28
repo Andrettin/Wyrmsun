@@ -1,0 +1,13 @@
+upgrade_ambitious = {
+	parent = upgrade_trait
+	name = "Ambitious"
+	modifier = {
+		intelligence = 1
+		charisma = -1
+		mana = 10
+		cost_modifier = 5
+	}
+	conditions = {
+		character = true
+	}
+}

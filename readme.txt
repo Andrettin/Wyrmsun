@@ -93,8 +93,9 @@ https://github.com/Andrettin/Wyrmsun
 - Added predefined territories for the Alexandria, Algiers, Carthage, Cyrene, Rabat and Tripoli settlements for the Earth scenario map.
 
 * Units
-- Added the Greedy trait (+10% cost modifier). This trait only affects units which represent a character/hero.
 - The hero unit recruitment tooltip now displays which trait it has.
+- Added the Greedy trait (+10% cost modifier). This trait is only available for hero units.
+- The Ambitious trait now makes the unit have a +5% cost modifier and increases mana by +10 instead of +5, and is only available for hero units.
 
 * Upgrades
 - Added Holmgang upgrade for the Norse (+20% bonus vs. infantry for sword infantry).

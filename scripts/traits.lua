@@ -30,11 +30,6 @@ DefineUpgrade("upgrade-trait", {
 	Icon = "icon-level-up"
 })
 
-DefineUpgrade("upgrade-ambitious", {
-	Parent = "upgrade-trait",
-	Name = "Ambitious"
-})
-
 DefineUpgrade("upgrade-clumsy", {
 	Parent = "upgrade-trait",
 	Name = "Clumsy"
@@ -154,12 +149,6 @@ DefineUpgrade("upgrade-wise", {
 	Parent = "upgrade-trait",
 	Name = "Wise"
 })
-
-DefineModifier("upgrade-ambitious",
-	{"Intelligence", 1},
-	{"Mana", 5},
-	{"Charisma", -1}
-)
 
 DefineModifier("upgrade-clumsy",
 	{"Accuracy", -1},
