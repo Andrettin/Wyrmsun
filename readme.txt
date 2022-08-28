@@ -92,6 +92,9 @@ https://github.com/Andrettin/Wyrmsun
 - Increased the size of the Earth scenario map for from 384x384 to 512x512.
 - Added predefined territories for the Alexandria, Algiers, Carthage, Cyrene, Rabat and Tripoli settlements for the Earth scenario map.
 
+* Units
+- The hero unit recruitment tooltip now displays which trait it has.
+
 * Upgrades
 - Added Holmgang upgrade for the Norse (+20% bonus vs. infantry for sword infantry).
 
