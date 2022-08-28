@@ -93,6 +93,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added predefined territories for the Alexandria, Algiers, Carthage, Cyrene, Rabat and Tripoli settlements for the Earth scenario map.
 
 * Units
+- Added the Greedy trait (+10% cost modifier). This trait only affects units which represent a character/hero.
 - The hero unit recruitment tooltip now displays which trait it has.
 
 * Upgrades

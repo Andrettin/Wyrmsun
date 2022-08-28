@@ -1,0 +1,10 @@
+upgrade_greedy = {
+	parent = upgrade_trait
+	name = "Greedy"
+	modifier = {
+		cost_modifier = 10
+	}
+	conditions = {
+		character = true
+	}
+}
