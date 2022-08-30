@@ -81,6 +81,9 @@ https://github.com/Andrettin/Wyrmsun
 - Removed the Annwn, Ulfdalir and Random Dungeon custom maps.
 - The random custom maps now use the Classic Skirmish map settings (i.e. building sites are disabled).
 
+* Miscellaneous
+- Fixed crash when loading a saved game from within a game.
+
 * Quests
 - Fixed crash which occurred on start for The Wyrm legacy quest.
 - Side-quests are now made available through events, rather than buttons in the town hall.
