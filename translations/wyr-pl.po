@@ -13,86 +13,74 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
 
-msgid "~!Single Player Game"
-msgstr "Gra Jednoo~!sobowa"
+msgid "Single Player Game"
+msgstr "Gra Jednoosobowa"
 
-msgid "~!Quests"
-msgstr "Zadania (~!Q)"
+msgid "Quests"
+msgstr "Zadania"
 
-msgid "C~!ustom Game"
-msgstr "Gra dowolna (~!U)"
+msgid "Custom Game"
+msgstr "Gra dowolna"
 
-msgid "~!Multi Player Game"
-msgstr "Gra Wieloosobowa (~!M)"
+msgid "Multi Player Game"
+msgstr "Gra Wieloosobowa"
 
-msgid "~!Multiplayer Game"
-msgstr "Gra Wieloosobowa (~!M)"
+msgid "Multiplayer Game"
+msgstr "Gra Wieloosobowa"
 
-msgid "~!Grand Strategy Game"
-msgstr "~!Gra Wielkiej Strategii"
+msgid "Grand Strategy Game"
+msgstr "Gra Wielkiej Strategii"
 
 msgid "Load Game"
 msgstr "Wczytaj Grę"
 
-msgid "~!Load Game"
-msgstr "Wczytaj Grę (~!L)"
+msgid "Replay Game"
+msgstr "Powtórz Grę"
 
-msgid "~!Replay Game"
-msgstr "Powtó~!rz Grę"
+msgid "Options"
+msgstr "Opcje"
 
-msgid "~!Options"
-msgstr "~!Opcje"
-
-msgid "Map ~!Editor"
-msgstr "~!Edytor Map"
+msgid "Map Editor"
+msgstr "Edytor Map"
 
 msgid "Load Mod"
 msgstr "Wczytaj Mod"
 
-msgid "Load Mo~!d"
-msgstr "Wczytaj Mo~!d"
+msgid "Encyclopedia"
+msgstr "Encyklopedia"
 
-msgid "En~!cyclopedia"
-msgstr "En~!cyklopedia"
+msgid "Show Credits"
+msgstr "Lista Twórców"
 
-msgid "S~!how Credits"
-msgstr "Li~!sta Twórców"
+msgid "Exit Program"
+msgstr "Wyjdź z Gry"
 
-msgid "E~!xit Program"
-msgstr "Wyjdź z Gry (~!X)"
+msgid "Previous Menu"
+msgstr "Poprzednie Menu"
 
-msgid "~!Previous Menu"
-msgstr "~!Poprzednie Menu"
+msgid "New Map"
+msgstr "Nowa Mapa"
 
-msgid "~!New Map"
-msgstr "~!Nowa Mapa"
-
-msgid "~!Load Map"
-msgstr "Wczytaj Mapę (~!)"
+msgid "Load Map"
+msgstr "Wczytaj Mapę"
 
 msgid "Select Map"
 msgstr "Wybierz Mapę"
 
-msgid "~!Select Map"
-msgstr "Wybierz Mapę (~!S)"
+msgid "Edit Map"
+msgstr "Edytuj Mapę"
 
-msgid "S~!elect Map"
-msgstr "Wybi~!erz Mapę"
+msgid "Continue"
+msgstr "Kontynuuj"
 
-msgid "~!Edit Map"
-msgstr "~!Edytuj Mapę"
+msgid "Load"
+msgstr "Wczytaj"
 
-msgid "~!Continue"
-msgstr "Kontynuuj (~!C)"
+msgid "Cancel"
+msgstr "Anuluj"
 
-msgid "~!Load"
-msgstr "Wczytaj (~!L)"
-
-msgid "~!Cancel"
-msgstr "Anuluj (~!C)"
-
-msgid "~<Units:~>"
-msgstr "~<Jednostki:~>"
+msgid "Units:"
+msgstr "Jednostki:"
 
 msgid "Dwarf"
 msgstr "Krasnolud"
@@ -424,56 +412,56 @@ msgstr "Ponury"
 msgid "Pious"
 msgstr "Pobożny"
 
-msgid "Train ~!Bura"
-msgstr "Szkol ~!Bura"
+msgid "Train Bura"
+msgstr "Szkol Bura"
 
-msgid "Set ~!Rally Point"
-msgstr "Ustaw Punkt Zbió~!rki"
+msgid "Set Rally Point"
+msgstr "Ustaw Punkt Zbiórki"
 
-msgid "~!Move"
-msgstr "Prze~!mieść"
+msgid "Move"
+msgstr "Przemieść"
 
-msgid "~!Stop"
-msgstr "~!Stój"
+msgid "Stop"
+msgstr "Stój"
 
-msgid "~!Attack"
-msgstr "~!Atakuj"
+msgid "Attack"
+msgstr "Atakuj"
 
-msgid "~!Repair"
-msgstr "Nap~!raw"
+msgid "Repair"
+msgstr "Napraw"
 
-msgid "~!Harvest Resource"
-msgstr "Zbieraj Surowce (~!H)"
+msgid "Harvest Resource"
+msgstr "Zbieraj Surowce"
 
-msgid "~!Build Structure"
-msgstr "~!Buduj Strukturę"
+msgid "Build Structure"
+msgstr "Buduj Strukturę"
 
-msgid "Build Chieftain's ~!Hall"
-msgstr "Buduj Dwór Wodza (~!H)"
+msgid "Build Chieftain's Hall"
+msgstr "Buduj Dwór Wodza"
 
-msgid "Build ~!Farm"
-msgstr "Buduj ~!Farmę"
+msgid "Build Farm"
+msgstr "Buduj Farmę"
 
-msgid "Build ~!War Lodge"
-msgstr "Buduj Stróżó~!wkę"
+msgid "Build War Lodge"
+msgstr "Buduj Stróżówkę"
 
-msgid "Build Carpente~!r's Shop"
-msgstr "Buduj Sklep Stola~!rza"
+msgid "Build Carpenter's Shop"
+msgstr "Buduj Sklep Stolarza"
 
-msgid "Build ~!Smithy"
-msgstr "Buduj Zbrojownię (~!S)"
+msgid "Build Smithy"
+msgstr "Buduj Zbrojownię"
 
-msgid "Build ~!Gold Mine"
-msgstr "Buduj Kopalnię Złota (~!G)"
+msgid "Build Gold Mine"
+msgstr "Buduj Kopalnię Złota"
 
-msgid "Build Sil~!ver Mine"
-msgstr "Buduj Kopalnię Srebra (~!V)"
+msgid "Build Silver Mine"
+msgstr "Buduj Kopalnię Srebra"
 
-msgid "Build ~!Copper Mine"
+msgid "Build Copper Mine"
 msgstr "Buduj Kopalnię Miedzi"
 
-msgid "Cancel (~<Esc~>)"
-msgstr "Anuluj (~<Esc~>)"
+msgid "Cancel"
+msgstr "Anuluj"
 
 msgid "Class:"
 msgstr "Klasa:"
@@ -514,8 +502,8 @@ msgstr "Środkowy Przycisk Myszy spowoduje śledzenie celu"
 msgid "Right-click to see encyclopedia"
 msgstr "Prawy Przycisk Myszy otworzy encyklopedię"
 
-msgid "Find Idle Worker (~!.)"
-msgstr "Znajdź Wolnego Robotnika (~!.)"
+msgid "Find Idle Worker"
+msgstr "Znajdź Wolnego Robotnika"
 
 msgid "Find Unit with Available Level Up"
 msgstr "Znajdź Jednostkę, która może Awansować"
@@ -534,9 +522,6 @@ msgstr "- Zabij 8 Yali"
 
 msgid "After a long time wandering, a clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home..."
 msgstr "Po długiej wędrówce, klan krasnoludów prowadzony przez Modsognira przybył do Svarinshaug w poszukiwaniu nowego domu..."
-
-msgid "~!Continue"
-msgstr "Kontynuuj (~!C)"
 
 msgid "Modsognir"
 msgstr "Modsognir"

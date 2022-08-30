@@ -197,59 +197,59 @@ msgstr "Atteindre le niveau 100 avec n'importe quel héro personnalisé."
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/buttons.lua
 
-msgid "Attack ~!Ground"
-msgstr "Attaque au sol (~!G)"
+msgid "Attack Ground"
+msgstr "Attaque au sol"
 
-msgid "~!Unload"
-msgstr "Décharger (~!U)"
+msgid "Unload"
+msgstr "Décharger"
 
-msgid "Salvage Unit (~<Del~>)"
-msgstr "Recycler l'unité (~<Del~>)"
+msgid "Salvage Unit"
+msgstr "Recycler l'unité"
 
-msgid "~!Repair"
-msgstr "~!Réparer"
+msgid "Repair"
+msgstr "Réparer"
 
-msgid "~!Harvest Resource"
-msgstr "Récolter ressources (~!H)"
+msgid "Harvest Resource"
+msgstr "Récolter ressources"
 
-msgid "Return with ~!Goods"
-msgstr "Retourner avec les marchandises (~!G)"
+msgid "Return with Goods"
+msgstr "Retourner avec les marchandises"
 
-msgid "~!Build Structure"
-msgstr "Construire une structure (~!B)"
+msgid "Build Structure"
+msgstr "Construire une structure"
 
-msgid "Set ~!Rally Point"
-msgstr "Point de ~!ralliement"
+msgid "Set Rally Point"
+msgstr "Point de ralliement"
 
-msgid "~!Found a Faction"
-msgstr "Trouver une ~!faction"
+msgid "Found a Faction"
+msgstr "Trouver une faction"
 
-msgid "~!Buy Items"
-msgstr "Acheter articles (~!B)"
+msgid "Buy Items"
+msgstr "Acheter articles"
 
-msgid "Enact a ~!Law"
-msgstr "Promulguer une ~!loi"
+msgid "Enact a Law"
+msgstr "Promulguer une loi"
 
-msgid "View ~!Garrison"
-msgstr "Voir ~!garnison"
+msgid "View Garrison"
+msgstr "Voir garnison"
 
-msgid "Salvage Building (~<Del~>)"
-msgstr "Recycler (~<Del~>)"
+msgid "Salvage Building"
+msgstr "Recycler"
 
-msgid "Cancel Upgrade (~<Esc~>)"
-msgstr "Annuler (~<Esc~>)"
+msgid "Cancel Upgrade"
+msgstr "Annuler"
 
-msgid "Cancel Unit Training (~<Esc~>)"
-msgstr "Annuler la formation (~<Esc~>)"
+msgid "Cancel Unit Training"
+msgstr "Annuler la formation"
 
-msgid "Cancel Construction (~<Esc~>)"
-msgstr "Annuler (~<Esc~>)"
+msgid "Cancel Construction"
+msgstr "Annuler"
 
-msgid "Choose ~!Upgrade"
-msgstr "Mise à nivea~!u"
+msgid "Choose Upgrade"
+msgstr "Mise à niveau"
 
-msgid "Learn ~!Mace Mastery"
-msgstr "Maîtrise de la ~!masse"
+msgid "Learn Mace Mastery"
+msgstr "Maîtrise de la masse"
 
 msgid "The Aedui have been crushed, victory is ours!"
 msgstr "Les Aedui ont été écrasés, la victoire est à nous !"
@@ -259,50 +259,50 @@ msgstr ""
 "La maîtrise de la masse est une capacité passive qui augmente les dégâts avec "
 "masses par 2"
 
-msgid "Learn ~!Bow Mastery"
-msgstr "Maîtrise de l'arc (~!B)"
+msgid "Learn Bow Mastery"
+msgstr "Maîtrise de l'arc"
 
 msgid "Bow Mastery is a passive ability that increases damage with bows by 2"
 msgstr ""
 "La maîtrise de l'arc est une capacité passive qui augmente les dégâts avec "
 "des arcs par 2"
 
-msgid "Learn ~!Throwing Mastery"
-msgstr "Maîtrise du lancer (~!T)"
+msgid "Learn Throwing Mastery"
+msgstr "Maîtrise du lancer"
 
 msgid "Throwing Mastery is a passive ability that increases damage with javelins and throwing axes by 2"
 msgstr ""
 "La maîtrise du lancer est une capacité passive qui augmente les dégâts avec "
 "des javelots et lances par 2"
 
-msgid "Learn ~!Gun Mastery"
-msgstr "Maîtrise des armes à feu (~!G)"
+msgid "Learn Gun Mastery"
+msgstr "Maîtrise des armes à feu"
 
 msgid "Gun Mastery is a passive ability that increases damage with guns by 2"
 msgstr "La maîtrise des armes est une capacité passive qui augmente les dégâts avec des armes à feu de 2"
 
-msgid "Learn A~!xe Mastery"
-msgstr "Maîtrise de la hache (~!A)"
+msgid "Learn Axe Mastery"
+msgstr "Maîtrise de la hache"
 
 msgid "Axe Mastery is a passive ability that increases damage with axes by 2"
 msgstr ""
 "La maîtrise de la hache est une capacité passive qui augmente les dégâts avec "
 "les haches de 2"
 
-msgid "Learn S~!word Mastery"
-msgstr "Maîtrise de l’épée (~!W)"
+msgid "Learn Sword Mastery"
+msgstr "Maîtrise de l’épée"
 
 msgid "Sword Mastery is a passive ability that increases damage with swords by 2"
 msgstr "La maîtrise de l'épée est une capacité passive qui augmente les dégâts avec les épées de 2"
 
-msgid "Learn S~!pear Mastery"
-msgstr "Maîtrise de la lance (~!P)"
+msgid "Learn Spear Mastery"
+msgstr "Maîtrise de la lance"
 
 msgid "Spear Mastery is a passive ability that increases damage with spears by 2"
 msgstr "La maîtrise de la lance est une capacité passive qui augmente les dégâts avec les lances de 2"
 
-msgid "Learn ~!Critical Strike"
-msgstr "Maîtrise de coup ~!critique"
+msgid "Learn Critical Strike"
+msgstr "Maîtrise de coup critique"
 
 msgid "Critical Strike is a passive ability that provides a 10% chance to deal double damage in combat. In No Randomness mode it provides a 10% damage bonus instead"
 msgstr ""
@@ -310,8 +310,8 @@ msgstr ""
 "deux dégâts en combat. En mode Non aléatoire, il offre un bonus de dégâts de "
 "10%"
 
-msgid "Learn ~!Deadly Precision"
-msgstr "Maîtrise précision mortelle (~!D)"
+msgid "Learn Deadly Precision"
+msgstr "Maîtrise précision mortelle"
 
 msgid "Deadly Precision is a passive ability that increases critical strike chance by 10%. In No Randomness mode it provides a 10% damage bonus instead"
 msgstr ""
@@ -319,176 +319,176 @@ msgstr ""
 "coup critique de 10%. En mode Non aléatoire, elle offre un bonus de dégâts de "
 "10%"
 
-msgid "Learn Eagle ~!Eye"
-msgstr "Maîtrise œil d'aigle (~!E)"
+msgid "Learn Eagle Eye"
+msgstr "Maîtrise œil d'aigle"
 
 msgid "Eagle Eye is a passive ability that increases accuracy by 2"
 msgstr "L'œil d'aigle est une capacité passive qui augmente la précision de 2"
 
-msgid "Learn ~!Scouting"
-msgstr "Maîtrise reconnaissance (~!S)"
+msgid "Learn Scouting"
+msgstr "Maîtrise reconnaissance"
 
 msgid "Scouting is a passive ability that increases sight by 1"
 msgstr "La reconnaissance est une capacité passive qui augmente la vue de 1"
 
-msgid "Learn St~!un"
-msgstr "Maîtrise de l'éto~!urdissement"
+msgid "Learn Stun"
+msgstr "Maîtrise de l'étourdissement"
 
 msgid "Stun is an active ability which does a stunning attack on a target, leaving it paralyzed for a few moments"
 msgstr "L'étourdissement est une capacité active qui fait une attaque stupéfiante sur une cible, la laissant paralysée pendant quelques instants"
 
-msgid "Learn P~!recise Shot"
-msgstr "Maîtrise du tir p~!récis"
+msgid "Learn Precise Shot"
+msgstr "Maîtrise du tir précis"
 
 msgid "Precise Shot is an active ability which deals a critical hit. Only usable with ranged weapons" 
 msgstr "Le tir précis est une capacité active qui inflige un coup critique. Utilisable uniquement avec des armes à distance"
 
-msgid "Learn Punctu~!re"
-msgstr "Maît~!rise de la ponction"
+msgid "Learn Puncture"
+msgstr "Maîtrise de la ponction"
 
 msgid "Puncture is an active ability which makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks"
 msgstr "La ponction est une capacité active qui fait saigner la cible pendant une certaine durée. Seulement utilisable avec des armes de mêlée capables de faire des attaques de poussée"
 
-msgid "Learn ~!Leadership Aura"
-msgstr "Apprendre l'aura de ~!leadership"
+msgid "Learn Leadership Aura"
+msgstr "Apprendre l'aura de leadership"
 
 msgid "Leadership Aura is an aura ability that increases the damage of nearby friendly units by 10%"
 msgstr ""
 "L'aura de leadership est une capacité d'aura qui augmente de 10% les dégâts "
 "infligés par les unités amies proches"
 
-msgid "Learn T~!oughness"
-msgstr "Apprendre la ténacité (~!O)"
+msgid "Learn Toughness"
+msgstr "Apprendre la ténacité"
 
 msgid "Toughness is a passive ability that increases HP by 10"
 msgstr "La ténacité est une capacité passive qui augmente PV de 10"
 
-msgid "Open ~!Inventory"
-msgstr "Ouvrir ~!inventaire"
+msgid "Open Inventory"
+msgstr "Ouvrir inventaire"
 
 msgid "Reveals an area"
 msgstr "Révèle une zone"
 
-msgid "~!Far Sight"
-msgstr "Lointain (~!F)"
+msgid "Far Sight"
+msgstr "Lointain"
 
 msgid "Makes an organic unit flee in terror"
 msgstr "Fait fuir une unité organique avec terreur"
 
-msgid "~!Terror"
-msgstr "~!Terreur"
+msgid "Terror"
+msgstr "Terreur"
 
-msgid "~!Healing"
-msgstr "Guérison (~!H)"
+msgid "Healing"
+msgstr "Guérison"
 
 msgid "Heals an organic unit"
 msgstr "Soigne une unité organique"
 
-msgid "Shoc~!king Grasp"
-msgstr "Prise de choc (~!K)"
+msgid "Shocking Grasp"
+msgstr "Prise de choc"
 
 msgid "Deals lightning damage at melee range to a unit, leaving it stunned for a few seconds"
 msgstr "Inflige des dégâts de foudre à la mêlée à une unité, la laissant étourdie pendant quelques secondes"
 
-msgid "~!Inspire"
-msgstr "~!Inspirer"
+msgid "Inspire"
+msgstr "Inspirer"
 
 msgid "Inspires an organic unit to deal 50% more damage"
 msgstr "Inspire une unité organique pour infliger 50% de dégâts supplémentaires"
 
-msgid "~!Wither"
-msgstr "Flétrir (~!W)"
+msgid "Wither"
+msgstr "Flétrir"
 
 msgid "Causes an organic unit to deal 50% less damage"
 msgstr "Fait qu'une unité organique inflige 50% de dégâts en moins"
 
-msgid "~!Blessing"
-msgstr "~!Bénédiction"
+msgid "Blessing"
+msgstr "Bénédiction"
 
 msgid "Blesses an organic unit to deal 50% more damage and to evade 50% better"
 msgstr ""
 "Bénit une unité organique pour infliger 50% de dégâts supplémentaires et "
 "mieux éviter de 50%"
 
-msgid "P~!recision"
-msgstr "P~!récision"
+msgid "Precision"
+msgstr "Précision"
 
-msgid "Stu~!n"
-msgstr "Étourdir (~!N)"
+msgid "Stun"
+msgstr "Étourdir"
 
 msgid "Does a stunning attack on a target, leaving it paralyzed for a few moments"
 msgstr "Fait une attaque stupéfiante sur une cible, la laissant paralysée pendant quelques instants"
 
-msgid "Punctu~!re"
-msgstr "Piqû~!re"
+msgid "Puncture"
+msgstr "Piqûre"
 
 msgid "Makes the target bleed for a certain duration. Only usable with melee weapons capable of doing thrusting attacks"
 msgstr ""
 "Fait saigner la cible pendant une certaine durée. Seulement utilisable avec "
 "des armes de mêlée capables de faire des attaques de poussée"
 
-msgid "P~!recise Shot"
-msgstr "Tir p~!récis"
+msgid "Precise Shot"
+msgstr "Tir précis"
 
-msgid "Build Mine~!cart"
-msgstr "~!Chariot"
+msgid "Build Minecart"
+msgstr "Chariot"
 
-msgid "Build ~!Caravan"
-msgstr "~!Caravane"
+msgid "Build Caravan"
+msgstr "Caravane"
 
-msgid "Build R~!oad"
-msgstr "R~!oute"
+msgid "Build Road"
+msgstr "Route"
 
-msgid "Build ~!Railroad"
-msgstr "Chemin de fe~!r"
+msgid "Build Railroad"
+msgstr "Chemin de fer"
 
-msgid "Build Carpente~!r's Shop"
-msgstr "Atelier de charpentie~!r"
+msgid "Build Carpenter's Shop"
+msgstr "Atelier de charpentier"
 
-msgid "Build ~!Copper Mine"
-msgstr "Mine de ~!cuivre"
+msgid "Build Copper Mine"
+msgstr "Mine de cuivre"
 
-msgid "Build ~!Diamond Mine"
-msgstr "Mine de ~!diamants"
+msgid "Build Diamond Mine"
+msgstr "Mine de diamants"
 
-msgid "Build ~!Gold Mine"
-msgstr "Mine d'or (~!G)"
+msgid "Build Gold Mine"
+msgstr "Mine d'or"
 
-msgid "Build Si~!lver Mine"
-msgstr "Mine d'argent (~!L)"
+msgid "Build Silver Mine"
+msgstr "Mine d'argent"
 
-msgid "Build ~!Emerald Mine"
-msgstr "Mine d'émeraude (~!E)"
+msgid "Build Emerald Mine"
+msgstr "Mine d'émeraude"
 
-msgid "Build ~!Iron Mine"
-msgstr "Mine de fer (~!I)"
+msgid "Build Iron Mine"
+msgstr "Mine de fer"
 
-msgid "Build ~!Mithril Mine"
-msgstr "Mine de ~!mithril"
+msgid "Build Mithril Mine"
+msgstr "Mine de mithril"
 
 msgid "Yale Hunting Lodge"
 msgstr "Pavillon de chasse de Yale"
 
-msgid "Build ~!Yale Hunting Lodge"
-msgstr "Pavillon de chasse de ~!Yale"
+msgid "Build Yale Hunting Lodge"
+msgstr "Pavillon de chasse de Yale"
 
-msgid "Next (~<PgDwn~>)"
-msgstr "Suivant (~<PgDwn~>)"
+msgid "Next"
+msgstr "Suivant"
 
-msgid "Previous (~<PgUp~>)"
-msgstr "Précédent (~<PgUp~>)"
+msgid "Previous"
+msgstr "Précédent"
 
 msgid "Buy"
 msgstr "Acheter"
 
-msgid "Produce ~!Jewelry"
-msgstr "Produire des bijoux (~!J)"
+msgid "Produce Jewelry"
+msgstr "Produire des bijoux"
 
-msgid "Produce ~!Furniture"
-msgstr "Produire des meubles (~!F)"
+msgid "Produce Furniture"
+msgstr "Produire des meubles"
 
-msgid "Produce ~!Leather"
-msgstr "Produire du cuir (~!L)"
+msgid "Produce Leather"
+msgstr "Produire du cuir"
 
 msgid "Allows workers to transform Lumber into Furniture in this building"
 msgstr "Permet aux travailleurs de transformer le bois en meuble dans ce bâtiment"
@@ -508,67 +508,67 @@ msgstr "Acheter"
 msgid "Buy Stone"
 msgstr "Acheter"
 
-msgid "Enact ~!Free Workers"
-msgstr "Travailleurs libres (~!F)"
+msgid "Enact Free Workers"
+msgstr "Travailleurs libres"
 
 msgid "-100 Copper cost for workers, -1 worker gathering rate. Removes Free Workers."
 msgstr "-100 de cuivre pour les travailleurs, -1 taux de collecte des travailleurs. Supprime les inoccupés."
 
-msgid "Enact ~!Serfdom"
-msgstr "~!Servage"
+msgid "Enact Serfdom"
+msgstr "Servage"
 
-msgid "Develop Shield ~!Wall"
-msgstr "Développe le bouclier mural (~!W)"
+msgid "Develop Shield Wall"
+msgstr "Développe le bouclier mural"
 
 msgid "+2 Armor for infantry. Incompatible with Svinfylking."
 msgstr "+2 armure pour l'infanterie. Incompatible avec Svinfylking."
 
-msgid "Develop Svin~!fylking"
-msgstr "Développe Svin~!fylking"
+msgid "Develop Svinfylking"
+msgstr "Développe Svinfylking"
 
 msgid "+2 Damage for infantry. Incompatible with Shield Wall."
 msgstr "+2 dégâts pour l'infanterie. Incompatible avec les murs."
 
-msgid "Research Wood ~!Plow"
-msgstr "Charrue à bois (~!P)"
+msgid "Research Wood Plow"
+msgstr "Charrue à bois"
 
-msgid "Research Iron-Tipped Wood ~!Plow"
-msgstr "Charrue en pointe de fer (~!P)"
+msgid "Research Iron-Tipped Wood Plow"
+msgstr "Charrue en pointe de fer"
 
-msgid "Research Iron ~!Plow"
-msgstr "Charrue en fer (~!P)"
+msgid "Research Iron Plow"
+msgstr "Charrue en fer"
 
 msgid "+1 Food supply for farms."
 msgstr "+1 en population pour les fermes."
 
-msgid "Research ~!Ironworking"
-msgstr "Travail du fer (~!I)"
+msgid "Research Ironworking"
+msgstr "Travail du fer"
 
 msgid "Allows Iron Mines and Mithril Mines, +10% Iron and Mithril Processing Bonus for Smithies."
 msgstr ""
 "Active mines de fer et de mithril, +10% de bonus de fer et mithril pour les "
 "forges."
 
-msgid "Research ~!Mathematics"
-msgstr "~!Mathématiques"
+msgid "Research Mathematics"
+msgstr "Mathématiques"
 
 msgid "-5% Trade Cost for Markets."
 msgstr "-5% Coût du commerce pour les marchés."
 
-msgid "Research Ar~!chitecture"
-msgstr "Ar~!chitecture"
+msgid "Research Architecture"
+msgstr "Architecture"
 
 msgid "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings."
 msgstr "+20% de points de vie, +5 points d'armure et -25% de récupération pour les bâtiments."
 
-msgid "Research Philo~!sophy"
-msgstr "Philo~!sophie"
+msgid "Research Philosophy"
+msgstr "Philosophie"
 
 msgid "+10% Research Speed for buildings."
 msgstr "+10% de vitesse de recherche pour les bâtiments."
 
-msgid "Research ~!Gunpowder"
-msgstr "Poudre à canon (~!G)"
+msgid "Research Gunpowder"
+msgstr "Poudre à canon"
 
 msgid "Allows gunpowder infantry and upgrades Ballista Towers to Cannon Towers."
 msgstr "Permet l'infanterie d'arme à feu et améliore les tours de baliste en tours de cannon."
@@ -576,8 +576,8 @@ msgstr "Permet l'infanterie d'arme à feu et améliore les tours de baliste en t
 msgid "Allows gunpowder infantry."
 msgstr "Permet l'infanterie d'arme à feu."
 
-msgid "Buy Potion of ~!Healing"
-msgstr "Acheter potion de vie (~!H)"
+msgid "Buy Potion of Healing"
+msgstr "Acheter potion de vie"
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/campaigns.lua
 
@@ -965,11 +965,11 @@ msgstr "Amélioration du personnage de Kvasir"
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/scripts/menu/achievements.lua
 
-msgid "~<Achievements~>"
-msgstr "~<Accomplissements~>"
+msgid "Achievements"
+msgstr "Accomplissements"
 
-msgid "~!Previous Menu"
-msgstr "Retour (~!P)"
+msgid "Previous Menu"
+msgstr "Retour"
 
 msgid "Progress:"
 msgstr "Progression :"
@@ -1133,8 +1133,8 @@ msgstr "Les potions de guérison peuvent grandement augmenter la capacité de su
 		
 # scripts/menu/campaign.lua
 
-msgid "~<Scenarios~>"
-msgstr "~<Scénarios~>"
+msgid "Scenarios"
+msgstr "Scénarios"
 
 msgid "No Randomness"
 msgstr "Non aléatoire"
@@ -1168,14 +1168,14 @@ msgstr "Choissir une carte"
 msgid "Select Mod"
 msgstr "Choisir un mod"
 
-msgid "~!Scenarios"
-msgstr "~!Scénarios"
+msgid "Scenarios"
+msgstr "Scénarios"
 
-msgid "~!Start Scenario"
-msgstr "Commencer ~!scénario"
+msgid "Start Scenario"
+msgstr "Commencer scénario"
 
-msgid "~<Single Player Game Setup~>"
-msgstr "~<Paramétrages en jeu solo~>"
+msgid "Single Player Game Setup"
+msgstr "Paramétrages en jeu solo"
 
 # scripts/menu/credits.lua
 
@@ -1238,11 +1238,11 @@ msgstr "Trait :"
 msgid "Variation:"
 msgstr "Variante :"
 
-msgid "Crea~!te"
-msgstr "Créer (~!T)"
+msgid "Create"
+msgstr "Créer"
 
-msgid "New ~!Name"
-msgstr "~!Nom"
+msgid "New Name"
+msgstr "Nom"
 
 # scripts/menu/diplomacy.lua
 
@@ -1272,29 +1272,29 @@ msgstr "Largeur :"
 msgid "Height:"
 msgstr "Hauteur :"
 
-msgid "~!New Map"
-msgstr "~!Nouvelle carte"
+msgid "New Map"
+msgstr "Nouvelle carte"
 
 msgid "Size:"
 msgstr "Taille :"
 
-msgid "~!Select Map"
-msgstr "Choi~!sir carte"
+msgid "Select Map"
+msgstr "Choisir carte"
 
-msgid "~!Select Mod"
-msgstr "Choi~!sir mod"
+msgid "Select Mod"
+msgstr "Choisir mod"
 
-msgid "~!Edit Map"
-msgstr "~!Éditer carte"
+msgid "Edit Map"
+msgstr "Éditer carte"
 
-msgid "~!Edit Mod"
-msgstr "~!Éditer mod"
+msgid "Edit Mod"
+msgstr "Éditer mod"
 
-msgid "~!Load Map"
-msgstr "Charger carte (~!L)"
+msgid "Load Map"
+msgstr "Charger carte"
 
-msgid "Load ~!Mod"
-msgstr "Charger ~!mod"
+msgid "Load Mod"
+msgstr "Charger mod"
 
 msgid "A map needs to have at least one person player."
 msgstr "Une carte doit avoir au moins un joueur."
@@ -1332,8 +1332,8 @@ msgstr "Nom carte :"
 msgid "Custom Data Properties"
 msgstr "Propriétés de données personnalisées"
 
-msgid "Custom ~!Factions"
-msgstr "Personnaliser les ~!factions"
+msgid "Custom Factions"
+msgstr "Personnaliser les factions"
 
 msgid "Custom Factions"
 msgstr "Personnaliser les Factions"
@@ -1356,8 +1356,8 @@ msgstr "Il y a une autre faction avec le même nom."
 msgid "The faction's name is invalid."
 msgstr "Le nom de la faction est invalide."
 
-msgid "~!Delete"
-msgstr "Supprimer (~!D)"
+msgid "Delete"
+msgstr "Supprimer"
 
 msgid "Delete"
 msgstr "Supprimer"
@@ -1365,26 +1365,26 @@ msgstr "Supprimer"
 msgid "Editor Menu"
 msgstr "Menu éditeur"
 
-msgid "Save Map (~<F11~>)"
-msgstr "Enregistrer (~<F11~>)"
+msgid "Save Map"
+msgstr "Enregistrer"
 
-msgid "Save as ~!Mod"
-msgstr "Enregistrer en ~!mod"
+msgid "Save as Mod"
+msgstr "Enregistrer en mod"
 
-msgid "Map Properties (~<F5~>)"
-msgstr "Propriétés carte (~<F5~>)"
+msgid "Map Properties"
+msgstr "Propriétés carte"
 
-msgid "Player Properties (~<F6~>)"
-msgstr "Propriétés joueur (~<F6~>)"
+msgid "Player Properties"
+msgstr "Propriétés joueur"
 
-msgid "Custom ~!Data"
-msgstr "~!Données Personnalisées"
+msgid "Custom Data"
+msgstr "Données Personnalisées"
 
-msgid "E~!xit to Menu"
-msgstr "Quitter vers le menu (~!X)"
+msgid "Exit to Menu"
+msgstr "Quitter vers le menu"
 
-msgid "Return to Editor (~<Esc~>)"
-msgstr "Retour vers l'éditeur (~<Esc~>)"
+msgid "Return to Editor"
+msgstr "Retour vers l'éditeur"
 
 msgid "Unit Properties"
 msgstr "Propriétés unité"
@@ -1437,17 +1437,17 @@ msgstr "Le nom est invalide."
 msgid "Properties"
 msgstr "Propriétés"
 
-msgid "~!Main Properties"
-msgstr "Propriétés principales (~!M)"
+msgid "Main Properties"
+msgstr "Propriétés principales"
 
-msgid "~!Graphics"
-msgstr "~!Graphismes"
+msgid "Graphics"
+msgstr "Graphismes"
 
-msgid "~!Resource Stats"
-msgstr "Stats ~!Ressources"
+msgid "Resource Stats"
+msgstr "Stats Ressources"
 
-msgid "~!Sounds"
-msgstr "~!Sons"
+msgid "Sounds"
+msgstr "Sons"
 
 msgid "Graphics:"
 msgstr "Graphismes :"
@@ -1660,8 +1660,8 @@ msgstr "Sage"
 
 # scripts/menus/encyclopedia.lua
 
-msgid "~<Encyclopedia~>"
-msgstr "~<Encyclopédie~>"
+msgid "Encyclopedia"
+msgstr "Encyclopédie"
 
 msgid "Spells"
 msgstr "Sorts"
@@ -1669,23 +1669,23 @@ msgstr "Sorts"
 msgid "Alternate Names"
 msgstr "Noms alternatifs"
 
-msgid "~!Buildings"
-msgstr "Constructions (~!B)"
-
-msgid "~!Deities"
-msgstr "~!Divinité"
+msgid "Buildings"
+msgstr "Constructions"
 
 msgid "Deities"
 msgstr "Divinité"
 
-msgid "~!Game Concepts"
-msgstr "Concept du jeu (~!G)"
+msgid "Deities"
+msgstr "Divinité"
+
+msgid "Game Concepts"
+msgstr "Concept du jeu"
 
 msgid "Game Concepts"
 msgstr "Concept du Jeu"
 
-msgid "~!Heroes"
-msgstr "~!Héros"
+msgid "Heroes"
+msgstr "Héros"
 
 msgid "Heroes"
 msgstr "Héros"
@@ -1693,14 +1693,8 @@ msgstr "Héros"
 msgid "Items"
 msgstr "Articles"
 
-msgid "~!Items"
-msgstr "Art~!icles"
-
-msgid "Magic P~!refixes"
-msgstr "P~!réfixes magiques"
-
-msgid "Magic ~!Suffixes"
-msgstr "~!Suffixes magiques"
+msgid "Items"
+msgstr "Articles"
 
 msgid "Magic Prefixes"
 msgstr "Préfixes magiques"
@@ -1708,23 +1702,17 @@ msgstr "Préfixes magiques"
 msgid "Magic Suffixes"
 msgstr "Suffixes magiques"
 
-msgid "P~!lanes"
-msgstr "P~!lans"
+msgid "Planes"
+msgstr "Plans"
 
 msgid "Runic Suffixes"
 msgstr "Suffixes runiques"
 
-msgid "Runic Suffix~!es"
-msgstr "Suffix~!es runiques"
+msgid "Texts"
+msgstr "Textes"
 
-msgid "~!Technologies"
-msgstr "~!Technologies"
-
-msgid "Te~!xts"
-msgstr "Te~!xtes"
-
-msgid "U~!niques"
-msgstr "U~!niques"
+msgid "Uniques"
+msgstr "Uniques"
 
 msgid "Class"
 msgstr "Classe"
@@ -1732,17 +1720,11 @@ msgstr "Classe"
 msgid "Costs"
 msgstr "Coûts"
 
-msgid "~!Worlds"
-msgstr "Mondes (~!W)"
-
 msgid "Worlds"
 msgstr "Mondes"
 
 msgid "Units"
 msgstr "Unités"
-
-msgid "~!Units"
-msgstr "~!Unités"
 
 msgid "Civilizations"
 msgstr "Civilisations"
@@ -1770,11 +1752,11 @@ msgstr "Église"
 
 # scripts/dialogues.lua
 
-msgid "~!Defeat..."
-msgstr "~!Défaite..."
+msgid "Defeat..."
+msgstr "Défaite..."
 
-msgid "~!Victory!"
-msgstr "~!Victoire !"
+msgid "Victory!"
+msgstr "Victoire !"
 
 # scripts/menus/results.lua
 
@@ -1972,8 +1954,8 @@ msgstr "Jaune"
 msgid "Pink"
 msgstr "Rose"
 
-msgid "Find Idle Worker (~!.)"
-msgstr "Trouver un travailleur inactif (~!.)"
+msgid "Find Idle Worker"
+msgstr "Trouver un travailleur inactif"
 
 msgid "Worker"
 msgstr "Travailleur"
@@ -1981,33 +1963,33 @@ msgstr "Travailleur"
 msgid "Find"
 msgstr "Trouver"
 
-msgid "Train C~!leric"
+msgid "Train Cleric"
 msgstr "Former Pasteur"
 
 # scripts/civilizations/latin/buttons.lua
 
-msgid "Train ~!Legionary"
-msgstr "~!Légionnaire"
+msgid "Train Legionary"
+msgstr "Légionnaire"
 
-msgid "Train ~!Javelineer"
-msgstr "~!Javelinier"
+msgid "Train Javelineer"
+msgstr "Javelinier"
 
-msgid "Hire ~!Legionary"
-msgstr "Renvoyer ~!légionnaire"
+msgid "Hire Legionary"
+msgstr "Renvoyer légionnaire"
 
-msgid "Hide ~!Javelineer"
-msgstr "Renvoyer ~!javelinier"
+msgid "Hide Javelineer"
+msgstr "Renvoyer javelinier"
 
-msgid "Upgrade to Veteran ~!Legionary"
-msgstr "Maj vers ~!légionnaire vétéran"
+msgid "Upgrade to Veteran Legionary"
+msgstr "Maj vers légionnaire vétéran"
 
-msgid "Upgrade to ~!Centurion"
-msgstr "Maj vers ~!centurion"
+msgid "Upgrade to Centurion"
+msgstr "Maj vers centurion"
 
 # scripts/civilizations/teuton/buttons.lua
 
-msgid "Convert to ~!Christianity"
-msgstr "Convertir au ~!christianisme"
+msgid "Convert to Christianity"
+msgstr "Convertir au christianisme"
 
 msgid "Convert to Christianity"
 msgstr "Convertir au christianisme"
@@ -2025,59 +2007,56 @@ msgstr ""
 "et active les sorts de soins et de bénédiction pour les pasteurs. "
 "Incompatible avec les divinités païennes."
 
-msgid "Build Watch ~!Tower"
-msgstr "~!Tour de guet"
+msgid "Build Watch Tower"
+msgstr "Tour de guet"
 
-msgid "Build Stabl~!es"
-msgstr "Écuri~!es"
+msgid "Build Stables"
+msgstr "Écuries"
 
-msgid "Build ~!University"
-msgstr "~!Université"
+msgid "Build University"
+msgstr "Université"
 
-msgid "Build ~!Wall"
-msgstr "Mur (~!W)"
+msgid "Build Wall"
+msgstr "Mur"
 
-msgid "Research S~!patha"
-msgstr "É~!pée longue"
+msgid "Research Spatha"
+msgstr "Épée longue"
 
 msgid "+2 Damage for swordwielders. Allows Spathas to be sold at the Market."
 msgstr "+2 dégâts pour les épéistes. Permet de les vendre au marché."
 
-msgid "Research Iron ~!Shield"
-msgstr "Bouclier en fer (~!S)"
+msgid "Research Iron Shield"
+msgstr "Bouclier en fer"
 
 msgid  "+2 Armor for melee infantry and cavalry. Allows Iron Shields to be sold at the Market."
 msgstr "+2 armure pour l'infanterie de mêlée et cavalerie. Permet de le vendre au marché."
 
-msgid "Research Granite ~!Catapult Projectile"
-msgstr "Projectile de ~!catapulte en granite"
+msgid "Research Granite Catapult Projectile"
+msgstr "Projectile de catapulte en granite"
 
 msgid "+12 Damage for Catapults."
 msgstr "+12 dégâts pour les catapultes."
 
-msgid "Research Metal ~!Catapult Projectile"
-msgstr "Projectile de ~!catapulte en métal"
+msgid "Research Metal Catapult Projectile"
+msgstr "Projectile de catapulte en métal"
 
-msgid "Research Pi~!ke"
-msgstr "Lance (~!k)"
+msgid "Research Pike"
+msgstr "Lance"
 
 msgid "+2 Damage for Spearmen. Allows Pikes to be sold at the Market."
 msgstr "+2 points de dégâts pour lanciers. Permet à Pikes d'être vendu au marché."
 
-msgid "Research Bodkin ~!Arrow"
-msgstr "Flêche Bodkin (~!A)"
+msgid "Research Bodkin Arrow"
+msgstr "Flêche Bodkin"
 
 msgid "+2 Damage for Archers, Strongholds and Guard Towers. Allows Bodkin Arrows to be sold at the Market."
 msgstr "+2 points de dégâts pour les archers, forteresses et tours de garde. Permet aux flèches Bodkin d'être vendues au marché."
 
-msgid "Research ~!Masonry"
-msgstr "~!Maçonnerie"
+msgid "Research Masonry"
+msgstr "Maçonnerie"
 
 msgid "+20% Hit Points, +5 Armor and -25% Salvage Factor for buildings, enables Road and Wall construction, and allows Watch Towers to be upgraded to Guard Towers and Town Halls to Strongholds."
 msgstr "+20% de points de vie, +5 armures et -25% de facteur de récupération pour les bâtiments, permet la construction de routes et de murs, et permet aux tours de surveillance d'être transformées en tours de garde et en hôtels de ville."
-
-msgid "Research ~!Coinage"
-msgstr "Monnaie (~!C)"
 
 msgid "Research Coinage"
 msgstr "Monnaie"
@@ -2091,12 +2070,6 @@ msgstr "Écriture"
 msgid "Iron Plow"
 msgstr "Charrue en fer"
 
-msgid "Research ~!Writing"
-msgstr "Écriture (~!W)"
-
-msgid "Research ~!Wood Plow"
-msgstr "Charrue à bois (~!W)"
-
 msgid "Research Wood Plow"
 msgstr "Charrue à bois"
 
@@ -2106,62 +2079,62 @@ msgstr "Écriture"
 msgid "+10% Research Speed for buildings. Allows Scrolls and Books to be sold at the Market."
 msgstr "+ 10% de vitesse de recherche pour les bâtiments. Permet aux rouleaux et aux livres d'être vendus au marché."
 
-msgid "Research ~!Alchemy"
-msgstr "~!Alchimie"
+msgid "Research Alchemy"
+msgstr "Alchimie"
 
 msgid "+1 Fire Damage for Archers, Strongholds and Guard Towers, +4 Fire Damage for Catapults. Allows new magic affixes for items sold at the Market. Allows potions and elixirs to be sold at the Market."
 msgstr "+1 de dégâts de feu pour les archers, forteresses et tours de garde, +4 dégâts de feu pour les catapultes. Permet de nouveaux affixes magiques pour les articles vendus au marché. Permet de vendre des potions et des élixirs au marché."
 
-msgid "Worship ~!Wodan"
-msgstr "Culte ~!Wodan"
+msgid "Worship Wodan"
+msgstr "Culte Wodan"
 
 msgid "Choose Woden as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thunor major deity."
 msgstr "Choisissez Woden comme votre principale divinité. +2 Dégâts pour les archers, permet le sort de vue éloignée pour les Gudjans. Permet de nouveaux affixes magiques pour les articles vendus au marché. Incompatible avec la religion du christianisme ou avec la divinité majeure de Thunor."
 
-msgid "Worship ~!Thunor"
-msgstr "Culte ~!Thunor"
+msgid "Worship Thunor"
+msgstr "Culte Thunor"
 
 msgid "Choose Thunor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Wodan major deity."
 msgstr "Choisissez Thunor comme votre divinité principale. +2 Dégâts pour l'infanterie de l'épée, permet le sort de Shocking Grasp pour les Gudjans. Permet de nouveaux affixes magiques pour les articles vendus au marché. Incompatible avec la religion du christianisme ou avec la divinité majeure de Wodan."
 
-msgid "Worship T~!yr"
-msgstr "Culte T~!yr"
+msgid "Worship Tyr"
+msgstr "Culte Tyr"
 
 msgid "Choose Tyr as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities."
 msgstr "Choisissez Tyr comme une divinité mineure. +2 Dégâts pour l'infanterie de l'épée, permet le sort d'Inspire pour les Gudjans. Permet de nouveaux affixes magiques pour les articles vendus au marché. Incompatible avec les divinités Heimdall et Hel."
 
-msgid "Worship ~!Ziu"
-msgstr "Culte ~!Ziu"
+msgid "Worship Ziu"
+msgstr "Culte Ziu"
 
 msgid "Choose Ziu as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Hella minor deity."
 msgstr "Choisissez Ziu comme une divinité mineure. +2 Dégâts pour l'infanterie de l'épée, permet le sort d'Inspire pour les Gudjans. Permet de nouveaux affixes magiques pour les articles vendus au marché. Incompatible avec la divinité Hella minor."
 
-msgid "Worship Ti~!w"
-msgstr "Culte Ti~!w"
+msgid "Worship Tiw"
+msgstr "Culte Tiw"
 
 msgid "Choose Tiw as a minor deity. +2 Damage for sword infantry, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Hel minor deities."
 msgstr "Choisissez Tiw comme divinité mineure. +2 Dégâts pour l'infanterie de l'épée, permet le sort d'Inspire pour les Gudjans. Permet de nouveaux affixes magiques pour les articles vendus au marché. Incompatible avec les divinités Heimdall et Hel."
 
-msgid "Worship ~!Heimdall"
-msgstr "Culte ~!Heimdall"
+msgid "Worship Heimdall"
+msgstr "Culte Heimdall"
 
 msgid "Choose Heimdall as a minor deity. +1 Sight for Archers, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Hel and Tyr minor deities."
 msgstr "Choisissez Heimdall comme une divinité mineure. +1 pour les Archers, permet le sort Précision pour les Gudjans. Permet de nouveaux affixes magiques pour les articles vendus au marché. Incompatible avec les civilisations Francs, Gothiques, Suebi et Teuton, et avec les divinités Hel et Tyr mineures."
 
-msgid "Worship ~!Hel"
-msgstr "Culte ~!Hel"
+msgid "Worship Hel"
+msgstr "Culte Hel"
 
 msgid "Choose Hel as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Heimdall and Tyr minor deities."
 msgstr "Choisissez Hel comme une divinité mineure. +20 Mana et permet le sort Wither pour Gudjans. Permet de nouveaux affixes magiques pour les articles vendus au marché. Incompatible avec les divinités Heimdall et Tyr mineures."
 
-msgid "Worship ~!Hella"
-msgstr "Culte ~!Hella"
+msgid "Worship Hella"
+msgstr "Culte Hella"
 
 msgid "Choose Hella as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Ziu minor deity."
 msgstr "Choisissez Hella comme une divinité mineure. +20 Mana et permet le sort Wither pour Gudjans. Permet de nouveaux affixes magiques pour les articles vendus au marché. Incompatible avec la divinité mineure Ziu."
 
-msgid "Worship ~!Halja"
-msgstr "Culte ~!Halja"
+msgid "Worship Halja"
+msgstr "Culte Halja"
 
 msgid "Choose Halja as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Tyr minor deity."
 msgstr "Choisissez Halja comme une divinité mineure. +20 Mana et permet le sort Wither pour Gudjans. Permet de nouveaux affixes magiques pour les articles vendus au marché. Incompatible avec la divinité mineure Tyr."
@@ -2175,23 +2148,23 @@ msgstr "Choisissez Thunor comme divinité principale pour votre héro. +2 Dégâ
 msgid "Choose Ziu as a minor deity for your hero. +2 Damage for sword infantry and enables Inspire spell for Gudjans. Incompatible with the Hella minor deity."
 msgstr "Choisissez Ziu comme une divinité mineure pour votre héro. +2 Dégâts pour l'infanterie à l'épée et permet le sort Inspire pour les Gudjans. Incompatible avec la divinité Hella minor."
 
-msgid "Upgrade to Strong~!hold"
-msgstr "Forteresse (~!)"
+msgid "Upgrade to Stronghold"
+msgstr "Forteresse"
 
-msgid "Upgrade to ~!Guard Tower"
-msgstr "Tour de ~!garde"
+msgid "Upgrade to Guard Tower"
+msgstr "Tour de garde"
 
-msgid "Upgrade to Veteran S~!wordsman"
-msgstr "Épéiste vétéran (~!W)"
+msgid "Upgrade to Veteran Swordsman"
+msgstr "Épéiste vétéran"
 
-msgid "Upgrade to ~!Warlord"
-msgstr "Seigneur de guerre (~!W)"
+msgid "Upgrade to Warlord"
+msgstr "Seigneur de guerre"
 
-msgid "Upgrade to ~!Knight"
-msgstr "Chevalier (~!K)"
+msgid "Upgrade to Knight"
+msgstr "Chevalier"
 
-msgid "Upgrade to ~!Knight Lord"
-msgstr "Chevalier seigneur (~!K)"
+msgid "Upgrade to Knight Lord"
+msgstr "Chevalier seigneur"
 
 msgid "Build University"
 msgstr "Université"
@@ -2204,20 +2177,14 @@ msgstr "Stockage :"
 
 # divers
 
-msgid "Train ~!Archer"
-msgstr "Former ~!archer"
+msgid "Train Archer"
+msgstr "Former archer"
 
-msgid "Train ~!Kregar"
-msgstr "Former ~!Kregar"
-
-msgid "Train ~!Spearman"
-msgstr "Former lancier (~!K)"
+msgid "Train Kregar"
+msgstr "Former Kregar"
 
 msgid "Train Spearman"
 msgstr "Former lancier"
-
-msgid "Train ~!Knight"
-msgstr "Former chevalier (~!K)"
 
 msgid "Train Knight"
 msgstr "Former chevalier"
@@ -2228,50 +2195,38 @@ msgstr ""
 msgid "Food Cost:"
 msgstr "Entretien :"
 
-msgid "~!Move"
-msgstr "Déplacer (~!M)"
+msgid "Move"
+msgstr "Déplacer"
 
-msgid "Build C~!arpenter's Shop"
-msgstr "Magasin du ch~!arpentier"
+msgid "Build Carpenter's Shop"
+msgstr "Magasin du charpentier"
 
 msgid "Carpenter's Shop"
 msgstr "Magasin du charpentier"
 
-msgid "Build ~!Farm"
-msgstr "~!Ferme"
+msgid "Build Farm"
+msgstr "Ferme"
 
-msgid "Build ~!Barracks"
-msgstr "Casernes (~!B)"
+msgid "Build Barracks"
+msgstr "Casernes"
 
-msgid "Build Sentry ~!Tower"
-msgstr "~!Tour de sentinelle"
-
-msgid "Build ~!Market"
-msgstr "~!Marché"
+msgid "Build Sentry Tower"
+msgstr "Tour de sentinelle"
 
 msgid "Build Market"
 msgstr "Marché"
 
-msgid "Build ~!Church"
-msgstr "Église (~!C)"
+msgid "Build Market"
+msgstr "Marché"
 
 msgid "Build Church"
 msgstr "Église"
 
-msgid "Build Tem~!ple"
-msgstr "Tem~!ple"
-
 msgid "Build Temple"
 msgstr "Temple"
 
-msgid "Build ~!Academy"
-msgstr "~!Académie"
-
 msgid "Build Academy"
 msgstr "Académie"
-
-msgid "Build ~!Dock"
-msgstr "Quai (~!D)"
 
 msgid "Build Dock"
 msgstr "Quai"
@@ -2282,11 +2237,8 @@ msgstr "Route"
 msgid "Build Railroad"
 msgstr "Chemin de fer"
 
-msgid "Build Maso~!n's Shop"
-msgstr "Maison du maço~!n"
-
-msgid "Build ~!Yale Pen"
-msgstr "Enclos de ~!Yale"
+msgid "Build Mason's Shop"
+msgstr "Maison du maçon"
 
 msgid "Build Yale Pen"
 msgstr "Enclos de Yale"
@@ -2294,41 +2246,38 @@ msgstr "Enclos de Yale"
 msgid "Speed:"
 msgstr "Vitesse :"
 
-msgid "Train Gun~!powder Infantry"
+msgid "Train Gunpowder Infantry"
 msgstr "Former infanterie armée"
 
-msgid "Train ~!Gudjan"
-msgstr "Former ~!Gudjan"
+msgid "Train Gudjan"
+msgstr "Former Gudjan"
 
-msgid "Train ~!Axefighter"
-msgstr "Former ~!Axefighter"
+msgid "Train Axefighter"
+msgstr "Former Axefighter"
 
-msgid "Train ~!Guard"
-msgstr "Former ~!garde"
+msgid "Train Guard"
+msgstr "Former garde"
 
-msgid "Train ~!Scout"
-msgstr "Former éclaireur (~!S)"
+msgid "Train Scout"
+msgstr "Former éclaireur"
 
-msgid "Train ~!Yale Rider"
-msgstr "Former monteur de ~!Yale"
+msgid "Train Yale Rider"
+msgstr "Former monteur de Yale"
 
-msgid "Build ~!Ballista"
-msgstr "~!Baliste"
+msgid "Build Ballista"
+msgstr "Baliste"
 
-msgid "Train Gry~!phon Rider"
-msgstr "Former monteur de griffon (~!P)"
+msgid "Train Gryphon Rider"
+msgstr "Former monteur de griffon"
 
-msgid "Train ~!Thunderer"
-msgstr "Former ~!Thunderer"
+msgid "Train Thunderer"
+msgstr "Former Thunderer"
 
-msgid "Train ~!Witness"
-msgstr "Former ~!Witness"
+msgid "Train Witness"
+msgstr "Former Witness"
 
-msgid "Build ~!Ballista Warship"
-msgstr "Navire ~!Balistique"
-
-msgid "Build ~!Minecart"
-msgstr "Chariot (~!M)"
+msgid "Build Ballista Warship"
+msgstr "Navire Balistique"
 
 msgid "Build Minecart"
 msgstr "Chariot"
@@ -2336,19 +2285,13 @@ msgstr "Chariot"
 msgid "Upgrade to Bastion"
 msgstr "Bastion"
 
-msgid "Upgrade to ~!Bastion"
-msgstr "~!Bastion"
-
 msgid "Can only move over railroads"
 msgstr "Déplacement sur les chemins de fer seulement"
-
-msgid "Upgrade to ~!Runesmith"
-msgstr "Maître des ~!runes"
 
 msgid "Upgrade to Runesmith"
 msgstr "Maître des runes"
 
-msgid "Hire C~!leric"
+msgid "Hire Cleric"
 msgstr "Engager pasteur"
 
 msgid "Gold left:"
@@ -2369,8 +2312,8 @@ msgstr "Déjà acquis"
 msgid "Requirements: "
 msgstr "Exigences : "
 
-msgid "Train ~!Miner"
-msgstr "Former ~!mineur"
+msgid "Train Miner"
+msgstr "Former mineur"
 
 msgid "Raiding: "
 msgstr "Raids : "
@@ -2378,14 +2321,14 @@ msgstr "Raids : "
 msgid "Mugging: "
 msgstr "Agression : "
 
-msgid "~!Play Quest"
-msgstr "Commencer la quête (~!P)"
+msgid "Play Quest"
+msgstr "Commencer la quête"
 
-msgid "Build For~!um"
-msgstr "For~!um"
+msgid "Build Forum"
+msgstr "Forum"
 
-msgid "Build Town ~!Hall"
-msgstr "~!Hôtel de ville"
+msgid "Build Town Hall"
+msgstr "Hôtel de ville"
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/ui.lua
 
@@ -2571,8 +2514,8 @@ msgstr "Marais"
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/game_concepts.lua
 
-msgid "~!Abilities"
-msgstr "C~!apacités"
+msgid "Abilities"
+msgstr "Capacités"
 
 msgid "Many units can learn new abilities when leveling up. These provide them with some form of benefit, such as increasing damage."
 msgstr ""
@@ -2586,8 +2529,8 @@ msgstr "Précision/Évasion"
 msgid "A unit's chance to hit another unit is determined by its accuracy relative to the target's evasion."
 msgstr "La chance d'une unité de toucher une autre unité est déterminée par sa précision par rapport à l'évasion de la cible."
 
-msgid "~!Backstab"
-msgstr "Poignarder dans le dos (~!B)"
+msgid "Backstab"
+msgstr "Poignarder dans le dos"
 
 msgid "Thief units deal extra damage when attacking an organic unit from the back. Thieves attacking from the right or left rear sides will cause +50% damage, and +100% damage if attacking directly from behind."
 msgstr "Les voleurs infligent des dégâts supplémentaires lorsqu'ils attaquent une unité organique par l'arrière. Les voleurs attaquant à partir des côtés arrières droit ou gauche causeront +50% de dégâts, et + 100% de dégâts s'ils attaquent directement par derrière."
@@ -2601,26 +2544,26 @@ msgstr "Bonus de débarquement"
 msgid "Units that have a disembarkment bonus deal 50% more damage for a certain duration after having been unloaded from a transport ship."
 msgstr "Les unités qui ont une prime de débarquement infligent 50% de dégâts supplémentaires pendant une certaine durée après avoir été déchargées d'un navire de transport."
 
-msgid "~!Experience"
-msgstr "~!Expérience"
+msgid "Experience"
+msgstr "Expérience"
 
 msgid "Organic units gain experience as enemy units are killed, eventually allowing them to level up. Workers can also gain experience by harvesting resources and building structures. Leveling up allows the unit to upgrade to a better unit type, or to learn a new ability."
 msgstr "Les unités organiques acquièrent de l'expérience à mesure que les unités ennemies sont tuées, leur permettant éventuellement de monter de niveau. Les travailleurs peuvent également acquérir de l'expérience en récoltant des ressources et en construisant des structures. La mise à niveau permet à l'unité de passer à un meilleur type d'unité ou d'apprendre une nouvelle capacité."
 
-msgid "Flan~!king"
-msgstr "Flanquer (~!k)"
+msgid "Flanking"
+msgstr "Flanquer"
 
 msgid "Units who are flanked in combat get a malus to evasion. Flanking happens when the unit is attacked from behind or from the side."
 msgstr "Les unités qui sont flanquées dans le combat obtiennent un malus à l'évasion. Le flanking se produit lorsque l'unité est attaquée par derrière ou par le côté."
 
-msgid "~!Food"
-msgstr "~!Nourriture"
+msgid "Food"
+msgstr "Nourriture"
 
 msgid "Food is produced by farms in the RTS mode, and determines the maximum amount of units a player can have."
 msgstr "Les aliments sont produits par les fermes en mode RTS et déterminent la quantité maximale d'unités qu'un joueur peut avoir."
 
-msgid "Game T~!ype"
-msgstr "T~!ype de Jeu"
+msgid "Game Type"
+msgstr "Type de Jeu"
 
 msgid "In the Single Player Setup screen different game types can be chosen. A Melee game means that the player will stand against all AI players, while in Free for All players are hostile against every other player. Choosing Top vs Bottom or Left vs Right will create two teams, with players being assigned to them according to map position."
 msgstr ""
@@ -2631,14 +2574,14 @@ msgstr ""
 "droit créera deux équipes, les joueurs leur étant assignés en fonction de la "
 "position de la carte."
 
-msgid "~!Garrisoning"
-msgstr "~!Garnison"
+msgid "Garrisoning"
+msgstr "Garnison"
 
 msgid "Certain buildings can be garrisoned by organic units, and some of them (like towers) even allow ranged units with to attack from within them."
 msgstr "Certains bâtiments peuvent être garnis d'unités organiques, et certains d'entre eux (comme les tours) permettent même aux unités à distance d'attaquer de l'intérieur."
 
-msgid "Har~!vesting"
-msgstr "Récolte (~!V)"
+msgid "Harvesting"
+msgstr "Récolte"
 
 msgid "Resources can be harvested by worker units. Copper is mined by assigning workers to copper rocks and copper mines (built on copper deposits), or to their silver and gold equivalents - which when delivered will be converted to copper. Lumber is gathered by harvesting trees or wood piles, while stone is harvested from rocks. Coal mines are used in a similar manner to copper mines, but they appear only in specific scenarios."
 msgstr "Les ressources peuvent être récoltées par les unités de travail. Le cuivre est extrait en affectant des ouvriers à des roches de cuivre et à des mines de cuivre (construites sur des gisements de cuivre), ou à leurs équivalents d'argent et d'or qui, une fois livrés, seront convertis en cuivre. Le bois est récolté en coupant des arbres ou des piles de bois, tandis que la pierre est récoltée dans les rochers. Les mines de charbon sont utilisées de la même manière que les mines de cuivre, mais elles n'apparaissent que dans des scénarios spécifiques."
@@ -2651,38 +2594,38 @@ msgstr ""
 "de l'histoire, les joueurs peuvent également créer des héros personnalisés à "
 "utiliser dans des scénarios, des quêtes et des jeux personnalisés (solo)."
 
-msgid "In~!dustry"
-msgstr "In~!dustrie"
+msgid "Industry"
+msgstr "Industrie"
 
 msgid "Resources can be transformed into others in industrial buildings. If the option to produce the resource is active, workers can use the industrial building similar to how they would a mine, to transform resources. Copper can be transformed into jewelry in smithies, and lumber can be transformed into furniture in lumber mills."
 msgstr "Les ressources peuvent être transformées en d'autres dans les bâtiments industriels. Si l'option de production de la ressource est active, les travailleurs peuvent utiliser le bâtiment industriel de la même façon qu'une mine pour transformer les ressources. Le cuivre peut être transformé en bijoux dans les forges, et le bois peut être transformé en meuble dans les scieries."
 
-msgid "Ite~!ms"
-msgstr "Art~!icles"
+msgid "Items"
+msgstr "Articles"
 
 msgid "Items can be picked up by units with an inventory (persistent heroes as well as organic units of level 3 and higher). Items come in several different types, such as weapons, shields, boots, rings and potions. Units can equip weapons of a particular class (i.e. Axefighters can equip axes), and non-ranged units may equip shields as well. Any unit can wear boots or drink potions; the latter can be used as a power-up by units who don't have an inventory. Equipping an item will replace the bonuses from weapon technologies with those of the item.\n\nItems are generally dropped by AI-controlled units and buildings, and possess a chance of having a magic affix. Such prefixes and suffixes affect the item's stats, changing its damage, armor and other values. Additionally, unique items also have a chance of dropping. Unique items are often better than magic items, but not necessarily. Items that are neither magic nor unique will disappear five minutes after being dropped.\n\nBesides items, units can also pick up power-ups. These are not restricted to units with inventories, and will perform effects such as restoring HP, causing a status effect or providing resources."
 msgstr "Les objets peuvent être ramassés par des unités avec un inventaire (héros persistants ainsi que des unités organiques de niveau 3 et plus). Les objets viennent dans plusieurs types différents, tels que des armes, des boucliers, des bottes, des bagues et des potions. Les unités peuvent équiper des armes d'une classe particulière (c'est-à-dire que les Axefighters peuvent équiper des haches), et les unités non à distance peuvent également équiper des boucliers. Toute unité peut porter des bottes ou boire des potions ; ce dernier peut être utilisé comme une mise sous tension par des unités qui n'ont pas d'inventaire. Équiper un objet remplacera les bonus des technologies d'armes par ceux de l'objet.\n\nLes objets sont généralement abandonnés par les unités et les bâtiments contrôlés par l'IA, et possèdent une chance d'avoir un affixe magique. Ces préfixes et suffixes affectent les statistiques de l'objet, en changeant ses dégâts, son armure et d'autres valeurs. De plus, les objets uniques ont également une chance de tomber. Les objets uniques sont souvent meilleurs que les objets magiques, mais pas nécessairement. Les objets qui ne sont ni magiques ni uniques disparaîtront cinq minutes après avoir été lâchés.\n\nEn dehors des objets, les unités peuvent également récupérer des power-ups. Ceux-ci ne sont pas limités aux unités avec des stocks, et effectueront des effets tels que la restauration de PV, provoquant un effet de statut ou fournissant des ressources."
 
-msgid "Kno~!wledge"
-msgstr "Connaissance (~!w)"
+msgid "Knowledge"
+msgstr "Connaissance"
 
 msgid "Knowledge stats are gained by organic units when they read literary works, being primarily relevant for higher-level units.\n\nKnowledge (Magic) is useful for identifying items. When holding a magic item in the unit's inventory, it is automatically identified if the unit's Knowledge (Magic) level is high enough. Furthermore, for every five levels in Knowledge (Magic), the character gains one maximum mana.\n\nFor every five levels in Knowledge (Warfare), the character gains one maximum hit point. The stat is increased mainly by reading the appropriate literary works."
 msgstr "Le savoir est acqui par les unités organiques lorsqu'elles lisent des oeuvres littéraires, étant principalement pertinentes pour les unités de niveau supérieur.\n\nLe savoir (Magique) est utile pour identifier les éléments. Lorsque vous tenez un objet magique dans l'inventaire de l'unité, il est automatiquement identifié si le niveau de Connaissance (Magique) de l'unité est suffisamment élevé. De plus, pour cinq niveaux dans Connaissance (Magie), le personnage gagne un maximum de mana.\n\nPour tous les cinq niveaux de Connaissance (Guerre), le personnage gagne un point de vie maximum. La statistique est augmentée principalement en lisant les oeuvres littéraires appropriées."
 
-msgid "~!Laws"
-msgstr "~!Lois"
+msgid "Laws"
+msgstr "Lois"
 
 msgid "Law upgrades can be acquired in the main hall. Contrary to most researches, law upgrades can be incompatible with each other. If a new law upgrade that is incompatible with an existing one is acquired, the older law upgrade will be removed for the player."
 msgstr "Les mises à niveau de droit peuvent être acquises dans le hall principal. Contrairement à la plupart des recherches, les mises à niveau de la loi peuvent être incompatibles les unes avec les autres. Si une nouvelle mise à niveau de loi est incompatible avec une existant, l'ancienne mise à jour de la loi sera supprimée pour le joueur."
 
-msgid "Mer~!cenaries"
-msgstr "Mer~!cenaires"
+msgid "Mercenaries"
+msgstr "Mercenaires"
 
 msgid "Mercenaries can be hired at mercenary camps. They do not take any time to train, becoming ready instantly. However, mercenary camp unit stocks take some time to recover."
 msgstr "Des mercenaires peuvent être embauchés dans des camps de mercenaires. Ils ne prennent pas de temps pour s'entraîner, devenant prêts instantanément. Cependant, les stocks des unités de mercenaires prennent du temps à se rétablir."
 
-msgid "M~!ugging"
-msgstr "Agression (~!U)"
+msgid "Mugging"
+msgstr "Agression"
 
 msgid "Whenever a unit with Mugging does damage to another unit, the mugging unit's player will gain resources. The obtained resources are a portion of the mugged unit's costs, based on the Mugging percentage and how much of the unit's maximum HP the damage dealt is. The other player also loses resources when this occurs."
 msgstr "A chaque fois qu'une unité avec agression inflige des dégâts à une autre unité, le joueur de l'unité d'agression gagne des ressources. Les ressources obtenues sont une partie des coûts de l'unité agressée, en fonction du pourcentage d'agression et de la quantité de PV maximum de l'unité infligée. L'autre joueur perd également des ressources lorsque cela se produit."
@@ -2690,14 +2633,14 @@ msgstr "A chaque fois qu'une unité avec agression inflige des dégâts à une a
 msgid "In the No Randomness mode, damage does not randomly vary. There is also no random chance to miss attacks, with accuracy providing a bonus to damage instead, and evasion to armor. Furthermore, traits for non-hero units have no effect."
 msgstr "Dans ce mode, les dégâts ne varient pas de manière aléatoire. Il n'y a également aucune chance aléatoire de manquer des attaques, avec une précision fournissant un bonus aux dégâts à la place, et une évasion à l'armure. De plus, les traits pour les unités non-héros n'ont aucun effet."
 
-msgid "~!Trade"
-msgstr "Commerce(~!T)"
+msgid "Trade"
+msgstr "Commerce"
 
 msgid "Resource trade is conducted in market buildings, where lumber and stone can be exchanged for copper. Luxury resources, such as jewelry and furniture, are sold automatically if a market is present. The trade cost percentage is deducted from the copper received when a resource is sold, and from the quantity obtained when a resource is bought.\n\nTrader units can generate copper by trading with foreign markets or docks. The higher the resource price difference with the other player, the more profitable trade with their markets and docks is. When a unit conducts trade, it also converges the prices of both players."
 msgstr "Le commerce de ressources est effectué dans les bâtiments du marché, où le bois et la pierre peuvent être échangés contre du cuivre. Les ressources de luxe, telles que les bijoux et les meubles, sont vendues automatiquement si un marché est présent. Le pourcentage du coût d'échange est déduit du cuivre reçu lors de la vente d'une ressource et de la quantité obtenue lors de l'achat d'une ressource.\n\nLes unités de négociation peuvent générer du cuivre en négociant avec des marchés ou des docks étrangers. Plus la différence de prix de ressource est élevée avec l'autre joueur, plus le commerce avec leurs marchés et docks est profitable. Quand une unité fait du commerce, elle converge aussi les prix des deux joueurs."
 
-msgid "Tra~!its"
-msgstr "Tra~!its"
+msgid "Traits"
+msgstr "Traits"
 
 #, fuzzy
 msgid ""
@@ -2742,14 +2685,14 @@ msgstr "Nourriture"
 
 # scripts/civilizations/dwarf/buttons.lua
 
-msgid "Build Mead ~!Hall"
-msgstr "Salle des banquets (~!H)"
+msgid "Build Mead Hall"
+msgstr "Salle des banquets"
 
-msgid "Build Mushroom ~!Farm"
-msgstr "~!Ferme de champignons"
+msgid "Build Mushroom Farm"
+msgstr "Ferme de champignons"
 
-msgid "Build ~!War Hall"
-msgstr "Salle de guerre (~!W)"
+msgid "Build War Hall"
+msgstr "Salle de guerre"
 
 # scripts/civilizations/dwarf/upgrade_faction.lua
 
@@ -3324,17 +3267,17 @@ msgstr "Gnomes, halte ! Qui ose mener une armée dans les collines naines ?"
 msgid "We come to make a bargain with you."
 msgstr "Nous venons vous proposer un marché."
 
-msgid "~!Listen to him"
-msgstr "Écoutez-~!le"
+msgid "Listen to him"
+msgstr "Écoutez-le"
 
-msgid "~!Up axes! (Forego Quest)"
-msgstr "~!Attaquez! (Pas de Quête)"
+msgid "Up axes! (Forego Quest)"
+msgstr "Attaquez! (Pas de Quête)"
 
-msgid "~!Discuss his offer"
-msgstr "~!Discuter sa proposition"
+msgid "Discuss his offer"
+msgstr "Discuter sa proposition"
 
-msgid "~!No deal (Forego Quest)"
-msgstr "~!Pas d'accord (Pas de Quête)"
+msgid "No deal (Forego Quest)"
+msgstr "Pas d'accord (Pas de Quête)"
 
 msgid ""
 "Well, state yer business and be done with it. And if we don't like what ye "
@@ -4147,61 +4090,61 @@ msgstr "Salle chef de clan"
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/civilizations/norse/buttons.lua
 
-msgid "Train S~!wordsman"
-msgstr "Former épéiste (~!W)"
+msgid "Train Swordsman"
+msgstr "Former épéiste"
 
-msgid "Build ~!Longship"
-msgstr "~!Long navire"
+msgid "Build Longship"
+msgstr "Long navire"
 
-msgid "Hire S~!wordsman"
-msgstr "Renvoyer épéiste (~!W)"
+msgid "Hire Swordsman"
+msgstr "Renvoyer épéiste"
 
-msgid "Build Chieftain's ~!Hall"
-msgstr "Salle chef de clan (~!H)"
+msgid "Build Chieftain's Hall"
+msgstr "Salle chef de clan"
 
-msgid "Build ~!War Lodge"
-msgstr "Maison de guerre (~!W)"
+msgid "Build War Lodge"
+msgstr "Maison de guerre"
 
-msgid "Build ~!Lumber Mill"
-msgstr "Scierie (~!L)"
+msgid "Build Lumber Mill"
+msgstr "Scierie"
 
-msgid "Build ~!Smithy"
-msgstr "Forge (~!S)"
+msgid "Build Smithy"
+msgstr "Forge"
 
-msgid "Build ~!Palisade"
-msgstr "~!Palissade"
+msgid "Build Palisade"
+msgstr "Palissade"
 
-msgid "Worship ~!Odin"
-msgstr "Culte ~!Odin"
+msgid "Worship Odin"
+msgstr "Culte Odin"
 
 msgid "Choose Odin as your major deity. +2 Damage for Archers, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Thor or Loki major deities."
 msgstr "Choisissez Odin comme divinité majeure. +2 aux dégâts des archers, active le sortilège de vision éloignée pour les Gudjans. Permet de nouveaux affixes magiques pour les objets vendus au marché. Incompatible avec la religion chrétienne ou avec les divinités majeures de Thor ou de Loki."
 
-msgid "Worship ~!Thor"
-msgstr "Culte ~!Thor"
+msgid "Worship Thor"
+msgstr "Culte Thor"
 
 msgid "Choose Thor as your major deity. +2 Damage for sword infantry, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin or Loki major deities."
 msgstr ""
 
-msgid "Worship Lo~!ki"
-msgstr "Culte Lo~!ki"
+msgid "Worship Loki"
+msgstr "Culte Loki"
 
 msgid "Choose Loki as your major deity. +50% Backstab Bonus for sword infantry, enables Slow spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Christianity religion or with the Odin or Thor major deities."
 msgstr ""
 
-msgid "Worship Heim~!dall"
+msgid "Worship Heimdall"
 msgstr ""
 
 msgid "Choose Heimdall as a minor deity for your hero. +1 Sight for Archers, enables Precision spell for Gudjans. Incompatible with the Hel and Tyr minor deities."
 msgstr ""
 
-msgid "Worship He~!l"
+msgid "Worship Hel"
 msgstr ""
 
 msgid "Choose Hel as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Heimdall and Tyr minor deities."
 msgstr ""
 
-msgid "Upgrade to ~!Hersir"
+msgid "Upgrade to Hersir"
 msgstr ""
 
 # https://github.com/Andrettin/Wyrmsun/blob/master/scripts/civilizations/norse/characters_norwegian.lua
@@ -4387,68 +4330,68 @@ msgstr "Les peuples germaniques étaient des charpentiers marins expérimentés,
 
 # civilizations/germanic/buttons.lua
 
-msgid "Train ~!Bura"
-msgstr "Former ~!Bura"
+msgid "Train Bura"
+msgstr "Former Bura"
 
-msgid "Train ~!Erala"
-msgstr "Former ~!Erala"
+msgid "Train Erala"
+msgstr "Former Erala"
 
-msgid "Train ~!Skutan"
-msgstr "Former ~!Skutan"
+msgid "Train Skutan"
+msgstr "Former Skutan"
 
-msgid "Build ~!Transport"
-msgstr "~!Transporteur"
+msgid "Build Transport"
+msgstr "Transporteur"
 
-msgid "Research Broad S~!word"
-msgstr "Glaive (~!w)"
+msgid "Research Broad Sword"
+msgstr "Glaive"
 
 msgid "+2 Damage for swordwielders. Allows Broad Swords to be sold at the Market."
 msgstr "+2 dégâts pour les swordwielders. Permet de vendre les grandes épées au marché."
 
-msgid "Research Bronze ~!Shield"
-msgstr "Bouclier en bronze (~!S)"
+msgid "Research Bronze Shield"
+msgstr "Bouclier en bronze"
 
 msgid "+2 Armor for melee infantry and cavalry. Allows Bronze Shields to be sold at the Market."
 msgstr "+2 Armure pour infanterie de mêlée et cavalerie. Permet le bouclier en bronze à être vendu au marché."
 
-msgid "Research Long ~!Spear"
-msgstr "Lance longue (~!S)"
+msgid "Research Long Spear"
+msgstr "Lance longue"
 
 msgid "+2 Damage for Spearmen. Allows Long Spears to be sold at the Market."
 msgstr ""
 
-msgid "Research Barbed ~!Arrow"
-msgstr "Flèche barbelée (~!A)"
+msgid "Research Barbed Arrow"
+msgstr "Flèche barbelée"
 
 msgid "+2 Damage for archers, strongholds and guard towers. Allows Barbed Arrows to be sold at the Market."
 msgstr ""
 
-msgid "Worship ~!Wodanaz"
-msgstr "Culte ~!Wodanaz"
+msgid "Worship Wodanaz"
+msgstr "Culte Wodanaz"
 
 msgid "Choose Wodanaz as your major deity. +2 Damage for Skutans, enables Far Sight spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Thunraz major deity."
 msgstr ""
 
-msgid "Worship ~!Thunraz"
-msgstr "Culte ~!Thunraz"
+msgid "Worship Thunraz"
+msgstr "Culte Thunraz"
 
 msgid "Choose Thunraz as your major deity. +2 Damage for Eralas, enables Shocking Grasp spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Wodanaz major deity."
 msgstr ""
 
-msgid "Worship Tiwa~!z"
-msgstr "Culte  Tiwa~!z"
+msgid "Worship Tiwaz"
+msgstr "Culte  Tiwaz"
 
 msgid "Choose Tiwaz as a minor deity. +2 Damage for Eralas, enables Inspire spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Haimadala and Haljo minor deities."
 msgstr ""
 
-msgid "Worship Haima~!dala"
-msgstr "Culte Haima~!dala"
+msgid "Worship Haimadala"
+msgstr "Culte Haimadala"
 
 msgid "Choose Haimadala as a minor deity. +1 Sight for Skutans, enables Precision spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Frankish, Gothic, Suebi and Teuton civilizations, and with the Haljo and Tiwaz minor deities."
 msgstr ""
 
-msgid "Worship ~!Haljo"
-msgstr "Culte ~!Haljo"
+msgid "Worship Haljo"
+msgstr "Culte Haljo"
 
 msgid "Choose Haljo as a minor deity. +20 Mana and enables Wither spell for Gudjans. Allows new magic affixes for items sold at the Market. Incompatible with the Haimadala and Tiwaz minor deities."
 msgstr ""
@@ -4468,11 +4411,11 @@ msgstr ""
 msgid "Choose Haljo as a minor deity for your hero. +20 Mana and enables Wither spell for Gudjans. Incompatible with the Haimadala and Tiwaz minor deities."
 msgstr ""
 
-msgid "Upgrade to ~!Kuni"
-msgstr "Vers ~!Kuni"
+msgid "Upgrade to Kuni"
+msgstr "Vers Kuni"
 
-msgid "Upgrade to ~!Druhtana"
-msgstr "Vers ~!Druhtana"
+msgid "Upgrade to Druhtana"
+msgstr "Vers Druhtana"
 
 # civilizations/latin/units.lua
 
@@ -4734,14 +4677,14 @@ msgstr "Dépôt d'or"
 
 # Multiplayer
 
-msgid "~<Multiplayer Network Game~>"
-msgstr "~<Partie multijoueur en réseau~>"
+msgid "Multiplayer Network Game"
+msgstr "Partie multijoueur en réseau"
 
-msgid "~!Join Game"
-msgstr "Re~!joindre une partie"
+msgid "Join Game"
+msgstr "Rejoindre une partie"
 
-msgid "~!Create Game"
-msgstr "~!Créer une partie"
+msgid "Create Game"
+msgstr "Créer une partie"
 
 msgid "Create Multiplayer game"
 msgstr "Créer une partie multijoueur"
@@ -4752,8 +4695,8 @@ msgstr "Fichier :"
 msgid "Players:"
 msgstr "Joueurs :"
 
-msgid "Cancel (~<Esc~>)"
-msgstr "Annuler (~<Esc~>)"
+msgid "Cancel"
+msgstr "Annuler"
 
 msgid "Server is full"
 msgstr "Le serveur est complet"
@@ -4806,65 +4749,59 @@ msgstr "En attente de joueurs"
 msgid "Reveal Map"
 msgstr "Carte révélée"
 
-msgid "~!Single Player Game"
-msgstr "Jeu ~!solo"
-
-msgid "~<Single Player~>"
-msgstr "~<Jeu solo~>"
-
-msgid "Single Player"
+msgid "Single Player Game"
 msgstr "Jeu solo"
-
-msgid "~!Achievements"
-msgstr "~!Accomplissements"
-
-msgid "Create Custom ~!Hero"
-msgstr "Créer un ~!héro"
 
 msgid "Achievements"
 msgstr "Accomplissements"
 
-msgid "~!Quests"
-msgstr "~!Quêtes"
+msgid "Create Custom Hero"
+msgstr "Créer un héro"
 
-msgid "~!Delete Custom Hero"
-msgstr "~!Supprimer un héro"
+msgid "Achievements"
+msgstr "Accomplissements"
+
+msgid "Quests"
+msgstr "Quêtes"
+
+msgid "Delete Custom Hero"
+msgstr "Supprimer un héro"
 
 msgid "Custom Hero:"
 msgstr "Héro personnalisé :"
 
-msgid "C~!ustom Game"
-msgstr "Partie solo (~!C)"
+msgid "Custom Game"
+msgstr "Partie solo"
 
-msgid "~!Multiplayer Game"
-msgstr "~!Multijoueur"
+msgid "Multiplayer Game"
+msgstr "Multijoueur"
 
-msgid "~!Grand Strategy Game"
-msgstr "Jeu de ~!grande stratégie"
+msgid "Grand Strategy Game"
+msgstr "Jeu de grande stratégie"
 
 msgid "Load Game"
 msgstr "Charger un jeu"
 
-msgid "E~!xit"
-msgstr "Quitter (~!X)"
+msgid "Exit"
+msgstr "Quitter"
 
-msgid "~!Close"
-msgstr "Fermer (~!C)"
+msgid "Close"
+msgstr "Fermer"
 
-msgid "~!Restart Mission"
-msgstr "~!Recommencer la mission"
+msgid "Restart Mission"
+msgstr "Recommencer la mission"
 
-msgid "~!Quit Mission"
-msgstr "~!Quitter la mission"
+msgid "Quit Mission"
+msgstr "Quitter la mission"
 
-msgid "E~!xit to Desktop"
-msgstr "Quitter vers le bureau (~!X)"
+msgid "Exit to Desktop"
+msgstr "Quitter vers le bureau"
 
 msgid "Are you sure?"
 msgstr "Êtes-vous sûr ?"
 
-msgid "~!Save"
-msgstr "Enregi~!strer"
+msgid "Save"
+msgstr "Enregistrer"
 
 msgid "Save Game"
 msgstr "Enregistrer la partie"
@@ -4872,53 +4809,44 @@ msgstr "Enregistrer la partie"
 msgid "Show Latest First"
 msgstr "Inverser"
 
-msgid "~!No"
-msgstr "~!Non"
+msgid "No"
+msgstr "Non"
 
-msgid "~!Yes"
-msgstr "~!Oui"
+msgid "Yes"
+msgstr "Oui"
 
 msgid "File exists, are you sure?"
 msgstr "Fichier existant, êtes-vous sûr ?"
 
-msgid "~!Load"
-msgstr "Charger (~!L)"
+msgid "Load"
+msgstr "Charger"
 
-msgid "~!Load Game"
-msgstr "Charger un jeu (~!L)"
+msgid "Load Game"
+msgstr "Charger un jeu"
 
-msgid "~!Replay Game"
-msgstr "~!Revoir une partie"
+msgid "Replay Game"
+msgstr "Revoir une partie"
 
 msgid "Map Editor"
 msgstr "Éditeur de carte"
 
-msgid "Map ~!Editor"
-msgstr "Édit~!eur de carte"
+msgid "Load Mod"
+msgstr "Charger un mod"
 
-msgid "~<Map Editor~>"
-msgstr "~<Éditeur de carte~>"
+msgid "Encyclopedia"
+msgstr "Encyclopédie"
 
-msgid "Load Mo~!d"
-msgstr "Charger un mo~!d"
+msgid "Credits"
+msgstr "Crédits"
 
-msgid "En~!cyclopedia"
-msgstr "En~!cyclopédie"
+msgid "Show Credits"
+msgstr "Montrer crédits"
 
-msgid "Cred~!its"
-msgstr "Créd~!its"
+msgid "Exit Program"
+msgstr "Sortir du programme"
 
-msgid "S~!how Credits"
-msgstr "Montrer crédits(~!H)"
-
-msgid "E~!xit Program"
-msgstr "Sortir du programme (~!X)"
-
-msgid "~!Hotkeys"
-msgstr "Raccourcis Clavier (~!H)"
-
-msgid "~<Quests~>"
-msgstr "~<Quêtes~>"
+msgid "Hotkeys"
+msgstr "Raccourcis Clavier"
 
 msgid " Quests Completed"
 msgstr " Quêtes terminées"
@@ -4926,23 +4854,23 @@ msgstr " Quêtes terminées"
 msgid "Events and Quests"
 msgstr "Evénements et quêtes"
 
-msgid "~!Tech Tree"
-msgstr "Arbre ~!technologique"
+msgid "Tech Tree"
+msgstr "Arbre technologique"
 
-msgid "~!Reset Tech Tree"
-msgstr "~!Réinitialiser arbre technolog."
+msgid "Reset Tech Tree"
+msgstr "Réinitialiser arbre technolog."
 
 msgid "Technology Points: "
 msgstr "Points technologiques : "
 
-msgid "~!Start Game"
-msgstr "Commencer jeu (~!S)"
+msgid "Start Game"
+msgstr "Commencer jeu"
 
-msgid "~!Cancel"
-msgstr "Annuler (~!C)"
+msgid "Cancel"
+msgstr "Annuler"
 
-msgid "~!Cancel Game"
-msgstr "Annuler jeu (~!C)"
+msgid "Cancel Game"
+msgstr "Annuler jeu"
 
 msgid "Choose Your Faction"
 msgstr "Choisissez votre faction"
@@ -4950,8 +4878,8 @@ msgstr "Choisissez votre faction"
 msgid "Default Color:"
 msgstr "Couleur par défaut :"
 
-msgid "~!Gameplay Options"
-msgstr "Options du jeu (~!G)"
+msgid "Gameplay Options"
+msgstr "Options du jeu"
 
 msgid "Hotkey Menu"
 msgstr "Menu des raccourcis"
@@ -4989,8 +4917,8 @@ msgstr "Voir le cercle du joueur"
 msgid "Show Hero Symbol"
 msgstr "Voir le symbole du héro"
 
-msgid "~!Video and Audio Options"
-msgstr "~!Vidéo et sons"
+msgid "Video and Audio Options"
+msgstr "Vidéo et sons"
 
 msgid "Video Options"
 msgstr "Options vidéo"
@@ -5034,23 +4962,23 @@ msgstr "Bloquer la souris"
 msgid "Show Hotkeys"
 msgstr "Voir les raccourcies claviers"
 
-msgid "Sound (~<F7~>)"
-msgstr "Son (~<F7~>)"
+msgid "Sound"
+msgstr "Son"
 
-msgid "Preferences (~<F8~>)"
-msgstr "Préférences (~<F8~>)"
+msgid "Preferences"
+msgstr "Préférences"
 
-msgid "Diplomacy (~<F9~>)"
-msgstr "Diplomatie (~<F9~>)"
+msgid "Diplomacy"
+msgstr "Diplomatie"
 
-msgid "Previous Menu (~<Esc~>)"
-msgstr "Menu précédent (~<Esc~>)"
+msgid "Previous Menu"
+msgstr "Menu précédent"
 
 msgid "Sound Options"
 msgstr "Options du son"
 
-msgid "~<World:~>"
-msgstr "~<Monde:~>"
+msgid "World:"
+msgstr "Monde:"
 
 msgid "World:"
 msgstr "Monde :"
@@ -5064,47 +4992,29 @@ msgstr "Carte"
 msgid "Map:"
 msgstr "Carte :"
 
-msgid "~<Map:~>"
-msgstr "~<Carte :~>"
+msgid "Map:"
+msgstr "Carte :"
 
-msgid "~<Civilization:~>"
-msgstr "~<Civilisation :~>"
-
-msgid "~<Your Civilization:~>"
-msgstr "~<Votre civilisation :~>"
+msgid "Civilization:"
+msgstr "Civilisation :"
 
 msgid "Your Civilization:"
 msgstr "Votre civilisation :"
 
-msgid "~<Your Faction:~>"
-msgstr "~<Votre faction :~>"
-
 msgid "Your Faction:"
 msgstr "Votre faction :"
-
-msgid "~<Resources:~>"
-msgstr "~<Ressources :~>"
 
 msgid "Resources:"
 msgstr "Ressources :"
 
-msgid "~<Units:~>"
-msgstr "~<Unités :~>"
-
-msgid "~<Opponents:~>"
-msgstr "~<Adversaires :~>"
+msgid "Units:"
+msgstr "Unités :"
 
 msgid "Opponents:"
 msgstr "Adversaires :"
 
-msgid "~<Game Type:~>"
-msgstr "~<Type de jeu :~>"
-
 msgid "Game Type:"
 msgstr "Type de jeu :"
-
-msgid "~<Tech Level:~>"
-msgstr "~<Niveau technologique :~>"
 
 msgid "Tech Level:"
 msgstr "Niveau technologique :"
@@ -5160,29 +5070,29 @@ msgstr "8 adversaires"
 msgid "Game Menu"
 msgstr "Menu du jeu"
 
-msgid "Options (~<F5~>)"
-msgstr "Options (~<F5~>)"
+msgid "Options"
+msgstr "Options"
 
 msgid "Help Menu"
 msgstr "Menu aide"
 
-msgid "Help (~<F1~>)"
-msgstr "Aide (~<F1~>)"
+msgid "Help"
+msgstr "Aide"
 
-msgid "Save (~<F11~>)"
-msgstr "Enregistrer (~<F11~>)"
+msgid "Save"
+msgstr "Enregistrer"
 
-msgid "Load (~<F12~>)"
-msgstr "Charger (~<F12~>)"
+msgid "Load"
+msgstr "Charger"
 
 msgid "End Mission"
 msgstr "Fin de mission"
 
-msgid "~!End Mission"
-msgstr "~!Fin de mission"
+msgid "End Mission"
+msgstr "Fin de mission"
 
-msgid "Return to Game (~<Esc~>)"
-msgstr "Retour au jeu (~<Esc~>)"
+msgid "Return to Game"
+msgstr "Retour au jeu"
 
 msgid "Melee"
 msgstr "Mêlée"
@@ -5835,14 +5745,14 @@ msgstr "Population"
 msgid "Supply:"
 msgstr "Population :"
 
-msgid "~!Attack"
-msgstr "~!Attaquer"
+msgid "Attack"
+msgstr "Attaquer"
 
-msgid "~!Patrol"
-msgstr "~!Patrouiller"
+msgid "Patrol"
+msgstr "Patrouiller"
 
-msgid "S~!tand ground"
-msgstr "Arre~!ter"
+msgid "Stand ground"
+msgstr "Arreter"
 
 msgid "Earth"
 msgstr "Terre"
@@ -5931,8 +5841,8 @@ msgstr "Carte personnalisée"
 msgid "- Destroy the enemy"
 msgstr "- Détruire l'ennemi"
 
-msgid "~!Previous Menu (~<Esc~>)"
-msgstr "~!Retour(~<Esc~>)"
+msgid "Previous Menu"
+msgstr "Retour"
 
 msgid "Objectives"
 msgstr "Objectifs"
@@ -5940,14 +5850,14 @@ msgstr "Objectifs"
 msgid "Objectives:"
 msgstr "Objectifs :"
 
-msgid "~!Continue"
-msgstr "~!Continuer"
+msgid "Continue"
+msgstr "Continuer"
 
-msgid "~!Acquire"
-msgstr "~!Acquérir"
+msgid "Acquire"
+msgstr "Acquérir"
 
-msgid "~!Next Tip"
-msgstr "~!Astuce suivante"
+msgid "Next Tip"
+msgstr "Astuce suivante"
 
 msgid "Show tips when starting"
 msgstr "Montrer les astuces au démarrage"
@@ -6057,11 +5967,11 @@ msgstr ""
 "Occupe-toi de ce qui te regarde, vieux nain ! Seul Rugnur commande ici, et "
 "c'est avec lui seul que nous traiterons."
 
-msgid "~!Listen to Baglur"
-msgstr "Écoutez Bag~!lur"
+msgid "Listen to Baglur"
+msgstr "Écoutez Baglur"
 
-msgid "~!Surrender (Defeat)"
-msgstr "Rendez-vou~!s (Défaite)"
+msgid "Surrender (Defeat)"
+msgstr "Rendez-vous (Défaite)"
 
 msgid "Baglur, how do ye close the gates?"
 msgstr "Baglur, comment ferme-t-on les portes ?"
@@ -7902,8 +7812,8 @@ msgstr "Vitesse du jeu augmenté à %d"
 msgid "Game speed decreased to %d"
 msgstr "Vitesse du jeu diminué à "
 
-msgid "~<Event: %s~>"
-msgstr "~<Évènement : %s~>"
+msgid "Event: %s"
+msgstr "Évènement : %s"
 
 msgid "Applying \"%s\" Map Template Terrain"
 msgstr ""

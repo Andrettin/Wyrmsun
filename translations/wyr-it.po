@@ -15,116 +15,94 @@ msgstr ""
 "Language: it_IT\n"
 "X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
 
-msgid "~!Single Player Game"
-msgstr "Giocatore ~!singolo"
+msgid "Single Player Game"
+msgstr "Giocatore singolo"
 
-msgid "~!Multi Player Game"
-msgstr "~!Multigiocatore"
+msgid "Multi Player Game"
+msgstr "Multigiocatore"
 
 # This translation is literal, but "Gioco strategico(strategic game)" or "Battaglia strategica(strategic battle, sounds better in my opinion)" may be more appropriate
-msgid "~!Grand Strategy Game"
-msgstr "Il ~!Grande Gioco Di Strategia"
+msgid "Grand Strategy Game"
+msgstr "Il Grande Gioco Di Strategia"
 
 msgid "Load Game"
 msgstr "Carica partita"
-
-msgid "~!Load Game"
-msgstr "Carica partita (~!L)"
 
 # This one is literal, it may need some work
 msgid "Replay Game"
 msgstr "Replay del gioco"
 
-# same as Replay Game
-msgid "~!Replay Game"
-msgstr "~!Replay del giuoco"
-
 msgid "Map Editor"
 msgstr "Editor Mappe"
 
-msgid "Map ~!Editor"
-msgstr "~!Editor Mappe"
+msgid "Load Mod"
+msgstr "Carica Mod"
 
-msgid "~<Map Editor~>"
-msgstr "~<Editor mappe~>"
+msgid "Encyclopedia"
+msgstr "Enciclopedia"
 
-msgid "Load Mo~!d"
-msgstr "Carica Mo~!d"
+msgid "Show Credits"
+msgstr "Riconoscimenti"
 
-msgid "En~!cyclopedia"
-msgstr "En~!ciclopedia"
+msgid "Exit Program"
+msgstr "Esci dal Programma"
 
-msgid "S~!how Credits"
-msgstr "Riconoscimenti (~!H)"
-
-msgid "E~!xit Program"
-msgstr "Esci dal Programma (~!X)"
-
-msgid "~!Quests"
-msgstr "Missioni (~!Q)"
-
-msgid "~<Quests~>"
-msgstr "~<Missioni~>"
+msgid "Quests"
+msgstr "Missioni"
 
 msgid "Events and Quests"
 msgstr "Eventi e Missioni"
 
-msgid "~!Tech Tree"
-msgstr "~!Tecnologia"
+msgid "Tech Tree"
+msgstr "Tecnologia"
 
-msgid "~!Reset Tech Tree"
-msgstr "~!Resetta Punti Tecn."
+msgid "Reset Tech Tree"
+msgstr "Resetta Punti Tecn."
 
 msgid "Technology Points: "
 msgstr "Punti Tecn.:"
 
-msgid "~!Start Game"
-msgstr "~!Inizia Partita"
+msgid "Start Game"
+msgstr "Inizia Partita"
 
-msgid "~!Cancel"
-msgstr "~!Annulla"
+msgid "Cancel"
+msgstr "Annulla"
 
-msgid "~!Cancel Game"
-msgstr "~!Annulla Partita"
+msgid "Cancel Game"
+msgstr "Annulla Partita"
 
-msgid "~<World:~>"
-msgstr "~<Mondo:~>"
+msgid "World:"
+msgstr "Mondo:"
 
-msgid "~!Worlds"
-msgstr "~!Mondi"
+msgid "Worlds"
+msgstr "Mondi"
 
 msgid "Map:"
 msgstr "Mappa:"
 
-msgid "~<Map:~>"
-msgstr "~<Mappa:~>"
+# stub
+msgid "Your Civilization:"
+msgstr "La tua Pop.:"
+
+msgid "Your Faction:"
+msgstr "La Tua Fazione:"
+
+msgid "Resources:"
+msgstr "Risorse:"
+
+msgid "Units"
+msgstr "Unità"
+
+msgid "Opponents:"
+msgstr "Avversari:"
 
 # stub
-msgid "~<Your Civilization:~>"
-msgstr "~<La tua Pop.:~>"
-
-msgid "~<Your Faction:~>"
-msgstr "~<La Tua Fazione:~>"
-
-msgid "~<Resources:~>"
-msgstr "~<Risorse:~>"
-
-msgid "~<Units:~>"
-msgstr "~<Unità:~>"
-
-msgid "~!Units"
-msgstr "~!Unità"
-
-msgid "~<Opponents:~>"
-msgstr "~<Avversari:~>"
+msgid "Game Type:"
+msgstr "Mod. Gioco:"
 
 # stub
-msgid "~<Game Type:~>"
-msgstr "~<Mod. Gioco:~>"
-
-# stub
-msgid "~<Tech Level:~>"
-msgstr "~<Livello Tecn.:~>"
+msgid "Tech Level:"
+msgstr "Livello Tecn.:"
 
 msgid "Map Default"
 msgstr "Default"
@@ -417,7 +395,7 @@ msgstr "Carbone"
 msgid "Glyph"
 msgstr "Glifo"
 
-msgid "~!Attack"
+msgid "Attack"
 msgstr "Attacco"
 
 msgid "Earth"
@@ -533,16 +511,16 @@ msgstr "La Viverna"
 msgid "Hills of the Shorbear Clan"
 msgstr "Le Colline del Clan Shorbear"
 
-msgid "~!Previous Menu"
+msgid "Previous Menu"
 msgstr "Menù Precedente"
 
-msgid "~!Continue"
+msgid "Continue"
 msgstr "Continua"
 
-msgid "~!Acquire"
+msgid "Acquire"
 msgstr "Acquisisci"
 
-msgid "~!Close"
+msgid "Close"
 msgstr "Chiudi"
 
 msgid "Up axes!"
@@ -594,17 +572,17 @@ msgstr "Gnomi, halt! Chi osa portare un armata dentro le montagne naniche?"
 msgid "We come to make a bargain with you."
 msgstr "Siamo venuti per fare un affare con voi"
 
-msgid "~!Listen to him"
-msgstr "~!Ascoltatelo"
+msgid "Listen to him"
+msgstr "Ascoltatelo"
 
-msgid "~!Up axes! (Forego Quest)"
-msgstr "~!Su le Asce! (Missione Precedente)"
+msgid "Up axes! (Forego Quest)"
+msgstr "Su le Asce! (Missione Precedente)"
 
-msgid "~!Discuss his offer"
-msgstr "~!Discuti della sua offerta"
+msgid "Discuss his offer"
+msgstr "Discuti della sua offerta"
 
-msgid "~!No deal (Forego Quest)"
-msgstr "~!Nessun affare (Missione Precedente)"
+msgid "No deal (Forego Quest)"
+msgstr "Nessun affare (Missione Precedente)"
 
 # rework
 msgid ""
@@ -869,11 +847,11 @@ msgstr ""
 "Chiudi la tua boccaccia. Vecchio nano! Rugnur è il capo qui, e sarà lui a "
 "negoziare con noi."
 
-msgid "~!Listen to Baglur"
-msgstr "~!Ascoltate Baglur"
+msgid "Listen to Baglur"
+msgstr "Ascoltate Baglur"
 
-msgid "~!Surrender (Defeat)"
-msgstr "~!Arrenditi (Sconfitta)"
+msgid "Surrender (Defeat)"
+msgstr "Arrenditi (Sconfitta)"
 
 msgid "Baglur, how do ye close the gates?"
 msgstr "Beglur, come si chiudono quei cancelli?"

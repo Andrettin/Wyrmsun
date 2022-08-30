@@ -19,8 +19,8 @@ msgstr "- Убить 8 йейлов"
 msgid "After a long time wandering, a clan of dwarves led by Modsognir has arrived in Svarinshaug, seeking a new home..."
 msgstr "После долгих скитаний клан дворфов под предводительством Модсогнира прибыл в Сваринсхауг в поисках нового дома..."
 
-msgid "~!Continue"
-msgstr "~!Далее"
+msgid "Continue"
+msgstr "Далее"
 
 msgid "Modsognir"
 msgstr "Модсогнир"

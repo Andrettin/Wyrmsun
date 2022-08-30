@@ -69,8 +69,8 @@ msgstr "Armad.:"
 msgid "Asa Tribe"
 msgstr "Tribo Asa"
 
-msgid "~!Attack"
-msgstr "~!Atacar"
+msgid "Attack"
+msgstr "Atacar"
 
 msgid "Axefighter"
 msgstr "Machadeiro"
@@ -147,35 +147,32 @@ msgstr "Marrom"
 msgid "Bugs"
 msgstr "Insetos"
 
-msgid "Build Carpente~!r's Shop"
-msgstr "Construir Oficina de Carpintei~!ro"
+msgid "Build Carpenter's Shop"
+msgstr "Construir Oficina de Carpinteiro"
 
-msgid "Build Chieftain's ~!Hall"
-msgstr "Construir Salão do Chefe (~!H)"
+msgid "Build Chieftain's Hall"
+msgstr "Construir Salão do Chefe"
 
-msgid "Build ~!Copper Mine"
-msgstr "Construir Mina de ~!Cobre"
+msgid "Build Copper Mine"
+msgstr "Construir Mina de Cobre"
 
-msgid "Build ~!Farm"
-msgstr "Construir ~!Fazenda"
+msgid "Build Farm"
+msgstr "Construir Fazenda"
 
-msgid "Build ~!Gold Mine"
-msgstr "Construir Mina de Ouro (~!G)"
+msgid "Build Gold Mine"
+msgstr "Construir Mina de Ouro"
 
-msgid "Build Sil~!ver Mine"
-msgstr "Construir Mina de Prata (~!V)"
+msgid "Build Silver Mine"
+msgstr "Construir Mina de Prata"
 
-msgid "Build ~!Smithy"
-msgstr "Construir Ferraria (~!S)"
+msgid "Build Smithy"
+msgstr "Construir Ferraria"
 
-msgid "~!Build Structure"
-msgstr "Construir Estrutura (~!B)"
+msgid "Build Structure"
+msgstr "Construir Estrutura"
 
-msgid "Build ~!War Lodge"
-msgstr "Construir Alojamento de Guerra (~!W)"
-
-msgid "~!Buildings"
-msgstr "Construções (~!B)"
+msgid "Build War Lodge"
+msgstr "Construir Alojamento de Guerra"
 
 msgid "Buildings"
 msgstr "Construções"
@@ -186,11 +183,8 @@ msgstr "Camelo"
 msgid "Camels"
 msgstr "Camelos"
 
-msgid "~!Cancel"
-msgstr "~!Cancelar"
-
-msgid "Cancel (~<Esc~>)"
-msgstr "Cancelar (~<Esc~>)"
+msgid "Cancel"
+msgstr "Cancelar"
 
 msgid "Caravan"
 msgstr "Caravana"
@@ -225,9 +219,6 @@ msgstr "Chimpanzés"
 msgid "Choose Your Faction"
 msgstr "Escolha sua Facção"
 
-msgid "~!Civilizations"
-msgstr "~!Civilizações"
-
 msgid "Civilizations"
 msgstr "Civilizações"
 
@@ -258,14 +249,14 @@ msgstr "Cobre"
 msgid "Copper Mine"
 msgstr "Mina de Cobre"
 
-msgid "~!Continue"
-msgstr "~!Continuar"
+msgid "Continue"
+msgstr "Continuar"
 
 msgid "Cows"
 msgstr "Vacas"
 
-msgid "Cred~!its"
-msgstr "Créd~!itos"
+msgid "Credits"
+msgstr "Créditos"
 
 msgid "Crocodiles"
 msgstr "Crocodilos"
@@ -279,8 +270,8 @@ msgstr "~<CTRL~>-clique para defender terreno após mover"
 msgid "~<CTRL~>-click on the button toggles auto-repair of damaged buildings"
 msgstr "~<CTRL~>-clicar no botão alterna o auto-conserto de construções danificadas"
 
-msgid "C~!ustom Game"
-msgstr "Jogo Personalizado (~!U)"
+msgid "Custom Game"
+msgstr "Jogo Personalizado"
 
 msgid "Cyan"
 msgstr "Azul-Piscina"
@@ -305,9 +296,6 @@ msgstr "Cervos"
 
 msgid "Default Color:"
 msgstr "Cor Padrão:"
-
-msgid "~!Deities"
-msgstr "~!Divindades"
 
 msgid "Deities"
 msgstr "Divindades"
@@ -381,8 +369,8 @@ msgstr "Terra"
 msgid "Earth Elementals"
 msgstr "Elementais da Terra"
 
-msgid "~!Edit Map"
-msgstr "~!Editar Mapa"
+msgid "Edit Map"
+msgstr "Editar Mapa"
 
 msgid "Effects:"
 msgstr "Efeitos:"
@@ -398,12 +386,6 @@ msgstr "Elfos"
 
 msgid "Elysium"
 msgstr "Elísio"
-
-msgid "~<Encyclopedia~>"
-msgstr "~<Enciclopédia~>"
-
-msgid "En~!cyclopedia"
-msgstr "En~!ciclopédia"
 
 msgid "Encyclopedia"
 msgstr "Enciclopédia"
@@ -426,11 +408,8 @@ msgstr "Evasão"
 msgid "Evasion:"
 msgstr "Evasão:"
 
-msgid "E~!xit Program"
-msgstr "Sair do Programa (~!X)"
-
-msgid "~!Factions"
-msgstr "~!Facções"
+msgid "Exit Program"
+msgstr "Sair do Programa"
 
 msgid "Factions"
 msgstr "Facções"
@@ -441,8 +420,8 @@ msgstr "Fazenda"
 msgid "Find"
 msgstr "Encontrar"
 
-msgid "Find Idle Worker (~!.)"
-msgstr "Encontrar Trabalhador Desocupado (~!.)"
+msgid "Find Idle Worker"
+msgstr "Encontrar Trabalhador Desocupado"
 
 msgid "Find Unit with Available Level Up"
 msgstr "Encontrar Unidade com Level Up Disponível"
@@ -485,9 +464,6 @@ msgstr "Sapos"
 
 msgid "Fugla Forge"
 msgstr "Forja Fugla"
-
-msgid "~!Game Concepts"
-msgstr "Conceitos do Jo~!go"
 
 msgid "Game Concepts"
 msgstr "Conceitos do Jogo"
@@ -558,8 +534,8 @@ msgstr "Gótico"
 msgid "Gothic Units"
 msgstr "Unidades Góticas"
 
-msgid "~!Grand Strategy Game"
-msgstr "Jogo de ~!Grande Estratégia"
+msgid "Grand Strategy Game"
+msgstr "Jogo de Grande Estratégia"
 
 msgid "Gray"
 msgstr "Cinza"
@@ -585,8 +561,8 @@ msgstr "Torre de Guarda"
 msgid "Gunpowder Infantry"
 msgstr "Infantaria de Pólvora"
 
-msgid "~!Harvest Resource"
-msgstr "Coletar Recurso (~!H)"
+msgid "Harvest Resource"
+msgstr "Coletar Recurso"
 
 msgid "Headhunter"
 msgstr "Caçador de Cabeças"
@@ -605,9 +581,6 @@ msgstr "Herbalista"
 
 msgid "Herminone Tribe"
 msgstr "Tribo Herminona"
-
-msgid "~!Heroes"
-msgstr "~!Heróis"
 
 msgid "Heroes"
 msgstr "Heróis"
@@ -675,9 +648,6 @@ msgstr "Inteligente"
 msgid "Istaevone Tribe"
 msgstr "Tribo Istaevona"
 
-msgid "~!Items"
-msgstr "~!Ítens"
-
 msgid "Items"
 msgstr "Ítens"
 
@@ -738,20 +708,14 @@ msgstr "Lagartos"
 msgid "Load Game"
 msgstr "Carregar Jogo"
 
-msgid "~!Load Game"
-msgstr "Carregar Jogo (~!L)"
+msgid "Load"
+msgstr "Carregar"
 
-msgid "~!Load"
-msgstr "Carregar (~!L)"
-
-msgid "~!Load Map"
-msgstr "Carregar Mapa (~!L)"
+msgid "Load Map"
+msgstr "Carregar Mapa"
 
 msgid "Load Mod"
 msgstr "Carregar Mod"
-
-msgid "Load Mo~!d"
-msgstr "Carregar Mo~!d"
 
 msgid "Lumber"
 msgstr "Madeira"
@@ -762,14 +726,8 @@ msgstr "Madeira:"
 msgid "Lumber Mill"
 msgstr "Serraria"
 
-msgid "Magic P~!refixes"
-msgstr "P~!refixos Mágicos"
-
 msgid "Magic Prefixes"
 msgstr "Prefixos Mágicos"
-
-msgid "Magic ~!Suffixes"
-msgstr "~!Sufixos Mágicos"
 
 msgid "Magic Suffixes"
 msgstr "Sufixos Mágicos"
@@ -777,8 +735,8 @@ msgstr "Sufixos Mágicos"
 msgid "Magnate"
 msgstr "Magnata"
 
-msgid "Map ~!Editor"
-msgstr "~!Editor de Mapas"
+msgid "Map Editor"
+msgstr "Editor de Mapas"
 
 msgid "Marsupial Mouses"
 msgstr "Ratos Marsupiais"
@@ -834,20 +792,20 @@ msgstr "Camundongo"
 msgid "Mouses"
 msgstr "Camundongos"
 
-msgid "~!Move"
-msgstr "~!Mover"
+msgid "Move"
+msgstr "Mover"
 
-msgid "~!Multi Player Game"
-msgstr "Jogo ~!Multijogador"
+msgid "Multi Player Game"
+msgstr "Jogo Multijogador"
 
-msgid "~!Multiplayer Game"
-msgstr "Jogo ~!Multijogador"
+msgid "Multiplayer Game"
+msgstr "Jogo Multijogador"
 
 msgid "Mushroom Farm"
 msgstr "Fazenda de Cogumelos"
 
-msgid "~!New Map"
-msgstr "~!Novo Mapa"
+msgid "New Map"
+msgstr "Novo Mapa"
 
 msgid "Norse"
 msgstr "Nórdico"
@@ -867,8 +825,8 @@ msgstr "Velho"
 msgid "Olympus"
 msgstr "Olimpo"
 
-msgid "~!Options"
-msgstr "~!Opções"
+msgid "Options"
+msgstr "Opções"
 
 msgid "Orange"
 msgstr "Laranja"
@@ -924,9 +882,6 @@ msgstr "Pio"
 msgid "Plane"
 msgstr "Plano"
 
-msgid "P~!lanes"
-msgstr "P~!lanos"
-
 msgid "Planes"
 msgstr "Planos"
 
@@ -939,8 +894,8 @@ msgstr "Ornitorrincos"
 msgid "Possums"
 msgstr "Gambás"
 
-msgid "~!Previous Menu"
-msgstr "Menu Anterior (~!P)"
+msgid "Previous Menu"
+msgstr "Menu Anterior"
 
 msgid "Processing"
 msgstr "Processamento"
@@ -948,8 +903,8 @@ msgstr "Processamento"
 msgid "Purple"
 msgstr "Roxo"
 
-msgid "~!Quests"
-msgstr "Missões (~!Q)"
+msgid "Quests"
+msgstr "Missões"
 
 msgid "Rabbits"
 msgstr "Coelhos"
@@ -981,11 +936,11 @@ msgstr "Recruta"
 msgid "Red"
 msgstr "Vermelho"
 
-msgid "~!Repair"
-msgstr "Conserta~!r"
+msgid "Repair"
+msgstr "Consertar"
 
-msgid "~!Replay Game"
-msgstr "~!Rever Jogo"
+msgid "Replay Game"
+msgstr "Rever Jogo"
 
 msgid "Rhinoceros"
 msgstr "Rinoceronte"
@@ -1001,9 +956,6 @@ msgstr "Mestre de Runas"
 
 msgid "Runesmith"
 msgstr "Ferreiro de Runas"
-
-msgid "Runic Suffix~!es"
-msgstr "Sufixos Rúnicos (~!E)"
 
 msgid "Runic Suffixes"
 msgstr "Sufixos Rúnicos"
@@ -1029,17 +981,11 @@ msgstr "Batedor"
 msgid "Select Map"
 msgstr "Selecionar Mapa"
 
-msgid "~!Select Map"
-msgstr "~!Selecionar Mapa"
-
-msgid "S~!elect Map"
-msgstr "S~!elecionar Mapa"
-
 msgid "Sentry Tower"
 msgstr "Torre de Sentinela"
 
-msgid "Set ~!Rally Point"
-msgstr "Colocar Ponto de Encont~!ro"
+msgid "Set Rally Point"
+msgstr "Colocar Ponto de Encontro"
 
 msgid "Shadowguard"
 msgstr "Guarda das Sombras"
@@ -1053,8 +999,8 @@ msgstr "Xamã"
 msgid "~<SHIFT~>-click to make waypoints"
 msgstr "~<SHIFT~>-clique para fazer waypoints"
 
-msgid "S~!how Credits"
-msgstr "Mostrar Créditos(~!H)"
+msgid "Show Credits"
+msgstr "Mostrar Créditos"
 
 msgid "Sight"
 msgstr "Visão"
@@ -1068,8 +1014,8 @@ msgstr "Prata"
 msgid "Silver Mine"
 msgstr "Mina de Prata"
 
-msgid "~!Single Player Game"
-msgstr "Jogo de Um Jogador (~!S)"
+msgid "Single Player Game"
+msgstr "Jogo de Um Jogador"
 
 msgid "Skeldung Tribe"
 msgstr "Tribo Skeldunga"
@@ -1134,8 +1080,8 @@ msgstr "Pedra:"
 msgid "Stonelord"
 msgstr "Senhor da Pedra"
 
-msgid "~!Stop"
-msgstr "Parar (~!S)"
+msgid "Stop"
+msgstr "Parar"
 
 msgid "Strong"
 msgstr "Forte"
@@ -1167,9 +1113,6 @@ msgstr "Tártaro"
 msgid "Teal"
 msgstr "Verde-Azulado"
 
-msgid "~!Technologies"
-msgstr "~!Tecnologias"
-
 msgid "Technologies"
 msgstr "Tecnologias"
 
@@ -1181,9 +1124,6 @@ msgstr "Teutônico"
 
 msgid "Teutonic Units"
 msgstr "Unidades Teutônicas"
-
-msgid "Te~!xts"
-msgstr "Te~!xtos"
 
 msgid "Texts"
 msgstr "Textos"
@@ -1206,8 +1146,8 @@ msgstr "Cágados"
 msgid "Town Hall"
 msgstr "Prefeitura"
 
-msgid "Train ~!Bura"
-msgstr "Treinar ~!Bura"
+msgid "Train Bura"
+msgstr "Treinar Bura"
 
 msgid "Trait"
 msgstr "Característica"
@@ -1224,17 +1164,8 @@ msgstr "Unicórnio"
 msgid "Unicorns"
 msgstr "Unicórnios"
 
-msgid "U~!niques"
-msgstr "Ú~!nicos"
-
 msgid "Uniques"
 msgstr "Únicos"
-
-msgid "~<Units:~>"
-msgstr "~<Unidades:~>"
-
-msgid "~!Units"
-msgstr "~!Unidades"
 
 msgid "Units"
 msgstr "Unidades"
@@ -1295,9 +1226,6 @@ msgstr "Vombates"
 
 msgid "Worker"
 msgstr "Trabalhador"
-
-msgid "~!Worlds"
-msgstr "Mundos (~!W)"
 
 msgid "Worlds"
 msgstr "Mundos"

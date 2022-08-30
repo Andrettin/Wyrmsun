@@ -12,86 +12,74 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
 
-msgid "~!Single Player Game"
+msgid "Single Player Game"
 msgstr "Tek Kişilik Oyun"
 
-msgid "~!Quests"
+msgid "Quests"
 msgstr "Görevler"
 
-msgid "C~!ustom Game"
+msgid "Custom Game"
 msgstr "Uyarlama Oyun"
 
-msgid "~!Multi Player Game"
+msgid "Multi Player Game"
 msgstr "Çok Oyunculu Oyun"
 
-msgid "~!Multiplayer Game"
+msgid "Multiplayer Game"
 msgstr "Çok Oyunculu Oyun"
 
-msgid "~!Grand Strategy Game"
+msgid "Grand Strategy Game"
 msgstr "Büyük Strateji Oyunu"
 
 msgid "Load Game"
 msgstr "Oyunu Yükle"
 
-msgid "~!Load Game"
-msgstr "Oyunu ~!Yükle"
-
-msgid "~!Replay Game"
+msgid "Replay Game"
 msgstr "Oyunu İzle"
 
-msgid "~!Options"
+msgid "Options"
 msgstr "Ayarlar"
 
-msgid "Map ~!Editor"
+msgid "Map Editor"
 msgstr "Harita Düzenleyici"
 
 msgid "Load Mod"
 msgstr "Mod Yükle"
 
-msgid "Load Mo~!d"
-msgstr "Mo~!d Yükle"
-
-msgid "En~!cyclopedia"
+msgid "Encyclopedia"
 msgstr "An~siklopedi"
 
-msgid "S~!how Credits"
+msgid "Show Credits"
 msgstr "Emeği Geçenler"
 
-msgid "E~!xit Program"
+msgid "Exit Program"
 msgstr "Oyundan Çık"
 
-msgid "~!Previous Menu"
+msgid "Previous Menu"
 msgstr "Önceki Menü"
 
-msgid "~!New Map"
+msgid "New Map"
 msgstr "Yeni Harita"
 
-msgid "~!Load Map"
+msgid "Load Map"
 msgstr "Harita Yükle"
 
 msgid "Select Map"
 msgstr "Harita Seç"
 
-msgid "~!Select Map"
-msgstr "Harita Seç"
-
-msgid "S~!elect Map"
-msgstr "Harita Seç"
-
-msgid "~!Edit Map"
+msgid "Edit Map"
 msgstr "Harita Düzenle"
 
-msgid "~!Continue"
+msgid "Continue"
 msgstr "Devam Et"
 
-msgid "~!Load"
+msgid "Load"
 msgstr "Yükle"
 
-msgid "~!Cancel"
+msgid "Cancel"
 msgstr "İptal"
 
-msgid "~<Units:~>"
-msgstr "~<Birimler:~>"
+msgid "Units:"
+msgstr "Birimler:"
 
 msgid "Dwarf"
 msgstr "Cüce"
@@ -423,56 +411,56 @@ msgstr "Donuk"
 msgid "Pious"
 msgstr "Dindar"
 
-msgid "Train ~!Bura"
-msgstr "~!Bura Eğit"
+msgid "Train Bura"
+msgstr "Bura Eğit"
 
-msgid "Set ~!Rally Point"
-msgstr "~!Toplanma Yeri Ayarla"
+msgid "Set Rally Point"
+msgstr "Toplanma Yeri Ayarla"
 
-msgid "~!Move"
-msgstr "~!İlerle"
+msgid "Move"
+msgstr "İlerle"
 
-msgid "~!Stop"
+msgid "Stop"
 msgstr "Dur"
 
-msgid "~!Attack"
-msgstr "~!Saldır"
+msgid "Attack"
+msgstr "Saldır"
 
-msgid "~!Repair"
+msgid "Repair"
 msgstr "Tamir Et"
 
-msgid "~!Harvest Resource"
+msgid "Harvest Resource"
 msgstr "Kaynağı Topla"
 
-msgid "~!Build Structure"
+msgid "Build Structure"
 msgstr "Yapıyı İnşa Et"
 
-msgid "Build Chieftain's ~!Hall"
+msgid "Build Chieftain's Hall"
 msgstr "Reis'in Konağını inşa et"
 
-msgid "Build ~!Farm"
+msgid "Build Farm"
 msgstr "Çiftlik inşa et"
 
-msgid "Build ~!War Lodge"
+msgid "Build War Lodge"
 msgstr "Savaş Evi inşa et"
 
-msgid "Build Carpente~!r's Shop"
+msgid "Build Carpenter's Shop"
 msgstr "Marangozhane inşa et"
 
-msgid "Build ~!Smithy"
+msgid "Build Smithy"
 msgstr "Demirci inşa et"
 
-msgid "Build ~!Gold Mine"
+msgid "Build Gold Mine"
 msgstr "Altın Madeni inşa et"
 
-msgid "Build Sil~!ver Mine"
+msgid "Build Silver Mine"
 msgstr "Gümüş Madeni inşa et"
 
-msgid "Build ~!Copper Mine"
+msgid "Build Copper Mine"
 msgstr "Bakır Madeni inşa et"
 
-msgid "Cancel (~<Esc~>)"
-msgstr "İptal (~<Esc~>)"
+msgid "Cancel"
+msgstr "İptal"
 
 msgid "Class:"
 msgstr "Sınıf:"
@@ -513,8 +501,8 @@ msgstr "Takip etmek için Fare ile Orta Tıklayın"
 msgid "Right-click to see encyclopedia"
 msgstr "Ansiklopedi için Sağ Tıklayın"
 
-msgid "Find Idle Worker (~!.)"
-msgstr "Boştaki İşçiyi Bul (~!.)"
+msgid "Find Idle Worker"
+msgstr "Boştaki İşçiyi Bul"
 
 msgid "Find Unit with Available Level Up"
 msgstr "Seviye Atlamaya hazır birimi bul"

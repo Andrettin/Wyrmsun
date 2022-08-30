@@ -4,4 +4,4 @@ Translation Notes:
 msgid "~!Civilizations"
 msgstr "Zivilisationen (~!C)"
 
-All text placed between "~<" and "~>" are highlighted by the game.
+All text placed between "~<" and "~>" is highlighted by the game.

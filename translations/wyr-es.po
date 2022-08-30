@@ -15,77 +15,62 @@ msgstr ""
 "Language: es_ES\n"
 "X-Poedit-SearchPath-0: c:/Program Files/Wyrmsun/scripts\n"
 
-msgid "~!Single Player Game"
-msgstr "~!Solo jugador"
+msgid "Single Player Game"
+msgstr "Solo jugador"
 
-msgid "~!Multiplayer Game"
-msgstr "~!Multi jugador"
+msgid "Multiplayer Game"
+msgstr "Multi jugador"
 
-msgid "~!Achievements"
-msgstr "Logros (~!A)"
+msgid "Achievements"
+msgstr "Logros"
 
-msgid "~!Options"
-msgstr "~!Opciones"
+msgid "Options"
+msgstr "Opciones"
 
-# This translation is literal, but "Gioco strategico(strategic game)" or "Battaglia strategica(strategic battle, sounds better in my opinion)" may be more appropriate
-msgid "~!Grand Strategy Game"
-msgstr "Juego estrategia a ~!gran escala"
+msgid "Grand Strategy Game"
+msgstr "Juego estrategia a gran escala"
 
 msgid "Load Game"
 msgstr "Cargar partida"
 
-msgid "~!Load Game"
-msgstr "Cargar partida (~!L)"
+msgid "Load Game"
+msgstr "Cargar partida"
 
-# This one is literal, it may need some work
 msgid "Replay Game"
 msgstr "Repeticion"
-
-# same as Replay Game
-msgid "~!Replay Game"
-msgstr "~!Repeticion"
 
 msgid "Map Editor"
 msgstr "Editor de mapas"
 
-msgid "Map ~!Editor"
-msgstr "~!Editor de mapas"
+msgid "Load Mod"
+msgstr "Cargar Mod"
 
-msgid "~<Map Editor~>"
-msgstr "~<Editor de mapas~>"
+msgid "Encyclopedia"
+msgstr "Enciclopedia"
 
-msgid "Load Mo~!d"
-msgstr "Cargar Mo~!d"
+msgid "Credits"
+msgstr "Creditos"
 
-msgid "En~!cyclopedia"
-msgstr "En~!ciclopedia"
-
-msgid "Cred~!its"
-msgstr "Cred~!itos"
-
-msgid "E~!xit"
-msgstr "Salir (~!X)"
+msgid "Exit"
+msgstr "Salir"
 
 # options menu
-msgid "~<Options~>"
-msgstr "~<Opciones~>"
+msgid "Options"
+msgstr "Opciones"
 
-msgid "~!Gameplay Options"
-msgstr "Opciones de jue~!go"
+msgid "Gameplay Options"
+msgstr "Opciones de juego"
 
-msgid "~!Video and Audio Options"
-msgstr "Opciones de audio y ~!video"
+msgid "Video and Audio Options"
+msgstr "Opciones de audio y video"
 
 #singleplayer
 
-msgid "~!Scenarios"
-msgstr "E~!scenarios"
+msgid "Scenarios"
+msgstr "Escenarios"
 
-msgid "C~!ustom Game"
-msgstr "Partida personalizada (~!U)"
-
-msgid "~<Scenarios~>"
-msgstr "~<Escenarios~>"
+msgid "Custom Game"
+msgstr "Partida personalizada"
 
 msgid "Difficulty:"
 msgstr "Dificultad:"
@@ -96,47 +81,44 @@ msgstr "No Dia/Noche"
 msgid "No Randomness"
 msgstr "No Aleatoriedad"
 
-msgid "~!Start Scenario"
-msgstr "Iniciar e~!scenario"
+msgid "Start Scenario"
+msgstr "Iniciar escenario"
 
-msgid "~!Quests"
-msgstr "Misiones (~!Q)"
-
-msgid "~<Quests~>"
-msgstr "~<Misiones~>"
+msgid "Quests"
+msgstr "Misiones"
 
 msgid "Events and Quests"
 msgstr "Eventos y Missiones"
 
-msgid "~!Tech Tree"
-msgstr "~!Tecnologia"
+msgid "Tech Tree"
+msgstr "Tecnologia"
 
-msgid "~!Reset Tech Tree"
-msgstr "~!Resetear puntos"
+msgid "Reset Tech Tree"
+msgstr "Resetear puntos"
 
 msgid "Custom Hero:"
 msgstr "Heroe personalizado:"
 
-msgid "Create Custom ~!Hero"
-msgstr "Crear ~!Heroe"
+msgid "Create Custom Hero"
+msgstr "Crear Heroe"
 
-msgid "~!Delete Custom Hero"
-msgstr "Borrar Heroe (~!D)"
+msgid "Delete Custom Hero"
+msgstr "Borrar Heroe"
 
 msgid "Technology Points: "
 msgstr "Puntos tecnologia:"
 
-msgid "~!Start Game"
-msgstr "Iniciar Partida (~!S)"
+msgid "Start Game"
+msgstr "Iniciar Partida"
 
-msgid "~!Cancel"
-msgstr "~!Cancelar"
+msgid "Cancel"
+msgstr "Cancelar"
 
-msgid "~!Cancel Game"
-msgstr "~!Cancelar Partida"
+msgid "Cancel Game"
+msgstr "Cancelar Partida"
 
-msgid "~<Single Player Game Setup~>"
-msgstr "~<Configurar Partida jugador~>"
+msgid "Single Player Game Setup"
+msgstr "Configurar Partida jugador"
 
 msgid "World:"
 msgstr "Mundo:"
@@ -165,44 +147,44 @@ msgstr "Maxima tecnologia:"
 msgid "Resources:"
 msgstr "Recursos:"
 
-msgid "~<World:~>"
-msgstr "~<Mundo:~>"
+msgid "World:"
+msgstr "Mundo:"
 
-msgid "~!Worlds"
-msgstr "Mundos (~!W)"
+msgid "Worlds"
+msgstr "Mundos"
 
 msgid "Map:"
 msgstr "Mapa:"
 
-msgid "~<Map:~>"
-msgstr "~<Mapa:~>"
+msgid "Map:"
+msgstr "Mapa:"
 
 # stub
-msgid "~<Your Civilization:~>"
-msgstr "~<Tu civilizacion:~>"
+msgid "Your Civilization:"
+msgstr "Tu civilizacion:"
 
-msgid "~<Your Faction:~>"
-msgstr "~<Tu faccion:~>"
+msgid "Your Faction:"
+msgstr "Tu faccion:"
 
-msgid "~<Resources:~>"
-msgstr "~<Recursos:~>"
+msgid "Resources:"
+msgstr "Recursos:"
 
-msgid "~<Units:~>"
-msgstr "~<Unidades:~>"
+msgid "Units:"
+msgstr "Unidades:"
 
-msgid "~!Units"
-msgstr "~!Unidades"
+msgid "Units"
+msgstr "Unidades"
 
-msgid "~<Opponents:~>"
-msgstr "~<Oponente:~>"
-
-# stub
-msgid "~<Game Type:~>"
-msgstr "~<Tipo juego:~>"
+msgid "Opponents:"
+msgstr "Oponente:"
 
 # stub
-msgid "~<Tech Level:~>"
-msgstr "~<Nivel tecnologia:~>"
+msgid "Game Type:"
+msgstr "Tipo juego:"
+
+# stub
+msgid "Tech Level:"
+msgstr "Nivel tecnologia:"
 
 msgid "Map Default"
 msgstr "Defecto"
@@ -508,8 +490,8 @@ msgstr "Carbon"
 msgid "Glyph"
 msgstr "Grypho"
 
-msgid "~!Attack"
-msgstr "~!Atacar"
+msgid "Attack"
+msgstr "Atacar"
 
 msgid "Earth"
 msgstr "Tierra"
@@ -624,17 +606,17 @@ msgstr "El Wyrm"
 msgid "Hills of the Shorbear Clan"
 msgstr "La Collina del Clan Shorbear"
 
-msgid "~!Previous Menu"
-msgstr "Menu Anterior (~!P)"
+msgid "Previous Menu"
+msgstr "Menu Anterior"
 
-msgid "~!Continue"
-msgstr "~!Continuar"
+msgid "Continue"
+msgstr "Continuar"
 
-msgid "~!Acquire"
-msgstr "~!Adquirir"
+msgid "Acquire"
+msgstr "Adquirir"
 
-msgid "~!Close"
-msgstr "~!Cerrar"
+msgid "Close"
+msgstr "Cerrar"
 
 msgid "Up axes!"
 msgstr "Arriba las hachas!"
@@ -685,17 +667,17 @@ msgstr "Gnomos, alto! Quien se atreve a traer un ejercito a las colinas enanas?"
 msgid "We come to make a bargain with you."
 msgstr "Hemos venido a hacer un trato contigo."
 
-msgid "~!Listen to him"
-msgstr "Escuchen~!lo"
+msgid "Listen to him"
+msgstr "Escuchenlo"
 
-msgid "~!Up axes! (Forego Quest)"
-msgstr "Arriba las hachas! (Mission Anterior) (~!U)"
+msgid "Up axes! (Forego Quest)"
+msgstr "Arriba las hachas! (Mission Anterior)"
 
-msgid "~!Discuss his offer"
-msgstr "~!Discusion de la ofera"
+msgid "Discuss his offer"
+msgstr "Discusion de la ofera"
 
-msgid "~!No deal (Forego Quest)"
-msgstr "~!No hay trato (Mision Anterior)"
+msgid "No deal (Forego Quest)"
+msgstr "No hay trato (Mision Anterior)"
 
 # rework
 msgid ""
@@ -960,11 +942,11 @@ msgstr ""
 "Chiudi la tua boccaccia. Vecchio nano! Rugnur è il capo qui, e sarà lui a "
 "negoziare con noi."
 
-msgid "~!Listen to Baglur"
-msgstr "Asco~!ltate Baglur"
+msgid "Listen to Baglur"
+msgstr "Ascoltate Baglur"
 
-msgid "~!Surrender (Defeat)"
-msgstr "Arrenditi (Sconfitta) (~!S)"
+msgid "Surrender (Defeat)"
+msgstr "Arrenditi (Sconfitta)"
 
 msgid "Baglur, how do ye close the gates?"
 msgstr "Beglur, come si chiudono quei cancelli?"
