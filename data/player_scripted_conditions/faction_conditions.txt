@@ -31,3 +31,10 @@ is_dutch_faction = {
 is_monarchical_faction = { #factions that can only be monarchies
 	faction = holy_rome
 }
+
+is_neutral_faction = {
+	not = {
+		faction_type = tribe
+		faction_type = polity
+	}
+}
