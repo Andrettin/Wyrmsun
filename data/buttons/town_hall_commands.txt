@@ -14,7 +14,7 @@ show_population = {
 
 found_a_faction = {
 	pos = 6
-	icon = royal_crown
+	icon = icon_flag_holy_roman_empire
 	action = button
 	value = found_faction_level
 	allowed = check_has_sub_buttons
