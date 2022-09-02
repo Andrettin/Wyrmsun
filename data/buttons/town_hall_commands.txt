@@ -13,7 +13,7 @@ show_population = {
 }
 
 found_a_faction = {
-	pos = 6
+	pos = 5
 	icon = icon_flag_holy_roman_empire
 	action = button
 	value = found_faction_level
@@ -45,7 +45,7 @@ cancel_found_a_faction = {
 }
 
 choose_a_dynasty = {
-	pos = 7
+	pos = 6
 	icon = heater_shield
 	action = button
 	value = choose_dynasty_level
@@ -77,7 +77,7 @@ cancel_choose_a_dynasty = {
 }
 
 enact_a_law = {
-	pos = 8
+	pos = 7
 	icon = icon_book_red
 	action = button
 	value = enact_law_level
