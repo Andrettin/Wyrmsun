@@ -133,6 +133,11 @@ deselect_in_mine = true
 
 population_per_unit = 100000
 
+trigger_type_none_random_weights = {
+	half_minute_pulse = 5000
+	minute_pulse = 5000
+}
+
 map_editor_default_map_presets = classic_skirmish
 
 default_menu_background_file = "backgrounds/wyrmsun_sepia.png"
