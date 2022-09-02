@@ -1,8 +1,9 @@
 beautiful_statuette = {
+	type = half_minute_pulse
 	target = player
+	random = true
 	conditions = {
 		unit_class = smithy
-		random = 0.0001
 	}
 	effects = {
 		random_unit_of_class = {
@@ -14,11 +15,12 @@ beautiful_statuette = {
 }
 
 brawl_at_the_barracks = {
+	type = half_minute_pulse
 	target = player
+	random = true
 	conditions = {
 		unit_class = barracks
 		unit_class = town_hall #require a town hall so that the player does not go below the quantity of resources necessary to build one if they started without it
-		random = 0.0001
 	}
 	effects = {
 		random_unit_of_class = {
@@ -30,10 +32,11 @@ brawl_at_the_barracks = {
 }
 
 giant_mushroom_grown = {
+	type = half_minute_pulse
 	target = player
+	random = true
 	conditions = {
 		unit_type = unit_dwarven_mushroom_farm
-		random = 0.0001
 	}
 	effects = {
 		random_unit_of_type = {
@@ -45,10 +48,11 @@ giant_mushroom_grown = {
 }
 
 splendid_table = {
+	type = half_minute_pulse
 	target = player
+	random = true
 	conditions = {
 		unit_class = lumber_mill
-		random = 0.0001
 	}
 	effects = {
 		random_unit_of_class = {
