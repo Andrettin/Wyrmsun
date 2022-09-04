@@ -28,7 +28,7 @@
 --  Define default resources
 
 DefineDefaultResourceNames(
-	"time", "copper", "lumber", "oil", "iron", "stone", "coal", "research", "prestige", "gold", "silver", "mithril", "limestone", "jewelry", "furniture", "leather", "diamonds", "emeralds", "leadership", "trade"
+	"time", "copper", "lumber", "oil", "iron", "stone", "coal", "research", "prestige", "gold", "silver", "mithril", "limestone", "jewelry", "furniture", "leather", "diamonds", "emeralds", "manpower", "leadership", "trade"
 )
 
 DefineResource("gold", {

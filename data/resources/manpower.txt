@@ -1,0 +1,7 @@
+manpower = {
+	name = "Manpower"
+	icon = soldiers
+	action_name = "gain"
+	default_income = 100
+	special = true
+}
