@@ -138,6 +138,8 @@ trigger_type_none_random_weights = {
 	minute_pulse = 5000
 }
 
+default_quest_icon = quest
+
 map_editor_default_map_presets = classic_skirmish
 
 default_menu_background_file = "backgrounds/wyrmsun_sepia.png"
