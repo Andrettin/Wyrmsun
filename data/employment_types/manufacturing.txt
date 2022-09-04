@@ -2,7 +2,7 @@ furniture_making = {
 	name = "Furniture Making"
 	input_resource = lumber
 	output_resource = furniture
-	output_multiplier = 0.1
+	output_multiplier = 0.01
 	employees = {
 		workers
 		apprentice_carpenters
@@ -15,7 +15,7 @@ jewelsmithing = {
 	name = "Jewelsmithing"
 	input_resource = copper
 	output_resource = jewelry
-	output_multiplier = 0.1
+	output_multiplier = 0.01
 	employees = {
 		workers
 		apprentice_smiths
