@@ -36,6 +36,10 @@ brandenburg = {
 	superregions = { germany }
 }
 
+holstein = {
+	superregions = { germany }
+}
+
 mecklenburg = {
 	superregions = { germany }
 }

@@ -5,7 +5,7 @@ kiel = {
 	base_unit_type = unit_settlement_site
 	color = { 101 97 115 }
 	regions = {
-		germany
+		holstein
 	}
 	
 	history = {
