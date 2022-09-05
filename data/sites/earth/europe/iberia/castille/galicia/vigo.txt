@@ -4,6 +4,6 @@ vigo = {
 	geocoordinate = { -8.72999454898 42.22001853340 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		castille
+		galicia
 	}
 }

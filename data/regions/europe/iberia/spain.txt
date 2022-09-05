@@ -9,3 +9,10 @@ aragon = {
 castille = {
 	superregions = { spain }
 }
+
+galicia = {
+	superregions = {
+		gallaecia
+		spain
+	}
+}
