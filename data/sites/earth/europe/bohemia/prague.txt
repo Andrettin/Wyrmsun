@@ -9,6 +9,7 @@ prague = {
 	}
 	regions = {
 		bohemia
+		marcomannia
 	}
 	
 	history = {

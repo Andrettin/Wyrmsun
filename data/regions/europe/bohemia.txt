@@ -4,3 +4,9 @@ bohemia = {
 		czechoslovakia
 	}
 }
+
+marcomannia = {
+	superregions = {
+		bohemia
+	}
+}
