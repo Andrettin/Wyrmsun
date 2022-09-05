@@ -1,7 +1,6 @@
 soldiering = {
 	name = "Soldiering"
 	output_resource = manpower
-	output_multiplier = 0.01 #100 output per 1,000 employees
 	employees = {
 		soldiers
 	}
