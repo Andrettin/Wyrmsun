@@ -3,6 +3,8 @@ workers = { #basic population class, used to recruit workers and for production
 	resource_icon = population
 	growable = true
 	unemployment = true
+	unemployed_output_resource = manpower
+	unemployed_output_multiplier = 0.01 #100 output per 1,000 people
 	promotion_targets = {
 		sailors
 		soldiers
