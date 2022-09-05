@@ -63,29 +63,41 @@ DialogBase {
 		delegate: Item {
 			height: population_type_icon_button.height
 			
+			readonly property var population_unit: modelData
+			readonly property var population_type: population_unit.type
+			readonly property var employment_type: population_unit.employment_type
+			readonly property string employment_name: employment_type ? employment_type.name : "Unemployed"
+			readonly property var input_resource: population_unit.input_resource
+			readonly property var output_resource: population_unit.output_resource
+			
 			IconCommandButton {
 				id: population_type_icon_button
 				anchors.left: parent.left
 				anchors.verticalCenter: parent.verticalCenter
-				icon: modelData.type.icon.identifier
+				icon: population_type.icon.identifier
 				player_color: wyrmgus.this_player.player_color.identifier
-				tooltip: modelData.type.name
+				tooltip: format_text(population_type.name + "\n" + small_text(
+					("\nPopulation: " + number_string(population_unit.population))
+					+ ("\nEmployment: " + employment_name)
+					+ (input_resource ? "\nInput: " + input_resource.name : "")
+					+ (output_resource ? ("\nOutput: " + output_resource.name) : "")
+				))
 			}
 			
 			NormalText {
-				text: modelData.type.name
+				text: population_type.name
 				x: population_type_label.x - population_unit_list.contentItem.x - population_unit_list.x
 				anchors.verticalCenter: parent.verticalCenter
 			}
 			
 			NormalText {
-				text: number_string(modelData.population)
+				text: number_string(population_unit.population)
 				x: population_label.x - population_unit_list.contentItem.x - population_unit_list.x + population_label.width - width
 				anchors.verticalCenter: parent.verticalCenter
 			}
 			
 			NormalText {
-				text: modelData.employment_type ? modelData.employment_type.name : "Unemployed"
+				text: employment_name
 				x: employment_label.x - population_unit_list.contentItem.x - population_unit_list.x
 				anchors.verticalCenter: parent.verticalCenter
 			}
