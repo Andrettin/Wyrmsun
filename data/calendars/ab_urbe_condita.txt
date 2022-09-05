@@ -1,0 +1,5 @@
+ab_urbe_condita = { #dating system starting from the founding of Rome
+	aliases += auc
+	name = "Ab Urbe Condita"
+	year_offset = -753
+}
