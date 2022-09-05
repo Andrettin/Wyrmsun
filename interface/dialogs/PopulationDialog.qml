@@ -79,8 +79,8 @@ DialogBase {
 				tooltip: format_text(population_type.name + "\n" + small_text(
 					("\nPopulation: " + number_string(population_unit.population))
 					+ ("\nEmployment: " + employment_name)
-					+ (input_resource ? "\nInput: " + input_resource.name : "")
-					+ (output_resource ? ("\nOutput: " + output_resource.name) : "")
+					+ (input_resource ? "\nInput: " + number_string(population_unit.output_quantity) + " " + input_resource.name : "")
+					+ (output_resource ? ("\nOutput: " + number_string(population_unit.output_quantity) + " " + output_resource.name) : "")
 				))
 			}
 			
@@ -98,10 +98,18 @@ DialogBase {
 			
 			ResourceIconBase {
 				id: output_resource_icon
-				x: output_label.x - population_unit_list.contentItem.x - population_unit_list.x + output_label.width / 2 - width / 2
+				x: output_label.x - population_unit_list.contentItem.x - population_unit_list.x
 				anchors.verticalCenter: parent.verticalCenter
 				icon: output_resource ? output_resource.icon.identifier : ""
 				tooltip: output_resource ? output_resource.name : ""
+				visible: output_resource !== null
+			}
+			
+			NormalText {
+				id: output_quantity_label
+				text: number_string(population_unit.output_quantity)
+				x: output_resource_icon.x + output_resource_icon.width + 4 * wyrmgus.scale_factor
+				anchors.verticalCenter: parent.verticalCenter
 				visible: output_resource !== null
 			}
 		}
