@@ -38,11 +38,11 @@ DialogBase {
 	}
 	
 	NormalText {
-		id: employment_label
+		id: output_label
 		anchors.top: population_type_label.top
 		anchors.left: population_label.left
 		anchors.leftMargin: 88 * wyrmgus.scale_factor
-		text: qsTr("Employment")
+		text: qsTr("Output")
 	}
 	
 	ListView {
@@ -96,10 +96,13 @@ DialogBase {
 				anchors.verticalCenter: parent.verticalCenter
 			}
 			
-			NormalText {
-				text: employment_name
-				x: employment_label.x - population_unit_list.contentItem.x - population_unit_list.x
+			ResourceIconBase {
+				id: output_resource_icon
+				x: output_label.x - population_unit_list.contentItem.x - population_unit_list.x + output_label.width / 2 - width / 2
 				anchors.verticalCenter: parent.verticalCenter
+				icon: output_resource ? output_resource.icon.identifier : ""
+				tooltip: output_resource ? output_resource.name : ""
+				visible: output_resource !== null
 			}
 		}
 	}
