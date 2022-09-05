@@ -66,7 +66,6 @@ DialogBase {
 			readonly property var population_unit: modelData
 			readonly property var population_type: population_unit.type
 			readonly property var employment_type: population_unit.employment_type
-			readonly property string employment_name: employment_type ? employment_type.name : "Unemployed"
 			readonly property var input_resource: population_unit.input_resource
 			readonly property var output_resource: population_unit.output_resource
 			
@@ -78,8 +77,8 @@ DialogBase {
 				player_color: wyrmgus.this_player.player_color.identifier
 				tooltip: format_text(population_type.name + "\n" + small_text(
 					("\nPopulation: " + number_string(population_unit.population))
-					+ ("\nEmployment: " + employment_name)
-					+ (input_resource ? "\nInput: " + number_string(population_unit.output_quantity) + " " + input_resource.name : "")
+					+ (employment_type ? ("\nEmployment: " + employment_type.name) : "")
+					+ (input_resource ? ("\nInput: " + number_string(population_unit.output_quantity) + " " + input_resource.name) : "")
 					+ (output_resource ? ("\nOutput: " + number_string(population_unit.output_quantity) + " " + output_resource.name) : "")
 				))
 			}
