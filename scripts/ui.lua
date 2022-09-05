@@ -1258,9 +1258,6 @@ if not (ui_loaded_first_time) then
 				{ 	Condition = {SettlementName = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = PopupDescriptionFont}}
 				},
-				{ 	Condition = {HomeSettlementName = "only", ButtonAction = "unit"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Home Settlement: "), UnitHomeSettlementName("Unit")), Font = PopupDescriptionFont}}
-				},
 				{ 	Condition = {ButtonAction = "buy", Organic = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Trait: "), UnitTrait("Unit")), Font = PopupDescriptionFont}}
 				},

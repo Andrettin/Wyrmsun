@@ -404,8 +404,6 @@ DefineUnitType("unit-goblin-glider", {
 	Image = {"file", "goblin/units/glider.png", "size", {100, 100}},
 	Animations = "animations-goblin-glider", Icon = "icon-goblin-glider",
 	Costs = {"time", 65, "copper", 500, "lumber", 300},
-	PopulationCost = 10000,
-	PopulationClass = "soldiers",
 	RepairHp = 4,
 	RepairCosts = {"copper", 1, "lumber", 1},
 	NeutralMinimapColor = {192, 192, 192},
