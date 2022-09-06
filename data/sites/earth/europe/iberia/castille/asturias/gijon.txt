@@ -4,6 +4,7 @@ gijon = {
 	geocoordinate = { -5.67000044903 43.53001609200 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		castille
+		asturias
+		conventus_asturicensis
 	}
 }

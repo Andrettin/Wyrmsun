@@ -10,6 +10,14 @@ castille = {
 	superregions = { spain }
 }
 
+asturias = {
+	superregions = { castille }
+}
+
 galicia = {
+	superregions = { castille }
+}
+
+leon = {
 	superregions = { castille }
 }
