@@ -4,7 +4,8 @@ tres_minas = {
 	geocoordinate = { -7.5180833333333 41.481138888889 } #from Natural Earth
 	base_unit_type = unit_gold_deposit #gold present in Três Minas; Source: M. J. T. Lewis, "Railways in the Greek and Roman World", 2001, p. 15.
 	regions = {
-		portugal
+		conventus_bracarensis
+		tras_os_montes
 	}
 	
 	history = {

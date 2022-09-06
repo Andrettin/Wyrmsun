@@ -23,3 +23,16 @@ portugal = {
 		}
 	}
 }
+
+minho = { #Entre-Douro-e-Minho
+	superregions = {
+		conventus_bracarensis
+		portugal
+	}
+}
+
+tras_os_montes = {
+	superregions = {
+		portugal
+	}
+}

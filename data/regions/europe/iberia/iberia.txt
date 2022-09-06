@@ -19,3 +19,15 @@ iberia = {
 gallaecia = {
 	superregions = { iberia }
 }
+
+conventus_asturicensis = {
+	superregions = { gallaecia }
+}
+
+conventus_bracarensis = {
+	superregions = { gallaecia }
+}
+
+conventus_lucensis = {
+	superregions = { gallaecia }
+}

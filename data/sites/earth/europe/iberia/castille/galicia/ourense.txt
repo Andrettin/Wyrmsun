@@ -4,6 +4,7 @@ ourense = {
 	geocoordinate = { -7.86999536277 42.32996014310 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
+		conventus_bracarensis
 		galicia
 	}
 }

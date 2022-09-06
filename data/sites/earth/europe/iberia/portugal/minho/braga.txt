@@ -7,7 +7,7 @@ braga = {
 		roman = "Bracara" #Source: William R. Shepherd, "Historical Atlas", 1911, pp. 34-35.
 	}
 	regions = {
-		portugal
+		minho
 	}
 	
 	history = {

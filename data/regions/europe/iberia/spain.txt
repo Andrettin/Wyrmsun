@@ -11,8 +11,5 @@ castille = {
 }
 
 galicia = {
-	superregions = {
-		gallaecia
-		spain
-	}
+	superregions = { castille }
 }
