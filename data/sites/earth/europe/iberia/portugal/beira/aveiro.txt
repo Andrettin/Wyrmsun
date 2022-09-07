@@ -4,6 +4,7 @@ aveiro = {
 	geocoordinate = { -8.65099753409 40.64100310520 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		portugal
+		beira
+		conventus_scallabitanus
 	}
 }

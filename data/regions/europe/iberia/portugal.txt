@@ -24,6 +24,30 @@ portugal = {
 	}
 }
 
+alentejo = {
+	superregions = {
+		portugal
+	}
+}
+
+algarve = {
+	superregions = {
+		portugal
+	}
+}
+
+beira = {
+	superregions = {
+		portugal
+	}
+}
+
+estremadura = {
+	superregions = {
+		portugal
+	}
+}
+
 minho = { #Entre-Douro-e-Minho
 	superregions = {
 		conventus_bracarensis

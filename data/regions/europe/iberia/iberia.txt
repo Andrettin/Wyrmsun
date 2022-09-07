@@ -20,6 +20,10 @@ gallaecia = {
 	superregions = { iberia }
 }
 
+lusitania = {
+	superregions = { iberia }
+}
+
 conventus_asturicensis = {
 	superregions = { gallaecia }
 }
@@ -28,6 +32,18 @@ conventus_bracarensis = {
 	superregions = { gallaecia }
 }
 
+conventus_emeritanus = {
+	superregions = { lusitania }
+}
+
 conventus_lucensis = {
 	superregions = { gallaecia }
+}
+
+conventus_pacensis = {
+	superregions = { lusitania }
+}
+
+conventus_scallabitanus = {
+	superregions = { lusitania }
 }

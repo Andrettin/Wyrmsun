@@ -4,6 +4,7 @@ santarem = {
 	geocoordinate = { -8.68200255248 39.23100008340 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		portugal
+		conventus_scallabitanus
+		estremadura
 	}
 }

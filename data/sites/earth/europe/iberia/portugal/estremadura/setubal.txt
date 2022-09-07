@@ -4,6 +4,7 @@ setubal = {
 	geocoordinate = { -8.90001001122 38.52995953270 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		portugal
+		conventus_pacensis
+		estremadura
 	}
 }

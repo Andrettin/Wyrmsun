@@ -4,7 +4,8 @@ coimbra = {
 	geocoordinate = { -8.41668033999 40.20037436830 } #from Natural Earth
 	base_unit_type = unit_building_site
 	regions = {
-		portugal
+		beira
+		conventus_scallabitanus
 	}
 	
 	history = {

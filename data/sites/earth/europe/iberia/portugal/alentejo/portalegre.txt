@@ -4,6 +4,7 @@ portalegre = {
 	geocoordinate = { -7.42300154937 39.29000410950 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		portugal
+		alentejo
+		conventus_pacensis
 	}
 }

@@ -4,6 +4,7 @@ guarda = {
 	geocoordinate = { -7.26200051152 40.54100414320 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		portugal
+		beira
+		conventus_scallabitanus
 	}
 }
