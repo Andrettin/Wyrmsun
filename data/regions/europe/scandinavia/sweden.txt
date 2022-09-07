@@ -1,0 +1,37 @@
+sweden = {
+	superregions = {
+		scandinavia
+	}
+}
+
+gotland = {
+	superregions = {
+		greater_gotaland
+		sweden
+	}
+}
+
+gotaland = {
+	superregions = {
+		greater_gotaland
+		sweden
+	}
+}
+
+greater_gotaland = { #modern Götaland, one of the three Lands of Sweden
+	superregions = {
+		sweden
+	}
+}
+
+norrland = {
+	superregions = {
+		sweden
+	}
+}
+
+svealand = {
+	superregions = {
+		sweden
+	}
+}

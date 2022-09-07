@@ -1,0 +1,5 @@
+norway = {
+	superregions = {
+		scandinavia
+	}
+}

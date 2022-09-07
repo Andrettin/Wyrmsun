@@ -1,0 +1,23 @@
+denmark = {
+	superregions = {
+		scandinavia
+	}
+}
+
+funen = {
+	superregions = {
+		denmark
+	}
+}
+
+jutland = {
+	superregions = {
+		denmark
+	}
+}
+
+zealand = {
+	superregions = {
+		denmark
+	}
+}

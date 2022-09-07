@@ -12,69 +12,10 @@ scandinavia = {
 	}
 }
 
-denmark = {
-	superregions = {
-		scandinavia
-	}
-}
-
-norway = {
-	superregions = {
-		scandinavia
-	}
-}
-
-sweden = {
-	superregions = {
-		scandinavia
-	}
-}
-
-funen = {
-	superregions = {
-		denmark
-	}
-}
-
-gotland = {
-	superregions = {
-		sweden
-	}
-}
-
-gotaland = {
-	superregions = {
-		sweden
-	}
-}
-
-jutland = {
-	superregions = {
-		denmark
-	}
-}
-
-norrland = {
-	superregions = {
-		sweden
-	}
-}
-
 scania = {
 	superregions = {
 		denmark
+		greater_gotaland
 		sweden
-	}
-}
-
-svealand = {
-	superregions = {
-		sweden
-	}
-}
-
-zealand = {
-	superregions = {
-		denmark
 	}
 }
