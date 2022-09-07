@@ -6,5 +6,6 @@ portimao = {
 	regions = {
 		algarve
 		conventus_pacensis
+		cyneticum
 	}
 }

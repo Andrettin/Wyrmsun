@@ -47,3 +47,7 @@ conventus_pacensis = {
 conventus_scallabitanus = {
 	superregions = { lusitania }
 }
+
+cyneticum = {
+	superregions = { iberia }
+}

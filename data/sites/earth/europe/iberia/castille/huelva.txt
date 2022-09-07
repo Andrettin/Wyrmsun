@@ -5,5 +5,6 @@ huelva = {
 	base_unit_type = unit_copper_deposit #5x copper deposits nearby; Source: http://www.lib.utexas.edu/maps/europe/spain_mineral_1974.jpg
 	regions = {
 		castille
+		cyneticum
 	}
 }

@@ -6,5 +6,6 @@ faro = {
 	regions = {
 		algarve
 		conventus_pacensis
+		cyneticum
 	}
 }
