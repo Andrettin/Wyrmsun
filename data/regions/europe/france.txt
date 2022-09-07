@@ -61,6 +61,12 @@ burgundy = {
 	}
 }
 
+corsica = {
+	superregions = {
+		france
+	}
+}
+
 ile_de_france = {
 	superregions = {
 		france
