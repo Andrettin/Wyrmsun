@@ -108,6 +108,7 @@ https://github.com/Andrettin/Wyrmsun
 * User Interface
 - Reworked how objectives and in-game messages are displayed (e.g. making use of the newer font and more modern interface capabilities).
 - Changed the icon of the Found a Faction button.
+- Command buttons which lead into and out of submenus can now be used when the game is paused.
 
 -----------------------------------------------------------------------
 - 5.3.6
