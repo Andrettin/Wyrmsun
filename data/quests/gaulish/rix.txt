@@ -1,0 +1,20 @@
+rix = {
+	name = "[word:rix.name.normalized]"
+	icon = royal_crown
+	description = "\"[word:rix.name.normalized]\" means \"[word:rix.meanings.1.lowered]\" in Old Gaulish."
+	hint = "Select a [civilization:gaulish.class_unit_type:town_hall.name], click on the Enact a Law button and then on the Monarchy button to research the upgrade."
+	conditions = {
+		civilization = gaulish
+		government_type = tribe
+		faction_type = polity
+		upgrade_class = writing
+	}
+	objectives = {
+		research_upgrade = {
+			upgrade = upgrade_monarchy
+		}
+	}
+	completion_effects = {
+		scripted_effect = major_copper_reward
+	}
+}
