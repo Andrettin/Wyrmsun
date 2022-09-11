@@ -1,0 +1,9 @@
+nemeton = { #Source: H. Munro Chadwick, "The Oak and the Thunder-God", 1900, p. 34.
+	name = "Nemeton"
+	language = gaulish
+	type = noun
+	meanings = {
+		"Temple"
+		"Grove"
+	}
+}
