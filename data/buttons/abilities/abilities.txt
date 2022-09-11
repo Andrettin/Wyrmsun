@@ -114,6 +114,7 @@ cast_puncture = {
 		unit_elven_swordsman
 		unit_frank_heroic_swordsman
 		unit_frank_spearman
+		unit_gaulish_chieftain
 		unit_germanic_chieftain
 		unit_germanic_spearman
 		unit_gnomish_master_at_arms

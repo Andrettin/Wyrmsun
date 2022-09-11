@@ -14,6 +14,14 @@ western_footman = {
 	}
 }
 
+gaulish_swordsman = {
+	code = vercingetorix
+	
+	effects = {
+		create_unit = unit_gaulish_swordsman
+	}
+}
+
 latin_legionary = {
 	code = marius
 	

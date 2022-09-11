@@ -1,7 +1,7 @@
 #some troops to defend against the Suebi
 
 aedui_warriors = {
-	unit_class = infantry
+	unit_type = unit_gaulish_swordsman
 	quantity = 12
 	ai_active = false
 	

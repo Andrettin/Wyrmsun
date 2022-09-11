@@ -1,0 +1,25 @@
+upgrade_to_gaulish_veteran_swordsman = {
+	pos = 1
+	level = choose_individual_upgrade_level
+	action = experience_upgrade_to
+	value = unit_gaulish_veteran_swordsman
+	key = s
+	hint = "Upgrade to Veteran ~!Swordsman"
+	popup = popup_unit
+	unit_types = {
+		unit_gaulish_swordsman
+	}
+}
+
+upgrade_to_gaulish_chieftain = {
+	pos = 1
+	level = choose_individual_upgrade_level
+	action = experience_upgrade_to
+	value = unit_gaulish_chieftain
+	key = c
+	hint = "Upgrade to ~!Chieftain"
+	popup = popup_unit
+	unit_types = {
+		unit_gaulish_veteran_swordsman
+	}
+}

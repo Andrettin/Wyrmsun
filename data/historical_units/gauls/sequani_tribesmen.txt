@@ -1,5 +1,5 @@
 sequani_warriors = {
-	unit_class = infantry
+	unit_type = unit_gaulish_swordsman
 	quantity = 4
 	
 	history = {

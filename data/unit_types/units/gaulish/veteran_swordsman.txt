@@ -1,0 +1,42 @@
+unit_gaulish_veteran_swordsman = {
+	name = "Veteran Swordsman"
+	parent = unit_template_veteran_infantry
+	civilization = gaulish
+	description = "Gaulish swordsmen are known to be fierce opponents in battle. These battle-hardened veterans are a force to be reckoned with."
+	image_file = "units/gaulish/swordsman.png"
+	frame_size = { 72 72 }
+	animation_set = animations_melee_unit
+	icon = suebi_veteran_swordsman
+	corpse_type = unit_human_dead_body
+	day_sight_range_bonus = 1
+	night_sight_range_bonus = -1
+	weapon_classes = {
+		sword
+		thrusting_sword
+	}
+	hack_damage = true
+	ai_drops = {
+		unit_short_sword
+		unit_broad_sword
+		unit_spatha
+		unit_wooden_shield
+		unit_bronze_shield
+		unit_iron_shield
+		unit_kite_shield
+		unit_boots
+		unit_carrots
+		unit_cheese
+		unit_meat
+		unit_potion_of_healing
+	}
+	default_equipment = {
+		weapon = unit_short_sword
+		shield = unit_wooden_shield
+		boots = unit_boots
+	}
+	sounds = {
+		dead = basic_human_voices_dead
+		hit = sword_attack
+		miss = attack_miss
+	}
+}

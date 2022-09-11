@@ -56,6 +56,7 @@ learn_sword_mastery_bronze = {
 		unit_germanic_chieftain
 		unit_frank_heroic_swordsman
 		unit_frank_knight_lord
+		unit_gaulish_chieftain
 		unit_gnomish_master_at_arms
 		unit_goblin_warlord
 		unit_gothic_horse_lord
@@ -87,9 +88,10 @@ learn_sword_mastery = {
 		unit_deep_gnomish_master_at_arms
 		unit_derro_shadowguard
 		unit_elven_swordsman
-		unit_germanic_chieftain
 		unit_frank_heroic_swordsman
 		unit_frank_knight_lord
+		unit_gaulish_chieftain
+		unit_germanic_chieftain
 		unit_gnomish_master_at_arms
 		unit_goblin_warlord
 		unit_gothic_horse_lord
@@ -343,6 +345,7 @@ learn_puncture = {
 		unit_elven_swordsman
 		unit_frank_heroic_swordsman
 		unit_frank_spearman
+		unit_gaulish_chieftain
 		unit_germanic_chieftain
 		unit_germanic_spearman
 		unit_gnomish_master_at_arms

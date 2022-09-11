@@ -52,7 +52,7 @@ if (LoadedGame == false) then
 		unit = CreateUnit("unit-teuton-archer", 0, {GetPlayerData(0, "StartPosX"), GetPlayerData(0, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
 		
-		unit = CreateUnit("unit-teuton-swordsman", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
+		unit = CreateUnit("unit_gaulish_swordsman", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)
 		unit = CreateUnit("unit-teuton-archer", 1, {GetPlayerData(1, "StartPosX"), GetPlayerData(1, "StartPosY")})
 		SetUnitVariable(unit, "Active", false)

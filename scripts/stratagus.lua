@@ -539,6 +539,7 @@ function StandardTriggers()
 							GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-teuton-swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_suebi_swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-frank-swordsman"
+							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit_gaulish_swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-norse-swordsman"
 							or GetUnitVariable(GetSelectedUnits()[1], "Ident") == "unit-slavic-swordsman"
 						)

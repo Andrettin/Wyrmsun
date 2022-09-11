@@ -359,7 +359,7 @@ DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
 DefineButton( { Pos = 2, Level = "choose-individual-upgrade-level", Icon = "icon-teuton-ritter",
 	Action = "experience_upgrade_to", Value = "unit-teuton-ritter",
 	Key = "k", Hint = "Upgrade to ~!Knight", Popup = "popup_unit",
-	ForUnit = {"unit-teuton-swordsman", "unit_suebi_swordsman", "unit-norse-swordsman", "unit-latin-legionary", "unit-slavic-swordsman"}
+	ForUnit = {"unit-teuton-swordsman", "unit_suebi_swordsman", "unit-norse-swordsman", "unit_gaulish_swordsman", "unit-latin-legionary", "unit-slavic-swordsman"}
 } )
 
 DefineButton( { Pos = 1, Level = "choose-individual-upgrade-level",
