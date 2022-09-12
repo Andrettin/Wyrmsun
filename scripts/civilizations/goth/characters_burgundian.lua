@@ -65,7 +65,7 @@ DefineCharacter("gundahar", { -- Source: Norman Davies, "Vanished Kingdoms", 201
 	Type = "unit-gothic-horse-lord", -- king
 	Civilization = "goth",
 	Faction = "burgundy",
-	Trait = "upgrade-generous", -- in the Anglo-Saxon poem "Widsith", Gundahar (Gunthere) gave the poet "a shining treasure" for his songs
+	Trait = "upgrade_generous", -- in the Anglo-Saxon poem "Widsith", Gundahar (Gunthere) gave the poet "a shining treasure" for his songs
 	StartDate = 406, -- Gundahar and his father Gibica brought the Burgundians over the Rhine in 406/407 AD
 	DeathDate = 437, -- invasion of Gundahar's kingdom in 437 AD by Attila's Huns
 	-- Fichtner gives him as dying in 436, however

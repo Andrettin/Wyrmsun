@@ -84,7 +84,7 @@ DefineUnitType("unit-template-sapient-unit", {
 	Charisma = 10,
 	Organic = true,
 	Mana = {Enable = false, Max = 0, Value = 0, Increase = 1},
-	Traits = {"upgrade_ambitious", "upgrade_charitable", "upgrade-clumsy", "upgrade-cruel", "upgrade-dextrous", "upgrade-dim", "upgrade-dutiful", "upgrade-genius", "upgrade_gluttonous", "upgrade_greedy", "upgrade-intelligent", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-pious", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak", "upgrade-wise"}
+	Traits = {"upgrade_ambitious", "upgrade-clumsy", "upgrade-cruel", "upgrade-dextrous", "upgrade-dim", "upgrade-dutiful", "upgrade_generous", "upgrade-genius", "upgrade_gluttonous", "upgrade_greedy", "upgrade-intelligent", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-pious", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak", "upgrade-wise"}
 })
 
 Load("scripts/items.lua")

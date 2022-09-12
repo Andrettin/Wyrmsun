@@ -60,11 +60,6 @@ DefineUpgrade("upgrade-dutiful", {
 	Name = "Dutiful"
 })
 
-DefineUpgrade("upgrade-generous", { -- no current effect
-	Parent = "upgrade-trait",
-	Name = "Generous"
-})
-
 DefineUpgrade("upgrade-genius", {
 	Parent = "upgrade-trait",
 	Name = "Genius"

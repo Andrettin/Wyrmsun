@@ -1,6 +1,6 @@
-upgrade_charitable = {
+upgrade_generous = {
 	parent = upgrade_trait
-	name = "Charitable"
+	name = "Generous"
 	modifier = {
 		cost_modifier = -10
 	}

@@ -98,7 +98,7 @@ https://github.com/Andrettin/Wyrmsun
 * Units
 - The hero unit recruitment tooltip now displays which trait it has.
 - Added the Greedy trait (+10% cost modifier). This trait is only available for hero units.
-- Added the Charitable trait (-10% cost modifier). This trait is only available for hero units.
+- Added the Generous trait (-10% cost modifier). This trait is only available for hero units.
 - The Ambitious trait now makes the unit have a +5% cost modifier and increases mana by +10 instead of +5, and is only available for hero units.
 - Added the Gluttonous trait (+5% cost modifier). This trait is only available for hero units.
 
