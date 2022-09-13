@@ -84,6 +84,16 @@ the_cruel = {
 	}
 }
 
+the_cunning = {
+	name = "the Cunning"
+	conditions = {
+		or = {
+			trait = upgrade_intelligent
+			trait = upgrade_genius
+		}
+	}
+}
+
 the_dim = {
 	name = "the Dim"
 	conditions = {
@@ -161,6 +171,33 @@ the_harsh = {
 	}
 }
 
+the_hunter = {
+	name = "the Hunter"
+	conditions = {
+		or = {
+			unit_class = shooter
+			unit_class = veteran_shooter
+			unit_class = heroic_shooter
+		}
+		or = {
+			trait = upgrade_cruel
+			trait = upgrade_dextrous
+			trait = upgrade_keen
+			trait = upgrade_mighty
+			trait = upgrade_quick
+			trait = upgrade_strong
+			trait = upgrade_vicious
+		}
+	}
+}
+
+the_incautious = {
+	name = "the Incautious"
+	conditions = {
+		trait = upgrade_reckless
+	}
+}
+
 the_iron_shield = {
 	name = "the Iron Shield"
 	conditions = {
@@ -226,6 +263,17 @@ the_pious = {
 	name = "the Pious"
 	conditions = {
 		trait = upgrade_pious
+	}
+}
+
+the_ponderous = {
+	name = "the Ponderous"
+	conditions = {
+		or = {
+			trait = upgrade_intelligent
+			trait = upgrade_genius
+			trait = upgrade_wise
+		}
 	}
 }
 
@@ -336,6 +384,13 @@ the_strong = {
 	name = "the Strong"
 	conditions = {
 		trait = upgrade_strong
+	}
+}
+
+the_thief = {
+	name = "the Thief"
+	conditions = {
+		unit_class = thief
 	}
 }
 

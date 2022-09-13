@@ -101,6 +101,7 @@ https://github.com/Andrettin/Wyrmsun
 - Added the Generous trait (-10% cost modifier). This trait is only available for hero units.
 - The Ambitious trait now makes the unit have a +5% cost modifier and increases mana by +10 instead of +5, and is only available for hero units.
 - Added the Gluttonous trait (+5% cost modifier). This trait is only available for hero units.
+- Added "the Cunning", "the Hunter", "the Incautious", "the Ponderous" and "the Thief" epithets for units.
 
 * Upgrades
 - Added Holmgang upgrade for the Norse (+20% bonus vs. infantry for sword infantry).
