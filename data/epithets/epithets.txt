@@ -231,7 +231,13 @@ the_pious = {
 
 the_priest = {
 	name = "the Priest"
-	weight = 0 #don't generate it as a random epithet
+	conditions = {
+		or = {
+			unit_class = priest
+			unit_class = veteran_priest
+			unit_class = high_priest
+		}
+	}
 }
 
 the_pure = {
