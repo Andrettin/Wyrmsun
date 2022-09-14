@@ -1,0 +1,13 @@
+upgrade_slow = {
+	parent = upgrade_trait
+	name = "Slow"
+	modifier = {
+		speed = -1
+	}
+	unit_conditions = {
+		not = {
+			trait = upgrade_quick
+			trait = upgrade_limping
+		}
+	}
+}

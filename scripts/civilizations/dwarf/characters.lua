@@ -102,7 +102,7 @@ DefineCharacter("eitri", {
 	Civilization = "dwarf",
 	Background = "Eitri is a dwarf from Norse mythology who was an expert smith. He is the brother of Brokk.",
 	Deities = {"odin", "tyr"},
-	Trait = "upgrade-dextrous"
+	Trait = "upgrade_dextrous"
 })
 
 DefineCharacter("ivaldi", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 63.
@@ -255,7 +255,7 @@ DefineCharacter("regin", {
 	Description = "Regin is a dwarven mastersmith, unrivalled in his time. The mythical sword Gram was of his making, as were several other legendary blades.",
 	Background = "In Norse mythology, Regin was a skilled dwarven smith and the brother of the dragon Fafnir.",
 	HairVariation = "brown-hair",
-	Trait = "upgrade-intelligent",
+	Trait = "upgrade_intelligent",
 	StartDate = 561, -- Sigibert's campaign begins in 561; Sigibert's encounter with Regin (which causes the latter's death in the end) should take place between Sigibert's initial defeat of the Avars and Chilperich in 561-562, and Sigibert's marriage to Brunichilde in 566
 	DeathDate = 566,
 	ForbiddenUpgrades = {"unit-dwarven-yale-rider"},

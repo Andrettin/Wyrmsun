@@ -6,5 +6,8 @@ upgrade_generous = {
 	}
 	unit_conditions = {
 		character = true
+		not = {
+			trait = upgrade_greedy
+		}
 	}
 }

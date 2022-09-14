@@ -64,7 +64,7 @@ DefineCharacter("hrungnir", { -- Source: Kevin Crossley-Holland, "The Norse Myth
 	Gender = "male",
 	Type = "unit-ettin",
 	Civilization = "ettin",
-	Trait = "upgrade-strong"
+	Trait = "upgrade_strong"
 })
 
 DefineCharacter("hymir", { -- Source: Kevin Crossley-Holland, "The Norse Myths", 1980, p. 245; Source: Carolyne Larrington, "The Norse Myths: A Guide to the Gods and Heroes", 2017, pp. 102-105.
@@ -79,7 +79,7 @@ DefineCharacter("mokkurkalfi", { -- giant made of clay from Norse mythology; Sou
 	Gender = "male",
 	Type = "unit-ettin",
 	Civilization = "ettin",
-	Trait = "upgrade-slow"
+	Trait = "upgrade_slow"
 })
 
 DefineCharacter("saekmime", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol. 1, p. 228.

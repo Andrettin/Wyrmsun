@@ -1,0 +1,14 @@
+upgrade_strong = {
+	parent = upgrade_trait
+	name = "Strong"
+	modifier = {
+		basic_damage = 1
+		strength = 1
+	}
+	unit_conditions = {
+		not = {
+			trait = upgrade_mighty
+			trait = upgrade_weak
+		}
+	}
+}

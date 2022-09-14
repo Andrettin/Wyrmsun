@@ -95,7 +95,7 @@ DefineCharacter("halfdan-the-black-yngling", { -- Source: Snorri Sturlson, "Heim
 	-- began his reign when he was 18 years old, so he would have been born in 823
 	StartDate = 841, -- reign began
 	DeathDate = 863, -- reign ended
-	Trait = "upgrade-strong", -- described as stout and strong
+	Trait = "upgrade_strong", -- described as stout and strong
 	HistoricalTitles = {
 		"ruler", 841, 863, "agder"
 	},

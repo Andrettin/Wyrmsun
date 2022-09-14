@@ -49,7 +49,7 @@ DefineCharacter("brunichilde", { -- Source: Edward G. Fichtner, "Sigfrid's Merov
 	Type = "unit-gothic-horse-rider",
 	Civilization = "goth",
 	Faction = "visigothia",
-	Trait = "upgrade-intelligent", -- described as refined, attractive, good-mannered, intelligent and socially affable
+	Trait = "upgrade_intelligent", -- described as refined, attractive, good-mannered, intelligent and socially affable
 	DeathDate = 613, -- died in 613
 	Deities = {"christian-god"},
 	Father = "athanagild", -- daughter of the Visigothic king Athanagild

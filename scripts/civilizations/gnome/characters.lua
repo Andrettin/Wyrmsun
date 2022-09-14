@@ -94,7 +94,7 @@ DefineCharacter("clavo", { -- Source: Franz Hartmann, "Among the Gnomes", 1895, 
 	Gender = "male",
 	Type = "unit-gnomish-master-at-arms", -- general
 	Civilization = "gnome",
-	Trait = "upgrade-quick", -- robust and very quick
+	Trait = "upgrade_quick", -- robust and very quick
 	HistoricalTitles = {
 --		"marshal", 0, 0, "untersberg" -- commanding general of the army of Untersberg
 	},

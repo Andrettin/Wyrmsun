@@ -1,0 +1,14 @@
+upgrade_clumsy = {
+	parent = upgrade_trait
+	name = "Clumsy"
+	modifier = {
+		accuracy = -1
+		evasion = -1
+		dexterity = -1
+	}
+	unit_conditions = {
+		not = {
+			trait = upgrade_dextrous
+		}
+	}
+}

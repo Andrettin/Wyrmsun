@@ -719,7 +719,7 @@ DefinePanelContents(
 		More = {"Text", {Text = _("Trait:")}}
 	},
 	{ Pos = {76, 103}, Condition = {Organic = "only"},
-		More = {"Text", {Text = UnitTrait("Active")}}
+		More = {"Text", {Text = UnitTraits("Active")}}
 	},
 	{ Pos = {9, 130}, Condition = {},
 		More = {"Text", {Text = _("Armor:")}}
@@ -1259,7 +1259,7 @@ if not (ui_loaded_first_time) then
 					More = {"Variable", {Text = Concat(_("Settlement: "), UnitSettlementName("Unit")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {ButtonAction = "buy", Organic = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
-					More = {"Variable", {Text = Concat(_("Trait: "), UnitTrait("Unit")), Font = PopupDescriptionFont}}
+					More = {"Variable", {Text = Concat(_("Trait: "), UnitTraits("Unit")), Font = PopupDescriptionFont}}
 				},
 				{ 	Condition = {HitPoints = "only", Opponent = "false", Neutral = "false"}, HighlightColor = "yellow",
 					More = {"Variable", {Text = Concat(_("Hit Points:"), " "), Variable = "HitPoints", Font = PopupDescriptionFont}}

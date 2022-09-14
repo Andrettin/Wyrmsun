@@ -1,0 +1,14 @@
+upgrade_genius = {
+	parent = upgrade_trait
+	name = "Genius"
+	modifier = {
+		mana = 10
+		intelligence = 2
+	}
+	unit_conditions = {
+		not = {
+			trait = upgrade_intelligent
+			trait = upgrade_dim
+		}
+	}
+}

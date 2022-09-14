@@ -30,7 +30,7 @@ DefineCharacter("eymund", { -- Source: Henry Adams Bellows (transl.), "The Poeti
 	Gender = "male",
 	Type = "unit-norse-heroic-swordsman",
 	Civilization = "norse", -- accurate?
-	Trait = "upgrade-strong"
+	Trait = "upgrade_strong"
 })
 
 DefineCharacter("almveig", { -- Source: Henry Adams Bellows (transl.), "The Poetic Edda", 1936, p. 222.

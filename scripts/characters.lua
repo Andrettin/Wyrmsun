@@ -74,7 +74,7 @@ DefineCharacter("ganglati", { -- Hel's manservant in Norse mythology; Source: Ke
 	Faction = "hel",
 	StartDate = -30000,
 	DeathDate = 3000,
-	Trait = "upgrade-slow",
+	Trait = "upgrade_slow",
 	HistoricalLocations = {
 		-30000, "niflheim", "eljudnir"
 	},
@@ -94,7 +94,7 @@ DefineCharacter("ganglot", { -- Hel's maidservant in Norse mythology; Source: Ke
 	Faction = "hel",
 	StartDate = -30000,
 	DeathDate = 3000,
-	Trait = "upgrade-slow",
+	Trait = "upgrade_slow",
 	HistoricalLocations = {
 		-30000, "niflheim", "eljudnir"
 	},

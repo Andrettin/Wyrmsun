@@ -73,7 +73,7 @@ DefineCharacter("ballomar", { -- Source: "Ancient Warfare VII.6", 2013, pp. 29-3
 	Type = "unit_suebi_chieftain", -- chieftain
 	Civilization = "suebi",
 	Faction = "marcomannia",
-	Trait = "upgrade-intelligent",
+	Trait = "upgrade_intelligent",
 	HairVariation = "brown-hair",
 	Deities = {"odin", "tyr"},
 	Description = "The Marcomannic chieftain Ballomar seeks to establish his tribe in the Roman lands to their south. To that effect, he has gathered a coalition of tribes - and is ready to cross the Danube.",

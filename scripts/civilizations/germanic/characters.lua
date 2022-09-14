@@ -62,7 +62,7 @@ DefineCharacter("tror", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, p.
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Trait = "upgrade-mighty", -- described as goodly to look upon; very strong
+	Trait = "upgrade_mighty", -- described as goodly to look upon; very strong
 	HairVariation = "blond-hair", -- his hair was "fairer than gold"
 	StartDate = -3000, -- born
 	DeathDate = -3000 + 12 + 10, -- 30 years is the default lifetime of a hero after having risen to prominence, but here we use 10 to make the genealogy fit from 3000 to 2800 BC, by when Scandinavia was settled by Indo-Europeans (in the Ynglinga Saga, with an euhemerized Odin leading the Asa there)
@@ -348,7 +348,7 @@ DefineCharacter("vegdeg", { -- Source: Snorri Sturlson, "The Prose Edda", 1916, 
 	Gender = "male",
 	Type = "unit-germanic-chieftain", -- chieftain
 	Civilization = "germanic",
-	Trait = "upgrade-mighty", -- described as a "mighty king"
+	Trait = "upgrade_mighty", -- described as a "mighty king"
 	StartDate = -2800,
 	DeathDate = -2800 + (30 * 2),
 	Father = "voden",
@@ -546,7 +546,7 @@ DefineCharacter("erala", {
 	Description = "The young warrior Erala believes his true father to be the god Rig. Feeling that his divine heritage has fated him to rule over vast lands, Erala sets about to carve territory for himself.",
 	Icon = "icon-jarl",
 	HairVariation = "blond-hair",
-	Trait = "upgrade-strong",
+	Trait = "upgrade_strong",
 	StartDate = -1600,
 	Deities = {"odin", "heimdall"},
 	HistoricalLocations = {

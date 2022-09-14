@@ -203,7 +203,7 @@ DefineCharacter("gunthram", { -- Source: Edward G. Fichtner, "Sigfrid's Meroving
 	Faction = "burgundia",
 	Description = "As one of the sons of the Frankish king Chlothar I, Gunthram inherited the Burgundian part of the Frankish realm from his father.",
 	HairVariation = "brown-hair",
-	Trait = "upgrade-dextrous",
+	Trait = "upgrade_dextrous",
 	Father = "chlothar",
 	DeathDate = 592,
 	Conditions = function(s)
@@ -224,7 +224,7 @@ DefineCharacter("sigibert", { -- Sigibert I (535-575), Frankish king; son of Chl
 	Description = "The son of the Frankish king Chlothar I, Sigibert inherited vast lands upon the death of his father. A courageous hero, Sigibert faces both the enmity of his brother Chilperich and the threat of invasion from abroad.",
 	Icon = "icon-sigibert",
 	HairVariation = "brown-hair",
-	Trait = "upgrade-strong",
+	Trait = "upgrade_strong",
 	Father = "chlothar",
 	DeathDate = 575,
 	Conditions = function(s)

@@ -71,7 +71,7 @@ DefineCharacter("yrsa", { -- Source: Snorri Sturlson, "Heimskringla", 1844, vol.
 	Father = "helge-skjoldung", 
 	Mother = "alof-the-great", 
 	Children = {"rolf-krake-skjoldung"},
-	Trait = "upgrade-intelligent", -- described as intelligent, as speaking well and being in all respects well behaved
+	Trait = "upgrade_intelligent", -- described as intelligent, as speaking well and being in all respects well behaved
 	Deities = {"odin", "tyr"},
 	Conditions = function(s)
 		if (GetPlayerData(trigger_player, "Faction") == "saxony") then

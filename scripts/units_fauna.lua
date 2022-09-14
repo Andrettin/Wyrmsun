@@ -35,7 +35,7 @@ DefineUnitType("unit-template-fauna-unit", {
 	Organic = true,
 	Fauna = true,
 	Mana = {Enable = false, Max = 0, Value = 0, Increase = 1},
-	Traits = {"upgrade-clumsy", "upgrade-dextrous", "upgrade-dim", "upgrade-keen", "upgrade-limping", "upgrade-mighty", "upgrade-near-sighted", "upgrade-old", "upgrade-quick", "upgrade-reckless", "upgrade-resilient", "upgrade-slow", "upgrade-strong", "upgrade-weak"}
+	Traits = {"upgrade_clumsy", "upgrade_dextrous", "upgrade_dim", "upgrade-keen", "upgrade_limping", "upgrade_mighty", "upgrade-near-sighted", "upgrade-old", "upgrade_quick", "upgrade-reckless", "upgrade-resilient", "upgrade_slow", "upgrade_strong", "upgrade_weak"}
 })
 
 DefineUnitType("unit-template-diminutive-fauna-unit", {
@@ -660,7 +660,7 @@ DefineUnitType("unit-slime", {
 	Detritivore = true,	
 	Carnivore = true,	
 	BluntDamage = true,
-	Traits = {"upgrade-mighty", "upgrade-strong", "upgrade-weak", "upgrade-old", "upgrade-quick", "upgrade-resilient", "upgrade-slow"}, -- slimes have a more limited selection of traits, since they have a rather different biology
+	Traits = {"upgrade_mighty", "upgrade_strong", "upgrade_weak", "upgrade-old", "upgrade_quick", "upgrade-resilient", "upgrade_slow"}, -- slimes have a more limited selection of traits, since they have a rather different biology
 	Variations = {
 		{
 			"variation-id", "green",

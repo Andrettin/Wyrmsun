@@ -106,7 +106,7 @@ DefineCharacter("agniss-tenebris", { -- invented by Jesse Crider
 	Level = 3,
 	Civilization = "goblin",
 	Faction = "tenebris",
-	Trait = "upgrade-intelligent",
+	Trait = "upgrade_intelligent",
 	Description = "The leader of the Tenebris Syndicate, Agniss rules through mysticism and paranoia. The hooded hag is well-known amongst goblins for the terror she inspires.",
 --	Icon = "icon-agniss",
 	Deities = {"gathaarl", "hel"},
@@ -123,7 +123,7 @@ DefineCharacter("dremac-paarsins", { -- invented by Jesse Crider
 	Level = 3,
 	Civilization = "goblin",
 	Faction = "myridia",
-	Trait = "upgrade-genius",
+	Trait = "upgrade_genius",
 	Description = "Dremac Paarsins is the gluttonous leader of the Myridian Syndicate. An extremely wealthy merchant lord, Dremac is known for his opulence and cunning. It is rumored that he rose to his ruling position by a mix of political blackmailing and the influence of his wealth.",
 	Icon = "icon-dremac-paarsins",
 	Deities = {"gathaarl", "hel"},
@@ -157,7 +157,7 @@ DefineCharacter("orza-chahax", { -- invented by Jesse Crider
 	Level = 3,
 	Civilization = "goblin",
 	Faction = "ezmarria",
-	Trait = "upgrade-intelligent",
+	Trait = "upgrade_intelligent",
 	Description = "Orza Chahax is the leader of the Ezmarrian Syndicate. As a scholar, he is dedicated to science, though his methods are often questionable in their morality.",
 	Icon = "icon-orza-chahax",
 	Deities = {"gathaarl", "hel"},
@@ -172,6 +172,6 @@ DefineCharacter("greebo", {
 	Type = "unit-goblin-spearman",
 	Civilization = "goblin",
 	Description = "Greebo is a scoundrel, simply put. He lives in a rocky hideout, and survives by stealing from the farms in the region. He is quick to thrust his short sword into those who get in his way, holding love only for his baby child.",
-	Trait = "upgrade-strong", -- seems appropriate, but maybe something else for this character would be better?
+	Trait = "upgrade_strong", -- seems appropriate, but maybe something else for this character would be better?
 	Deities = {"gathaarl", "hel"}
 })
