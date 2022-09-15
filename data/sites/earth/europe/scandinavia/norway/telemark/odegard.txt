@@ -1,0 +1,9 @@
+odegard = {
+	name = "Odegard" #Ødegård
+	map_template = earth
+	geocoordinate = { 9.5577388888889 58.960941666667 }
+	base_unit_type = unit_copper_deposit #apatite #Ødegården Verk
+	regions = {
+		telemark
+	}
+}

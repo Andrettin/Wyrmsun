@@ -1,0 +1,9 @@
+allmannajuvet = {
+	name = "Allmannajuvet"
+	map_template = earth
+	geocoordinate = { 6.4668 59.6536 }
+	#base_unit_type = unit_copper_deposit #zinc #commented out since the deposit is not properly reachable for workers to gather
+	regions = {
+		rogaland
+	}
+}

@@ -3,3 +3,27 @@ norway = {
 		scandinavia
 	}
 }
+
+rogaland = {
+	superregions = {
+		norway
+	}
+}
+
+telemark = {
+	superregions = {
+		norway
+	}
+}
+
+vestfold = {
+	superregions = {
+		norway
+	}
+}
+
+viken = {
+	superregions = {
+		norway
+	}
+}

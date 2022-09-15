@@ -1,0 +1,9 @@
+garpenberg = {
+	name = "Garpenberg"
+	map_template = earth
+	geocoordinate = { 16.193165656448 60.314369794998 }
+	base_unit_type = unit_copper_deposit #zinc
+	regions = {
+		dalarna
+	}
+}

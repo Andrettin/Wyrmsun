@@ -1,0 +1,9 @@
+kongsberg = {
+	name = "Kongsberg"
+	map_template = earth
+	geocoordinate = { 9.6463888888889 59.665 }
+	base_unit_type = unit_silver_deposit #Kongsberg Sølvverk
+	regions = {
+		viken
+	}
+}
