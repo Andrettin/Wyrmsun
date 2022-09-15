@@ -1,0 +1,20 @@
+schleswig = {
+	name = "Schleswig"
+	map_template = earth
+	geocoordinate = { 9.5697222222222 54.515277777778 }
+	base_unit_type = unit_minor_building_site
+	regions = {
+		south_schleswig
+	}
+	
+	history = {
+		919 = {
+			owner = denmark #part of the Kingdom of Denmark in the 919-1125 period; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 62-63.
+			building_classes += farm #Schleswig existed in the 919-1125 period
+		}
+		
+		1815 = {
+			owner = denmark #part of the Kingdom of Denmark in 1815; Source: William R. Shepherd, "Historical Atlas", 1911, pp. 158-159.
+		}
+	}
+}

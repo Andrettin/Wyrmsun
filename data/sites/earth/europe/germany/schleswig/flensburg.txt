@@ -4,7 +4,7 @@ flensburg = {
 	geocoordinate = { 9.43331538762 54.78374778150 } #from Natural Earth
 	base_unit_type = unit_minor_building_site
 	regions = {
-		germany
+		south_schleswig
 	}
 	
 	history = {

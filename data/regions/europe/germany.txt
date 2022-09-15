@@ -1,4 +1,4 @@
-germany = {
+germany = { #the territory of modern Germany
 	superregions = { west_and_central_europe }
 	
 	history = {
@@ -54,4 +54,22 @@ thuringia = {
 
 wurtemberg = {
 	superregions = { germany }
+}
+
+schleswig = {
+	superregions = { europe }
+}
+
+north_schleswig = {
+	superregions = {
+		denmark
+		schleswig
+	}
+}
+
+south_schleswig = {
+	superregions = {
+		germany
+		schleswig
+	}
 }

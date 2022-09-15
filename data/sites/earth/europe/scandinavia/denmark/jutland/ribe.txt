@@ -1,0 +1,9 @@
+ribe = {
+	name = "Ribe"
+	map_template = earth
+	geocoordinate = { 8.763056 55.327222 }
+	base_unit_type = unit_minor_building_site
+	regions = {
+		jutland
+	}
+}
