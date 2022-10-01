@@ -1,0 +1,11 @@
+gaulish_swordsman = {
+	file = "icons/units/human/gaulish/swordsman.png"
+}
+
+gaulish_veteran_swordsman = {
+	file = "icons/units/human/gaulish/veteran_swordsman.png"
+}
+
+gaulish_chieftain = {
+	file = "icons/units/human/gaulish/chieftain.png"
+}
