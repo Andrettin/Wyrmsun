@@ -5,6 +5,8 @@ celtic = {
 	class_unit_types = {
 		town_hall = unit_gaulish_town_hall
 		infantry = unit_gaulish_swordsman
+		veteran_infantry = unit_gaulish_veteran_swordsman
+		heroic_infantry = unit_gaulish_chieftain
 	}
 	
 	history = {
