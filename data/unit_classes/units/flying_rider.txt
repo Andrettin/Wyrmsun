@@ -1,6 +1,7 @@
 flying_rider = {
 	name = "Flying Rider"
 	tech_tree_parent_unit_class = stronghold
+	requirements_string = "Stronghold and Lumber Mill"
 	
 	conditions = {
 		or = {
