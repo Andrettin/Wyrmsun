@@ -16,6 +16,12 @@ unit_dwarven_gryphon_rider = {
 	basic_damage = 14
 	max_attack_range = 4
 	requirements_string = "Bastion and Lumber Mill"
+    conditional_requirements_strings = {
+        {
+            text = "Lumber Mill"
+            faction = brising_clan
+        }
+    }
 	default_equipment = {
 		weapon = unit_throwing_axe
 		boots = unit_boots

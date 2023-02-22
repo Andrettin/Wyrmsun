@@ -1,0 +1,3 @@
+upgrade_flying_rider_stronghold_exemption = {
+	name = "Flying Rider Stronghold Exemption
+}
