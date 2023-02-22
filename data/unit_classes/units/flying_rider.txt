@@ -2,12 +2,12 @@ flying_rider = {
 	name = "Flying Rider"
 	tech_tree_parent_unit_class = stronghold
 	requirements_string = "Stronghold and Lumber Mill"
-    conditional_requirements_strings = {
-        {
-            text = "Lumber Mill"
-            upgrade = upgrade_flying_rider_stronghold_exemption
-        }
-    }
+	conditional_requirements_strings = {
+		{
+			text = "Lumber Mill"
+			upgrade = upgrade_flying_rider_stronghold_exemption
+		}
+	}
 	conditions = {
 		or = {
 			and = {
