@@ -61,6 +61,14 @@ Window {
 		return "<font color=\"gold\">" + text + "</font>"
 	}
 	
+	function colored_text(text, color) {
+		var font_color_str = "<font color=\"" + color + "\">"
+		
+		text = text.replace(/<font color=\"gold\">/g, font_color_str)
+		text = text.replace(/(?:<font color=\"#)(.{6})(?:\">)/g, font_color_str)
+		return font_color_str + text + "</font>"
+	}
+	
 	function format_text(text) {
 		var str = text
 		str = str.replace(/\n/g, "<br>")
