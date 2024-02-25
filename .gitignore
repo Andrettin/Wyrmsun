@@ -18,6 +18,8 @@ libvorbis-0.dll
 libvorbisfile-3.dll
 lua51.dll
 oaml.log
+opengl32sw.dll
+QCoro6*.dll
 Qt5Core.dll
 Qt5Gui.dll
 Qt5Location.dll
@@ -33,6 +35,7 @@ Qt5Quick.dll
 Qt5QuickControls2.dll
 Qt5QuickTemplates2.dll
 Qt5Widgets.dll
+Qt6*.dll
 screen*.png
 SDL2.dll
 SDL2_mixer.dll
