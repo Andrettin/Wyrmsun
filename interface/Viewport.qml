@@ -1,6 +1,6 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
-import QtQuick.Window 2.12
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Window
 import frame_buffer_object 1.0
 import "./menus"
 
@@ -15,10 +15,18 @@ Item {
 	property var map_view: null
 	
 	onWidthChanged: {
+		if (viewport.height === 0) {
+			return
+		}
+		
 		wyrmgus.call_lua_command("SetVideoSize(" + viewport.width + ", " + viewport.height + ");")
 	}
 	
 	onHeightChanged: {
+		if (viewport.width === 0) {
+			return
+		}
+		
 		wyrmgus.call_lua_command("SetVideoSize(" + viewport.width + ", " + viewport.height + ");")
 	}
 	
