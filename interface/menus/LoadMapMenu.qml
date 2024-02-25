@@ -1,6 +1,6 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
-import QtQuick.Dialogs 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Dialogs
 import ".."
 import "../dialogs"
 
@@ -77,10 +77,8 @@ MenuBase {
 		id: select_map_dialog
 		title: qsTr("Select Map")
 		defaultSuffix: ".wmp"
-		folder: "file:" + wyrmgus.user_maps_path
+		currentFolder: "file:" + wyrmgus.user_maps_path
 		nameFilters: ["Wyrmsun Map Presentation Files (*.wmp *.wmp.gz *.smp.gz *.smp)"]
-		selectExisting: true
-		sidebarVisible: false
 		
 		onAccepted: {
 			wyrmgus.load_map_info(select_map_dialog.fileUrl)

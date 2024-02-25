@@ -1,16 +1,14 @@
-import QtQuick 2.12
-import QtQuick.Controls 2.12
-import QtQuick.Dialogs 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Dialogs
 import ".."
 
 FileDialog {
 	id: load_game_dialog
 	title: qsTr("Load Game")
 	defaultSuffix: ".sav.gz"
-	folder: "file:///" + wyrmgus.save_path
+	currentFolder: "file:///" + wyrmgus.save_path
 	nameFilters: ["Stratagus Save Files (*.sav.gz *.sav)"]
-	selectExisting: true
-	sidebarVisible: false
 	
 	onAccepted: {
 		wyrmgus.load_game(load_game_dialog.fileUrl)
