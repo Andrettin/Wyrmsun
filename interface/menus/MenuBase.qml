@@ -42,7 +42,7 @@ Item {
 		anchors.topMargin: 36 * wyrmgus.scale_factor
 	}
 	
-	Keys.onPressed: {
+	Keys.onPressed: function(event) {
 		for (var i = (menu.popups.length - 1); i >= 0; --i) {
 			var popup = menu.popups[i]
 			if (!popup.visible) {
@@ -67,7 +67,7 @@ Item {
 		}
 	}
 	
-	Keys.onReleased: {
+	Keys.onReleased: function(event) {
 		for (var i = (menu.popups.length - 1); i >= 0; --i) {
 			var popup = menu.popups[i]
 			if (!popup.visible) {
