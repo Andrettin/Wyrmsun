@@ -44,6 +44,7 @@
   </screenshots>
   <url type="homepage">https://andrettin.github.io/</url>
   <releases>
+    <release version="5.3.6" date="2022-08-02" />
     <release version="5.3.5" date="2022-03-13" />
   </releases>
   <launchable type="desktop-id">wyrmsun.desktop</launchable>
