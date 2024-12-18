@@ -3,6 +3,9 @@
   <id>wyrmsun.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0</project_license>
+  <developer id="io.github.andrettin">
+    <name>Andrettin</name>
+  </developer>
   <name>Wyrmsun</name>
   <summary>Strategy game based on history, mythology and fiction</summary>
   <description>
