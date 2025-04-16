@@ -6,12 +6,14 @@ Image {
 	source: icon.length > 0 ? ("image://resource_icon/" + icon) : "image://empty/"
 	cache: false
 	visible: !wyrmgus.map_editor.running
-	ToolTip.visible: mouse_area.containsMouse && tooltip.length > 0
-	ToolTip.delay: 1000
-	ToolTip.text: resource_icon.tooltip
 	
 	property var icon: ""
 	property string tooltip: ""
+	
+	CustomTooltip {
+		text: resource_icon.tooltip
+		visible: mouse_area.containsMouse && resource_icon.tooltip.length > 0
+	}
 	
 	MouseArea {
 		id: mouse_area

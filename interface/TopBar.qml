@@ -47,9 +47,11 @@ Item {
 			width: resource_label.x + resource_label.width
 			height: resource_icon.height
 			visible: !wyrmgus.map_editor.running
-			ToolTip.visible: resource_mouse_area.containsMouse && resource_icon.tooltip.length > 0
-			ToolTip.delay: 1000
-			ToolTip.text: resource_icon.tooltip
+	
+			CustomTooltip {
+				text: resource_icon.tooltip
+				visible: resource_mouse_area.containsMouse && resource_icon.tooltip.length > 0
+			}
 			
 			ResourceIcon {
 				id: resource_icon
@@ -172,9 +174,11 @@ Item {
 		width: food_label.x + food_label.width
 		height: food_icon.height
 		visible: !wyrmgus.map_editor.running
-		ToolTip.visible: food_mouse_area.containsMouse && food_icon.tooltip.length > 0
-		ToolTip.delay: 1000
-		ToolTip.text: food_icon.tooltip
+		
+		CustomTooltip {
+			text: food_icon.tooltip
+			visible: food_mouse_area.containsMouse && food_icon.tooltip.length > 0
+		}
 		
 		ResourceIconBase {
 			id: food_icon

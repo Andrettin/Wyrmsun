@@ -25,6 +25,12 @@ Window {
 		source: "../fonts/berenika_bold.ttf"
 	}
 	
+	Item { //tooltips need to be attached to an item
+		id: tooltip_manager
+		
+		property int tooltip_y_override: 0
+	}
+	
 	Connections {
 		target: wyrmgus
 		function onRunningChanged() {

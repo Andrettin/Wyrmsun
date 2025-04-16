@@ -20,9 +20,10 @@ Item {
 	
 	signal clicked()
 	
-	ToolTip.visible: mouse_area.containsMouse && tooltip.length > 0
-	ToolTip.delay: 1000
-	ToolTip.text: tooltip
+	CustomTooltip {
+		text: widget.tooltip
+		visible: mouse_area.containsMouse && widget.tooltip.length > 0
+	}
 	
 	WidgetImage {
 		id: widget_image
