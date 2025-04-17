@@ -586,7 +586,7 @@ DefinePanelContents(
 	{ Pos = {9, 144}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = "Hero Refresh In:"}}
 	},
-	{ Pos = {170, 144}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
+	{ Pos = {150, 144}, Condition = {ShowOpponent = false, HideNeutral = true, Build = "false", Training = "false", UpgradeTo = "false", Research = "false"},
 		More = {"Text", {Text = Concat(String(function() return (1800 - (GameCycle % 1800)) / 30 end), "s")}}
 	},
 	
